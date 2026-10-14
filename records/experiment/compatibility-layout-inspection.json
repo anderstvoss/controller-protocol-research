@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "compatibility-layout-inspection",
+  "kind": "source_inspection",
+  "status": "passed",
+  "sources": [
+    "openpuck-ds4",
+    "openpuck-ps-layout",
+    "hhd-dualsense"
+  ],
+  "fixtures": [
+    "ds4-active-layout",
+    "sony-contact-pair"
+  ],
+  "procedure": "Inspect exact pinned source field offsets and callback framing. Manually assemble synthetic fields without executing source firmware or production encoders. Preserve no-contact and trigger-policy differences; source agreement is not physical validation.",
+  "semantic_outcome": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "ds-pairing",
+  "statement": "Linux host expects report ID 9 with total size 20, including the ID.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "Linux v6.12 host contract"
+  },
+  "sources": [
+    "kernel"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

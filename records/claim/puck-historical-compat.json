@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "puck-historical-compat",
+  "statement": "Historical handoff reports compatibility identity 28de:1142; originating code revision has not been recovered.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "openpuck",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "unrecovered historical implementation"
+  },
+  "sources": [
+    "handoff"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "puck-historical-physical"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

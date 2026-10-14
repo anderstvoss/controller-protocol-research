@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-openpuck-features",
+  "statement": "OpenPuck supplies calibration 0x02 (37 bytes including ID), pairing 0x12 (16), legacy MAC 0x81 (7), and firmware 0xa3 (49). Comments attribute sizes to Linux host drivers. Its callbacks return payload-only lengths; these must not be confused with UHID numbered framing.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "compatibility GET feature behavior; host-driver-derived source lineage"
+  },
+  "sources": [
+    "openpuck-ds4"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

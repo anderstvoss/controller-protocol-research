@@ -1,0 +1,15 @@
+* @anderstvoss
+
+/.github/                @anderstvoss
+/.githooks/              @anderstvoss
+/.pre-commit-config.yaml @anderstvoss
+/.gitignore              @anderstvoss
+/SECURITY.md             @anderstvoss
+/LICENSE                 @anderstvoss
+/LICENSE-DATA            @anderstvoss
+/NOTICE                  @anderstvoss
+/requirements-dev.in     @anderstvoss
+/requirements-dev.txt    @anderstvoss
+/ruff.toml               @anderstvoss
+/schemas/                @anderstvoss
+/tools/                  @anderstvoss

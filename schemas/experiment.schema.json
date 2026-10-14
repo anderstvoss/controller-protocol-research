@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "synthetic",
+        "source_inspection",
+        "controlled_physical"
+      ]
+    },
+    "status": {
+      "enum": [
+        "not_run",
+        "passed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "procedure": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semantic_outcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "status",
+    "sources",
+    "fixtures",
+    "procedure",
+    "semantic_outcome"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

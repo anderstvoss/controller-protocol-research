@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "puck-current",
+  "statement": "Inspected OpenPuck external puck mode selects 28de:1304.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "openpuck",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "external receiver mode at recorded source revision"
+  },
+  "sources": [
+    "openpuck"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

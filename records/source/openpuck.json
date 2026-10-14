@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "openpuck",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/safijari/openpuck/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/puck_hid.cpp",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "b72be43e43af6ee43e011f09eaef49980ec5f16c7fbeee47972c66180e5b99f0",
+  "lineage": "openpuck",
+  "locator": "SteamPuckController::begin"
+}

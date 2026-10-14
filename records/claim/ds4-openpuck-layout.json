@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-openpuck-layout",
+  "statement": "OpenPuck builds a 63-byte payload for input report 1: sticks at payload 0..3, hat/face at 4, shoulders at 5, triggers at 7/8, and an active touch sample at 32..41. Each contact packs a 7-bit ID, inactive bit 7, and 12-bit little-endian X/Y coordinates. This describes implementation fields, not physical equivalence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "pinned compatibility implementation; active-contact fixture only"
+  },
+  "sources": [
+    "openpuck-ds4",
+    "openpuck-ps-layout"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "ds-cross",
+  "kind": "synthetic",
+  "path": "fixtures/ds-cross.hex",
+  "sha256": "cf780dad4726100617c5c663522e37d6927393eca727a52c3285b50597437eda",
+  "sources": [
+    "kernel"
+  ],
+  "experiments": [
+    "seed-inspection"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "ds-input"
+  ]
+}

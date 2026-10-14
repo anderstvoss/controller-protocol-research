@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "handoff",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad",
+  "revision": "e3bd06f",
+  "sha256": "2b5d635c5fce08972793e1183c930ca786d4f0144df2afe036163eb5ebd1a444",
+  "lineage": "historical-handoff",
+  "locator": "docs/architecture-overhaul/CONTROLLER_PROTOCOL_CORPUS_AGENT_HANDOFF.md; historical claims require original artifacts"
+}

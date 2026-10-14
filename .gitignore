@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+.ruff_cache/
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets.*
+credentials.*
+
+# Raw captures never belong here; keep them outside the repository
+captures/
+*.pcap
+*.pcapng
+*.log
+
+# Agent, editor and OS files
+.claude/
+.codex/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

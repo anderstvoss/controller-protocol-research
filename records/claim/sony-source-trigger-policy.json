@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "sony-source-trigger-policy",
+  "statement": "OpenPuck sets digital trigger bits from an analog threshold or source digital buttons. HHD names the first analog trigger field rt and the second lt in its axis map. These source mapping conventions must not replace controller-native semantics or establish the physical trigger threshold.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "mapping conventions require separate interpretation; no trigger fidelity claim"
+  },
+  "sources": [
+    "openpuck-ps-layout",
+    "hhd-dualsense"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

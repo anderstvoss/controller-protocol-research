@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "edge-independent-raw",
+  "statement": "The pinned SDL PS5 common-state decoder reads left/right function bits 0x10/0x20 and left/right paddle bits 0x40/0x80 separately from buttons byte 2. Source-derived decoding evidence; no physical Edge capture is included.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "DualSense Edge",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "SDL HIDAPI full state packet",
+    "scope": "raw independent control"
+  },
+  "sources": [
+    "sdl-ps5-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

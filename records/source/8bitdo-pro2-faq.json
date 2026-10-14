@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "8bitdo-pro2-faq",
+  "kind": "research_lead",
+  "url": "https://support.8bitdo.com/faq/pro2.html",
+  "revision": "excerpt-sha256:3c4cce7bf3e97ea7ba63aac3e3a4af3a2a02106d22bb169824ec0406500b1ee5",
+  "sha256": "3c4cce7bf3e97ea7ba63aac3e3a4af3a2a02106d22bb169824ec0406500b1ee5",
+  "lineage": "8bitdo-vendor-documentation",
+  "locator": "FAQ P1/P2 answer. SHA256 covers only evidence/source-excerpts/pro2-faq.txt, retrieved via rendered web page 2026-09-10; not full HTML. Vendor macro functionality, not raw-report evidence."
+}

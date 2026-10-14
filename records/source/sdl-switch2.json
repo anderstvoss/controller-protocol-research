@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sdl-switch2",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/fe2bca9748afa754ebbca4c543c5b28bbce30cf4/src/joystick/hidapi/SDL_hidapi_switch2.c",
+  "revision": "fe2bca9748afa754ebbca4c543c5b28bbce30cf4",
+  "sha256": "204daf9ce1a9d2548ce233c4e296f26a174dc336c97bc2f450b44ad1c37658c3",
+  "lineage": "libsdl",
+  "locator": "Pro state handler, lines 986-988: data[8] 0x01/0x02 paddle bits"
+}

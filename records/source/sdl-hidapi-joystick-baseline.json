@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sdl-hidapi-joystick-baseline",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapijoystick.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "dd5fdc67313cdcca247c0d82f4600d98dc4b38560c66e16dcffa561e8f770e63",
+  "lineage": "libsdl",
+  "locator": "HIDAPI_AddDevice and HIDAPI_JoystickGetDevicePath: h driver signature and HIDAPI device path"
+}

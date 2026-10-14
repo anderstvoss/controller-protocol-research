@@ -1,0 +1,222 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  validate:
+    name: Validate corpus
+    # Not visibility-gated: consumers pin corpus revisions, so integrity
+    # validation runs on every change whether the repo is private or public.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            codeload.github.com:443
+            objects.githubusercontent.com:443
+            raw.githubusercontent.com:443
+            *.actions.githubusercontent.com:443
+            *.blob.core.windows.net:443
+            pypi.org:443
+            files.pythonhosted.org:443
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install validator dependencies (hash-locked)
+        # requirements-dev.txt is generated from requirements-dev.in by
+        # `uv pip compile --generate-hashes`; see CONTRIBUTING.md.
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --require-hashes --no-deps -r requirements-dev.txt
+
+      - name: Check publication safety
+        run: .venv/bin/python tools/publication_guard.py
+
+      - name: Validate records offline
+        run: .venv/bin/python tools/validate.py
+
+      - name: Run tests
+        run: .venv/bin/python -m unittest discover -s tests
+
+  disclosure:
+    name: Disclosure checks
+    # Not visibility-gated: disclosure has to be caught before the flip.
+    # Publishing exposes every branch, tag and pull-request ref, so the
+    # scans cover all of them, not just the checked-out tree.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            codeload.github.com:443
+            objects.githubusercontent.com:443
+            raw.githubusercontent.com:443
+            *.actions.githubusercontent.com:443
+            *.blob.core.windows.net:443
+            pypi.org:443
+            files.pythonhosted.org:443
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Fetch pull-request heads
+        # checkout with fetch-depth 0 already brings every branch and tag.
+        # Pull-request heads need the token for a private repository; it is
+        # passed for this one command and never written to git config.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c http.https://github.com/.extraheader="$auth" fetch --no-tags origin \
+            '+refs/pull/*/head:refs/prs/*'
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Publication guard (working tree)
+        run: python tools/publication_guard.py
+
+      - name: History guard (every reachable file version and commit identity)
+        # Personal commit emails warn while private and fail once public.
+        env:
+          IDENTITIES: ${{ github.event.repository.private && 'warn' || 'fail' }}
+        run: python tools/history_guard.py --identities "$IDENTITIES"
+
+      - name: Install pre-commit (hash-locked)
+        run: python -m pip install --require-hashes --no-deps -r .github/requirements/pre-commit.txt
+
+      - name: Disclosure blockers
+        env:
+          PRE_COMMIT_HOME: ${{ runner.temp }}/pre-commit-cache
+        run: |
+          for hook in detect-private-key check-added-large-files block-env-files \
+                      block-private-key-files block-raw-captures block-local-paths \
+                      block-ssh-hosts block-cloud-uris block-local-network-targets \
+                      block-binary-artifacts; do
+            python -m pre_commit run "$hook" --all-files --color=always
+          done
+
+  policy:
+    name: Policy checks (${{ matrix.os }})
+    # Visibility-gated like the reference blueprint: while private, the
+    # committed .githooks run the same hooks locally; the job activates on
+    # the flip to public.
+    if: ${{ !github.event.repository.private }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      # gitleaks is covered by gitleaks.yml (pinned CLI, all refs). Its
+      # pre-commit hook builds with Go, which the egress allowlist omits.
+      # The corpus-* hooks are covered by the validate job.
+      SKIP: gitleaks,corpus-guard,corpus-validate,corpus-history-guard,corpus-tests
+
+    steps:
+      - name: Harden runner
+        if: runner.os == 'Linux'
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            codeload.github.com:443
+            objects.githubusercontent.com:443
+            raw.githubusercontent.com:443
+            uploads.github.com:443
+            *.actions.githubusercontent.com:443
+            *.blob.core.windows.net:443
+            pypi.org:443
+            files.pythonhosted.org:443
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.x"
+
+      - name: Install pre-commit (hash-locked)
+        # Regenerate by editing .github/requirements/pre-commit.in and
+        # re-running `uv pip compile --generate-hashes`.
+        run: python -m pip install --require-hashes --no-deps -r .github/requirements/pre-commit.txt
+
+      - name: Run policy hooks
+        env:
+          PRE_COMMIT_HOME: ${{ runner.temp }}/pre-commit-cache
+        run: python -m pre_commit run --all-files --show-diff-on-failure --color=always
+
+  dependency-review:
+    name: Dependency review
+    if: ${{ github.event_name == 'pull_request' && !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          # The action also calls api.deps.dev and api.securityscorecards.dev
+          # for dependency metadata and scoring.
+          egress-policy: block
+          allowed-endpoints: >
+            api.deps.dev:443
+            api.github.com:443
+            api.securityscorecards.dev:443
+            github.com:443
+            codeload.github.com:443
+            objects.githubusercontent.com:443
+            raw.githubusercontent.com:443
+            uploads.github.com:443
+            *.actions.githubusercontent.com:443
+            *.blob.core.windows.net:443
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Dependency review
+        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
+        with:
+          fail-on-severity: moderate
+          comment-summary-in-pr: on-failure

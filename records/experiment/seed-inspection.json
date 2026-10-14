@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "seed-inspection",
+  "kind": "source_inspection",
+  "status": "passed",
+  "sources": [
+    "kernel",
+    "uhid",
+    "openpuck",
+    "sc2"
+  ],
+  "fixtures": [
+    "ds-neutral",
+    "ds-cross"
+  ],
+  "procedure": "Inspect pinned source report constants and structure; manually construct synthetic input examples independently of runtime encoder.",
+  "semantic_outcome": null
+}

@@ -1,0 +1,14 @@
+# Lint gate for the corpus tooling. Selected for defects and security
+# footguns, not style: pyflakes (F) catches undefined names and dead imports;
+# flake8-bandit (S) flags shell=True, eval/exec, unsafe deserialization, weak
+# temp files and hardcoded credentials.
+target-version = "py312"
+include = ["tools/**/*.py", "tests/**/*.py"]
+
+[lint]
+select = ["F", "S"]
+ignore = [
+  "S101", # assert is the intended failure mode in tests
+  "S603", # argv-list subprocess calls without a shell are the safe form
+  "S607", # tools deliberately resolve git from PATH
+]

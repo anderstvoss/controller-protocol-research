@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "openpuck-ds4-no-contact",
+  "statement": "When both contacts are absent OpenPuck writes touch sample count zero while setting inactive contact bytes. This is not evidence that a consuming host processes a release sample; virtualgamepad retains its explicit nonzero release sample policy.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "negative comparison boundary; no production release-policy adoption"
+  },
+  "sources": [
+    "openpuck-ds4"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

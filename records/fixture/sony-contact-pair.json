@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "sony-contact-pair",
+  "kind": "synthetic",
+  "path": "fixtures/sony-contact-pair.hex",
+  "sha256": "51a6e5c3395e7f2306e00a4e7a71b6283604ba17cfa6c7b1d2a63e2c196290fa",
+  "sources": [
+    "openpuck-ps-layout",
+    "hhd-dualsense"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "sony-contact-packing"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "edge-linux-exposure-unknown",
+  "statement": "No exact kernel/backend event observation for these controls is included. Source decoding, physical presence and evdev exposure remain separate.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "DualSense Edge",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not measured",
+    "scope": "Linux evdev visibility"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

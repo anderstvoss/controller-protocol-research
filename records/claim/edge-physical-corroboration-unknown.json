@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "edge-physical-corroboration-unknown",
+  "statement": "No controlled physical capture is included for the selected controls; no physical support promotion is justified.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "DualSense Edge",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not measured",
+    "scope": "physical corroboration"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "ds4-active-layout",
+  "kind": "synthetic",
+  "path": "fixtures/ds4-active-layout.hex",
+  "sha256": "a6d79f0ff881eb5b222ce3705845cd70518a208dc6e47cfe8c22da350b973316",
+  "sources": [
+    "openpuck-ds4",
+    "openpuck-ps-layout"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "ds4-openpuck-layout"
+  ]
+}

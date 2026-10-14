@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "hhd-dualsense",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/hhd-dev/hhd/adbd50ff30614df886a6c76bd8855a64fde5d0b8/src/hhd/controller/virtual/dualsense/const.py",
+  "revision": "adbd50ff30614df886a6c76bd8855a64fde5d0b8",
+  "sha256": "fccc388b37d03dc5deaaac308bf56f44414ae463ff42b85343f534ba2f0ea2c8",
+  "lineage": "hhd",
+  "locator": "prefill_ds5_report, get_axis_map, get_btn_map"
+}

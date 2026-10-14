@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "openpuck-ps-layout",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/safijari/openpuck/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/gamepad_util.cpp",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "9fdcb004588ed8e6a82e9857ff672bb7c79b9802f79a41873abc76aefd8f401d",
+  "lineage": "openpuck",
+  "locator": "psShouldersByte, touchPackPoint, touchPackStatefulPoint"
+}

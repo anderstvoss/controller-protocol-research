@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Validator runtime (requirements-dev.txt, hash-locked from requirements-dev.in).
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      validator:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # Hash-locked pre-commit install used by the CI policy job.
+  - package-ecosystem: pip
+    directory: /.github/requirements
+    schedule:
+      interval: weekly
+    groups:
+      pre-commit-toolchain:
+        patterns: ["*"]

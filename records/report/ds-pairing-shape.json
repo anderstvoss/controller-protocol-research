@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-pairing-shape",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "Linux v6.12 host contract"
+  },
+  "claim": "ds-pairing",
+  "direction": "feature",
+  "logical_id": 9,
+  "raw_includes_id": true,
+  "length": 20,
+  "offset_origin": "report ID at byte zero",
+  "bit_numbering": "lsb0",
+  "endian": "little",
+  "signedness": "field-dependent; unknown unless separately specified",
+  "units": "unknown",
+  "coordinate_frame": "unknown",
+  "values": "unknown"
+}

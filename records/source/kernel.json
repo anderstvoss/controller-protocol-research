@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "kernel",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/adc218676eef25575469234709c2d87185ca223a/drivers/hid/hid-playstation.c",
+  "revision": "adc218676eef25575469234709c2d87185ca223a",
+  "sha256": "51973e6db85bb914d4186fa0fffc14d2a754f28123cc48994189a3d55ddf8bed",
+  "lineage": "linux",
+  "locator": "DualSense report constants and input structure"
+}

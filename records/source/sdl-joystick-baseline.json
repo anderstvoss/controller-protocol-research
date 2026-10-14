@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sdl-joystick-baseline",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/SDL_joystick.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "0512088db8557f9ee6d9b614c689ec4793364f8f78a7ee70b8f63e3fb75127f2",
+  "lineage": "libsdl",
+  "locator": "SDL_CreateJoystickGUID and SDL_IsJoystickHIDAPI: byte 14 driver signature, vendor-less name layout"
+}

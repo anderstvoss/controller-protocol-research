@@ -1,0 +1,19 @@
+Controller Protocol Research
+Copyright (C) 2026 Anders Voss
+
+Licensing is split by content type:
+
+- Evidence data (records/, fixtures/, schemas/, evidence/) is licensed under
+  the Creative Commons Attribution 4.0 International license; see LICENSE-DATA.
+- Tooling and tests (tools/, tests/) are licensed under AGPL-3.0-only; see
+  LICENSE.
+
+Third-party material:
+
+- evidence/source-excerpts/pro2-faq.txt is a one-sentence quotation from the
+  8BitDo Pro 2 FAQ (https://support.8bitdo.com/faq/pro2.html), retained only to
+  pin the hash of the cited claim. It is 8BitDo's text and is not covered by
+  LICENSE-DATA.
+- Upstream sources cited in records/source/ (Linux, SDL, OpenPuck, HHD and
+  others) are referenced by URL, revision and hash. None of their code is
+  redistributed here.

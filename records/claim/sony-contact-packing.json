@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "sony-contact-packing",
+  "statement": "HHD describes two four-byte touch contacts at payload offsets 32 and 36, with inactive bit 7 and packed 12-bit X/Y. The same contact byte packing is implemented by OpenPuck for DS4. Fixture coordinates are synthetic; controller extents and source-device coordinate conversions are not asserted.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "contact representation only; no independent physical corroboration"
+  },
+  "sources": [
+    "hhd-dualsense",
+    "openpuck-ps-layout"
+  ],
+  "experiments": [
+    "compatibility-layout-inspection"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

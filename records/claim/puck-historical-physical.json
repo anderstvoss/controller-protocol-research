@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "puck-historical-physical",
+  "statement": "Historical handoff reports physical identity 28de:1304; original capture has not been recovered.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "sc2-puck",
+    "revision": "unknown",
+    "firmware": "unknown",
+    "transport": "usb",
+    "scope": "unrecovered physical capture"
+  },
+  "sources": [
+    "handoff"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "puck-historical-compat"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

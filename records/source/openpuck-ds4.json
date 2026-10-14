@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "openpuck-ds4",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/safijari/openpuck/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/mode_hidgyro.cpp",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "863a6feb573fe0802ed04498c80114820cd1a654569d3be050d9e2c370ba06e3",
+  "lineage": "openpuck",
+  "locator": "hidGyroGetCommon, hidGyroSetCommon, hidGyroBuild"
+}

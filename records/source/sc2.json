@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/iczero/steam-controller-stuff/83c46d7c5711f7497f83336526755fbf50d0c5af/readme.md",
+  "revision": "83c46d7c5711f7497f83336526755fbf50d0c5af",
+  "sha256": "11f896a09b4b52132f4ce3ff975126549a1f6c493947e6e2edbe7af6d9e102e3",
+  "lineage": "sc2",
+  "locator": "Overview; physical captures not imported"
+}

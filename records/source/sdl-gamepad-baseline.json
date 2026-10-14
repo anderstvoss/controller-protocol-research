@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sdl-gamepad-baseline",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/SDL_gamepad.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "849f4ec28e2211b9d207bbca32b248f1ac82c56d6204b50a414ac985be2606fe",
+  "lineage": "libsdl",
+  "locator": "SDL_CreateMappingForHIDAPIGamepad: PS5 Edge default mapping; SDL_InitGamepadMappings: built-in and user overrides"
+}

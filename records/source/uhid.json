@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "uhid",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/adc218676eef25575469234709c2d87185ca223a/Documentation/hid/uhid.rst",
+  "revision": "adc218676eef25575469234709c2d87185ca223a",
+  "sha256": "d22a45c83bfc15eef592a59aa7a28a844537f365ece0f9714511270b0ef95da2",
+  "lineage": "linux",
+  "locator": "UHID_GET_REPORT and UHID_SET_REPORT"
+}

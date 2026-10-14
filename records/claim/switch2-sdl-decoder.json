@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "switch2-sdl-decoder",
+  "statement": "The newer pinned SDL decoder emits separate Pro paddle joystick slots; this is not evidence that the baseline SDL 3.2.0 probe build supports Switch 2 Pro.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "Switch 2 Pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "SDL HIDAPI",
+    "scope": "SDL visibility"
+  },
+  "sources": [
+    "sdl-switch2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,60 @@
+# Controller protocol research
+
+Independent, versioned evidence corpus for reviewed controller implementations
+(public successor of the private `controller-protocol-corpus`). JSON records use Draft 2020-12 schemas. Runtime libraries do not interpret these records.
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install --require-hashes --no-deps -r requirements-dev.txt
+.venv/bin/python tools/publication_guard.py
+.venv/bin/python tools/validate.py
+.venv/bin/python -m unittest discover -s tests
+```
+
+Sources are pinned and hashed, not redistributed. Source lineage is explicit. Synthetic fixtures are manually constructed host-structure examples, not captures and not proof of physical fidelity. Historical OpenPuck/physical identity claims remain conflicted and scoped to unrecovered evidence; current inspected OpenPuck code uses 28de:1304.
+
+Claims may be promoted to physical validation only by a passed controlled physical experiment with a physical fixture and semantic outcome. Unknown firmware, coordinates, and report fields stay explicit. Contradictions are retained rather than resolved by source count.
+
+Use `tools/sanitize.py` for an explicit byte-range replacement on a hex fixture. It records parent hashes and transformation lineage; redaction alone does not establish capture safety or protocol validity. Review output before committing. Raw private captures never belong here.
+
+Corpus commits must be published to a retained branch before a consuming project pins them. Generation is limited to reviewed constants and fixtures; mutable protocol behavior remains handwritten and tested independently.
+
+Fixture transformations accept existing fixture IDs as parents, reject path-like identifiers before reading them, and retain the original fixture unchanged. Invalid parents produce no derived output.
+
+Pinned OpenPuck DS4 and HHD DualSense source inspections now supplement the seed.
+Their synthetic active-contact fixtures describe selected field layouts, not
+captured packets or claims that source-device mapping conventions are canonical.
+OpenPuck feature sizes cite Linux host drivers; shared lineage is not independent
+physical corroboration. Its zero-count no-contact packet and trigger thresholds
+remain explicit comparison limits. HHD axis-map labels must be interpreted in its
+mapping layer before adopting controller-native trigger semantics. No upstream
+source code, device serials, calibration captures or private lab records are
+redistributed. No DS4 physical reference was available for this inspection.
+
+Post-106 exposure research pins SDL 3.2.0 PS5 decoding separately from a newer
+Switch 2 decoder. Those source claims are not consumer observations or physical
+validation. The Pro 2 FAQ is a research lead for macro functionality only; raw
+visibility and exact Linux/firmware behavior remain unknown. One short vendor
+excerpt is retained under `evidence/source-excerpts/`; its hash covers only that
+excerpt, explicitly not the full HTML document. Tests preserve these distinctions.
+
+Follow-up research pins SDL's generated Edge default mapping and Linux/HIDAPI
+GUID construction. The backend interpretation is source-derived and limited to
+reviewed builds and unambiguous identities. Default mapping is distinct from a
+user override or observed mapping. The existing kernel parser source provides a
+comparison of auxiliary-bit handling, without asserting an attached device's
+binding or events. All physical/Linux observation unknowns remain in place.
+
+## Publication safety and licensing
+
+`tools/publication_guard.py` runs in CI before validation. It rejects host
+paths, MAC/Bluetooth addresses, evdev `phys` strings, private IP and email
+addresses, credentials, identifying JSON keys, binary or oversized files and
+unexpected top-level entries. It is a backstop, not a substitute for review;
+see CONTRIBUTING.md for the capture-safety steps. Repository hardening
+(hooks, CI, server-side settings) is described in `docs/REPO-SETUP.md`, and
+the steps for making the repository public are in `GOING_PUBLIC.md`.
+
+Evidence data (`records/`, `fixtures/`, `schemas/`, `evidence/`) is CC-BY-4.0
+(LICENSE-DATA). Tooling and tests are AGPL-3.0-only (LICENSE). NOTICE lists the
+third-party excerpt and how upstream sources are cited.
