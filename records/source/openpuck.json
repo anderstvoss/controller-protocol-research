@@ -6,5 +6,5 @@
   "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
   "sha256": "b72be43e43af6ee43e011f09eaef49980ec5f16c7fbeee47972c66180e5b99f0",
   "lineage": "openpuck",
-  "locator": "SteamPuckController::begin"
+  "locator": "OpenPuck/puck_hid.cpp:53-86 report descriptor declarations;665-706 callback pairs,1304/1305 mode identities and per-slot HID setup;910-1037 connection/status synthesis. Existing pinned bytes/hash reverified; no excerpts."
 }

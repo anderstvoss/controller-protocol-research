@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Migrate pinned Steam kernel/OpenPuck identity,interface,report and lizard findings; retain historical1142/current1304 distinction and unmeasured cadence.
+
 ### Added
 
 - `records/controller/` registry (schema `controller.schema.json`). Every

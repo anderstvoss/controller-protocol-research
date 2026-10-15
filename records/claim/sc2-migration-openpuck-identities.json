@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-openpuck-identities",
+  "statement": "Pinned OpenPuck selects28de:1304 for external Puck emulation and28de:1305 for internal-receiver emulation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "openpuck-firmware",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Compatibility implementation only: puck_hid.cpp:670-677. This is current pinned OpenPuck, not the unrecovered historical1142 revision or a physical capture."
+  },
+  "sources": [
+    "openpuck"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

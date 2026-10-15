@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-identities",
+  "statement": "The pinned kernel lists wired1302,BLE1303,Puck1304 and internal-receiver1305 Valve identities on the appropriate USB/Bluetooth buses.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-steam.c:2750-2772 and hid-ids.h:1395-1398. Identifiers/driver matches are not a physical enumeration capture."
+  },
+  "sources": [
+    "sc2-migration-kernel",
+    "sc2-migration-kernel-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

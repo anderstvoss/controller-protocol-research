@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-openpuck-slots",
+  "statement": "OpenPuck defines four slots and configures one HID object/descriptor/callback pair per slot.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "openpuck-firmware",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Compatibility implementation only: bonds.h:11 and puck_hid.cpp:665-706. Its four HID slot objects must not be equated with all interfaces of a real Puck."
+  },
+  "sources": [
+    "openpuck",
+    "sc2-migration-openpuck-slot-definition"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
