@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/0fcb05b72344f40806cbe810de8872f1698bf053/drivers/hid/hid-steam.c",
+  "revision": "0fcb05b72344f40806cbe810de8872f1698bf053",
+  "sha256": "a48b7304d7eb2ebc2f5e294bbef7abb50d997cebc0acf686e34c0067a9f389f2",
+  "lineage": "linux-kernel",
+  "locator": "320-334 report roles;55 default lizard policy;1601-1630 topology/collection filter;2701-2734 parameter;2750-2772 controller table. Consumer evidence only; no source excerpts."
+}

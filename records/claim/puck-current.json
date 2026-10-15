@@ -5,10 +5,10 @@
   "status": "source_supported",
   "applicability": {
     "controller": "openpuck-firmware",
-    "revision": "unknown",
+    "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
     "firmware": "unknown",
     "transport": "usb",
-    "scope": "external receiver mode at recorded source revision"
+    "scope": "Current pinned OpenPuck external-emulation mode at puck_hid.cpp:670-677; implementation identity1304, not authentic-device capture."
   },
   "sources": [
     "openpuck"

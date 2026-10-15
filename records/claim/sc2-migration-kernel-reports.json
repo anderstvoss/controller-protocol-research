@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-reports",
+  "statement": "Pinned kernel defines input0x42,battery0x43,second input0x45,wireless event0x79 and output haptics0x80 through0x85.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-steam.c:320-334. Kernel enumeration does not establish output0x86..0x89 or physical semantics/cadence."
+  },
+  "sources": [
+    "sc2-migration-kernel"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

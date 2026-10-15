@@ -8,7 +8,7 @@
     "revision": "unknown",
     "firmware": "unknown",
     "transport": "usb",
-    "scope": "unrecovered historical implementation"
+    "scope": "Unrecovered historical handoff only:1142 cannot be attributed to current pinned OpenPuck, which selects1304. Retain the historical conflict until originating artifacts are recovered."
   },
   "sources": [
     "handoff"

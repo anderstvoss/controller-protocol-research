@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-interface-shape",
+  "statement": "Kernel consumer documentation distinguishes one unified wired-controller interface from the Puck layout with non-HID communications, four controller slots and a reduced pogo interface.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-steam.c:1601-1617. Four logical slots are not the entire USB interface count or GamepadManager player slots."
+  },
+  "sources": [
+    "sc2-migration-kernel",
+    "sc2-migration-kernel-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

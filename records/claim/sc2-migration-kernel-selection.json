@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-selection",
+  "statement": "For IBEX USB devices the pinned filter uses HID collection usage to ignore the reduced pogo personality; its BLE branch is treated separately.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-steam.c:1618-1630. Actual UHID acceptance still needs P1; step3 PR8 carries the later first-release/SDL pin, not duplicated here."
+  },
+  "sources": [
+    "sc2-migration-kernel"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

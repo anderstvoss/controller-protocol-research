@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-lizard-policy",
+  "statement": "The kernel lizard_mode setting defaults enabled and has a module-parameter setter; controller open/client activity participates in changing that consumer-owned desktop-mode policy.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-steam.c:55,880-944,1495-1514,2701-2734. No physical watchdog timing or automatic mode-transfer guarantee."
+  },
+  "sources": [
+    "sc2-migration-kernel"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
