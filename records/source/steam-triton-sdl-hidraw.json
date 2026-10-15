@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-triton-sdl-hidraw",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/hidapi/linux/hid.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "7a1504d0f3052e2676299d252088eeeac245e3048a50af89f81b4c439c2b42e4",
+  "lineage": "libsdl-hidapi",
+  "locator": "Lines 783-803: interface number defaults to -1; UHID USB without a USB parent remains enumerable. Lines 817-825: actual USB interface metadata."
+}

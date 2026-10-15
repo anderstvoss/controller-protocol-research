@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-puck-interface-selection",
+  "statement": "The pinned v7.3-rc1 hid-steam interface description identifies seven Puck interfaces, with non-HID interfaces 0-1, controller slots 2-5 and a pogo interface 6. The pinned SDL Triton driver selects receiver interfaces 2-5. Linux hidapi reports interface_number -1 when UHID has no USB parent, so a single UHID node does not satisfy that SDL receiver selection. This consumer evidence does not independently measure the physical receiver descriptor or establish faithful USB behavior.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "2026 model; hardware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only; no physical observation or device-side protocol promotion"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-triton-sdl-hidraw"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

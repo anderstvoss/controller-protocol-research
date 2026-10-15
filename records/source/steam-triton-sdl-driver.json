@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-triton-sdl-driver",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "11dedf48afbec74ee373538618fe123dc66cc854c07419cdb8d559fc063074c4",
+  "lineage": "libsdl",
+  "locator": "Lines 429-451: direct Triton selection and receiver interface filter; lines 421-426: enabling hints."
+}
