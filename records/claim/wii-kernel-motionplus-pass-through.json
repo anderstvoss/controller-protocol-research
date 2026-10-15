@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-motionplus-pass-through",
+  "statement": "Kernel state separates plugged/used/active extension and MotionPlus flags, builtin MotionPlus and pass-through modes; initialization distinguishes standalone,Nunchuk and Classic pass-through mappings.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote.h:36-45,85-101; hid-wiimote-core.c:469-556. Integrated gyro and external pass-through are not interchangeable device revisions."
+  },
+  "sources": [
+    "wii-linux-header",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

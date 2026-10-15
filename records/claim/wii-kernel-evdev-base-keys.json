@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-base-keys",
+  "statement": "The base key node advertises directional keys,Plus/Minus,One/Two,A/B andHome using the pinned kernel key map.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape: hid-wiimote-modules.c:47-99. Eleven logical keys; names/code mapping and separate accessory nodes are listed in the ledger table."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-motionplus",
+  "statement": "A separate MotionPlus node advertises ABS_RX/RY/RZ at -16000..16000 with fuzz/flat4/8.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape only: hid-wiimote-modules.c:2814-2825. No equivalence of external module and integrated gyro calibration is inferred."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

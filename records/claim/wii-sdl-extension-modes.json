@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-extension-modes",
+  "statement": "Pinned SDL validates extension-identification memory replies, enumerates input/status/ACK report roles and tracks standard,Nunchuk and gamepad MotionPlus modes separately.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: SDL_hidapi_wii.c:43-82,311-350,385-491,688-706. No physical encryption or extension compatibility promotion."
+  },
+  "sources": [
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

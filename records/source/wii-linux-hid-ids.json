@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-linux-hid-ids",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-ids.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "f4401d5bb11b377a3c9d1ea7960a45b2caceab2f5373dc2b2a29625bdec52bf7",
+  "lineage": "linux-kernel",
+  "locator": "drivers/hid/hid-ids.h:1108-1110 Nintendo vendor and Wiimote/Wiimote2 IDs; consumer identifiers only, no source excerpts."
+}

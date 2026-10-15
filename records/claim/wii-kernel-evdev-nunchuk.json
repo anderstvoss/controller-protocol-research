@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-nunchuk",
+  "statement": "The Nunchuk node advertises BTN_C/BTN_Z,ABS_HAT0X/Y -120..120 and ABS_RX/RY/RZ -500..500.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape only: hid-wiimote-modules.c:809-818,945-966. Extension calibration/identity/packets remain controller-owned and revision-scoped."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

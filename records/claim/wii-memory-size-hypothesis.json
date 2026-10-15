@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-memory-size-hypothesis",
+  "statement": "A0x1700 host-visible EEPROM region remains a candidate requiring model/revision-specific validation; emulator bounds and host consumer accesses alone do not establish physical size or all legal addresses.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Device memory-map hypothesis, not a source-supported device fact. Separate EEPROM from volatile extension,IR,speaker and MotionPlus registers."
+  },
+  "sources": [
+    "wii-dolphin-emu",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

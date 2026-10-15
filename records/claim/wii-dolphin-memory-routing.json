@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-dolphin-memory-routing",
+  "statement": "Pinned Dolphin routes EEPROM and I2C spaces separately, bounds accesses and produces read/write errors; read replies are chunked separately from write ACKs.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Emulator evidence only: EmuSubroutines.cpp:253-323,402-525. Not a validated Wii EEPROM size,address-permission map or persistent-peripheral register model."
+  },
+  "sources": [
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

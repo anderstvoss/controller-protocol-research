@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-hidapi",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/d4557c1511c721485dc4960f7149730afc9a73a0/src/joystick/hidapi/SDL_hidapi_wii.c",
+  "revision": "d4557c1511c721485dc4960f7149730afc9a73a0",
+  "sha256": "7313950267ecc398132db6c61426f5e37bc168be494b189bf3d5ac9b71af2df2",
+  "lineage": "sdl-hidapi",
+  "locator": "43-82 extension/MP constants and report identifiers; 311-350 extension identify validation; 385-491 MotionPlus discovery/modes; 688-706 extension handling. No upstream excerpts copied."
+}

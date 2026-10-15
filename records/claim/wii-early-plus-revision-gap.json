@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-early-plus-revision-gap",
+  "statement": "Early integrated Plus units sharing older identity conventions require their own discriminator,calibration and startup evidence; this ledger does not collapse them into either original Remote or TR.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Early integrated MotionPlus, non-TR; exact reference not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Reference-revision gap: classifier names/IDs are consumer policy, not proof of a unique hardware revision."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-linux-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
