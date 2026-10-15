@@ -11,7 +11,7 @@ from pathlib import Path
 MAX_FILE_BYTES = 256 * 1024
 ALLOWED_TOP_LEVEL = {
     '.githooks', '.github', '.gitignore', '.pre-commit-config.yaml', 'CHANGELOG.md',
-    'CONTRIBUTING.md', 'GOING_PUBLIC.md', 'LICENSE', 'LICENSE-DATA', 'NOTICE', 'README.md',
+    'CONTRIBUTING.md', 'LICENSE', 'LICENSE-DATA', 'NOTICE', 'README.md',
     'SECURITY.md', 'docs', 'evidence', 'fixtures', 'records', 'requirements-dev.in',
     'requirements-dev.txt', 'ruff.toml', 'schemas', 'scripts', 'tests', 'tools',
 }
