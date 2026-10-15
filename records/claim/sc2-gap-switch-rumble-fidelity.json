@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-switch-rumble-fidelity",
+  "statement": "OpenPuck compression or reduction to SC2 single-motor magnitude is not evidence of faithful external Switch HD-rumble output.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "openpuck-firmware",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
