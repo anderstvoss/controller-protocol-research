@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-kernel-release",
+  "statement": "Mainline commit 0a80b4e8ec6a6e40937c7abdf8fb2ebe6cc7c1e5 adds the 2026 wired IBEX 28de:1302 ID and driver support. The first mainline release tag containing it is v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935); preceding final release v7.2 lacks the ID. At inspection the newest final tag is v7.2 and v7.3 is still in release candidates, so no final kernel release containing it can yet be named. A probe needs this release candidate or a later descendant containing the support, not an unqualified stock 7.2 host.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "2026 model; hardware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only; no physical observation or device-side protocol promotion"
+  },
+  "sources": [
+    "steam-ibex-linux-ids",
+    "steam-ibex-linux-predecessor",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

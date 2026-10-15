@@ -45,7 +45,9 @@ class ControllerRegistry(unittest.TestCase):
         rows = {row['id']: row for row in status(self.root)}
         self.assertEqual(rows['dualsense']['category'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['category'], 'No evidence')
-        self.assertEqual(rows['steam-controller-2026-puck']['transports'], {'usb': 'Source evidence'})
+        puck = rows['steam-controller-2026-puck']['transports']
+        self.assertEqual(puck['usb'], 'Source evidence')
+        self.assertEqual(puck['source_only'], 'Source evidence')
 
     def test_unknown_only_claims_are_wip(self):
         for name in ['pro2-physical-macro-controls']:
