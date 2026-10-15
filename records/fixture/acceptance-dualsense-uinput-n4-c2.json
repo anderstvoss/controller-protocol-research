@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "acceptance-dualsense-uinput-n4-c2",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/acceptance-dualsense-uinput-n4-c2.json",
+  "sha256": "39359c785b061d5883b37d61b9da3f7a05055190b9a6d676203bbe25bb28de7a",
+  "sources": [
+    "virtualgamepad-acceptance-runner-c2"
+  ],
+  "experiments": [
+    "acceptance-dualsense-uinput-n4-c2-run"
+  ],
+  "parent": null,
+  "transform": "Measured virtual-host run: removed absolute wall-clock timestamp and transient device paths; anonymized host label. Original local artifact SHA256 retained in environment.raw_run_sha256. No physical capture, serial, physical path or unique identity included.",
+  "claims": []
+}

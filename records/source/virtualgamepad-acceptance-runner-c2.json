@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-acceptance-runner-c2",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/e698c0df68bff2cc0d11aeb9051b059c83600be0/xtask/src/lib.rs",
+  "revision": "e698c0df68bff2cc0d11aeb9051b059c83600be0",
+  "sha256": "ba4b66f6dbe36a6de15542a064695577f5cd3cb4bee3ea74eca04d40a7c57914",
+  "lineage": "virtualgamepad-acceptance-harness",
+  "locator": "xtask/src/lib.rs Clock/Backend/run and statistics; xtask/src/linux.rs creation-associated node observation; built and run on Linux6.12.111+deb13-arm64 aarch64. This is a virtual-host experiment source, not physical device truth."
+}
