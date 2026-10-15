@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-triton-sdl-identities",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/controller_list.h",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "8a5babf84823232217de8242f99503393f21240bea026bd01bd2347f383b6fe5",
+  "lineage": "libsdl",
+  "locator": "Lines 670-671: wired 0x1302 and BLE 0x1303 map to SteamControllerTriton."
+}

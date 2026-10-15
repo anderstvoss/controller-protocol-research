@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-triton-sdl-uhid-selection",
+  "statement": "At SDL commit 6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1, controller_list.h lines 670-671 classifies 28de:1302 and 28de:1303 as Triton. SDL_hidapi_steam_triton.c lines 429-451 accepts direct Triton by identity without an interface-number filter; its receiver branch requires interfaces 2 through 5. SDL_hidapijoystick.c lines 390-401 exempts Valve devices from generic usage-page and usage filters. Linux hidapi hid.c lines 783-803 preserves interface_number -1 and handles missing USB parents for UHID USB devices. The older SDL_hidapi_steam.c driver has different interface rules and is not the direct 2026 model driver.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "2026 model; hardware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only; no physical observation or device-side protocol promotion"
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-triton-sdl-identities",
+    "steam-triton-sdl-dispatch",
+    "steam-triton-sdl-hidraw"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

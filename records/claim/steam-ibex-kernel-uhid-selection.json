@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-kernel-uhid-selection",
+  "statement": "At v7.3-rc1, hid-steam.c lines 1589-1631 selects wired IBEX using the first HID collection usage (rejecting the receiver pogo usage FF00:0002), without consulting a USB parent or interface number. The probe calls this filter after hid_parse (1735-1760). The device table at 2751-2770 matches wired IBEX as a USB-bus HID device. This establishes the source selection path, not successful initialization or report delivery on UHID.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "2026 model; hardware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only; no physical observation or device-side protocol promotion"
+  },
+  "sources": [
+    "steam-ibex-linux-ids",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
