@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "sony-dualsense-family",
+  "name": "Sony DualSense family",
+  "kind": "family",
+  "parent": null,
+  "tracking": null,
+  "notes": "Evidence that applies to every DualSense-family report parser rather than one model."
+}

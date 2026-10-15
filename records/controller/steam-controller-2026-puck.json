@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "steam-controller-2026-puck",
+  "name": "Valve Steam Controller (2026) Puck",
+  "kind": "controller",
+  "parent": "steam-controller-2026",
+  "tracking": "anderstvoss/virtualgamepad#159",
+  "notes": "The physical wireless receiver."
+}

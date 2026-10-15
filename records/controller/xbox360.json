@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox360",
+  "name": "Xbox 360 standard HID",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#157",
+  "notes": "The existing Xbox 360 standard HID presentation; not a physical Xbox Series reference."
+}

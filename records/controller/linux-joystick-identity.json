@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "linux-joystick-identity",
+  "name": "Linux joystick identity (SDL / evdev)",
+  "kind": "host_interface",
+  "parent": null,
+  "tracking": null,
+  "notes": "Host-side identity and GUID construction that applies across controllers."
+}

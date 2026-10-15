@@ -4,10 +4,10 @@
   "statement": "Independent P1/P2 report fields in a specific firmware and connection mode are not established by the imported vendor FAQ. Do not model independent native paddle state from macro functionality alone.",
   "status": "unknown",
   "applicability": {
-    "controller": "8BitDo Pro 2",
+    "controller": "8bitdo-pro-2",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "not measured",
+    "transport": "not_measured",
     "scope": "raw independent control"
   },
   "sources": [

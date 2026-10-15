@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "openpuck-firmware",
+  "name": "OpenPuck",
+  "kind": "emulator",
+  "parent": "steam-controller-2026-puck",
+  "tracking": null,
+  "notes": "Open firmware that emulates the Puck; its behavior is compatibility evidence, not physical Puck evidence."
+}

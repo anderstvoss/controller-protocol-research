@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "wii-remote",
+  "name": "Nintendo Wii Remote",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#158",
+  "notes": "Includes extensions (Nunchuk, Classic, MotionPlus) unless a claim scope says otherwise."
+}

@@ -4,7 +4,7 @@
   "statement": "Historical handoff reports physical identity 28de:1304; original capture has not been recovered.",
   "status": "conflicted",
   "applicability": {
-    "controller": "sc2-puck",
+    "controller": "steam-controller-2026-puck",
     "revision": "unknown",
     "firmware": "unknown",
     "transport": "usb",

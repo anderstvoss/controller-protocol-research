@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series",
+  "name": "Microsoft Xbox Series controller",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#160",
+  "notes": "USB GIP and Bluetooth HID presentations are recorded as separate transports."
+}

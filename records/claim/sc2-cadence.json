@@ -4,7 +4,7 @@
   "statement": "Independent research describes periodic report 0x7b with puck; no physical timing fixture is imported.",
   "status": "source_supported",
   "applicability": {
-    "controller": "sc2-puck",
+    "controller": "steam-controller-2026-puck",
     "revision": "unknown",
     "firmware": "unknown",
     "transport": "usb",
