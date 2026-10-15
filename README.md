@@ -3,6 +3,11 @@
 Independent, versioned evidence corpus for reviewed controller implementations
 (public successor of the private `controller-protocol-corpus`). JSON records use Draft 2020-12 schemas. Runtime libraries do not interpret these records.
 
+Consumers such as virtualgamepad and gamepadcapture pin a corpus commit by its
+full SHA (for example in a `protocol-corpus.rev` file), copy the fixtures they
+need and check them against that revision in CI. The repository is public, so
+the checkout needs no credentials.
+
 ```sh
 python3 -m venv .venv
 .venv/bin/pip install --require-hashes --no-deps -r requirements-dev.txt
@@ -52,8 +57,7 @@ paths, MAC/Bluetooth addresses, evdev `phys` strings, private IP and email
 addresses, credentials, identifying JSON keys, binary or oversized files and
 unexpected top-level entries. It is a backstop, not a substitute for review;
 see CONTRIBUTING.md for the capture-safety steps. Repository hardening
-(hooks, CI, server-side settings) is described in `docs/REPO-SETUP.md`, and
-the steps for making the repository public are in `GOING_PUBLIC.md`.
+(hooks, CI, server-side settings) is described in `docs/REPO-SETUP.md`.
 
 Evidence data (`records/`, `fixtures/`, `schemas/`, `evidence/`) is CC-BY-4.0
 (LICENSE-DATA). Tooling and tests are AGPL-3.0-only (LICENSE). NOTICE lists the

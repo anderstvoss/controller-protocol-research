@@ -16,8 +16,7 @@ concurrency:
 jobs:
   validate:
     name: Validate corpus
-    # Not visibility-gated: consumers pin corpus revisions, so integrity
-    # validation runs on every change whether the repo is private or public.
+    # Consumers pin corpus revisions, so integrity validation runs on every change.
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -63,9 +62,8 @@ jobs:
 
   disclosure:
     name: Disclosure checks
-    # Not visibility-gated: disclosure has to be caught before the flip.
-    # Publishing exposes every branch, tag and pull-request ref, so the
-    # scans cover all of them, not just the checked-out tree.
+    # Every branch, tag and pull-request ref is public, so the scans cover
+    # all of them, not just the checked-out tree.
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -91,14 +89,7 @@ jobs:
 
       - name: Fetch pull-request heads
         # checkout with fetch-depth 0 already brings every branch and tag.
-        # Pull-request heads need the token for a private repository; it is
-        # passed for this one command and never written to git config.
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          git -c http.https://github.com/.extraheader="$auth" fetch --no-tags origin \
-            '+refs/pull/*/head:refs/prs/*'
+        run: git fetch --no-tags origin '+refs/pull/*/head:refs/prs/*'
 
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -109,10 +100,7 @@ jobs:
         run: python tools/publication_guard.py
 
       - name: History guard (every reachable file version and commit identity)
-        # Personal commit emails warn while private and fail once public.
-        env:
-          IDENTITIES: ${{ github.event.repository.private && 'warn' || 'fail' }}
-        run: python tools/history_guard.py --identities "$IDENTITIES"
+        run: python tools/history_guard.py --identities fail
 
       - name: Install pre-commit (hash-locked)
         run: python -m pip install --require-hashes --no-deps -r .github/requirements/pre-commit.txt
@@ -130,10 +118,6 @@ jobs:
 
   policy:
     name: Policy checks (${{ matrix.os }})
-    # Visibility-gated like the reference blueprint: while private, the
-    # committed .githooks run the same hooks locally; the job activates on
-    # the flip to public.
-    if: ${{ !github.event.repository.private }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     strategy:
@@ -187,7 +171,7 @@ jobs:
 
   dependency-review:
     name: Dependency review
-    if: ${{ github.event_name == 'pull_request' && !github.event.repository.private }}
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
 

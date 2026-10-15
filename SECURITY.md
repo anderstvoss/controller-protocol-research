@@ -23,7 +23,7 @@ needed, rotation of whatever the data identifies.
 - A disclosure job scans every file version and commit email reachable from
   any branch, tag or pull-request ref (`tools/history_guard.py`), and runs the
   local-path, private-IP, key and raw-capture blockers, on every change.
-- Once public: the pre-commit policy replay on Ubuntu, macOS and Windows,
+- The pre-commit policy replay on Ubuntu, macOS and Windows,
   dependency review on pull requests, CodeQL (Python and Actions workflows)
   and OpenSSF Scorecard.
 - pip installs are hash-locked; Dependabot monitors pip and GitHub Actions
