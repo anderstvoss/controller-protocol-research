@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-status-ack-flow",
+  "statement": "Kernel status processing tracks extension attachment and battery, resets/reissues the requested report mode and completes pending status operations; memory/return reports have separate handlers.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-core.c:1420-1515 and1590-1618. Exact timing and negative-response behavior on reference firmware remain unmeasured."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-bluetooth-match",
+  "statement": "The pinned hid-wiimote device table matches Nintendo057e:0306 and057e:0330 using Bluetooth-bus HID entries; local UHID must supply that bus metadata to match this consumer.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Wiimote and Wiimote2 table entries; exact reference revision still distinct",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-core.c:1869-1873 with hid-ids.h:1108-1110 at the same commit. This is not actual Bluetooth radio/pairing acceptance."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-linux-hid-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-original-remote-consumer-revision",
+  "statement": "The pinned kernel name classifier maps RVL-CNT-01 to its Gen1 branch; extension/MotionPlus discovery is tracked separately.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote RVL-CNT-01 consumer classification",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-core.c:832-852,469-556. This name branch does not certify that an early integrated Plus is an original non-gyro Remote."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

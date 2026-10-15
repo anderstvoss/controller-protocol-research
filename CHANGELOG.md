@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add Wii L0 pinned consumer/emulator ledger, separate original/early-Plus/TR revision scopes, source-derived evdev shape and explicit memory/encryption gaps.
+
 ### Added
 
 - `records/controller/` registry (schema `controller.schema.json`). Every

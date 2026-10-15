@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-dolphin-emu",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/EmuSubroutines.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "a0012be09d060e300cc1b3448610ebcb9d289bf0a154f042fae568f6bd1a2eb0",
+  "lineage": "dolphin-emulator",
+  "locator": "25-45 report mode/ACK ordering; 253-323 separate EEPROM/I2C write routing and errors; 402-525 read request/chunks/errors. Emulator policy is not physical memory-map proof. No upstream excerpts copied."
+}

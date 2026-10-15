@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-outputs-battery",
+  "statement": "Pinned kernel exposes ordinary rumble through FF_RUMBLE,player LEDs through LED-class handling and battery through a power-supply interface rather than treating them all as input axes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-modules.c:112-164,171-280,294-399; hid-wiimote-core.c:125-171,1447. Device-side output/charge behavior remains unmeasured."
+  },
+  "sources": [
+    "wii-linux-modules",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
