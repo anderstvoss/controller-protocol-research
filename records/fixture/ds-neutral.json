@@ -2,6 +2,7 @@
   "schema_version": 1,
   "id": "ds-neutral",
   "kind": "synthetic",
+  "format": "hid_report_hex",
   "path": "fixtures/ds-neutral.hex",
   "sha256": "40380fbd97b0adccad7b02aaf75c990ecc323d99d641a2033fa6471ead8cd6fb",
   "sources": [

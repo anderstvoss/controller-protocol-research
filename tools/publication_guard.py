@@ -15,7 +15,7 @@ ALLOWED_TOP_LEVEL = {
     'SECURITY.md', 'docs', 'evidence', 'fixtures', 'records', 'requirements-dev.in',
     'requirements-dev.txt', 'ruff.toml', 'schemas', 'scripts', 'tests', 'tools',
 }
-FIXTURE_SUFFIXES = {'.hex'}
+FIXTURE_SUFFIXES = {'.hex', '.json'}
 FORBIDDEN_KEYS = {'serial', 'serial_number', 'uniq', 'phys', 'mac', 'mac_address',
                   'bluetooth_address', 'bt_address', 'hostname', 'username'}
 PATTERNS = [
@@ -62,7 +62,7 @@ def check(root):
         if size > MAX_FILE_BYTES:
             problems.append(name + ': ' + str(size) + ' bytes exceeds ' + str(MAX_FILE_BYTES))
         if parts[0] == 'fixtures' and path.suffix not in FIXTURE_SUFFIXES:
-            problems.append(name + ': fixtures must be reviewed hex text')
+            problems.append(name + ': fixtures must be reviewed hex or JSON text')
         problems.extend(content_problems(name, path.read_bytes()))
     return problems
 

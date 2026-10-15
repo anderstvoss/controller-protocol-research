@@ -66,7 +66,12 @@ def validate(root):
                 raise ValueError('fixture escapes corpus: ' + id)
             if hashlib.sha256(path.read_bytes()).hexdigest() != rec['sha256']:
                 raise ValueError('fixture hash mismatch: ' + id)
-            bytes.fromhex(path.read_text().strip())
+            if rec['format'] == 'hid_report_hex':
+                bytes.fromhex(path.read_text().strip())
+            else:
+                trace = json.loads(path.read_text())
+                if trace.get('manifest', {}).get('synthetic') is not (rec['kind'] == 'synthetic'):
+                    raise ValueError('evdev trace synthetic flag disagrees with fixture kind: ' + id)
             if rec['kind'] == 'synthetic' and rec['parent']:
                 raise ValueError('synthetic fixture cannot disguise a capture transformation')
             if rec['kind'] == 'sanitized' and (not rec['parent'] or not rec['transform']):

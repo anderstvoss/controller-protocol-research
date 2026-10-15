@@ -50,6 +50,14 @@ user override or observed mapping. The existing kernel parser source provides a
 comparison of auxiliary-bit handling, without asserting an attached device's
 binding or events. All physical/Linux observation unknowns remain in place.
 
+## Fixture formats
+
+Fixture records declare a `format`. `hid_report_hex` is a hex-encoded HID
+report and is the only format `tools/sanitize.py` can transform.
+`evdev_trace_json` is a gamepadcapture-style native evdev observation
+(manifest, advertised controls, synchronized frames); its manifest's
+`synthetic` flag must agree with the fixture kind.
+
 ## Publication safety and licensing
 
 `tools/publication_guard.py` runs in CI before validation. It rejects host

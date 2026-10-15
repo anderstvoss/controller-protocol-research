@@ -51,7 +51,7 @@ class PublicationGuard(unittest.TestCase):
         (self.root / 'captures').mkdir()
         (self.root / 'captures/raw.txt').write_text('x')
         problems = '\n'.join(check(self.root))
-        self.assertIn('fixtures/capture.pcapng: fixtures must be reviewed hex text', problems)
+        self.assertIn('fixtures/capture.pcapng: fixtures must be reviewed hex or JSON text', problems)
         self.assertIn('fixtures/huge.hex', problems)
         self.assertIn('captures/raw.txt: unexpected top-level entry', problems)
 

@@ -19,6 +19,8 @@ def transform(root, parent_id, new_id, offset, replacement):
     parent = json.loads(parent_path.read_text())
     if parent['id'] != parent_id:
         raise ValueError('parent ID must match the fixture record')
+    if parent['format'] != 'hid_report_hex':
+        raise ValueError('byte-range sanitizing applies only to hid_report_hex fixtures')
     data = bytearray.fromhex((root / parent['path']).read_text())
     if offset < 0 or not replacement or offset + len(replacement) > len(data):
         raise ValueError('replacement must be a nonempty in-bounds range')

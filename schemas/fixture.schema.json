@@ -16,6 +16,12 @@
         "sanitized"
       ]
     },
+    "format": {
+      "enum": [
+        "hid_report_hex",
+        "evdev_trace_json"
+      ]
+    },
     "path": {
       "type": "string",
       "minLength": 1
@@ -65,6 +71,7 @@
     "schema_version",
     "id",
     "kind",
+    "format",
     "path",
     "sha256",
     "sources",
