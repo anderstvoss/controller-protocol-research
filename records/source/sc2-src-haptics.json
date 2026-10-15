@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-src-haptics",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/iczero/steam-controller-stuff/83c46d7c5711f7497f83336526755fbf50d0c5af/hid-sctrl/src/haptics.rs",
+  "revision": "83c46d7c5711f7497f83336526755fbf50d0c5af",
+  "sha256": "05826b5482990e34683e59a5e8dfbf5b6aa76e3856f20522344a34b1ac18eb63",
+  "lineage": "sc2",
+  "locator": "HapticsStreamer buffering and stream status handling; source-only implementation"
+}

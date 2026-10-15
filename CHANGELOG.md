@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 ### Added
 
+- Source-reviewed Steam Controller 2026/Puck earlier-research gap audit, with revision-pinned independent Triton sources and unresolved gap claim records; no physical or live acceptance claimed.
+
 - `records/controller/` registry (schema `controller.schema.json`). Every
   claim's `applicability.controller` must name a registered controller, and
   each record links its tracking issue.

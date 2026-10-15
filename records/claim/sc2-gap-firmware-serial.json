@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-firmware-serial",
+  "statement": "The host-visible firmware, serial, product revision, attribute-query and receiver bond-identity behavior for 2026 hardware has no physical GET/SET fixture.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

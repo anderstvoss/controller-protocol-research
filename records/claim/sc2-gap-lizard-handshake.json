@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-lizard-handshake",
+  "statement": "Lizard keyboard and pointer report IDs and settings are described by compatibility sources; faithful physical mode transitions and companion lifetime remain unverified.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
+  },
+  "sources": [
+    "openpuck",
+    "sc2-src-dissector"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
