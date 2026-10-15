@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record500 measured DualSense/Xbox360 uinput lifecycle samples with virtual-host-only format/validation, sanitized paths/time and explicit missing consumer measurements; no physical promotion.
+
 ### Added
 
 - `records/controller/` registry (schema `controller.schema.json`). Every

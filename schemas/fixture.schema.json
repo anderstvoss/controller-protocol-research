@@ -13,13 +13,15 @@
         "synthetic",
         "physical",
         "source_derived",
-        "sanitized"
+        "sanitized",
+        "virtual_host_run"
       ]
     },
     "format": {
       "enum": [
         "hid_report_hex",
-        "evdev_trace_json"
+        "evdev_trace_json",
+        "acceptance_run_json"
       ]
     },
     "path": {
