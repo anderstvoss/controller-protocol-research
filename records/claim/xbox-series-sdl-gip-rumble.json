@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-sdl-gip-rumble",
+  "statement": "Pinned SDL separately constructs a thirteen-byte wired GIP rumble message using command0x09 and four amplitude fields.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: SDL_hidapi_xboxone.c:575-586; USB GIP framing is not Bluetooth HID and not Xbox360 standard HID."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
