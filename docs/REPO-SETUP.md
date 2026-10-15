@@ -12,11 +12,11 @@ dependency is hash-locked instead.
 |---|---|
 | Pre-commit gitleaks, file hygiene, ruff, publication guard, record validation; blockers for env files, keys, raw captures, local paths, private IPs, cloud URIs, binaries | `.pre-commit-config.yaml`, via committed `.githooks/pre-commit` |
 | Pre-push gitleaks, tracked-file blocker, local-paths guard, history disclosure scan, corpus tests | `.githooks/pre-push` |
-| Corpus validation (guard, schemas, integrity, tests) on every change | `ci.yml` `Validate corpus` (runs while private too) |
-| Disclosure scan of every file version and commit identity on every branch, tag and pull-request ref, plus the path/IP/key/capture blockers | `ci.yml` `Disclosure checks` via `tools/history_guard.py` (runs while private too; personal commit emails warn while private, fail once public) |
+| Corpus validation (guard, schemas, integrity, tests) on every change | `ci.yml` `Validate corpus` |
+| Disclosure scan of every file version and commit identity on every branch, tag and pull-request ref, plus the path/IP/key/capture blockers | `ci.yml` `Disclosure checks` via `tools/history_guard.py` (fails on any personal commit email) |
 | Full pre-commit replay on Ubuntu, macOS and Windows | `ci.yml` `Policy checks (…)` |
 | Dependency review on pull requests, `fail-on-severity: moderate` | `ci.yml` `Dependency review` |
-| Full-history gitleaks across every branch, tag and pull-request ref, weekly and per change | `gitleaks.yml` `Gitleaks (full history)` (runs while private too) |
+| Full-history gitleaks across every branch, tag and pull-request ref, weekly and per change | `gitleaks.yml` `Gitleaks (full history)` |
 | CodeQL `security-extended` for Python tooling and Actions workflows | `codeql.yml` |
 | OpenSSF Scorecard with SARIF publish | `scorecard.yml` |
 | SHA-pinned actions; `harden-runner` egress block on every Linux job | every workflow |
@@ -24,9 +24,6 @@ dependency is hash-locked instead.
 | Ad hoc deep secret scan | `scripts/deep-scan.sh` |
 | Secret scanning, push protection, private vulnerability reporting, Dependabot alerts, branch protection, read-only Actions token, tag ruleset | server-side, Step 2 below |
 
-Jobs that only add value once public (policy matrix, dependency review,
-CodeQL, Scorecard) are gated on `!github.event.repository.private` and
-activate on the flip.
 
 ## Step 1: local clone
 
@@ -40,7 +37,7 @@ pre-commit run --all-files --hook-stage pre-push
 scripts/deep-scan.sh             # needs gitleaks on PATH
 ```
 
-## Step 2: server-side controls (after the flip to public)
+## Step 2: server-side controls (applied 2026-10-15)
 
 ```bash
 REPO=anderstvoss/controller-protocol-research
