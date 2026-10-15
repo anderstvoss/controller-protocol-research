@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-usb-device-gaps",
+  "statement": "Exact reference GIP descriptor/startup/ACK cadence,firmware-specific Share offsets,metadata and four-motor physical effects remain unmeasured in this ledger.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Device-side unknowns are separate from the source-only consumer records. No new physical experiment."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

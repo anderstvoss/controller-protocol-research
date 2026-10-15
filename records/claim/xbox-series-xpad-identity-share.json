@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-identity-share",
+  "statement": "The pinned xpad consumer matches045e:0b12 as XboxOne-type with Share and Share-offset mappings, exposes Share as KEY_RECORD and decodes its extension bit.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: xpad.c:134,1103,1989. This does not establish a raw GIP report for every firmware."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

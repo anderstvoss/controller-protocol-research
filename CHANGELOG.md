@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add Xbox Series L0 source-only xpad/SDL ledger and linked observed-evdev artifact, preserving USB-GIP/Bluetooth/device-evidence separation.
+
 ### Added
 
 - `records/controller/` registry (schema `controller.schema.json`). Every

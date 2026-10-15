@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-sdl-disabled-serial-request",
+  "statement": "The cited SendSerialRequest function is disabled by a preprocessor conditional in pinned SDL; its existence does not show an active serial request.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: SDL_hidapi_xboxone.c:254-272. Retains the correction on virtualgamepad#160/#161; no personal identifier copied."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-axis-domains",
+  "statement": "The pinned xpad consumer exposes signed stick axes over -32768..32767, XboxOne triggers over0..1023 and hat axes over -1..1.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: xpad.c:1907-1925,1974-2025; USB GIP-derived evdev surface, not Bluetooth HID wire domains."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
