@@ -4,11 +4,11 @@
   "statement": "At the pinned kernel revision, dualsense_parse_report handles home, microphone and touchpad from buttons[2] but does not forward bits 0x10/0x20/0x40/0x80 as independent input keys. The SDL PS5 Edge decoder does emit distinct controls for those bits. This source-path difference does not establish the bound driver, firmware behavior or physical Linux event visibility of an attached Edge.",
   "status": "source_supported",
   "applicability": {
-    "controller": "DualSense-family report parser",
+    "controller": "sony-dualsense-family",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "Linux hid-playstation",
-    "scope": "source parser only; actual binding not observed"
+    "transport": "source_only",
+    "scope": "transport detail: Linux hid-playstation; source parser only; actual binding not observed"
   },
   "sources": [
     "kernel",

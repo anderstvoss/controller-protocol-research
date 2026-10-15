@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pro",
+  "name": "Nintendo Switch 2 Pro Controller",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#171",
+  "notes": ""
+}

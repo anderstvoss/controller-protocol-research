@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "dualshock4",
+  "name": "Sony DualShock 4",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#155",
+  "notes": ""
+}

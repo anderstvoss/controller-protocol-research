@@ -4,7 +4,7 @@
   "statement": "Inspected OpenPuck external puck mode selects 28de:1304.",
   "status": "source_supported",
   "applicability": {
-    "controller": "openpuck",
+    "controller": "openpuck-firmware",
     "revision": "unknown",
     "firmware": "unknown",
     "transport": "usb",

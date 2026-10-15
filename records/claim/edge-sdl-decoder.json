@@ -4,11 +4,11 @@
   "statement": "SDL 3.2.0 PS5 HIDAPI emits separate joystick button slots for function and paddle controls. Consumer gamepad mapping and Linux evdev exposure are separate dimensions; no measured mapping or physical effect is asserted.",
   "status": "source_supported",
   "applicability": {
-    "controller": "DualSense Edge",
+    "controller": "dualsense-edge",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "SDL HIDAPI",
-    "scope": "SDL visibility"
+    "transport": "source_only",
+    "scope": "transport detail: SDL HIDAPI; SDL visibility"
   },
   "sources": [
     "sdl-ps5-baseline"

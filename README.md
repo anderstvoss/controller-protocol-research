@@ -16,6 +16,27 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests
 ```
 
+## Controllers and evidence categories
+
+Every claim names a controller from `records/controller/` (for example
+`dualsense`, `wii-remote`, `steam-controller-2026-puck`) and one transport:
+`usb`, `bluetooth`, `receiver`, `source_only` (evidence read from source code or
+documentation, not a connected device) or `not_measured`. Put finer transport
+detail, such as an SDL backend, in the claim's `scope`. Add a controller record
+before filing its first claim; each record links its tracking issue.
+
+`tools/status.py` prints each controller's evidence category from its claims:
+
+| Category | Strongest claim status |
+| --- | --- |
+| No evidence | no claims |
+| Evidence in progress | `unknown`, `inferred`, `conflicted` or `rejected` only |
+| Source evidence | `source_supported` or `independently_corroborated` |
+| Physical evidence | `physically_observed` or `physically_validated` |
+
+These are evidence levels only. Whether a controller is implemented or in
+progress in a consuming project is tracked there, not here.
+
 Sources are pinned and hashed, not redistributed. Source lineage is explicit. Synthetic fixtures are manually constructed host-structure examples, not captures and not proof of physical fidelity. Historical OpenPuck/physical identity claims remain conflicted and scoped to unrecovered evidence; current inspected OpenPuck code uses 28de:1304.
 
 Claims may be promoted to physical validation only by a passed controlled physical experiment with a physical fixture and semantic outcome. Unknown firmware, coordinates, and report fields stay explicit. Contradictions are retained rather than resolved by source count.

@@ -37,6 +37,12 @@ def validate(root):
                 reference(value, target)
                 if value == id:
                     raise ValueError('self reference: ' + id)
+        if category == 'controller' and rec['parent']:
+            reference(rec['parent'], 'controller')
+            if rec['parent'] == id:
+                raise ValueError('self reference: ' + id)
+        if category == 'claim':
+            reference(rec['applicability']['controller'], 'controller')
         if category == 'report':
             reference(rec['claim'], 'claim')
         if category == 'claim':

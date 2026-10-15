@@ -40,8 +40,13 @@
           "minLength": 1
         },
         "transport": {
-          "type": "string",
-          "minLength": 1
+          "enum": [
+            "usb",
+            "bluetooth",
+            "receiver",
+            "source_only",
+            "not_measured"
+          ]
         },
         "scope": {
           "type": "string",

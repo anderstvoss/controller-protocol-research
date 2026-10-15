@@ -4,11 +4,11 @@
   "statement": "The vendor FAQ identifies P1/P2 as dedicated macro buttons configured with Ultimate Software. It does not establish independent raw inputs or their absence across modes.",
   "status": "source_supported",
   "applicability": {
-    "controller": "8BitDo Pro 2",
+    "controller": "8bitdo-pro-2",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "vendor description, not captured",
-    "scope": "physical controls and profile behavior"
+    "transport": "source_only",
+    "scope": "transport detail: vendor description, not captured; physical controls and profile behavior"
   },
   "sources": [
     "8bitdo-pro2-faq"

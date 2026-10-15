@@ -4,11 +4,11 @@
   "statement": "SDL 3.2.0 generates the Edge default mapping paddle1:b16,paddle2:b15,paddle3:b14,paddle4:b13. Combined with its PS5 decoder, these address right paddle, left paddle, right function and left function respectively. User mappings can override the default; this is not a capture of the active mapping or a Linux evdev/physical support claim.",
   "status": "source_supported",
   "applicability": {
-    "controller": "DualSense Edge",
+    "controller": "dualsense-edge",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "SDL HIDAPI",
-    "scope": "default SDL mapping source"
+    "transport": "source_only",
+    "scope": "transport detail: SDL HIDAPI; default SDL mapping source"
   },
   "sources": [
     "sdl-gamepad-baseline",

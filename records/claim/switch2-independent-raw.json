@@ -4,11 +4,11 @@
   "statement": "The pinned SDL Switch 2 Pro state handler maps data[8] bits 0x01 and 0x02 to right and left paddle joystick buttons. No physical capture, firmware version or evdev mapping was measured.",
   "status": "source_supported",
   "applicability": {
-    "controller": "Switch 2 Pro",
+    "controller": "switch2-pro",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "SDL HIDAPI Pro state packet",
-    "scope": "raw independent control"
+    "transport": "source_only",
+    "scope": "transport detail: SDL HIDAPI Pro state packet; raw independent control"
   },
   "sources": [
     "sdl-switch2"

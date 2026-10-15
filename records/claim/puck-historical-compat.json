@@ -4,7 +4,7 @@
   "statement": "Historical handoff reports compatibility identity 28de:1142; originating code revision has not been recovered.",
   "status": "conflicted",
   "applicability": {
-    "controller": "openpuck",
+    "controller": "openpuck-firmware",
     "revision": "unknown",
     "firmware": "unknown",
     "transport": "usb",

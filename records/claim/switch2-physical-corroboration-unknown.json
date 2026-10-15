@@ -4,10 +4,10 @@
   "statement": "No controlled physical capture is included for the selected controls; no physical support promotion is justified.",
   "status": "unknown",
   "applicability": {
-    "controller": "Switch 2 Pro",
+    "controller": "switch2-pro",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "not measured",
+    "transport": "not_measured",
     "scope": "physical corroboration"
   },
   "sources": [],

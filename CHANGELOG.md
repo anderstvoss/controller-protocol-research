@@ -7,6 +7,23 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+### Added
+
+- `records/controller/` registry (schema `controller.schema.json`). Every
+  claim's `applicability.controller` must name a registered controller, and
+  each record links its tracking issue.
+- `tools/status.py`, which prints each controller's evidence category (no
+  evidence, evidence in progress, source evidence, physical evidence) overall
+  and per transport.
+
+### Changed
+
+- Claim `applicability.transport` is a fixed vocabulary: `usb`, `bluetooth`,
+  `receiver`, `source_only`, `not_measured`. Existing free-text transports
+  became `source_only` with the original detail moved into `scope`; existing
+  controller names became registry IDs. Record shape is unchanged, so
+  `schema_version` stays 1.
+
 ### Changed
 
 - Visibility gates removed from CI now that the repository is public: the

@@ -4,11 +4,11 @@
   "statement": "At the pinned SDL 3.2.0 revision, structured joystick GUID byte 14 is the driver signature. HIDAPI uses h; the Linux driver uses zero signature/data and returns its native device path. Combining a matching VID/PID GUID with the exact hidraw or event path permits a conservative backend inference. Vendor-less name GUIDs, other builds and ambiguous paths remain unknown; requested hints are not evidence of driver selection.",
   "status": "source_supported",
   "applicability": {
-    "controller": "structured nonzero-VID Linux joystick identities",
+    "controller": "linux-joystick-identity",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "SDL HIDAPI / Linux evdev",
-    "scope": "source-derived backend identification"
+    "transport": "source_only",
+    "scope": "transport detail: SDL HIDAPI / Linux evdev; source-derived backend identification"
   },
   "sources": [
     "sdl-joystick-baseline",
