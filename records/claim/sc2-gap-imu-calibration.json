@@ -10,7 +10,10 @@
     "transport": "source_only",
     "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
   },
-  "sources": [],
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
   "experiments": [],
   "conflicts_with": [],
   "supersedes": [],

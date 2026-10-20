@@ -12,7 +12,9 @@
   },
   "sources": [
     "sc2",
-    "sc2-src-dissector"
+    "sc2-src-dissector",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
   ],
   "experiments": [],
   "conflicts_with": [],
