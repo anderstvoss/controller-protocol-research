@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-linux-driver",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "c37c8c342f7e1c0276ca65e1b297d70ee2f86b108e2b9541d7316f4e99798a3a",
+  "lineage": "linux-mainline",
+  "locator": "v7.3-rc1; interface selection lines 1589-1631, probe lines 1735-1760, device table lines 2751-2770. No upstream excerpts retained."
+}

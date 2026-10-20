@@ -47,7 +47,9 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['wii-remote']['category'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
-        self.assertEqual(rows['steam-controller-2026-puck']['transports'], {'usb': 'Source evidence'})
+        puck = rows['steam-controller-2026-puck']['transports']
+        self.assertEqual(puck['usb'], 'Source evidence')
+        self.assertEqual(puck['source_only'], 'Source evidence')
 
     def test_no_claims_still_produce_no_evidence(self):
         # Retain the original zero-evidence regression after adding the Wii ledger.
