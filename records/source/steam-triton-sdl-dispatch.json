@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-triton-sdl-dispatch",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapijoystick.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "68469fe0ad81424c2dece0fb38ba0d589d4d8280d49e76d068b23464a901eb67",
+  "lineage": "libsdl",
+  "locator": "Lines 390-401: Valve devices bypass generic usage filters before driver selection."
+}
