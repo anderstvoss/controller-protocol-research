@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-linux-predecessor",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/8d3ae59288f1e7d58d76558a6ee96d533bc5019f/drivers/hid/hid-ids.h",
+  "revision": "8d3ae59288f1e7d58d76558a6ee96d533bc5019f",
+  "sha256": "330e393ecb01d5cde4ad347cc174ba6e177d822430918166a5fff06473d2293d",
+  "lineage": "linux-mainline",
+  "locator": "v7.2, drivers/hid/hid-ids.h lines 1373-1376: Valve IDs before IBEX support; no IBEX/PROTEUS/NEREID definitions."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-linux-ids",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-ids.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "f4401d5bb11b377a3c9d1ea7960a45b2caceab2f5373dc2b2a29625bdec52bf7",
+  "lineage": "linux-mainline",
+  "locator": "v7.3-rc1; lines 1389-1392. Introduced by commit 0a80b4e8ec6a6e40937c7abdf8fb2ebe6cc7c1e5 in this file."
+}
