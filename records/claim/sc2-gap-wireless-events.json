@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-wireless-events",
+  "statement": "A real Puck slot's 0x79 connection/disconnection state machine, loss recovery and report delivery sequence are not captured.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

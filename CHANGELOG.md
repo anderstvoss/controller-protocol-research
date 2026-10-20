@@ -12,6 +12,7 @@ affected schema's `schema_version`.
 - Pinned Steam Controller 2026 P0 consumer evidence: kernel introduction and
   v7.3-rc1 selection, SDL Triton direct/receiver filters, and provisional UHID
   feasibility. Live P1 and all physical observations remain unmeasured.
+- Source-reviewed Steam Controller 2026/Puck earlier-research gap audit, with revision-pinned independent Triton sources and unresolved gap claim records; no physical or live acceptance claimed.
 
 - `records/controller/` registry (schema `controller.schema.json`). Every
   claim's `applicability.controller` must name a registered controller, and
