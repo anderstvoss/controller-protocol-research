@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-ibex-uhid-provisional",
+  "statement": "The pinned kernel and SDL direct-wired selection paths do not require an actual USB interface for 28de:1302, so linux.uhid.usb is provisionally plausible for the playable tier. This is an inference, not acceptance: feature exchanges, hidraw enumeration, driver binding, Steam Input listing, first input delivery and cleanup remain unmeasured. P1 on an owner-selected host (D9) is still required; source acceptance alone does not prove every control or output works.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "2026 model; hardware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only; no physical observation or device-side protocol promotion"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-triton-sdl-dispatch",
+    "steam-triton-sdl-hidraw"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
