@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-physical-report-mix",
+  "statement": "The original physical run reportedly showed heavy 0x42 traffic together with 0x79 and 0x7b; packet bytes, frequencies, endpoint direction and firmware are unavailable.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

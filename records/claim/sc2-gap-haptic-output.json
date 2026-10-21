@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-haptic-output",
+  "statement": "2026 haptic output IDs 0x80 through 0x89 and streaming modes have source implementations, but physical motor addressing, acknowledgement and buffer behavior are not validated.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
+  },
+  "sources": [
+    "sc2",
+    "sc2-src-dissector",
+    "sc2-src-haptics"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
