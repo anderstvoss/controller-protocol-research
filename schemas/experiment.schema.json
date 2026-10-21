@@ -12,7 +12,8 @@
       "enum": [
         "synthetic",
         "source_inspection",
-        "controlled_physical"
+        "controlled_physical",
+        "virtual_host_run"
       ]
     },
     "status": {

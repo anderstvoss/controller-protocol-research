@@ -8,6 +8,7 @@ affected schema's `schema_version`.
 ## Unreleased
 
 - Migrate pinned Steam kernel/OpenPuck identity,interface,report and lizard findings; retain historical1142/current1304 distinction and unmeasured cadence.
+- Record500 measured DualSense/Xbox360 uinput lifecycle samples with virtual-host-only format/validation, sanitized paths/time and explicit missing consumer measurements; no physical promotion.
 
 ### Added
 
