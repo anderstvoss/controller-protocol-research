@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-tr-consumer-revision",
+  "statement": "The pinned kernel name classifier maps RVL-CNT-01-TR to Gen2 and its Gen2 module list includes builtin MotionPlus handling.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "RVL-CNT-01-TR integrated Plus consumer classification",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-core.c:594-605,832-852; no universal firmware/calibration equivalence claim."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

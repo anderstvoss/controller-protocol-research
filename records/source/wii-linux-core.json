@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-linux-core",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-wiimote-core.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "7a0eac4dd65cc75353cdf906d4de8aa64a3c75ff37871094a732218cfd7275c6",
+  "lineage": "linux-kernel",
+  "locator": "125-171 rumble/LED commands; 195-233 report-mode/IR policy; 409-556 extension and MotionPlus initialization; 832-852 revision classification; 1420-1515 status/read/ACK handlers; 1590-1618 report dispatch. No upstream excerpts copied."
+}

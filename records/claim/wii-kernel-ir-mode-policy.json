@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-ir-mode-policy",
+  "statement": "Kernel report-mode selection accounts for basic,extended and full IR modes, with generation-dependent coupling between report modes and IR configuration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote.h:33-35; hid-wiimote-core.c:195-233. No physical IR quality/point-validity/cadence claim."
+  },
+  "sources": [
+    "wii-linux-header",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

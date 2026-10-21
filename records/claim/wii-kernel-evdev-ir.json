@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-ir",
+  "statement": "A separate IR input node advertises four X/Y point pairs as ABS_HAT0..3X/Y, with X0..1023 andY0..767 and fuzz/flat2/4.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape only: hid-wiimote-modules.c:750-768. Missing points and physical tracking acceptance require further tests."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

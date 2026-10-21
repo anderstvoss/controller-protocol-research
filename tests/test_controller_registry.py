@@ -44,10 +44,19 @@ class ControllerRegistry(unittest.TestCase):
     def test_categories_follow_strongest_claim(self):
         rows = {row['id']: row for row in status(self.root)}
         self.assertEqual(rows['dualsense']['category'], 'Source evidence')
-        self.assertEqual(rows['wii-remote']['category'], 'No evidence')
+        self.assertEqual(rows['wii-remote']['category'], 'Source evidence')
+        self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
+        self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
         puck = rows['steam-controller-2026-puck']['transports']
         self.assertEqual(puck['usb'], 'Source evidence')
         self.assertEqual(puck['source_only'], 'Source evidence')
+
+    def test_no_claims_still_produce_no_evidence(self):
+        # Retain the original zero-evidence regression after adding the Wii ledger.
+        for path in (self.root / 'records/claim').glob('wii-*.json'):
+            path.unlink()
+        rows = {row['id']: row for row in status(self.root)}
+        self.assertEqual(rows['wii-remote']['category'], 'No evidence')
 
     def test_unknown_only_claims_are_wip(self):
         for name in ['pro2-physical-macro-controls']:

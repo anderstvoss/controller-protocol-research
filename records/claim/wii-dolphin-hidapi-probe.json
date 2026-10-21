@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-dolphin-hidapi-probe",
+  "statement": "Pinned Dolphin opens an exact HID path and sends a status request to test usability before accepting it; this is an active consumer probe,not purely passive enumeration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: IOhidapi.cpp:59-84,169-200. No local host,radio or physical experiment performed."
+  },
+  "sources": [
+    "wii-dolphin-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
