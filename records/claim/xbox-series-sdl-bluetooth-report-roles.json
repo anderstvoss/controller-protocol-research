@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-sdl-bluetooth-report-roles",
+  "statement": "Pinned SDL Bluetooth fallback dispatch handles state report0x01, guide report0x02 and battery report0x04 on distinct paths.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: SDL_hidapi_xboxone.c:1966-1988; descriptor parsing and firmware variants can change the applicable decoder."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

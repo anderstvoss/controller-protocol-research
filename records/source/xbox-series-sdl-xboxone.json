@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-sdl-xboxone",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/d4557c1511c721485dc4960f7149730afc9a73a0/src/joystick/hidapi/SDL_hidapi_xboxone.c",
+  "revision": "d4557c1511c721485dc4960f7149730afc9a73a0",
+  "sha256": "89b7fe267431f61b63d464ab8744974a202c10fab2292468f42d19d846618f63",
+  "lineage": "sdl-hidapi",
+  "locator": "254-272 disabled serial request; 564-586 separate Bluetooth HID and USB GIP rumble construction; 1966-1988 Bluetooth report dispatch. Consumer implementation only."
+}

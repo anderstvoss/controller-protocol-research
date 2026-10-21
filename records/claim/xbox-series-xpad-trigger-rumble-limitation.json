@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-trigger-rumble-limitation",
+  "statement": "The xpad XboxOne FF_RUMBLE translation explicitly zeroes both trigger motor magnitudes while mapping ordinary strong/weak amplitudes to the main motors.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: xpad.c:1600-1615. A uinput xpad-equivalent surface does not expose independent native impulse-trigger effects; no claim that hardware lacks those motors."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-published-evdev-shape",
+  "statement": "The pinned public gamepadcapture fixture contains26 advertised controls and14 frames of observed post-driver evdev data, including KEY_RECORD and10-bit trigger domains. It is not raw USB/GIP or Bluetooth evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Artifact evidence only: fixture manifest,controls,frames. Existing corpus PR6 added evdev_trace_json support, but the fixture itself is linked as a source rather than reimported or newly promoted."
+  },
+  "sources": [
+    "xbox-series-gpc-evdev-artifact"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
