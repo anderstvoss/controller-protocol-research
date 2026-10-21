@@ -91,3 +91,13 @@ see CONTRIBUTING.md for the capture-safety steps. Repository hardening
 Evidence data (`records/`, `fixtures/`, `schemas/`, `evidence/`) is CC-BY-4.0
 (LICENSE-DATA). Tooling and tests are AGPL-3.0-only (LICENSE). NOTICE lists the
 third-party excerpt and how upstream sources are cited.
+
+### Measured virtual-host runs
+
+`acceptance_run_json` uses schemas/acceptance-run.schema.json and requires both
+fixture and experiment kind virtual_host_run. These are observed virtual devices,
+not hand-authored synthetic traces or physical references. The validator rejects
+fake backend runs and cannot use virtual-host fixtures to justify physical
+promotion. Missing stages retain reasons; durations have no acceptance budget.
+Path/wall-clock redactions and the original local artifact hash are documented
+in each fixture. No real device identity or capture data is included.
