@@ -8,6 +8,7 @@ affected schema's `schema_version`.
 ## Unreleased
 
 - Add Xbox Series L0 source-only xpad/SDL ledger and linked observed-evdev artifact, preserving USB-GIP/Bluetooth/device-evidence separation.
+- Record500 measured DualSense/Xbox360 uinput lifecycle samples with virtual-host-only format/validation, sanitized paths/time and explicit missing consumer measurements; no physical promotion.
 
 ### Added
 
