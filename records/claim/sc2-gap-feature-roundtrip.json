@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-feature-roundtrip",
+  "statement": "Feature reports 1/2 and settings commands are named by source parsers, but actual GET/SET request-response ordering, sizes, failures and persistent state are not validated.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
+  },
+  "sources": [
+    "sc2",
+    "sc2-src-dissector"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

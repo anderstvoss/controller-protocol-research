@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-ble-identity",
+  "statement": "The 28de:1303 BLE device identification is supported in consumer source; a physical BLE discovery, descriptor or packet fixture is not available and no radio design is claimed.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

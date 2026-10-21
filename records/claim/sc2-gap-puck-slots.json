@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-puck-slots",
+  "statement": "OpenPuck models four controller HID interfaces; physical Puck 0-3 slot routing, pairing, bonding, churn and independent failure handling remain unvalidated.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
+  },
+  "sources": [
+    "openpuck"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
