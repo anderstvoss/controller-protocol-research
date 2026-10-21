@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-linux-xpad",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/input/joystick/xpad.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "b47281151829fc382c4bcb5f466865f476a6f4ebfacd617ee49393f99c1e3950",
+  "lineage": "linux-kernel",
+  "locator": "134 identity; 1103 Share decode; 1600-1615 two-channel FF translation; 1907-1925 axis setup; 1974-2025 evdev capabilities. Consumer evidence only; no device capture or raw GIP proof."
+}

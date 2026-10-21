@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-sdl-bluetooth-rumble",
+  "statement": "Pinned SDL constructs a nine-byte Bluetooth HID rumble report with report ID0x03 and separate left-trigger,right-trigger,low-frequency and high-frequency amplitude fields.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: SDL_hidapi_xboxone.c:564-574; Bluetooth HID output, separate from GIP. No physical actuation/canonical firmware packet claim."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
