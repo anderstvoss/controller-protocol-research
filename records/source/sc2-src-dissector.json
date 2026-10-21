@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-src-dissector",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/iczero/steam-controller-stuff/83c46d7c5711f7497f83336526755fbf50d0c5af/dissector.lua",
+  "revision": "83c46d7c5711f7497f83336526755fbf50d0c5af",
+  "sha256": "8a2402b06253463f7f51c62009a7377237c2a168715a9680f2ea98e97ad7bc0a",
+  "lineage": "sc2",
+  "locator": "Report enumeration and provisional 0x44/0x7b parsing; code annotations are hypotheses, not hardware confirmation"
+}
