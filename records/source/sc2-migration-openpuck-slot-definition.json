@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-openpuck-slot-definition",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/safijari/openpuck/blob/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/bonds.h",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "b3b8c06212399a21f1150aa39dc97ffb8322524b0256ef3471ee7ad727b3302c",
+  "lineage": "openpuck",
+  "locator": "OpenPuck/bonds.h:11 NSLOT=4; paired with existing openpuck source puck_hid.cpp:665-706. Compatibility implementation, not authentic receiver topology evidence."
+}

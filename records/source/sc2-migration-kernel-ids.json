@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-kernel-ids",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/0fcb05b72344f40806cbe810de8872f1698bf053/drivers/hid/hid-ids.h",
+  "revision": "0fcb05b72344f40806cbe810de8872f1698bf053",
+  "sha256": "27a23b9f29653d592e51b9ec5f6e10c4129724c464148e66112508cd8ca14bf5",
+  "lineage": "linux-kernel",
+  "locator": "1395-1398 IBEX,IBEX_BLE,PROTEUS,NEREID values. Consumer evidence only; no source excerpts."
+}

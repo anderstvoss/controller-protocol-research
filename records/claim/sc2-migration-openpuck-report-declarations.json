@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "sc2-migration-openpuck-report-declarations",
+  "statement": "The normal OpenPuck descriptor declares input IDs40,41,42,43,44,45,47,79,7b hex, output80..89 hex and feature01/02 hex.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "openpuck-firmware",
+    "revision": "pinned implementation only; authentic hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Compatibility declarations only: puck_hid.cpp:53-86. Short-item parsing confirms these IDs; no descriptor bytes copied. Declarations of86..89 do not prove authentic device support."
+  },
+  "sources": [
+    "openpuck"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
