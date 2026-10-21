@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-imu-calibration",
+  "statement": "A gameplay-ready IMU path needs report rates, timestamps, gyro/accelerometer scales, axis orientation and enabling controls validated beyond source parsers.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "sc2-gap-puck-usb-descriptors",
+  "statement": "No imported physical Puck descriptor fixture establishes its seven-interface USB configuration, non-HID functions, slot interfaces and pogo behavior.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
