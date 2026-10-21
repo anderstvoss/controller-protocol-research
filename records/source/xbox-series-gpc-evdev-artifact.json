@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-gpc-evdev-artifact",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/gamepadcapture/blob/f36be41d0ad1b2ec391e44b1cb90e72fbbe11817/tests/fixtures/xbox-series-usb-observed-input.json",
+  "revision": "f36be41d0ad1b2ec391e44b1cb90e72fbbe11817",
+  "sha256": "84768481c700a5c5e55d0690575fdbeee6b30003767ea5ea6b58ec5032f1e50c",
+  "lineage": "gamepadcapture-observed-evdev",
+  "locator": "Published observed post-driver evdev fixture: manifest,26 controls,14 frames. No raw packets copied; identity version is not a proven firmware version. Research PR6 accepts its format, not an imported corpus fixture."
+}

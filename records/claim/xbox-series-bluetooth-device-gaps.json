@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-bluetooth-device-gaps",
+  "statement": "The reference Bluetooth HID report map,firmware identity,Guide/battery cadence and independent four-motor actuation remain unmeasured in this ledger.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series identity where named; Elite and other revisions excluded",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Bluetooth device-side unknowns remain separate from USB GIP and the observed post-driver evdev artifact."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
