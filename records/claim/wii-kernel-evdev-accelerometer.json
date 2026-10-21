@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-accelerometer",
+  "statement": "A separate accelerometer input node advertises ABS_RX,ABS_RY,ABS_RZ with ranges -500..500 and kernel fuzz/flat2/4.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape only: hid-wiimote-modules.c:498-506. These are post-decode consumer units, not a physical calibration schema."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

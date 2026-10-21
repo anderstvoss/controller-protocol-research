@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-report-modes",
+  "statement": "Pinned hid-wiimote names output rumble/LED/mode/memory requests and status0x20,read0x21,ACK0x22, input modes0x30..0x37,0x3d,0x3e and0x3f, with mode-specific dispatch sizes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote.h:213-257 and hid-wiimote-core.c:1590-1618; not a physical packet capture."
+  },
+  "sources": [
+    "wii-linux-header",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

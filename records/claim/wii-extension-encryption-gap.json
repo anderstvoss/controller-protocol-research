@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-extension-encryption-gap",
+  "statement": "Reference encrypted extension initialization,calibration and passthrough timing remain unmeasured; kernel/SDL initialization sequences are consumer expectations only.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Device-side gap, separately scoped from source-only initialization claims."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

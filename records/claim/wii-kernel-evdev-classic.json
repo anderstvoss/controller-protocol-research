@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-evdev-classic",
+  "statement": "The Classic node advertises its own key map and six ABS_HAT1..3X/Y axes at -30..30 with fuzz/flat1/1.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer shape only: hid-wiimote-modules.c:1239-1264; do not replace Classic/Pro distinctions or raw trigger bit depths with these post-decode axes."
+  },
+  "sources": [
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

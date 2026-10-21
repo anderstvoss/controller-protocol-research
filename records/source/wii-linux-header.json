@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-linux-header",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-wiimote.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "465a6bedeb6f4b2545d86b9cb29eb2d8d237abf1e4cd7ada0458ad9665971786",
+  "lineage": "linux-kernel",
+  "locator": "27-45 independent extension/MotionPlus/builtin flags; 74-101 device/extension/pass-through enums; 213-257 report identifiers/modes. No upstream excerpts copied."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-linux-modules",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-wiimote-modules.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "de4f949747c60579fb3ba8786f3c48b4578f566ff567edb75b1d3f3c17f76938",
+  "lineage": "linux-kernel",
+  "locator": "47-99 base key map; 112-164 rumble; 171-280 battery; 294-399 LEDs; 498-506 accelerometer; 750-768 IR; 809-818,945-966 Nunchuk; 1239-1264 Classic; 2814-2825 MotionPlus. Separate logical input nodes, consumer evidence only. No upstream excerpts copied."
+}

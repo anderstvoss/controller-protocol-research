@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-dolphin-hidapi",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteReal/IOhidapi.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "cdb08fa05e75fa4b56ea794d39362f78c751d2ca14dedfa9590da64acf18b97c",
+  "lineage": "dolphin-emulator",
+  "locator": "59-84 IsDeviceUsable opens HID path and sends status probe; 169-200 read/write framing. Consumer source only; no local host or radio experiment. No upstream excerpts copied."
+}

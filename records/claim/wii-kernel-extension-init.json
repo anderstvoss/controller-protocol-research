@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-kernel-extension-init",
+  "statement": "The kernel extension path writes initialization values to0xa400f0 and0xa400fb, reads identification at0xa400fa and classifies extension IDs; this consumer path disables default encryption.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote and integrated Plus kept distinct where named",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only: hid-wiimote-core.c:409-462. Not evidence that every extension/revision supports all encrypted or unencrypted workflows."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
