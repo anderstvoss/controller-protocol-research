@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "acceptance-xbox360-uinput-n4-c2-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-acceptance-runner-c2"
+  ],
+  "fixtures": [
+    "acceptance-xbox360-uinput-n4-c2"
+  ],
+  "procedure": "On Linux6.12.111+deb13-arm64 aarch64, run cargo xtask acceptance --controller virtualgamepad.xbox360 --realization linux.uinput --cycles 50 --concurrency 4; exact implementation revision e698c0df68bff2cc0d11aeb9051b059c83600be0, tracked tree clean. First cycle cold, later cycles warm; all N sessions coexist before removal; no timing budgets.",
+  "semantic_outcome": "200 measured virtual-controller creation/removal samples; no recorded errors; owned nodes appeared, consumer fds opened and nodes disappeared; fd/thread/input/hidraw counts returned to baseline. First-valid-neutral oracle, SDL-ready/backend/hints and probe-binary hash unmeasured as recorded; identity reuse not measured. No physical equivalence, native hardware protocol, whole-controller acceptance or latency budget inferred."
+}

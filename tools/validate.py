@@ -74,6 +74,17 @@ def validate(root):
                 raise ValueError('fixture hash mismatch: ' + id)
             if rec['format'] == 'hid_report_hex':
                 bytes.fromhex(path.read_text().strip())
+            elif rec['format'] == 'acceptance_run_json':
+                if rec['kind'] != 'virtual_host_run':
+                    raise ValueError('acceptance runs require virtual_host_run fixture kind: ' + id)
+                run = json.loads(path.read_text())
+                schema = json.loads((root / 'schemas/acceptance-run.schema.json').read_text())
+                Draft202012Validator.check_schema(schema)
+                Draft202012Validator(schema).validate(run)
+                if run['environment'].get('synthetic') is not False or run['environment'].get('backend') != 'linux':
+                    raise ValueError('virtual host run must be measured Linux backend, not fake: ' + id)
+                if not rec['experiments'] or any(reference(exp, 'experiment')['kind'] != 'virtual_host_run' for exp in rec['experiments']):
+                    raise ValueError('acceptance run requires virtual-host experiment: ' + id)
             else:
                 trace = json.loads(path.read_text())
                 if trace.get('manifest', {}).get('synthetic') is not (rec['kind'] == 'synthetic'):
