@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-data-report-powerup-default",
+  "statement": "The pinned WiiBrew Wiimote Data Reporting section documents mode 0x30 (core buttons) as the startup data-report mode. The host selects another mode using output report 0x12. During most reporting modes the core-button bytes carry lower accelerometer bits in otherwise unused bit positions, including modes without separate acceleration bytes, whereas interleaved full-IR modes 0x3E and 0x3F are exceptions. The page also describes report delivery stopping after an extension attachment change until mode selection is resent. These are documented defaults and bit-sharing behavior, not measured cadence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Wiimote oldid 123257, Data Reporting / 0x30 Core Buttons / 0x3E-0x3F Interleaved Reports. Related: wii-kernel-report-modes, wii-c5-report-layouts, wii-gap-wiibrew-status-20-resend and wii-gap-wiibrew-continuous-versus-change-reports. C5 should treat protocol compatibility as a candidate review only. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
