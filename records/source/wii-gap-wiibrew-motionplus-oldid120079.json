@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-motionplus-oldid120079",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Wii_Motion_Plus&oldid=120079&action=raw",
+  "revision": "oldid=120079; canonical Wiimote/Extension Controllers/Wii Motion Plus; 2024-04-03T11:31:19Z; 29876 bytes",
+  "sha256": "aef82e70583de2f60eb4cb8475c437306a8795f64b6e84ba3eebe84c10ec257b",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "Sections introductory MotionPlus identification/activation; calibration 0xA60020; Data Format and pass-through. Hash/byte-length provenance: implementer comment https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6345183001 ; raw oldid body HTTP 200, text/x-wiki UTF-8, Accept-Encoding identity; exact alias and canonical-title revisions independently hash matched by implementer; cloud agent verified current rendered permanent links show matching oldids, without copying wiki text."
+}
