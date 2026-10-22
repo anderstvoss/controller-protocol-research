@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-dolphin-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-w1-dolphin-2609a"
+  ],
+  "fixtures": [
+    "wii-w1-granted-dolphin-host"
+  ],
+  "procedure": "Same held granted device. Existing Flatpak2609a offscreen, fresh sandbox profile with Real slot1, continuous scanning and controller-interface connection true, speaker false. Exact owned hidraw access checked in same sandbox.14-second inner timeout, bounded outer18-second kill fallback; no ROM or host configuration change.",
+  "semantic_outcome": "Sandbox can see and open the owned hidraw node after the grant. Bounded application run exits124; no backend connection, report modes, memory reads, extension initialization or MotionPlus activation were observed. Access block resolved but backend/application acceptance still blocked on observation, not proven successful or rejected. Earlier permission-denied run unchanged."
+}
