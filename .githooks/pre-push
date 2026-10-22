@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Hook-local Git variables otherwise override -C in cache/fixture repositories.
+# Keep the current working directory, but let each nested Git command discover
+# its own repository. This is also required for linked worktrees.
+while IFS= read -r git_local_variable; do
+  unset "$git_local_variable"
+done < <(git rev-parse --local-env-vars)
+
 echo "Running pre-push safety checks..."
 
 gitleaks detect --source . --no-banner

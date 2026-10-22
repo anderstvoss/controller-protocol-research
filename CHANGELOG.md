@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Clear repository-local Git environment in both hook wrappers so nested cache/fixture commands cannot mutate the active worktree; cover inherited hook context deterministically.
+
 - Record W1 bounded Wii numeric delivery on UHID/uinput, battery/rumble observations and explicit SDL HIDAPI/Dolphin/LED permission blocks, with original reproducible probes; no physical promotion or wii-gap claim changes.
 
 - Add reproducible hash-checked Wii consumer-shape extraction and a six-node synthetic evdev golden; record source extension register tails and pass-through packing without promoting physical calibration.
