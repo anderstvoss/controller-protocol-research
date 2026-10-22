@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-linux-input-codes",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/include/uapi/linux/input-event-codes.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "0aa175af6b02a096e7dc172bd31e81d499eba9083777515e8c20aa915ab79dec",
+  "lineage": "linux-kernel",
+  "locator": "EV/KEY/BTN/ABS/FF constants used by the pinned hid-wiimote consumer maps. Consumer ABI only; no source excerpts copied."
+}

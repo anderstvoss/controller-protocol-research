@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-motionplus-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "a1f2ca12eb7959df79df2a54ada6dc137f806b698f60df8570fbb2399f66bbe9",
+  "lineage": "dolphin-emulator",
+  "locator": "Packed report fields and register declarations. Source compatibility evidence only; not retail calibration or physical observations. No upstream excerpts redistributed."
+}

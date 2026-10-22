@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-synthetic-fixtures",
+  "statement": "C5 neutral packets and vendor-page HID descriptor are hand-authored synthetic compatibility fixtures. The descriptor declares the source-backed report IDs and payload lengths using byte fields; its usage page/usage are fixture design choices, not a retail descriptor or device evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original/TR package source model; early Plus discriminator unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 compatibility model only. No physical data, cadence, factory calibration or retail descriptor claim."
+  },
+  "sources": [
+    "wii-c5-datareport-cpp",
+    "wii-c5-wiimotereport-h",
+    "wii-c5-wiimoteconstants-h"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

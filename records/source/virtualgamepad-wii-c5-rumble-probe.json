@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-c5-rumble-probe",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/ccb98dc1a4fd384a20bf0c7015fd0115c006798e/scripts/wii-evdev-rumble-probe.c",
+  "revision": "ccb98dc1a4fd384a20bf0c7015fd0115c006798e",
+  "sha256": "230122726afc31e2b9c13bee6fc4dc7c0256ce107b02800e2be13cfcbdc6e79d",
+  "lineage": "virtualgamepad-wii-c5-host-probe",
+  "locator": "Linux evdev FF_RUMBLE upload, playback, stop and erase on the creation-owned virtual core event interface; validates Bluetooth Nintendo identity. No firmware wire bytes authored."
+}

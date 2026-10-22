@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-datareport-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteCommon/DataReport.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "23c52862726e7292c350b5e975823d031a0330c142d3eaced2e1d2cb939d205f",
+  "lineage": "dolphin-emulator",
+  "locator": "32-111 core/acceleration packing; 146-266 data-mode layouts/interleaved acceleration; 344-348 legal modes. Source review only; no upstream excerpts redistributed."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-c5-acceptance-runner",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/ccb98dc1a4fd384a20bf0c7015fd0115c006798e/xtask/src/linux.rs",
+  "revision": "ccb98dc1a4fd384a20bf0c7015fd0115c006798e",
+  "sha256": "c4fbe60f736a00d9ab644628f920a89d9f3f60791da10f8cb56e1119954f0a4f",
+  "lineage": "virtualgamepad-wii-c5-host-probe",
+  "locator": "Creation-associated virtual node/driver observation, consumer open, scripted input, close/disappearance and resource snapshots. Harness semantics remain in xtask/src/lib.rs at this same code revision; absent oracle cells remain unmeasured."
+}

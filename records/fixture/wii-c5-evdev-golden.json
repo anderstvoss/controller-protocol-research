@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-evdev-golden",
+  "kind": "synthetic",
+  "format": "evdev_trace_json",
+  "path": "fixtures/wii-c5-evdev-golden.json",
+  "sha256": "d2e6c08c9f7f1f11255a66aff864179f198a39873c3fe6a95de581d69ada0281",
+  "sources": [
+    "wii-linux-modules",
+    "wii-c5-linux-input-codes",
+    "wii-c5-linux-input-ff"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-evdev-consumer-shape"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-extension-packing",
+  "statement": "Pinned Dolphin source headers specify Nunchuk six-byte stick/ten-bit acceleration/active-low buttons, Classic six-byte bit packing and MotionPlus14-bit gyro/slow/downstream flags. MotionPlus.cpp651-710 describes pass-through bit relocation. Its base extension register is21 controller bytes reset to zero; six-byte data leaves a zero tail in this source model. These are compatibility facts, not retail calibration or encryption evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer/source model; original/TR distinct; Classic Pro identity unresolved",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 source/synthetic reference. No physical calibration, cadence, encryption or consumer observation."
+  },
+  "sources": [
+    "wii-c5-nunchuk-h",
+    "wii-c5-classic-h",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-c5-extension-h",
+    "wii-c5-extension-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

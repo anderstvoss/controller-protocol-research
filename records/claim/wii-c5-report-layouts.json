@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-report-layouts",
+  "statement": "Pinned Dolphin represents raw ten-bit acceleration, eleven core keys, status and ACK prefixes, 16-byte read chunks, and input payload lengths 2,5,10,17,21 for modes0x30..0x37 and0x3d..0x3f. Modes0x38..0x3c are reserved and not emitted. Basic IR packs two ten-bit coordinate pairs in five bytes; extended IR uses three bytes per point. IR visibility and blob metadata are separate; C5 full-IR metadata is not established as physical fidelity. The compatibility status handler sets its low-battery flag when the raw byte is below0x20; IR status follows0x13 while0x1a is acknowledged without a separate status bit. These are source-model rules, not measured retail thresholds.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original/TR package source model; early Plus discriminator unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 compatibility model only. No physical data, cadence, factory calibration or retail descriptor claim."
+  },
+  "sources": [
+    "wii-c5-datareport-cpp",
+    "wii-c5-wiimotereport-h",
+    "wii-c5-wiimoteconstants-h",
+    "wii-c5-camera-h",
+    "wii-linux-modules",
+    "wii-c5-emusubroutines-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-classic-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Extension/Classic.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "90a97da0d4310139a265f2a7f4adbd1a4d9bf6cfdb91840b2c3fecb647dd8db4",
+  "lineage": "dolphin-emulator",
+  "locator": "Packed report fields and register declarations. Source compatibility evidence only; not retail calibration or physical observations. No upstream excerpts redistributed."
+}

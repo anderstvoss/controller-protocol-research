@@ -55,6 +55,13 @@ class ControllerRegistry(unittest.TestCase):
         # Retain the original zero-evidence regression after adding the Wii ledger.
         for path in (self.root / 'records/claim').glob('wii-*.json'):
             path.unlink()
+        # Remove fixture references with their claims in this isolated corpus.
+        for path in (self.root / 'records/fixture').glob('wii-c5-*.json'):
+            path.unlink()
+        # Timing experiments reference the fixtures removed above; keep this
+        # isolated no-claims corpus reference-valid without weakening its result.
+        for path in (self.root / 'records/experiment').glob('wii-c5-*-host-run.json'):
+            path.unlink()
         rows = {row['id']: row for row in status(self.root)}
         self.assertEqual(rows['wii-remote']['category'], 'No evidence')
 

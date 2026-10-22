@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-neutral-34",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-c5-neutral-34.hex",
+  "sha256": "6c930f0ceb6721ab409dee1f81f57c67247b632e669454d7392d943b1ac842ad",
+  "sources": [
+    "wii-c5-datareport-cpp",
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-report-layouts",
+    "wii-c5-synthetic-fixtures",
+    "wii-c5-camera-no-points"
+  ]
+}

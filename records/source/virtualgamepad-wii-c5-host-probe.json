@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-c5-host-probe",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/ccb98dc1a4fd384a20bf0c7015fd0115c006798e/crates/gr-curated-controllers/src/wii_remote/live_tests.rs",
+  "revision": "ccb98dc1a4fd384a20bf0c7015fd0115c006798e",
+  "sha256": "8009112ca305acf120ec5bdcc29a47926a7993b7e7a6ac8ced3ec3f5a79ccf63",
+  "lineage": "virtualgamepad-wii-c5-host-probe",
+  "locator": "Ignored local host probe: exact creation-owned HID object, bounded service, base/Nunchuk/Classic/MP names and key/axis masks versus extracted golden, kernel rumble helper, power_supply presence and LED write permission outcomes. Virtual software only."
+}

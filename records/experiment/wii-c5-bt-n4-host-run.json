@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-bt-n4-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-c5-acceptance-runner"
+  ],
+  "fixtures": [
+    "wii-c5-bt-n4-host"
+  ],
+  "procedure": "On Linux6.12.113+deb13-arm64 aarch64, cargo build --locked -p xtask at tracked-clean ccb98dc1a4fd384a20bf0c7015fd0115c006798e, copy the executable and invoke acceptance --controller virtualgamepad.wii-remote --realization linux.uhid.bluetooth --cycles 10 --concurrency 4. Same executable SHA256 recorded in all four runs; no source mutation during qualification. All N sessions coexist before removal; first cycle cold, later warm. No timing budget.",
+  "semantic_outcome": "40 creation/removal samples with no recorded operation errors; node disappearance and fd/thread/input/hidraw baseline restoration observed. Consumer-open permission failures, first-valid-neutral oracle and SDL-ready are explicitly missing. Bluetooth-bus UHID can take seconds to close during early kernel initialization; these raw distributions are not performance acceptance. No physical fidelity, complete gameplay or universal latency target inferred."
+}
