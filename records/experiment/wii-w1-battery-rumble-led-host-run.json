@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-battery-rumble-led-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w1-battery-rumble-led-host"
+  ],
+  "procedure": "On tracked-clean50161b913d0f82950c292465625e9cdd8854daf2, run cargo test --locked -p gr-curated-controllers --lib bluetooth_host_binding_extensions_outputs_and_battery_probe -- --ignored --nocapture. Exact owned UHID matched by creation label, no root or host policy change. Strengthened assertions pass; LED successes or PermissionDenied are explicitly distinguished.",
+  "semantic_outcome": "Raw battery192 yielded kernel power-supply capacity75. Kernel evdev rumble upload/play/stop/erase succeeded and retained rumble intent was observed. Nunchuk disappeared after Classic replacement, standalone MotionPlus appeared, all six shapes matched and owned HID disappeared on idempotent close. Four LED writes remain EACCES13; LED control blocked on permission decision. New close duration is a single functional-run observation, never relabels historical C5 distributions or proves latency/physical acceptance."
+}

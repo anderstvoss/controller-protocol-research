@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-numeric-uinput-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w1-numeric-uinput-host"
+  ],
+  "procedure": "Build tools/wii_w1 with build.py against tracked-clean50161b913d0f82950c292465625e9cdd8854daf2. Run numeric uinput on the unchanged recorded host. Core/Nunchuk/Classic/standalone MotionPlus phases;2-second owned event-node reads with neutral, explicit values and neutral transition; compare EVIOCGABS and delivered events. See retained original probes/README.",
+  "semantic_outcome": "All six owned interface roles readable. Tested accelerometer[600,400,512], IR[123,234], Nunchuk stick[150,100]/accel[600,400,512], Classic left[50,20]/right[20,10]/triggers[4,9] and MotionPlus[9000,8000,8192] slow inputs yielded the source consumer conversions. Numeric minimum/maximum/flat/resolution recorded; UHID fuzz matches kernel2/1/4 while uinput cannot carry fuzz and reports0. Missing IR1023/1023 and accelerometer-512 preserved outside advertised bounds. Owned nodes disappeared and fd count4 returned to4. Selected-value software observation only; no calibration, full-domain, physical or whole-controller claim. First-valid-neutral creation oracle remains unmeasured."
+}

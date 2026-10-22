@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-battery-rumble-led-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-battery-rumble-led-host.json",
+  "sha256": "ad266bed1f49d38ab5e3ed4c454e9f2bd562829e3298119fdad2a0f9e09bce2d",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w1-battery-rumble-led-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original local virtual-probe JSON into reviewed structured observations; omitted host paths, process identities, event times and raw application logs. Original artifact SHA256: f502f7d8abf0a4476805e1a6de5744a0bcb7c5af9edec336b19701df2143c549. No physical data or upstream text.",
+  "claims": []
+}

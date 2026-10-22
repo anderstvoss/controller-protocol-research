@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-numeric-bt-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-numeric-bt-host.json",
+  "sha256": "7dff9f964d125c225705e7525565247ea6fa7ba05663f2198ddf2431e12143b3",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w1-numeric-bt-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original local virtual-probe JSON into reviewed structured observations; omitted host paths, process identities, event times and raw application logs. Original artifact SHA256: f7acb8f611009a1da593f4d1ac475abf8cf5bcd9dee2020d3053d1caf93fc10a. No physical data or upstream text.",
+  "claims": []
+}

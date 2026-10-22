@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-w1-controller",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/50161b913d0f82950c292465625e9cdd8854daf2/crates/gr-curated-controllers/src/wii_remote/controller.rs",
+  "revision": "50161b913d0f82950c292465625e9cdd8854daf2",
+  "sha256": "96a72f69eb9c8dcdf3dd33cac31bf38260df6a5377afb4925d0479d3baebd9b8",
+  "lineage": "virtualgamepad",
+  "locator": "Supporting Wii controller under bounded virtual-host assessment, Part A PR235. Original W1 probes are retained in tools/wii_w1; no upstream source copied."
+}
