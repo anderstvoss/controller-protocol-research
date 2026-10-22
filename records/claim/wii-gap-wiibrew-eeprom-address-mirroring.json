@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-eeprom-address-mirroring",
+  "statement": "The pinned WiiBrew Wiimote EEPROM Memory section documents host-addressed EEPROM reads as using only the low sixteen address bits: the high address byte is ignored, producing a 0x10000-byte mirroring period. Low sixteen-bit offsets 0x0000 through 0x16FF are the documented host-visible range; attempts to read offsets 0x1700 and higher return errors. This is a described host-visible address map, not proof of the physical chip's full writable region or protection behavior.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Wiimote oldid 123257, EEPROM Memory. Related: wii-gap-wiibrew-host-eeprom-visible-range, wii-memory-size-hypothesis (MUST remain unknown for retail-reference measurements), wii-gap-rnconrad-eeprom-exclusive-upper-bound and wii-gap-dolphin-eeprom-inclusive-bound. Does not claim that high-address writes mirror identically. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
