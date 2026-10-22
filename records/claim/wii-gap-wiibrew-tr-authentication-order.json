@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-tr-authentication-order",
+  "statement": "The WiiBrew Wiimote Bluetooth Communication / HID Interface sections report that later RVL-CNT-01-TR remotes require Bluetooth authentication before opening the HID data channel, while older RVL-CNT-01 devices could accept earlier or control-channel paths; the older SET_REPORT control-channel alternative is not supported by TR. This is community-documented radio/host behavior, not evidence for UHID or locally verified Bluetooth pairing.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 sections Bluetooth Communication; HID Interface. Physical Bluetooth implementation remains separately gated; local UHID Bluetooth bus metadata does not implement RF authentication."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

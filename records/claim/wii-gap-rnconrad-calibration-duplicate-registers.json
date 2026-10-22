@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-calibration-duplicate-registers",
+  "statement": "Pinned rnconrad device-side emulator initializes each Nunchuk or Classic accessory by copying a 16-byte calibration template to both register offsets 0x20 and 0x30 within its 0xA4 extension register space. This proves how that emulator initializes extension calibration windows, not a physical checksum, layout or valid retail reference value.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical hardware variant not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source lines 795-809 with template declarations at 12-21; no real-device dump or checksum verification. May be a compatibility constant."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

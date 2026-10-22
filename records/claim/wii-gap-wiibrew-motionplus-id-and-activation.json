@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-motionplus-id-and-activation",
+  "statement": "WiiBrew's Wii Motion Plus introduction documents an inactive MotionPlus at extension address 0xA60000 with six-byte ID 00 00 A6 20 00 05 at 0xA600FA, transitioning to the active 0xA40000 register mapping after a 0x04 write to 0xA600FE, with active ID suffix 04 05 and MotionPlus report data. These are community source facts consistent with pinned Linux host activation, not an authenticated hardware trace.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 120079 section introductory identification and activation; Linux hid-wiimote-core.c 469-555 consumer corroboration."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

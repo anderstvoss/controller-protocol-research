@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-ir-sensitivity-configuration",
+  "statement": "WiiBrew's IR Camera Initialization and Sensitivity Settings sections describe two separate sensitivity register windows at 0xB00000 (nine-byte block) and 0xB0001A (two-byte block), with mode selection at 0xB00033 and camera enabling at 0xB00030. Documented sensitivity behavior depends in part on the tail of the first block and values of the second. This is a community protocol reference, not a claim that Dolphin precisely reproduces sensor sensitivity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 sections IR Camera / Initialization and Sensitivity Settings; pinned kernel hid-wiimote-modules.c lines 634-705 follows similar initialization locations; no sensitivity example blocks copied."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-linux-modules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

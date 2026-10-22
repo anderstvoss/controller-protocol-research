@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-encryption-key-trigger",
+  "statement": "Pinned rnconrad device-side emulator computes extension encryption lookup tables using register bytes starting at offset 0x40 after a host write at offset 0x4C; the register pointer is its 0xA4 block ordinarily, but is the 0xA6 MotionPlus bank when MotionPlus is active. Its preceding special case also treats 0x55 at 0xF0 as MotionPlus deactivation while active. Thus neither the key-source bank nor the 0xF0 toggle can be treated as unconditional normal-extension behavior. The key algorithm and retail state transitions remain unvalidated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical Wii extension revision not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "wiimote.c lines 405-439 (register bank selection, MotionPlus deactivation and table generation), 442-452 (ordinary toggle). No crypto code/keys or arrays copied."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

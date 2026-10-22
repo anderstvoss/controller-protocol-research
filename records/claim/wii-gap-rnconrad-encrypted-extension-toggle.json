@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-encrypted-extension-toggle",
+  "statement": "Pinned rnconrad device-side emulator interprets extension register offset 0xF0 writes of 0xAA as enabling encrypted communication and 0x55 as disabling it in its ordinary extension path. However, when MotionPlus is active (wmp_state == 1), writes addressed to the 0xA4 bank are routed into the 0xA6 MotionPlus register bank, and a 0x55 write at 0xF0 takes an earlier MotionPlus deactivation/status-transition branch. Therefore the ordinary 0xF0 encryption-toggle rule does not apply unconditionally during active MotionPlus.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical Wii extension revision not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "wiimote.c 394-452: register pointer selection at 405-408, active MotionPlus deactivation at 410-423, ordinary encryption toggle 442-452. This is historical emulator interpretation, not physical validation."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

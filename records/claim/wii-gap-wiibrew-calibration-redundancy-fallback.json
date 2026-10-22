@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-calibration-redundancy-fallback",
+  "statement": "WiiBrew's Wii Remote EEPROM calibration section documents redundant blocks whose final byte is an additive checksum (sum of preceding bytes plus 0x55); it describes Nintendo software using the first checksum-valid calibration set, then the backup, and finally a default fallback. This is documented consumer/calibration policy, not evidence of particular factory calibration values or a measured imported image.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 section EEPROM Memory calibration and source emulator additive checksum function in WiimoteEmu.h 76-95; default calibration bytes intentionally omitted."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-gap-dolphin-wiimote-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

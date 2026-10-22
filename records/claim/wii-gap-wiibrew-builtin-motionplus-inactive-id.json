@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-builtin-motionplus-inactive-id",
+  "statement": "The WiiBrew Extension Controllers identification section notes that an integrated/inbuilt MotionPlus may present an unencrypted inactive six-byte extension identity 01 00 A6 20 00 05, distinct in its leading byte from the 00 00 A6 20 00 05 external/inactive variant. The text qualifies this as a possible observation, not a universal discriminant or definitive early non-TR Wii Remote Plus identifier.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 121955 section Identification and oldid 120079 introductory MotionPlus identification; do not collapse hardware generations based on one community-documented ID."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

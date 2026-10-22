@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-wiimote-plus-bluetooth-identity",
+  "statement": "The WiiBrew Wiimote SDP information section distinguishes the Bluetooth identity of older Wii Remotes and earlier Wii Remote Plus units (RVL-CNT-01 with Nintendo product 0x0306) from later Wii Remote Plus -TR units (RVL-CNT-01-TR with product 0x0330). These are documented transport identifiers; they do not independently prove integrated gyro capability from SDP identity alone.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 section SDP information; pinned kernel hid-wiimote-core.c lines 809-865 maps names to generations. Corroborates the name-classification issue while retaining early hardware-specific unknowns."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-motionplus-host-reprobe",
+  "statement": "WiiBrew's Wii Motion Plus introduction reports a host-game discovery behavior of trying the inactive MotionPlus ID registers repeatedly and waiting several seconds before another check if detection fails (example: three attempts followed by an eight-second delay). This describes observed or reverse-engineered host polling, not MotionPlus packet cadence or a mandatory virtual-device response latency.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 120079 introductory MotionPlus identification section; complement separately pinned Linux HZ*4 host periodic polling."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

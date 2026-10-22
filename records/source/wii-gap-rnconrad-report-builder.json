@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-report-builder",
+  "kind": "independent_implementation",
+  "url": "https://github.com/rnconrad/WiimoteEmulator/blob/66dd9bcda800f33be5150058a1affbb2ba05ca9a/wm_reports.c",
+  "revision": "66dd9bcda800f33be5150058a1affbb2ba05ca9a",
+  "sha256": "5a074d96326aa582477fcd04125f729e2fb9aa4e42d28953f1c9a93f3abd163b",
+  "lineage": "rnconrad-wiimote-emulator",
+  "locator": "Lines 58-66 define write ACK input report type 0x22, and lines 89-109 implement memory-response input type 0x21. Pair with pinned wiimote.c lines 299-315 to establish out-of-range write response type. Repo contains no identified LICENSE and likely drew on WiiBrew; only software behavior, not independent physical corroboration."
+}

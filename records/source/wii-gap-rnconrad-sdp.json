@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-sdp",
+  "kind": "independent_implementation",
+  "url": "https://github.com/rnconrad/WiimoteEmulator/blob/66dd9bcda800f33be5150058a1affbb2ba05ca9a/sdp.c",
+  "revision": "66dd9bcda800f33be5150058a1affbb2ba05ca9a",
+  "sha256": "c946f16b89421b0e58dc958fde3166d1d6145bc946e284bd8335b9c739a9f529",
+  "lineage": "rnconrad-wiimote-emulator",
+  "locator": "Lines 20-120 SDP record fragments; lines 78-119 include an inline HIDDescriptorList with a 217-byte report descriptor after SDP bytes 08 22 25 D9. Extracted descriptor SHA-256: 4d40cb52850ded69a8c1474fff35dfd3e102d4b10ad3579258ab37f4a36fb3ef. No device-capture provenance or LICENSE file identified in this historical repository; likely draws on WiiBrew protocol research. No descriptor bytes redistributed."
+}
