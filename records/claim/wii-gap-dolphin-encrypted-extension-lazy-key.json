@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-encrypted-extension-lazy-key",
+  "statement": "Pinned Dolphin's EncryptedExtension model stores the extension encryption enable state at register 0xF0, recognizes 0xAA as enabled, treats writes overlapping 0x40-0x4F as making the key dirty, and regenerates the key on a subsequent encrypted bus read before encrypting the returned bytes based on address and size. It has separate first-party and third-party key generators. Unlike the pinned rnconrad emulator's 0x4C-specific immediate table generation, this source model updates lazily on reads following any overlapping key-region write; hardware sequencing remains unresolved.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Extension.h 70-115; Extension.cpp 77-121,145-153; software disagreement in key regeneration trigger with wii-gap-rnconrad-encryption-key-trigger, no crypto code or keys copied."
+  },
+  "sources": [
+    "wii-c5-extension-h",
+    "wii-c5-extension-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-rnconrad-encryption-key-trigger"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

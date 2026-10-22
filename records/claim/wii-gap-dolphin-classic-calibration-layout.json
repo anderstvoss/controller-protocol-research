@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-classic-calibration-layout",
+  "statement": "Pinned Dolphin's Classic Controller emulator initializes a 16-byte calibration structure at extension register 0xA40020: two sticks' X/Y max/min/center fields, two trigger-neutral values, and two checksum bytes. Dolphin fills only 0x20-0x2F; its distinct 0x30-0x3F field is zeroed on reset. This conflicts with rnconrad's duplicated template at 0x20 and 0x30 and does not establish retail or Classic Pro factory layout.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Dolphin Extension.h:78-80, Extension.cpp:124-127, Classic.cpp:142-175. No calibration mirror at 0x30 in Dolphin's emulator reset."
+  },
+  "sources": [
+    "wii-c5-extension-h",
+    "wii-c5-classic-cpp",
+    "wii-c5-extension-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-rnconrad-calibration-duplicate-registers"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}
