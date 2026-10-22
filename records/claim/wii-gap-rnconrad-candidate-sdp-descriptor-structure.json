@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-candidate-sdp-descriptor-structure",
+  "statement": "Pinned rnconrad WiimoteEmulator sdp.c embeds a 217-byte HID report descriptor within SDP: the top-level collection is Generic Desktop Game Pad (usage page 0x01, usage 0x05), its report data fields use vendor page 0xFF00 and Array rather than Variable main-item flags; Output IDs 0x10 through 0x1A include speaker-related 0x14, 0x18 and 0x19. Input payload byte lengths are 0x20=6, 0x21=21, 0x22=4, 0x30=2, 0x31=5, 0x32=10, 0x33=17 and 0x34-0x37 plus 0x3D-0x3F=21. These mode lengths agree with PR #16's synthetic fixture, whereas PR #16's synthetic descriptor uses a vendor top-level collection, Variable fields and omits speaker report IDs. The historical SDP descriptor is a candidate, not authenticated retail data.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical independent software emulators, not physical hardware revisions",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDP attribute bytes in sdp.c lines 78-119 with report descriptor at 96-115. 217-byte descriptor SHA-256 verified 4d40cb52850ded69a8c1474fff35dfd3e102d4b10ad3579258ab37f4a36fb3ef. No LICENSE or physical capture provenance in rnconrad repo; no bytes redistributed."
+  },
+  "sources": [
+    "wii-gap-rnconrad-sdp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
