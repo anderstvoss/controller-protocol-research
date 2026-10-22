@@ -69,3 +69,7 @@ The synthetic evdev golden resolves the pinned consumer maps into numeric codes
 and separate logical nodes; it retains fuzz as well as flat. Providers that
 cannot represent fuzz must record that deviation. Classic Pro wire identity,
 retail calibration, encrypted workflows and activation latency remain unknown.
+
+## C5 virtual-host qualification
+
+`wii-c5-evdev-native-values` separates advertised ABS ranges from consumer values; do not silently clamp the latter. `wii-c5-bt-host-binding` records driver binding, six interface masks, extension replacement, MP, rumble and battery endpoint presence. LED-class writes were permission-denied; live ranges/fuzz, SDL HIDAPI, Dolphin and physical calibration remain unmeasured. Four `wii-c5-*-host-run` experiments record10 cycles at N1/N4 on both realizations, with executable/code hashes, missing consumer/oracle cells and no timing budget.

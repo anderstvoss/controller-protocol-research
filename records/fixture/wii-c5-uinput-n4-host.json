@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-uinput-n4-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-c5-uinput-n4-host.json",
+  "sha256": "9b6d13cf4fda373b3e9cb9c08f3b8618cabc77080adeccbc746d440bfc43b292",
+  "sources": [
+    "virtualgamepad-wii-c5-acceptance-runner"
+  ],
+  "experiments": [
+    "wii-c5-uinput-n4-host-run"
+  ],
+  "parent": null,
+  "transform": "Measured virtual-host run: removed wall-clock timestamp and transient device paths, anonymized host label; retained raw artifact SHA256 and added independently hashed executable identity for the copied pinned binary. No physical captures or private identity fields.",
+  "claims": []
+}

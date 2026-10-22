@@ -62,3 +62,5 @@ affected schema's `schema_version`.
   `scripts/deep-scan.sh`, and issue and PR templates.
 - Publication guard, split licensing (CC-BY-4.0 data, AGPL-3.0-only tooling),
   SECURITY.md and CONTRIBUTING.md.
+
+- C5: source-only native evdev conversion/no-clamp evidence; bounded virtual-host binding/swap/rumble/battery-presence and four timing runs. LED permission failures and missing consumer/physical cells remain explicit.
