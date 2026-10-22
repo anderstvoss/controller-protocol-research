@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-ir-full-mode-intensity-unknown",
+  "statement": "The independent device-side emulator and PR16's Dolphin camera approximation are insufficient to establish retail Wii Remote full-IR blob intensity unit, scale, saturation and interaction with size/bounds. Requires clean independent hardware observations or a verified firmware/IR sensor decoding reference; no claim of physical intensity fidelity can be promoted from approximate emulator models.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Retail IR camera revisions not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Full IR mode native blob metadata, not the already documented basic/extended packing."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

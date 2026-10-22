@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-retail-hid-descriptor-capture-unknown",
+  "statement": "Pinned rnconrad/WiimoteEmulator sdp.c includes a 217-byte candidate Wii Remote HID report descriptor with independently verified SHA-256 4d40cb52850ded69a8c1474fff35dfd3e102d4b10ad3579258ab37f4a36fb3ef. Its retail-device provenance, physical revision and correspondence to an authenticated retail SDP record are undocumented, and the historical repository has no identified LICENSE file; therefore a *verified retail* descriptor remains unknown. A genuine, shareable, model-identified SDP/HID acquisition with permitted provenance would settle this.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Launch, early Plus and TR models not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Candidate embedded descriptor exists in pinned historical emulator source. No copied descriptor bytes or physical dump; PR #16 synthetic descriptor differs by top-level page, Array/Variable field flags and speaker report coverage."
+  },
+  "sources": [
+    "wii-gap-rnconrad-sdp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

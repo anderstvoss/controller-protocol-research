@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-l2cap-psms",
+  "statement": "Pinned rnconrad Wii Remote emulator binds Bluetooth Classic L2CAP listeners for the HID control PSM 0x11 and HID interrupt PSM 0x13, with optional SDP PSM 0x01. It also contains an outgoing connect path for those HID PSMs. This confirms an independent historical emulation design, not modern Linux Bluetooth support or retail host validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical hardware variant not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source lines 25-27,136-155,183-193; historical device-side Bluetooth transport implementation, not a verified Wii Remote capture or current provider feasibility."
+  },
+  "sources": [
+    "wii-gap-rnconrad-l2cap"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-external-motionplus-poll-interval",
+  "statement": "Pinned Linux hid-wiimote source rearms its MotionPlus hotplug probe timer at jiffies + HZ*4 after the detection attempt, and initializes/rearms polling only when built-in-MotionPlus and known-no-MotionPlus flags are absent. This is a four-second *host driver polling policy*, not a Wii Remote input-report cadence, activation latency or hardware response-time measurement.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Linux host driver treating external versus integrated MotionPlus differently",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer-side code at hid-wiimote-core.c lines 900-904, 910-934, 1176-1179 pinned via wii-linux-core; no device-side timing claim."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
