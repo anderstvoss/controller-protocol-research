@@ -121,8 +121,8 @@ class SteamC6Fixtures(unittest.TestCase):
         for i in range(34, 54, 2):
             self.assertIn(int.from_bytes(imu[i:i + 2], "little", signed=True), {-32768, 32767})
         timed = fixture("timestamp-touch-47")[2]
-        self.assertEqual(timed[18:20], b"\\xff\\xff")
-        self.assertEqual(timed[32:34], b"\\xff\\xff")
+        self.assertEqual(timed[18:20], bytes([255, 255]))
+        self.assertEqual(timed[32:34], bytes([255, 255]))
 
     def test_consumer_sent_settings_and_structural_replies(self):
         for name, head in COMMANDS.items():
