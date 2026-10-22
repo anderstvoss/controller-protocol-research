@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-eeprom-host-filesystem",
+  "statement": "Pinned rnconrad device-side emulator opens eeprom.bin directly inside guest EEPROM read/write handling and writes requested bytes to the file on write commands. This is legacy emulator persistence policy only and is not appropriate proof that a real Remote or virtualgamepad should persist each host write.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical hardware variant not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source lines 226-315; compatibility design evidence relevant to #162 ephemeral-copy vs explicit export distinction."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
