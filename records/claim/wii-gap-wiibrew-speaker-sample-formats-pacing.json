@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-speaker-sample-formats-pacing",
+  "statement": "The pinned WiiBrew Speaker Configuration and Sound Data Format sections identify signed 8-bit PCM and 4-bit Yamaha ADPCM as speaker sample encodings. They describe a little-endian rate divisor with sample frequency equal to 12,000,000 divided by the divisor for PCM, or 6,000,000 divided by the divisor for ADPCM; the divisor is not itself a time interval in milliseconds. The page proposes 2,000-Hz 8-bit PCM as a compromise for host Bluetooth throughput: with 20 one-byte samples per output 0x18 packet, that corresponds to a suggested packet approximately every 10 milliseconds. This is a reported practical recommendation under some driver/chipset limits, not a measured universal transport cadence or a C5 timing commitment.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Feedback Features / Speaker / Speaker Configuration; Sound Data Format; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related source: wii-gap-rnconrad-candidate-sdp-descriptor-structure matches output report 0x18's existence, not encoded waveform or pacing behavior. C5 explicitly refuses `speaker` in `acceptance/virtualgamepad.wii-remote.toml` `refused_operations`; this is source-research groundwork, not a C5 speaker support claim. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
