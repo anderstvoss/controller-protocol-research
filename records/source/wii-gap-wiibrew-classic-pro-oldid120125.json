@@ -6,5 +6,5 @@
   "revision": "oldid=120125; 2024-04-28T21:33:10Z; 17605 bytes",
   "sha256": "d4f7522822529886d55bc4cd6d4e0ad8ee0564032e6374b46c72edea3e68403f",
   "lineage": "wiibrew-community-documentation",
-  "locator": "Pinned raw page oldid 120125; supplied hash/byte provenance in virtualgamepad issue #158 and uploaded issue-158-comment.md; local uploaded bytes checked against posted SHA-256 and length. Source-only; no physical validation."
+  "locator": "WiiBrew pinned oldid 120125: Data Format 0x01, 0x02 and 0x03 (discrete L/R trigger values); Calibration. Hash and byte-length provenance: https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6353893784 ; independently SHA-256/SHA-1/length-checked uploaded raw wikitext, consistent with the manifest and issue record. Page text excluded from git; community-source evidence only, no physical controller capture."
 }
