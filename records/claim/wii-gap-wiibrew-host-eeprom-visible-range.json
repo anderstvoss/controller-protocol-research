@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-host-eeprom-visible-range",
+  "statement": "WiiBrew's EEPROM Memory section documents 0x1700 host-addressable bytes in virtual offsets 0x0000 through 0x16FF, distinct from the larger physical EEPROM chip, and describes the physical-offset translation separately. This disagrees with rnconrad's exclusion of the final byte at 0x16FF and agrees with Dolphin's modeled inclusive limit, but is community documentary evidence rather than a physical range test. The original wii-memory-size-hypothesis remains unknown for model-specific physical validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 section EEPROM Memory; documented host map conflicts with legacy rnconrad exclusive-0x16FF software check; no EEPROM dump bytes published."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-gap-dolphin-wiimote-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-rnconrad-eeprom-exclusive-upper-bound"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

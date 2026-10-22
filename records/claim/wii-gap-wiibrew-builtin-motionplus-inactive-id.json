@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-builtin-motionplus-inactive-id",
+  "statement": "The oldid-pinned WiiBrew Extension Controllers Identification section documents two possible inactive built-in MotionPlus identities: the ordinary-extension-bank value 00 00 A4 20 00 05 at 0xA400FA and a separate possible unencrypted identity 01 00 A6 20 00 05 at 0xA600FA. In contrast, the Wii Motion Plus page's introduction documents the external inactive MotionPlus as 00 00 A6 20 00 05 at 0xA600FA. These examples are community documentation, not universal hardware discriminators; neither uniquely settles the early non-TR Wii Remote Plus revision.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew Extension Controllers oldid 121955: Identification (A40000 table 'Inactive Wii Motion Plus (Built-in)', concluding possible built-in 0x0100 A620 0005 sentence). Wii Motion Plus oldid 120079 introduction supports only external 0000 A620 0005. Different addresses and qualifier preserved."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

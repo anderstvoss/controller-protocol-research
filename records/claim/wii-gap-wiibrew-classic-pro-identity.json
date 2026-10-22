@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-pro-identity",
+  "statement": "The oldid-pinned WiiBrew Extension Controllers identification section documents the Classic Controller Pro six-byte extension identification as 01 00 A4 20 01 01 at 0xA400FA, in contrast to the original Classic Controller's 00 00 A4 20 01 01. Their trailing two-byte type/format suffix is shared (0x0101), which explains why Linux and SDL suffix-only classifiers cannot distinguish the two. This is community protocol documentation, not a new physical capture. Related research records: wii-gap-classic-pro-host-classifier-tail captures the Linux/SDL suffix-only classification, while wii-gap-classic-pro-full-id-physical-unknown retains the unmeasured physical-identity gap despite this new documentary source.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew Extension Controllers oldid 121955 Identification reports a full Classic Pro identity; corroborates the narrower host parsing in wii-gap-classic-pro-host-classifier-tail and supplies documentary support, but not a retail capture, for wii-gap-classic-pro-full-id-physical-unknown (which stays unknown). Compare pinned Linux hid-wiimote-core.c 431-450 and SDL_hidapi_wii.c 311-364. #19 is merged."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955",
+    "wii-c5-classic-cpp",
+    "wii-linux-core",
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

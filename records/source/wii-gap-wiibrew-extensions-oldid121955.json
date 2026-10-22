@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-extensions-oldid121955",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Extension_Controllers&oldid=121955&action=raw",
+  "revision": "oldid=121955; canonical Wiimote/Extension Controllers; 2026-04-13T01:41:11Z; 16858 bytes",
+  "sha256": "4ca7488d942a66b41e246f27527af0464411b25400870f1e59ca6a51cad7df94",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "Sections Registers / Initialization; Identification; The New Way; Data format code; Encryption setup. Hash/byte-length provenance: implementer comment https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6345183001 ; raw oldid body HTTP 200, text/x-wiki UTF-8, Accept-Encoding identity; exact alias and canonical-title revisions independently hash matched by implementer; cloud agent verified current rendered permanent links show matching oldids, without copying wiki text."
+}

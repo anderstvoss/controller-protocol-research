@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-extension-new-init",
+  "statement": "WiiBrew's Extension Controllers initialization section documents a plaintext-init sequence writing 0x55 to the extension register at 0xA400F0 followed by 0x00 to 0xA400FB, which leaves the extension identification readable without legacy decryption. It describes an older initialization through 0xA40040 as insufficient for some third-party devices. This independently documents the host sequence already used in pinned Linux and PR16; it does not establish universal real-device acceptance without tests.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 121955 sections Registers / Initialization, The Old Way, The New Way; kernel hid-wiimote-core.c 410-428."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

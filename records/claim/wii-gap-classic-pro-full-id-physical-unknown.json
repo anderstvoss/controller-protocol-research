@@ -1,19 +1,20 @@
 {
   "schema_version": 1,
   "id": "wii-gap-classic-pro-full-id-physical-unknown",
-  "statement": "The six-byte physical Classic Controller Pro identification value and model/third-party variants are not proven by the currently pinned Dolphin, Linux and SDL source records: Dolphin models the Classic identity, Linux classifies Classic by the final two bytes, and SDL requests only those two bytes. An oldid-pinned, raw-wikitext-hashed WiiBrew Extension Controllers source and/or reference hardware A400FA register capture would resolve the reported full ID, including any leading-byte discriminator.",
+  "statement": "The oldid-pinned WiiBrew Extension Controllers Identification section now provides a documented full six-byte Classic Controller Pro identity (01 00 A4 20 01 01 at 0xA400FA), while pinned Linux and SDL consumers classify primarily by the shared last two bytes, and Dolphin models the ordinary Classic Controller. This is documentary support for a candidate full identity, not an authenticated model-specific retail capture. Physical variation among official and third-party Classic Pro devices therefore remains unknown until reference hardware register reads establish it.",
   "status": "unknown",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Classic Controller Pro; no physical sample",
     "firmware": "not measured",
     "transport": "not_measured",
-    "scope": "Retail Classic Pro six-byte ID is not established by pinned kernel, SDL or Dolphin records. WiiBrew raw-revision hashing is pending and supplies no claim evidence until verified. Unknown remains unresolved without an authenticated register capture."
+    "scope": "Existing kernel/SDL/Dolphin host evidence plus WiiBrew Extension Controllers oldid 121955 Identification, documented by wii-gap-wiibrew-classic-pro-identity. Status unknown is intentional for physical confirmation, despite documentary source."
   },
   "sources": [
     "wii-c5-classic-cpp",
     "wii-linux-core",
-    "wii-sdl-hidapi"
+    "wii-sdl-hidapi",
+    "wii-gap-wiibrew-extensions-oldid121955"
   ],
   "experiments": [],
   "conflicts_with": [],
