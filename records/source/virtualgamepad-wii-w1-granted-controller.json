@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-w1-granted-controller",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/78e667369d57fc3175e4dabd8b13e221f2035ad5/crates/gr-curated-controllers/src/wii_remote/controller.rs",
+  "revision": "78e667369d57fc3175e4dabd8b13e221f2035ad5",
+  "sha256": "96a72f69eb9c8dcdf3dd33cac31bf38260df6a5377afb4925d0479d3baebd9b8",
+  "lineage": "virtualgamepad",
+  "locator": "Merged W1 Part A before Part C edits. Original granted follow-up source is in tools/wii_w1/granted_probe.rs; caller path parameterization and formatting documented in fixtures."
+}

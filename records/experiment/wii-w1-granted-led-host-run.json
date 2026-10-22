@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-led-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w1-granted-led-host"
+  ],
+  "procedure": "Build --granted helper against clean merged Part A, hold exact owned Original Bluetooth-bus UHID, wait for Anders grant confirmation and reverify identity/access. Write1 to all four brightness files, service100ms, inspect retained LED bits; do not recreate the granted device. Close idempotently after all three probes.",
+  "semantic_outcome": "Four owned LED writes succeeded and all four retained LED intent bits became true. This resolves the per-node permission block for this bounded virtual-software run only; no physical light delivery claim. Earlier wii-w1-battery-rumble-led-host-run remains blocked and unchanged."
+}

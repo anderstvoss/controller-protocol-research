@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-sdl-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-w1-sdl-3-2-10"
+  ],
+  "fixtures": [
+    "wii-w1-granted-sdl-host"
+  ],
+  "procedure": "Same held granted device; distribution SDL3.2.10+ds-1 helper, HIDAPI/WII/WII_PLAYER_LED/ALLOW_BACKGROUND_EVENTS=1. Compare default controller-only enumeration with enumerate-all0, no unbind. Attempt core/Nunchuk/Classic/standalone MotionPlus4-second phases while child runs for12 seconds; last phase may only be entered at child exit and is not sensor/init coverage.",
+  "semantic_outcome": "Direct hidraw open now succeeds in both cases. Default enumeration returns0 owned HID entries; enumerate-all returns1 Bluetooth bus2 vendor usage65280/1 and open=1. In both, opened joystick is evdev core11 buttons,0 axes/hats, no accel/gyro. Rumble play/stop reaches retained intent. Player-index setter success and separate kernel LED changes do not prove SDL Wii HIDAPI LED output; RGB LED request unsupported. Wii HIDAPI claiming remains unobserved despite access, with descriptor/default filtering a separate lead. Earlier permission-blocked record remains unchanged."
+}
