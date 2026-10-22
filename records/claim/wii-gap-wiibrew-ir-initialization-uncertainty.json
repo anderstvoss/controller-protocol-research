@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-ir-initialization-uncertainty",
+  "statement": "The pinned WiiBrew Wiimote IR Camera / Initialization section describes an enable-and-sensitivity sequence that writes 0x08 to 0xB00030 both before and after loading sensitivity settings and camera mode, but explicitly reports three possible resulting camera states rather than deterministic readiness: enabled with no detections, enabled with reduced sensitivity, or enabled with full sensitivity. It also documents an alternative console-oriented procedure using output report enable values 0x06 and an initial 0x01 write to 0xB00030 before the same sensitivity and mode configuration, ending with 0x08. These are community procedures and uncertainties, not a verified fix for any virtual-device initialization issue.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Wiimote oldid 123257, IR Camera / Initialization. Related: wii-kernel-ir-mode-policy, wii-gap-wiibrew-ir-sensitivity-configuration and wii-gap-linux-ir-output-metadata-loss. No camera settings byte blocks or source tables copied. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
