@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-memory-request-response-reports",
+  "statement": "The pinned WiiBrew Reading and Writing, 0x21 Read Memory Data, and 0x22 Acknowledge output report sections describe output 0x16 as addressed write with 1–16 data bytes (and padding to the fixed report size), and output 0x17 as addressed read specifying a 24-bit offset and 16-bit requested length. The address-space flag in the first payload byte selects EEPROM versus mapped peripheral registers. Input 0x21 returns up to 16 bytes at a time, with the high nibble of its size/error byte carrying returned count minus one, the low nibble carrying an error, the low 16 address bits, and padded data; longer reads generate successive chunks while ordinary input reporting is suspended. The page identifies read-error 0 as success, 7 as absent expansion or an unreadable/write-only register, and 8 as nonexistent address. It describes input 0x22 as the output acknowledgement/function-result report (with output ID and error/result), giving 0 as success, 3 as a general error and 7 as no extension, while 4, 5 and 8 have unresolved meanings in that page. For write 0x16 it says some form of 0x22 acknowledgement occurs but has not investigated it; this documentation does NOT decide whether an out-of-range write returns a 0x21 memory reply as rnconrad models, versus a 0x22 ACK as Dolphin models.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Reading and Writing; 0x21: Read Memory Data; 0x22: Acknowledge output report, return function result; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related source claims: wii-c5-memory-errors; conflicting wii-gap-rnconrad-out-of-range-write-reply and wii-gap-dolphin-out-of-range-write-ack. No new conflicts_with asserted: the Wiimote page is explicitly inconclusive about failed-write response report type. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

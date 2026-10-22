@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-rumble-bit-retention",
+  "statement": "The pinned WiiBrew Rumble and Output Report common information sections identify output report 0x10 as direct rumble control, but also describe bit 0 in the first payload byte of every output report as the current rumble on/off request. Consequently a host keeping rumble active must preserve that bit whenever it sends an unrelated output; clearing the bit even during an LED, memory or other request can stop rumble unintentionally. This is the documented report protocol, not verification of actual motor activation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Feedback Features / Rumble; Output Report common information; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related claims: wii-kernel-outputs-battery and wii-gap-wiibrew-player-led-output; C5 and W1 software rumble acceptance is distinct from physical motor delivery. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
