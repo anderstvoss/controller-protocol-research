@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-motionplus-deactivation",
+  "statement": "The pinned WiiBrew MotionPlus page documents deactivating an active MotionPlus by writing 0x55 to the standard extension initialization address 0xA400F0. The documented transition makes the pass-through accessory accessible at 0xA40000 and stops emitting gyro data: a status 0x20 report first signals extension disconnection, and another signals reconnection. The now-inactive MotionPlus ID is readable at 0xA600FA, with trailing bytes 04 05 for standalone mode, 05 05 for Nunchuk pass-through, or 07 05 for Classic-family pass-through. These are community-described state transitions, not measured timing or a guarantee of identical behavior for integrated variants.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Wii Motion Plus oldid 120079, introduction (deactivation paragraph and pass-through modes) and Extension Controllers oldid 121955, Identification. Related: wii-gap-wiibrew-motionplus-id-and-activation, wii-gap-tr-motionplus-register-host-negotiation, wii-kernel-motionplus-pass-through, wii-c5-extension-identifiers. No conflicting physical evidence asserted. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-wiibrew-extensions-oldid121955"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
