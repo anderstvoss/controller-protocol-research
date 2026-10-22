@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-stick-trigger-max-42",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-stick-trigger-max-42.hex",
+  "sha256": "508550b2a12269d281ae3c30b95d31bbb406dbe5881257ba10044fbd2fd07e11",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-42",
+    "steam-c6-input-scaling"
+  ]
+}
