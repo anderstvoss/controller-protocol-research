@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-kernel-exchange",
+  "statement": "Kernel wired IBEX feature messages use HID feature report ID 1 with 64-byte report capacity; command payload at offset1 is [command u8, payload_len u8, payload bytes]. It invokes SET_REPORT then GET_REPORT on feature ID 1 for exchange, validates returned command match and length >=2+declared payload length after removing ID, -EPROTO on short/malformed reply, retries protocol mismatch up to bounded attempts; -EPIPE raw requests retry at 20 ms intervals up to 50. hid-steam.c:433-585,593-665. This is host consumer behavior, not proof of actual hardware acknowledgement bytes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
