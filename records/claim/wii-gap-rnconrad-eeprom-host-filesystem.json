@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "wii-gap-rnconrad-eeprom-host-filesystem",
-  "statement": "Pinned rnconrad device-side emulator opens eeprom.bin directly inside guest EEPROM read/write handling and writes requested bytes to the file on write commands. This is legacy emulator persistence policy only and is not appropriate proof that a real Remote or virtualgamepad should persist each host write.",
+  "statement": "Pinned rnconrad device-side emulator attempts to write guest EEPROM contents into eeprom.bin, but its write_eeprom path opens the file with fopen mode rb (read-only) at line 292, attempts an unchecked fwrite at line 313, and unconditionally sends a success ACK for report 0x16 at line 315. This code can acknowledge guest writes it fails to persist; it is neither reliable persistence nor proof of hardware write semantics.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Historical software emulator; physical hardware variant not established",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Source lines 226-315; compatibility design evidence relevant to #162 ephemeral-copy vs explicit export distinction."
+    "scope": "wiimote.c lines 287-315 (fopen at 292, fwrite at 313, ACK at 315); conditional storage failure is not surfaced. Do not adopt as a virtualgamepad persistence design or claim disk changes occurred."
   },
   "sources": [
     "wii-gap-rnconrad-core"
