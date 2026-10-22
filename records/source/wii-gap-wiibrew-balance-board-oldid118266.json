@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-balance-board-oldid118266",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Wii_Balance_Board&oldid=118266&action=raw",
+  "revision": "oldid=118266; 2022-09-22T17:03:50Z; 27390 bytes",
+  "sha256": "5577266aa5d2386e4cd5765707f36e15f2f868389507b9fcc339cf7c1f905b0b",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "Pinned raw page oldid 118266; supplied hash/byte provenance in virtualgamepad issue #158 and uploaded issue-158-comment.md; local uploaded bytes checked against posted SHA-256 and length. Source-only; no physical validation."
+}

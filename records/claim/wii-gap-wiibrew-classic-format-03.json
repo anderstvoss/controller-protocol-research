@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-format-03",
+  "statement": "Classic format 0x03 uses eight decoded extension bytes. The page describes it as format 0x02 without its fourth byte, reducing stick axes to 8-bit while retaining 8-bit analog triggers and active-low digital buttons/clicks.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller > Data Format 0x03. Source-only, not a physical acceptance result. Compare selector and authored controller packing; do not assume one fixed extension payload shape."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-oldid120126"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

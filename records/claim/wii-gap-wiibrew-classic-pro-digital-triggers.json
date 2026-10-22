@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-pro-digital-triggers",
+  "statement": "Classic Controller Pro subpage distinguishes the Pro by replacing the original Classic's two variable-travel analog triggers with digital controls. It still describes selectors 0x01/0x02/0x03, default 0x01, with corresponding decoded payload lengths 6/9/8; trigger fields in those formats take endpoint values (0 or 31 for 0x01, 0 or 255 for 0x02/0x03), not a continuous position. All digital button indicators are active low.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller Pro > Data Format 0x01/0x02/0x03. Source-only, not a physical acceptance result. Compare wii-gap-wiibrew-classic-pro-identity and wii-gap-wiibrew-extension-data-format-selector."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-pro-oldid120125"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

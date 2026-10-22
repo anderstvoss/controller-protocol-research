@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-pro-oldid120125",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Wiimote%2FExtension_Controllers%2FClassic_Controller_Pro&oldid=120125&action=raw",
+  "revision": "oldid=120125; 2024-04-28T21:33:10Z; 17605 bytes",
+  "sha256": "d4f7522822529886d55bc4cd6d4e0ad8ee0564032e6374b46c72edea3e68403f",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "Pinned raw page oldid 120125; supplied hash/byte provenance in virtualgamepad issue #158 and uploaded issue-158-comment.md; local uploaded bytes checked against posted SHA-256 and length. Source-only; no physical validation."
+}
