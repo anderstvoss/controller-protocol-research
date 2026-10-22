@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-extension-identifiers",
+  "statement": "Pinned Dolphin models Nunchuk ID0000a4200000 and Classic ID0000a4200101; inactive external MotionPlus0000a6200005 changes slave address on activation. Classic Pro physical revision identity is not established by these emulator records.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original/TR package source model; early Plus discriminator unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 compatibility model only. No physical data, cadence, factory calibration or retail descriptor claim."
+  },
+  "sources": [
+    "wii-c5-nunchuk-cpp",
+    "wii-c5-classic-cpp",
+    "wii-c5-motionplus-cpp",
+    "wii-c5-nunchuk-h",
+    "wii-c5-classic-h",
+    "wii-c5-motionplus-h"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

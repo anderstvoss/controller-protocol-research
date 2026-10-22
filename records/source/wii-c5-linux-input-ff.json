@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-linux-input-ff",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/include/uapi/linux/input.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "7223b820de8034c827c3fc817b6740a5c51ca8332480b86d6a0c142730fb239e",
+  "lineage": "linux-kernel",
+  "locator": "FF_RUMBLE numeric force-feedback ABI. Source-only consumer constant; no excerpt redistributed."
+}

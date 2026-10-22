@@ -49,3 +49,23 @@ a promised universal evdev mapping for every revision. The Wii package must
 implement a golden shape from the pinned consumer source and validate actual
 hid-wiimote binding on an eligible host. Source-only claims plus explicit unknown
 device claims express the evidence boundary without a new claim-schema marker.
+
+## C5 synthetic compatibility model
+
+The wii-c5 source records add report-layout, memory-error, camera and extension
+emulator locators. Neutral-mode fixtures cover every legal mode; reserved modes
+0x38 through 0x3c are not real modes. No-point IR is explicit. The functional HID
+descriptor is an authored vendor-page byte-array descriptor, not a retail dump.
+Its usage page and usage are synthetic framing decisions; native IDs and report
+lengths derive from the source layout. Host binding remains untested.
+
+EEPROM size, early Plus identity, encrypted extension behavior and physical
+calibration remain the original unknown claims. Classic Pro identification,
+full-mode blob size/intensity and timing are not established by this addition.
+
+The C5 extension-packing claim adds source-model active-low data, bridge
+pass-through transformations and zero-filled21-byte extension register tails.
+The synthetic evdev golden resolves the pinned consumer maps into numeric codes
+and separate logical nodes; it retains fuzz as well as flat. Providers that
+cannot represent fuzz must record that deviation. Classic Pro wire identity,
+retail calibration, encrypted workflows and activation latency remain unknown.

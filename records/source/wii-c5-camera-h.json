@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-camera-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Camera.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "ccca7a53e0bd4ffcdcf0e40902a67beb68f437d860bd790e1ca736cbae7dd141",
+  "lineage": "dolphin-emulator",
+  "locator": "Packed report fields and register declarations. Source compatibility evidence only; not retail calibration or physical observations. No upstream excerpts redistributed."
+}

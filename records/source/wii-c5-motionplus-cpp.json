@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-motionplus-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/MotionPlus.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "933273dd3547af779ca7309d888563039d74b02809dbccd3917488aece9bdfc3",
+  "lineage": "dolphin-emulator",
+  "locator": "98-142 initial emulator identity/calibration; 228-370 activation/address transition; 407-525 downstream initialization/interleave. Source review only; no upstream excerpts redistributed. 559-648 six-byte gyro/accessory alternation and zero tail;651-710 pass-through bit transformations."
+}

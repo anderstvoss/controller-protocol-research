@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-camera-no-points",
+  "statement": "Pinned Dolphin initializes camera report bytes to0xff for absent points and inactive tracking. Full-mode blob size/bounds/intensity are emulator approximations and do not establish physical blob metadata.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original/TR package source model; early Plus discriminator unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 compatibility model only. No physical data, cadence, factory calibration or retail descriptor claim."
+  },
+  "sources": [
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-classic-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Extension/Classic.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "6abee5cdd2fc01d522a0f4293ea59fa35d647ff210f94da0395b27bcd350227e",
+  "lineage": "dolphin-emulator",
+  "locator": "21 source-emulator identifier; 142-175 synthetic calibration, not retail defaults. Source review only; no upstream excerpts redistributed."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-write-invalid-address",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-c5-write-invalid-address.hex",
+  "sha256": "2600a39f3dbb06f5c2714ac0828e6739ecba5812bea069dfe89bf19a6a7650ea",
+  "sources": [
+    "wii-c5-wiimotereport-h",
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-memory-errors"
+  ]
+}

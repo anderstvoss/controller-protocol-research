@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-memory-errors",
+  "statement": "Pinned Dolphin uses wire error0 for success,4 busy,6 invalid space,7 nonresponding I2C slave and8 invalid EEPROM address. Writes of1..16 bytes receive ACK; read failures have a0xf length nibble and zero payload. This is emulator policy, not physical negative-response validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original/TR package source model; early Plus discriminator unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 compatibility model only. No physical data, cadence, factory calibration or retail descriptor claim."
+  },
+  "sources": [
+    "wii-dolphin-emu",
+    "wii-c5-wiimotereport-h",
+    "wii-c5-wiimoteconstants-h"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

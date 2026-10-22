@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-wiimotereport-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteCommon/WiimoteReport.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "fbfba58282be6a388a49a394f987f3ce4b953bbf94eb5bac40dfb2b877c369fc",
+  "lineage": "dolphin-emulator",
+  "locator": "24-162 host output layout; 177-253 buttons/status/read/ACK layout; 255-287 ten-bit acceleration. Source review only; no upstream excerpts redistributed."
+}

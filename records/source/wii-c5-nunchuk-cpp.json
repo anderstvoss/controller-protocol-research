@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-nunchuk-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Extension/Nunchuk.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "d98fc0e464c8644c41be1b923a85ddd9b5e936c0d044e3534400a36ed85df743",
+  "lineage": "dolphin-emulator",
+  "locator": "25 source-emulator extension identifier; 107-143 synthetic calibration, not retail defaults. Source review only; no upstream excerpts redistributed."
+}
