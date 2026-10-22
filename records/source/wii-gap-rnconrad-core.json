@@ -6,5 +6,5 @@
   "revision": "66dd9bcda800f33be5150058a1affbb2ba05ca9a",
   "sha256": "fe718c32e4e42cbf13f8c034e3c9f67fffd71f048e86e148e3f02ad5e8eef8cd",
   "lineage": "rnconrad-wiimote-emulator",
-  "locator": "Lines 226-315 EEPROM file/read/write and error boundary; lines 603-615 and 789-818 extension register initialization and calibration templates. Historical device-side emulator implementation; no physical observations or copied source excerpts."
+  "locator": "Lines 226-315 EEPROM file/read/write and error boundary; lines 603-615 and 789-818 extension register initialization and calibration templates. Historical device-side emulator implementation; no physical observations or copied source excerpts. No LICENSE file identified at pinned commit; historical implementation likely derived some register/report information from WiiBrew (not established as independent physical validation). EEPROM fwrite uses read-only fopen and success ACK; see lines 287-315."
 }
