@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-player-led-output",
+  "statement": "The pinned WiiBrew Player LEDs section describes output report 0x11 as the four-player-LED control report. Its first payload byte uses bits 4, 5, 6 and 7 to control LEDs 1, 2, 3 and 4 respectively; these bits can select combinations rather than only a one-hot player number. The same LED states are represented by bits 4–7 in input status report 0x20. This describes community protocol documentation, not measured LED-class permissions or physical brightness.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Feedback Features / Player LEDs; Status Reporting / 0x20: Status; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related claims: wii-kernel-outputs-battery and wii-gap-wiibrew-status-20-resend (status flags mirror LED output); wii-w1-battery-rumble-led-host-run is a blocked virtual-host LED permission experiment. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
