@@ -8,7 +8,7 @@
     "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiiBrew pinned oldids: Wii Motion Plus oldid 120079, pass-through-mode bullets, Data Format / Nunchuck pass-through mode, Classic Controller pass-through mode. Related: wii-c5-extension-packing, wii-gap-wiibrew-motionplus-id-and-activation, wii-kernel-motionplus-pass-through. Field-to-field transformation restated independently; no wiki tables reproduced. Community-source evidence only, not device measurement."
+    "scope": "WiiBrew pinned oldids: Wii Motion Plus oldid 120079, pass-through-mode bullets, Data Format / Nunchuck pass-through mode, Classic Controller pass-through mode. Related: wii-c5-extension-packing, wii-gap-wiibrew-motionplus-id-and-activation, wii-kernel-motionplus-pass-through. Field-to-field transformation restated independently; no wiki tables reproduced. Community-source evidence only, not device measurement. Related subpage: wii-gap-wiibrew-nunchuk-six-byte-input describes unmodified six-byte fields; pass-through repositions/loses some bits and must not be decoded as an unmodified Nunchuk frame."
   },
   "sources": [
     "wii-gap-wiibrew-motionplus-oldid120079"
