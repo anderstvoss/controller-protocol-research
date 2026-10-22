@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-dolphin-2609a",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/409881c34357d0f105fd473167d15ab0bd9c1628/Source/Core/Core/HW/WiimoteReal/IOhidapi.cpp",
+  "revision": "409881c34357d0f105fd473167d15ab0bd9c1628",
+  "sha256": "cdb08fa05e75fa4b56ea794d39362f78c751d2ca14dedfa9590da64acf18b97c",
+  "lineage": "dolphin-emulator",
+  "locator": "2609a annotated tag resolves to this commit. Consumer hidapi backend source; installed Flathub binary/commit is separately pinned in the run. Bounded offscreen startup did not establish backend connection or initialization; no excerpts copied."
+}
