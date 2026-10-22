@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-encryption-key-trigger",
+  "statement": "Pinned rnconrad device-side emulator generates extension encryption tables using its 0xA4 register bytes starting at offset 0x40 when a host writes to offset 0x4C, and marks subsequent extension communication encrypted. This identifies an additional key-setup transition in an independent compatibility implementation; the table algorithm and retail behavior still require separate inspection/corroboration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical Wii extension revision not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "0xA4 register write handler lines 437-440; raw key material and implementation source code are not included."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
