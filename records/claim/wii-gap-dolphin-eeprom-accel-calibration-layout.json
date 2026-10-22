@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "wii-gap-dolphin-eeprom-accel-calibration-layout",
-  "statement": "Pinned Dolphin Wii Remote emulation declares two accelerometer calibration blocks of 10 bytes each in its emulated EEPROM, following two 11-byte IR blocks: offsets 0x0016 and 0x0020. Its synthesized accelerometer template reserves three axes' zero-g data, one reserved byte, three axes' one-g data, two further bytes and a final one-byte checksum. These are emulator field conventions, not per-device factory calibration values.",
+  "statement": "Pinned Dolphin Wii Remote emulation declares two 10-byte accelerometer calibration EEPROM blocks at offsets 0x0016 and 0x0020 following two 11-byte IR blocks. Only when no saved per-controller EEPROM image is loaded does its reset path synthesize accelerometer calibration fields (three zero-g axes, reserved byte, three one-g axes, two other bytes and one checksum). This describes emulator fallback layout, not factory defaults.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiimoteEmu.h 257-268; WiimoteEmu.cpp 137-144; checksum computed by common source helper. Physical internal precision, valid calibration values and alternate layouts unmeasured."
+    "scope": "WiimoteEmu.h:257-268; WiimoteEmu.cpp:84,98-108 (saved-image selection),137-144 (fallback synthesis). No factory bytes or physical validation."
   },
   "sources": [
     "wii-gap-dolphin-wiimote-header",
