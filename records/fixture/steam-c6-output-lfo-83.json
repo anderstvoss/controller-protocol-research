@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-lfo-83",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-lfo-83.hex",
+  "sha256": "f01144848a9ce2fb67ce4e8602d716037c92d45cba641f946cdcfc8057f5dd3e",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}
