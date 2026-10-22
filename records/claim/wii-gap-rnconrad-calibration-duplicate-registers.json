@@ -1,20 +1,27 @@
 {
   "schema_version": 1,
   "id": "wii-gap-rnconrad-calibration-duplicate-registers",
-  "statement": "Pinned rnconrad device-side emulator initializes each Nunchuk or Classic accessory by copying a 16-byte calibration template to both register offsets 0x20 and 0x30 within its 0xA4 extension register space. This proves how that emulator initializes extension calibration windows, not a physical checksum, layout or valid retail reference value.",
+  "statement": "Pinned rnconrad device-side emulator initializes each Nunchuk/Classic 0xA4 register image by duplicating a 16-byte calibration template at offsets 0x20 and 0x30. Pinned Dolphin instead fills only 0x20 and resets the separate 0x30-0x3F field to zero. The two implementations conflict; neither establishes physical register contents or factory defaults.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Historical software emulator; physical hardware variant not established",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Source lines 795-809 with template declarations at 12-21; no real-device dump or checksum verification. May be a compatibility constant."
+    "scope": "rnconrad wiimote.c:795-809; Dolphin Extension.h:78-80, Extension.cpp:124-127, Nunchuk.cpp:117-143 and Classic.cpp:150-175. Software-model disagreement."
   },
   "sources": [
-    "wii-gap-rnconrad-core"
+    "wii-gap-rnconrad-core",
+    "wii-c5-extension-h",
+    "wii-c5-extension-cpp",
+    "wii-c5-nunchuk-cpp",
+    "wii-c5-classic-cpp"
   ],
   "experiments": [],
-  "conflicts_with": [],
+  "conflicts_with": [
+    "wii-gap-dolphin-nunchuk-calibration-layout",
+    "wii-gap-dolphin-classic-calibration-layout"
+  ],
   "supersedes": [],
   "rejection_scope": null
 }

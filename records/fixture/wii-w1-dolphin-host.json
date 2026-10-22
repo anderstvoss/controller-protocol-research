@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-dolphin-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-dolphin-host.json",
+  "sha256": "75b6f65cfbccc6d1016efa072ba37399adbcdcf6bcaeb7bb8135ef900fe1778d",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-w1-dolphin-2609a"
+  ],
+  "experiments": [
+    "wii-w1-dolphin-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original local virtual-probe JSON into reviewed structured observations; omitted host paths, process identities, event times and raw application logs. Original artifact SHA256: 04a2dc9c3fa3801e29ba22ae35e46ba3fc25bbbeed2dead04a0407390a9444c9. No physical data or upstream text.",
+  "claims": []
+}

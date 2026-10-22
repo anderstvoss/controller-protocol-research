@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-functional",
+  "permission": "unchanged existing user access; no root, install, udev, unbind or permission change",
+  "config": {
+    "test": "wii_remote::live_tests::bluetooth_host_binding_extensions_outputs_and_battery_probe",
+    "test_result": "passed",
+    "led_acceptance": "blocked"
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "virtualgamepad_revision": "50161b913d0f82950c292465625e9cdd8854daf2",
+    "probe_executable_sha256": "69020ff7cca6180ff90d1ee7792c80735eb7646fb7f89fa1559784fa146b214c",
+    "probe_source_hashes": {
+      "Cargo.lock": "690bf529356754aae59581306737894f0dc85ac1ddc2aba7873b2ec61801d818",
+      "build.py": "ca34c35cb443e815245fbf8dc5a622895db42bfcb76e7937af356d66eda7222f",
+      "host_probe.rs": "25b82830aa72e7d6c4d8b0bc14d946554744053489026773b82de8d1ab5ab219",
+      "sdl_probe.c": "9457520735ba653d9a391bcb8269a70cf8f07aad2ce204d46424d8d5bf8a9359",
+      "event_probe.py": "a12c24239bd48f20629c099444d550747abac87b84ac8dc8549ad8a6e4f3bbef"
+    },
+    "scope": "Observed local virtual devices only; not physical-reference or whole-controller acceptance. No host change."
+  },
+  "resources": {
+    "owned_hid_gone": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional probe retained no creation-stage monotonic timestamp; no timing oracle inferred"
+        }
+      },
+      "observations": {
+        "base": [
+          {
+            "abs": "0",
+            "keys": "10800000 0 1003000000000006 0 0 168000000000 0",
+            "name": "Nintendo Wii Remote"
+          },
+          {
+            "abs": "38",
+            "keys": "0",
+            "name": "Nintendo Wii Remote Accelerometer"
+          },
+          {
+            "abs": "ff0000",
+            "keys": "0",
+            "name": "Nintendo Wii Remote IR"
+          }
+        ],
+        "battery_raw": 192,
+        "capacity": "75",
+        "classic": [
+          {
+            "abs": "0",
+            "keys": "10800000 0 1003000000000006 0 0 168000000000 0",
+            "name": "Nintendo Wii Remote"
+          },
+          {
+            "abs": "38",
+            "keys": "0",
+            "name": "Nintendo Wii Remote Accelerometer"
+          },
+          {
+            "abs": "fc0000",
+            "keys": "10800000 0 13db000000000000 0 0 168000000000 0",
+            "name": "Nintendo Wii Remote Classic Controller"
+          },
+          {
+            "abs": "ff0000",
+            "keys": "0",
+            "name": "Nintendo Wii Remote IR"
+          }
+        ],
+        "close_ns": 201818459,
+        "driver": "wiimote",
+        "led_writes": [
+          {
+            "errno": 13,
+            "write": "permission_denied"
+          },
+          {
+            "errno": 13,
+            "write": "permission_denied"
+          },
+          {
+            "errno": 13,
+            "write": "permission_denied"
+          },
+          {
+            "errno": 13,
+            "write": "permission_denied"
+          }
+        ],
+        "motion_plus": [
+          {
+            "abs": "0",
+            "keys": "10800000 0 1003000000000006 0 0 168000000000 0",
+            "name": "Nintendo Wii Remote"
+          },
+          {
+            "abs": "38",
+            "keys": "0",
+            "name": "Nintendo Wii Remote Accelerometer"
+          },
+          {
+            "abs": "ff0000",
+            "keys": "0",
+            "name": "Nintendo Wii Remote IR"
+          },
+          {
+            "abs": "38",
+            "keys": "0",
+            "name": "Nintendo Wii Remote Motion Plus"
+          }
+        ],
+        "node_gone": true,
+        "nunchuk": [
+          {
+            "abs": "0",
+            "keys": "10800000 0 1003000000000006 0 0 168000000000 0",
+            "name": "Nintendo Wii Remote"
+          },
+          {
+            "abs": "38",
+            "keys": "0",
+            "name": "Nintendo Wii Remote Accelerometer"
+          },
+          {
+            "abs": "ff0000",
+            "keys": "0",
+            "name": "Nintendo Wii Remote IR"
+          },
+          {
+            "abs": "30038",
+            "keys": "24000000000000 0 0 0 0",
+            "name": "Nintendo Wii Remote Nunchuk"
+          }
+        ],
+        "power_supply_count": 1,
+        "retained_leds": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "retained_rumble": false,
+        "rumble_live": {
+          "exit_success": true,
+          "native_rumble_seen": true,
+          "result": {
+            "erased": true,
+            "opened": true,
+            "played": true,
+            "stopped": true,
+            "uploaded": true
+          }
+        }
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Raw battery192 yielded kernel power-supply capacity75. Kernel evdev rumble upload/play/stop/erase succeeded and retained rumble intent was observed. Nunchuk disappeared after Classic replacement, standalone MotionPlus appeared, all six shapes matched and owned HID disappeared on idempotent close. Four LED writes remain EACCES13; LED control blocked on permission decision. New close duration is a single functional-run observation, never relabels historical C5 distributions or proves latency/physical acceptance."
+  }
+}

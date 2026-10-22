@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-sdl-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-w1-sdl-3-2-10"
+  ],
+  "fixtures": [
+    "wii-w1-sdl-host"
+  ],
+  "procedure": "Installed Debian SDL3.2.10+ds-1 selected explicitly; helpers built with distribution headers/library and recorded binary hash. Run sdl bluetooth with HIDAPI=1,HIDAPI_WII=1,WII_PLAYER_LED=1,ALLOW_BACKGROUND_EVENTS=1, then repeat with HIDAPI_ENUMERATE_ONLY_CONTROLLERS=0. Keep wiimote bound throughout4 attachment phases. Only exact creation-owned paths included.",
+  "semantic_outcome": "Wii HIDAPI acceptance blocked: direct owned hidraw O_RDWR returned EACCES13. Normal controller-only enumeration excludes synthetic vendor-page usage65280/1; enumerate-all sees Bluetooth HID but open fails. SDL instead opens owned core via evdev:11 buttons,0 axes,0 hats, no accel/gyro sensors, stable core across attachment changes. Evdev rumble succeeds and reaches retained intent; RGB LED request fails and player-index setter success does not establish LED output. No HIDAPI claiming, extension/sensor or LED acceptance inferred. No unbind/root/permission workaround."
+}

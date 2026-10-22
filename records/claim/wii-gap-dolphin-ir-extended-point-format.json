@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-ir-extended-point-format",
+  "statement": "Pinned Dolphin's IR extended camera record is three bytes per tracked point: eight low bits of X, eight low bits of Y, then a byte packing a four-bit point-size and the high two bits of each 10-bit coordinate. The emulator emits one such record per available synthetic camera point and uses unavailable-point markers for missing observations; this is Dolphin representation, not guaranteed physical camera fidelity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Dolphin Camera.h:65-84; Camera.cpp:102 initializes unavailable entries with 0xFF, 112-138 builds three-byte extended object records. Metadata semantics beyond PR16 report lengths."
+  },
+  "sources": [
+    "wii-c5-camera-h",
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
