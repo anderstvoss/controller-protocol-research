@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-camera-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Camera.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "950a74cf313d6b231486d8b81820043d6b141c69e164af079db596e78e112132",
+  "lineage": "dolphin-emulator",
+  "locator": "97-178 invisible point fill, mode-dependent camera payload and emulator full-point approximations. Source review only; no upstream excerpts redistributed."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-wiimoteconstants-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteCommon/WiimoteConstants.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "e14ccd1e8a1a5aae3b72988f5cf4174ab9bb634eead3580648ba9120bf126033",
+  "lineage": "dolphin-emulator",
+  "locator": "16-46 legal input modes; 48-61 output IDs; 88-102 error codes. Source review only; no upstream excerpts redistributed."
+}

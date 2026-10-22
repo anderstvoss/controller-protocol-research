@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-read-invalid-address",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-c5-read-invalid-address.hex",
+  "sha256": "dbef8d56c5d78e47e09e26ae46677d059a73bb2f816abadd15b71ea8b3dbabcd",
+  "sources": [
+    "wii-c5-wiimotereport-h",
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-memory-errors"
+  ]
+}

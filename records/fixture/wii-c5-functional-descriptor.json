@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-functional-descriptor",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-c5-functional-descriptor.hex",
+  "sha256": "8e7e615100a234ea0896cbe3b4b9cbcf82a6b962d0fc6c3a40d71f8726aa121d",
+  "sources": [
+    "wii-c5-datareport-cpp",
+    "wii-c5-wiimotereport-h"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-synthetic-fixtures"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-status-low",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-c5-status-low.hex",
+  "sha256": "711a0311bd48c5cb597b6c38eeb0224e320bba875d75a75f3405a724b5daa452",
+  "sources": [
+    "wii-c5-wiimotereport-h",
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "wii-c5-report-layouts"
+  ]
+}
