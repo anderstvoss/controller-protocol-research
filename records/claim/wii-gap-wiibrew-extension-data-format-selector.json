@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-extension-data-format-selector",
+  "statement": "The pinned WiiBrew Extension Controllers page identifies register 0xA400FE, the next-to-last byte in the six-byte extension identifier, as a data-format selector rather than solely a fixed product identifier. Community documentation says certain accessories accept writes to this register. Official Classic Controller supports selector values 0x01, 0x02 and 0x03; many older third-party Classic variants support only 0x01, and the Guitar Hero controller uses format 0x03 by default. Nunchuk uses 0x00. These are documented accessory behaviors, not confirmed host acceptance for every revision.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Extension Controllers oldid 121955, Data format code. Related: wii-kernel-extension-init, wii-c5-extension-identifiers and wii-gap-wiibrew-classic-pro-identity. The mutable selector means a trailing-byte classifier alone is not a complete hardware revision discriminator. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
