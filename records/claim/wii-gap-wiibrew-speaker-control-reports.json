@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-speaker-control-reports",
+  "statement": "The pinned WiiBrew Speaker section describes three distinct speaker outputs: 0x14 enables or disables the speaker with bit 2, 0x19 mutes or unmutes it with bit 2, and 0x18 streams a data payload of 1–20 encoded audio bytes. For 0x18 the first payload byte encodes audio length shifted left by three bits; remaining space is padded to a fixed 20-byte audio area. The shared output rumble bit remains a separate consideration. These are documented control-report formats and are not proof of audio output acceptance.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Feedback Features / Speaker; Output Report common information; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related source: wii-gap-rnconrad-candidate-sdp-descriptor-structure lists 0x14, 0x18 and 0x19 speaker output IDs, agreeing at the report-ID level only; descriptor provenance and audio behavior remain unverified. C5 explicitly refuses `speaker` in `acceptance/virtualgamepad.wii-remote.toml` `refused_operations`; this is source-research groundwork, not a C5 speaker support claim. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

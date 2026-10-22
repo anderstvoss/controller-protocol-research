@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-output-report-shared-bits",
+  "statement": "The pinned WiiBrew Output Report common information section describes bit 2 (0x04) of the first payload byte as an enable/disable state for report modes and peripherals: reports 0x12, 0x13, 0x14, 0x19 and 0x1A use this shared interpretation for their respective features. The Reading and Writing section uses that same bit on reports 0x16/0x17 to select control-register access instead of EEPROM, and also documents bit 3 as an alternative register selector that must not be combined with bit 2. Separately, setting bit 1 (0x02) on an output requests input acknowledgement report 0x22. These are field-specific overlapping conventions; bit 2 is not a universal enable flag.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Output Report common information; Reading and Writing; 0x22: Acknowledge output report, return function result; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related claim: wii-gap-wiibrew-ir-initialization-uncertainty already records 0x02 ACK requests for IR enable reports; wii-c5-report-layouts models report IDs. Bit 0 still carries rumble on every output. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
