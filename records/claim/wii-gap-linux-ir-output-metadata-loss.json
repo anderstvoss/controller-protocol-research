@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
   "id": "wii-gap-linux-ir-output-metadata-loss",
-  "statement": "Pinned Linux hid-wiimote IR input parser sends the four tracked sources' decoded X/Y coordinates as EV_ABS hat pairs, using basic/packed 10-bit coordinate conversion. Its evdev presentation does not expose Dolphin-style extended/full size, intensity or bounding fields, despite the module supporting host IR initialization/report-mode selection. That is a kernel consumer-data loss, not a limitation of raw HID.",
+  "statement": "Pinned Linux hid-wiimote's evdev IR open path requests only basic IR mode (hid-wiimote-modules.c:719-724). Its extended/full mode selection cases and report handlers are unreachable from that evdev path. If extended-mode reports were reached, the parsed size nibble would be discarded; if full-mode reports were reached, the parser would omit full-only bytes 3-8 and expose coordinates alone. This is a host evdev-path limitation, not a raw HID or retail-device limitation.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "hid-wiimote-modules.c 550-605 coordinate emission and 634-708 IR init/report mode selection."
+    "scope": "Linux consumer: hid-wiimote-modules.c:550-605 (input parser and size nibble at 596-597), 687-697 (extended/full selection cases), 719-731 (evdev always selects basic); hid-wiimote-core.c:1507-1515,1556-1585 (mode handlers). No claim that evdev selects extended/full."
   },
   "sources": [
-    "wii-linux-modules"
+    "wii-linux-modules",
+    "wii-linux-core"
   ],
   "experiments": [],
   "conflicts_with": [],
