@@ -8,7 +8,7 @@
     "revision": "Historical independent software emulators, not physical hardware revisions",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "wiimote.c lines 299-307 queue a memory-error response; wm_reports.c lines 89-109 confirm that builder is report 0x21; Dolphin EmuSubroutines.cpp lines 280-283 and 321-322 send report 0x22 for valid-sized WriteData failures. wii-c5-memory-errors backlink must be added only after PR #16 merges."
+    "scope": "wiimote.c lines 299-307 queue a memory-error response; wm_reports.c lines 89-109 confirm that builder is report 0x21; Dolphin EmuSubroutines.cpp lines 280-283 and 321-322 send report 0x22 for valid-sized WriteData failures. PR #16 is merged; this new claim links directly to the existing wii-c5-memory-errors claim without editing that implementation-agent record."
   },
   "sources": [
     "wii-gap-rnconrad-core",
@@ -17,7 +17,8 @@
   ],
   "experiments": [],
   "conflicts_with": [
-    "wii-gap-dolphin-out-of-range-write-ack"
+    "wii-gap-dolphin-out-of-range-write-ack",
+    "wii-c5-memory-errors"
   ],
   "supersedes": [],
   "rejection_scope": null
