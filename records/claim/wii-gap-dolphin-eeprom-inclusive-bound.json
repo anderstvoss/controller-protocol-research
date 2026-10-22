@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-eeprom-inclusive-bound",
+  "statement": "At pinned Dolphin revision 8d2ad1a, WiimoteEmu.h defines EEPROM_FREE_SIZE as 0x1700 bytes for its emulated Bluetooth-visible EEPROM region (line 188), and EmuSubroutines.cpp rejects writes only if address + size > EEPROM_FREE_SIZE (line 280). Thus its one-byte write at offset 0x16FF passes the range check, unlike the historical rnconrad emulator. This is a concrete software-implementation disagreement, not retail size or protection evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical independent software emulators, not physical hardware revisions",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Header lines 183-188 and EmuSubroutines.cpp lines 253-289. Contradicts rnconrad's exclusive 0x16FF end check for boundary access; wii-memory-size-hypothesis remains unknown."
+  },
+  "sources": [
+    "wii-gap-dolphin-wiimote-header",
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-rnconrad-eeprom-exclusive-upper-bound"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}
