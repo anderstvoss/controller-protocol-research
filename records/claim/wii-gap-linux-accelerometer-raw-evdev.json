@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "wii-gap-linux-accelerometer-raw-evdev",
-  "statement": "Pinned Linux hid-wiimote-modules.c decodes acceleration bits from incoming Wii reports and forwards the resulting counts through three EV_ABS axes, without consulting EEPROM accelerometer calibration in that input-report code path. The driver code path is consumer-side presentation, not evidence of factory calibration or a universally uncalibrated client.",
+  "statement": "Pinned Linux hid-wiimote-modules.c decodes accelerometer X/Y/Z counts from input reports and subtracts a fixed 0x200 bias when emitting ABS_RX, ABS_RY and ABS_RZ through evdev. Its Y and Z data contain only nine meaningful bits because their lowest bits are unavailable. This handler does not apply EEPROM calibration. This is host-side report processing, not measured factory calibration.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "hid-wiimote-modules.c 419-506; axes transmitted as raw-ish report counts in this handler, no physical calibration analysis."
+    "scope": "hid-wiimote-modules.c:425-457 (unpack, Y/Z precision and 0x200 subtraction),500-506 (evdev axes/ranges). No EEPROM calibration in this input handler."
   },
   "sources": [
     "wii-linux-modules"
