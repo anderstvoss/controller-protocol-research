@@ -1,21 +1,24 @@
 {
   "schema_version": 1,
   "id": "wii-gap-dolphin-nunchuk-calibration-layout",
-  "statement": "Pinned Dolphin's Nunchuk emulator exposes a 16-byte extension calibration block at register 0xA40020: three accelerometer zero-g axes and an extra byte, three one-g axes and another byte, joystick X/Y max/min/center triplets (six bytes), and two trailing checksums. The template's physical accuracy is untested.",
+  "statement": "Pinned Dolphin's Nunchuk emulator initializes a 16-byte calibration structure at extension register 0xA40020: accelerometer zero-g and one-g groups, X/Y stick max/min/center triplets, and two checksum bytes. Dolphin fills only 0x20-0x2F; its distinct 0x30-0x3F field is zeroed on reset. This conflicts with rnconrad's deliberate duplication of the same template at 0x20 and 0x30. Both are emulator behaviors, not retail calibration evidence.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Extension.h 70-91 register layout; Nunchuk.cpp 107-143. Source-emulator register representation, not real calibration data."
+    "scope": "Dolphin Extension.h:78-80, Extension.cpp:124-127, Nunchuk.cpp:107-143. Distinct zeroed 0x30 field; not a second initialized calibration block."
   },
   "sources": [
     "wii-c5-extension-h",
-    "wii-c5-nunchuk-cpp"
+    "wii-c5-nunchuk-cpp",
+    "wii-c5-extension-cpp"
   ],
   "experiments": [],
-  "conflicts_with": [],
+  "conflicts_with": [
+    "wii-gap-rnconrad-calibration-duplicate-registers"
+  ],
   "supersedes": [],
   "rejection_scope": null
 }
