@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-stick-runtime-calibration",
+  "statement": "Pinned SDL Wii HIDAPI initializes software stick calibration ranges/deadzones by extension category, learns neutral center from its first samples, and adjusts observed axis extrema while mapping motion to gamepad axes. This is application-side adaptive joystick calibration, not a read of Nunchuk/Classic calibration registers or a device-side checksum policy.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_wii.c 594-625 and 882-915; source consumer behavior. Does not establish that other apps ignore factory calibration."
+  },
+  "sources": [
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-ir-full-point-approximation",
+  "statement": "Pinned Dolphin's full IR camera record extends the three-byte extended format to nine bytes per point by including four seven-bit bounding-coordinate fields, a reserved byte and intensity. Its camera model estimates apparent point size from simulated distance, approximates bounds around point position, and computes synthetic intensity from bounding area after reducing effective resolution. Source TODOs explicitly question point-size scaling; the retail meaning and validity of intensity remain unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Camera.h 86-101; Camera.cpp 70-95,139-170; does not supersede unknown wii-gap-ir-full-mode-intensity-unknown."
+  },
+  "sources": [
+    "wii-c5-camera-h",
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

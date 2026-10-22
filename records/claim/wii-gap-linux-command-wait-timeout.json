@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-command-wait-timeout",
+  "statement": "Pinned Linux hid-wiimote helper waits up to one kernel HZ-second for command completion, in interruptible and noninterruptible variants; register writes and reads call that helper and treat command errors or unsuccessful read completion as failures. This is a consumer-side timeout budget, not an observed Wii Remote ACK latency or report frequency.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-wiimote.h 345-374; hid-wiimote-core.c 362-405; hardware timings remain unknown."
+  },
+  "sources": [
+    "wii-linux-header",
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-classic-calibration-layout",
+  "statement": "Pinned Dolphin's Classic Controller emulator exposes a 16-byte extension calibration block at register 0xA40020: left and right joystick X/Y max/min/center triplets (12 bytes), neutral values for two analog triggers (2 bytes), and two trailing checksum bytes. These are source-model structures, not authenticated factory values.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Extension.h 70-91; Classic.cpp 142-175; Classic Pro physical layout not assumed identical."
+  },
+  "sources": [
+    "wii-c5-extension-h",
+    "wii-c5-classic-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

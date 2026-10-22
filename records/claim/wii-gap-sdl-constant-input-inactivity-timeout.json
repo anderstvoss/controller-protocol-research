@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-constant-input-inactivity-timeout",
+  "statement": "Pinned SDL HIDAPI Wii controller code enables continuous data reporting and treats three seconds without incoming input as a lost connection requiring reopening. This is a host-side disconnection heuristic, not the required cadence for individual Wii Remote report modes or a physical radio timeout.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_wii.c 36-38,1532-1545; do not infer a report rate."
+  },
+  "sources": [
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

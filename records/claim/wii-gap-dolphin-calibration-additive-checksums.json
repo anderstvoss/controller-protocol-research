@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-calibration-additive-checksums",
+  "statement": "Pinned Dolphin's Wii Remote calibration helper calculates its one-byte checksum as a byte-wise sum over the preceding calibration bytes initialized with 0x55. When a calibration block reserves two checksum bytes, the second is the first checksum advanced by another 0x55 (mod 256). Its EEPROM templates use one byte, while Nunchuk/Classic extension templates use two. This is Dolphin's source-model checksum algorithm, not a physical-device validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiimoteEmu.h 76-95; Nunchuk.cpp 138-143; Classic.cpp 170-175; no factory bytes published."
+  },
+  "sources": [
+    "wii-gap-dolphin-wiimote-header",
+    "wii-c5-nunchuk-cpp",
+    "wii-c5-classic-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
