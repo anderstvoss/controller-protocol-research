@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-sdl-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-sdl-host.json",
+  "sha256": "cb1e0d3b167275f89e8af0dc65febd1730657f23882fa45e03ea2cd372d3850a",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-w1-sdl-3-2-10"
+  ],
+  "experiments": [
+    "wii-w1-sdl-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original local virtual-probe JSON into reviewed structured observations; omitted host paths, process identities, event times and raw application logs. Original artifact SHA256: 14f971784cbf6df6f5a543efef0efb1945febd1709e37a34d5df63c8275634aa, 1a8272c64e92937d14de9ee8815e44cdb678f6e6551035f0e956287ff9177bba. No physical data or upstream text.",
+  "claims": []
+}
