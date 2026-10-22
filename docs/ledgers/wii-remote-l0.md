@@ -62,3 +62,10 @@ lengths derive from the source layout. Host binding remains untested.
 EEPROM size, early Plus identity, encrypted extension behavior and physical
 calibration remain the original unknown claims. Classic Pro identification,
 full-mode blob size/intensity and timing are not established by this addition.
+
+The C5 extension-packing claim adds source-model active-low data, bridge
+pass-through transformations and zero-filled21-byte extension register tails.
+The synthetic evdev golden resolves the pinned consumer maps into numeric codes
+and separate logical nodes; it retains fuzz as well as flat. Providers that
+cannot represent fuzz must record that deviation. Classic Pro wire identity,
+retail calibration, encrypted workflows and activation latency remain unknown.

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-evdev-consumer-shape",
+  "statement": "The synthetic C5 evdev fixture is generated from pinned hid-wiimote key maps, node names and input_set_abs_params calls, with numeric codes resolved from the same kernel input-event-codes header. It preserves separate base/accel/IR/Nunchuk/Classic/MotionPlus nodes and consumer fuzz/flat values. It is not a recorded device or proof of actual binding.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer/source model; original/TR distinct; Classic Pro identity unresolved",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "C5 source/synthetic reference. No physical calibration, cadence, encryption or consumer observation."
+  },
+  "sources": [
+    "wii-linux-modules",
+    "wii-c5-linux-input-codes",
+    "wii-c5-linux-input-ff"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

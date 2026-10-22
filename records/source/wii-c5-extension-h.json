@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-extension-h",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/Extension/Extension.h",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "d1ac261c96e0d652390950aac606846a8b670079750b508e30005e42368c2689",
+  "lineage": "dolphin-emulator",
+  "locator": "64-91 source model21-byte controller-data and256-byte register shape. Emulator behavior only; no upstream excerpts copied."
+}
