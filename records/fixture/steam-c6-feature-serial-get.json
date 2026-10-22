@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-serial-get",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-serial-get.hex",
+  "sha256": "213bd6579600c040fd4c181e88c143906da5e0944f913e7561b122d5b5f595c2",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-exchange",
+    "steam-c6-feature-registration"
+  ]
+}
