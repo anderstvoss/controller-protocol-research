@@ -8,7 +8,7 @@
     "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiiBrew pinned oldids: Extension Controllers oldid 121955, Data format code. Related: wii-kernel-extension-init, wii-c5-extension-identifiers and wii-gap-wiibrew-classic-pro-identity. The mutable selector means a trailing-byte classifier alone is not a complete hardware revision discriminator. Community-source evidence only, not device measurement."
+    "scope": "WiiBrew pinned oldids: Extension Controllers oldid 121955, Data format code. Related: wii-kernel-extension-init, wii-c5-extension-identifiers and wii-gap-wiibrew-classic-pro-identity. The mutable selector means a trailing-byte classifier alone is not a complete hardware revision discriminator. Community-source evidence only, not device measurement. Corroborating subpage claims: wii-gap-wiibrew-classic-format-01, wii-gap-wiibrew-classic-format-02, wii-gap-wiibrew-classic-format-03 and wii-gap-wiibrew-classic-pro-digital-triggers detail selector-dependent shapes; no universal OEM/clone acceptance established."
   },
   "sources": [
     "wii-gap-wiibrew-extensions-oldid121955"
