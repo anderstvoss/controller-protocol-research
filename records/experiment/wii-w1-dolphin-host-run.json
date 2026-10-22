@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-dolphin-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w1-controller",
+    "wii-w1-dolphin-2609a"
+  ],
+  "fixtures": [
+    "wii-w1-dolphin-host"
+  ],
+  "procedure": "Launch existing org.DolphinEmu.dolphin-emu2609a Flatpak offscreen for14 seconds with bounded termination, fresh in-sandbox profile, Real slot1, continuous scan/controller-interface connection enabled and speaker disabled. Probe the exact owned hidraw path within the same sandbox before launch; leave wiimote bound. No host configuration change or game ROM.",
+  "semantic_outcome": "Sandbox sees exact owned hidraw path but cannot open it under existing permissions. Application starts and bounded termination returns124; backend connection, report modes, memory reads, extension initialization and MotionPlus activation were not observed. This does not prove Dolphin found or rejected the device internally, nor distinguish kernel contention. Owned nodes disappeared and fd count restored. Further hidraw access requires owner decision on176; no physical or gameplay acceptance."
+}
