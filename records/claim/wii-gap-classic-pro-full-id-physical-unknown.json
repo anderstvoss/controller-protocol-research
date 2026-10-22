@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-classic-pro-full-id-physical-unknown",
+  "statement": "The six-byte physical Classic Controller Pro identification value and model/third-party variants are not proven by the currently pinned Dolphin, Linux and SDL source records: Dolphin models the Classic identity, Linux classifies Classic by the final two bytes, and SDL requests only those two bytes. An oldid-pinned, raw-wikitext-hashed WiiBrew Extension Controllers source and/or reference hardware A400FA register capture would resolve the reported full ID, including any leading-byte discriminator.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Classic Controller Pro; no physical sample",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Retail device-side extension identity unknown from current pinned sources; current publicly rendered WiiBrew page suggests a full value but may not be promoted until its exact oldid raw wikitext is hashed. No implementation-specific claim of physical Classic Pro identity."
+  },
+  "sources": [
+    "wii-c5-classic-cpp",
+    "wii-linux-core",
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
