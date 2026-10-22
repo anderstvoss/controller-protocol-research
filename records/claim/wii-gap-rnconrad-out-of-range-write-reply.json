@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-out-of-range-write-reply",
+  "statement": "For an out-of-range guest EEPROM write, pinned rnconrad wiimote.c emits a queued memory read-result (input report 0x21) containing error code 8 (lines 299-307). For the equivalent valid-sized write, Dolphin instead emits a write ACK (input report 0x22) containing InvalidAddress (EmuSubroutines.cpp lines 280-283 and 321-322). The source-side implementations disagree about reply report type, even though they select the same error number; retail behavior is unresolved.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical independent software emulators, not physical hardware revisions",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "wiimote.c lines 299-307 queue a memory-error response; wm_reports.c lines 89-109 confirm that builder is report 0x21; Dolphin EmuSubroutines.cpp lines 280-283 and 321-322 send report 0x22 for valid-sized WriteData failures. PR #16 is merged; this new claim links directly to the existing wii-c5-memory-errors claim without editing that implementation-agent record."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core",
+    "wii-gap-rnconrad-report-builder",
+    "wii-dolphin-emu"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-dolphin-out-of-range-write-ack",
+    "wii-c5-memory-errors"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

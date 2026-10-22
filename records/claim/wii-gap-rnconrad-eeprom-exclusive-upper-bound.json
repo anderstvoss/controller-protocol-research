@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-eeprom-exclusive-upper-bound",
+  "statement": "Pinned rnconrad Wii Remote emulator performs a read/write boundary check using offset + size > 0x16FF after masking the offset to 16 bits. For a one-byte request at 0x16FF this emulator returns an invalid-address error, although its comment describes 0x16FF as the last address. This establishes a probable software off-by-one in this independent implementation, not a physical EEPROM boundary.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical hardware variant not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source lines 241-249 and 299-307; legacy device-side emulator boundary vs the unverified physical 0x1700-byte region. Do not emulate a suspected bug without separate evidence. Direct comparison: Dolphin WiimoteEmu.h line 188 and EmuSubroutines.cpp line 280 allow a one-byte write ending at 0x16FF; rnconrad uses 0x16FF as an exclusive upper bound. Both are emulator policies, not physical hardware evidence."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-dolphin-eeprom-inclusive-bound"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

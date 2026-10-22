@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-extension-calibration-checksum-unknown",
+  "statement": "The independent rnconrad emulator contains Nunchuk and Classic 16-byte calibration templates duplicated into offsets 0x20 and 0x30, but that does not establish correct retail calibration field meanings, integrity checksum algorithm, acceptance/fallback rules or per-device defaults. Model-specific reference register reads plus independent checksum verification would resolve those questions without publishing anyone's raw calibration bytes.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Official Nunchuk and Classic extension revisions not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Physical extension EEPROM/register calibration validation; source review confirms emulator behavior only."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
