@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "wii-gap-wiibrew-motionplus-host-reprobe",
-  "statement": "WiiBrew's Wii Motion Plus introduction reports a host-game discovery behavior of trying the inactive MotionPlus ID registers repeatedly and waiting several seconds before another check if detection fails (example: three attempts followed by an eight-second delay). This describes observed or reverse-engineered host polling, not MotionPlus packet cadence or a mandatory virtual-device response latency.",
+  "statement": "WiiBrew's Wii Motion Plus introduction describes games probing the two-byte expansion identifier at 0xA600FE as many as three times before an eight-second delay and another probe. Reading that identifier returns memory error 7 if MotionPlus is absent or already activated; later the page also describes regular polling of 0xA600FE roughly every eight seconds while MotionPlus is inactive. These are community-reported host-side detection and re-probe patterns, not a per-report cadence or mandatory hardware latency.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiiBrew oldid 120079 introductory MotionPlus identification section; complement separately pinned Linux HZ*4 host periodic polling."
+    "scope": "WiiBrew Wii Motion Plus oldid 120079: introduction's discovery paragraph (three tries, eight-second wait and error 7) plus later paragraph beginning 'When not activated' (approximately eight-second polling). Separate from kernel four-second host polling and device timing."
   },
   "sources": [
     "wii-gap-wiibrew-motionplus-oldid120079"
