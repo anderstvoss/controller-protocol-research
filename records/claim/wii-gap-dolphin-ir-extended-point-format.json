@@ -8,7 +8,7 @@
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Camera.h 65-84; Camera.cpp 112-138. Separately scoped from PR16 basic/extended mode byte counts to cover metadata semantics."
+    "scope": "Dolphin Camera.h:65-84; Camera.cpp:102 initializes unavailable entries with 0xFF, 112-138 builds three-byte extended object records. Metadata semantics beyond PR16 report lengths."
   },
   "sources": [
     "wii-c5-camera-h",
