@@ -147,7 +147,7 @@ SDL converts raw triggers as 2*raw-32768, stick Y with inverted sign, pads as X=
 
 Additional input 0x43 battery (15 bytes): ID@0; charge state u8@1; percent u8@2; voltage u16@3, system voltage@5, input voltage@7, battery current@9, input current@11, temperature@13 ([Linux 337–365,2590–2604](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L337-L365)). Report 0x79 is ID + one-byte connect/disconnect state in receiver handling; no direct-wired 0x79 fixture or assumption ([Linux 2605–2616](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2605-L2616)).
 
-Claims: steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons, steam-c6-input-scaling, steam-c6-battery-43. Synthetic records include steam-c6-neutral-{42,45,47}, steam-c6-buttons-all-42, steam-c6-stick-trigger-{max,min}-42, steam-c6-touch-corners-pressure-42, steam-c6-imu-extremes-42, steam-c6-full-edge-45, steam-c6-timestamp-touch-47 and steam-c6-battery-43.
+Claims: steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons, steam-c6-input-scaling, steam-c6-battery-43. Synthetic records include steam-c6-neutral-{42,45,47}, steam-c6-buttons-all-42, steam-c6-stick-trigger-{max,min}-42, steam-c6-touch-corners-pressure-42, steam-c6-imu-extremes-42, steam-c6-full-edge-45, steam-c6-timestamp-touch-47 and steam-c6-battery-status-43.
 
 ### B. Conditional feature exchanges on the wired consumer paths
 
