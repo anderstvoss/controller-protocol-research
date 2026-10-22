@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-evdev-native-values",
+  "statement": "The pinned hid-wiimote module decoders report native integer values even when they exceed advertised ABS bounds: accelerometers subtract512, Nunchuk sticks subtract128, Classic right axes and triggers expand five bits by2, and MotionPlus applies its fast/slow scale. The input core defuzzes rather than clipping these values. All-ones no-point IR bytes decode to1023/1023. A parity realization must preserve these consumer values rather than silently clamp or conflate missing points with visible edge coordinates.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "pinned consumer model only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer conversion, not physical calibration: hid-wiimote-modules.c accel/IR/Nunchuk/Classic/MP decoder functions; input.c145-192; Dolphin Camera no-points byte model. Advertised ranges and native raw domains remain separate."
+  },
+  "sources": [
+    "wii-linux-modules",
+    "wii-c5-linux-input-core",
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

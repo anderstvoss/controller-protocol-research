@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-linux-input-core",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/input/input.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "e912bfc32739fd12a62f1c7470191968ef39dfc9a9cf90aa2dd2be7a2a6aba3c",
+  "lineage": "linux-kernel",
+  "locator": "input_handle_abs_event:145-192; input_get_disposition EV_ABS:245-249. Defuzzes and retains reported absolute values without clipping to absinfo minimum/maximum; consumer behavior only. No excerpts redistributed."
+}

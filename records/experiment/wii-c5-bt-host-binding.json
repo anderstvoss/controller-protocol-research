@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-bt-host-binding",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-c5-host-probe",
+    "virtualgamepad-wii-c5-rumble-probe"
+  ],
+  "fixtures": [],
+  "procedure": "On Linux6.12.113+deb13-arm64 aarch64, tracked implementation ccb98dc1a4fd384a20bf0c7015fd0115c006798e clean, run cargo test --locked -p gr-curated-controllers --lib bluetooth_host_binding_extensions_outputs_and_battery_probe -- --ignored --nocapture. Original Remote emulation on UHID bus5; service each base/Nunchuk/Classic/MP phase for2s and compare all six interface names and key/axis masks with hash-verified golden. The probe itself compiles the Linux FF helper and targets only its owned core event node. No permission or module-policy changes. Local observation JSON SHA256 2844828d3121425d31cacb91108bba0a0279bf612b736e98698c35c897e70cb1.",
+  "semantic_outcome": "Bound driver wiimote. Base core, accelerometer and IR nodes appeared; Nunchuk attach and Nunchuk-to-Classic replacement produced the expected distinct interfaces; standalone MotionPlus appeared. All six names/key/axis masks matched golden. One power_supply endpoint appeared. Kernel evdev rumble upload/play/stop/erase succeeded and native rumble was observed. Four LED brightness writes failed with EACCES; no LED-control acceptance claimed, despite kernel initialization LED intent being retained. Live absinfo ranges/fuzz/resolution, sensor samples, SDL HIDAPI, Dolphin and physical fidelity were not measured. Close was idempotent and the owned HID object disappeared. This is bounded virtual-host evidence, not whole-controller or physical acceptance."
+}

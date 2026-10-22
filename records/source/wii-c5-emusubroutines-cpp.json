@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-c5-emusubroutines-cpp",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/EmuSubroutines.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "a0012be09d060e300cc1b3448610ebcb9d289bf0a154f042fae568f6bd1a2eb0",
+  "lineage": "dolphin-wiimote-emu",
+  "locator": "HandleRequestStatus:231-252 raw low-battery predicate; HandleIRLogicEnable/2:340-360 status/ACK behavior. Source compatibility model only, not a measured retail threshold. No excerpts redistributed."
+}
