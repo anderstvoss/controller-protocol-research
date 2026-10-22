@@ -17,7 +17,7 @@ LENGTHS = {
     "imu-extremes-42": 54,
     "full-edge-45": 46,
     "timestamp-touch-47": 46,
-    "battery-43": 15,
+    "battery-status-43": 15,
     "output-rumble-80": 10,
     "output-pulse-81": 8,
     "output-command-82": 4,
@@ -94,7 +94,7 @@ class SteamC6Fixtures(unittest.TestCase):
     def test_report_ids_and_shared_prefix(self):
         for name, report_id in {
             "neutral-42": 0x42, "neutral-45": 0x45,
-            "neutral-47": 0x47, "battery-43": 0x43,
+            "neutral-47": 0x47, "battery-status-43": 0x43,
         }.items():
             self.assertEqual(fixture(name)[2][0], report_id)
         input_42 = fixture("neutral-42")[2]
