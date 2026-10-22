@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-encrypted-extension-toggle",
+  "statement": "Pinned rnconrad device-side emulator interprets an extension register write of 0xAA at offset 0xF0 as enabling encrypted extension communication and 0x55 at 0xF0 as disabling it. This documents a legacy independent emulator's supported host command interpretation, not validation that every retail extension and firmware follows it.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Historical software emulator; physical Wii extension revision not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "0xA4 register write handler lines 405-452; separate from the unencrypted 0x55/0x00 initialization transcript documented in PR16."
+  },
+  "sources": [
+    "wii-gap-rnconrad-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
