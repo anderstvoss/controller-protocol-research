@@ -8,14 +8,16 @@
     "revision": "Historical software emulator; physical hardware variant not established",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Source lines 241-249 and 299-307; legacy device-side emulator boundary vs the unverified physical 0x1700-byte region. Do not emulate a suspected bug without separate evidence. Direct comparison: Dolphin WiimoteEmu.h line 188 and EmuSubroutines.cpp line 280 allow a one-byte write ending at 0x16FF; rnconrad uses 0x16FF as an exclusive upper bound. Both are emulator policies, not physical hardware evidence."
+    "scope": "Source lines 241-249 and 299-307; legacy device-side emulator boundary vs the unverified physical 0x1700-byte region. Do not emulate a suspected bug without separate evidence. Direct comparison: Dolphin WiimoteEmu.h line 188 and EmuSubroutines.cpp line 280 allow a one-byte write ending at 0x16FF; rnconrad uses 0x16FF as an exclusive upper bound. Both are emulator policies, not physical hardware evidence. WiiBrew oldid 123257 EEPROM Memory documents an inclusive 0x0000-0x16FF host-visible region; the rnconrad exclusive 0x16FF check also conflicts with the documentary range (wii-gap-wiibrew-host-eeprom-visible-range)."
   },
   "sources": [
-    "wii-gap-rnconrad-core"
+    "wii-gap-rnconrad-core",
+    "wii-gap-wiibrew-wiimote-oldid123257"
   ],
   "experiments": [],
   "conflicts_with": [
-    "wii-gap-dolphin-eeprom-inclusive-bound"
+    "wii-gap-dolphin-eeprom-inclusive-bound",
+    "wii-gap-wiibrew-host-eeprom-visible-range"
   ],
   "supersedes": [],
   "rejection_scope": null
