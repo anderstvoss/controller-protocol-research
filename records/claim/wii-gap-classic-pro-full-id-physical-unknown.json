@@ -8,7 +8,7 @@
     "revision": "Classic Controller Pro; no physical sample",
     "firmware": "not measured",
     "transport": "not_measured",
-    "scope": "Retail device-side extension identity unknown from current pinned sources; current publicly rendered WiiBrew page suggests a full value but may not be promoted until its exact oldid raw wikitext is hashed. No implementation-specific claim of physical Classic Pro identity."
+    "scope": "Retail Classic Pro six-byte ID is not established by pinned kernel, SDL or Dolphin records. WiiBrew raw-revision hashing is pending and supplies no claim evidence until verified. Unknown remains unresolved without an authenticated register capture."
   },
   "sources": [
     "wii-c5-classic-cpp",
