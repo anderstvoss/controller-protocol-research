@@ -1,18 +1,19 @@
 {
   "schema_version": 1,
   "id": "wii-gap-wiibrew-motionplus-id-and-activation",
-  "statement": "WiiBrew's Wii Motion Plus introduction documents an inactive MotionPlus at extension address 0xA60000 with six-byte ID 00 00 A6 20 00 05 at 0xA600FA, transitioning to the active 0xA40000 register mapping after a 0x04 write to 0xA600FE, with active ID suffix 04 05 and MotionPlus report data. These are community source facts consistent with pinned Linux host activation, not an authenticated hardware trace.",
+  "statement": "The oldid-pinned WiiBrew Wii Motion Plus page documents an initially inactive external MotionPlus at 0xA60000, identified at 0xA600FA as 00 00 A6 20 00 05. Initialization is a single write of 0x55 to 0xA600F0; the page explicitly says games do not require a second zero write to the FB initialization register. Writing 0x04 to 0xA600FE activates the sensor at the 0xA40000 mapping with active identity ending 04 05. Writes of 0x05 or 0x07 to 0xA600FE select Nunchuk or Classic-family pass-through, yielding active identities at 0xA400FA ending 05 05 or 07 05 respectively. This is historical community protocol documentation consistent with the Linux host's 04/05/07 mode writes, not a fresh physical capture.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiiBrew oldid 120079 section introductory identification and activation; Linux hid-wiimote-core.c 469-555 consumer corroboration."
+    "scope": "WiiBrew Wii Motion Plus oldid 120079: introduction/initialization paragraph, 'Writing 0x04' activation and pass-through-mode bullets; Extension Controllers oldid 121955 Identification (A40000 active identifiers); pinned Linux hid-wiimote-core.c 469-555 and wii-gap-tr-motionplus-register-host-negotiation consumer corroboration. Do not import the follow-up deactivation/bit-move topics into this claim."
   },
   "sources": [
     "wii-gap-wiibrew-motionplus-oldid120079",
-    "wii-linux-core"
+    "wii-linux-core",
+    "wii-gap-wiibrew-extensions-oldid121955"
   ],
   "experiments": [],
   "conflicts_with": [],
