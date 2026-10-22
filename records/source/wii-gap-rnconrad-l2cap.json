@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-rnconrad-l2cap",
+  "kind": "independent_implementation",
+  "url": "https://github.com/rnconrad/WiimoteEmulator/blob/66dd9bcda800f33be5150058a1affbb2ba05ca9a/wmemulator.c",
+  "revision": "66dd9bcda800f33be5150058a1affbb2ba05ca9a",
+  "sha256": "d8101244791e325b8e9b0b14595c9585cfe79c0a26ded2990eb5b206d98e67ab",
+  "lineage": "rnconrad-wiimote-emulator",
+  "locator": "Lines 25-27 L2CAP PSM selection; lines 136-155 listener setup; lines 183-193 outgoing HID connection setup. Historical emulated Bluetooth endpoint only, not tested on current BlueZ."
+}
