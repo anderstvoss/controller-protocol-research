@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "wii-gap-dolphin-eeprom-ir-calibration-layout",
-  "statement": "Pinned Dolphin emulates two adjacent 11-byte IR calibration EEPROM blocks at offsets 0x0000 and 0x000B, using four camera calibration points with packed upper coordinate bits and one trailing checksum byte in each. It populates both blocks from the same synthetic template. This layout is an emulator behavior claim, not captured retail calibration.",
+  "statement": "Pinned Dolphin emulates two 11-byte IR calibration EEPROM blocks at offsets 0x0000 and 0x000B containing packed coordinates for four points and a checksum byte. Only when no saved per-controller EEPROM image is loaded does its reset path synthesize one IR template and put it in both blocks. This is emulator fallback behavior, not retail calibration evidence.",
   "status": "source_supported",
   "applicability": {
     "controller": "wii-remote",
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiimoteEmu.h 257-265; WiimoteEmu.cpp 110-135; no raw data or emulator default values reproduced."
+    "scope": "WiimoteEmu.h:257-265; WiimoteEmu.cpp:84,98-108 (saved-image selection),110-135 (synthetic fallback). No factory data copied."
   },
   "sources": [
     "wii-gap-dolphin-wiimote-header",
