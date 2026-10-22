@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-retail-hid-descriptor-capture-unknown",
+  "statement": "A byte-for-byte retail Wii Remote SDP HIDDescriptorList/report descriptor with model revision, source provenance and full byte hash has not been established by this independent-emulator source review. PR16's synthetic functional descriptor is not a retail capture. A redacted reference SDP record or independently verified firmware descriptor extraction would settle the exact retail descriptor.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Launch, early Plus and TR models not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Retail SDP/HID descriptor byte provenance; distinguish Wii Remote family model and L2CAP consumer requirements from synthetic report-length declarations."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
