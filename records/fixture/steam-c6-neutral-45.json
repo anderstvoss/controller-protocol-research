@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-neutral-45",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-neutral-45.hex",
+  "sha256": "9a4cb94e3df266511ce0e8dfe1677aae3191a20513b491f0e4a4c4febaec13c2",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-45",
+    "steam-c6-input-buttons",
+    "steam-c6-input-scaling"
+  ]
+}
