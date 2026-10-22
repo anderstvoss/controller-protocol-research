@@ -8,12 +8,13 @@
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "WiimoteEmu.h 76-95; Nunchuk.cpp 138-143; Classic.cpp 170-175; no factory bytes published."
+    "scope": "Dolphin WiimoteEmu.h:76-95 additive checksum helper; WiimoteEmu.cpp:133,142 invoke one-byte checksum for synthetic EEPROM IR/accelerometer blocks; Nunchuk.cpp:138-143 and Classic.cpp:170-175 use two-byte extension checksums. Source-emulated values only."
   },
   "sources": [
     "wii-gap-dolphin-wiimote-header",
     "wii-c5-nunchuk-cpp",
-    "wii-c5-classic-cpp"
+    "wii-c5-classic-cpp",
+    "wii-gap-dolphin-wiimote-impl"
   ],
   "experiments": [],
   "conflicts_with": [],
