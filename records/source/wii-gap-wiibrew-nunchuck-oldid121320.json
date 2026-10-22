@@ -6,5 +6,5 @@
   "revision": "oldid=121320; 2025-11-10T21:35:00Z; 18724 bytes",
   "sha256": "bf4a21cf6fb9df112c5c45c66f7fb982de0dcc50dc015b9f3d6484333b0b1610",
   "lineage": "wiibrew-community-documentation",
-  "locator": "Pinned raw page oldid 121320; supplied hash/byte provenance in virtualgamepad issue #158 and uploaded issue-158-comment.md; local uploaded bytes checked against posted SHA-256 and length. Source-only; no physical validation."
+  "locator": "WiiBrew pinned oldid 121320: Data Format (six-byte input, stick centering); Wireless Nunchuks (vendor-specific 0x20/0x30 read anomalies). Hash and byte-length provenance: https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6353893784 ; independently SHA-256/SHA-1/length-checked uploaded raw wikitext, consistent with the manifest and issue record. Page text excluded from git; community-source evidence only, no physical controller capture."
 }
