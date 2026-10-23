@@ -26,6 +26,9 @@ affected schema's `schema_version`.
 
 ### Added
 
+- Added a source-backed wired Steam Controller 2026 (C6) report field map, conditional feature/settings exchange claims, synthetic input/output/GET fixtures, source discrepancies and strict fixture regression checks; no physical acceptance claimed.
+
+
 - Pinned Steam Controller 2026 P0 consumer evidence: kernel introduction and
   v7.3-rc1 selection, SDL Triton direct/receiver filters, and provisional UHID
   feasibility. Live P1 and all physical observations remain unmeasured.

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-touch-corners-pressure-42",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-touch-corners-pressure-42.hex",
+  "sha256": "eb340cd2547d003ffb0b47c1b77dda4690f57e84d3009bf2560ef642a28081ae",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-42",
+    "steam-c6-input-buttons",
+    "steam-c6-input-scaling"
+  ]
+}

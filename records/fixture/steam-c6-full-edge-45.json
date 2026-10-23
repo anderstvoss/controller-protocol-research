@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-full-edge-45",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-full-edge-45.hex",
+  "sha256": "67c43a747ed65dc3a4ee7ceca3fd48ea935c406a79f7e8cc0f050c585aef8c6a",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-45",
+    "steam-c6-input-buttons",
+    "steam-c6-input-scaling"
+  ]
+}

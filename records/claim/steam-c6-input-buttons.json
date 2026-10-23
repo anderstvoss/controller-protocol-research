@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-input-buttons",
+  "statement": "At pinned consumers, LE u32 button bits of 0x42/0x45/0x47 occupy bytes 2-5: byte2 bits0-7 A,B,X,Y,QAM,R-stick click,Menu,R4; byte3 bits0-7 R5,R shoulder,DPAD down/right/left/up,View,L-stick click; byte4 bits0-7 Steam,L4,L5,L shoulder,R stick touch,R pad touch,R pad click,R trigger click; byte5 bits0-5 L stick touch,L pad touch,L pad click,L trigger click,R grip touch,L grip touch; bits6-7 not mapped. The kernel enumerates mapped buttons at hid-steam.c:2360-2418 and SDL identifies corresponding capsense and native controls in steam_triton.c:60-98. These are raw bits, not physical validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

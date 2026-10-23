@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-lizard-disable-kernel",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-lizard-disable-kernel.hex",
+  "sha256": "557396a3f08c8116ded13aa3fedd10b44d166edcbac979ab1b304bec79ad24e8",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-lizard"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-sdl-lizard",
+  "statement": "SDL Triton sends 64-byte feature report1 with bytes [0x01,0x87,0x03,0x09,0x00,0x00] and remaining zeros to disable lizard mode; it writes this on the active UpdateDevice path and refreshes by its own 3000ms software interval, with no SET response payload consumed. This does not demonstrate a physical watchdog period. SDL steam_triton.c:127-139,485-506; SDL structures:25-33,38-54.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

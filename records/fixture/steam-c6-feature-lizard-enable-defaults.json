@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-lizard-enable-defaults",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-lizard-enable-defaults.hex",
+  "sha256": "4daca7b05e16e1d0e1e013f657254bc52e74f18faa3063166a0bf7799057b03f",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-lizard"
+  ]
+}

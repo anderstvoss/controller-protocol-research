@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-input-47",
+  "statement": "SDL Triton handler also accepts input ID 0x47; its packed struct spans 45 payload bytes, total 46 including ID. Offsets: seq1; buttons LE u32@2-5; triggers s16 LE@6/8; sticks s16 LE@10/12/14/16; added trackpad timestamp u16 LE@18-19; left pad X/Y s16 LE@20/22 and pressure u16 LE@24; right pad X/Y s16 LE@26/28 and pressure u16 LE@30; IMU timestamp u16 LE@32 (units 32 microseconds), accel s16 LE@34/36/38, gyro s16 LE@40/42/44. Kernel v7.3-rc1 does not handle 0x47 in its Ibex raw_event switch. SDL:driver293-349,539-550; structs:653-677.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

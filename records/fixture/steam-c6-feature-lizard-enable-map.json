@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-lizard-enable-map",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-lizard-enable-map.hex",
+  "sha256": "3275984b140089f3c2da085611284cd2c0b0407cf0ba77abf5de2ae551b9db0e",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-lizard"
+  ]
+}

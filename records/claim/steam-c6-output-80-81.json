@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-80-81",
+  "statement": "Wired IBEX rumble output 0x80 is 10 bytes: reportID0, type u8@1, intensity LE u16@2, left speed LE u16@4, left gain@6, right speed LE u16@7, right gain@9. SDL treats gains as i8 whereas kernel struct uses u8; bytes still agree for nonnegative gain. Pulse 0x81 is 8 bytes: ID@0, side u8@1, on_us u16 LE@2, off_us u16 LE@4, repeat_count u16 LE@6. Linux emits through hid_hw_output_report, SDL writes 0x80 through hidraw. No ACK/reply framing is specified in these sources. Linux:367-391,751-815; SDL structs:162-184 and driver:595-624.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-input-45",
+  "statement": "Linux 0x45 uses exactly 46 bytes including report ID 0x45 at offset 0, with bytes 1-45 identical in field position, signedness and endianness to 0x42 bytes 1-45: u8 seq@1, u32 LE buttons@2-5, s16 LE triggers@6/8, 4 stick axes@10/12/14/16, left pad X/Y/pressure@18/20/22, right pad X/Y/pressure@24/26/28, u32 LE IMU timestamp@30, 3 accel axes@34/36/38, 3 gyro axes@40/42/44. It omits 0x42 quaternion bytes 46-53. SDL calls 0x45 BLE state yet its parser accepts this ID; physical wired 0x45 occurrence is not established. Kernel:2325-2391,2571-2589; SDL structs:552-560,632-650.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

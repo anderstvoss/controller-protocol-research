@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-pulse-81",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-pulse-81.hex",
+  "sha256": "2a2a3c6171a1f6f1cc1f897933a409266fb5bf172d0b36b2d053b619aedb3c18",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-80-81"
+  ]
+}

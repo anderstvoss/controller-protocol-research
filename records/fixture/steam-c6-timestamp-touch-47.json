@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-timestamp-touch-47",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-timestamp-touch-47.hex",
+  "sha256": "0027934f97ae5bc2d360f430d634d2012a1957e782ec1bc3e04369c61281dffb",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-47",
+    "steam-c6-input-buttons",
+    "steam-c6-input-scaling"
+  ]
+}
