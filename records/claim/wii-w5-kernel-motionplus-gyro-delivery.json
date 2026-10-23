@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-kernel-motionplus-gyro-delivery",
+  "statement": "On unchanged virtualgamepad b23cb41 Bluetooth-bus UHID and Linux6.12.113+deb13-arm64, holding the exact-owned MotionPlus evdev node open without SDL initialization produced acknowledged A600FE mode04/05 mapping and changing ABS_RX/RY/RZ with exact expected centered all-slow extrema for both distinct drive vectors. Mode04 emitted1108 valid gyro packets; mode05 emitted528 gyro and528 alternating Nunchuk packets, no field/flag/alternation mismatches. This is measured kernel-consumer evidence for the virtual device, not physical fidelity, calibrated rates, radio or SDL acceptance.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad b23cb41 / consumer SDL3.2.10 and Linux6.12.113; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Two20second kernel-only own-virtual runs, H3 packet verification before SDL; virtual_host_run cannot promote physical claims."
+  },
+  "sources": [
+    "wii-w5-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w5-motionplus-kernel-host-run",
+    "wii-w5-motionplus-nunchuk-kernel-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

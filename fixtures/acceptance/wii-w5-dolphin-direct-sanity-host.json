@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-dolphin-sanity",
+  "permission": "Anders requested sanity check, applied one guarded local raw-node ACL and confirmed. Agent verified exact creation-owned identity/access and performed no grants/root/unbind/persistent policy; no LED grants.",
+  "config": {
+    "cases": [
+      "motionplus",
+      "motionplus-nunchuk"
+    ],
+    "fixed_before_open": true,
+    "bounded_seconds_per_case": 45,
+    "direct_wii_controller_interface": true,
+    "sdl_wii_disabled": true,
+    "no_rom": true,
+    "speaker_enabled": false,
+    "existing_flatpak_only": true
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "b23cb416397ec4698c4a2576f7504061447b286d",
+    "dolphin_version": "2609a",
+    "dolphin_binary_sha256": "96a5cf120858d515d1452937c640f0f07ae27e27392cf65cff888d39444035c5",
+    "flatpak_commit": "a22e93a81ac2898f9a4cd69bbcbaa7b8de52262f7b6f5cc4eb18211a3bd25d7e",
+    "probe_source_sha256": "08dc784a27f79ccfd9ae6231c9aeb55a96c9e2fc6fda04b35fd8b97650f3048c",
+    "probe_executable_sha256": "048c66b955532494fbb8f9cf6ba5d6adf021d8735c3c477644b4c745a3f2b187",
+    "child_source_sha256": "dd68839a5a09cd69fc4cff28615cc47efdf8612c3321cf9ae23b1a8daaa37133",
+    "trace_source_sha256": "ea363cf6572aab4fbada74ca5f6649ad2e375d565506c5c282d6ab02f954684e",
+    "trace_library_sha256": "cfb668150a7011b0449309acb1f0b70bbc384e901f574b998d2b303d8fc867d0",
+    "scope": "Bounded no-ROM sanity check. Direct backend connection/initialization/gyro not established; never infer zero numeric gyro from missing observation."
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "case": "motionplus",
+        "attachment_before_open": true,
+        "attachment_changes_during_child": 0,
+        "sandbox_owned_raw_open": true,
+        "application_exit_code": 124,
+        "bounded_timeout_seconds": 45,
+        "no_rom": true,
+        "fresh_private_profile": true,
+        "controller_interface_key": "WiimoteControllerInterface",
+        "controller_interface_enabled": true,
+        "real_wii_slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sdl_wii_hidapi_enabled": false,
+        "observed_owned_raw_read_write_records": 0,
+        "direct_backend_connection": "not_established",
+        "motionplus_initialization": "not_observed",
+        "gyro_packet_reception": "not_established",
+        "decoded_gyro_values": "not_measured",
+        "limitation": "Raw-access/startup are not a backend claim. Empty own-path trace is not a proven zero-gyro stream; no internal decoder instrumentation or game/UI polling oracle. No kernel unbind, replacement build or host policy change."
+      },
+      "errors": []
+    },
+    {
+      "cycle": 1,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "case": "motionplus-nunchuk",
+        "attachment_before_open": true,
+        "attachment_changes_during_child": 0,
+        "sandbox_owned_raw_open": true,
+        "application_exit_code": 124,
+        "bounded_timeout_seconds": 45,
+        "no_rom": true,
+        "fresh_private_profile": true,
+        "controller_interface_key": "WiimoteControllerInterface",
+        "controller_interface_enabled": true,
+        "real_wii_slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sdl_wii_hidapi_enabled": false,
+        "observed_owned_raw_read_write_records": 0,
+        "direct_backend_connection": "not_established",
+        "motionplus_initialization": "not_observed",
+        "gyro_packet_reception": "not_established",
+        "decoded_gyro_values": "not_measured",
+        "limitation": "Raw-access/startup are not a backend claim. Empty own-path trace is not a proven zero-gyro stream; no internal decoder instrumentation or game/UI polling oracle. No kernel unbind, replacement build or host policy change."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Both45second no-ROM Dolphin2609a Flatpak arms can open the exact owned hidraw node, but direct Wii backend connection, MotionPlus initialization and gyro reception/decoded values are not established. Wii SDL HIDAPI disabled; direct backend is source-distinct from SDL sensor API. Empty own-path read/write trace is not evidence of zero gyro. Bounded check blocked, no driver/unbind/install/config-policy change. Both owned nodes removed after idempotent close."
+  }
+}

@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 113)
+        self.assertEqual(len(claims), 115)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -15,6 +15,13 @@ class WiiLedger(unittest.TestCase):
                         'wii-w4-sdl-newer-no-reattach'}
         for claim in claims:
             expected = ['wii-w2-sdl-after-host-run', 'wii-w3-sdl-diagnosis-host-run'] if claim['id'] in w4_consumers else []
+            if claim['id'] == 'wii-w5-sdl-linux-reset-gyro-limitation':
+                expected = [f'wii-w5-{case}-{arm}-host-run'
+                            for arm in ['control', 'holder']
+                            for case in ['motionplus', 'motionplus-nunchuk']]
+            elif claim['id'] == 'wii-w5-kernel-motionplus-gyro-delivery':
+                expected = [f'wii-w5-{case}-kernel-host-run'
+                            for case in ['motionplus', 'motionplus-nunchuk']]
             self.assertEqual(claim['experiments'], expected, claim['id'])
         by_id = {c['id']: c for c in claims}
         revisions = [by_id[id]['applicability']['revision'] for id in

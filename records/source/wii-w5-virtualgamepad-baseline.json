@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-virtualgamepad-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/b23cb416397ec4698c4a2576f7504061447b286d/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "b23cb416397ec4698c4a2576f7504061447b286d",
+  "sha256": "9841e457f2da39cb24ba4904b38eeaf3e829b44f94e27749acaae72e43e7d70d",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged main after W4 merge; W5 host binary built before test-only additions. Original tools/wii_w5; no physical reference."
+}
