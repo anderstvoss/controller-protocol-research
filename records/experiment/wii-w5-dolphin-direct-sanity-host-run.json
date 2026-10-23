@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-dolphin-direct-sanity-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w5-virtualgamepad-baseline",
+    "wii-w1-dolphin-2609a",
+    "wii-w5-dolphin-main-settings",
+    "wii-w5-dolphin-sdl-gamepad",
+    "wii-w5-dolphin-wiimote-controller"
+  ],
+  "fixtures": [
+    "wii-w5-dolphin-direct-sanity-host"
+  ],
+  "procedure": "User requested independent Dolphin sanity check. Existing Flatpak2609a, fresh private profile per fixed MP/MP+Nunchuk arm; all real slots0 so direct Wii devices can enter controller interface; correct WiimoteControllerInterface=True, continuous scanning, speaker false, Wii SDL HIDAPI disabled. Guard against another Wii HID before launch. One exact-owned human raw grant confirmed then identity/access reverified. Sandbox raw open checked.45second timeout per arm, no ROM, no UI/game decoder oracle. Own-path trace only. Close twice after both children; verify root/raw gone. No grants/root/install/unbind/persistent policy by agent.",
+  "semantic_outcome": "Both45second no-ROM Dolphin2609a Flatpak arms can open the exact owned hidraw node, but direct Wii backend connection, MotionPlus initialization and gyro reception/decoded values are not established. Wii SDL HIDAPI disabled; direct backend is source-distinct from SDL sensor API. Empty own-path read/write trace is not evidence of zero gyro. Bounded check blocked, no driver/unbind/install/config-policy change. Both owned nodes removed after idempotent close."
+}

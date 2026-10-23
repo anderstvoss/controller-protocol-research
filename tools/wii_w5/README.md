@@ -79,3 +79,39 @@ separate evidence. SDL gyro sample polls can repeat a cached zero value; retain
 actual gyro event counts and numeric extrema independently. Enabling capability
 alone is not delivery. No physical/calibrated/radio equivalence is implied.
 Optional SDL3.4.18 is not installed by these tools; no system-wide build change.
+
+
+## Separately requested Dolphin sanity check
+
+Anders requested a direct-backend sanity check after the six main W5 runs.
+Dolphin2609a real-Wii HIDAPI IO is independent of its SDL gamepad sensor path.
+Use build.py with `--dolphin` to build dolphin_host_probe.rs and dolphin_trace.c;
+no SDL development package is needed for this variant. The trace raw actor uses
+its explicit role, rather than the baseline tracer's SDL label. The published
+child accepts `W5_DOLPHIN_CACHE`, replacing the private run's scratch cache-file
+lookup; that portability-only change is not the exact executed-source hash.
+
+Choose a fresh writable scratch directory inside the existing Dolphin Flatpak
+cache, pass its absolute path as W5_DOLPHIN_CACHE, and copy trace.so there. Both
+the host and sandbox must see it at the same path. Launch the holder as above
+with the copied dolphin_child.py (through a small executable wrapper invoking
+Python), the Dolphin trace variant and a new hold directory. Do not install a
+Flatpak/package or change persistent overrides. The child guards against another
+Wii HID before allowing Dolphin scanning; it never captures other raw paths.
+
+Verify exact creation ancestry/identity/raw parent again. This check needs one
+human-applied/confirmed per-node hidraw grant, not the four LED-class grants.
+Only then add go. Each of the two fixed profiles launches a fresh offscreen
+Dolphin2609a private profile for45seconds, no ROM, all Real Wii slots disabled so
+scanned remotes may enter controller interface, WiimoteControllerInterface=True,
+continuous scanning and speaker disabled. SDL_JOYSTICK_HIDAPI_WII=0 keeps SDL Wii
+HIDAPI out of this independent direct path. Other application backend activity
+is outside the exact-owned tracer, not a physical-controller experiment.
+
+The installed source's correct key is WiimoteControllerInterface, not the older
+W1 helper's ConnectWiimotesForControllerInterface spelling. W1 remains unchanged.
+The two W5 runs verify sandbox raw open and bounded app execution, but record no
+owned raw read/write trace and establish no direct backend claim, initialization
+or numeric gyro. Empty observations are not a proven zero stream. At
+runs-complete add done, wait closed and verify root/raw disappearance. No kernel
+unbind, replacement build, UI/game polling oracle or physical test was attempted.

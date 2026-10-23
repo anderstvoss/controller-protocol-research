@@ -118,3 +118,22 @@ class WiiW5Diagnosis(unittest.TestCase):
         self.assertFalse(summary['gyro_capable'])
         self.assertFalse(summary['gyro_enabled'])
         self.assertGreater(summary['disconnected_polls'], 0)
+
+    def test_dolphin_access_and_empty_trace_do_not_become_zero_gyro_acceptance(self):
+        import json
+        name = 'wii-w5-dolphin-direct-sanity-host'
+        fixture = json.loads((ROOT / 'records/fixture' / (name + '.json')).read_text())
+        run = json.loads((ROOT / fixture['path']).read_text())
+        self.assertEqual(run['summaries']['disposition'], 'blocked')
+        self.assertEqual(len(run['samples']), 2)
+        for sample in run['samples']:
+            obs = sample['observations']
+            self.assertTrue(obs['sandbox_owned_raw_open'])
+            self.assertEqual(obs['application_exit_code'], 124)
+            self.assertFalse(obs['sdl_wii_hidapi_enabled'])
+            self.assertEqual(obs['controller_interface_key'], 'WiimoteControllerInterface')
+            self.assertEqual(obs['direct_backend_connection'], 'not_established')
+            self.assertEqual(obs['gyro_packet_reception'], 'not_established')
+            self.assertEqual(obs['decoded_gyro_values'], 'not_measured')
+        self.assertTrue(run['resources']['owned_hid_gone'])
+        self.assertTrue(run['resources']['owned_hidraw_gone'])

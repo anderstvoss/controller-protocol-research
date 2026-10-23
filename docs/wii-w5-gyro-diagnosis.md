@@ -117,3 +117,30 @@ isolated experiment. H6 Sony-style feature calibration is unsupported by the
 pinned Wii source analysis; W5 adds no such protocol behavior. No physical Wii,
 radio, gameplay, firmware-cadence, calibration, full mapping or later controller
 acceptance follows. No upstream SDL report is filed.
+
+
+## Additional direct Dolphin sanity check
+
+Anders requested this locally after the six main arms. Installed Flatpak2609a
+uses direct real-Wii HIDAPI IO separately from SDLGamepad's SDL sensor calls, so
+a direct backend check is not redundant with SDL. Two fresh45second no-ROM
+profiles can open the exact owned hidraw in the sandbox. The correct
+WiimoteControllerInterface=True key is used, with no real-game slots occupied,
+continuous scanning and speaker disabled; SDL Wii HIDAPI is disabled.
+
+Neither run establishes a direct backend connection, MotionPlus initialization,
+gyro-bearing packet reception or decoded numeric gyro. The own-path read/write
+trace is empty. Record this as **blocked**, not as zero gyro or a rejection.
+No UI/game polling or private decoder instrumentation oracle was present. No
+unbinding, package install or persistent setting change was attempted. One fresh
+raw grant was applied/confirmed by Anders locally, then exact identity/access
+reverified; after both runs the controller was closed twice and root/raw removal
+verified. The new fixture retains executable/source/Flatpak/artifact hashes.
+
+The old W1 helper used ConnectWiimotesForControllerInterface; pinned
+MainSettings215-216 identifies the installed2609a key as WiimoteControllerInterface.
+This correction alone does not establish backend acceptance. All W1 records
+remain byte-identical. Pinned IOhidapi169-200 reads/writes direct Wii reports;
+SDLGamepad125-142/354 enables/reads SDL sensors. WiimoteController1352-1378 and
+1462-1468 handles MotionPlus directly, requiring calibration before angular
+velocity conversion. Source capability is separate from this blocked live check.
