@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-nunchuk-stick-center-calibration",
+  "statement": "Pinned Nunchuk page reports that Nintendo games determine analog-stick center on startup or insertion and explicitly says the mechanism is unknown. This page does not establish a factory calibration layout at 0xA40020 or 0xA40030. Dolphin's authored 0x20 template and rnconrad's duplicate 0x30 template remain emulator evidence rather than authenticated Nunchuk register contents.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Nunchuck > Data Format; Wireless Nunchuks. Source-only, not a physical acceptance result. Compare wii-gap-dolphin-nunchuk-calibration-layout, wii-gap-rnconrad-calibration-duplicate-registers and wii-gap-extension-calibration-checksum-unknown. The wireless-accessory anecdotes cannot be generalized to official wired Nunchuk."
+  },
+  "sources": [
+    "wii-gap-wiibrew-nunchuck-oldid121320"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

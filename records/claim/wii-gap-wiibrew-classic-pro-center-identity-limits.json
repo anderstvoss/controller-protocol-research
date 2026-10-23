@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-pro-center-identity-limits",
+  "statement": "Pinned Classic Controller Pro subpage reports stick-centering by games on startup or insertion, but does not furnish a factory calibration register schema or a verified six-byte hardware identity capture. The separate pinned parent Extension Controllers page provides documentary full-ID evidence; this subpage does not independently resolve OEM or clone identity variants.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller Pro > Calibration; Data Format. Source-only, not a physical acceptance result. wii-gap-classic-pro-full-id-physical-unknown and wii-gap-extension-calibration-checksum-unknown remain unknown."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-pro-oldid120125"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

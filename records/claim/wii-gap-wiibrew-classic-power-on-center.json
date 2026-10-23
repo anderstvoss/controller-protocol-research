@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-power-on-center",
+  "statement": "Pinned Classic page says Nintendo games establish the two analog-stick centers at initial power-up or accessory insertion. It does not document physical 0xA40020 or 0xA40030 calibration image fields or an additive checksum. Dolphin and rnconrad register initialization remains contradictory software modeling.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller > Calibration. Source-only, not a physical acceptance result. Compare wii-gap-dolphin-classic-calibration-layout, wii-gap-rnconrad-calibration-duplicate-registers and wii-gap-extension-calibration-checksum-unknown."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-oldid120126"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-format-01",
+  "statement": "Pinned Classic Controller subpage describes writable selector 0xA400FE defaulting to format 0x01. Its six-byte decoded extension report packs left stick axes as 6-bit, right stick axes and two analog trigger travel values as 5-bit, together with active-low button and digital full-press trigger flags. Buttons and analog trigger travel are separate semantics.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller > Data Format 0x01. Source-only, not a physical acceptance result. Corroborates wii-gap-wiibrew-extension-data-format-selector; compare wii-c5-extension-packing."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-oldid120126"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

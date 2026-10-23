@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-format-02",
+  "statement": "Classic format 0x02 uses nine decoded extension bytes from 0xA40008, increasing both stick axes to 10-bit and analog trigger readings to 8-bit, while retaining active-low button and trigger-click indications.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Classic Controller > Data Format 0x02. Source-only, not a physical acceptance result. Corroborates selector record; payload is larger than format 0x01."
+  },
+  "sources": [
+    "wii-gap-wiibrew-classic-oldid120126"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

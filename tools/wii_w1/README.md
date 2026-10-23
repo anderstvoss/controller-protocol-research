@@ -66,3 +66,36 @@ consumer nodes after initialization.
 Publication uses reviewed JSON summaries under fixtures/acceptance and retains
 original local artifact hashes. Host paths, process identities, event times and
 raw application logs are excluded. The record describes the exact transform.
+
+## Human-granted follow-up
+
+The granted rerun uses merged Part A
+`78e667369d57fc3175e4dabd8b13e221f2035ad5`. Build with the same arguments using
+`tools/wii_w1/build_granted.py`, then invoke the binary with a private scratch output directory and
+its SDL helper executable as two arguments. It holds one exact creation-owned
+Original Remote for at most two hours, pumping the controller while waiting.
+`grant.json` is private operator metadata, never a publication fixture.
+
+The operator first checks HID_PHYS against the creation association, Bluetooth
+VID/PID, wiimote binding, hidraw sysfs ancestry and all four LED files beneath
+that exact owned HID root. Supply commands only for that hidraw node and four
+LED brightness files. Anders applies the temporary grants himself and confirms;
+the agent verifies identity and access again before creating `go` in the private
+output directory. This authorization is recorded on virtualgamepad#176 comments
+6347519179 and6353166649. The helper never grants access or changes host policy.
+No new device is created after the grant, no driver is unbound, and no override
+is added to Flatpak.
+
+The helper writes1 to the four LEDs, services100ms and records retained LED
+intent. It runs the same two SDL cases and bounded Dolphin configuration above
+on that held device, with core/Nunchuk/Classic/standalone MotionPlus phases.
+`runs-complete` signals the end of the bounded probes; creating `done` closes
+idempotently and verifies the owned HID root disappeared. Existing ungranted
+records stay unchanged. Publication omits raw logs and grant metadata; it retains
+parsed observations and hashes of the private originals. The published source
+replaces the original scratch SDL executable path with the second argument;
+source and measured executable hashes remain separate. The helper's4-second
+attachment phases and application timeouts are probe schedules, not firmware
+cadence or latency acceptance. A passed LED result concerns virtual software
+intent only. SDL hidraw access is distinct from Wii HIDAPI claiming, and Dolphin
+sandbox access is distinct from backend connection, initialization and gameplay.

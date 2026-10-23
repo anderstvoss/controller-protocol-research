@@ -8,7 +8,7 @@
     "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Dolphin Extension.h:78-80, Extension.cpp:124-127, Classic.cpp:142-175. No calibration mirror at 0x30 in Dolphin's emulator reset."
+    "scope": "Dolphin Extension.h:78-80, Extension.cpp:124-127, Classic.cpp:142-175. No calibration mirror at 0x30 in Dolphin's emulator reset. WiiBrew Classic subpage cross-reference: wii-gap-wiibrew-classic-power-on-center documents consumer center calibration, not retail 0x20/0x30 bytes or additive checksum; emulator conflict with rnconrad remains."
   },
   "sources": [
     "wii-c5-extension-h",

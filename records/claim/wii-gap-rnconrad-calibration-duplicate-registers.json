@@ -8,7 +8,7 @@
     "revision": "Historical software emulator; physical hardware variant not established",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "rnconrad wiimote.c:795-809; Dolphin Extension.h:78-80, Extension.cpp:124-127, Nunchuk.cpp:117-143 and Classic.cpp:150-175. Software-model disagreement."
+    "scope": "rnconrad wiimote.c:795-809; Dolphin Extension.h:78-80, Extension.cpp:124-127, Nunchuk.cpp:117-143 and Classic.cpp:150-175. Software-model disagreement. Subpage cross-references: wii-gap-wiibrew-nunchuk-stick-center-calibration and wii-gap-wiibrew-classic-power-on-center do not authenticate an OEM 0x30 copy; preserve conflict with Dolphin and physical uncertainty."
   },
   "sources": [
     "wii-gap-rnconrad-core",

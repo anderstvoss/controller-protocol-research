@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-sdl-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-granted-sdl-host.json",
+  "sha256": "c32ff8c0531df806281d2ba734d20400fd83f1d4d7bcd2e9f3c52514beca9a43",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-w1-sdl-3-2-10"
+  ],
+  "experiments": [
+    "wii-w1-granted-sdl-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original private probe JSON into structured virtual-only observations; omitted raw logs, paths, process identities and grant metadata. Original artifacts SHA256: 7c1cfd0aeb0f9ac1397ac3b7225880d71454d01227589fd8cdabb2aab6eeb17b, 3d915c6a5375b15ec3670574fb85ee35d19534d2a6784b3855240494cc2c72d6. Original measured helper source hash and published parameterized source hash are separate; only scratch SDL helper path became CLI argument and rustfmt changed formatting. No upstream text or physical capture.",
+  "claims": []
+}

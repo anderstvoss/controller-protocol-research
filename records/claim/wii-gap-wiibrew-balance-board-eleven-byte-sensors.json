@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-balance-board-eleven-byte-sensors",
+  "statement": "Wii Balance Board page describes an 11-byte extension-data region at 0xA40000–0xA4000A: four big-endian 16-bit load-cell readings in order top-right, bottom-right, top-left and bottom-left; byte 8 temperature; byte 9 reserved zero; byte 10 battery reading. This is a specialized device protocol, not a standard Classic/Nunchuk six-byte attachment and is outside C5 scope.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wii Balance Board > Extension Controller Documentation > Data Format. Source-only, not a physical acceptance result. Do not assign this shape to wii-c5-extension-packing or treat it as MotionPlus pass-through."
+  },
+  "sources": [
+    "wii-gap-wiibrew-balance-board-oldid118266"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
