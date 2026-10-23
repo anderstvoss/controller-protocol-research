@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-sdl-before-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w2-before",
+    "wii-w1-sdl-3-2-10",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w2-sdl-before-host"
+  ],
+  "procedure": "Build original tools/wii_w2 against specified comparison revision, same SDL3.2.10 helper. Hold both devices for one human grant round; verify identity/access after confirmation. Run baseline first, close it, then reverify and run revised case; keep wiimote bound. Actual-default hints then Wii-enabled/default-enumeration,12-second bounded children across4 attachment phases. Parse only exact owned raw/core paths; other internally enumerated virtual devices excluded from summaries.",
+  "semantic_outcome": "Default hints: no owned HID enumeration, owned core evdev11buttons/0axes/hats/no sensors. Wii-enabled/default-enumeration profile: no owned HID entry or opened owned joystick observed. Two comparison virtual devices coexisted during this baseline; the interim device may be separately enumerated internally, so do not infer the reason for absence of evdev in the Wii-enabled baseline from this run."
+}

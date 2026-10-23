@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W2 authored interim Game Pad descriptor, default SDL enumeration and bounded initial Wii HIDAPI claim with later disconnect, plus clean-head UHID N1/N4 timing; preserve N1 global input-count discrepancy and all historical evidence.
+
 - Add separate human-granted W1 LED, SDL and Dolphin virtual-host follow-ups: LED intent succeeds, hidraw access succeeds, Wii HIDAPI/backend acceptance remains unobserved. Historical blocked records and all wii-gap claims remain unchanged.
 
 - Clear repository-local Git environment in both hook wrappers so nested cache/fixture commands cannot mutate the active worktree; cover inherited hook context deterministically.

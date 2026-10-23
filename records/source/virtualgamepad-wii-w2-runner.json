@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-w2-runner",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/07e42cb49dd3840dbe37017ad86263114d8c15d8/xtask/src/linux.rs",
+  "revision": "07e42cb49dd3840dbe37017ad86263114d8c15d8",
+  "sha256": "c4fbe60f736a00d9ab644628f920a89d9f3f60791da10f8cb56e1119954f0a4f",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged acceptance runner for final clean W2 PR head. Lib/main at same revision own samples/environment; missing consumer/oracle stages remain explicit."
+}
