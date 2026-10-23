@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-w2-before",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/56fc3f6ca5355c0167c21704e8b1ae4368c5e8cc/crates/gr-curated-controllers/src/wii_remote/realizations.rs",
+  "revision": "56fc3f6ca5355c0167c21704e8b1ae4368c5e8cc",
+  "sha256": "2dc13a3bc6aae193b628795ca59cfb8308ae66d0eeaedcf3de0cb2077d8517ce",
+  "lineage": "virtualgamepad",
+  "locator": "Before W2 vendor-page synthetic collection. Runtime sources matched this main revision when the original helper was compiled; only research pin adoption was staged separately. No implementation file differed."
+}

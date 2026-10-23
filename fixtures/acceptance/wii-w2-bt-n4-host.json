@@ -1,0 +1,2499 @@
+{
+  "config": {
+    "concurrency": 4,
+    "cycles": 10
+  },
+  "controller": "virtualgamepad.wii-remote",
+  "environment": {
+    "backend": "linux",
+    "cpu_arch": "aarch64",
+    "cpu_count": 8,
+    "cpu_model": null,
+    "dirty": false,
+    "git_sha": "07e42cb49dd3840dbe37017ad86263114d8c15d8",
+    "host_label": "anonymized-aarch64-w2-host",
+    "kernel": "6.12.113+deb13-arm64",
+    "probe_binary_sha256": {
+      "value": "aeb90f73bc14ce1046e996245c69cc99482cb0ae342ecba6cc671172690fe2be",
+      "reason": null
+    },
+    "probe_source_sha256": "ae6bc33bb9c759e2736b1f8be42716489955811c055aaccf4024eaf9d90c7c2a",
+    "research_revision": "16df95a3f8353a08cd12b81a24e15d67cdb4a6bf",
+    "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+    "sdl_backend": {
+      "reason": "not observed",
+      "value": null
+    },
+    "sdl_hints": {
+      "reason": "not captured; never assume defaults",
+      "value": null
+    },
+    "sdl_version": "3.5.0",
+    "synthetic": false,
+    "wall_clock_utc": null,
+    "raw_run_sha256": "7f7d43eaddbcf2385c7e4b85805daa66bd613fa059afe1322d9d1dcfd01123ff"
+  },
+  "kind": "virtual_host_run",
+  "permission": "Uhid",
+  "realization": "linux.uhid.bluetooth",
+  "resources": {
+    "after": {
+      "fds": 4,
+      "hidraw_nodes": 4,
+      "input_nodes": 29,
+      "threads": 1
+    },
+    "before": {
+      "fds": 4,
+      "hidraw_nodes": 4,
+      "input_nodes": 29,
+      "threads": 1
+    }
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 71375
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 163917
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 8031292
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 6218405920
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 6218911212
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 1733709
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "cold"
+    },
+    {
+      "cycle": 0,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 1784625
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 1820417
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 6218962712
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 8246792004
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 8247349796
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 3639959
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "cold"
+    },
+    {
+      "cycle": 0,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 3832000
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 4207167
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 8247412504
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 13454694507
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 13455018382
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 4535542
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "cold"
+    },
+    {
+      "cycle": 0,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 4562750
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 4588500
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 13455058548
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 17406815300
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 17407084175
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 7981292
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "cold"
+    },
+    {
+      "cycle": 1,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 17407146384
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 17407222092
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 17418837467
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 23630893762
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 23631416512
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 17408596259
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 1,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 17408641717
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 17408688550
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 23631474095
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 25598681763
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 25600049429
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 17410231050
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 1,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 17410270009
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 17410321384
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 25600183138
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 31830084057
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 31830430724
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 17412087384
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 1,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 17412270217
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 17412373717
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 31830474266
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 32766218558
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 32766924099
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 17418368925
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 2,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 32767142974
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 32767640474
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 32791160891
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 41026329645
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 41028464062
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 32771144849
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 2,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 32771270891
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 32771383808
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 41028675103
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 47169776148
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 47171849439
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 32774266933
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 2,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 32774398183
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 32774498516
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 47172029481
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 48290217148
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 48292168232
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 32779533183
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 2,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 32780331308
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 32780526558
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 48292340440
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 50218879024
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 50219937441
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 32791104058
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 3,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 50220284566
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 50220574566
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 50251409524
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 57500757236
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 57502192736
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 50224438941
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 3,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 50224573399
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 50224798983
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 57502308986
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 61504338905
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 61505584321
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 50229857816
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 3,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 50230042149
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 50230200608
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 61505764946
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 63584499822
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 63585467156
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 50245145191
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 3,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 50245559691
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 50245761483
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 63585999947
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 67659666824
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 67660137408
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 50251353691
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 4,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 67660260283
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 67660378324
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 67671567783
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 74900192869
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 74900907536
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 67662019158
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 4,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 67662117283
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 67662199158
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 74900997286
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 79128561413
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 79130148371
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 67663083074
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 4,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 67663119658
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 67663169283
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 79130339663
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 84069610749
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 84070392207
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 67665607324
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 4,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 67665694408
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 67665994908
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 84070513290
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 88282781001
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 88283176959
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 67671488158
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 5,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 88283263209
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 88283522584
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 88289285709
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 95596756963
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 95597504754
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 88283768084
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 5,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 88283821876
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 88283862542
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 95597597338
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 96484801130
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 96486127630
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 88285478417
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 5,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 88286058042
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 88286293084
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 96486448046
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 97514681213
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 97515761213
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 88287105126
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 5,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 88287143292
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 88287180667
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 97515937005
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 101606391007
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 101606738674
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 88289237459
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 6,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 101606823799
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 101606919840
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 101621538174
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 109881879303
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 109882355011
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 101609232965
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 6,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 101609324715
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 101609378965
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 109882398219
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 114944129930
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 114945460263
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 101610715507
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 6,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 101610806757
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 101610869174
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 114945664763
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 118091347348
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 118092849973
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 101613467007
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 6,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 101613520590
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 101613567632
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 118093143682
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 120262267891
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 120262555724
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 101621402715
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 7,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 120262620224
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 120262842308
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 120266283558
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 127528699644
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 127529230311
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 120263006308
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 7,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 120263159766
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 120263333683
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 127529286728
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 128446871645
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 128448134895
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 120263916391
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 7,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 120263948141
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 120263987641
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 128448288103
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 129569846604
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 129571167104
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 120265687974
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 7,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 120265859599
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 120266017224
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 129571296645
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 133569114147
+        },
+        "consumer_open": {
+          "reason": "No such file or directory (os error 2)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 133569634772
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 120266268391
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 8,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 133569835981
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 133569972064
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 133580752522
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 140834666067
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 140836208817
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 133571705314
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 8,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 133571777939
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 133571831147
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 140836369067
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 143809118277
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 143811026486
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 133573465314
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 8,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 133573522689
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 133573573606
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 143811185236
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 145116808361
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 145118097695
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 133575570397
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 8,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 133575664606
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 133575760564
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 145118884445
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 150975372489
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 150975745239
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 133580665564
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 9,
+      "errors": [],
+      "index": 0,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 150975823572
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 150975913864
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 150981254156
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 158247258117
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 158247906201
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 150977412572
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 9,
+      "errors": [],
+      "index": 1,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 150977489822
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 150977543072
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 158247982867
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 160265893118
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 160266799160
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 150979685031
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 9,
+      "errors": [],
+      "index": 2,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 150979770614
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 150979827697
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 160266959202
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 164498648329
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 164499500495
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 150980631822
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    },
+    {
+      "cycle": 9,
+      "errors": [],
+      "index": 3,
+      "observations": {
+        "node_gone": {
+          "poll_interval_ns": 1000000
+        },
+        "node_present": {
+          "devices": [
+            {
+              "bound_driver": "wiimote",
+              "driver_reason": null
+            }
+          ],
+          "poll_interval_ns": 1000000
+        }
+      },
+      "stages": {
+        "api_call": {
+          "reason": null,
+          "value_ns": 150980709239
+        },
+        "api_returned": {
+          "reason": null,
+          "value_ns": 150980890614
+        },
+        "close_call": {
+          "reason": null,
+          "value_ns": 164499659287
+        },
+        "close_returned": {
+          "reason": null,
+          "value_ns": 169486634081
+        },
+        "consumer_open": {
+          "reason": "Permission denied (os error 13)",
+          "value_ns": null
+        },
+        "first_neutral": {
+          "reason": "no validated consumer neutral-report oracle for this family; API commit is not consumer delivery",
+          "value_ns": null
+        },
+        "node_gone": {
+          "reason": null,
+          "value_ns": 169487079873
+        },
+        "node_present": {
+          "reason": null,
+          "value_ns": 150981233114
+        },
+        "sdl_ready": {
+          "reason": "SDL probe not requested",
+          "value_ns": null
+        }
+      },
+      "temperature": "warm"
+    }
+  ],
+  "schema_version": 1,
+  "summaries": {
+    "cold/api_returned": {
+      "mad_ns": 10042,
+      "max_ns": 375167,
+      "mean_ns": 132312.75,
+      "min_ns": 25750,
+      "missing": 0,
+      "n": 4,
+      "p50_ns": 35792,
+      "p90_ns": 375167,
+      "p99_ns": 375167,
+      "population_stddev_ns": 142505.9421276443
+    },
+    "cold/close_returned": {
+      "mad_ns": 1255525251,
+      "max_ns": 6210374628,
+      "mean_ns": 4349310668.75,
+      "min_ns": 2027829292,
+      "missing": 0,
+      "n": 4,
+      "p50_ns": 3951756752,
+      "p90_ns": 6210374628,
+      "p99_ns": 6210374628,
+      "population_stddev_ns": 1561009190.40651
+    },
+    "cold/consumer_open": {
+      "missing": 4,
+      "n": 0
+    },
+    "cold/first_neutral": {
+      "missing": 4,
+      "n": 0
+    },
+    "cold/node_gone": {
+      "mad_ns": 1255580251,
+      "max_ns": 6210879920,
+      "mean_ns": 4349724627.25,
+      "min_ns": 2028387084,
+      "missing": 0,
+      "n": 4,
+      "p50_ns": 3952025627,
+      "p90_ns": 6210879920,
+      "p99_ns": 6210879920,
+      "population_stddev_ns": 1560979800.367506
+    },
+    "cold/node_present": {
+      "mad_ns": 193000,
+      "max_ns": 3418542,
+      "mean_ns": 1909938.0,
+      "min_ns": 703542,
+      "missing": 0,
+      "n": 4,
+      "p50_ns": 1662334,
+      "p90_ns": 3418542,
+      "p99_ns": 3418542,
+      "population_stddev_ns": 974110.7066529964
+    },
+    "cold/sdl_ready": {
+      "missing": 4,
+      "n": 0
+    },
+    "warm/api_returned": {
+      "mad_ns": 46416,
+      "max_ns": 497500,
+      "mean_ns": 132022.0,
+      "min_ns": 37375,
+      "missing": 0,
+      "n": 36,
+      "p50_ns": 96041,
+      "p90_ns": 259375,
+      "p99_ns": 497500,
+      "population_stddev_ns": 98118.60462131193
+    },
+    "warm/close_returned": {
+      "mad_ns": 2121602293,
+      "max_ns": 8260341129,
+      "mean_ns": 4219955098.0555553,
+      "min_ns": 887203792,
+      "missing": 0,
+      "n": 36,
+      "p50_ns": 4090454002,
+      "p90_ns": 7266003961,
+      "p99_ns": 8260341129,
+      "population_stddev_ns": 2366783465.8503838
+    },
+    "warm/consumer_open": {
+      "missing": 36,
+      "n": 0
+    },
+    "warm/first_neutral": {
+      "missing": 36,
+      "n": 0
+    },
+    "warm/node_gone": {
+      "mad_ns": 2121777376,
+      "max_ns": 8260816837,
+      "mean_ns": 4220967774.0,
+      "min_ns": 888530292,
+      "missing": 0,
+      "n": 36,
+      "p50_ns": 4090801669,
+      "p90_ns": 7266652045,
+      "p99_ns": 8260816837,
+      "population_stddev_ns": 2366701667.4179406
+    },
+    "warm/node_present": {
+      "mad_ns": 903542,
+      "max_ns": 15103042,
+      "mean_ns": 3164274.277777778,
+      "min_ns": 386084,
+      "missing": 0,
+      "n": 36,
+      "p50_ns": 1869333,
+      "p90_ns": 6098708,
+      "p99_ns": 15103042,
+      "population_stddev_ns": 3054890.762030686
+    },
+    "warm/sdl_ready": {
+      "missing": 36,
+      "n": 0
+    }
+  },
+  "tier": "PlayableFull"
+}
