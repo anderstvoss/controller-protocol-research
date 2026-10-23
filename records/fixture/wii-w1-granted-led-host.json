@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-led-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-granted-led-host.json",
+  "sha256": "f0d051a94a1c1ee529e72863e331cd64cd1676f081cf83d92666604f7408107c",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w1-granted-led-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original private probe JSON into structured virtual-only observations; omitted raw logs, paths, process identities and grant metadata. Original artifacts SHA256: b3cd937289a4a814e749b8d6db9d178c1339c36f58ce747ad0ba14adcdfe46d2. Original measured helper source hash and published parameterized source hash are separate; only scratch SDL helper path became CLI argument and rustfmt changed formatting. No upstream text or physical capture.",
+  "claims": []
+}

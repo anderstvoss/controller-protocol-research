@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-functional",
+  "permission": "Anders confirmed the five identity-checked grants in virtualgamepad#176 comment6353166649: user read/write ACL on only the held owned hidraw node and o+w on its four LED brightness files. No persistent rule, install, root operation by agent, driver unbind or sandbox override. Identity/access verified again before go.",
+  "config": {
+    "sdl_version": "3.2.10",
+    "debian_package": "3.2.10+ds-1",
+    "sdl_probe_executable_sha256": "b1c8f59f9c387f3b2c9ad30cebbe2591332593c30bd761f3b4265bcc180c337a",
+    "sdl_probe_source_sha256": "9457520735ba653d9a391bcb8269a70cf8f07aad2ce204d46424d8d5bf8a9359",
+    "sdl_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "phase_order": [
+      "core",
+      "nunchuk",
+      "classic",
+      "standalone-motionplus"
+    ],
+    "phase_schedule_seconds": 4
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "virtualgamepad_revision": "78e667369d57fc3175e4dabd8b13e221f2035ad5",
+    "probe_executable_sha256": "d151fed7a818442e16bc54cbb2ebbc31916d593cd558eee0e343d9b2cdfd6c59",
+    "measured_original_source_sha256": "28ec8464cac496d45f91becd44fd9d31d72f76d904d4da142841c82e7c48cc1b",
+    "published_parameterized_source_sha256": "8756809893b61e46d10f353fb76f17b72a7df2a79476b67e74cf2681e8aa527d",
+    "scope": "Observed local virtual device only, before Part C changes. No physical-reference or whole-controller acceptance."
+  },
+  "resources": {
+    "same_owned_device_across_all_runs": true,
+    "idempotent_close": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "fd_counts": "not_measured_in_this_followup",
+    "companion_cleanup": "HID parent removal observed; no separate event-node disappearance assertion"
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        }
+      },
+      "observations": {
+        "enumerate_only_controllers": "default1",
+        "measurements": {
+          "direct_hidraw": [
+            {
+              "open": 1,
+              "errno": 0
+            }
+          ],
+          "version": [
+            {
+              "runtime_version": 3002010
+            }
+          ],
+          "owned_hid_count": [
+            {
+              "count": 0
+            }
+          ],
+          "owned_joystick": [
+            {
+              "backend": "evdev",
+              "axes": 0,
+              "buttons": 11,
+              "hats": 0,
+              "gamepad": 1
+            }
+          ],
+          "output_caps": [
+            {
+              "rumble": 1,
+              "player_led": 0,
+              "rgb_led": 0
+            }
+          ],
+          "output_request": [
+            {
+              "rumble": 1,
+              "led": 0,
+              "player": 1
+            }
+          ],
+          "sensors": [
+            {
+              "accel": 0,
+              "gyro": 0
+            }
+          ],
+          "snapshot_count": 12,
+          "unique_snapshots": [
+            {
+              "owned_count": 1,
+              "connected0": 1,
+              "axes0": 0,
+              "buttons0": 11
+            }
+          ]
+        },
+        "retained_host_outputs": [
+          {
+            "leds": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "phase": 0,
+            "rumble": false
+          },
+          {
+            "leds": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "phase": 0,
+            "rumble": true
+          },
+          {
+            "leds": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "phase": 0,
+            "rumble": false
+          },
+          {
+            "leds": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "phase": 1,
+            "rumble": false
+          },
+          {
+            "leds": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "phase": 2,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "phase": 2,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "phase": 2,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 2,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 3,
+            "rumble": false
+          }
+        ],
+        "driver_bound": "wiimote",
+        "exit_code": 0,
+        "sdl_wii_hidapi_connection": "not_observed"
+      },
+      "errors": []
+    },
+    {
+      "cycle": 0,
+      "index": 1,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional follow-up retained no creation-stage monotonic timestamps; no timing oracle inferred"
+        }
+      },
+      "observations": {
+        "enumerate_only_controllers": "0",
+        "measurements": {
+          "direct_hidraw": [
+            {
+              "open": 1,
+              "errno": 0
+            }
+          ],
+          "version": [
+            {
+              "runtime_version": 3002010
+            }
+          ],
+          "owned_hid": [
+            {
+              "bus": 2,
+              "usage_page": 65280,
+              "usage": 1,
+              "open": 1
+            }
+          ],
+          "owned_hid_count": [
+            {
+              "count": 1
+            }
+          ],
+          "owned_joystick": [
+            {
+              "backend": "evdev",
+              "axes": 0,
+              "buttons": 11,
+              "hats": 0,
+              "gamepad": 1
+            }
+          ],
+          "output_caps": [
+            {
+              "rumble": 1,
+              "player_led": 0,
+              "rgb_led": 0
+            }
+          ],
+          "output_request": [
+            {
+              "rumble": 1,
+              "led": 0,
+              "player": 1
+            }
+          ],
+          "sensors": [
+            {
+              "accel": 0,
+              "gyro": 0
+            }
+          ],
+          "snapshot_count": 12,
+          "unique_snapshots": [
+            {
+              "owned_count": 1,
+              "connected0": 1,
+              "axes0": 0,
+              "buttons0": 11
+            }
+          ]
+        },
+        "retained_host_outputs": [
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 0,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 0,
+            "rumble": true
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 0,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 1,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 2,
+            "rumble": false
+          },
+          {
+            "leds": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "phase": 3,
+            "rumble": false
+          }
+        ],
+        "driver_bound": "wiimote",
+        "exit_code": 0,
+        "sdl_wii_hidapi_connection": "not_observed"
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Direct hidraw open now succeeds in both cases. Default enumeration returns0 owned HID entries; enumerate-all returns1 Bluetooth bus2 vendor usage65280/1 and open=1. In both, opened joystick is evdev core11 buttons,0 axes/hats, no accel/gyro. Rumble play/stop reaches retained intent. Player-index setter success and separate kernel LED changes do not prove SDL Wii HIDAPI LED output; RGB LED request unsupported. Wii HIDAPI claiming remains unobserved despite access, with descriptor/default filtering a separate lead. Earlier permission-blocked record remains unchanged.",
+    "previous_blocked_experiment": "wii-w1-sdl-host-run",
+    "relation": "New follow-up under different temporary permissions, not replacement of historical measurements. Schema has no supersedes field; original unchanged."
+  }
+}

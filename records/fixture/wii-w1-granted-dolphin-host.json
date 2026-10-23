@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w1-granted-dolphin-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w1-granted-dolphin-host.json",
+  "sha256": "68e2a2a69f8006a00b5b7db68872e3ec47c1e6854e0e9a962eb131bcc0a56fad",
+  "sources": [
+    "virtualgamepad-wii-w1-granted-controller",
+    "wii-w1-dolphin-2609a"
+  ],
+  "experiments": [
+    "wii-w1-granted-dolphin-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original private probe JSON into structured virtual-only observations; omitted raw logs, paths, process identities and grant metadata. Original artifacts SHA256: 51afb1cc8f87192387ca1014ca6505cd343b0ccdd4c8c1a2ce7d612daf56378e. Original measured helper source hash and published parameterized source hash are separate; only scratch SDL helper path became CLI argument and rustfmt changed formatting. No upstream text or physical capture.",
+  "claims": []
+}
