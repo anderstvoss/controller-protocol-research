@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-lizard-disable-clear",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-lizard-disable-clear.hex",
+  "sha256": "daa93a045d995ec3d81f2cb996ae17e20d2c072a0802297e9d3e39a0ccae4eb1",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-lizard"
+  ]
+}

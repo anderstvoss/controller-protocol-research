@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-rumble-80",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-rumble-80.hex",
+  "sha256": "ee707a1571143ed8e775ad8b4995f028f0728ba9d3246d27d6cc6c38538ad69a",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-80-81"
+  ]
+}

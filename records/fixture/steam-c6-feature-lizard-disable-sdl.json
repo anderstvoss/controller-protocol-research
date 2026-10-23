@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-lizard-disable-sdl",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-lizard-disable-sdl.hex",
+  "sha256": "600cfc71e05548bb1b9e99697ab98329af1c44bbca3e723fc5788e7993ae79fb",
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-sdl-lizard"
+  ]
+}

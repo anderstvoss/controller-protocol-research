@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-sdl-structs",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "6217267bfa7e2b446edd6c45ac78e7603ac937960e7585831423d94d2a10c3b8",
+  "lineage": "libsdl",
+  "locator": "Packed struct definitions lines 24-33, 162-245 (0x80-0x85 output), 552-702 (Triton states, IMU, battery, wireless); source-only"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-buttons-all-42",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-buttons-all-42.hex",
+  "sha256": "58db0119f6f74e49d2d1526acf04a00746d0919f91a415365009ef5f5b2fb9b1",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-42",
+    "steam-c6-input-buttons"
+  ]
+}

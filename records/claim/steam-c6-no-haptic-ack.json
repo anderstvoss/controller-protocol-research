@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-no-haptic-ack",
+  "statement": "Pinned Linux and SDL consumers emit haptic output 0x80/0x81 and declare 0x82-0x85, but these files do not specify a device reply/ACK report for those wired writes; a 0x44 reply is a separate unconfirmed earlier research hypothesis and is not included in synthetic host output fixtures. No evidence for physical ACK timing or bytes. Kernel:328-391,751-815; SDL:595-624, SDL structs:157-245.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "source inspection at fixed consumers",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "No observed physical or live consumer reply; intentionally no source-supported byte pattern asserted beyond described code paths."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

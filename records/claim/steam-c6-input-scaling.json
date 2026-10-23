@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-input-scaling",
+  "statement": "Raw triggers/stick/pad/IMU fields are s16 LE and pressure u16 LE at offsets mapped by input-42/input-45; SDL maps trigger raw to int(raw)*2-32768, left/right stick Y inverted for SDL, pad X normalized raw/65536+0.5 and Y normalized -raw/65536+0.5, pressure raw/32768, accelerometer raw/32768*2*g, and gyro raw/32768*2000deg/s converted to radians/s with axis reordering (X,Z,-Y). 0x42/0x45 u32 IMU tick is treated as microseconds by SDL, 0x47 u16 tick is 32us. Report units derive from SDL consumer code, not a device calibration. SDL driver:222-233,246-348; Linux:2325-2354,2431-2496.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

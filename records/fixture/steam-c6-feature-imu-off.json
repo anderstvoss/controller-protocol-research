@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-imu-off",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-imu-off.hex",
+  "sha256": "9bc8f132322ff18e29b91d09abf7bc9d7ac5e065865b4822a3d25704f06d7d03",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-imu"
+  ]
+}

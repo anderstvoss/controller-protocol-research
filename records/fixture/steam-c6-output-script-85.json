@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-script-85",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-script-85.hex",
+  "sha256": "3a5f3496794e40fb97b3a2e7be5a9d052d45b4510e2d9623450db00eb194454c",
+  "sources": [
+    "steam-c6-sdl-structs",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}

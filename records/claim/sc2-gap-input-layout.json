@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-input-layout",
-  "statement": "The full 2026 wired-controller field map for each 0x42/0x45/0x47 report, including length, timestamps and neutral/edge cases, lacks independent protocol fixtures.",
+  "statement": "Pinned hid-steam and SDL Triton sources now describe 0x42, 0x45 and SDL-only 0x47 byte layouts; steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons and steam-c6-input-scaling with steam-c6-* synthetic input fixtures provide a source-only reference. Physical wired HID captures, descriptor verification, firmware-dependent variants, real report timing, neutral baselines, calibration and end-to-end consumer results remain unknown.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+    "scope": "Residual physical/host gap after C6 source-backed field map and synthetic examples. No physical packets captured or hardware calibration validated; see C6 field map section of docs/steam-controller-2026-research-gaps.md."
   },
   "sources": [],
   "experiments": [],

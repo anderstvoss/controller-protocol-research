@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-reply-serial-empty",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-reply-serial-empty.hex",
+  "sha256": "0b83c2fbb2fc567c60de7a95c0c4e83dcffab9cdb46ee91bfb4791ffaf6460d5",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-exchange",
+    "steam-c6-feature-registration"
+  ]
+}

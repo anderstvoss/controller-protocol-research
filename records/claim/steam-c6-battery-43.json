@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-battery-43",
+  "statement": "Linux and SDL define input 0x43 battery status: kernel requires 15 bytes total, ID at offset0, state u8@1, level u8@2, voltage u16 LE@3, system voltage@5, input voltage@7, battery current@9, input current@11, temperature@13 (all u16 LE). Kernel maps state codes 1=discharging, 2=charging, 4=charged; the SDL enum also declares intermediate state codes. Wired kernel registers an Ibex battery device, but no physical wired 0x43 cadence or values are available. Kernel:337-365,2499-2528,2590-2604; SDL:351-373,682-697.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

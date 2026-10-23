@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-registration",
+  "statement": "Kernel wired IBEX registration first requests string attribute using feature1 command payload [0xae, 0x15, 0x01], expects same command header, a valid attribute ID and a bounded string length; if failure/empty, uses internal fallback without blocking. It then requests attributes [0x83, 0x00], parses 5-byte tagged attributes from valid reply, logs failure but continues registration. Serial/attribute values are No evidence and are not represented as physical fixtures. hid-steam.c:667-717,1372-1411,1770-1822. USB feature2 GET wireless state is conditional on WIRELESS quirk only; it is not sent by direct 1302 wired probe (720-743,1795-1804).",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
