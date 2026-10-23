@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-lfo-83-fields",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-lfo-83-fields.hex",
+  "sha256": "05dc98458ce9e5b9cd90f7a74eeb55b218d3ad6d35eb8b36b1cb64c16efdb8ce",
+  "sources": [
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}

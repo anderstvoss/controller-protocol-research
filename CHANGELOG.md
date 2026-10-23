@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Extend Steam C6 wired research with six distinct-field synthetic haptic fixtures, offset-level assertions, SDL and Linux consumer timing assumptions, and kernel mid-session lizard/hidraw ownership claims; physical timing and replies remain unverified.
+
 - Record W2 authored interim Game Pad descriptor, default SDL enumeration and bounded initial Wii HIDAPI claim with later disconnect, plus clean-head UHID N1/N4 timing; preserve N1 global input-count discrepancy and all historical evidence.
 
 - Add separate human-granted W1 LED, SDL and Dolphin virtual-host follow-ups: LED intent succeeds, hidraw access succeeds, Wii HIDAPI/backend acceptance remains unobserved. Historical blocked records and all wii-gap claims remain unchanged.
