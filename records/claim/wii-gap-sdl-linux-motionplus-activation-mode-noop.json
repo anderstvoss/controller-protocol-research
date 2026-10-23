@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-linux-motionplus-activation-mode-noop",
+  "statement": "SDL's Wii MotionPlus activation on Linux neither sends the A600FE mode write nor updates m_ucMotionPlusMode. On other platforms it performs both. SDL's sensor-enable callback calls that activation, so enabling the gyro on Linux does not itself make an inactive MotionPlus decode-ready. Mode is instead initially learned from the active mapped extension identity during open.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL 3.2.10, SDL 3.4.18 and SDL main at pinned October 2026 source commits; no retail Wii measurement",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. ActivateMotionPlusWithMode 457-468, ActivateMotionPlus 470-481, OpenJoystick 781-785, SetJoystickSensorsEnabled 860-877. This refines earlier wii-gap-sdl-linux-motionplus-kernel-ownership."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-main-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-initial-extension-reset-can-disrupt-mapping",
+  "statement": "Before Wii joystick open, SDL's device initialization reads the extension identity. If that identity denotes an active MotionPlus mapping, ReadExtensionControllerType resets extension registers and then requests the prior MotionPlus mode again. On Linux the restoration call omits the write and cached-mode assignment. Thus a MotionPlus evdev holder opened before SDL may still race with SDL's reset/kernel reconciliation; record A400F0 and A600FE writes with actor attribution rather than assuming the mapped state persists. Independently, OpenJoystick unconditionally invokes InitializeExtension, causing SendExtensionReset before GetMotionPlusState; therefore the active state needed for gyro must survive or recover from a second initialization reset. DeactivateMotionPlus on sensor disable also sends this reset on Linux.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL 3.2.10, SDL 3.4.18 and SDL main at pinned October 2026 source commits; no retail Wii measurement",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SendExtensionReset 370-382; ReadExtensionControllerType 677-709; HIDAPI_DriverWii_InitDevice 735-752; ActivateMotionPlusWithMode 457-468. Source-level race candidate only. InitializeExtension 630-636, OpenJoystick 773-786, DeactivateMotionPlus 483-492."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-main-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

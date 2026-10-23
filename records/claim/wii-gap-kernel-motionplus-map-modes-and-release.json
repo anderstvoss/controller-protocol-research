@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-kernel-motionplus-map-modes-and-release",
+  "statement": "Linux hid-wiimote's hotplug worker reinitializes extension and MotionPlus register spaces, detects attachment identity and then maps MotionPlus into the primary extension register window only if MP_USED was present in its state snapshot. The mapping write targets A600FE with mode 0x04 for standalone, 0x05 for Nunchuk-style and 0x07 for Classic-style pass-through. If MP_USED is absent, the worker leaves MotionPlus unmapped and schedules polling as applicable; releasing the last MotionPlus input-node open clears MP_USED, prompting remapping/deactivation rather than maintaining a user-independent gyro stream.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Linux hid-wiimote v6.12 and mainline 734bef5; source behavior, no host runtime",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Core v6.12 wiimote_cmd_init_mp 467-485, wiimote_cmd_map_mp 488-510, wiimote_init_hotplug 1095-1192; mainline 467-508 and 1095-1190. Modules MP close callback. Physical transaction timing not measured."
+  },
+  "sources": [
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-linux-main-core-734bef",
+    "wii-gap-linux-main-modules-734bef"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

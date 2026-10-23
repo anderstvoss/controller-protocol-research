@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-motionplus-gyro-packet-preconditions",
+  "statement": "SDL dispatches Wii MotionPlus gyro only when cached active mode is non-NONE, an extension payload contains at least six bytes, the invalid-data flag in its sixth byte is clear, and the gyro-versus-pass-through discriminator in sixth-byte bit 1 is set. Reporting also requires enabled sensors. The decoder combines three 14-bit raw angular fields around center 8192, applies fast/slow scale bits and axis remapping, then emits SDL_SENSOR_GYRO. Varying application-side semantic rotations alone does not prove the host received a gyro-marked packet.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL 3.2.10, SDL 3.4.18 and SDL main at pinned October 2026 source commits; no retail Wii measurement",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. HandleMotionPlusData 1206-1243 and HandleButtonData 1266-1297. Compare wii-gap-wiibrew-motionplus-passthrough-field-moves and wii-c5-extension-packing without changing those records."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-main-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

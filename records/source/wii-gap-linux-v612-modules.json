@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-v612-modules",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/adc218676eef25575469234709c2d87185ca223a/drivers/hid/hid-wiimote-modules.c",
+  "revision": "adc218676eef25575469234709c2d87185ca223a (Linux v6.12)",
+  "sha256": "cc24eaef5f9d26afcc2eee61dbdc49ad83df9e3c9ad5c55e77dc5c5bca0b9ccb",
+  "lineage": "linux-kernel",
+  "locator": "v6.12 modules: 2712-2770 gyro event decode; 2771-2795 MotionPlus evdev open/close; 2797-2854 probe creates input node."
+}

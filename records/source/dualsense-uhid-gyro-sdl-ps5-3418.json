@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-sdl-ps5-3418",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/829a65d769d935c4852f8159e964312c0957260a/src/joystick/hidapi/SDL_hidapi_ps5.c",
+  "revision": "829a65d769d935c4852f8159e964312c0957260a",
+  "sha256": "c535231bf9ec785e4e7dc1805c5d989d534ca5b9a3f47b1fe354b224faf22a16",
+  "lineage": "sdl-hidapi",
+  "locator": "SDL PS5 405-470 Sony/enhanced report and capabilities; 591-703 calibration fallback; 835-888 enhanced sensor registration; 1156-1172 enabling; 1360-1408 gyro data."
+}
