@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-real-hidapi-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteReal/IOhidapi.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "cdb08fa05e75fa4b56ea794d39362f78c751d2ca14dedfa9590da64acf18b97c",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 17-59 Linux kernel wiimote vs hid-generic binding warning; 106-136 discovery; 149-205 HIDAPI report read/write. No upstream prose or code reproduced."
+}

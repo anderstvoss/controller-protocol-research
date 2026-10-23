@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-real-core-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteReal/WiimoteReal.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "f4b900e31105df29b382236240a39318d029a74a602428b7521fde3d7550266a",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 168-220 output; 294-398 raw IO; 450-479 forwarding reports; 501-515 reporting startup. No upstream prose or code reproduced."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-real-remote-path-separation",
+  "statement": "Pinned Dolphin has distinct real-Wiimote transport and ControllerInterface consumers. The Linux real Bluetooth path opens HID L2CAP control and interrupt sockets; the HIDAPI path directly reads/writes Wii reports; WiimoteReal can forward raw input to emulated console Bluetooth. ControllerInterface independently decodes sensor states for generic controller input. A Bluetooth-bus UHID report device is not actual radio pairing, an L2CAP endpoint or USB Bluetooth adapter passthrough.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin e1d35f pinned software consumer; physical model unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. IOLinux.cpp 29-30,286-400; IOhidapi.cpp 106-205; WiimoteReal.cpp 450-479; WiimoteController.cpp 106-145,1150-1207. Keep emulator source, live physical hardware and SDL distinct."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-hidapi-e1d35f",
+    "wii-gap-dolphin-real-linux-e1d35f",
+    "wii-gap-dolphin-real-core-e1d35f",
+    "wii-gap-dolphin-controllerinterface-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

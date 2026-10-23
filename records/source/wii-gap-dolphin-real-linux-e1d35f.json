@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-real-linux-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteReal/IOLinux.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "907b9e3ef50ed45c9f9ef007dbd20e0176791d89fbe17f6b6591a45d53e348f4",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 29-30 HID L2CAP PSMs; 286-336 control+interrupt channels; 356-400 reads/writes. No upstream prose or code reproduced."
+}

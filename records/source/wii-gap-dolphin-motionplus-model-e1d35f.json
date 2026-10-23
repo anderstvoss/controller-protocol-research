@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-motionplus-model-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/MotionPlus.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "933273dd3547af779ca7309d888563039d74b02809dbccd3917488aece9bdfc3",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 95-145 synthetic calibration; 190-369 register/init modes; 394-466 transition; 600-709 gyro/passthrough packing. No upstream prose or code reproduced."
+}
