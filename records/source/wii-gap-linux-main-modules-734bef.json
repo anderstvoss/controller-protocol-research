@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-main-modules-734bef",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/734bef548a96e8774d6eef5dfa2026c6edc4e80b/drivers/hid/hid-wiimote-modules.c",
+  "revision": "734bef548a96e8774d6eef5dfa2026c6edc4e80b",
+  "sha256": "681ec04d8ebcc4f1d7cc0247d96dfdeb07fca8b46cad98153768e15fd269860d",
+  "lineage": "linux-kernel",
+  "locator": "mainline at 734bef5: 2700-2762 gyro decode; 2763-2792 MP evdev open/close; 2793-2845 input-device probe."
+}
