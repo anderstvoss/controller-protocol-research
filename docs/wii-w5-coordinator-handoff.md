@@ -1,8 +1,8 @@
 # Coordinator handoff — W5 Wii gyro diagnosis, SDL/kernel/Dolphin boundaries
 
-**Audience:** coordinating agent managing Wii Remote W5; this is a *research handoff*, not an instruction to write protocol code or change host configuration.  
-**Research repo:** `anderstvoss/controller-protocol-research`; parent source analysis [wii-gyro-investigation.md](wii-gyro-investigation.md); new follow-up [wii-gyro-consumer-paths-and-variants.md](wii-gyro-consumer-paths-and-variants.md).  
-**Virtualgamepad:** `anderstvoss/virtualgamepad` is **read-only for this cloud research lane**. W5's authoritative [issue #158 coordinator instruction](https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6373947878) already exists; **do not replace, overwrite or broaden it**. Anders controls merging code and research PRs.  
+**Audience:** coordinating agent managing Wii Remote W5; this is a *research handoff*, not an instruction to write protocol code or change host configuration.
+**Research repo:** `anderstvoss/controller-protocol-research`; parent source analysis [wii-gyro-investigation.md](wii-gyro-investigation.md); new follow-up [wii-gyro-consumer-paths-and-variants.md](wii-gyro-consumer-paths-and-variants.md).
+**Virtualgamepad:** `anderstvoss/virtualgamepad` is **read-only for this cloud research lane**. W5's authoritative [issue #158 coordinator instruction](https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6373947878) already exists; **do not replace, overwrite or broaden it**. Anders controls merging code and research PRs.
 **Evidence status:** source-backed consumer findings only; W4 zero readings are an observation, W5 root cause remains **unproven**. Source pins SDL 3.2.10 `877399b`, SDL 3.4.18 `829a65d`, Linux v6.12 and mainline `734bef5`, Dolphin `e1d35f666cc35f6ead55d32ea2679df44d04da72`.
 
 ## 1. Prior results, current question
