@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w3-n1-attribution-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-w3-baseline",
+    "virtualgamepad-wii-w2-runner"
+  ],
+  "fixtures": [
+    "wii-w3-n1-attribution-host"
+  ],
+  "procedure": "Read current sysfs input/event/joystick class ancestry/names/physical labels and retained udev USEC_INITIALIZED. Correlate that monotonic initialization clock with the saved original W2 N1 UTC start and78.483second duration, allowing1.1second conversion/start precision uncertainty. Three surviving class entries share a non-UHID USB gamepad parent and do not match owned virtual association. No real device input, calibration or serial capture. Historical W2 record unchanged.",
+  "semantic_outcome": "The exact3entry delta is attributed to an unrelated external USB gamepad initialized18.530seconds into the W2 N1 window (uncertainty1.1seconds). It has input/event/joystick entries, USB/non-UHID ancestry and a nonmatching physical label. This explains global26to29 without implicating the virtual harness. Attribution passed; historical N1 remains blocked as directed, no harness code change or replacement N1 run."
+}

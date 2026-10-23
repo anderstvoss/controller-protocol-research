@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-w3-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/b23fd2570069c59e4815f66329fe78ab7b87ad3c/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "b23fd2570069c59e4815f66329fe78ab7b87ad3c",
+  "sha256": "9841e457f2da39cb24ba4904b38eeaf3e829b44f94e27749acaae72e43e7d70d",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged W2-merged model assessed by W3 before any model edit. Own-process syscall tracing with original tools/wii_w3; no descriptor/protocol change during diagnosis."
+}

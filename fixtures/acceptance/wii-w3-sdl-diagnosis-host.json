@@ -1,0 +1,5430 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-diagnosis",
+  "permission": "Read-only diagnostic observation plus temporary per-node grants applied/confirmed by Anders locally. Agent verified identity/access and performed no grants/root/unbind/persistent policy.",
+  "config": {},
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "b23fd2570069c59e4815f66329fe78ab7b87ad3c",
+    "scope": "Bounded local virtual-only diagnosis, no physical or sustained controller acceptance",
+    "probe_executable_sha256": "46aa1dd953c37be2bda311513b6b2243808e561612b90a55c32c4fafcfa7d4d5",
+    "probe_source_sha256": "9654cd201e51f5bb26530fd6f70d10bde6c73713fb6ac58c0f61adbdf7a97cb8",
+    "trace_source_sha256": "1a7e8e8fb0c3a486f676bbf110b7685d031b1b85cc1b43982975beece31784fd",
+    "trace_library_sha256": "0240205e3896290f8d3565139f57d29dd8fe560e287b02d74cb891bbac438aac",
+    "sdl_probe_source_sha256": "7c85b98ef607b4bff34404fa8592b4e6823cfe157ca3383cf5c1d19e6a106aab",
+    "sdl_probe_executable_sha256": "69e85835cb8aec019dfab6f403de7e9ec76d5bfe03cde4592aca3adaf5af8575",
+    "sdl_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "sdl_version": "3.2.10+ds-1"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true,
+    "fd_counts": "not_measured"
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "profile": "sdl-wii-coalesced",
+        "phase_markers_relative_ns": {
+          "0": 400000000,
+          "1": 4700000000,
+          "2": 9000000000,
+          "3": 13300000000,
+          "4": 17600000000,
+          "5": 21900000000
+        },
+        "phase_order": [
+          "core",
+          "nunchuk-attach",
+          "nunchuk-detach",
+          "motionplus-attach",
+          "motionplus-attached-manual-deactivation",
+          "motionplus-detach"
+        ],
+        "application_commits": "only when dirty, prior W2 application schedule",
+        "measurements": {
+          "DIRECT_HIDRAW": [
+            {
+              "open": 1,
+              "errno": 0
+            }
+          ],
+          "VERSION": [
+            {}
+          ],
+          "OWNED_HID": [
+            {
+              "bus": 2,
+              "usage_page": 1,
+              "usage": 5,
+              "open": 1
+            }
+          ],
+          "OWNED_HID_COUNT": [
+            {}
+          ],
+          "OWNED_JOYSTICK": [
+            {
+              "backend": "hidapi",
+              "axes": 6,
+              "buttons": 26,
+              "hats": 0,
+              "gamepad": 1
+            }
+          ],
+          "OUTPUT_CAPS": [
+            {
+              "rumble": 1,
+              "player_led": 0,
+              "rgb_led": 0
+            }
+          ],
+          "OUTPUT_REQUEST": [
+            {
+              "rumble": 1,
+              "led": 0,
+              "player": 1
+            }
+          ],
+          "SENSORS": [
+            {
+              "accel": 1,
+              "gyro": 0
+            }
+          ],
+          "W3_MP_DEACTIVATE": [
+            {
+              "sent": 1
+            }
+          ]
+        },
+        "snapshots": [
+          {
+            "owned_count": 1,
+            "connected0": 1,
+            "axes0": 6,
+            "buttons0": 26
+          },
+          {
+            "owned_count": 1,
+            "connected0": 0,
+            "axes0": 6,
+            "buttons0": 26
+          }
+        ],
+        "protocol": {
+          "report_counts": [
+            {
+              "direction": "device-input",
+              "report_id_hex": "20",
+              "count": 18
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "21",
+              "count": 40
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "22",
+              "count": 64
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "30",
+              "count": 18857
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "31",
+              "count": 65
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "34",
+              "count": 44
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "36",
+              "count": 57
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "10",
+              "count": 4
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "11",
+              "count": 4
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "12",
+              "count": 48
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "13",
+              "count": 8
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "15",
+              "count": 8
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "16",
+              "count": 56
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "17",
+              "count": 40
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "1a",
+              "count": 8
+            }
+          ],
+          "selected_reports": [
+            {
+              "relative_ns": 121614571,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 121650154,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 582402154,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 582415904,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 600244654,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 600256112,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 617452362,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 618846487,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 620242487,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 620255321,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 621634821,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 621649321,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 622989112,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 622999654,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 624318362,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 624329446,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 625593362,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 625606196,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 626948571,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 627000904,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 648034279,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 648042654,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 774853613,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 774868696,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 800471154,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 800482238,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 835380571,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 836535196,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 837876196,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 837887988,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 839269238,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 839288988,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 840460696,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 840477279,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 841822738,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 841839446,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 843229654,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 843245488,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 844346404,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 844359404,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 864279488,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 864293363,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 878351571,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 878389904,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 879602279,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 879619113,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 880838904,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 880852446,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 884033988,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 884044029,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 885350863,
+              "direction": "host-output",
+              "hex": "1704a600fe0002"
+            },
+            {
+              "relative_ns": 885361238,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 914774363,
+              "direction": "host-output",
+              "hex": "1501"
+            },
+            {
+              "relative_ns": 914796613,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 914799113,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 916148029,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 916156404,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 926961779,
+              "direction": "host-output",
+              "hex": "120530"
+            },
+            {
+              "relative_ns": 926969654,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 1250383696,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 1250426654,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 1250430113,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 1251611279,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 1251621154,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 1255421696,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 1255441363,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4053600489,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4053625197,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4054975197,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4054993281,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 4056319822,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 4056334906,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4402170989,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4403479739,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4403491989,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4404675489,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4404709739,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4406077323,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4406102406,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4407436448,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 4407443156,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4408589573,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4408600156,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4409957281,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4409983823,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 4411319656,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 4411327531,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4412427239,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4412549948,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 4413888531,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 4413901489,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4413904239,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4415162156,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4415172406,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4417608739,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4417635323,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4446001448,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4446039948,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4470616531,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4470656948,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4481506698,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4481534406,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4514460781,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4514492489,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4533268823,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4533294989,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8657641491,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8657665283,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 8659063366,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8659081158,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8660122366,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8660137700,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8704326741,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8705662325,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8705673283,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8707008158,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8707022116,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8708059408,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8708071575,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8709437408,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8709468825,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8710834158,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8710851825,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8712245241,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8712287158,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8725555950,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 8725594325,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8725601991,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8726935200,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8726946741,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 12757495327,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 12757522077,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12758905202,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12758926660,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 12760279827,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 12760290202,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 13005595618,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 13006962410,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 13006987618,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16849507579,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16849526620,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16850875370,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16850886829,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16852237995,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16852249620,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16853537912,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16853560537,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16858504412,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16858523037,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 16859868329,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16859885412,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16861087037,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16861103287,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16862393912,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16862407954,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16863795745,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16863829287,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16865154037,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16865173662,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16866513745,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16866520704,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16867898204,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16867919120,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16867926495,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16869241204,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16869250245,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16870592079,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16870602120,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16871953537,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16871966495,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16873305037,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16873313829,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16877221162,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16877228120,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16878347454,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16878364412,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16879578412,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16879596079,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16879599454,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16879601954,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16880854079,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16880865787,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16881974495,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16881984704,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16883323620,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16883331037,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16884454912,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16884470079,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16885809037,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16885816995,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16887182454,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16887203870,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16888227245,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16888233995,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16889547912,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16889563787,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16889567495,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16890949120,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16890962287,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16892296120,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16892302620,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16893403870,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16893417704,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16894530204,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16894546537,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16895808370,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16895820579,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 16896921287,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16896942704,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16898288454,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16898300704,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16899378079,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16899389912,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16900569412,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16900579329,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16901920870,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16901928787,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16903268120,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16903276454,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16904392704,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16904406745,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16905692704,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16905715787,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16905730995,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16907066537,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16907073495,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16908253912,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16908262579,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16908264870,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16909592287,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16909602745,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16910946662,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16910952120,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16912337454,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16912354745,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16933509620,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16933522120,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16934913787,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16934929579,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16936301204,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16936316704,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16936323662,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16936326162,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16937665829,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16937671912,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16939053912,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16939064870,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16940201162,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16940222704,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16941354495,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16941366204,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16942492495,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16942503620,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16943590412,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16943620995,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16944867704,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16944881954,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16946229120,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16946241662,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16946244162,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16947588329,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16947599287,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16948809537,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16948817704,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16950161787,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16950173120,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16951515829,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16951527412,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16952740995,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16952775287,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 18882594913,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 18882621913,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 21201556622,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 21201579289,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21202928997,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21202943956,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21204288789,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21204302539,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21205647789,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 21205659414,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 21608162081,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 21609511997,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 21609529539,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 25297463708,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 25297486749,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25298871916,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25298893458,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 25300255374,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 25300266083,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28341670417,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 28341696334,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 28357631334,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28357643334,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28377629709,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 28378933251,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 28380286542,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28380302084,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28381652542,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 28381667334,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28382884834,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28382903834,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28384284626,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28384312501,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28385653042,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28385665834,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28387043792,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 28387065001,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 28405570209,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28405580501,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28544200251,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 28544212167,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 28569628292,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28569645001,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28596155459,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 28597549126,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 28598920876,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28598940542,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28600150584,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 28600162417,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28601551709,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28601573167,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28602918667,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28602929501,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28604094876,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28604107626,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28605490542,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 28605508376,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 28619059668,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28619066584,
+              "direction": "device-input",
+              "hex": "300000"
+            }
+          ],
+          "nunchuk_status_resume": {
+            "status_relative_ns": 4402170989,
+            "status_hex": "200000120000c0",
+            "mode_hex": "120030",
+            "mode_delay_ns": 1308750,
+            "data_delay_after_mode_ns": 12250,
+            "data_hex": "300000"
+          }
+        },
+        "sdl_extension_connected_debug_observed": true,
+        "driver_origin_limit": "Host-output is aggregate bound-kernel/SDL/explicit owned raw probe; per-packet actor not asserted. Device-input records successful own UHID writes, not consumer/physical delivery.",
+        "phase_clock_limit": "Report clock CLOCK_MONOTONIC nanoseconds; phase marker after300ms service,10ms uptime quantization.",
+        "host_trace_scope": "Only own UHID fd frames captured, CREATE/identity events excluded. No real device input.",
+        "initial_claim_only": true
+      },
+      "errors": []
+    },
+    {
+      "cycle": 0,
+      "index": 1,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "profile": "sdl-default-committed",
+        "phase_markers_relative_ns": {
+          "0": 400000000,
+          "1": 4700000000,
+          "2": 9000000000,
+          "3": 13310000000,
+          "4": 17610000000,
+          "5": 21910000000
+        },
+        "phase_order": [
+          "core",
+          "nunchuk-attach",
+          "nunchuk-detach",
+          "motionplus-attach",
+          "motionplus-attached-manual-deactivation",
+          "motionplus-detach"
+        ],
+        "application_commits": "explicit repeated commits, experimental application-driven control, not firmware cadence",
+        "measurements": {
+          "DIRECT_HIDRAW": [
+            {
+              "open": 1,
+              "errno": 0
+            }
+          ],
+          "VERSION": [
+            {}
+          ],
+          "OWNED_HID": [
+            {
+              "bus": 2,
+              "usage_page": 1,
+              "usage": 5,
+              "open": 1
+            }
+          ],
+          "OWNED_HID_COUNT": [
+            {}
+          ],
+          "OWNED_JOYSTICK": [
+            {
+              "backend": "evdev",
+              "axes": 0,
+              "buttons": 11,
+              "hats": 0,
+              "gamepad": 1
+            }
+          ],
+          "OUTPUT_CAPS": [
+            {
+              "rumble": 1,
+              "player_led": 0,
+              "rgb_led": 0
+            }
+          ],
+          "OUTPUT_REQUEST": [
+            {
+              "rumble": 1,
+              "led": 0,
+              "player": 1
+            }
+          ],
+          "SENSORS": [
+            {
+              "accel": 0,
+              "gyro": 0
+            }
+          ],
+          "W3_MP_DEACTIVATE": [
+            {
+              "sent": 1
+            }
+          ]
+        },
+        "snapshots": [
+          {
+            "owned_count": 1,
+            "connected0": 1,
+            "axes0": 0,
+            "buttons0": 11
+          }
+        ],
+        "protocol": {
+          "report_counts": [
+            {
+              "direction": "device-input",
+              "report_id_hex": "20",
+              "count": 18
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "21",
+              "count": 41
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "22",
+              "count": 64
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "30",
+              "count": 18791
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "31",
+              "count": 61
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "34",
+              "count": 61
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "36",
+              "count": 57
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "10",
+              "count": 4
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "11",
+              "count": 1
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "12",
+              "count": 44
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "13",
+              "count": 8
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "15",
+              "count": 8
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "16",
+              "count": 56
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "17",
+              "count": 41
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "1a",
+              "count": 8
+            }
+          ],
+          "selected_reports": [
+            {
+              "relative_ns": 561670417,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 561696334,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 577631334,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 577643334,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 597629709,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 598933251,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 600286542,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 600302084,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 601652542,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 601667334,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 602884834,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 602903834,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 604284626,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 604312501,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 605653042,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 605665834,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 607043792,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 607065001,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 625570209,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 625580501,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 764200251,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 764212167,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 789628292,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 789645001,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 816155459,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 817549126,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 818920876,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 818940542,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 820150584,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 820162417,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 821551709,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 821573167,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 822918667,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 822929501,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 824094876,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 824107626,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 825490542,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 825508376,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 839059668,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 839066584,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 1616295126,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 1616312668,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 1617679793,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 1617699210,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 1619062501,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 1619082043,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 3482527919,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 3482559085,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 3482569460,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 3483789794,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 3483798752,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4405577003,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4406907711,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4406918961,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4408083544,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4408101794,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4409437544,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4409448461,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4410784169,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4410792794,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4412160961,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4412181336,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 4413546086,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 4413567128,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4414905003,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4414913586,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 4416214294,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 4416227794,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4416230544,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4417576378,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4417586919,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4418794753,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4418808003,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4441171461,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4441216836,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4471336628,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4471371669,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4505713461,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4505769294,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8525467296,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8525500296,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 8526889671,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8526914796,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8528311088,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8528318671,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8708362130,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8709497338,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8709508338,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8710853296,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8710888338,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8712239380,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8712258463,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8713599130,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8713611255,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8714744880,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8714754838,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8716097505,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8716121380,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8733198130,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 8733225671,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8733228671,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8734371213,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8734388421,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 12877669548,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 12877699465,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12879083632,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12879107632,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 12880254965,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 12880264632,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 13010324257,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 13011662757,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 13011681298,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16972977425,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16972996550,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16974334925,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16974362217,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16975721800,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16975735800,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16977005967,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16977017842,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16980849259,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16980860384,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 16980864675,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16980875550,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16982226134,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16982239134,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16983355509,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16983366884,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16984505217,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16984519759,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16985872675,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16985893217,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16985914259,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16985922967,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16987294634,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16987311092,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16987323759,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16988462217,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16988472592,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16988476509,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16988490134,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16988493800,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16989837759,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16989850134,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16989856467,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16989860759,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16991211050,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16991220675,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 17005551092,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17005570300,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17005574634,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17005587134,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 17006977425,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17006996175,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17007005717,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17007008342,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17008273634,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17008279550,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17008282092,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17008285592,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17009632175,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17009646800,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 17010991384,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17011002467,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17012163175,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17012177592,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17013520217,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 17013546925,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 17014946967,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17014974425,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17016076425,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 17016095800,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17016098759,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17016101842,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17016110134,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17017168592,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17017174467,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17017176800,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17017185675,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17018574175,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17018601800,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17019975384,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 17019993259,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 17027602967,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 17027632550,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 17027637800,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17027651300,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17028755134,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17028781634,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 17030163175,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17030184717,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17031527884,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17031538384,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17032628217,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 17032642175,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 17034027300,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17034038884,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17035425009,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17035447509,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17035454050,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 17036625884,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 17036636509,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 17036641467,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 17036652634,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 17036656259,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 17037996634,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17038006259,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 17038013467,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 17038018425,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 17039366467,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17039383134,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 17073018092,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17073029925,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17073033384,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17073041050,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 17074346175,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17074367300,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17074382342,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17074385467,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17074388842,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17074393175,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17075549550,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17075560217,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 17075566300,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17075571092,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17076662300,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17076678175,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17078033884,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17078048384,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17079404634,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 17079426550,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 17080602550,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17080615092,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17081962675,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 17081979592,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 17081982134,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17081985800,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 17081991425,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17083184050,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 17083190800,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 17083193634,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17083202967,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17084267467,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 17084281675,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 17085662550,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 17085679009,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 18864520593,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 18864547009,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 21325136511,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 21325155636,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21326501302,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21326526219,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21327882219,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21327904469,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21329228094,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 21329239219,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 21613573802,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 21614674219,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 21614686052,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 25420523763,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 25420541763,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25421900179,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25421923013,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 25423269596,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 25423281388,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 27914605722,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 27914647097,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28333159722,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 28333175847,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 28349206264,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28349221139,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28364586514,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 28365689097,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 28367041847,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28367055222,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28368259306,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 28368270722,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28369614181,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28369625681,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28371013847,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28371036097,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28371091722,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28371101514,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28373595514,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 28373606472,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 28386892222,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28386905931,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28519973931,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 28519990847,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 28544291847,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28544301764,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28572875597,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 28574238264,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 28575622931,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28575641847,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28576874597,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 28576884972,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28578264847,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28578278556,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28579660056,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28579676847,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28580917139,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28580927431,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 28582280347,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 28582293347,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 28607105389,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28607123972,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28622640264,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28622660639,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 28623992806,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28624154014,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 28625479514,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 28625487806,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28628113097,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 28628123931,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28628127681,
+              "direction": "host-output",
+              "hex": "1704a600fe0002"
+            },
+            {
+              "relative_ns": 28628136514,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 28658753639,
+              "direction": "host-output",
+              "hex": "1501"
+            },
+            {
+              "relative_ns": 28658769097,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 28658771597,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28660169514,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 28660179472,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 28669630764,
+              "direction": "host-output",
+              "hex": "120530"
+            },
+            {
+              "relative_ns": 28669640014,
+              "direction": "device-input",
+              "hex": "300000"
+            }
+          ],
+          "nunchuk_status_resume": {
+            "status_relative_ns": 4405577003,
+            "status_hex": "200000120000c0",
+            "mode_hex": "120030",
+            "mode_delay_ns": 1330708,
+            "data_delay_after_mode_ns": 11250,
+            "data_hex": "300000"
+          }
+        },
+        "sdl_extension_connected_debug_observed": false,
+        "driver_origin_limit": "Host-output is aggregate bound-kernel/SDL/explicit owned raw probe; per-packet actor not asserted. Device-input records successful own UHID writes, not consumer/physical delivery.",
+        "phase_clock_limit": "Report clock CLOCK_MONOTONIC nanoseconds; phase marker after300ms service,10ms uptime quantization.",
+        "host_trace_scope": "Only own UHID fd frames captured, CREATE/identity events excluded. No real device input.",
+        "initial_claim_only": false
+      },
+      "errors": []
+    },
+    {
+      "cycle": 0,
+      "index": 2,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "profile": "sdl-wii-committed",
+        "phase_markers_relative_ns": {
+          "0": 400000000,
+          "1": 4700000000,
+          "2": 9000000000,
+          "3": 13300000000,
+          "4": 17600000000,
+          "5": 21910000000
+        },
+        "phase_order": [
+          "core",
+          "nunchuk-attach",
+          "nunchuk-detach",
+          "motionplus-attach",
+          "motionplus-attached-manual-deactivation",
+          "motionplus-detach"
+        ],
+        "application_commits": "explicit repeated commits, experimental application-driven control, not firmware cadence",
+        "measurements": {
+          "DIRECT_HIDRAW": [
+            {
+              "open": 1,
+              "errno": 0
+            }
+          ],
+          "VERSION": [
+            {}
+          ],
+          "OWNED_HID": [
+            {
+              "bus": 2,
+              "usage_page": 1,
+              "usage": 5,
+              "open": 1
+            }
+          ],
+          "OWNED_HID_COUNT": [
+            {}
+          ],
+          "OWNED_JOYSTICK": [
+            {
+              "backend": "hidapi",
+              "axes": 6,
+              "buttons": 26,
+              "hats": 0,
+              "gamepad": 1
+            }
+          ],
+          "OUTPUT_CAPS": [
+            {
+              "rumble": 1,
+              "player_led": 0,
+              "rgb_led": 0
+            }
+          ],
+          "OUTPUT_REQUEST": [
+            {
+              "rumble": 1,
+              "led": 0,
+              "player": 1
+            }
+          ],
+          "SENSORS": [
+            {
+              "accel": 1,
+              "gyro": 0
+            }
+          ],
+          "W3_MP_DEACTIVATE": [
+            {
+              "sent": 1
+            }
+          ]
+        },
+        "snapshots": [
+          {
+            "owned_count": 1,
+            "connected0": 1,
+            "axes0": 6,
+            "buttons0": 26
+          },
+          {
+            "owned_count": 1,
+            "connected0": 0,
+            "axes0": 6,
+            "buttons0": 26
+          }
+        ],
+        "protocol": {
+          "report_counts": [
+            {
+              "direction": "device-input",
+              "report_id_hex": "20",
+              "count": 18
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "21",
+              "count": 41
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "22",
+              "count": 50
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "30",
+              "count": 18277
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "31",
+              "count": 30
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "34",
+              "count": 51
+            },
+            {
+              "direction": "device-input",
+              "report_id_hex": "36",
+              "count": 31
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "10",
+              "count": 2
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "11",
+              "count": 1
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "12",
+              "count": 39
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "13",
+              "count": 4
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "15",
+              "count": 8
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "16",
+              "count": 46
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "17",
+              "count": 41
+            },
+            {
+              "direction": "host-output",
+              "report_id_hex": "1a",
+              "count": 4
+            }
+          ],
+          "selected_reports": [
+            {
+              "relative_ns": 124605722,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 124647097,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 543159722,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 543175847,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 559206264,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 559221139,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 574586514,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 575689097,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 577041847,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 577055222,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 578259306,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 578270722,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 579614181,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 579625681,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 581013847,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 581036097,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 581091722,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 581101514,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 583595514,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 583606472,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 596892222,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 596905931,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 729973931,
+              "direction": "host-output",
+              "hex": "120031"
+            },
+            {
+              "relative_ns": 729990847,
+              "direction": "device-input",
+              "hex": "310000966480"
+            },
+            {
+              "relative_ns": 754291847,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 754301764,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 782875597,
+              "direction": "device-input",
+              "hex": "2200001300"
+            },
+            {
+              "relative_ns": 784238264,
+              "direction": "device-input",
+              "hex": "2200001a00"
+            },
+            {
+              "relative_ns": 785622931,
+              "direction": "host-output",
+              "hex": "1604b000300101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 785641847,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 786874597,
+              "direction": "host-output",
+              "hex": "1604b0000009020000710100aa006400000000000000"
+            },
+            {
+              "relative_ns": 786884972,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 788264847,
+              "direction": "host-output",
+              "hex": "1604b0001a0263030000000000000000000000000000"
+            },
+            {
+              "relative_ns": 788278556,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 789660056,
+              "direction": "host-output",
+              "hex": "1604b000330101000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 789676847,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 790917139,
+              "direction": "host-output",
+              "hex": "1604b000300108000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 790927431,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 792280347,
+              "direction": "host-output",
+              "hex": "120036"
+            },
+            {
+              "relative_ns": 792293347,
+              "direction": "device-input",
+              "hex": "3600007bea0fffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 817105389,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 817123972,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 832640264,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 832660639,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 833992806,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 834154014,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 835479514,
+              "direction": "host-output",
+              "hex": "1704a400fe0002"
+            },
+            {
+              "relative_ns": 835487806,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 838113097,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 838123931,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 838127681,
+              "direction": "host-output",
+              "hex": "1704a600fe0002"
+            },
+            {
+              "relative_ns": 838136514,
+              "direction": "device-input",
+              "hex": "210000f700fe00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 868753639,
+              "direction": "host-output",
+              "hex": "1501"
+            },
+            {
+              "relative_ns": 868769097,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 868771597,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 870169514,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 870179472,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 879630764,
+              "direction": "host-output",
+              "hex": "120530"
+            },
+            {
+              "relative_ns": 879640014,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 1731485681,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 1731502723,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 1732854181,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 1732869973,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 1734215640,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 1734225473,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4402083641,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4403372682,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4403385474,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4404724766,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4404738182,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4406115891,
+              "direction": "host-output",
+              "hex": "120430"
+            },
+            {
+              "relative_ns": 4406133391,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4407468224,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4407480474,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4408834766,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4408847724,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 4410241141,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4410264724,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 4411382474,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 4411396349,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 4412729766,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 4412737766,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 4414072182,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 4414083557,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 4414085891,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4415162891,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4415172641,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4416522432,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4416542724,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4442898099,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4442928932,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4456829307,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4456851349,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4471204141,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4471235641,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 4491596224,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 4491619599,
+              "direction": "device-input",
+              "hex": "34000080800000000300000000000000000000000000"
+            },
+            {
+              "relative_ns": 4511402516,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 4511428058,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 5695656016,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 5695677100,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 5695679891,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 5696974350,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 5696983641,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8643339226,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8643358184,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420000000000000000000000000"
+            },
+            {
+              "relative_ns": 8644705559,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8644720684,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8646111393,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8646122684,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8703078768,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8704418726,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8704440018,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8705727893,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8705741310,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8707000643,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8707016185,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8708350060,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8708359018,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 8709724518,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 8709741935,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8711003351,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 8711010643,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 8730965518,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 8731004726,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 8731007810,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 8732088393,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 8732103018,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 12734098478,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 12734119020,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12735466145,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 12735480520,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 12736850853,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 12736863186,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 13004787228,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 13006191145,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 13006208270,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16830105022,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16830122063,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16830128272,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16830138813,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16831477355,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16831488272,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16831492855,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16831497897,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16835456772,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16835469688,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 16835473188,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16835483813,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16836583230,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16836602438,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16837727230,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16837741980,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16839005938,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16839020272,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16840365022,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16840377230,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620000500000000000000000000"
+            },
+            {
+              "relative_ns": 16841720438,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16841731272,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16843056480,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16843072022,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16843082897,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16844446647,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16844453980,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16844457188,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16844470397,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16844473105,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16845813397,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16845824230,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16845830272,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16845842147,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16847124938,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16847134438,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16862527813,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16862539355,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16862542522,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16862554355,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16863939605,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16863963397,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16863968397,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16863970688,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16865348438,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16865360980,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16865363605,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16865367022,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16866508980,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16866521397,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16867868688,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16867880647,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16869223397,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16869233480,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16870336188,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16870346313,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16871737397,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16871756147,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16873128230,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16873145063,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16873147772,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16873150480,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16873159897,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16874292522,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16874300938,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16874309855,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16874315855,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16875663105,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16875674355,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16877017147,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16877028188,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16885921938,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16885933688,
+              "direction": "device-input",
+              "hex": "340000ffffffffffffffffffffffffffffffffffffff"
+            },
+            {
+              "relative_ns": 16885937563,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16885944230,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16887029772,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16887044647,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16888436605,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16888450230,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16889809855,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16889820522,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16891001105,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16891014563,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16892360480,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16892371813,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16893734897,
+              "direction": "host-output",
+              "hex": "1604a600fe0104000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16893755063,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16893767188,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16893771063,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16893777647,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16895058938,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16895076647,
+              "direction": "device-input",
+              "hex": "200000120000c0"
+            },
+            {
+              "relative_ns": 16895080480,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16895084647,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16895091480,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16896439855,
+              "direction": "host-output",
+              "hex": "120034"
+            },
+            {
+              "relative_ns": 16896447772,
+              "direction": "device-input",
+              "hex": "34000000000080808200000000000000000000000000"
+            },
+            {
+              "relative_ns": 16896451772,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16896460647,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16915113147,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16915123688,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16915127188,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16915137063,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a420040500000000000000000000"
+            },
+            {
+              "relative_ns": 16916480147,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16916495105,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16916507730,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16916512147,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16916514730,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16916518688,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16917854480,
+              "direction": "host-output",
+              "hex": "1604a400fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16917863855,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 16917868438,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16917872147,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16919164688,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16919174355,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16920275230,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16920291063,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16921649647,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16921666938,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 16922906605,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16922925980,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16924267605,
+              "direction": "host-output",
+              "hex": "1500"
+            },
+            {
+              "relative_ns": 16924279063,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 16924281813,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16924284813,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 16924294522,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16925675438,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 16925684230,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 16925686772,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16925700355,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16926986980,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 16927009105,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 16928397188,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 16928416855,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 18834160981,
+              "direction": "host-output",
+              "hex": "1604a400f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 18834193564,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 21183744399,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 21183779732,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21185167899,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21185190440,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21186280232,
+              "direction": "host-output",
+              "hex": "1604a600fb0100000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 21186293982,
+              "direction": "device-input",
+              "hex": "2200001600"
+            },
+            {
+              "relative_ns": 21187635940,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 21187647649,
+              "direction": "device-input",
+              "hex": "2100005000fa0000a620040500000000000000000000"
+            },
+            {
+              "relative_ns": 21609033982,
+              "direction": "device-input",
+              "hex": "200000100000c0"
+            },
+            {
+              "relative_ns": 21610115857,
+              "direction": "host-output",
+              "hex": "120030"
+            },
+            {
+              "relative_ns": 21610128482,
+              "direction": "device-input",
+              "hex": "300000"
+            },
+            {
+              "relative_ns": 25279619942,
+              "direction": "host-output",
+              "hex": "1704a400fa0006"
+            },
+            {
+              "relative_ns": 25279642942,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25280991859,
+              "direction": "host-output",
+              "hex": "1604a600f00155000000000000000000000000000000"
+            },
+            {
+              "relative_ns": 25281006901,
+              "direction": "device-input",
+              "hex": "2200001607"
+            },
+            {
+              "relative_ns": 25282280609,
+              "direction": "host-output",
+              "hex": "1704a600fa0006"
+            },
+            {
+              "relative_ns": 25282292942,
+              "direction": "device-input",
+              "hex": "210000f700fa00000000000000000000000000000000"
+            }
+          ],
+          "nunchuk_status_resume": {
+            "status_relative_ns": 4402083641,
+            "status_hex": "200000120000c0",
+            "mode_hex": "120030",
+            "mode_delay_ns": 1289041,
+            "data_delay_after_mode_ns": 12792,
+            "data_hex": "300000"
+          }
+        },
+        "sdl_extension_connected_debug_observed": true,
+        "driver_origin_limit": "Host-output is aggregate bound-kernel/SDL/explicit owned raw probe; per-packet actor not asserted. Device-input records successful own UHID writes, not consumer/physical delivery.",
+        "phase_clock_limit": "Report clock CLOCK_MONOTONIC nanoseconds; phase marker after300ms service,10ms uptime quantization.",
+        "host_trace_scope": "Only own UHID fd frames captured, CREATE/identity events excluded. No real device input.",
+        "initial_claim_only": true
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Both Wii-enabled profiles initially claim owned HIDAPI then disconnect after Nunchuk attach, including the explicit repeated-application-commit control. Actual-default evdev control remains connected. Trace shows host0x12 within milliseconds after status and immediately resumed DATA, with register replies/ACKs continuing; DATA-pause deadlock is not supported by this run. Pinned SDL HandleStatus resets mode then marks extension changes disconnected to reinitialize; this host path matches debug/status/connection observations. No successful sustained HIDAPI reopen established or exact per-packet host actor asserted. MP activation and explicit deactivation writes/ACK/status sequences captured; no model change, invented cadence or physical acceptance."
+  }
+}
