@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 115)
+        self.assertEqual(len(claims), 119)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -63,3 +63,20 @@ class WiiLedger(unittest.TestCase):
                              'wii-remote' if claim_id.startswith('wii-gap-') else 'dualsense', claim_id)
             self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
             self.assertFalse(claim['experiments'], claim_id)
+
+    def test_dolphin_consumer_claims_are_source_only(self):
+        root = Path(__file__).resolve().parents[1]
+        claim_dir = root / 'records/claim'
+        ids = [
+            'wii-gap-dolphin-hidapi-kernel-binding-competition',
+            'wii-gap-dolphin-real-remote-path-separation',
+            'wii-gap-dolphin-controllerinterface-motionplus-calibration-gate',
+            'wii-gap-dolphin-emulated-motionplus-modes-passthrough',
+        ]
+        for claim_id in ids:
+            claim = json.loads((claim_dir / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
+            self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)

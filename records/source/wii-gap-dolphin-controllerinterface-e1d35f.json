@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-controllerinterface-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/InputCommon/ControllerInterface/Wiimote/WiimoteController.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "913f784fa3c6313b0d3ed025a2a9a6fe295717d308ede18985f1250f5115a960",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 449-605 active MotionPlus detection/activation/calibration; 846-877 extension ID; 1049-1070 mode write; 1150-1207 and 1352-1470 decode/calibration. No upstream prose or code reproduced."
+}
