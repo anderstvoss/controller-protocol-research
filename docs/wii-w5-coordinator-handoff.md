@@ -1,5 +1,11 @@
 # Coordinator handoff — W5 Wii gyro diagnosis, SDL/kernel/Dolphin boundaries
 
+## Status after W5 — research #35 (merged as `70606d9`)
+
+[Research #35](https://github.com/anderstvoss/controller-protocol-research/pull/35) and the merged [W5 gyro diagnosis](wii-w5-gyro-diagnosis.md) now contain actual host evidence, superseding the *unrun* test-state assumptions below. **H3 passed:** emitted 14-bit gyro fields decode to the driven vectors; the discriminator, validity and slow-rate flags are correct, and mode-05 Nunchuk/gyro alternation has no recorded errors. **Kernel evdev gyro passed:** with the MotionPlus input FD held, A600FE modes 04/05 mapped and ABS_RX/RY/RZ followed the driven rotations. **SDL 3.2.10 remains blocked:** both holder and control arms reported zero gyro events; open-time reset/ownership is consistent with the source and public traces, but SDL's private cached mode was **not** instrumented, and some arms disconnected or lacked enabled gyro capability. **Dolphin direct-input sanity runs remain blocked at the raw-access/backend connection stage:** no direct backend I/O or numeric gyro output was established.
+
+**Observed verdict-matrix outcome:** **“H3 valid, kernel MP evdev shows changing gyro, SDL zero.”** This is virtual-host evidence for the tested Linux/SDL/virtual-device tuple, not a universal SDL failure, a physically verified Wii Remote behavior, or proof of a single internal cause. The remaining handoff is retained as the pre-run reasoning and diagnostic plan. Do not promote any claim beyond #35's scoped conclusions.
+
 **Audience:** coordinating agent managing Wii Remote W5; this is a *research handoff*, not an instruction to write protocol code or change host configuration.
 **Research repo:** `anderstvoss/controller-protocol-research`; parent source analysis [wii-gyro-investigation.md](wii-gyro-investigation.md); new follow-up [wii-gyro-consumer-paths-and-variants.md](wii-gyro-consumer-paths-and-variants.md).
 **Virtualgamepad:** `anderstvoss/virtualgamepad` is **read-only for this cloud research lane**. W5's authoritative [issue #158 coordinator instruction](https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6373947878) already exists; **do not replace, overwrite or broaden it**. Anders controls merging code and research PRs.

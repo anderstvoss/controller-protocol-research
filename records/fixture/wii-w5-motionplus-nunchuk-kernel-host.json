@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-motionplus-nunchuk-kernel-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w5-motionplus-nunchuk-kernel-host.json",
+  "sha256": "54e14f67f9150792e5146c8b4f720f90d5c2929520556928832d4b2efcff4444",
+  "sources": [
+    "wii-w5-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w5-motionplus-nunchuk-kernel-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed owned-only summaries and reduced selected protocol transactions to semantic addresses/data/read lengths with relative monotonic timestamps. Omitted identities, paths, wall clocks, raw input/output bytes and debug stderr. Private artifact SHA256 8471eb0bd93197e5de33fb854f986807b411707d679e6f3543e4a56744c0deca; private shared own-virtual trace SHA256 7c1f74e6de1094e24fc2448d792fc09065ebb71ade86be6ab4ab7ea8bfd40557. Public API boundaries are not direct InitDevice/cached-mode instrumentation. No upstream source copied.",
+  "claims": []
+}

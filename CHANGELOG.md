@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add W5 unchanged-model MotionPlus gyro diagnosis: verified active packet decoding/pass-through and kernel ABS gyro delivery before fresh SDL holder/control comparisons. Retain zero SDL gyro and disconnects, actor/readback ambiguity and private-mode instrumentation limits. Add original probes, semantic evidence reducers and deterministic tests; no prior records or protocol model changes.
+
 - Add pinned W4 SDL consumer-source no-reattach claims for3.2.10, latest3.4.18 and main; correct the MotionPlus-active downstream-change disconnect distinction. Record five60-second fixed-extension claim-held runs, selected controls/acceleration and LED intent; retain blocked zero gyro in both MotionPlus profiles. Add original probes and evidence-boundary tests without protocol or historical-record changes.
 
 - Record W3 unchanged-model SDL extension reinitialization diagnosis with timestamped virtual reports and explicit blocked sustained HIDAPI acceptance; attribute the W2 N1 global count delta to unrelated USB input entries while preserving its historical blocked status. Add original reproducible tracing tools and deterministic evidence tests; no claim promotion.

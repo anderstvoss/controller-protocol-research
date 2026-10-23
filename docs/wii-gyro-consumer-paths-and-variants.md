@@ -1,5 +1,7 @@
 # Wii MotionPlus: consumer paths, hardware generations, and W4/W5 discriminators
 
+**W5 update:** [Research #35](https://github.com/anderstvoss/controller-protocol-research/pull/35) and [W5 gyro diagnosis](wii-w5-gyro-diagnosis.md) report valid H3 packets and changing kernel MotionPlus evdev gyro but zero SDL gyro events in holder/control arms; Dolphin direct-backend sanity remains blocked (no private cached-mode instrumentation or physical parity).
+
 **Status:** source-only research addendum to [Wii gyro investigation](wii-gyro-investigation.md), not a new hardware or application acceptance result. Source pins: SDL 3.2.10 `877399b2b2cf21e67554ed9046410f268ce1d1b2`; Linux `v6.12` (and mainline `734bef548a96e8774d6eef5dfa2026c6edc4e80b` in parent document); Dolphin `e1d35f666cc35f6ead55d32ea2679df44d04da72`. Dolphin and Linux are GPL-licensed, so **only independently worded behavioral summaries and source/line locators** are published. No raw reports, upstream code/prose, host identities or private captures. The [existing W5 executing-agent brief](https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6373947878) controls physical runs, changes and merge boundaries.
 
 ## A. Identify the consumer before diagnosing zero gyro

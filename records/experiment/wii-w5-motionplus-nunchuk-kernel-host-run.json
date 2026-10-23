@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-motionplus-nunchuk-kernel-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w5-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w5-motionplus-nunchuk-kernel-host"
+  ],
+  "procedure": "Original tools/wii_w5 on unchanged baseline. Exact-owned virtual identity and child nodes verified. Human local grant confirmation and access recheck before go. Kernel/H3 two20second arms first, actual active packet gate verified before fresh SDL controls/holders. Fixed profile attached before open, explicit nonneutral drive. Holder event FD opened before SDL and held until shutdown; control has no explicit MP event holder. Direct raw probes bracket public SDL APIs and during drive. Provider/syscall trace identifies observed raw writers where unique; unmatched stays kernel_or_untraced. After all six children, close twice and verify owned HID/raw gone. No agent grants or host policy change.",
+  "semantic_outcome": "Kernel-only motionplus-nunchuk: owned MotionPlus evdev holder produces changing ABS_RX/RY/RZ with expected raw-center/slow-scale extrema. Active mode04/05 packets decode both driven vectors, flags valid, and Nunchuk pass-through alternates. No SDL initialization or physical acceptance."
+}
