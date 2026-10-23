@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-nunchuk-six-byte-input",
+  "statement": "Pinned Nunchuk subpage describes six extension bytes from register 0xA40008: byte 0 holds stick X, byte 1 stick Y, bytes 2–4 hold accelerometer X/Y/Z high eight bits, and byte 5 packs the three pairs of low accelerometer bits plus active-low C and Z buttons. Acceleration fields therefore form three 10-bit quantities; the byte layout is stated after decryption.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Nunchuck > Data Format. Source-only, not a physical acceptance result. Compare wii-c5-extension-packing and WiiBrew MotionPlus pass-through: extension bytes are not interchangeable when MotionPlus is active."
+  },
+  "sources": [
+    "wii-gap-wiibrew-nunchuck-oldid121320"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
