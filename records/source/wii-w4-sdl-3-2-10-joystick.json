@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-3-2-10-joystick",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/hidapi/SDL_hidapijoystick.c",
+  "revision": "877399b2b2cf21e67554ed9046410f268ce1d1b2",
+  "sha256": "d1c856062614c2b2b9360b68637d99a0fd231081b2e6b0e6740ed196cb0d7a77",
+  "lineage": "sdl-hidapi",
+  "locator": "Consumer source only: SDL_hidapijoystick.c; label 3.2.10. Independently read/hash checked; no upstream code or excerpts redistributed. Detailed function/line locators in docs/wii-w4-sdl-fixed-extension.md. No physical or newer-runtime acceptance."
+}

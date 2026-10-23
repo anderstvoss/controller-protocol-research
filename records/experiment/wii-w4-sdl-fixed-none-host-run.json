@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-fixed-none-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w4-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w4-sdl-fixed-none-host"
+  ],
+  "procedure": "On unchanged mainabb94e2 create one exact-owned Bluetooth UHID Wii device, verify ancestry/bus/phys/raw parent/LEDs. Anders applies5 local temporary grants and confirms; agent rechecks. Before each fresh SDL child, attach fixed configuration and service2seconds. No attachment changes during child. Enable Wii hints/default filter, exact-owned raw path only. Drive inputs for60second post-open window; poll joystick connection/controls/sensors, request player indices1 then2 at30seconds and record retained LED intent. Sequential profiles share kernel device; SDL processes close between cases. Close twice after5cases, verify owned HID/raw gone. No agent grants/root/unbind/persistent policy.",
+  "semantic_outcome": "Fixed-before-open none profile:60second owned HIDAPI claim held with no disconnect/removal, input button changes and retained LED intent observed. Core accelerometer varies. No hotplug, calibrated numeric mapping, firmware cadence, physical delivery or full controller acceptance."
+}

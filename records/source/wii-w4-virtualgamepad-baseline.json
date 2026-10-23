@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-virtualgamepad-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/abb94e226f77eab24b391b24fd181e71daad421f/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "abb94e226f77eab24b391b24fd181e71daad421f",
+  "sha256": "9841e457f2da39cb24ba4904b38eeaf3e829b44f94e27749acaae72e43e7d70d",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged main after W3 merge, interim Game Pad descriptor, no model changes during W4 fixed-before-open SDL run. Original tools/wii_w4 and existing tools/wii_w3/trace.c; no physical reference."
+}
