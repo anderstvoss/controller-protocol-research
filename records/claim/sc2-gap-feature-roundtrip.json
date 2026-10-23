@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-feature-roundtrip",
-  "statement": "Steam C6 source-backed claims steam-c6-feature-kernel-exchange, steam-c6-feature-registration, steam-c6-feature-kernel-lizard, steam-c6-feature-sdl-lizard and steam-c6-feature-imu now document consumer-specific open/settings commands with synthetic request and structural reply examples. Actual device GET data, physical SET acknowledgement and stateful persistence, undocumented feature2 on direct wired hardware, timeout behavior in a live host, and descriptor-dependent lengths remain unverified.",
+  "statement": "Steam C6 source-backed claims steam-c6-feature-kernel-exchange, steam-c6-feature-registration, steam-c6-feature-kernel-lizard, steam-c6-feature-sdl-lizard and steam-c6-feature-imu now document consumer-specific open/settings commands with synthetic request and structural reply examples. Actual device GET data, physical SET acknowledgement and stateful persistence, undocumented feature2 on direct wired hardware, timeout behavior in a live host, and descriptor-dependent lengths remain unverified. Mid-session kernel lizard/IMU exceptions are now documented in steam-c6-kernel-menu-hold-450ms, steam-c6-kernel-ibex-evdev-open-close, and steam-c6-kernel-client-raw-forward; rumble host pacing in steam-c6-sdl-rumble-resend-40ms and steam-c6-kernel-rumble-coalesce-20hz. Source-derived paths do not establish physical feature replies or device-side timing.",
   "status": "inferred",
   "applicability": {
     "controller": "steam-controller-2026",

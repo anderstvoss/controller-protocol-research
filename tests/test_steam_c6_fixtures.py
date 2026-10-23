@@ -1,6 +1,7 @@
 """Synthetic Steam Controller 2026 wired host-consumer frames, not captures."""
 import hashlib
 import json
+import struct
 import unittest
 from pathlib import Path
 
@@ -24,6 +25,12 @@ LENGTHS = {
     "output-lfo-83": 10,
     "output-sweep-84": 9,
     "output-script-85": 4,
+    "output-rumble-80-fields": 10,
+    "output-pulse-81-fields": 8,
+    "output-command-82-fields": 4,
+    "output-lfo-83-fields": 10,
+    "output-sweep-84-fields": 9,
+    "output-script-85-fields": 4,
     "feature-serial-get": 64,
     "feature-attrs-get": 64,
     "feature-lizard-enable-map": 64,
@@ -41,6 +48,12 @@ OUTPUT_IDS = {
     "output-rumble-80": 0x80, "output-pulse-81": 0x81,
     "output-command-82": 0x82, "output-lfo-83": 0x83,
     "output-sweep-84": 0x84, "output-script-85": 0x85,
+    "output-rumble-80-fields": 0x80,
+    "output-pulse-81-fields": 0x81,
+    "output-command-82-fields": 0x82,
+    "output-lfo-83-fields": 0x83,
+    "output-sweep-84-fields": 0x84,
+    "output-script-85-fields": 0x85,
 }
 COMMANDS = {
     "feature-serial-get": [1, 0xAE, 0x15, 1],
@@ -133,6 +146,214 @@ class SteamC6Fixtures(unittest.TestCase):
         self.assertEqual(fixture("reply-attributes-empty")[2][:5], bytes([1, 0x83, 2, 0, 0]))
         self.assertEqual(fixture("reply-attributes-short")[2], bytes([1, 0x83, 1]))
         self.assertFalse((ROOT / "fixtures/steam-c6-feature2-wired.hex").exists())
+
+    def test_haptic_distinct_field_offsets(self):
+        """Decode every output field, not merely ID/length; catches swapped offsets."""
+        expected = {
+            "output-rumble-80-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    128
+                ],
+                "type": [
+                    1,
+                    "B",
+                    1
+                ],
+                "intensity": [
+                    2,
+                    "H",
+                    4660
+                ],
+                "left_speed": [
+                    4,
+                    "H",
+                    22136
+                ],
+                "left_gain": [
+                    6,
+                    "b",
+                    21
+                ],
+                "right_speed": [
+                    7,
+                    "H",
+                    39612
+                ],
+                "right_gain": [
+                    9,
+                    "b",
+                    37
+                ]
+            },
+            "output-pulse-81-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    129
+                ],
+                "side": [
+                    1,
+                    "B",
+                    2
+                ],
+                "on_us": [
+                    2,
+                    "H",
+                    4660
+                ],
+                "off_us": [
+                    4,
+                    "H",
+                    17767
+                ],
+                "repeat_count": [
+                    6,
+                    "H",
+                    30874
+                ]
+            },
+            "output-command-82-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    130
+                ],
+                "side": [
+                    1,
+                    "B",
+                    1
+                ],
+                "command": [
+                    2,
+                    "B",
+                    2
+                ],
+                "gain_db": [
+                    3,
+                    "b",
+                    3
+                ]
+            },
+            "output-lfo-83-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    131
+                ],
+                "side": [
+                    1,
+                    "B",
+                    1
+                ],
+                "gain_db": [
+                    2,
+                    "b",
+                    2
+                ],
+                "frequency": [
+                    3,
+                    "H",
+                    4660
+                ],
+                "duration_ms": [
+                    5,
+                    "H",
+                    9029
+                ],
+                "lfo_frequency": [
+                    7,
+                    "H",
+                    13398
+                ],
+                "lfo_depth": [
+                    9,
+                    "B",
+                    5
+                ]
+            },
+            "output-sweep-84-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    132
+                ],
+                "side": [
+                    1,
+                    "B",
+                    2
+                ],
+                "gain_db": [
+                    2,
+                    "b",
+                    3
+                ],
+                "duration_ms": [
+                    3,
+                    "H",
+                    4660
+                ],
+                "start_frequency": [
+                    5,
+                    "H",
+                    9029
+                ],
+                "end_frequency": [
+                    7,
+                    "H",
+                    13398
+                ]
+            },
+            "output-script-85-fields": {
+                "report_id": [
+                    0,
+                    "B",
+                    133
+                ],
+                "side": [
+                    1,
+                    "B",
+                    1
+                ],
+                "script_id": [
+                    2,
+                    "B",
+                    2
+                ],
+                "gain_db": [
+                    3,
+                    "b",
+                    3
+                ]
+            }
+        }
+        for name, fields in expected.items():
+            rec, data, packet = fixture(name)
+            self.assertEqual(len(packet), LENGTHS[name])
+            self.assertNotEqual(packet[1:], bytes(len(packet) - 1))
+            self.assertTrue(rec["claims"])
+            self.assertEqual(len(fields), len(set(tuple(v) for v in fields.values())))
+            decoded = []
+            for field_name, (offset, fmt, wanted) in fields.items():
+                value = struct.unpack_from("<" + fmt, packet, offset)[0]
+                self.assertEqual(value, wanted, f"{name}.{field_name}@{offset}")
+                decoded.append(value)
+            self.assertEqual(len(set(decoded)), len(decoded), name)
+
+    def test_runtime_consumers_remain_source_only(self):
+        names = [
+            "sdl-rumble-resend-40ms", "sdl-sensor-4032us",
+            "kernel-rumble-coalesce-20hz", "kernel-menu-hold-450ms",
+            "kernel-ibex-evdev-open-close", "kernel-client-raw-forward",
+        ]
+        for name in names:
+            claim = read_claim(name)
+            self.assertEqual(claim["status"], "source_supported")
+            self.assertEqual(claim["applicability"]["controller"], "steam-controller-2026")
+            self.assertEqual(claim["applicability"]["transport"], "source_only")
+            self.assertFalse(claim["experiments"])
+            self.assertIn("No evidence", claim["statement"])
 
     def test_no_physical_promotion_or_invented_replies(self):
         for path in (ROOT / "records/claim").glob(PREFIX + "*.json"):

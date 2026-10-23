@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-sdl-sensor-4032us",
+  "statement": "The pinned SDL Triton consumer declares TRITON_SENSOR_UPDATE_INTERVAL_US=4032 microseconds and uses 1000000/4032 (about 248.016 Hz) as the advertised sensor update rate when opening the joystick. Its separate source comment says that the USB descriptor reports 1 kHz but actual sensing is about four milliseconds; this is SDL commentary, NOT a captured descriptor, verified sampling rate or hardware validation. SDL driver lines 40-41,570-582. Measured direct-wired sensor cadence and USB descriptor evidence: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 or SDL Triton 6defbc0 host-source pin; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired USB 28de:1302 source-derived consumer expectation only. All timings are host scheduling assumptions or source comments; physical measurement: No evidence."
+  },
+  "sources": [
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
