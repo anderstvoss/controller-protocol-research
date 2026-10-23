@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-sdl-after-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w2-sdl-after-host.json",
+  "sha256": "4bac304a5c2bd7d5fb6d8c71c93db25e40fa17977204bfac1013b4b3e8bfbdf7",
+  "sources": [
+    "virtualgamepad-wii-w2-after",
+    "wii-w1-sdl-3-2-10",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w2-sdl-after-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original private result JSON; omitted raw logs, grant metadata, paths, identities and process values. Original result SHA256: 6925a997f36a23c7a6d268195d49d5d2a9e9a65aa1a420e4f3c4d6bb333ebb20, b22a3450f645743a49eaf71d914cdfa32ac9658df904a668b3830ed2dbc0d37e. LED original SHA256: b3cd937289a4a814e749b8d6db9d178c1339c36f58ce747ad0ba14adcdfe46d2. Source/executable hashes retained. Not physical evidence or replacement of W1 records.",
+  "claims": []
+}

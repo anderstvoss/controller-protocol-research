@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-interim-functional-descriptor",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/wii-w2-interim-functional-descriptor.hex",
+  "sha256": "527ef7210b1dcdefa86d34177aadfa1406fe7047c9731a92d3ae9ac563f72973",
+  "sources": [
+    "virtualgamepad-wii-w2-after"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": "Authored local virtual descriptor exported from the owned W2 UHID. Generic Desktop/Game Pad collection added independently, vendor fields/report bytes retained. Not a physical capture, retail descriptor, or derivation from an unlicensed candidate. Historical C5 fixture unchanged.",
+  "claims": []
+}

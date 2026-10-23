@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-bt-n1-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w2-bt-n1-host.json",
+  "sha256": "84e127b3c6443f34a18063b8b7c07372713bb8401dce13c55cd82771b17e0744",
+  "sources": [
+    "virtualgamepad-wii-w2-runner"
+  ],
+  "experiments": [
+    "wii-w2-bt-n1-host-run"
+  ],
+  "parent": null,
+  "transform": "Removed wall-clock value and any transient node paths; anonymized host label. Retained all monotonic stages, missing-stage reasons, resources and raw-run SHA256 plus independently hashed same executable. Virtual-only measurements, no physical data.",
+  "claims": []
+}

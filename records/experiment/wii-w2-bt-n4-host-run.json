@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-bt-n4-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-w2-runner"
+  ],
+  "fixtures": [
+    "wii-w2-bt-n4-host"
+  ],
+  "procedure": "After both granted comparison devices closed, build locked xtask on clean PR head07e42cb49dd3840dbe37017ad86263114d8c15d8, copy executable, run unchanged acceptance for virtualgamepad.wii-remote/linux.uhid.bluetooth,10cycles at concurrency4. Same hashed executable for N1/N4; all N sessions coexist before removal, first cycle cold, later warm. No SDL probe requested and no host-policy changes. Compare historical C5#17 without relabeling.",
+  "semantic_outcome": "40 clean-head creation/removal samples, no operation errors; owned node disappearance observed. Global resource baseline restored=True; exact before/after counts retained. All global counts matched in this run. Fresh harness nodes have no transferred human grants; missing consumer-open/first-neutral/SDL-ready stages remain explicit. Historical C5#17 is a separate revision/run; comparison is descriptive, not a final-release timing budget, causal improvement claim or whole-controller acceptance."
+}
