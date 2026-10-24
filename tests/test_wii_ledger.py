@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 119)
+        self.assertEqual(len(claims), 131)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -80,3 +80,29 @@ class WiiLedger(unittest.TestCase):
             self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
             self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
             self.assertEqual(claim['experiments'], [], claim_id)
+
+    def test_additional_wii_software_consumers(self):
+        root = Path(__file__).resolve().parents[1]
+        ids = [
+            'wii-gap-consumer-xwiimote-driver-evdev-interface',
+            'wii-gap-consumer-xwiishow-gyro-normalization',
+            'wii-gap-consumer-cemu-hidapi-nintendo-enumeration',
+            'wii-gap-consumer-cemu-motionplus-self-activation',
+            'wii-gap-consumer-cemu-gyro-decode-path-limits',
+            'wii-gap-consumer-retroarch-udev-sensor-sibling-limitation',
+            'wii-gap-consumer-wiiuse-bluez-l2cap-linux',
+            'wii-gap-consumer-cwiid-bluez-l2cap-linux',
+            'wii-gap-consumer-antimicrox-sdl-general-input',
+            'wii-gap-consumer-xwiimote-ng-kernel-fork',
+            'wii-gap-consumer-wiimotelib-windows-hid',
+            'wii-gap-consumer-wiinupro-windows-bluetooth',
+        ]
+        self.assertEqual(len(ids), 12)
+        for claim_id in ids:
+            claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)
+            self.assertTrue(claim['sources'], claim_id)

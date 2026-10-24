@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-hidapi-nintendo-enumeration",
+  "statement": "Pinned Cemu's Wiimote HIDAPI backend uses SDL3 HID enumeration for Nintendo vendor 0x057e and accepts product 0x0306 or 0x0330, excluding an explicit Wii U Pro product string, then opens the path nonblocking for native Wii HID I/O. The HIDAPI filter does not expressly require a physical Bluetooth connection or check bus type; a matching accessible UHID-Bluetooth hidraw endpoint is a candidate even while hid-wiimote binds, but this does not prove Cemu can initialize it. A uinput-only event device cannot satisfy HIDAPI enumeration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; Cemu 29f2f1f; HidapiWiimote.cpp 5-46, WiimoteControllerProvider.cpp 178-200. SDL3 HIDAPI and Linux permissions are required; possible kernel register contention."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

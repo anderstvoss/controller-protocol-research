@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-wiimotelib-windows-hid",
+  "statement": "Pinned WiimoteLib (.NET) enumerates Windows HID device interfaces using SetupDi and HidD, opens Windows device paths, and matches Nintendo device attributes. It consumes a Windows HID stack endpoint rather than Linux hidraw, evdev or BlueZ L2CAP; neither current Linux realization directly satisfies this backend. Its availability as a Windows reference does not imply that its protocol or calibration model is equivalent to Linux hid-wiimote.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; WiimoteLib 34516b5 Wiimote.cs 128-259; Windows only, no host test."
+  },
+  "sources": [
+    "wii-gap-consumer-wiimotelib-windows"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

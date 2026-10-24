@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-xwiimote-ng-kernel-fork",
+  "statement": "The surveyed xwiimote-ng fork retains xwiimote's userspace event-interface architecture on Linux, including XWII_IFACE_MOTION_PLUS and evdev opens. As a related maintained or modernized fork it may provide a second integration baseline, but it is not an independent raw Wii HID MotionPlus decoder and shares the hid-wiimote dependency. Runtime and exact compatibility with the existing xwiimote ABI were not verified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; xwiimote-ng fecc8db lib/core.c; source-derived fork architecture, not a separate physical protocol proof."
+  },
+  "sources": [
+    "wii-gap-consumer-xwiimote-ng-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
