@@ -55,6 +55,10 @@ class ControllerRegistry(unittest.TestCase):
         # Retain the original zero-evidence regression after adding the Wii ledger.
         for path in (self.root / 'records/claim').glob('wii-*.json'):
             path.unlink()
+        # Audio claims about the Wii Remote cite the removed Wii claims; drop
+        # them too so this corpus still has no Wii Remote claims at all.
+        for path in (self.root / 'records/claim').glob('audio-wii-*.json'):
+            path.unlink()
         # Remove fixture references with their claims in this isolated corpus.
         for path in (self.root / 'records/fixture').glob('wii-c5-*.json'):
             path.unlink()

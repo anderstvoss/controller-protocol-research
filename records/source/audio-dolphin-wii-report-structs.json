@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-dolphin-wii-report-structs",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteCommon/WiimoteReport.h",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "fbfba58282be6a388a49a394f987f3ce4b953bbf94eb5bac40dfb2b877c369fc",
+  "lineage": "dolphin",
+  "locator": "68-78 speaker enable/mute, 149-159 0x18 report packed length and 20-byte data, common rumble bit."
+}

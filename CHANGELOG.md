@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Research Wii Remote in-band speaker for post-alpha planning: pin Dolphin real-Wiimote forwarding/pacing, emulated speaker control/registers, signed PCM/Yamaha ADPCM decoder and rate, plus Linux hid-wiimote consumer exclusion. Cross-reference the three existing WiiBrew claims, record Dolphin/WiiBrew ADPCM volume-range discrepancy and maintain an explicitly not-run physical lab plan. No wii-* claims edited, no implementation, no physical promotion.
+
 - Document source-scoped controller audio exclusions: xpad Xbox 360 no headset PCM path, Xbox Series xpad explicitly disabling GIP audio interface, Nintendo/SDL Switch Pro rumble distinct from audio, and Steam Controller 2026 audio endpoint unknown. No claims about physical absence and no existing SC2 gap record changes.
 
 - Add pinned Sony audio consumer research: DualSense HID route/levels/mute/preamp fields and USB/BT framing, ALSA UCM routing, maintainer-documented physical UAC1 and headphone/grip observations, DS4 SDL/kernel distinctions, explicit unanswered Bluetooth/DS4 audio questions, and the kernel's USB jack-detect driven routing. No controller implementation or physical-status promotion.

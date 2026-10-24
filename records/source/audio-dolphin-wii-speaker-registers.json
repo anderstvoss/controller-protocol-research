@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-dolphin-wii-speaker-registers",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/Speaker.h",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "849d8eea4ed11d51cf53818a3f85ac7f4c6aa3f96618f4bef26f33699467ec7b",
+  "lineage": "dolphin",
+  "locator": "13-17 Yamaha decoder state; 25-28 speaker I2C slave/address; 39-65 format selectors/register positions; 70-78 state and config enable."
+}

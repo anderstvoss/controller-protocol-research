@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-speaker-register-model",
+  "statement": "Dolphin's emulated speaker registers live on its I2C slave address 0x51, corresponding to host-visible speaker memory area A2, with sample write at relative offset 0x00, format selector at 0x02 (0x00 ADPCM, 0x40 signed PCM), little-endian divisor at 0x03-0x04 and volume at 0x05. Speaker enable from Dolphin's host setting gates emulated mixer output. Arbitrary configuration memory writes update the packed register image, but Dolphin explicitly leaves unknown whether writing the finalization register activates new settings immediately; do not infer complete hardware startup semantics.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Speaker.h 25-65, Speaker.cpp 141-184 and WiimoteEmu.cpp 832. Agree on known A2 register fields with wii-gap-wiibrew-speaker-init-config-registers; not an independent proof of its complete initialization sequence."
+  },
+  "sources": [
+    "audio-dolphin-wii-speaker-registers",
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-emulated-controller",
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

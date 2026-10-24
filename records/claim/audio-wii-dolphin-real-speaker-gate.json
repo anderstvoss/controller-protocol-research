@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-real-speaker-gate",
+  "statement": "Dolphin real-Wiimote passthrough tracks output 0x14 speaker-enable bit 2 and 0x19 speaker-mute bit 2, plus the WiimoteEnableSpeaker configuration setting (default off). On incoming report 0x18 it forwards the encoded data only if that setting and report-state enable are on and the mute state is off. Otherwise it substitutes a rumble-only output while preserving the rumble bit. This is Dolphin's host forwarding policy, not evidence of which packets retail firmware accepts.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Real source WiimoteReal.cpp 168-205, 260-291 and 872-875; MainSettings.cpp 210-215. Agrees on report IDs/enable-mute bit with wii-gap-wiibrew-speaker-control-reports; no original WiiBrew records modified."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-core-e1d35f",
+    "audio-dolphin-wii-main-settings",
+    "audio-dolphin-wii-speaker-output-handler"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-pcm-adpcm-rate",
+  "statement": "Dolphin decodes speaker sample format 0x40 as signed 8-bit PCM expanded to 16-bit samples and format 0x00 as two 4-bit Yamaha ADPCM samples per encoded byte, rejecting other formats. For PCM it calculates nominal sample rate as 12,000,000 divided by the little-endian register divisor; for ADPCM it uses 6,000,000 divided by that divisor. A zero divisor or empty block exits without playback. Its mixer applies an additional output-rate conversion factor; these values describe Dolphin's emulation, not measured retail clock accuracy.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Speaker.cpp 63-105, 134-139. Agrees at format and divisor level with wii-gap-wiibrew-speaker-sample-formats-pacing; physical host pacing still unknown."
+  },
+  "sources": [
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-speaker-registers"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

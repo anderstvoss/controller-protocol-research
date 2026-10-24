@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-dolphin-wii-main-settings",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/Config/MainSettings.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "5a8fe19a5fc3c8a1c7547852b202a7e58401d7cc0c503266afcd1d17d0064d6f",
+  "lineage": "dolphin",
+  "locator": "210-215 WiimoteEnableSpeaker default false; 285-286 RealWiiRemoteRepeatReports default true; Wii Speak entries are unrelated USB peripheral."
+}
