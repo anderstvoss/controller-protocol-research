@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-steam-controller-2026-endpoint-unresolved",
+  "statement": "Existing independently reverse-engineered Triton source describes buffered audio-like haptic streaming with status and fill-level events. Its reviewed source records do not establish a physical speaker/microphone USB Audio Class interface, a verified host-output/audio endpoint, or captured waveform acceptance. Preserve sc2-gap-audio as inferred; unlike Xbox xpad or Switch HIDAPI, these data do not justify asserting audio is simply absent.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Corroborates the uncertainty boundary of existing claim sc2-gap-audio without modifying that claim. Source-only implementation hypotheses; no physical capture or consumer ALSA endpoint enumeration."
+  },
+  "sources": [
+    "sc2",
+    "sc2-src-haptics",
+    "sc2-src-dissector"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-antimicrox-sdl-general-input",
+  "statement": "Pinned AntiMicroX input daemon discovers and opens joysticks via SDL2 SDL_NumJoysticks/SDL_JoystickOpen and optionally GameController mapping rather than running its own Wii Remote report, MotionPlus activation or calibration. It can be an acceptance target for ordinary virtual buttons/axes when SDL makes either UHID or uinput realization visible, but should not be presented as an independent native Wii gyro protocol consumer.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; AntiMicroX b5fb594 inputdaemon.cpp 171-195,336-373,420-454,500-520; runtime SDL mapping and device type are unmeasured."
+  },
+  "sources": [
+    "wii-gap-consumer-antimicrox-sdl"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

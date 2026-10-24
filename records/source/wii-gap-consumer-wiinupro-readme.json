@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-wiinupro-readme",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/KeyPuncher/WiinUPro/blob/dc5700e9de2b1c1f0dc1fcaf284ec9077a9203f4/WiinUSoft/ReadMe.txt",
+  "revision": "dc5700e9de2b1c1f0dc1fcaf284ec9077a9203f4",
+  "sha256": "fd605112d2e09591ff187736daa0367821730e032cd2fac837df52179f5763ff",
+  "lineage": "KeyPuncher/WiinUPro",
+  "locator": "WiinUPro Microsoft Public License; Windows native Bluetooth & XInput remapping and supported controller families described in ReadMe section 1-65; not Linux UHID/evdev."
+}

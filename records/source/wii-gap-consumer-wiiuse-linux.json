@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-wiiuse-linux",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/os_nix.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "c2e3d4f73e57197bff387f16c741776fbe87ebacbb3c2cdc79a534e7e67e64c2",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "Wiiuse GPL-3.0 or later; BlueZ discovery 52-166; Linux AF_BLUETOOTH L2CAP control/interrupt sockets 182-254; no Linux hidraw connection in this pinned backend."
+}
