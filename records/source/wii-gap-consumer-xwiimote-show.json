@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-xwiimote-show",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/tools/xwiishow.c",
+  "revision": "4df713d9037d814cc0c64197f69e5c78d55caaf1",
+  "sha256": "e2d77c336dbb9cfbaa89039ab38609704aee5cd07a280e02acc6efd61e882add",
+  "lineage": "xwiimote/xwiimote",
+  "locator": "XWiimote MIT-like; show and toggle MP 662-768; auto open interfaces 2400-2406; hotplug 2605-2718."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-hidapi",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/hidapi/HidapiWiimote.cpp",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "f19fa1e8d4430af3a155ea1602c2439089b6a7c97e155d478da099501e8cfbdf",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0; SDL3 HID enumeration Nintendo 057e PIDs 0306/0330 5-9,28-48; product name pro exclusion 36; raw read/write 16-26."
+}
