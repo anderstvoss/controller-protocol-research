@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-alsa-ucm-roles",
+  "statement": "The pinned ALSA UCM DualSense profile configures four hardware playback and two hardware capture channels. Its HiFi split maps headphones to playback channels 0/1, internal mono speaker to playback channel 1, internal microphone to capture channel 0, and headset capture to channels 0/1; it treats speaker versus headphones and microphone versus headset as conflicting logical devices. It does not define the physical grip/haptic roles of playback channels 2/3.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Consumer routing configuration only; direct hardware channels are not evidence of audible outputs."
+  },
+  "sources": [
+    "audio-alsa-dualsense-hifi",
+    "audio-alsa-dualsense-usecase"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

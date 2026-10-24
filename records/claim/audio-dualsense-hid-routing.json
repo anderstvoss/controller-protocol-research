@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-hid-routing",
+  "statement": "In Linux's DualSense common effects block, validity byte offset 0 bit 7 gates the route selector in audio-control offset 7 bits 4-5. Selector 0 means stereo headphone L/R; 1 duplicates left into both headphones; 2 maps left to both headphone sinks and right to internal speaker; 3 routes right to speaker with both headphones muted. SDL names the corresponding common-block byte 7 audio-enable bits but does not encode or validate the selector in the cited effects path; no independent semantic corroboration. USB common block begins after report 0x02; Linux BT uses the same common struct in report 0x31.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Consumer source semantics and kernel routing intent only; SDL field-name agreement does not independently establish route interpretation."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

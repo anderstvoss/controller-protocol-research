@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-hid-levels",
+  "statement": "Linux's common output block has headphone level at offset 4 (documented 0..0x7f), speaker level at offset 5 (0..0xff) gated by valid_flag0 bit 5, and microphone level at offset 6 (0..0x40) gated by valid_flag0 bit 6. SDL gives those same three offsets field names, but its normal effects construction leaves them zero and does not exercise these validity flags. Headphone-level validity/behavior is not established by the cited kernel driver.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Common-block offsets; USB full-report offsets add 1; BT full-report offsets add 3 for Linux or 2 for SDL; no real-device level acceptance inferred."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
