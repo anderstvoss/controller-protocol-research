@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Anders requested the installed Cemu AppImage and performed/confirmed five fresh exact-owned temporary grants supplied locally. Identity and access reverified before go. No agent sudo, grant, unbind, persistent policy or game content.",
+  "config": {
+    "arm": "cemu-appimage",
+    "consumer_role": true,
+    "survey_claims_tested": [
+      "wii-gap-consumer-cemu-motionplus-self-activation"
+    ],
+    "profiles": [
+      "motionplus",
+      "motionplus-nunchuk"
+    ],
+    "kernel_holder": [
+      false,
+      true
+    ],
+    "seconds_per_arm": 35,
+    "original_probe_repeats": 4,
+    "byte_capture_repeats": 4,
+    "fresh_app_profile_per_arm": true,
+    "same_owned_uhid_across_arms": true,
+    "cold_device_isolation": false,
+    "drive_raw_pitch_roll_yaw": [
+      [
+        9000,
+        7000,
+        8500
+      ],
+      [
+        7000,
+        9000,
+        7800
+      ]
+    ],
+    "drive_period_ms": 250,
+    "slow_flags": [
+      true,
+      true,
+      true
+    ],
+    "caller_eeprom_image_imported": false,
+    "native_input_api": "Wiimote slot0; motion enabled",
+    "generic_sdl_wii_disabled": true,
+    "app_input_opens_allowed": "owned hidraw only; external holder opens exact MotionPlus evdev",
+    "bluetooth_radio_socket_guard": true,
+    "no_rom": true
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "840db2771cbcef83b50ee9355c7b6165b95f234a",
+    "cemu_commit": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+    "cemu_appimage_sha256": "8a5bba185de0a89211164ba72ae93cf11899d548e5b0bc9f5f7cd19874dfb377",
+    "cemu_extracted_executable_sha256": "079c87ccf057243f4ede135084ea6b73482cb13ca5823991b1556d7312ec3576",
+    "actual_host_probe_source_sha256": "2e3d9ba3655a68021e6e6739631cbbd21a409cfdf9bc5ded6a5989c5ac99f173",
+    "actual_host_probe_binary_sha256": "b185fa97a6c0b50917d477d1ecb13908cdf269ba47ae5e484ca810bab0daa87b",
+    "actual_capture_runner_sha256": "12e96b56953f7d26b970d7bf87ce4fedfa34febe81b2f5f67138211916227487",
+    "actual_guard_source_sha256": "9ed7db24b4f6e8ba38a3c29de127484bae2acaf981e0ed2bf36e1554280b43b0",
+    "actual_guard_binary_sha256": "26bc8a1a28026b65737c671f96517ad2339774a0c3d1d6c7a42f2a7fab4c1725"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "uinput_created": false,
+    "all_eight_app_instances_gone": true,
+    "extra_owned_children_termed": 0,
+    "app_term_after_observation_window": 8,
+    "app_force_kill_count": 0,
+    "idempotent_close": true,
+    "holders_closed_between_arms": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "arms": [
+          {
+            "case": "motionplus",
+            "kernel_holder": false,
+            "seconds_bound": 35,
+            "timeout": true,
+            "exit_code": 0,
+            "holder_bytes_drained": 0,
+            "native_profile_configured": true,
+            "sdl_wii_disabled": true,
+            "radio_guard": true,
+            "children_gone_before_next_arm": true,
+            "extra_owned_children_termed": 0,
+            "trace": {
+              "counts": {
+                "native_raw_writes": 138,
+                "owned_enumeration_observations": 19,
+                "owned_raw_opens": 18,
+                "status_requests": 34
+              },
+              "native_report_modes": {
+                "33": 52
+              },
+              "native_memory_reads": {
+                "000016/8": 39,
+                "a400fa/6": 1,
+                "a600fa/6": 1
+              },
+              "native_single_byte_register_writes": {
+                "a400f0/55": 1,
+                "a400fb/00": 1,
+                "a600f0/55": 1,
+                "a600fe/04": 1,
+                "b00030/08": 2,
+                "b00033/03": 1
+              },
+              "received_report_ids": {
+                "20": 39,
+                "21": 62,
+                "22": 31,
+                "30": 233,
+                "33": 2862
+              },
+              "memory_read_reply_errors": {
+                "0": 12,
+                "7": 11,
+                "8": 39
+              },
+              "memory_read_address_errors": {
+                "0016/8": 39,
+                "00fa/0": 12,
+                "00fa/7": 11
+              },
+              "decoded_gyro_observed": false,
+              "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+            },
+            "all_actor_a600fe_map_writes_during_phase": {
+              "04": 1
+            },
+            "phase_scope": "configuration settle, app observation and cleanup; not only the app window",
+            "private_raw_trace_sha256": "a9b02f96fc3029e81424b4f0d113d89f9b8dfb3317df2e26228352e0936cae8d"
+          },
+          {
+            "case": "motionplus",
+            "kernel_holder": true,
+            "seconds_bound": 35,
+            "timeout": true,
+            "exit_code": 0,
+            "holder_bytes_drained": 10944,
+            "native_profile_configured": true,
+            "sdl_wii_disabled": true,
+            "radio_guard": true,
+            "children_gone_before_next_arm": true,
+            "extra_owned_children_termed": 0,
+            "trace": {
+              "counts": {
+                "native_raw_writes": 1306,
+                "owned_enumeration_observations": 19,
+                "owned_raw_opens": 18,
+                "status_requests": 34
+              },
+              "native_report_modes": {
+                "33": 439
+              },
+              "native_memory_reads": {
+                "000016/8": 232,
+                "a400fa/6": 121,
+                "a600fa/6": 231
+              },
+              "native_single_byte_register_writes": {
+                "a400f0/55": 121,
+                "a400fb/00": 121,
+                "b00030/08": 2,
+                "b00033/03": 1
+              },
+              "received_report_ids": {
+                "20": 519,
+                "21": 1167,
+                "22": 731,
+                "33": 2597,
+                "34": 2345
+              },
+              "memory_read_reply_errors": {
+                "0": 462,
+                "7": 473,
+                "8": 232
+              },
+              "memory_read_address_errors": {
+                "0016/8": 232,
+                "00fa/0": 462,
+                "00fa/7": 473
+              },
+              "decoded_gyro_observed": false,
+              "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+            },
+            "all_actor_a600fe_map_writes_during_phase": {
+              "04": 122
+            },
+            "phase_scope": "configuration settle, app observation and cleanup; not only the app window",
+            "private_raw_trace_sha256": "3520f82faceda816906f9fbec1525c4d6e77e3646068630c418603f137e13b8c"
+          },
+          {
+            "case": "motionplus-nunchuk",
+            "kernel_holder": false,
+            "seconds_bound": 35,
+            "timeout": true,
+            "exit_code": 0,
+            "holder_bytes_drained": 0,
+            "native_profile_configured": true,
+            "sdl_wii_disabled": true,
+            "radio_guard": true,
+            "children_gone_before_next_arm": true,
+            "extra_owned_children_termed": 0,
+            "trace": {
+              "counts": {
+                "native_raw_writes": 351,
+                "owned_enumeration_observations": 19,
+                "owned_raw_opens": 18,
+                "status_requests": 34
+              },
+              "native_report_modes": {
+                "33": 31,
+                "37": 58
+              },
+              "native_memory_reads": {
+                "000016/8": 40,
+                "a40020/16": 18,
+                "a400fa/6": 9,
+                "a600fa/6": 1
+              },
+              "native_single_byte_register_writes": {
+                "a400f0/55": 9,
+                "a400fb/00": 9,
+                "a600f0/55": 1,
+                "a600fe/04": 1,
+                "b00030/08": 40,
+                "b00033/01": 10,
+                "b00033/03": 10
+              },
+              "received_report_ids": {
+                "20": 40,
+                "21": 87,
+                "22": 140,
+                "30": 287,
+                "33": 487,
+                "37": 2480
+              },
+              "memory_read_reply_errors": {
+                "0": 29,
+                "7": 18,
+                "8": 40
+              },
+              "memory_read_address_errors": {
+                "0016/8": 40,
+                "0020/7": 18,
+                "00fa/0": 29
+              },
+              "decoded_gyro_observed": false,
+              "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+            },
+            "all_actor_a600fe_map_writes_during_phase": {
+              "04": 1
+            },
+            "phase_scope": "configuration settle, app observation and cleanup; not only the app window",
+            "private_raw_trace_sha256": "0b3e9f8def3fc6ae335470ae1df4c9504ad7984ebeb2bed6c0679a6d93a39993"
+          },
+          {
+            "case": "motionplus-nunchuk",
+            "kernel_holder": true,
+            "seconds_bound": 35,
+            "timeout": true,
+            "exit_code": 0,
+            "holder_bytes_drained": 10944,
+            "native_profile_configured": true,
+            "sdl_wii_disabled": true,
+            "radio_guard": true,
+            "children_gone_before_next_arm": true,
+            "extra_owned_children_termed": 0,
+            "trace": {
+              "counts": {
+                "native_raw_writes": 1310,
+                "owned_enumeration_observations": 19,
+                "owned_raw_opens": 18,
+                "status_requests": 34
+              },
+              "native_report_modes": {
+                "33": 175,
+                "37": 129
+              },
+              "native_memory_reads": {
+                "000016/8": 104,
+                "a40020/16": 43,
+                "a400fa/6": 39,
+                "a600fa/6": 104
+              },
+              "native_single_byte_register_writes": {
+                "a400f0/55": 39,
+                "a400fb/00": 39,
+                "b00030/08": 172,
+                "b00033/01": 43,
+                "b00033/03": 43
+              },
+              "received_report_ids": {
+                "20": 191,
+                "21": 460,
+                "22": 703,
+                "33": 1770,
+                "34": 1079,
+                "37": 1398
+              },
+              "memory_read_reply_errors": {
+                "0": 209,
+                "7": 147,
+                "8": 104
+              },
+              "memory_read_address_errors": {
+                "0016/8": 104,
+                "0020/7": 43,
+                "00fa/0": 209,
+                "00fa/7": 104
+              },
+              "decoded_gyro_observed": false,
+              "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+            },
+            "all_actor_a600fe_map_writes_during_phase": {
+              "05": 40
+            },
+            "phase_scope": "configuration settle, app observation and cleanup; not only the app window",
+            "private_raw_trace_sha256": "535408d4ad0f7c3adab0b44f7ae76fb21837275dd5095915dab81bf0e3357b23"
+          }
+        ],
+        "initial_availability_correction": "The earlier PATH/Flatpak lookup missed an installed non-PATH ARM64 AppImage; it did not establish application absence. Original W7 records are retained unchanged.",
+        "first_unsatisfied_handshake_checkpoint": "EEPROM calibration read0016/8 returns error8 without caller-imported image",
+        "application_decoded_gyro": "not observed; delivered reports are not an application-state oracle",
+        "register_actor_scope": "Cemu raw writes are directly captured. Combined host outputs include kernel and Cemu; in holder capture arms native Cemu sends no A600FE writes while the owned kernel maps04/05. No sole cause inferred from races.",
+        "original_four_arm_probe": "35seconds per arm, metadata/length trace only; repeated with full owned raw bytes for request attribution",
+        "state_isolation_limit": "Fresh app profiles and no surviving app/holder FDs between arms; one UHID and its protocol state reused, not fresh/cold devices."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Installed ARM64 Cemu29f2f1f native Wiimote opens the owned UHID raw endpoint and exchanges status, EEPROM, register and input reports in four MP/MP+Nunchuk by holder/no-holder arms. No-holder Cemu writes A600F0=55 and A600FE=04; holder Cemu writes A400F0/A400FB while combined host output shows repeated kernel04/05 maps. Native requested modes are33 for MP-only and33/37 with Nunchuk; received37 packets are transport evidence, not decoded gyro. Every arm requests8 bytes at EEPROM0016 and receives error8 because the default caller EEPROM image is empty; no image was imported. Calibration succeeds in no arm and decoded application gyro is unobserved, so end-to-end gyro remains blocked without a protocol-defect or zero-gyro claim. The initial PATH/Flatpak-only availability lookup missed the installed non-PATH AppImage; its absence inference is superseded."
+  }
+}

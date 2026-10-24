@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-cemu-appimage-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages",
+    "wii-w7-cemu-default-memory"
+  ],
+  "fixtures": [
+    "wii-w7-cemu-appimage-host"
+  ],
+  "procedure": "Use installed ARM64 Cemu29f2f1f extracted privately; isolated XDG config/data/cache, native Wiimote profile slot0, no ROM. Exact-owned identity and five human grant confirmations before go. Four35second MP/MP+Nunchuk x holder/no-holder arms, repeated with byte capture. SDL generic event opens denied; only owned hidraw allowed in Cemu, process-only Bluetooth socket guard. External exact-owned MP evdev FD opens only for holder arms and closes after app exit. Preflight no unexpected MP holders; fresh profile and exact-owned PID cleanup between arms; same UHID reused. Capture native raw requests versus combined kernel/app output. After all eight app instances exit, close device twice and verify HID/raw/LED nodes absent. Publish reduced semantic results only.",
+  "semantic_outcome": "Installed ARM64 Cemu29f2f1f native Wiimote opens the owned UHID raw endpoint and exchanges status, EEPROM, register and input reports in four MP/MP+Nunchuk by holder/no-holder arms. No-holder Cemu writes A600F0=55 and A600FE=04; holder Cemu writes A400F0/A400FB while combined host output shows repeated kernel04/05 maps. Native requested modes are33 for MP-only and33/37 with Nunchuk; received37 packets are transport evidence, not decoded gyro. Every arm requests8 bytes at EEPROM0016 and receives error8 because the default caller EEPROM image is empty; no image was imported. Calibration succeeds in no arm and decoded application gyro is unobserved, so end-to-end gyro remains blocked without a protocol-defect or zero-gyro claim. The initial PATH/Flatpak-only availability lookup missed the installed non-PATH AppImage; its absence inference is superseded."
+}

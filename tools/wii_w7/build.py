@@ -34,6 +34,7 @@ def main():
         ('xwiimote_probe.c', 'xwiimote_probe', ['-lxwiimote']),
         ('udev_control.c', 'udev_control', ['-ludev']),
         ('owned_io.c', 'owned_io.so', ['-shared', '-fPIC', '-ldl']),
+        ('cemu_guard.c', 'cemu_guard.so', ['-shared', '-fPIC', '-ldl']),
         ('input_diagnostic.c', 'input_diagnostic.so', ['-shared', '-fPIC', '-I' + str(output)]),
     ]:
         subprocess.run(['cc', '-D_POSIX_C_SOURCE=200809L', '-Wall', '-Wextra', '-Werror',

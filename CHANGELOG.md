@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Correct the incomplete W7 Cemu availability lookup with an installed ARM64 AppImage native-Wiimote run: four holder/profile comparisons and byte-capture repeats, native register attribution and calibration error8 with the default empty caller EEPROM. Raw transport works; decoded gyro remains unobserved. Add reduced evidence, original trace reducer/guard and deterministic boundary tests; retain prior records unchanged.
+
 - Record W7 independent Wii consumers: bounded libxwiimote gyro/normalization and evtest passes, RetroArch UHID/uinput generic controls with version-specific sensor limitations, ARM64 Cemu availability blocker and unresolved Dolphin direct-scanner checkpoint. Add original owned-device probes and reduced semantic evidence; preserve survey and physical claims.
 
 - Research Wii Remote in-band speaker for post-alpha planning: pin Dolphin real-Wiimote forwarding/pacing, emulated speaker control/registers, signed PCM/Yamaha ADPCM decoder and rate, plus Linux hid-wiimote consumer exclusion. Cross-reference the three existing WiiBrew claims, record Dolphin/WiiBrew ADPCM volume-range discrepancy and maintain an explicitly not-run physical lab plan. No wii-* claims edited, no implementation, no physical promotion.
