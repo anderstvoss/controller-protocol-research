@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document source-scoped controller audio exclusions: xpad Xbox 360 no headset PCM path, Xbox Series xpad explicitly disabling GIP audio interface, Nintendo/SDL Switch Pro rumble distinct from audio, and Steam Controller 2026 audio endpoint unknown. No claims about physical absence and no existing SC2 gap record changes.
+
 - Add W5 unchanged-model MotionPlus gyro diagnosis: verified active packet decoding/pass-through and kernel ABS gyro delivery before fresh SDL holder/control comparisons. Retain zero SDL gyro and disconnects, actor/readback ambiguity and private-mode instrumentation limits. Add original probes, semantic evidence reducers and deterministic tests; no prior records or protocol model changes.
 
 - Add pinned W4 SDL consumer-source no-reattach claims for3.2.10, latest3.4.18 and main; correct the MotionPlus-active downstream-change disconnect distinction. Record five60-second fixed-extension claim-held runs, selected controls/acceleration and LED intent; retain blocked zero gyro in both MotionPlus profiles. Add original probes and evidence-boundary tests without protocol or historical-record changes.

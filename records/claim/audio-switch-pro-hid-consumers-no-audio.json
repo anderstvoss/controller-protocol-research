@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-switch-pro-hid-consumers-no-audio",
+  "statement": "The pinned hid-nintendo kernel and SDL Switch HIDAPI consumers implement Pro Controller rumble through distinct rumble-only and subcommand HID output reports, with frequency/amplitude encoding and vibration enable/refresh logic. Neither inspected path advertises a speaker/microphone PCM channel or an audio interface. HD rumble is waveform-like actuator control but not an audio capture/playback endpoint; no hardware-wide absence is proven.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only HID/evdev consumer scope, not exhaustive hardware USB/Bluetooth descriptor measurement."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

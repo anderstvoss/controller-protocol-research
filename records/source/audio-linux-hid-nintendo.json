@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-linux-hid-nintendo",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-nintendo.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "0ed5027206c64408b513cab219b05a5753cc6ed364883c7460abc8ba1074982f",
+  "lineage": "linux-kernel",
+  "locator": "51-80 rumble output IDs and subcommand IDs; 186-304 rumble frequency/amplitude tables; 514-527 output payload structures; 784-805 output and 930-960 subcommands; source-only absence of audio PCM path."
+}
