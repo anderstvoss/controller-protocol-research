@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-hid-framing",
+  "statement": "The Linux and SDL HID consumers encode output effects under USB report 0x02 with the common block starting immediately after the report ID and BT report 0x31 with a three-byte Linux header (report ID, sequence/tag, tag). SDL uses two prefix bytes on BT (report ID, fixed marker) before its common effect block and appends a CRC; thus both put the common fields at USB absolute byte 1 and BT absolute byte 3 in Linux, but SDL places its effect fields at BT absolute byte 2. Treat the offsets as consumer-specific, not proof of interchangeable BT wrappers. Linux also supplies sequence/tag and CRC.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Offsets are zero-based across full HID reports. Kernel and SDL have different Bluetooth wrappers; no physical packet capture."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
