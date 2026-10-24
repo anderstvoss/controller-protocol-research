@@ -1,11 +1,15 @@
 """Raw Cemu transport and calibration boundaries must not become gyro acceptance."""
+import importlib.util
 import json
 import unittest
 from pathlib import Path
 
-from tools.wii_w7.cemu_trace import reduce_trace
-
 ROOT = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location(
+    'wii_w7_cemu_trace', ROOT / 'tools/wii_w7/cemu_trace.py')
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+reduce_trace = MODULE.reduce_trace
 
 
 class WiiW7CemuAppImage(unittest.TestCase):
