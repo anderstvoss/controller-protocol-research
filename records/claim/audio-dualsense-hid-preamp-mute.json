@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "audio-dualsense-hid-preamp-mute",
-  "statement": "Linux uses common offset 37 bits 0-2 for speaker preamp, gated by valid_flag1 (common byte 1) bit 7. It selects preamp value 2 for USB speaker routing. Its microphone mute request uses power-save-control common offset 9 bit 4, gated by valid_flag1 bit 1; the separate mute-button LED at offset 8 is gated by valid_flag1 bit 0. SDL calls offsets 8 and 9 microphone light and audio-mute fields, but does not define Linux's preamp or power-save semantics. These are independent requests, not a PCM modification.",
+  "statement": "Linux uses common offset 37 bits 0-2 for speaker preamp, gated by valid_flag1 (common byte 1) bit 7. Its USB jack-detect path selects preamp value 2 when it routes to the internal speaker (see audio-dualsense-kernel-jack-detect-routing). Its microphone mute request uses power-save-control common offset 9 bit 4, gated by valid_flag1 bit 1; the separate mute-button LED at offset 8 is gated by valid_flag1 bit 0. SDL calls offsets 8 and 9 microphone light and audio-mute fields, but does not define Linux's preamp or power-save semantics. These are independent requests, not a PCM modification.",
   "status": "source_supported",
   "applicability": {
     "controller": "dualsense",
