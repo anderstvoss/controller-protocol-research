@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-messages",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteMessages.h",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "eaf65827c0aa2cd6de9b4bebaf25427eb0e2f87fac48857aae2951731dc72a81",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0; Wii status/memory address constants 5-60 and controller payload state definitions 200-242."
+}

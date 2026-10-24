@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-provider",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteControllerProvider.cpp",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "440bb0abb0070af3d77e31e66d11b82e3020e76f678e73c53e962a63849fa722",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0; backend selection 178-198; open handshake status 59-113; status and EEPROM calibration 245-322; extension ID 326-386; MP raw parse 484-546; detection/activation 926-948; report mode 1015-1047."
+}

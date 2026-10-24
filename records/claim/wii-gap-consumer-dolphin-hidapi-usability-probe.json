@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-dolphin-hidapi-usability-probe",
+  "statement": "Pinned Dolphin Real Wii Remote HIDAPI scanner enumerates all VID/PIDs, filters for a valid Wii Remote name or known ID and an unseen path, then attempts a temporary hid_open_path and writes a status-request output report as a usability probe before adding the device. It closes the temporary handle and only then can create a real-Wiimote transport object; subsequent actual Connect opens it again. Consequently an owned hidraw FD being open in a separate tool does not prove Dolphin scanner accepted the device, passed the status write, assigned an available real-remote slot or added ControllerInterface input. This extends existing Dolphin binding/calibration claims without asserting why W5's Flatpak direct backend did not connect.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin e1d35f Linux HIDAPI consumer, hardware revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; Dolphin IOhidapi.cpp 17-59 driver warning,60-86 IsDeviceUsable status write,112-147 FindAttachedWiimotes name/ID/path gating and status probe,149-163 subsequent connection. Compare existing wii-w5-dolphin-direct-sanity-host-run blocked run; source flow is not a failure attribution."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

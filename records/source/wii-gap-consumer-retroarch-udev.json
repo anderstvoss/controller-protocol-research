@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-retroarch-udev",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libretro/RetroArch/blob/1bbd7eda123acea17cbea15de48bea4fdb21a68d/input/drivers_joypad/udev_joypad.c",
+  "revision": "1bbd7eda123acea17cbea15de48bea4fdb21a68d",
+  "sha256": "90025c53f9853282a70fad4c10c563b5092a5c26f2607af01bd17dbebdce121f",
+  "lineage": "libretro/RetroArch",
+  "locator": "RetroArch GPL-3.0-or-later; udev joypad input 505-534, 940-1070; sensor singleton and rotational-axis fallback 556-640; same HID parent 643-799; sensor poll 1430-1488; gyro enable 1700-1756."
+}
