@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-xwiimote-ng-core",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dev-0x7C6/xwiimote-ng/blob/fecc8db2a73e6d555273837dfc4cb04b34b56db7/lib/core.c",
+  "revision": "fecc8db2a73e6d555273837dfc4cb04b34b56db7",
+  "sha256": "eb6fc54f1de88e6e68a1b6b308fb89e04e9abf0042da528e450a6900c51607ac",
+  "lineage": "dev-0x7C6/xwiimote-ng",
+  "locator": "xwiimote-ng fork, inspect fork license at matching pin before redistribution; evdev interface opening follows xwiimote core path, independent acceptance not yet run."
+}

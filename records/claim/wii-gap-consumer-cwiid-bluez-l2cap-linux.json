@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cwiid-bluez-l2cap-linux",
+  "statement": "Pinned CWiid libcwiid cwiid_open and listener use AF_BLUETOOTH SOCK_SEQPACKET BTPROTO_L2CAP control and interrupt channels, with optional inquiry, not Linux hidraw or evdev. Neither current UHID-Bluetooth nor uinput realization creates the required L2CAP endpoint; wminput may generate new system inputs only *after* a real Bluetooth-side CWiid connection.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; CWiid fadf11e connect.c 34-148; no examined CWiid Linux hidraw backend; no physical test."
+  },
+  "sources": [
+    "wii-gap-consumer-cwiid-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

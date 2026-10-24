@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cwiid-linux",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/connect.c",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "5f599abced59a374b79119185e6f134fe29678ad7950a27cab0f7251bd3435d2",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "CWiid GPL-2.0-or-later; BlueZ L2CAP control/interrupt socket and discovery 34-148; not hidraw."
+}
