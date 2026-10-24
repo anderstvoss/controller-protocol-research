@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-speaker-physical-acceptance-unknown",
+  "statement": "Dolphin's real passthrough carries speaker report 0x18 subject to a configuration/enable/mute gate, while its emulator has a decoder and incomplete initialization semantics. No new physical Wiimote capture or virtualgamepad BUS_BLUETOOTH UHID-to-Dolphin speaker acceptance run is recorded by this cloud research. Real hardware register application, source rate and stream pacing, overrun errors, mute/enable decoder-state retention, and 0x40 versus 0x7f effective volume must be tested in the scheduled maintainer lab.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Existing WiiBrew 3 claims remain documentary. Proposed experiment audio-wii-speaker-dolphin-physical-lab is not_run. No hardware/software speaker emulation implemented."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-core-e1d35f",
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-speaker-registers",
+    "audio-dolphin-wii-speaker-output-handler",
+    "audio-dolphin-wii-main-settings"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
