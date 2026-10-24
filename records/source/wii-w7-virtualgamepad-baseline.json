@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-virtualgamepad-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/840db2771cbcef83b50ee9355c7b6165b95f234a/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "840db2771cbcef83b50ee9355c7b6165b95f234a",
+  "sha256": "9841e457f2da39cb24ba4904b38eeaf3e829b44f94e27749acaae72e43e7d70d",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged runtime at W7 execution; W6 demo merged. Original tools/wii_w7 drive only owned virtual devices."
+}

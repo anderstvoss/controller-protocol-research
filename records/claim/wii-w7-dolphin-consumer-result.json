@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-dolphin-consumer-result",
+  "statement": "Dolphin2609a Flatpak: corrected separate35second no-ROM MP/MP+Nunchuk profiles have empty owned dynamic traces. Each profile-owned child was explicitly terminated and verified gone before the next arm (two TERM, no KILL). Separate sandbox raw access and enumeration/open trace controls pass. Direct-scanner enumeration remains the first unestablished checkpoint; status write, Connect, ControllerInterface AddDevice and gyro remain unestablished, with no internal cause inferred. The initial pilot overlapped child lifetimes across profiles; its comparison is invalid and retained as a method limitation. No kernel unbind, game content or model change.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad840db277; installed version-pinned Linux consumers; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W7 bounded local virtual-host results; explicit uinput comparison in RetroArch arm. Survey source expectations are not host passes. No physical, calibrated, radio or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w1-dolphin-2609a",
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "experiments": [
+    "wii-w7-dolphin-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

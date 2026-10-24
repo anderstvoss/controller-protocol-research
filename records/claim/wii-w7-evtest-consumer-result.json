@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-evtest-consumer-result",
+  "statement": "Evtest1.35 on the exact-owned MotionPlus node receives changing ABS_RX/RY/RZ over12seconds with MP-only kernel mode04. Both raw drive vectors produce the recorded signed extrema. This is repeatability of virtual kernel delivery, not radio, physical fidelity or calibration.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad840db277; installed version-pinned Linux consumers; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W7 bounded local virtual-host results; explicit uinput comparison in RetroArch arm. Survey source expectations are not host passes. No physical, calibrated, radio or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w7-evtest-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

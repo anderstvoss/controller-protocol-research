@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-evtest-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w7-evtest-host"
+  ],
+  "procedure": "Original W7 owned-device tools and isolated profiles; availability and human grant confirmation first. Fixed attachment per consumer, two explicit drive vectors, exact HID driver identity, explicit owned event paths and foreign full-path input opens denied in instrumented apps. UI12seconds, libxwiimote18seconds, evtest12seconds, RetroArch25second bounds, Dolphin35second bounds; separate trace positive control. No ROM or game. Profile-owned children closed then device close twice; verify owned HID/raw/LED/uinput nodes gone. Publish only reduced observations.",
+  "semantic_outcome": "Evtest1.35 on the exact-owned MotionPlus node receives changing ABS_RX/RY/RZ over12seconds with MP-only kernel mode04. Both raw drive vectors produce the recorded signed extrema. This is repeatability of virtual kernel delivery, not radio, physical fidelity or calibration."
+}

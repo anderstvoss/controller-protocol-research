@@ -73,3 +73,18 @@ retail calibration, encrypted workflows and activation latency remain unknown.
 ## C5 virtual-host qualification
 
 `wii-c5-evdev-native-values` separates advertised ABS ranges from consumer values; do not silently clamp the latter. `wii-c5-bt-host-binding` records driver binding, six interface masks, extension replacement, MP, rumble and battery endpoint presence. LED-class writes were permission-denied; live ranges/fuzz, SDL HIDAPI, Dolphin and physical calibration remain unmeasured. Four `wii-c5-*-host-run` experiments record10 cycles at N1/N4 on both realizations, with executable/code hashes, missing consumer/oracle cells and no timing budget.
+
+## W7 independent consumer checkpoint
+
+Current inventory: **137 Wii claims** (132 before W7);9 remain unknown. Historical
+checkpoint snapshots above and in the separate checkpoint ledger stay unchanged.
+Five `wii-w7-*-consumer-result` records separate Cemu availability, libxwiimote
+MotionPlus/normalization, evtest repeatability, RetroArch generic controls and the
+Dolphin scanner boundary. All are consumer evidence from virtual devices; none
+promotes physical, radio, calibrated or complete controller acceptance.
+
+See [W7 bounded results](../wii-w7-consumer-runs.md). The installed RetroArch1.20.0
+has no udev joypad sensor callbacks, unlike the newer surveyed RXYZ fallback.
+Cemu remains blocked before discovery on this host, and Dolphin remains blocked
+at establishing direct-scanner enumeration despite separate sandbox access and
+trace-positive-control passes. Existing `wii-gap-*` claims are unchanged.

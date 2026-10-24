@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-xwiimote-2-core",
+  "kind": "compatibility_implementation",
+  "url": "https://sources.debian.org/src/xwiimote/2-4.3/lib/core.c/",
+  "revision": "Debian xwiimote 2-4.3",
+  "sha256": "280551a0e125ce6f92cf63cb801ed3c06a0037031fbbd4840254b297b3230994",
+  "lineage": "xwiimote",
+  "locator": "Interface open mask; MotionPlus event reader and offset/factor normalization. Nunchuk was advertised as available but the requested interface was not opened in this installed version; check the returned mask. Consumer implementation, not device-side evidence."
+}
