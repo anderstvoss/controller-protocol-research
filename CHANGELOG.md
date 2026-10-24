@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document source-scoped controller audio exclusions: xpad Xbox 360 no headset PCM path, Xbox Series xpad explicitly disabling GIP audio interface, Nintendo/SDL Switch Pro rumble distinct from audio, and Steam Controller 2026 audio endpoint unknown. No claims about physical absence and no existing SC2 gap record changes.
+
 - Add pinned Sony audio consumer research: DualSense HID route/levels/mute/preamp fields and USB/BT framing, ALSA UCM routing, maintainer-documented physical UAC1 and headphone/grip observations, DS4 SDL/kernel distinctions, explicit unanswered Bluetooth/DS4 audio questions, and the kernel's USB jack-detect driven routing. No controller implementation or physical-status promotion.
 
 - Add W5 unchanged-model MotionPlus gyro diagnosis: verified active packet decoding/pass-through and kernel ABS gyro delivery before fresh SDL holder/control comparisons. Retain zero SDL gyro and disconnects, actor/readback ambiguity and private-mode instrumentation limits. Add original probes, semantic evidence reducers and deterministic tests; no prior records or protocol model changes.

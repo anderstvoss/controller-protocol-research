@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "audio-xbox-series-xpad-disables-gip-audio",
+  "statement": "The pinned xpad driver recognizes a separate wired Xbox One/Series GIP audio interface index 1 but explicitly selects alternate setting 0 to disable it during its startup sequence, while controller data and rumble are handled separately. Thus this Linux consumer does not implement Xbox Series audio streaming. This does not prove absence of a proprietary GIP audio path on real hardware, and such a path remains outside virtualgamepad's non-GIP standard-HID model.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "xpad.c 642-643 GIP interface indices and 1494-1505 disabling audio interface; cross-reference existing claim xbox-series-usb-device-gaps. No fake GIP identity, transport or physical device capability asserted."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
