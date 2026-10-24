@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-usb-uac1-topology",
+  "statement": "The virtualgamepad EXP-0023 maintainer document describes a physical 054c:0ce6 device exposing UAC1 1.00: audio-control interface 0, four-channel playback interface 1 with alternate 1, and two-channel capture interface 2 with alternate 1, plus HID interface 3. Its reported 48 kHz signed-16 playback uses endpoint 0x01 (adaptive, max packet 392 at high speed, interval 4); capture uses endpoint 0x82 (asynchronous, max 196, interval 4). The reported channel masks are 0x0033 (front/rear stereo) and 0x0003 (front stereo); feature-unit IDs 2/5 expose mute and volume. This is a cited maintainer observation, not a new corpus physical experiment; the project's functional UAC2 USB/IP model must not be called a UAC1 match.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "device 054c:0ce6; bcdDevice 1.00",
+    "firmware": "complete firmware not established",
+    "transport": "usb",
+    "scope": "Maintainer-documented device/descriptor inspection; direct descriptor access permission-limited, no raw measurement reproduced. A corpus-controlled physical experiment is outstanding."
+  },
+  "sources": [
+    "audio-vg-exp0023"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

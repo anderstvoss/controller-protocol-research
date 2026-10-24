@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-kernel-jack-detect-routing",
+  "statement": "On BUS_USB only, Linux hid-playstation reads input status byte 1 bits 0 (headphone detect) and 1 (microphone detect), seeds its stored state as the inverse on the first report (so the first report always triggers routing), and on each change schedules an output report and reports SW_HEADPHONE_INSERT / SW_MICROPHONE_INSERT on a separate 'Headset Jack' input device. A headphone-detect change writes valid_flag0 as audio-control enable alone. Headphone present selects route 0 (stereo headphones, speaker muted). Headphone absent selects route 3 (right channel to the internal speaker, headphones muted), sets speaker level 0x64 with valid_flag0 bit 5 (a driver comment says the accepted range seems to be 0x3d..0x64) and preamp gain 2 with valid_flag1 bit 7. A virtual USB-bus DualSense therefore receives route output reports driven by the jack bits it reports. Bluetooth jack handling is excluded.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Kernel consumer behavior: hid-playstation.c 124-126 status bits, 975-991 jack device, 1361-1409 route selection, 1529-1552 USB-only parse. The 0x3d..0x64 speaker range is a driver comment, not a measured device limit."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

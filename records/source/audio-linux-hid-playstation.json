@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-linux-hid-playstation",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-playstation.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "48a08dddf8d276a611195311a29cd4f113a949a1f5431ecc84b0396b106ec896",
+  "lineage": "linux-kernel",
+  "locator": "153-169 field masks; 269-316 DualSense common USB/BT framing; 1251-1319 send/CRC; 1361-1429 routing and mic; 1529-1552 USB-only jack path; 1852-1859 Bluetooth audio exclusion; 507-539 and 2277-2386 DS4 common reports."
+}

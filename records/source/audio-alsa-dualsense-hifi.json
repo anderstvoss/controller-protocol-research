@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-alsa-dualsense-hifi",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/alsa-project/alsa-ucm-conf/blob/d260eedd1900dbf3b477047e048d5382a5f50e24/ucm2/USB-Audio/Sony/DualSense-PS5-HiFi.conf",
+  "revision": "d260eedd1900dbf3b477047e048d5382a5f50e24",
+  "sha256": "ce13cfdaea80e00f8a8a7b469ebc9e00aa1db4489bde0951a28c9a51d0eb5e9e",
+  "lineage": "alsa-ucm-conf",
+  "locator": "3-47 splits for four playback/two capture; 50-94 speaker/headphone channel selection; 97-141 microphone/headset mappings. UCM consumer configuration, not physical measurements."
+}
