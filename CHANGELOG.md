@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Research Wii Remote in-band speaker for post-alpha planning: pin Dolphin real-Wiimote forwarding/pacing, emulated speaker control/registers, signed PCM/Yamaha ADPCM decoder and rate, plus Linux hid-wiimote consumer exclusion. Cross-reference the three existing WiiBrew claims, record Dolphin/WiiBrew ADPCM volume-range discrepancy and maintain an explicitly not-run physical lab plan. No wii-* claims edited, no implementation, no physical promotion.
 
+- Add pinned Sony audio consumer research: DualSense HID route/levels/mute/preamp fields and USB/BT framing, ALSA UCM routing, maintainer-documented physical UAC1 and headphone/grip observations, DS4 SDL/kernel distinctions, explicit unanswered Bluetooth/DS4 audio questions, and the kernel's USB jack-detect driven routing. No controller implementation or physical-status promotion.
+
 - Add W5 unchanged-model MotionPlus gyro diagnosis: verified active packet decoding/pass-through and kernel ABS gyro delivery before fresh SDL holder/control comparisons. Retain zero SDL gyro and disconnects, actor/readback ambiguity and private-mode instrumentation limits. Add original probes, semantic evidence reducers and deterministic tests; no prior records or protocol model changes.
 
 - Add pinned W4 SDL consumer-source no-reattach claims for3.2.10, latest3.4.18 and main; correct the MotionPlus-active downstream-change disconnect distinction. Record five60-second fixed-extension claim-held runs, selected controls/acceleration and LED intent; retain blocked zero gyro in both MotionPlus profiles. Add original probes and evidence-boundary tests without protocol or historical-record changes.

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-bluetooth-inband-pcm-unknown",
+  "statement": "No PCM/audio-sample-bearing Bluetooth report layout is established by inspected Linux hid-playstation.c or SDL_hidapi_ps5.c. Both provide Bluetooth HID output report 0x31 for effect/control bytes, but neither inspected path serializes audio frames. Linux explicitly excludes Bluetooth jack audio handling. Additional independent BT PCM research and physical traces remain required; do not interpret SDL's audio-haptics enable/disable bit as evidence of a sample stream.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Searched pinned Linux hid-playstation output structures/send paths and Bluetooth audio comments, and pinned SDL PS5 HID effects send path and audio-haptics control. No external in-band waveform layout verified."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

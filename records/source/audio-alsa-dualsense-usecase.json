@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-alsa-dualsense-usecase",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/alsa-project/alsa-ucm-conf/blob/d260eedd1900dbf3b477047e048d5382a5f50e24/ucm2/USB-Audio/Sony/DualSense-PS5.conf",
+  "revision": "d260eedd1900dbf3b477047e048d5382a5f50e24",
+  "sha256": "2d1f9f8d44522cce148ec4fbf978af333974b79885d48fd72b43ff538a1b437c",
+  "lineage": "alsa-ucm-conf",
+  "locator": "1-10 DualSense profile, four-channel direct playback and two-channel capture, HiFi include."
+}
