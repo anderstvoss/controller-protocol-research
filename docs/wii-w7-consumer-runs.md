@@ -21,7 +21,7 @@ Anders installed xwiimote/libxwiimote-dev/RetroArch and applied/confirmed five
 temporary grants supplied locally. Before starting the consumers, the probe
 reverified its own creation identity, bus5 Nintendo057e:0306, wiimote driver,
 raw-node ancestry and access. No agent sudo, unbind, persistent policy or game
-content. Attachment was fixed throughout each consumer window. The two injected
+content. Attachment was fixed throughout each corrected observation and child lifetime. The two injected
 raw pitch/roll/yaw vectors were `[9000,7000,8500]` and `[7000,9000,7800]`, all slow
 flags true, alternating every250ms. Core A, Nunchuk buttons/stick and accel were
 also explicitly driven. The helpers service and commit while children execute.
@@ -78,12 +78,17 @@ cites the specific survey claims tested; evtest is a W5 repeatability control.
 Existing `wii-gap-*`, W1–W5 records and historical checkpoint snapshots are intact.
 Current Wii inventory:137 claims,9 unknown,124 source-supported,4 inferred.
 
-Two Dolphin children survived the Flatpak timeout wrapper. They were identified
-by their exact fresh profile arguments and explicitly sent TERM; no KILL was
-needed. All owned consumers were verified gone, then both device sessions closed
-twice. Owned HID, hidraw, LEDs and uinput nodes were verified absent. Resource
-cleanup fields describe the complete W7 session, not independent global device
-count deltas. Private paths/identities, raw reports, terminal data, wall clocks,
+The initial Dolphin pilot let Flatpak children survive across the profile switch,
+so its independent-profile comparison is invalid. Both pilot traces stayed empty
+through cleanup; that does not repair the method. A corrected repeat used a fresh
+human-granted device and verified exact-profile child cleanup **between arms**.
+Each corrected35second profile also had an empty trace; separate sandbox raw-access
+and trace controls were repeated successfully. Two TERM actions, no KILL, closed
+the corrected children before profile changes and device close. All owned consumers
+were verified gone. Both the original W7 and corrected sessions closed idempotently;
+owned HID, raw and LED nodes were absent, as were original W7 uinput nodes (none
+created in the corrected session). The fixture preserves the invalid pilot limit
+separately from the corrected observations. Private paths/identities, raw reports, terminal data, wall clocks,
 third-party code and debug logs remain outside the corpus. Public fixtures contain
 semantic counts/extrema and source/tool hashes only.
 

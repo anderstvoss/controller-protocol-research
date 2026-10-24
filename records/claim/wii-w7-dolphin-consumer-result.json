@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "wii-w7-dolphin-consumer-result",
-  "statement": "Dolphin2609a Flatpak can open the granted owned raw node in a separate sandbox check, and an isolated positive control exercises the enumeration/open hooks. Both35second no-ROM MP/MP+Nunchuk app traces are empty. Direct-scanner enumeration is the first unestablished checkpoint, followed by status-probe write, Connect and ControllerInterface AddDevice; internal failure/filter/activation cause and gyro are unresolved. No kernel unbind, game content or model change. Two surviving profile-owned children were explicitly terminated before idempotent device close.",
+  "statement": "Dolphin2609a Flatpak: corrected separate35second no-ROM MP/MP+Nunchuk profiles have empty owned dynamic traces. Each profile-owned child was explicitly terminated and verified gone before the next arm (two TERM, no KILL). Separate sandbox raw access and enumeration/open trace controls pass. Direct-scanner enumeration remains the first unestablished checkpoint; status write, Connect, ControllerInterface AddDevice and gyro remain unestablished, with no internal cause inferred. The initial pilot overlapped child lifetimes across profiles; its comparison is invalid and retained as a method limitation. No kernel unbind, game content or model change.",
   "status": "unknown",
   "applicability": {
     "controller": "wii-remote",

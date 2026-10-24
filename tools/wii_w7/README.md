@@ -58,7 +58,12 @@ positive control worked. No ROM/bootstrapping content or UI action was injected.
 
 Timeout does not guarantee Flatpak child cleanup. Identify children by exact
 fresh profile argument, send TERM only to those owned children, wait and recheck;
-never use a broad process-name kill. W7 required two such TERM actions, no KILL.
+never use a broad process-name kill. The first W7 pilot missed this between-arm
+cleanup and its profile comparison is invalid. The corrected fresh-device repeat
+performed cleanup before each attachment switch: two TERM actions, no KILL, and
+verified no owned children before continuing. Its traces also stayed empty; the
+separate access/trace controls passed again. Preserve both the pilot limitation
+and corrected observations.
 Verify those children and all owned HID/raw/LED/uinput nodes are gone before
 reducing/publishing results. Preserve private artifacts locally; publish semantic
 counts, version/hash provenance and explicit pass/limit/blocked boundaries only.

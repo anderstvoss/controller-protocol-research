@@ -56,6 +56,13 @@ class WiiW7Consumers(unittest.TestCase):
         self.assertIn('not established', obs['checkpoints']['connect'])
         self.assertIn('not established', obs['checkpoints']['controller_interface_add_device'])
         self.assertEqual(obs['checkpoints']['gyro'], 'not evaluated')
+        self.assertTrue(obs['initial_pilot_limitation']['first_child_outlived_profile_switch'])
+        self.assertTrue(record['config']['attachment_constant_during_each_child'])
+        self.assertTrue(record['config']['cleanup_between_profiles'])
+        for arm in obs['arms']:
+            self.assertTrue(arm['child_cleanup']['owned_children_gone_before_next_profile'])
+            self.assertEqual(arm['child_cleanup']['force_kill_count'], 0)
+        self.assertEqual(set(obs['initial_pilot_limitation']['dynamic_trace_events_at_final_cleanup'].values()), {0})
         self.assertTrue(record['resources']['owned_children_gone'])
         self.assertEqual(record['resources']['explicit_term_count'], 2)
         self.assertEqual(record['resources']['force_kill_count'], 0)

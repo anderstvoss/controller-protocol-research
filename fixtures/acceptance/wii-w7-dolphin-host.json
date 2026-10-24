@@ -4,7 +4,7 @@
   "controller": "virtualgamepad.wii-remote",
   "realization": "linux.uhid.bluetooth",
   "tier": "local-virtual-host-independent-consumer",
-  "permission": "Anders installed the requested packages and applied/confirmed the five temporary grants supplied locally. Identity/access reverified before go. No agent sudo, grant, unbind, persistent policy or unrelated-device input.",
+  "permission": "Anders installed the requested packages and applied/confirmed the five temporary grants supplied locally. Identity/access reverified before go. No agent sudo, grant, unbind, persistent policy or unrelated-device input. A fresh corrected Dolphin device required another five locally supplied grants, confirmed by Anders before rerun.",
   "config": {
     "arm": "dolphin",
     "consumer_role": true,
@@ -30,7 +30,9 @@
       true
     ],
     "drive_period_ms": 250,
-    "attachment_constant_during_each_child": true
+    "attachment_constant_during_each_child": true,
+    "attachment_constant_during_observation_window": true,
+    "cleanup_between_profiles": true
   },
   "environment": {
     "synthetic": false,
@@ -54,7 +56,8 @@
     "input_diagnostic_source_sha256": "c684db878e2c4df6272c3611008bfa3c660484338307ee54db961f6717f17f0e",
     "input_diagnostic_binary_sha256": "4c77dcf6314317ebd881bd86fcc615587cc633df6eb4b5afca70a58b77e0f4e9",
     "positive_control_source_sha256": "7c6aea449b9ac9ec6d0803b622b450f118623604e413f4465b9ac16dd6f0b886",
-    "positive_control_binary_sha256": "6b69f3781dbf96448ca23756d3e6b3ef11186c81295df3b3436a29b5bc91bfd6"
+    "positive_control_binary_sha256": "6b69f3781dbf96448ca23756d3e6b3ef11186c81295df3b3436a29b5bc91bfd6",
+    "corrected_runner_sha256": "ff784fb6c922dd769ef11fbde9eb65e41cbf320dc0c548b5fb78c0bfa246bcf2"
   },
   "resources": {
     "owned_hid_gone": true,
@@ -66,7 +69,8 @@
     "explicit_term_count": 2,
     "force_kill_count": 0,
     "owned_children_gone": true,
-    "cleanup_scope": "complete W7 session, not separate per-arm or global device counts"
+    "cleanup_scope": "corrected Dolphin session; initial W7 pilot also separately cleaned with two TERM and no KILL",
+    "uinput_scope": "not created during corrected Dolphin session; initial W7 uinput cleanup verified separately"
   },
   "samples": [
     {
@@ -121,7 +125,13 @@
             "slots_zero": true,
             "controller_interface": true,
             "sdl_wii_disabled": true,
-            "owned_dynamic_io_trace_events": 0
+            "owned_dynamic_io_trace_events": 0,
+            "child_cleanup": {
+              "owned_children_after_timeout": 1,
+              "explicit_term_count": 1,
+              "force_kill_count": 0,
+              "owned_children_gone_before_next_profile": true
+            }
           },
           {
             "exit_code": 124,
@@ -131,7 +141,13 @@
             "slots_zero": true,
             "controller_interface": true,
             "sdl_wii_disabled": true,
-            "owned_dynamic_io_trace_events": 0
+            "owned_dynamic_io_trace_events": 0,
+            "child_cleanup": {
+              "owned_children_after_timeout": 1,
+              "explicit_term_count": 1,
+              "force_kill_count": 0,
+              "owned_children_gone_before_next_profile": true
+            }
           }
         ],
         "sandbox_access": {
@@ -156,13 +172,23 @@
           "gyro": "not evaluated"
         },
         "first_unestablished_checkpoint": "direct scanner enumeration; activation/filter/observation cause unresolved",
-        "limits": "Dynamic libudev/open/read/write hooks are not private method breakpoints; no internal failure inferred from missing observations."
+        "limits": "Dynamic libudev/open/read/write hooks are not private method breakpoints; no internal failure inferred from missing observations.",
+        "initial_pilot_limitation": {
+          "process_lifetime_exceeded_observation_window": true,
+          "first_child_outlived_profile_switch": true,
+          "independent_app_instance_comparison": "not established; first Flatpak child survived its wrapper into the second profile",
+          "dynamic_trace_events_at_final_cleanup": {
+            "motionplus": 0,
+            "motionplus-nunchuk": 0
+          }
+        },
+        "independent_app_instance_comparison": "separate exact-profile children verified gone before next arm; activation remains unestablished"
       },
       "errors": []
     }
   ],
   "summaries": {
     "disposition": "blocked",
-    "semantic_outcome": "Dolphin2609a Flatpak can open the granted owned raw node in a separate sandbox check, and an isolated positive control exercises the enumeration/open hooks. Both35second no-ROM MP/MP+Nunchuk app traces are empty. Direct-scanner enumeration is the first unestablished checkpoint, followed by status-probe write, Connect and ControllerInterface AddDevice; internal failure/filter/activation cause and gyro are unresolved. No kernel unbind, game content or model change. Two surviving profile-owned children were explicitly terminated before idempotent device close."
+    "semantic_outcome": "Dolphin2609a Flatpak: corrected separate35second no-ROM MP/MP+Nunchuk profiles have empty owned dynamic traces. Each profile-owned child was explicitly terminated and verified gone before the next arm (two TERM, no KILL). Separate sandbox raw access and enumeration/open trace controls pass. Direct-scanner enumeration remains the first unestablished checkpoint; status write, Connect, ControllerInterface AddDevice and gyro remain unestablished, with no internal cause inferred. The initial pilot overlapped child lifetimes across profiles; its comparison is invalid and retained as a method limitation. No kernel unbind, game content or model change."
   }
 }
