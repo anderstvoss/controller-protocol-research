@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-retroarch-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w7-retroarch-1-20-udev",
+    "wii-gap-consumer-retroarch-udev"
+  ],
+  "fixtures": [
+    "wii-w7-retroarch-host"
+  ],
+  "procedure": "Original W7 owned-device tools and isolated profiles; availability and human grant confirmation first. Fixed attachment per consumer, two explicit drive vectors, exact HID driver identity, explicit owned event paths and foreign full-path input opens denied in instrumented apps. UI12seconds, libxwiimote18seconds, evtest12seconds, RetroArch25second bounds, Dolphin35second bounds; separate trace positive control. No ROM or game. Profile-owned children closed then device close twice; verify owned HID/raw/LED/uinput nodes gone. Publish only reduced observations.",
+  "semantic_outcome": "RetroArch1.20.0 Debian udev joypad receives changing core buttons and Nunchuk axes/buttons from both UHID and uinput in an original no-content diagnostic core. All8 accel/gyro activation requests return false; held owned FDs at4/8seconds are core and Nunchuk only. Installed1.20.0 source has no udev joypad sensor callbacks, unlike the newer surveyed RXYZ fallback; that branch is not blamed. Generic mapping passes only for these bindings and profiles; no gyro or complete printed-label acceptance."
+}

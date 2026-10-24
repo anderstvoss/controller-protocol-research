@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-retroarch-consumer-result",
+  "statement": "RetroArch1.20.0 Debian udev joypad receives changing core buttons and Nunchuk axes/buttons from both UHID and uinput in an original no-content diagnostic core. All8 accel/gyro activation requests return false; held owned FDs at4/8seconds are core and Nunchuk only. Installed1.20.0 source has no udev joypad sensor callbacks, unlike the newer surveyed RXYZ fallback; that branch is not blamed. Generic mapping passes only for these bindings and profiles; no gyro or complete printed-label acceptance.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad840db277; installed version-pinned Linux consumers; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W7 bounded local virtual-host results; explicit uinput comparison in RetroArch arm. Survey source expectations are not host passes. No physical, calibrated, radio or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w7-retroarch-1-20-udev",
+    "wii-gap-consumer-retroarch-udev"
+  ],
+  "experiments": [
+    "wii-w7-retroarch-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

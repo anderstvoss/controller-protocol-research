@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-cemu-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w7-cemu-host.json",
+  "sha256": "36a587c73aa20b19e510d902425213c1843618207473bd852b8a97dd184523fe",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [
+    "wii-w7-cemu-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device summaries to counts, extrema, interface bits, versioned outcomes and checkpoint dispositions. Removed paths, identities, raw bytes, raw logs, wall clocks and debug text. Referenced survey claims remain unchanged. Private host-output trace SHA256 4ae718edef66e4b19c072e65e449c8d08794150dcd201fb72576079b32dac277. No third-party code or physical capture redistributed.",
+  "claims": []
+}

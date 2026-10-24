@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-xwiimote-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w7-xwiimote-2-core",
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-consumer-xwiimote-header",
+    "wii-gap-consumer-xwiimote-monitor",
+    "wii-gap-consumer-xwiimote-show"
+  ],
+  "fixtures": [
+    "wii-w7-xwiimote-host"
+  ],
+  "procedure": "Original W7 owned-device tools and isolated profiles; availability and human grant confirmation first. Fixed attachment per consumer, two explicit drive vectors, exact HID driver identity, explicit owned event paths and foreign full-path input opens denied in instrumented apps. UI12seconds, libxwiimote18seconds, evtest12seconds, RetroArch25second bounds, Dolphin35second bounds; separate trace positive control. No ROM or game. Profile-owned children closed then device close twice; verify owned HID/raw/LED/uinput nodes gone. Publish only reduced observations.",
+  "semantic_outcome": "Installed xwiishow/libxwiimote2-4.3 enumerate the exact-owned wiimote HID; MotionPlus produces changing signed triples under both drive vectors with kernel mode05. Static offsets10/20/30 subtract exactly per axis. UI toggles and normalization are recorded; no calibrated rates or resting convergence claimed. Nunchuk is detected but its requested interface bit is absent from the opened mask, a version-specific consumer limitation, not virtual extension acceptance."
+}
