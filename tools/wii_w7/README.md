@@ -67,3 +67,15 @@ and corrected observations.
 Verify those children and all owned HID/raw/LED/uinput nodes are gone before
 reducing/publishing results. Preserve private artifacts locally; publish semantic
 counts, version/hash provenance and explicit pass/limit/blocked boundaries only.
+
+## Installed Cemu AppImage repeat
+
+The [additive AppImage experiment](../../docs/wii-w7-cemu-appimage.md) corrects
+W7's incomplete PATH/Flatpak availability inference. `cemu_guard.c` adds private
+owned-byte trace capture and an AF_BLUETOOTH socket refusal to the original
+owned-I/O guard; build.py also produces `cemu_guard.so`. Use only the owned raw
+path in W7_ALLOWED, keeping the external kernel holder separate. It is a dynamic
+hook guard, not a complete sandbox or proof of application-state decoding.
+`cemu_trace.py PRIVATE_TRACE` reduces only native protocol addresses, counts and
+report IDs. Raw reports are not a gyro oracle; calibration error8 and missing
+decoded-state observations remain explicit. No additional dependency is needed.

@@ -97,3 +97,13 @@ deterministic boundary tests make the supported scope reviewable. No Wii protoco
 bug was demonstrated, so there is no model/codec/descriptor patch. A future Cemu
 run needs an available native build/host; a future Dolphin run needs an independently
 observed scanner activation/UI path, not assumed kernel unbinding.
+
+## Subsequent Cemu AppImage correction
+
+The initial availability lookup above checked PATH and Flathub, but missed an
+installed non-PATH ARM64 AppImage. It did not establish that Cemu was absent.
+The additive [AppImage follow-up](wii-w7-cemu-appimage.md) uses the surveyed
+29f2f1f native backend: raw transport works in all four profile/holder arms, while
+empty caller EEPROM calibration and the missing decoded-gyro oracle remain
+explicit limits. Original fixtures/claims are retained unchanged; the new claim
+supersedes the initial availability inference. Current inventory is138 Wii claims.

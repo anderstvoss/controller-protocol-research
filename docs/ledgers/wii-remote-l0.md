@@ -76,7 +76,7 @@ retail calibration, encrypted workflows and activation latency remain unknown.
 
 ## W7 independent consumer checkpoint
 
-Current inventory: **137 Wii claims** (132 before W7);9 remain unknown. Historical
+Initial W7 checkpoint: **137 Wii claims** (132 before W7);9 remained unknown. Historical
 checkpoint snapshots above and in the separate checkpoint ledger stay unchanged.
 Five `wii-w7-*-consumer-result` records separate Cemu availability, libxwiimote
 MotionPlus/normalization, evtest repeatability, RetroArch generic controls and the
@@ -85,6 +85,18 @@ promotes physical, radio, calibrated or complete controller acceptance.
 
 See [W7 bounded results](../wii-w7-consumer-runs.md). The installed RetroArch1.20.0
 has no udev joypad sensor callbacks, unlike the newer surveyed RXYZ fallback.
-Cemu remains blocked before discovery on this host, and Dolphin remains blocked
+The initial Cemu lookup was blocked before discovery (corrected below); Dolphin was blocked
 at establishing direct-scanner enumeration despite separate sandbox access and
 trace-positive-control passes. Existing `wii-gap-*` claims are unchanged.
+
+## W7 Cemu AppImage correction
+
+Current inventory: **138 Wii claims** (137 at the initial W7 checkpoint);9
+remain unknown, with124 source-supported and5 inferred. The original PATH/Flatpak
+lookup missed a non-PATH ARM64 AppImage and did not establish application absence.
+`wii-w7-cemu-appimage-result` explicitly supersedes that inference; original
+records and the137-claim checkpoint above remain unchanged. Cemu29f2f1f exchanges
+raw status, register and input reports on the owned UHID. All four profile/holder
+arms receive EEPROM0016 calibration error8 without an imported image. Native
+report37 delivery in Nunchuk arms does not establish decoded gyro; no calibration
+or physical/whole-controller promotion. See [AppImage follow-up](../wii-w7-cemu-appimage.md).
