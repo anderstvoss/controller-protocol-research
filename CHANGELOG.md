@@ -9,7 +9,7 @@ affected schema's `schema_version`.
 
 - Fix W7 Cemu test imports when corpus discovery runs from a parent or unrelated working directory. Load the original reducer by a path relative to the test file and add an external-directory regression. Evidence records and runtime helpers are unchanged.
 
-- Correct the incomplete W7 Cemu availability lookup with an installed ARM64 AppImage native-Wiimote run: four holder/profile comparisons and byte-capture repeats, native register attribution and calibration error8 with the default empty caller EEPROM. Raw transport works; decoded gyro remains unobserved. Add reduced evidence, original trace reducer/guard and deterministic boundary tests; retain prior records unchanged.
+- Correct the incomplete W7 Cemu availability lookup with an installed ARM64 AppImage native-Wiimote run: four holder/profile comparisons and byte-capture repeats, native register attribution and calibration error 8 with the default empty caller EEPROM. Raw transport works; decoded gyro remains unobserved. Add reduced evidence, original trace reducer/guard and deterministic boundary tests; retain prior records unchanged.
 
 - Record W7 independent Wii consumers: bounded libxwiimote gyro/normalization and evtest passes, RetroArch UHID/uinput generic controls with version-specific sensor limitations, ARM64 Cemu availability blocker and unresolved Dolphin direct-scanner checkpoint. Add original owned-device probes and reduced semantic evidence; preserve survey and physical claims.
 
