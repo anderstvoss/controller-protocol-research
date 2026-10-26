@@ -20,7 +20,7 @@ Protocol state is warm and reused within each producer; no cold-isolation claim.
 | Dolphin image, MP+Nunchuk | Speaker mute acknowledgement before MP setup | `wii-w8-dolphin-image-motionplus-nunchuk` |
 
 Each prefix has its own `-result` claim, `-host-run` experiment and `-host`
-fixture. The seven claims raise the current Wii count from 138 to 145 without
+fixture. The seven baseline claims raise the Wii count from 138 to 145 at that stage without
 changing source-only gaps or promoting physical evidence. Earlier W7 records
 are historical and remain unchanged.
 
@@ -58,5 +58,61 @@ All completed consumers are gone and their owned nodes were verified removed.
 
 The earlier stop instruction prevented the fourth Cemu baseline arm. The later
 owner decisions authorize separate imported-calibration and speaker-control ACK
-PRs, both for Anders to merge. Imported-block reruns and the final evidence and
-adoption PRs await those merges; this report makes no claim about those reruns.
+PRs, both for Anders to merge. Those changes merged as `0c36691` and `5a11e50`; the post-merge results follow.
+
+
+## Post-merge imported-block results
+
+The reruns use merged code `5a11e507ac973c23ca10beb36edb44fc35034376` with
+the same caller EEPROM image plus synthetic MP and Nunchuk imports. The MP
+block uses the pinned emulator fallback layout, a 16-bit zero of 32768, scale
+offset 17408, fast/slow degree scales of 1200/270 and non-retail UID placeholders.
+The Nunchuk block uses a 512-unit centre, 616-unit one-g value and caller-chosen
+stick min/max/centre of 0/255/128. CRC32 and additive checksums were independently
+validated. No resource bytes or images are published or installed as defaults.
+
+| Arm | Bound and result | First unpassed checkpoint |
+| --- | --- | --- |
+| Dolphin imported MP | 180-second transport arm plus 150-second mapping observation; MP calibration read succeeds in two chunks | No failure observed through mapped gyro within this scope |
+| Dolphin imported MP+Nunchuk | 180 seconds; mapped device visible and active mode 5 | 12,128 A400F6/4 reads receive error 7 before MP calibration |
+| Cemu imported MP | 35-second coexistence arm; base EEPROM succeeds | Repeated mapped/unmapped identity initialization, including A600FA error 7; decoded state unobserved |
+| Cemu imported MP+Nunchuk | 35-second coexistence arm; base EEPROM and 44 A40020/16 reads succeed | Replies match the MP block first half while mapped; no clean Nunchuk-path or decoded-gyro pass |
+
+The two Dolphin prefixes are `wii-w8-dolphin-imported-motionplus` and
+`wii-w8-dolphin-imported-motionplus-nunchuk`. Cemu uses
+`wii-w8-cemu-imported-motionplus` and
+`wii-w8-cemu-imported-motionplus-nunchuk`, each with its own claim, experiment
+and reduced fixture. The current Wii inventory is 149 claims.
+
+For MP-only, the owned native mapping window visibly lists the Bluetooth
+ControllerInterface device. Inspected private samples show A alternating
+between active and inactive; acceleration preview changes between displayed
+1.37 g and 2.27 g; two basic IR points move; and the gyroscope indicator changes.
+The UI profile uses explicit bindings and sets its additional gyro
+auto-calibration period to zero. Source-backed basic IR vectors are driven only
+while a basic-capable report mode is selected. These are application-state
+observations with synthetic calibration, not proof of accurate rates, physical
+calibration, all controls or complete-controller acceptance. A private emulated
+mapping slot is used; no Real slot or game content is used.
+
+For MP+Nunchuk, the mapping device and one acceleration preview were observed,
+but changing buttons/motion were not established. Basic IR drive was not
+enabled in that arm. Its first protocol blocker is the mapped passthrough
+identity window at F6, as the own source task order and native requests show.
+No new model, codec, descriptor or API behavior was implemented to bypass it.
+This is not evidence of zero gyro or physical incompatibility.
+
+The Cemu clean no-holder preflight stopped before application launch because a
+foreign browser held a companion event node. The original no-holder guard was
+retained. Separate coexistence arms ran with exactly the previously observed
+holder at preflight; the runner opened no holder and changed no foreign process.
+Native writes are attributed directly, while shared kernel outputs are not
+assigned to one actor. Matching the returned MP block to caller data does not
+establish Cemu interpreted it as Nunchuk calibration. The original no-holder
+Nunchuk read path therefore remains unretested; decoded Cemu gyro is unobserved.
+
+All owned consumers exited between profiles. The producer closed idempotently;
+its HID, hidraw and four LED nodes were verified removed. Screenshots, raw bytes,
+logs, process/device identities and host paths remain private. Source and
+artifact hashes preserve provenance; no latency or firmware-cadence acceptance
+is inferred.

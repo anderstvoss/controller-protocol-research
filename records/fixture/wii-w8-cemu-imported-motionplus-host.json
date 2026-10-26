@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-motionplus-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w8-cemu-imported-motionplus-host.json",
+  "sha256": "c1165a41d51b359593a8ff8230b1b2e068ca2dbc677dccac511fe0fed62868d7",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w8-cemu-imported-motionplus-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned native I/O and private caller-block comparisons to semantic counts and labels; no raw bytes, logs, paths, identities, process IDs, wall clocks or binaries published. Original private artifact SHA256 fbc86e19aa5a68a5f5e81fdc6b54d3ef2dca99c2fe54908fffeb11eb82f1a82b.",
+  "claims": []
+}

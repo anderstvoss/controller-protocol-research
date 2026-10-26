@@ -105,7 +105,7 @@ or physical/whole-controller promotion. See [AppImage follow-up](../wii-w7-cemu-
 ## W8 caller-image and native Dolphin baseline
 
 The historical W7 inventory remains 138 Wii claims. The W8 baseline brings the
-current inventory to **145 Wii claims**, adding seven bounded virtual-consumer
+baseline inventory to **145 Wii claims**, adding seven bounded virtual-consumer
 observations without changing the source or physical evidence category. See
 [the W8 report](../wii-w8-consumer-runs.md) for the per-arm records and limits.
 
@@ -119,3 +119,17 @@ physical, firmware cadence, audio or whole-controller claim is promoted.
 
 These are the pre-resource and pre-speaker-ACK baselines. Post-merge imported
 block reruns remain pending; owner instruction reserves both code merges.
+
+
+### W8 post-merge reruns
+
+Current inventory: **149 Wii claims**, including four imported-block consumer
+arm sets on merged code `5a11e507ac973c23ca10beb36edb44fc35034376`. Native
+Dolphin MP-only reads MP calibration and visibly changes mapped A, accelerometer,
+basic IR and gyro indicators under explicit lab settings. MP+Nunchuk stops on
+A400F6/4 error 7 before calibration. No additional register model is added.
+Cemu coexistence arms retain a foreign companion holder: base reads succeed,
+but native identity/init exchange and unobserved decoding limit the result.
+The mapped 16-byte calibration replies in its MP+Nunchuk arm match the MP block,
+not Nunchuk. The clean no-holder retest was blocked before application launch.
+These distinctions do not promote physical, calibrated-rate or game acceptance.

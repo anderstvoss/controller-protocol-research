@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add four post-merge W8 imported-block consumer arm sets: changing native
+  Dolphin MP mapping indicators, the MP+Nunchuk F6 identity boundary, and Cemu
+  coexistence limits. Keep clean no-holder and decoded-state unknowns explicit;
+  retain the factory, physical, rate, audio and game acceptance gaps.
+
 - Record seven bounded W8 caller-image Cemu and native Dolphin baseline arms.
   Separate successful base EEPROM reads, Nunchuk extension calibration error 7,
   native discovery and the speaker-mute ACK boundary from unobserved decoded

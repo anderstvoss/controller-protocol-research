@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-imported-motionplus-result",
+  "statement": "Native ARM64 Dolphin 2503 on merged W8 code enumerates and connects the MP-only virtual Remote with caller EEPROM and imported synthetic MP/Nunchuk blocks. It reports mode 4 and reads 32 MP calibration bytes successfully in two chunks. An additional bounded mapping-view observation shows changing A, accelerometer preview, two basic IR points and gyro indicator. Explicit bindings and a zero UI gyro auto-calibration period are lab settings; rate accuracy, physical compatibility and game acceptance are not established.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded virtual-host observation; mapping UI changes only where explicitly observed. No physical calibration, rate accuracy, audio, radio, game or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi",
+    "wii-w8-dolphin-2503-imu-gyro",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-c5-nunchuk-cpp"
+  ],
+  "experiments": [
+    "wii-w8-dolphin-imported-motionplus-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
