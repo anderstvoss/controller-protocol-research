@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Human-confirmed temporary grants on an identity-checked virtual device. No agent privilege elevation, unbind, persistent policy, physical controller, radio or game content.",
+  "config": {
+    "consumer_role": true,
+    "seconds_bound": 35,
+    "fresh_app_profile": true,
+    "cold_device_isolation": false,
+    "same_virtual_device_reused_between_profiles": true,
+    "sdl_wii_disabled": true,
+    "radio_socket_guard": true,
+    "no_game_content": true,
+    "eeprom": "image",
+    "extension_blocks_imported": false,
+    "native_non_flatpak": true,
+    "real_slots_disabled": true,
+    "own_file_log_primary": true,
+    "debug_logging_requested": true,
+    "synthetic_caller_image": {
+      "length": 42,
+      "sha256": "d2a775ab613d7f88d81b3298643440b03ff2c7bb4d1a024e2d6e5e3f5b5ad3a8",
+      "zero_g_raw": 512,
+      "one_g_raw": 616,
+      "scale_origin": "Pinned Dolphin fallback constants chosen for this lab; not a codec factory scale or retail data",
+      "both_checksums_valid": true
+    }
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "0da0d020bdcd5c28d6b63dd5007783c855e7e53c",
+    "consumer_version": "Dolphin 2503 Debian 2503+dfsg-1+deb13u1 ARM64",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "actual_probe_binary_sha256": "3e36cb0e9843aac3c1bee20d0379ed9a537cda070cdf824f50a9e99e16987c06",
+    "actual_probe_source_sha256": "791330ae5cbf0e287bf75cacb7c3933668967ae5364ac57480df412ac71613b9",
+    "original_private_artifact_sha256": "28007b2605847bc46beb39889568e6ed81945e49888ae6b80757a469ec066eb8"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "owned_consumer_children_gone": true,
+    "idempotent_close": true,
+    "holders_closed_between_arms": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "consumer": "Dolphin 2503 Debian 2503+dfsg-1+deb13u1 ARM64",
+        "profile": "motionplus-nunchuk",
+        "trace": {
+          "counts": {
+            "native_raw_writes": 32,
+            "owned_enumeration_observations": 70,
+            "owned_raw_opens": 33,
+            "status_requests": 6
+          },
+          "native_report_modes": {
+            "30": 6,
+            "37": 1
+          },
+          "native_memory_reads": {
+            "000016/10": 1,
+            "a400fe/512": 1
+          },
+          "native_single_byte_register_writes": {
+            "a400f0/55": 1,
+            "a400fb/00": 1,
+            "b00030/08": 1,
+            "b00033/01": 1
+          },
+          "received_report_ids": {
+            "20": 13,
+            "21": 10,
+            "22": 18,
+            "30": 22,
+            "34": 22,
+            "36": 4,
+            "37": 3193
+          },
+          "memory_read_reply_errors": {
+            "0": 9,
+            "7": 1
+          },
+          "memory_read_address_errors": {
+            "0016/0": 1,
+            "00fa/0": 8,
+            "00fe/7": 1
+          },
+          "decoded_gyro_observed": false,
+          "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+        },
+        "native_output_report_counts": {
+          "11": 1,
+          "12": 7,
+          "13": 1,
+          "15": 6,
+          "16": 6,
+          "17": 2,
+          "19": 7,
+          "1a": 1,
+          "a2": 1
+        },
+        "first_unpassed_protocol_checkpoint": "Speaker mute output 0x19 has no acknowledgement before MP calibration",
+        "decoded_application_state_observed": false,
+        "scope_limit": "Captured replies include shared kernel traffic; no sole-actor race attribution or decoded-motion inference.",
+        "own_log": {
+          "nonempty": true,
+          "hidapi_discovery_notice": true,
+          "controllerinterface_device_added": true,
+          "base_calibration_failure_count": 0,
+          "expired_handler_count": 6,
+          "kernel_binding_warning_observed": false
+        },
+        "ladder": {
+          "a_enumeration": "observed in own log",
+          "b_temporary_usability_write": "observed transport only; not a claim that its status request was accepted",
+          "c_connect": "source-linked own-log device addition",
+          "d_mapping_ui": "not observed",
+          "e_buttons": "decoded state not observed",
+          "f_accelerometer": "base calibration read succeeds; decoded state not observed",
+          "g_ir": "visible objects not observed",
+          "h_mp_activation": "not reached by consumer before speaker mute handler stalls",
+          "i_mp_calibration": "not requested by native consumer in bounded arm",
+          "j_gyro": "decoded state not observed"
+        },
+        "log_limit": "Debug logging requested, but installed binary omits inspected debug success strings. Notice/warning own logs are primary; owned I/O is supplemental. Offscreen attempts are excluded.",
+        "external_kernel_holder": false,
+        "holder_limit": "No external holder; Dolphin may open the owned evdev companion through its own backend. No claim that kernel MP use is absent."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Native Debian ARM64 Dolphin 2503, motionplus-nunchuk, with a private synthetic caller EEPROM image, enumerates the virtual Remote through HIDAPI and adds its ControllerInterface device according to its own notice log. The 10-byte base calibration read at 0x0016 succeeds and own-log base failures disappear. The consumer then repeatedly sends speaker-mute output 0x19 and expires handlers; no native MotionPlus calibration read is observed in the bound. Speaker behavior remains D7-gated and unchanged. Mapping UI and decoded motion are unobserved; raw reports and device addition are not decoded gyro acceptance. No physical compatibility or radio operation is inferred."
+  }
+}

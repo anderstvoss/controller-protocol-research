@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-image-motionplus-no-holder-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w8-cemu-image-motionplus-no-holder-host.json",
+  "sha256": "b98a1fb51f50a8b4c3a28f628cf597d24bc8c45754b75e7e1b0a82ab083fae4b",
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi"
+  ],
+  "experiments": [
+    "wii-w8-cemu-image-motionplus-no-holder-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device observations into versions, protocol addresses/counts and semantic outcomes. Removed raw bytes, logs, identities, host paths, serials, MACs and wall clocks. Original private artifact SHA256 96c5b3231e58827df9eff0c590d1b6f5d52455f1fae1fb2c93cd2126ba89d86f. Consumer and helper binaries are not redistributed.",
+  "claims": []
+}

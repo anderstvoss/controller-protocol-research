@@ -100,3 +100,22 @@ raw status, register and input reports on the owned UHID. All four profile/holde
 arms receive EEPROM 0016 calibration error 8 without an imported image. Native
 report 37 delivery in Nunchuk arms does not establish decoded gyro; no calibration
 or physical/whole-controller promotion. See [AppImage follow-up](../wii-w7-cemu-appimage.md).
+
+
+## W8 caller-image and native Dolphin baseline
+
+The historical W7 inventory remains 138 Wii claims. The W8 baseline brings the
+current inventory to **145 Wii claims**, adding seven bounded virtual-consumer
+observations without changing the source or physical evidence category. See
+[the W8 report](../wii-w8-consumer-runs.md) for the per-arm records and limits.
+
+Cemu with a synthetic caller EEPROM image passes its base calibration read.
+The MP+Nunchuk no-holder arm then reads Nunchuk calibration at A40020 and gets
+error 7. Native Dolphin 2503 enumerates and adds the ControllerInterface device
+in all four default/image arms. Empty EEPROM blocks base calibration; the
+image-only arms pass that read but stall on speaker mute acknowledgement before
+MP calibration. Mapping UI and decoded motion remain unobserved. No radio,
+physical, firmware cadence, audio or whole-controller claim is promoted.
+
+These are the pre-resource and pre-speaker-ACK baselines. Post-merge imported
+block reruns remain pending; owner instruction reserves both code merges.
