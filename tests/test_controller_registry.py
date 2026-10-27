@@ -49,7 +49,9 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
         puck = rows['steam-controller-2026-puck']['transports']
         self.assertEqual(puck['usb'], 'Source evidence')
-        self.assertEqual(puck['source_only'], 'Source evidence')
+        self.assertNotIn('source_only', puck)
+        self.assertEqual(rows['steam-controller-2026-puck']['consumer_transports']['source_only'],
+                         'Source evidence')
 
     def test_consumer_claims_do_not_promote_device_evidence(self):
         claim_path = self.root / 'records/claim/pro2-physical-macro-controls.json'
