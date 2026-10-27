@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-godot-linux-sdl3",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/godotengine/godot-docs/e13e2a70b71c0182cd03995266c4a4ec1317ace9/tutorials/inputs/controllers_gamepads_joysticks.rst",
+  "revision": "e13e2a70b71c0182cd03995266c4a4ec1317ace9",
+  "sha256": "048db3fbd719f35b7891eb63d261096fe589ceebb4b11583a3ab4be7999ca736",
+  "lineage": "godotengine/godot-docs",
+  "locator": "Lines 7-15: Godot 4.5+ Linux/macOS/Windows uses SDL3 for controller input; engine documentation only, no Steam 2026 acceptance."
+}
