@@ -8,13 +8,15 @@
     "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 543-561,719-743; MotionPlus.cpp 430-465; MotionPlus.h 214-240. WiiBrew oldid120079 does not independently document F6-F9."
+    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 543-561,719-743; MotionPlus.cpp 430-465; MotionPlus.h 214-240. WiiBrew oldid120079 does not independently document F6-F9. Provenance audit 2026-10-27: category-1-leaning / low-to-moderate-confidence hardware-derived hypothesis ONLY; no physical F6 read and Dolphin emulator/ControllerInterface not independent. Dolphin's F6-before-calibration gate is consumer-specific. 2019 source, wiiuse 2026 review and docs/wii-dolphin-attachment.md §1a."
   },
   "sources": [
     "wii-gap-dolphin-attach-ciface-3eb30c",
     "wii-gap-dolphin-attach-mp-emu-3eb30c",
     "wii-gap-dolphin-attach-mp-layout-3eb30c",
-    "wii-gap-wiibrew-motionplus-oldid120079"
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-attach-2019-passthrough-emulation-ba1b33",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769"
   ],
   "experiments": [],
   "conflicts_with": [],

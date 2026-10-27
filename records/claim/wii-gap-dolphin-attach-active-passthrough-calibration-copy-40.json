@@ -8,13 +8,17 @@
     "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "evidence_role: consumer. Dolphin 3eb30c MotionPlus.cpp 445-464, MotionPlus.h 186-208 and WiimoteController.cpp 606-656. Related prior unknown wii-gap-extension-calibration-checksum-unknown. No physical data, no assumed checksum correctness."
+    "scope": "evidence_role: consumer. Dolphin 3eb30c MotionPlus.cpp 445-464, MotionPlus.h 186-208 and WiimoteController.cpp 606-656. Related prior unknown wii-gap-extension-calibration-checksum-unknown. No physical data, no assumed checksum correctness. Provenance audit 2026-10-27: category-2-leaning / moderate-confidence Dolphin compatibility representation; 2010 game checksum observation and deliberately valid calibration at MP offset 40 does NOT verify real hardware byte-for-byte cache or universality. Source lineage docs/wii-dolphin-attachment.md §1a."
   },
   "sources": [
     "wii-gap-dolphin-attach-ciface-3eb30c",
     "wii-gap-dolphin-attach-mp-emu-3eb30c",
     "wii-gap-dolphin-attach-mp-layout-3eb30c",
-    "wii-gap-wiibrew-motionplus-oldid120079"
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-attach-history-calibration-register-58d646",
+    "wii-gap-dolphin-attach-history-calibration-rationale-58d646",
+    "wii-gap-dolphin-attach-2019-passthrough-emulation-ba1b33",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769"
   ],
   "experiments": [],
   "conflicts_with": [],
