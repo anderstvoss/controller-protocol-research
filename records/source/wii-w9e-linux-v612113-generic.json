@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-linux-v612113-generic",
+  "kind": "kernel_source",
+  "url": "https://github.com/gregkh/linux/blob/v6.12.113/drivers/hid/hid-generic.c",
+  "revision": "v6.12.113",
+  "sha256": "78ec96cd1a97fc8b186853e571eef5648866bd3b8c74c9141b374e09318ad93b",
+  "lineage": "Linux stable HID core and generic driver; not independent of earlier Linux records",
+  "locator": "hid_generic_match and __check_hid_generic. Matching special drivers prevent generic binding unless the global ignore-special policy or a matching quirk applies; neither was changed in this run. Paraphrased inspection of upstream stable version; not a hash of the Debian running kernel binary."
+}
