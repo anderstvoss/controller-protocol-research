@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-pr14910-unmerged",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/3503d8eac1a1fccf22f32dcdce81dbc46322559f/Source/Core/Core/HW/WiimoteEmu/MotionPlus.cpp",
+  "revision": "3503d8eac1a1fccf22f32dcdce81dbc46322559f",
+  "sha256": "72ab40e58f997abc97725238f586716d19c65d861268922e30d963069ba81712",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "Dolphin GPL-2.0-or-later; proposed PR #14910 (open and unmerged when inspected 2026-10-27) substitutes precomputed 64-byte X/Y challenge results for mbedTLS computation. Do not reproduce results or values. Source role: proposed consumer implementation, not merged evidence."
+}

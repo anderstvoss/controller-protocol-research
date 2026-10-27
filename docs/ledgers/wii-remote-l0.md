@@ -158,7 +158,7 @@ Runtime shim observations remain not run in this source-only record.
 
 ### W9 bound-kernel compat controls
 
-Current inventory: **171 Wii claims**. Four new `wii-w9-*` arm sets retain
+Current inventory: **178 Wii claims**, including the seven `wii-gap-challenge-*` claims from #49. Four new `wii-w9-*` arm sets retain
 MP+Nunchuk on/off F6 boundaries after non-Dolphin reinitialization, an MP-only
 Dolphin mapped-gyro positive control and a fresh kernel evdev delivery pass.
 The reused post-Dolphin missing-MP-node preflight and excluded pilot remain

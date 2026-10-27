@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-libogc-motionplus-959",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/959871c08ed80d1a63b258bc207218623ea1b0e5/wiiuse/motion_plus.c",
+  "revision": "959871c08ed80d1a63b258bc207218623ea1b0e5",
+  "sha256": "ad96be2ff55a64869a83f36021c5b5fe2a7ed86812fa5212e7c48e24750e1b3c",
+  "lineage": "devkitPro/libogc",
+  "locator": "libogc Wiiuse licensed under its upstream project terms; pinned source lines 20-124 initializes MotionPlus with normal register probes and mode 04, does not poll F7 or request 0x50 in inspected path. Source role: homebrew consumer, not an OEM game SDK or hardware capture."
+}
