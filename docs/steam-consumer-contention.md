@@ -1,7 +1,7 @@
 # Steam Controller 2026 — Linux consumer contention decision brief
 
 **Research parity, prep for C6 and step 16**  
-**Evidence:** source-only; baseline research `main` `947841357371f4cb1c09713700ee65926fec3a7f` (2026-10-27). **No host/hardware execution.** This is the Steam companion to [Wii Dolphin contention](wii-dolphin-attachment.md) and its [technical appendix](wii-dolphin-attachment-technical.md). Scope is **direct wired USB HID `28de:1302`**, not Puck, BLE, LEDs or audio.
+**Evidence:** source-only; initial baseline `947841357371f4cb1c09713700ee65926fec3a7f`; updated against merged main `8aeab2ba524bbdab3c41f84ef35ba73909bd1ca0` (2026-10-27). **No host/hardware execution.** This is the Steam companion to [Wii Dolphin contention](wii-dolphin-attachment.md) and its [technical appendix](wii-dolphin-attachment-technical.md). Scope is **direct wired USB HID `28de:1302`**, not Puck, BLE, LEDs or audio.
 
 **Decision for the buildout:** Run the step-16 matrix *both* with the Linux v7.3-rc1 `hid-steam` binding and with a confirmed unbound/generic HID path. Treat SDL HIDAPI recognition, kernel evdev registration, Steam-client acceptance and lizard state as **independent** observations; no combination is qualified from source alone. Do not infer that opening hidraw is exclusive ownership of the USB device.
 
@@ -10,7 +10,7 @@
 - **K:** Linux `hid-steam.c` at [`cee9395acd8043be0644b25c34bfa86623f2b935`](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c), repository source `steam-ibex-linux-driver`, SHA-256 `c37c8c342f7e1c0276ca65e1b297d70ee2f86b108e2b9541d7316f4e99798a3a`. GPL source **not copied**.
 - **K−:** Linux v7.2 [`hid-ids.h`](https://github.com/torvalds/linux/blob/8d3ae59288f1e7d58d76558a6ee96d533bc5019f/drivers/hid/hid-ids.h), source `steam-ibex-linux-predecessor`; absent IBEX identity at this inspected predecessor. **Does not prove every third-party or downstream kernel lacks a claim.**
 - **S:** SDL3 Triton [`SDL_hidapi_steam_triton.c`](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c), source `steam-triton-sdl-driver`, SHA-256 `11dedf48afbec74ee373538618fe123dc66cc854c07419cdb8d559fc063074c4`. Identity/dispatch/OS HIDAPI separately pinned in `steam-triton-sdl-identities`, `steam-triton-sdl-dispatch`, `steam-triton-sdl-hidraw`.
-- **Pending:** research [PR #32](https://github.com/anderstvoss/controller-protocol-research/pull/32) is unmerged against this baseline. Its `steam-c6-kernel-client-raw-forward`, `steam-c6-kernel-menu-hold-450ms` and `steam-c6-kernel-ibex-evdev-open-close` claim IDs are **pending PR #32** and are not duplicated here. The upstream pinned K source independently grounds the provisional descriptions below.
+- **Merged:** research [PR #32](https://github.com/anderstvoss/controller-protocol-research/pull/32) is present on updated `main`. The existing `steam-c6-kernel-client-raw-forward`, `steam-c6-kernel-menu-hold-450ms` and `steam-c6-kernel-ibex-evdev-open-close` claims are adopted by reference, not duplicated here. The upstream pinned K source independently grounds the descriptions below.
 
 ## 1. Ownership and scheduling
 
