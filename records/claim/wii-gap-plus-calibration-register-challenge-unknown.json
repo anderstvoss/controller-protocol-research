@@ -14,8 +14,8 @@
     "wii-gap-plus-dolphin-mp-3eb",
     "wii-gap-dolphin-attach-mp-layout-3eb30c",
     "wii-gap-wiibrew-motionplus-oldid120079",
-    "wii-gap-dolphin-attach-passthrough-four-byte-id-f6",
-    "wii-gap-challenge-f7-first-stage-community"
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-challenge-pr7861-registers"
   ],
   "experiments": [],
   "conflicts_with": [],
