@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-base-features-and-tr-transport",
+  "statement": "Linux Gen 1 and Gen 2 module tables share buttons, rumble, battery, LEDs, accelerometer and IR; Gen 2 adds builtin MP policy. This supports a reusable consumer base implementation, not bit-identical physical HID descriptors, report set, EEPROM, speaker, IR behavior or LED/battery timing. Reverse engineering references describe TR using a different Bluetooth chipset/name and stricter pairing/data-channel behavior versus older controllers, which may require authentication before data-channel opening and avoid legacy control-channel SET_REPORT. Exact per-revision base HID/EEPROM differences are unverified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 core.c 570-605; xwiimote DEV_REMOTE 36-116, DEVICES 316-337; wiiuse README 103-112. WiiBrew current page corroborates TR Bluetooth difference but no byte-for-byte descriptor trace. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-xwiimote-remote-4df",
+    "wii-gap-plus-xwiimote-devices-4df",
+    "wii-gap-plus-wiiuse-readme-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

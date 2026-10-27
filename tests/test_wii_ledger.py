@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 174)
+        self.assertEqual(len(claims), 183)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -169,6 +169,31 @@ class WiiLedger(unittest.TestCase):
             'wii-gap-challenge-static02-limits',
         ]
         self.assertEqual(len(ids), 7)
+        for claim_id in ids:
+            claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
+            self.assertIn('evidence_role:', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)
+            self.assertEqual(claim['conflicts_with'], [], claim_id)
+            self.assertTrue(claim['sources'], claim_id)
+
+
+    def test_remote_plus_source_only_scope(self):
+        root = Path(__file__).resolve().parents[1]
+        ids = [
+            'wii-gap-plus-physical-revision-taxonomy',
+            'wii-gap-plus-bluetooth-identities',
+            'wii-gap-plus-kernel-gen2-builtin-policy',
+            'wii-gap-plus-app-enumeration-versus-mp',
+            'wii-gap-plus-integrated-mp-presence-and-identity-gap',
+            'wii-gap-plus-passthrough-downstream-not-internal',
+            'wii-gap-plus-calibration-register-challenge-unknown',
+            'wii-gap-plus-base-features-and-tr-transport',
+            'wii-gap-plus-compat-options-and-fidelity-gate',
+        ]
+        self.assertEqual(len(ids), 9)
         for claim_id in ids:
             claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
             self.assertEqual(claim['status'], 'source_supported', claim_id)
