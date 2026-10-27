@@ -19,5 +19,6 @@
     "steam-c6-disagreement-gain-kernel"
   ],
   "supersedes": [],
-  "rejection_scope": null
+  "rejection_scope": null,
+  "evidence_role": "consumer"
 }
