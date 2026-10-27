@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-image-motionplus-nunchuk-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi"
+  ],
+  "fixtures": [
+    "wii-w8-dolphin-image-motionplus-nunchuk-host"
+  ],
+  "procedure": "Run one 35-second profile after exact-owned identity and human grant verification. No-holder precedes holder for Cemu; Dolphin uses native visible Qt, own file logging with debug requested, continuous scanning and ControllerInterface, all Real slots disabled, no game content. A process guard denies foreign input opens and radio sockets. Fresh application profiles, explicit child cleanup between arms; warm protocol state is retained within each device. Close twice and verify all owned nodes disappear. Publish reduced results only.",
+  "semantic_outcome": "Native Debian ARM64 Dolphin 2503, motionplus-nunchuk, with a private synthetic caller EEPROM image, enumerates the virtual Remote through HIDAPI and adds its ControllerInterface device according to its own notice log. The 10-byte base calibration read at 0x0016 succeeds and own-log base failures disappear. The consumer then repeatedly sends speaker-mute output 0x19 and expires handlers; no native MotionPlus calibration read is observed in the bound. Speaker behavior remains D7-gated and unchanged. Mapping UI and decoded motion are unobserved; raw reports and device addition are not decoded gyro acceptance. No physical compatibility or radio operation is inferred."
+}

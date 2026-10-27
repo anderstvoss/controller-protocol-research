@@ -100,3 +100,47 @@ raw status, register and input reports on the owned UHID. All four profile/holde
 arms receive EEPROM 0016 calibration error 8 without an imported image. Native
 report 37 delivery in Nunchuk arms does not establish decoded gyro; no calibration
 or physical/whole-controller promotion. See [AppImage follow-up](../wii-w7-cemu-appimage.md).
+
+
+## W8 caller-image and native Dolphin baseline
+
+The historical W7 inventory remains 138 Wii claims. The W8 baseline brings the
+baseline inventory to **145 Wii claims**, adding seven bounded virtual-consumer
+observations without changing the source or physical evidence category. See
+[the W8 report](../wii-w8-consumer-runs.md) for the per-arm records and limits.
+
+Cemu with a synthetic caller EEPROM image passes its base calibration read.
+The MP+Nunchuk no-holder arm then reads Nunchuk calibration at A40020 and gets
+error 7. Native Dolphin 2503 enumerates and adds the ControllerInterface device
+in all four default/image arms. Empty EEPROM blocks base calibration; the
+image-only arms pass that read but stall on speaker mute acknowledgement before
+MP calibration. Mapping UI and decoded motion remain unobserved. No radio,
+physical, firmware cadence, audio or whole-controller claim is promoted.
+
+These are the pre-resource and pre-speaker-ACK baselines. Post-merge imported
+block reruns remain pending; owner instruction reserves both code merges.
+
+
+### W8 post-merge reruns
+
+Inventory before clean follow-up: **149 Wii claims**, including four imported-block consumer
+arm sets on merged code `5a11e507ac973c23ca10beb36edb44fc35034376`. Native
+Dolphin MP-only reads MP calibration and visibly changes mapped A, accelerometer,
+basic IR and gyro indicators under explicit lab settings. MP+Nunchuk stops on
+A400F6/4 error 7 before calibration. No additional register model is added.
+Cemu coexistence arms retain a foreign companion holder: base reads succeed,
+but native identity/init exchange and unobserved decoding limit the result.
+The mapped 16-byte calibration replies in its MP+Nunchuk arm match the MP block,
+not Nunchuk. The clean no-holder retest was blocked before application launch.
+These distinctions do not promote physical, calibrated-rate or game acceptance.
+
+
+### W8 clean Cemu follow-up
+
+Current inventory: **151 Wii claims**. Two additional 35-second imported-resource
+arms pass no-holder preflight after the browser holder closes. MP has no native
+extension calibration read; MP+Nunchuk has 18 successful A40020/16 replies,
+17 matching caller Nunchuk calibration and one matching MP first half. This
+establishes delivery beyond the earlier refusal, with kernel mapping still
+shared. Repeated initialization and decoded application motion remain the next
+unestablished checkpoint. No additional model change or physical promotion.
