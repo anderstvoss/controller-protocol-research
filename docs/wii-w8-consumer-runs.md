@@ -145,3 +145,39 @@ The new prefixes are `wii-w8-cemu-imported-clean-motionplus` and
 rewriting the previous arms: W8 now contains 13 arms and the current Wii
 inventory is 151 claims. Both consumers exited before the next profile; fresh
 HID, raw and four LED nodes were verified removed after idempotent close.
+
+
+## Cemu setup-order diagnosis
+
+The clean captures contain event order but no timestamps. The pinned source
+`wii-gap-consumer-cemu-provider` has a status poll before duplicate filtering
+in device discovery. Its status handler selects IR and report mode, clears
+extension state on an absent-extension flag and requests extension setup when
+present with no selected extension. Identity replies update the selected
+extension; IR changes also select a report mode. The ACK handler records errors
+but does not wait for an ACK before advancing. This is a source-based
+explanation of the observed repeated work, not an instrumented internal-state
+or timing measurement.
+
+| Clean arm | Exact observed predecessor / boundary |
+| --- | --- |
+| MP | One IR setup, not a repeated full setup. Native A400F0 and A400FB writes receive ACK error 7, then A400FA/6 receives read error 7 after shared mapping changes. Later 34 native status requests accompany 53 mode 33 selections. Received status flags are absent 38 times and present once. |
+| MP+Nunchuk | 20 IR setups, including 19 repeats: preceding native request is mode 37 ten times and mode 33 nine times. The last non-data reply is successful calibration ten times, successful identity seven times, successful calibration once more under mode 33, and present-extension status once. No error reply precedes any repeat. |
+
+For MP+Nunchuk, nine extension-init bursts include the first setup. Across the
+eight repeats, the immediately preceding native request/reply is: status
+request then present status four times; mode 33 then present status once;
+and mode 33 then successful write ACK three times. There are 140 successful
+write ACKs, no observed error ACK, and all memory replies succeed. The captures
+therefore do not support blaming an error 7 or a missing ACK for those repeats.
+Native IR-enable and mode requests do not request ACKs; their lack of an ACK is
+not a pending-request failure. Shared kernel replies cannot be paired uniquely
+to a native Cemu request by offset or report ID alone.
+
+The first unmet boundary is MP identity/setup retention in the MP-only arm and
+consumer extension/IR state retention in MP+Nunchuk, rather than a calibration
+refusal. Pinned Cemu source plus shared-bank/status observations explain why
+setup work can be queued again; a unique actor or internal-state trace is not
+available. No cited record establishes a contradictory device reply requiring
+a model fix. Record this as a bounded consumer/shared-kernel limitation, keep
+decoded motion unobserved, and do not change the model to suppress it.

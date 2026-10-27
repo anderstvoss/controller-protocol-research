@@ -90,3 +90,20 @@ class W8Reruns(unittest.TestCase):
         self.assertFalse(obs['decoded_application_state_observed'])
         self.assertEqual(data['summaries']['disposition'], 'blocked')
         self.assertTrue(all(data['resources'].values()))
+
+    def test_cemu_setup_predecessors_do_not_invent_errors_or_timing(self):
+        mp = read('cemu-imported-clean-motionplus')
+        diag = mp['samples'][0]['observations']['setup_order_diagnosis']
+        self.assertEqual(diag['ir_setup_bursts'], 1)
+        self.assertEqual(diag['ir_repeat_predecessor_patterns'], [])
+        self.assertEqual(diag['native_status_requests'], 34)
+        self.assertEqual(diag['received_ack_report_errors']['16/7'], 3)
+        n = read('cemu-imported-clean-motionplus-nunchuk')
+        diag = n['samples'][0]['observations']['setup_order_diagnosis']
+        self.assertEqual(diag['ir_setup_bursts'], 20)
+        self.assertEqual(sum(p['occurrences'] for p in diag['ir_repeat_predecessor_patterns']), 19)
+        for pattern in diag['ir_repeat_predecessor_patterns']:
+            self.assertEqual(pattern['last_received_reply'].get('error', 0), 0)
+        self.assertEqual(diag['received_ack_report_errors'], {'16/0': 140})
+        self.assertFalse(diag['capture_has_timestamps'])
+        self.assertFalse(n['samples'][0]['observations']['decoded_application_state_observed'])

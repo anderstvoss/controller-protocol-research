@@ -26,7 +26,7 @@
     "external_companion_holder_at_preflight": false,
     "runner_opened_holder": false,
     "no_holder_preflight": "passed; no companion holder at each arm preflight",
-    "first_unpassed_protocol_checkpoint": "Repeated initialization; decoded application motion unobserved"
+    "first_unpassed_protocol_checkpoint": "MP identity/setup retention: A400F0 and A400FB writes then A400FA read receive error 7 after shared mapping changes; subsequent mode 33 selections follow status polling, not repeated full IR initialization."
   },
   "environment": {
     "synthetic": false,
@@ -200,7 +200,54 @@
           }
         ],
         "decoded_application_state_observed": false,
-        "external_holder_scope": "No external holder at each arm preflight; no runner holder. Kernel remains bound and shared kernel outputs are not uniquely attributed."
+        "external_holder_scope": "No external holder at each arm preflight; no runner holder. Kernel remains bound and shared kernel outputs are not uniquely attributed.",
+        "setup_order_diagnosis": {
+          "native_status_requests": 34,
+          "received_status_extension_flags": {
+            "False": 38,
+            "True": 1
+          },
+          "native_report_modes": {
+            "33": 53
+          },
+          "received_ack_report_errors": {
+            "16/0": 28,
+            "16/7": 3
+          },
+          "received_memory_offset_errors": {
+            "0016/0": 1,
+            "00fa/0": 12,
+            "00fa/7": 11
+          },
+          "ir_setup_bursts": 1,
+          "ir_repeat_predecessor_patterns": [],
+          "extension_initialization_bursts": 1,
+          "extension_init_predecessor_patterns": [
+            {
+              "occurrences": 1,
+              "last_received_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": false,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            }
+          ],
+          "capture_has_timestamps": false,
+          "timing_scope": "Event order only; no elapsed or request/reply latency claim. Shared kernel outputs remain visible."
+        }
       },
       "errors": []
     }

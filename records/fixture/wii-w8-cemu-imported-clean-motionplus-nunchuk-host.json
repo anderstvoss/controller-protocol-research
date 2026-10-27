@@ -4,7 +4,7 @@
   "kind": "virtual_host_run",
   "format": "acceptance_run_json",
   "path": "fixtures/acceptance/wii-w8-cemu-imported-clean-motionplus-nunchuk-host.json",
-  "sha256": "a0854b851011ce499365cb78dc9a5e1571f2bac61c74e0e5f7d361f16e702acb",
+  "sha256": "96a2b29e1a26283cfbd954c71953b60b4b415ba6c2003396aa2aa780675aae11",
   "sources": [
     "wii-w8-merged-runtime",
     "wii-w8-merged-memory",

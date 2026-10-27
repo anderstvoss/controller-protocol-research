@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Diagnose W8 Cemu setup order: distinguish MP status/report-mode polling from
+  MP+Nunchuk IR reconfiguration after successful replies. Preserve missing
+  timestamp/internal-state limits; do not invent an ACK timeout or model fix.
+
 - Add two clean W8 Cemu imported-resource comparisons after the browser holder
   closes. All 18 MP+Nunchuk calibration reads succeed, including 17 Nunchuk
   payload matches; decoded motion remains unobserved. Preserve coexistence arms
