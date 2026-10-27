@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-vg-codec-5a11e5",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/5a11e507ac973c23ca10beb36edb44fc35034376/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "5a11e507ac973c23ca10beb36edb44fc35034376",
+  "sha256": "73d1f7f81264e84f26299c63da88e6f8927c30489a1f7fd8203873d8a2002397",
+  "lineage": "anderstvoss/virtualgamepad",
+  "locator": "virtualgamepad owner source, no excerpt. Status/ACK/report modes 242-272, request decoding, speaker/IR/report ACK 277-378 and memory read pipeline 409-449. Read-only inspection."
+}
