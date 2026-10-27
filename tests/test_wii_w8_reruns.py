@@ -64,3 +64,29 @@ class W8Reruns(unittest.TestCase):
                                  {'motionplus_first_half': 44})
                 self.assertEqual(obs['native_prefix_sequence'][5]['identity'], 'motionplus')
             self.assertTrue(all(data['resources'].values()))
+
+    def test_clean_cemu_mp_retains_missing_calibration_and_decoded_oracle(self):
+        data = read('cemu-imported-clean-motionplus')
+        self.assertFalse(data['config']['external_companion_holder_at_preflight'])
+        self.assertFalse(data['config']['runner_opened_holder'])
+        self.assertTrue(data['config']['no_holder_preflight'].startswith('passed'))
+        obs = data['samples'][0]['observations']
+        self.assertEqual(obs['trace']['memory_read_address_errors']['0016/0'], 1)
+        self.assertNotIn('a40020/16', obs['trace']['native_memory_reads'])
+        self.assertEqual(obs['served_calibration_block_counts'], {})
+        self.assertFalse(obs['decoded_application_state_observed'])
+        self.assertTrue(all(data['resources'].values()))
+
+    def test_clean_cemu_nunchuk_calibration_delivery_is_not_decoded_motion(self):
+        data = read('cemu-imported-clean-motionplus-nunchuk')
+        self.assertFalse(data['config']['external_companion_holder_at_preflight'])
+        self.assertFalse(data['config']['runner_opened_holder'])
+        obs = data['samples'][0]['observations']
+        self.assertEqual(obs['trace']['native_memory_reads']['a40020/16'], 18)
+        self.assertEqual(obs['trace']['memory_read_address_errors']['0020/0'], 18)
+        self.assertEqual(obs['served_calibration_block_counts'],
+                         {'motionplus_first_half': 1, 'nunchuk': 17})
+        self.assertEqual(obs['native_prefix_sequence'][4]['identity'], 'nunchuk')
+        self.assertFalse(obs['decoded_application_state_observed'])
+        self.assertEqual(data['summaries']['disposition'], 'blocked')
+        self.assertTrue(all(data['resources'].values()))

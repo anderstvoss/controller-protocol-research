@@ -123,7 +123,7 @@ block reruns remain pending; owner instruction reserves both code merges.
 
 ### W8 post-merge reruns
 
-Current inventory: **149 Wii claims**, including four imported-block consumer
+Inventory before clean follow-up: **149 Wii claims**, including four imported-block consumer
 arm sets on merged code `5a11e507ac973c23ca10beb36edb44fc35034376`. Native
 Dolphin MP-only reads MP calibration and visibly changes mapped A, accelerometer,
 basic IR and gyro indicators under explicit lab settings. MP+Nunchuk stops on
@@ -133,3 +133,14 @@ but native identity/init exchange and unobserved decoding limit the result.
 The mapped 16-byte calibration replies in its MP+Nunchuk arm match the MP block,
 not Nunchuk. The clean no-holder retest was blocked before application launch.
 These distinctions do not promote physical, calibrated-rate or game acceptance.
+
+
+### W8 clean Cemu follow-up
+
+Current inventory: **151 Wii claims**. Two additional 35-second imported-resource
+arms pass no-holder preflight after the browser holder closes. MP has no native
+extension calibration read; MP+Nunchuk has 18 successful A40020/16 replies,
+17 matching caller Nunchuk calibration and one matching MP first half. This
+establishes delivery beyond the earlier refusal, with kernel mapping still
+shared. Repeated initialization and decoded application motion remain the next
+unestablished checkpoint. No additional model change or physical promotion.

@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add two clean W8 Cemu imported-resource comparisons after the browser holder
+  closes. All 18 MP+Nunchuk calibration reads succeed, including 17 Nunchuk
+  payload matches; decoded motion remains unobserved. Preserve coexistence arms
+  and distinguish transport delivery from application interpretation.
+
 - Add four post-merge W8 imported-block consumer arm sets: changing native
   Dolphin MP mapping indicators, the MP+Nunchuk F6 identity boundary, and Cemu
   coexistence limits. Keep clean no-holder and decoded-state unknowns explicit;

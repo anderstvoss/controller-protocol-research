@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-clean-motionplus-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w8-cemu-imported-clean-motionplus-host"
+  ],
+  "procedure": "After human confirmation that the browser holder closed, create a fresh owned UHID with caller EEPROM and imported synthetic MP/Nunchuk resources. Revalidate HID association and raw linkage after human grants. Run MP then MP+Nunchuk, each 35 seconds with an isolated native Wiimote profile, exact owned raw endpoint, SDL Wii disabled and process-only radio guard. Require no companion holder before each consumer; runner opens none. Capture native I/O, compare successful calibration payloads privately to caller blocks, terminate owned children between profiles, close producer idempotently and verify HID/raw/LED removal. No ROM/game or Real slot.",
+  "semantic_outcome": "Clean no-holder Cemu 29f2f1f ARM64 native Wiimote motionplus comparison with caller EEPROM and synthetic imported MP/Nunchuk calibration passes the base EEPROM read. No native extension calibration read occurs; repeated initialization/status/report-mode activity continues, with both success and error 7 replies at identity offset FA. Decoded application motion remains unobserved; no physical calibration, accurate rate, whole-controller or wrong-bank-defect claim follows. No companion event holder exists at each arm preflight and the runner opens none; this does not unbind the kernel driver or isolate its protocol output."
+}

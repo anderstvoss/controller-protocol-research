@@ -116,3 +116,32 @@ its HID, hidraw and four LED nodes were verified removed. Screenshots, raw bytes
 logs, process/device identities and host paths remain private. Source and
 artifact hashes preserve provenance; no latency or firmware-cadence acceptance
 is inferred.
+
+
+## Clean Cemu follow-up after the browser holder closed
+
+The earlier coexistence arms and blocked preflight remain historical evidence.
+After the owner closed the browser holder, a fresh virtual device used the same
+merged runtime and caller resources. Each 35-second native Cemu arm passed its
+no-companion-holder preflight; the runner opened no holder. The kernel driver
+remained bound, so kernel output is not attributed solely to Cemu. Profiles are
+fresh, while the producer is reused between the two arms.
+
+| Arm | Delivered result | Next unestablished checkpoint |
+| --- | --- | --- |
+| Clean imported MP | Base EEPROM succeeds; no native extension calibration read | Repeated identity/status/report-mode initialization; decoded motion unobserved |
+| Clean imported MP+Nunchuk | All 18 A40020/16 reads succeed; 17 replies match imported Nunchuk and one matches MP first half | Repeated initialization; decoded motion unobserved |
+
+The first native extension identity before the MP+Nunchuk calibration read is
+Nunchuk. Matching the private payloads demonstrates delivery beyond the earlier
+Nunchuk calibration refusal. It does not prove Cemu interpreted the values,
+paired each reply with a request, or produced decoded gyro. Mapping can change
+under shared kernel activity, so the mixed block matches do not establish a
+wrong-bank defect or a sole-actor race cause. No new model, codec, descriptor or
+API change is inferred or implemented.
+
+The new prefixes are `wii-w8-cemu-imported-clean-motionplus` and
+`wii-w8-cemu-imported-clean-motionplus-nunchuk`. They add two sets without
+rewriting the previous arms: W8 now contains 13 arms and the current Wii
+inventory is 151 claims. Both consumers exited before the next profile; fresh
+HID, raw and four LED nodes were verified removed after idempotent close.
