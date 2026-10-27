@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-nunchuk-off-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w9-dolphin-motionplus-nunchuk-off-host"
+  ],
+  "procedure": "Run owner-approved compat branch head with validated synthetic caller resources. Create exact-owned on/off devices, verify HID/raw/LED links, await human grants and revalidate. Run native Dolphin 2503 MP+Nunchuk on then off (180 seconds each) with isolated emulated mapping profiles, no Real slots/content and owned raw/radio guards; verify consumer cleanup between profiles. Run shim-on MP-only Dolphin (150 seconds), then a 12-second kernel evdev control; preserve blocked reused-node preflight and use a fresh MP-only control without resetting initial topology. Compare native raw outputs with combined reverse callbacks for P3, preserving attribution limits and source-pinned usability diagnostics. Close all producers idempotently and verify HID/raw/LED removal.",
+  "semantic_outcome": "Native Dolphin 2503 MP+Nunchuk, compat shims off, reaches native device setup but all 14659 A400F6/4 requests receive error 7. No MP A40020/32 or child A40040/16 read occurs. After Dolphin maps mode 05, combined output includes A400F0=55 absent from native post-map writes, then inactive-bank traffic. This is consistent with bound-kernel contention and leaves the shim state gate unavailable; no live shim success or decoded Nunchuk/gyro is established. No driver or model change follows."
+}

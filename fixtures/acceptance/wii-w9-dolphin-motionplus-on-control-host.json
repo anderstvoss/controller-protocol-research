@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Human-confirmed exact-owned temporary raw/LED grants; identities and links revalidated. No agent sudo, unbind or persistent host policy.",
+  "config": {
+    "consumer_role": true,
+    "seconds_bound": 150,
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "provenance_class": "compat",
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "kernel_kept_bound": true,
+    "cold_device_isolation": false,
+    "first_unpassed_checkpoint": "No failure through observed mapped gyro in this bounded MP-only control; shared reinitialization still occurs.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "ui_gyro_calibration_period_seconds": 0,
+    "pilot_excluded": "First on transport pilot coordinator exited 143 at timeout; exact-profile children absent afterward. Clean on repeat used a separate consumer process group and completed verified cleanup."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "ebc3a030685e476242a4d6df96e17e14862e0398",
+    "actual_probe_source_sha256": "0ec18ca6097a1d8eadf1a9620f1d7f2d3dc67819e5ec2edf4dcd93babcbea239",
+    "actual_probe_binary_sha256": "d4a5ed6d48b9bd0884c6dca3371e9ac5af1f0db114c70f46a360855aefbd0485",
+    "original_private_artifact_sha256": "a7ee15cb2ae953ddea8241f47694a507a4a308976929fd8e6ed3340450e8c656",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "consumer": "Dolphin Debian ARM64 2503+dfsg-1+deb13u1"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "trace": {
+          "counts": {
+            "native_raw_writes": 67,
+            "owned_enumeration_observations": 300,
+            "owned_raw_opens": 2,
+            "status_requests": 14
+          },
+          "native_report_modes": {
+            "30": 6,
+            "37": 21
+          },
+          "native_memory_reads": {
+            "000016/10": 1,
+            "a40020/32": 1,
+            "a400fa/6": 2,
+            "a600fe/1": 3
+          },
+          "native_single_byte_register_writes": {
+            "a400f0/55": 1,
+            "a400fb/00": 3,
+            "a600f0/55": 3,
+            "a600fe/05": 3,
+            "b00030/08": 1,
+            "b00033/01": 1
+          },
+          "received_report_ids": {
+            "20": 29,
+            "21": 93,
+            "22": 87,
+            "30": 114,
+            "34": 9,
+            "37": 14080
+          },
+          "memory_read_reply_errors": {
+            "0": 49,
+            "7": 44
+          },
+          "memory_read_address_errors": {
+            "0016/0": 1,
+            "0020/0": 1,
+            "0030/0": 1,
+            "00fa/0": 43,
+            "00fa/7": 44,
+            "00fe/0": 3
+          },
+          "decoded_gyro_observed": false,
+          "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+        },
+        "p3": {
+          "native_output_counts": {
+            "write/a400f0/85": 1,
+            "write/a400fb/0": 3,
+            "status/15/None": 14,
+            "read/000016/10": 1,
+            "write/b00000/None": 1,
+            "write/b0001a/None": 1,
+            "write/b00033/1": 1,
+            "write/b00030/8": 1,
+            "read/a600fe/1": 3,
+            "write/a600f0/85": 3,
+            "write/a600fe/5": 3,
+            "read/a400fa/6": 2,
+            "read/a40020/32": 1
+          },
+          "combined_output_counts": {
+            "read/a400fa/6": 59,
+            "write/a400f0/85": 5,
+            "write/a600f0/85": 56,
+            "write/a600fb/0": 3,
+            "read/a600fa/6": 53,
+            "status/15/None": 25,
+            "write/a400fb/0": 5,
+            "read/000016/10": 1,
+            "write/b00000/None": 1,
+            "write/b0001a/None": 1,
+            "write/b00033/1": 1,
+            "write/b00030/8": 1,
+            "read/a600fe/1": 3,
+            "write/a600fe/5": 3,
+            "read/a40020/32": 1
+          },
+          "first_map_following_combined_operations": [
+            [
+              "write",
+              "a600fe",
+              5
+            ],
+            [
+              "read",
+              "a400fa",
+              6
+            ],
+            [
+              "write",
+              "a400f0",
+              85
+            ],
+            [
+              "write",
+              "a400fb",
+              0
+            ],
+            [
+              "write",
+              "a400fb",
+              0
+            ],
+            [
+              "read",
+              "a400fa",
+              6
+            ],
+            [
+              "write",
+              "a600f0",
+              85
+            ],
+            [
+              "read",
+              "a600fa",
+              6
+            ],
+            [
+              "read",
+              "a400fa",
+              6
+            ],
+            [
+              "read",
+              "a600fe",
+              1
+            ]
+          ],
+          "native_a400f0_after_first_map": 0,
+          "combined_a400f0_after_first_map": 3,
+          "attribution_scope": "Native raw writes are Dolphin-attributed. Other combined writes are non-Dolphin within capture, consistent with bound hid-wiimote; no kernel stack trace or unique payload-to-actor assignment for identical requests. Combined scope starts at producer phase before consumer launch."
+        },
+        "intentional_usability_probe": "A400FE/512 error 7, where present, is the source-pinned diagnostic before normal setup; not the first failed attach checkpoint.",
+        "decoded_nunchuk_observed": null,
+        "live_compat_window_success_observed": false,
+        "caller_mp_chunk_matches": {
+          "head": 1,
+          "tail": 1
+        },
+        "mapping_ui": {
+          "mapping_view_device_observed": true,
+          "changing_buttons": null,
+          "changing_accelerometer": true,
+          "changing_basic_ir_points": true,
+          "changing_gyroscope_indicator": true,
+          "decoded_nunchuk": null,
+          "scope": "Explicit bindings and UI gyro calibration period zero; private owned-window samples inspected. Not rate accuracy, all controls or continuous delivery."
+        }
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Shim-on MP-only native Dolphin 2503 control reads the exact caller MP calibration in two successful chunks and shows changing mapping-view gyro, accelerometer and two basic IR points over a 150-second bound. P3 still observes non-Dolphin initialization after mapping; no continuous-delivery, rate-accuracy, physical, game or complete-controller claim. This is an MP-only positive control, not MP+Nunchuk acceptance."
+  }
+}
