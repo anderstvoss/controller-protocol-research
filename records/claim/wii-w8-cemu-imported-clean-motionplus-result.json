@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-clean-motionplus-result",
+  "statement": "Clean no-holder Cemu 29f2f1f ARM64 native Wiimote motionplus comparison with caller EEPROM and synthetic imported MP/Nunchuk calibration passes the base EEPROM read. No native extension calibration read occurs; repeated initialization/status/report-mode activity continues, with both success and error 7 replies at identity offset FA. Decoded application motion remains unobserved; no physical calibration, accurate rate, whole-controller or wrong-bank-defect claim follows. No companion event holder exists at each arm preflight and the runner opens none; this does not unbind the kernel driver or isolate its protocol output.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Clean no-holder preflight, kernel remains bound. Correct delivered calibration is distinct from decoded motion; no physical, calibrated-rate, radio or game promotion."
+  },
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w8-cemu-imported-clean-motionplus-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

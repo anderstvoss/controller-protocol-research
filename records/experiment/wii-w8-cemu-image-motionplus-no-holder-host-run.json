@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-image-motionplus-no-holder-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi"
+  ],
+  "fixtures": [
+    "wii-w8-cemu-image-motionplus-no-holder-host"
+  ],
+  "procedure": "Run one 35-second profile after exact-owned identity and human grant verification. No-holder precedes holder for Cemu; Dolphin uses native visible Qt, own file logging with debug requested, continuous scanning and ControllerInterface, all Real slots disabled, no game content. A process guard denies foreign input opens and radio sockets. Fresh application profiles, explicit child cleanup between arms; warm protocol state is retained within each device. Close twice and verify all owned nodes disappear. Publish reduced results only.",
+  "semantic_outcome": "Cemu 29f2f1f ARM64 AppImage, motionplus, without an external kernel MP holder, reads base EEPROM at 0x0016 successfully with the synthetic caller image. Native requests remain in extension identity/activation exchange, with mixed success and error 7 responses at offset 0xFA. No native extension calibration request is observed; shared kernel traffic limits actor attribution. Decoded application motion is unobserved. No defaults, physical calibration or radio acceptance is inferred."
+}

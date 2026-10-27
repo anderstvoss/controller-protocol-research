@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-motionplus-nunchuk-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w8-cemu-imported-motionplus-nunchuk-host"
+  ],
+  "procedure": "Attempt the original clean no-holder preflight first; it blocks before consumer launch. Run a separate 35-second coexistence profile only with the exact previously observed foreign companion holder present and no other unexpected holder. Do not open a runner holder or modify the browser. Native Wiimote AppImage, isolated profile, owned raw path only, SDL Wii disabled, no radio/game. Match successful calibration replies privately against caller blocks, retaining only labels and counts. Close owned consumers between arms and the producer idempotently after all observations; verify owned nodes gone.",
+  "semantic_outcome": "Cemu 29f2f1f ARM64 native Wiimote with imported synthetic EEPROM, MP and Nunchuk blocks in the MP+Nunchuk profile passes the base EEPROM read, then remains in mapped/unmapped identity initialization exchange, including A600FA error 7. Its 44 A40020/16 reads succeed and match the active MP block first half, not the Nunchuk block; preceding native identity observations include mapped MP. A preexisting foreign browser companion holder was present; the clean no-holder preflight was blocked before application launch. This is an explicit coexistence comparison, not a clean retest of the original Nunchuk calibration path or a decoded-gyro pass. No library wrong-bank defect, sole-actor race cause or physical incompatibility is inferred."
+}

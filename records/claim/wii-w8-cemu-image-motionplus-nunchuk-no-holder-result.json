@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-image-motionplus-nunchuk-no-holder-result",
+  "statement": "Cemu 29f2f1f ARM64 AppImage, motionplus-nunchuk, without an external kernel MP holder, reads base EEPROM at 0x0016 successfully with the synthetic caller image. The native sequence identifies Nunchuk then sends 18 register-space reads at A40020 for 16 bytes, receiving 18 error 7 responses. This confirms the downstream calibration boundary, not MotionPlus calibration. Decoded application motion is unobserved. No defaults, physical calibration or radio acceptance is inferred.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded virtual UHID observation with caller-image choice explicit. No decoded application-state, physical, radio, game, timing or whole-controller acceptance promotion."
+  },
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi"
+  ],
+  "experiments": [
+    "wii-w8-cemu-image-motionplus-nunchuk-no-holder-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

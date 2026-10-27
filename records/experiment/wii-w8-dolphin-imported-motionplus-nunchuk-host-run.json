@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-imported-motionplus-nunchuk-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi",
+    "wii-w8-dolphin-2503-imu-gyro",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-c5-nunchuk-cpp"
+  ],
+  "fixtures": [
+    "wii-w8-dolphin-imported-motionplus-nunchuk-host"
+  ],
+  "procedure": "Use current merged W8 code and private synthetic caller EEPROM/MP/Nunchuk resources. Native visible Qt, own file logs primary, all Real slots disabled, no game, explicit mapping bindings in a private emulated slot. Bound the initial transport window to 180 seconds; MP-only includes an additional 150-second mapping observation with IR drive and UI gyro auto-calibration period zero. Verify owned child cleanup between profiles; record foreign companion holder limitation. Publish only reduced semantic observations.",
+  "semantic_outcome": "Native ARM64 Dolphin 2503 on merged W8 code enumerates and connects the MP+Nunchuk virtual Remote with caller EEPROM and imported synthetic MP/Nunchuk blocks, and reports mode 5. It then issues 12128 reads of A400F6/4 and receives 12128 error 7 replies before MP calibration. The mapping device is visible, but changing motion is not established. This names the unmodeled passthrough identity window; no additional model, codec, descriptor or API change is made, and no zero-gyro or physical incompatibility is inferred."
+}

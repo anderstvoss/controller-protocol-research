@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-imported-motionplus-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w8-dolphin-imported-motionplus-host.json",
+  "sha256": "4ff82851b3e91a2ab25e7d730fdb4ae5ad91e750135409d76de80bcb6bcc2a61",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi",
+    "wii-w8-dolphin-2503-imu-gyro",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-c5-nunchuk-cpp"
+  ],
+  "experiments": [
+    "wii-w8-dolphin-imported-motionplus-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced private own logs, owned transport and selected mapping-view snapshots to semantic results and hashes; no pixels, bytes, paths, identities, wall clocks or binaries published. Original private artifact SHA256 1b72416b6d77f3900be43512b9255b3b57030e459e42852e16f8496481798fa4.",
+  "claims": []
+}

@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Human-confirmed exact-owned temporary grants after identity revalidation; no agent grant, unbind, persistent policy, radio or game content.",
+  "config": {
+    "consumer_role": true,
+    "consumer": "Cemu 29f2f1f ARM64 AppImage native Wiimote",
+    "seconds_bound": 35,
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "sdl_wii_disabled": true,
+    "radio_socket_guard": true,
+    "cold_device_isolation": false,
+    "external_companion_holder_at_preflight": false,
+    "runner_opened_holder": false,
+    "no_holder_preflight": "passed; no companion holder at each arm preflight",
+    "first_unpassed_protocol_checkpoint": "Consumer extension/IR state oscillates between modes 33 and 37 despite successful calibration; every repeat IR setup follows a success/status predecessor, not an observed read error. Decoded motion unobserved."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "5a11e507ac973c23ca10beb36edb44fc35034376",
+    "consumer_binary_sha256": "079c87ccf057243f4ede135084ea6b73482cb13ca5823991b1556d7312ec3576",
+    "actual_probe_source_sha256": "7e83c6caf1be713e75e006736def59c53897cec9f4c4a3d905e44a847bc81866",
+    "actual_probe_binary_sha256": "f235c55132f324eb45cf39e3ec839b3f3becb8bb4c4e6780129a25e9997fb8eb",
+    "original_private_artifact_sha256": "07a6fffb52487bcb7eaeab97a194af45aaa558bf9c1ed3638cdf4563286fba5f"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "case": "motionplus-nunchuk",
+        "trace": {
+          "counts": {
+            "native_raw_writes": 330,
+            "owned_enumeration_observations": 19,
+            "owned_raw_opens": 18,
+            "status_requests": 34
+          },
+          "native_report_modes": {
+            "33": 32,
+            "37": 75
+          },
+          "native_memory_reads": {
+            "000016/8": 1,
+            "a40020/16": 18,
+            "a400fa/6": 9,
+            "a600fa/6": 1
+          },
+          "native_single_byte_register_writes": {
+            "a400f0/55": 9,
+            "a400fb/00": 9,
+            "a600f0/55": 1,
+            "a600fe/04": 1,
+            "b00030/08": 40,
+            "b00033/01": 10,
+            "b00033/03": 10
+          },
+          "received_report_ids": {
+            "20": 39,
+            "21": 48,
+            "22": 140,
+            "30": 224,
+            "33": 500,
+            "37": 2882
+          },
+          "memory_read_reply_errors": {
+            "0": 48
+          },
+          "memory_read_address_errors": {
+            "0016/0": 1,
+            "0020/0": 18,
+            "00fa/0": 29
+          },
+          "decoded_gyro_observed": false,
+          "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+        },
+        "served_calibration_block_counts": {
+          "motionplus_first_half": 1,
+          "nunchuk": 17
+        },
+        "native_prefix_sequence": [
+          {
+            "kind": "read",
+            "address": "000016",
+            "size": 8
+          },
+          {
+            "kind": "read",
+            "address": "a600fa",
+            "size": 6
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "other"
+          },
+          {
+            "kind": "read",
+            "address": "a400fa",
+            "size": 6
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "nunchuk"
+          },
+          {
+            "kind": "read",
+            "address": "a40020",
+            "size": 16
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "motionplus"
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "motionplus"
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "nunchuk"
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "nunchuk"
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "motionplus"
+          },
+          {
+            "kind": "read",
+            "address": "a400fa",
+            "size": 6
+          },
+          {
+            "kind": "identity-reply",
+            "identity": "nunchuk"
+          },
+          {
+            "kind": "read",
+            "address": "a40020",
+            "size": 16
+          },
+          {
+            "kind": "read",
+            "address": "a40020",
+            "size": 16
+          },
+          {
+            "kind": "read",
+            "address": "a40020",
+            "size": 16
+          }
+        ],
+        "decoded_application_state_observed": false,
+        "external_holder_scope": "No external holder at each arm preflight; no runner holder. Kernel remains bound and shared kernel outputs are not uniquely attributed.",
+        "setup_order_diagnosis": {
+          "native_status_requests": 34,
+          "received_status_extension_flags": {
+            "True": 38,
+            "False": 1
+          },
+          "native_report_modes": {
+            "33": 32,
+            "37": 75
+          },
+          "received_ack_report_errors": {
+            "16/0": 140
+          },
+          "received_memory_offset_errors": {
+            "0016/0": 1,
+            "00fa/0": 29,
+            "0020/0": 18
+          },
+          "ir_setup_bursts": 20,
+          "ir_repeat_predecessor_patterns": [
+            {
+              "occurrences": 10,
+              "last_received_reply": {
+                "error": 0,
+                "offset": "0020",
+                "report": "21"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "0020",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "37",
+                "report": "12"
+              }
+            },
+            {
+              "occurrences": 7,
+              "last_received_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            },
+            {
+              "occurrences": 1,
+              "last_received_reply": {
+                "error": 0,
+                "offset": "0020",
+                "report": "21"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "0020",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            },
+            {
+              "occurrences": 1,
+              "last_received_reply": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            }
+          ],
+          "extension_initialization_bursts": 9,
+          "extension_init_predecessor_patterns": [
+            {
+              "occurrences": 1,
+              "last_received_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "address": "a600fa",
+                "report": "17",
+                "size": 6
+              }
+            },
+            {
+              "occurrences": 3,
+              "last_received_reply": {
+                "acked_report": "16",
+                "error": 0,
+                "report": "22"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            },
+            {
+              "occurrences": 4,
+              "last_received_reply": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "report": "15"
+              }
+            },
+            {
+              "occurrences": 1,
+              "last_received_reply": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "latest_memory_reply": {
+                "error": 0,
+                "offset": "00fa",
+                "report": "21"
+              },
+              "latest_status": {
+                "extension_connected": true,
+                "report": "20"
+              },
+              "previous_native_request": {
+                "mode": "33",
+                "report": "12"
+              }
+            }
+          ],
+          "capture_has_timestamps": false,
+          "timing_scope": "Event order only; no elapsed or request/reply latency claim. Shared kernel outputs remain visible."
+        }
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Clean no-holder Cemu 29f2f1f ARM64 native Wiimote motionplus-nunchuk comparison with caller EEPROM and synthetic imported MP/Nunchuk calibration passes the base EEPROM read. All 18 native A40020/16 reads succeed: 17 returned payloads match the caller Nunchuk block and one matches the MP block first half. Native identity observations include Nunchuk before the first calibration request; concurrent kernel mapping can change the addressed device, so reply counts are not a sole-actor interpretation oracle. Repeated initialization/report-mode activity continues. Decoded application motion remains unobserved; no physical calibration, accurate rate, whole-controller or wrong-bank-defect claim follows. No companion event holder exists at each arm preflight and the runner opens none; this does not unbind the kernel driver or isolate its protocol output."
+  }
+}

@@ -7,6 +7,25 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Diagnose W8 Cemu setup order: distinguish MP status/report-mode polling from
+  MP+Nunchuk IR reconfiguration after successful replies. Preserve missing
+  timestamp/internal-state limits; do not invent an ACK timeout or model fix.
+
+- Add two clean W8 Cemu imported-resource comparisons after the browser holder
+  closes. All 18 MP+Nunchuk calibration reads succeed, including 17 Nunchuk
+  payload matches; decoded motion remains unobserved. Preserve coexistence arms
+  and distinguish transport delivery from application interpretation.
+
+- Add four post-merge W8 imported-block consumer arm sets: changing native
+  Dolphin MP mapping indicators, the MP+Nunchuk F6 identity boundary, and Cemu
+  coexistence limits. Keep clean no-holder and decoded-state unknowns explicit;
+  retain the factory, physical, rate, audio and game acceptance gaps.
+
+- Record seven bounded W8 caller-image Cemu and native Dolphin baseline arms.
+  Separate successful base EEPROM reads, Nunchuk extension calibration error 7,
+  native discovery and the speaker-mute ACK boundary from unobserved decoded
+  motion. Retain raw artifacts privately and preserve the physical evidence gap.
+
 - Fix W7 Cemu test imports when corpus discovery runs from a parent or unrelated working directory. Load the original reducer by a path relative to the test file and add an external-directory regression. Evidence records and runtime helpers are unchanged.
 
 - Correct the incomplete W7 Cemu availability lookup with an installed ARM64 AppImage native-Wiimote run: four holder/profile comparisons and byte-capture repeats, native register attribution and calibration error 8 with the default empty caller EEPROM. Raw transport works; decoded gyro remains unobserved. Add reduced evidence, original trace reducer/guard and deterministic boundary tests; retain prior records unchanged.

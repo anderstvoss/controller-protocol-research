@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-motionplus-nunchuk-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w8-cemu-imported-motionplus-nunchuk-host.json",
+  "sha256": "6222043f6015a5db78342385e036f2a7bcb6d60cc82febd089d1e6d8715b49f8",
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w8-cemu-imported-motionplus-nunchuk-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned native I/O and private caller-block comparisons to semantic counts and labels; no raw bytes, logs, paths, identities, process IDs, wall clocks or binaries published. Original private artifact SHA256 79f5609ced867c9b6c52cd3d9f18d56377f241878949396b293bc6505102704b.",
+  "claims": []
+}
