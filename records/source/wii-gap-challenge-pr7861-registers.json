@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-pr7861-registers",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/ba1b3351184864ed3d5692a461b00edd2f3a21f6/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h",
+  "revision": "ba1b3351184864ed3d5692a461b00edd2f3a21f6",
+  "sha256": "d4f1a6108ff25b0aa7a2dd30a7d8ea3813c82abccfadc89eea885eab12baa076",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "Dolphin GPL-2.0-or-later; merged PR #7861 at 2019-04-26 head. ChallengeState enum and F1/F7/0x50 64-byte register layout around lines 60-132, notes contrasting claimed real progression with emulated immediate completion. Source role: consumer."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-50-region-width-and-banks",
+  "statement": "Dolphin emulated MotionPlus defines 64 bytes at register offset 0x50 through 0x8f for a little-endian parameter X/Y payload, and uses the same register object across inactive A600 and active A400 I2C mappings. WiiBrew separately reports 128 changing bytes at inactive A60050 through A600CF. These are differing documented ranges and contexts, not verified equivalent physical structure; the extra region and all hardware revisions remain unmeasured. Current virtualgamepad challenge read at 0x50 returns error 7 by user-supplied current model context, not by a new observed run.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c7 MotionPlus.h 194-202, MotionPlus.cpp 190-224,481-522; WiiBrew oldid120079 introduction. Distinguish bank and size. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

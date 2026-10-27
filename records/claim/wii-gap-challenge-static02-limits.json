@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-static02-limits",
+  "statement": "Keeping MotionPlus F7 at 0x02 while rejecting data reads at 0x50 is an explicitly limited virtualgamepad compatibility choice. The pinned Dolphin emulator uses F7 0x0e to signify prepared X and 0x1a to signify prepared Y; any consumer requiring those readiness values may wait, time out or reject MotionPlus, but no specific game or guaranteed fallback is established. Advancing F7 without serving valid 0x50 bytes could advertise false readiness and is not supported by a passing consumer test. Dolphin ControllerInterface, raw kernel and SDL consumers that never poll F7 are not blocked by that value in reviewed paths. This is conditional engineering inference, not a tested guest failure.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c7 MotionPlus.h 166-179,224-231, MotionPlus.cpp 268-299,395-412; Wii ControllerInterface 449-660; SDL 385-481. User owner decision was supplied, not external observation. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w4-sdl-3-2-10-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
