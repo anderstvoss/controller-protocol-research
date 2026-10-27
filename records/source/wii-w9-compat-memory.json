@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-compat-memory",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/ebc3a030685e476242a4d6df96e17e14862e0398/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "ebc3a030685e476242a4d6df96e17e14862e0398",
+  "sha256": "e9ba480a6e34fa7394d51bb5d688379b537ba9ed079ba6e5c538e5c071ad9d7c",
+  "lineage": "anderstvoss/virtualgamepad",
+  "locator": "Owner-approved compat implementation; active mapped MP calibration and conditional child F6/40 windows, fixed F7 0x02, options off/refusal and whole-request bounds. Code PR #256 branch head, not a merged-main or physical claim."
+}

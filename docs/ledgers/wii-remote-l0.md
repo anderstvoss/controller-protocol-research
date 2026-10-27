@@ -154,3 +154,14 @@ passthrough identity mirror applies. The source comment describing hardware is
 not our physical readback. No challenge is implemented or promoted; offset
 0x50 remains error 7. Dolphin ignores this byte when decoding downstream ID.
 Runtime shim observations remain not run in this source-only record.
+
+
+### W9 bound-kernel compat controls
+
+Current inventory: **171 Wii claims**. Four new `wii-w9-*` arm sets retain
+MP+Nunchuk on/off F6 boundaries after non-Dolphin reinitialization, an MP-only
+Dolphin mapped-gyro positive control and a fresh kernel evdev delivery pass.
+The reused post-Dolphin missing-MP-node preflight and excluded pilot remain
+explicit. No live passthrough-window success or MP+Nunchuk acceptance is
+inferred; no bank alias, challenge, physical or calibrated-rate promotion.
+See `docs/wii-w9-consumer-runs.md` for P3 scope and cleanup.
