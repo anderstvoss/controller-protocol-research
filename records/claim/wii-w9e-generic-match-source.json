@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-match-source",
+  "statement": "Inspected upstream stable Linux v6.12.113 HID core rechecks the driver match during probing, including explicit binding. The generic driver rejects a special-driver match unless an ignore-special policy or quirk applies. Its HID device attribute group provides no driver_override. This explains the local bind refusal as a source-consistent host boundary; it does not authorize changing global policy, adding a quirk or changing the device model. Debian-specific differences and alternative per-device mechanisms were not exhaustively audited.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. W9e test/dev binding investigation only; release policy remains gated on virtualgamepad #258. No physical, radio, rate, game or challenge evidence."
+  },
+  "sources": [
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

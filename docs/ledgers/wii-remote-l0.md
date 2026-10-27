@@ -172,3 +172,15 @@ Current inventory: **187 Wii claims**, adding nine source-only `wii-gap-plus-*`
 claims on Remote Plus identity and integrated MotionPlus gates. See
 `docs/wii-remote-plus.md`. Integrated MotionPlus ID bytes, calibration,
 F6/F7/40 and challenge behaviour remain unmeasured.
+
+
+### W9e per-device binding preflight
+
+Current inventory: **190 Wii claims**, adding three `wii-w9e-*` claims on
+current research main after the 187-claim Remote Plus pass. The historical
+W9 adoption pin ceaa48a remains 178. A guarded owner-run per-device generic
+bind failed, the original wiimote binding was verified restored, and the
+virtual device was closed. Both Dolphin arms and their motion/register/P3
+checkpoints remain unmeasured. The expected generic-binding kernel-node
+trade-off is unmeasured too. No acceptance extension or host-policy change
+follows. See `docs/wii-w9e-binding-preflight.md`.
