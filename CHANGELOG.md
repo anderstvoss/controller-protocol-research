@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record four W9 compat controls: bound-kernel MP+Nunchuk on/off stops at F6,
+  MP-only native Dolphin mapped gyro, and fresh kernel evdev axis delivery.
+  Separate native from combined output, preserve missing-node/pilot limits,
+  and do not promote unreached mirrors or calibration copies.
+
 - Pin the W9 owner-selected fixed F7 value 0x02 as compat, paraphrasing the
   Dolphin enum, activation/update path and hardware-description comment. Keep
   challenge data at 0x50 refused and distinguish policy from physical readback.

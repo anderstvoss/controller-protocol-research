@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-kernel-motionplus-on-control-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w9-kernel-motionplus-on-control-host"
+  ],
+  "procedure": "Run owner-approved compat branch head with validated synthetic caller resources. Create exact-owned on/off devices, verify HID/raw/LED links, await human grants and revalidate. Run native Dolphin 2503 MP+Nunchuk on then off (180 seconds each) with isolated emulated mapping profiles, no Real slots/content and owned raw/radio guards; verify consumer cleanup between profiles. Run shim-on MP-only Dolphin (150 seconds), then a 12-second kernel evdev control; preserve blocked reused-node preflight and use a fresh MP-only control without resetting initial topology. Compare native raw outputs with combined reverse callbacks for P3, preserving attribution limits and source-pinned usability diagnostics. Close all producers idempotently and verify HID/raw/LED removal.",
+  "semantic_outcome": "Fresh MP-only shim-on kernel evdev control on Linux 6.12.113 passes: all ABS_RX/RY/RZ have two distinct driven values during 12 seconds. An earlier control preflight on the reused post-Dolphin device stopped before evtest because its MP node had disappeared. The fresh control preserves initial topology, verifies owned event linkage and opens only that node. This establishes bounded kernel delivery, not calibrated rates, physical fidelity or unchanged post-Dolphin attachment recovery."
+}
