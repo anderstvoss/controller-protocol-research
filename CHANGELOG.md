@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Pin the W9 owner-selected fixed F7 value 0x02 as compat, paraphrasing the
+  Dolphin enum, activation/update path and hardware-description comment. Keep
+  challenge data at 0x50 refused and distinguish policy from physical readback.
+
 - Diagnose W8 Cemu setup order: distinguish MP status/report-mode polling from
   MP+Nunchuk IR reconfiguration after successful replies. Preserve missing
   timestamp/internal-state limits; do not invent an ACK timeout or model fix.
