@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-script-85-fields",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-script-85-fields.hex",
+  "sha256": "07dbfd848027e532c4e9bf384feeb207d23ec73eed15d052896de0c90c5df336",
+  "sources": [
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}

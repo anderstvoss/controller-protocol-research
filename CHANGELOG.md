@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Extend Steam C6 wired research with six distinct-field synthetic haptic fixtures, offset-level assertions, SDL and Linux consumer timing assumptions, and kernel mid-session lizard/hidraw ownership claims; physical timing and replies remain unverified.
+
 - Record four W9 compat controls: bound-kernel MP+Nunchuk on/off stops at F6,
   MP-only native Dolphin mapped gyro, and fresh kernel evdev axis delivery.
   Separate native from combined output, preserve missing-node/pilot limits,

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-kernel-rumble-coalesce-20hz",
+  "statement": "In pinned Linux v7.3-rc1 hid-steam IBEX-capable host consumer, force-feedback rumble callback schedules delayed coalescing at HZ/20, equivalent to a nominal 20 Hz/50 ms kernel scheduling interval; repeated callbacks while work is pending are suppressed and the delayed-work callback sends current rumble values, rescheduling itself while either magnitude is nonzero. This is kernel host policy and does NOT measure an exact physical report cadence, delivery guarantee or physical safety timeout. Linux hid-steam.c lines 833-876. Physical output cadence: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 or SDL Triton 6defbc0 host-source pin; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired USB 28de:1302 source-derived consumer expectation only. All timings are host scheduling assumptions or source comments; physical measurement: No evidence."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

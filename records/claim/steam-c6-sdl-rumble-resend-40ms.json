@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-sdl-rumble-resend-40ms",
+  "statement": "In the pinned SDL Triton consumer, while a controller and joystick are connected and either rumble magnitude is nonzero, UpdateDevice may resend output 0x80 when its measured elapsed time since the most recent rumble send reaches at least 40 milliseconds; the check executes on SDL update calls, not an exact output scheduler. An SDL source comment describes an approximately 50 ms hardware safety timeout as the motivation. This approximately 50 ms timeout is ONLY an upstream SDL consumer comment and is not measured or verified on a physical Steam Controller 2026. SDL driver lines 40-44,494-505,595-615. Physical output timeout: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 or SDL Triton 6defbc0 host-source pin; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired USB 28de:1302 source-derived consumer expectation only. All timings are host scheduling assumptions or source comments; physical measurement: No evidence."
+  },
+  "sources": [
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

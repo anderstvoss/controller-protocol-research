@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-input-layout",
-  "statement": "Pinned hid-steam and SDL Triton sources now describe 0x42, 0x45 and SDL-only 0x47 byte layouts; steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons and steam-c6-input-scaling with steam-c6-* synthetic input fixtures provide a source-only reference. Physical wired HID captures, descriptor verification, firmware-dependent variants, real report timing, neutral baselines, calibration and end-to-end consumer results remain unknown.",
+  "statement": "Pinned hid-steam and SDL Triton sources now describe 0x42, 0x45 and SDL-only 0x47 byte layouts; steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons and steam-c6-input-scaling with steam-c6-* synthetic input fixtures provide a source-only reference. Physical wired HID captures, descriptor verification, firmware-dependent variants, real report timing, neutral baselines, calibration and end-to-end consumer results remain unknown. SDL's assumed 4032 us sensor update and commented 1 kHz descriptor are now documented in steam-c6-sdl-sensor-4032us; kernel Menu bit-6 hold behavior in steam-c6-kernel-menu-hold-450ms and raw input ownership in steam-c6-kernel-client-raw-forward. None establishes measured physical input cadence or descriptor identity.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
