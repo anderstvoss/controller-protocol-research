@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-antimicrox-sdl",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/AntiMicroX/antimicrox/blob/b5fb5947d67b4505c6404da17766130c9102178c/src/inputdaemon.cpp",
+  "revision": "b5fb5947d67b4505c6404da17766130c9102178c",
+  "sha256": "0a51722a02454f449b3450a0f4a264bdf1452bf4792c1ff0b4ad3ef9f72ff362",
+  "lineage": "AntiMicroX/antimicrox",
+  "locator": "AntiMicroX GPL-3.0-or-later; SDL2 joystick enumeration and opening 179-195,336-373,420-454; generic mapping not independent native MotionPlus decoder."
+}

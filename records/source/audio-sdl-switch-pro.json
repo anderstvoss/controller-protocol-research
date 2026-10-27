@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-sdl-switch-pro",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapi_switch.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "a55cbd9df00707114c511fae33149900e556d362c37a7f9c255d821b12e4a030",
+  "lineage": "libsdl",
+  "locator": "87-103 output report IDs/subcommands; 245-251 rumble data; 532-603 rumble encoding/writes; 684-686 vibration enable; 1610-1665 rumble action. No speaker or PCM stream handler in this file."
+}

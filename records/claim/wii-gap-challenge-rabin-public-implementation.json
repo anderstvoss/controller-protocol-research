@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-rabin-public-implementation",
+  "statement": "Pinned Dolphin 3eb30c7 constructs challenge X by modular squaring of a deterministic local input, Y0 from the input, and Y1 through a published quadratic-root-related modular multiplication. F1 selects Y0 versus Y1 and each stage writes a 64-byte little-endian big-integer response. Dolphin's dated April 2019 public engineering account describes solving a Rabin-style two-choice challenge; the code uses mbedTLS multiprecision math and published shared constants rather than any controller-unique secret or per-console runtime key. The project must not reproduce parameters, factors, secret keys, static outputs, or GPL code. PR 14910 is only an open unmerged proposal to precompute outputs, not merged runtime evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c7 MotionPlus.cpp 10-46,268-299,465-522 and MotionPlus.h 194-231; Dolphin blog 2019-04-26 public article, section Cracking the Code; PR14910 open/unmerged and pinned 3503d8e proposal. No payload values in record. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-challenge-pr14910-unmerged"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

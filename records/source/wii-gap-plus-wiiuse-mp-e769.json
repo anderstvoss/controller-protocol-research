@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-wiiuse-mp-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "a6541f91ea6859e0fcd06cf504fc8b443d4cd25e628debdc261d126377fbeb5e",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "Wiiuse GPL-3.0-or-later: probe accepts special built-in MP ID code lines 42-80; active mode mapping 04/05 lines 175-207. Existing source elsewhere but new dedicated revision locator."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualshock4-usb-audio-unknown",
+  "statement": "These pinned Linux HID and SDL PS4 HID consumer files do not enumerate, configure, or validate a USB Audio Class interface for a physical DS4. They cannot establish physical UAC presence, channel count, formats, mic routing or whether functional 2-output/1-input sidecar emulation matches a real DS4.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Searched DS4 common output parser/send path and SDL PS4 effect output path only; ALSA USB descriptor/physical captures not yet inspected."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

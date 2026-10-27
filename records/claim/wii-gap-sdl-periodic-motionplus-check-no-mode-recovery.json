@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-periodic-motionplus-check-no-mode-recovery",
+  "statement": "SDL's periodic Wii MotionPlus check probes standard extension and then A600FE identification asynchronously. It can schedule a joystick disconnect/reinitialization when MotionPlus presence differs from the cached presence, but does not update m_ucMotionPlusMode in the response handler when an already-known MotionPlus changes from inactive to active. If present remains true while cached mode stays NONE, repeating the periodic check alone does not recover gyro decoding. Reopening a fresh SDL device after kernel activation is a distinct test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL 3.2.10, SDL 3.4.18 and SDL main at pinned October 2026 source commits; no retail Wii measurement",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. NeedsPeriodicMotionPlusCheck 430-443; CheckMotionPlusConnection 450-455; HandleResponse 1396-1435; UpdateDevice 1546-1559. No run proves a reconnect succeeds."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-main-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

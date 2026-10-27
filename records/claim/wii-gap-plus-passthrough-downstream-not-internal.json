@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-passthrough-downstream-not-internal",
+  "statement": "External MotionPlus mode 04 is standalone, 05 Nunchuk passthrough and 07 Classic passthrough; kernel/wiiuse consumers reuse these control modes across their recognized remotes. The six-byte MP gyro frame extension_connected flag denotes the downstream accessory, not whether the built-in gyro physically exists. Therefore integrated Plus with no Nunchuk can have MP present and connected flag false. This last integrated interpretation is source-derived and unmeasured; integrated Nunchuk/Classic bit mapping and active status transition timing remain unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 core.c 470-565; wiiuse motion_plus.c 175-205,238-316; Dolphin MotionPlus.h 77-115; WiiBrew oldid120079 mode and gyro-bit descriptions. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-wiiuse-mp-e769",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

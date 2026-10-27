@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-device-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hhd-dev/hhd/blob/adbd50ff30614df886a6c76bd8855a64fde5d0b8/src/hhd/controller/virtual/dualsense/__init__.py",
+  "revision": "adbd50ff30614df886a6c76bd8855a64fde5d0b8",
+  "sha256": "5bf56b889be1699727a55a50ed4b243de6e58e556c31c17e47fc6d8fdc7cdd24",
+  "lineage": "hhd",
+  "locator": "HHD virtual DualSense 67-152 UHID creation; 195-221 GET_REPORT handlers; 363-443 IMU packing and timestamp; 516-548 failover, CRC, send."
+}

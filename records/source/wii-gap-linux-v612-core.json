@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-v612-core",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/adc218676eef25575469234709c2d87185ca223a/drivers/hid/hid-wiimote-core.c",
+  "revision": "adc218676eef25575469234709c2d87185ca223a (Linux v6.12)",
+  "sha256": "e6ad96a6735ccdfa62adb4d052d638dbfd71103e15233b375e309724a7a1a833",
+  "lineage": "linux-kernel",
+  "locator": "v6.12 core: 467-510 MotionPlus initialization and 0xA600FE mapping; 759-792 detection/input module lifecycle; 1095-1190 hotplug flag gate and map/deactivation."
+}

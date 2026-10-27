@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-volume-range-discrepancy",
+  "statement": "The existing pinned WiiBrew record states an ADPCM speaker volume configuration range of 0x00..0x40, whereas Dolphin normalizes its emulated ADPCM volume against 0x7f and raises its divisor if the stored level is greater. Both agree PCM uses an 8-bit volume span up to 0xff. The mismatch is in documented nominal range versus Dolphin mixer normalization, and does not establish which bound the retail hardware enforces; do not erase or reconcile either assumption.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Specific source disagreement with the ADPCM register maximum in wii-gap-wiibrew-speaker-init-config-registers. Volume normalization is not necessarily a hardware-validity limit; future physical volume sweep is required."
+  },
+  "sources": [
+    "audio-dolphin-wii-emulated-speaker",
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "wii-gap-wiibrew-speaker-init-config-registers"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}

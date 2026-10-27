@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cwiid-gyro-fadf",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/process.c",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "284c97a1bcf7911fe98e78de32111c855b4d249fda842118f3eac085aec4641a",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "CWiid GPL-2.0-or-later; single MotionPlus case decodes packet axes and slow flags at lines 235-251; no F6/40 calls in this handler, not a complete passthrough acceptance test."
+}

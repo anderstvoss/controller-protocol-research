@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w3-n1-attribution-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w3-n1-attribution-host.json",
+  "sha256": "18d550fc233ecaf8dd547b4269baddf4ead47a56b514bc4bc8379f714c78066e",
+  "sources": [
+    "virtualgamepad-wii-w3-baseline",
+    "virtualgamepad-wii-w2-runner"
+  ],
+  "experiments": [
+    "wii-w3-n1-attribution-host-run"
+  ],
+  "parent": null,
+  "transform": "Privately inspected names/phys/ancestry/udev metadata; published only roles/count, nonmatching ownership/classification and relative bounded time. Removed names, hardware paths, identities, absolute clocks and labels. Private original metadata SHA256 496dd82e26b3b9227c37a905439735d5d61439c896b262051058246cf5316327. No real input data or physical-controller validation.",
+  "claims": []
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-dolphin-direct-sanity-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w5-dolphin-direct-sanity-host.json",
+  "sha256": "b48ca169788d2d60ecb3160c400adea8732d336e159f7ebc8d09015894452a9f",
+  "sources": [
+    "wii-w5-virtualgamepad-baseline",
+    "wii-w1-dolphin-2609a",
+    "wii-w5-dolphin-main-settings",
+    "wii-w5-dolphin-sdl-gamepad",
+    "wii-w5-dolphin-wiimote-controller"
+  ],
+  "experiments": [
+    "wii-w5-dolphin-direct-sanity-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced original own-virtual child summaries; removed paths, identities, stderr/debug output and wall clocks. Private artifact/trace hashes {\"motionplus\": {\"artifact_sha256\": \"0649ff1001556f698ed076080e058cbf8fc597a7bb6571e552fbdcdfd90d0378\", \"child_trace_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}, \"motionplus-nunchuk\": {\"artifact_sha256\": \"6d11ac6ef2082af3fffdd0382eefbcf9236b15ecfbe1ba5138f459072d9ad57c\", \"child_trace_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}}. Private aggregate provider trace SHA256 c812674f67d206b8e27095ab42f7dea4974ca097c39004cb73c1c3074ea23e05. No upstream code copied.",
+  "claims": []
+}

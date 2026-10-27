@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-dolphin-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w1-dolphin-2609a",
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "fixtures": [
+    "wii-w7-dolphin-host"
+  ],
+  "procedure": "Original W7 owned-device tools and isolated profiles; availability and human grant confirmation first. Fixed attachment per consumer, two explicit drive vectors, exact HID driver identity, explicit owned event paths and foreign full-path input opens denied in instrumented apps. UI12seconds, libxwiimote18seconds, evtest12seconds, RetroArch25second bounds, Dolphin35second bounds; separate trace positive control. No ROM or game. Profile-owned children closed then device close twice; verify owned HID/raw/LED/uinput nodes gone. Publish only reduced observations. Corrected Dolphin repeat on a freshly granted device verifies exact-profile child cleanup between attachment changes; separate raw-access and trace controls are repeated on that device. Initial overlapping pilot is not an independent comparison.",
+  "semantic_outcome": "Dolphin2609a Flatpak: corrected separate35second no-ROM MP/MP+Nunchuk profiles have empty owned dynamic traces. Each profile-owned child was explicitly terminated and verified gone before the next arm (two TERM, no KILL). Separate sandbox raw access and enumeration/open trace controls pass. Direct-scanner enumeration remains the first unestablished checkpoint; status write, Connect, ControllerInterface AddDevice and gyro remain unestablished, with no internal cause inferred. The initial pilot overlapped child lifetimes across profiles; its comparison is invalid and retained as a method limitation. No kernel unbind, game content or model change."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-on-control-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "fixtures": [
+    "wii-w9-dolphin-motionplus-on-control-host"
+  ],
+  "procedure": "Run owner-approved compat branch head with validated synthetic caller resources. Create exact-owned on/off devices, verify HID/raw/LED links, await human grants and revalidate. Run native Dolphin 2503 MP+Nunchuk on then off (180 seconds each) with isolated emulated mapping profiles, no Real slots/content and owned raw/radio guards; verify consumer cleanup between profiles. Run shim-on MP-only Dolphin (150 seconds), then a 12-second kernel evdev control; preserve blocked reused-node preflight and use a fresh MP-only control without resetting initial topology. Compare native raw outputs with combined reverse callbacks for P3, preserving attribution limits and source-pinned usability diagnostics. Close all producers idempotently and verify HID/raw/LED removal.",
+  "semantic_outcome": "Shim-on MP-only native Dolphin 2503 control reads the exact caller MP calibration in two successful chunks and shows changing mapping-view gyro, accelerometer and two basic IR points over a 150-second bound. P3 still observes non-Dolphin initialization after mapping; no continuous-delivery, rate-accuracy, physical, game or complete-controller claim. This is an MP-only positive control, not MP+Nunchuk acceptance."
+}

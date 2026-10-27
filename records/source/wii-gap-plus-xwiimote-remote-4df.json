@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-xwiimote-remote-4df",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/doc/DEV_REMOTE",
+  "revision": "4df713d9037d814cc0c64197f69e5c78d55caaf1",
+  "sha256": "c0b4e163fed0c5803ebcae486650d0b67e38e7c227b45ad3bb2a54000e70a0a2",
+  "lineage": "xwiimote/xwiimote",
+  "locator": "Xwiimote reverse engineering notes lines 21-87 on Bluetooth classes, names, Broadcom versus CSR by observed Remote/Plus revisions; no unit-specific addresses reproduced."
+}

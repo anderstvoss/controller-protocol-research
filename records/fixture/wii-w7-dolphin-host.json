@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-dolphin-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w7-dolphin-host.json",
+  "sha256": "8af7d8a6789caea7ded67d868aea3e66bb2a6f939f905b3f53ab374b1f58849e",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w1-dolphin-2609a",
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "experiments": [
+    "wii-w7-dolphin-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device summaries to counts, extrema, interface bits, versioned outcomes and checkpoint dispositions. Removed paths, identities, raw bytes, raw logs, wall clocks and debug text. Referenced survey claims remain unchanged. Private host-output trace SHA256 4ae718edef66e4b19c072e65e449c8d08794150dcd201fb72576079b32dac277. No third-party code or physical capture redistributed. Corrected Dolphin host-output trace SHA256 1e814961d2e99d62148f7f3034ce2e43b29467b3d9440c48694d60f9d1821a87.",
+  "claims": []
+}

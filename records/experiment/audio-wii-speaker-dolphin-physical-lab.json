@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-speaker-dolphin-physical-lab",
+  "kind": "controlled_physical",
+  "status": "not_run",
+  "sources": [
+    "wii-gap-dolphin-real-core-e1d35f",
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-speaker-registers",
+    "audio-dolphin-wii-speaker-output-handler",
+    "audio-dolphin-wii-report-structs",
+    "audio-dolphin-wii-main-settings"
+  ],
+  "fixtures": [],
+  "procedure": "Maintainer-only future lab: 1. Use known-working real Wii Remote under Dolphin real-Wiimote passthrough with speaker setting enabled; record controller revision/firmware if available without identifiers. Contrast setting disabled; track whether host outputs 0x14 (enable bit 2), 0x19 (mute bit 2), and WriteData 0x16 writes to the A2 speaker register range occur, including order and ACK/error status. 2. Capture metadata only for 0x18 speaker-data packets (timestamps, report ID, encoded payload length, no raw PCM/identifiers), measure distribution/inter-packet gaps, and contrast real 100/200 Hz input behavior and Dolphin's repeat-reports option. 3. Compare physical remote passthrough with a BUS_BLUETOOTH UHID virtual remote implementing the same report/register semantics; check Dolphin authorization and real-remote selection separately from decode correctness. 4. Independently exercise signed PCM and Yamaha nibble ADPCM with legal and unknown formats, volume 0, maximum values claimed by WiiBrew versus Dolphin, rate divisors, mute/unmute and speaker enable off/on, reset/reattach and malformed >20-byte payload. 5. Cross-check against Dolphin emulated-speaker mixer behavior and actual sound only with operator consent, noting that Dolphin real passthrough forwards encoded data instead of locally decoding it. 6. Preserve sanitized structured counters/spectral summaries and failure logs without audio recordings, serials, MACs, or raw captures. No steps have been performed by the cloud researcher.",
+  "semantic_outcome": null
+}

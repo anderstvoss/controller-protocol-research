@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "audio-xbox360-xpad-no-headset-audio",
+  "statement": "The pinned Linux xpad consumer handles Xbox 360 controller input, connection/headset-present status and rumble, but this inspected driver has no headset PCM playback/capture or ALSA audio registration. Its wired Xbox 360 USB interface selection is XInput-like and not ordinary HID audio; the virtualgamepad functional 2-out/1-in sidecar is not evidence that an Xbox 360 native wired-headset transport has been emulated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer-file absence; XInput/proprietary headset audio protocol details and reference hardware capability are outside this source. The claim is deliberately not that Xbox 360 hardware has no headset audio."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

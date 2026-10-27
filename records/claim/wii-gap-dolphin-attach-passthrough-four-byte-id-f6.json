@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-passthrough-four-byte-id-f6",
+  "statement": "When a MotionPlus is active with its downstream extension-connected flag true but Dolphin lacks a downstream extension ID, ControllerInterface reads four bytes starting A400F6; it decodes bytes at read offsets 2,0,3 as the normal extension ID bytes 0,4,5 respectively. Dolphin's emulated MotionPlus stores those values in positions F8,F6,F9 after reading a downstream extension's six-byte FA identifier; the intervening F7 byte is a challenge-state byte, not one of those ID fields. A400FA remains the active MotionPlus's own six-byte mode/identity; the two addresses answer distinct questions. The reviewed WiiBrew MotionPlus page describes A400FA identity and pass-through modes but does not document this F6 mirror. This is solid Dolphin consumer and emulator evidence, not verified retail hardware layout.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 543-561,719-743; MotionPlus.cpp 430-465; MotionPlus.h 214-240. WiiBrew oldid120079 does not independently document F6-F9. Provenance audit 2026-10-27: category-1-leaning / low-to-moderate-confidence hardware-derived hypothesis ONLY; no physical F6 read and Dolphin emulator/ControllerInterface not independent. Dolphin's F6-before-calibration gate is consumer-specific. 2019 source, wiiuse 2026 review and docs/wii-dolphin-attachment.md §1a."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-attach-2019-passthrough-emulation-ba1b33",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

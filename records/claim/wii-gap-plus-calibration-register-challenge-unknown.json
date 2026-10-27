@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-calibration-register-challenge-unknown",
+  "statement": "The external MotionPlus calibration format and Dolphin emulator source describe 32 bytes of fast/slow gain/zero metadata with CRC32 split into halves; no captured authentic early Plus or TR calibration images or checksums are available to compare. Equality or differences in built-in MP CRC, UID, inactive/active calibration 20, downstream ID F6, F7 challenge, cached accessory 40, 50 challenge data and reset/mode transitions remain unknown, despite consumer implementation reuse. Emulator-synthesized calibration cannot promote those to physical truth.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. Dolphin MotionPlus.cpp 95-154, header MotionPlus.h 20-77, WiiBrew oldid120079 calibration; prior #46 and #49 are separate claims. Source-only physical unknowns. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-dolphin-mp-3eb",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-challenge-pr7861-registers"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

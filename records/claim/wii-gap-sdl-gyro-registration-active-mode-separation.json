@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-gyro-registration-active-mode-separation",
+  "statement": "On SDL HIDAPI Wii, discovery marks MotionPlus present when either the active mapped extension identifier or inactive A600FE ID matches. Joystick opening advertises SDL_SENSOR_GYRO based on presence, not on the active mode. Thus an advertised/enabled gyro can coexist with MotionPlus mode NONE and no decoded gyro samples; W4 observed the symptom but has not shown the causal state.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL 3.2.10, SDL 3.4.18 and SDL main at pinned October 2026 source commits; no retail Wii measurement",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Wii GetMotionPlusState 385-428, OpenJoystick 773-799, SetJoystickSensorsEnabled 860-877. Matches W4 advertised/enabled/zero observation, without attributing its cause."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-main-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

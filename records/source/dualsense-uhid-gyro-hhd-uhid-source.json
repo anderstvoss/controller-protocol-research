@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-uhid-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hhd-dev/hhd/blob/adbd50ff30614df886a6c76bd8855a64fde5d0b8/src/hhd/controller/lib/uhid.py",
+  "revision": "adbd50ff30614df886a6c76bd8855a64fde5d0b8",
+  "sha256": "e2951b585238c72439418a00655f04a93e105f6f9ea647c75537c93bb5bc35c4",
+  "lineage": "hhd",
+  "locator": "HHD UHID helper 21-26 bus IDs; 193-230 generated uniq/phys and constructor; send_create and report transport below 230. No physical pairing."
+}

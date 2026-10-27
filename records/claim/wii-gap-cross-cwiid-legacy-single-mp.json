@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cwiid-legacy-single-mp",
+  "statement": "Pinned CWiid's status thread reads A400FE/2 to classify a MotionPlus extension and the packet processor exposes the MotionPlus six-byte angle-rate and slow-mode fields for a single MotionPlus extension type. The inspected status and parser do not request Dolphin's A400F6/4 and A40040/16, and do not establish full simultaneous MP+Nunchuk state handling. Linux CWiid still needs physical Bluetooth L2CAP; no virtual-UHID runtime acceptance follows.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Pinned CWiid thread.c 155-215, process.c 235-252, connect.c 34-148; source-only and limited to this legacy implementation."
+  },
+  "sources": [
+    "wii-gap-cross-cwiid-thread-fadf",
+    "wii-gap-cross-cwiid-gyro-fadf",
+    "wii-gap-consumer-cwiid-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

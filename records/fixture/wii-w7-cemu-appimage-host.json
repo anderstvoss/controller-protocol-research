@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-cemu-appimage-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w7-cemu-appimage-host.json",
+  "sha256": "15894fb72f10ed3bd625107f16413af8fab376e46df7af03af174600ae50b31a",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages",
+    "wii-w7-cemu-default-memory"
+  ],
+  "experiments": [
+    "wii-w7-cemu-appimage-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced only owned virtual-device traces into protocol-address counts, report IDs, versions and bounded outcomes. Removed paths, device identities, raw bytes/logs, GUI data and wall clocks. AppImage and source binaries are not redistributed. Full private host-output trace SHA256 a13df04e6ab0745c5f7812710f4f7cbccddd6610698dabd6bb97f5ffda2ae9d0.",
+  "claims": []
+}

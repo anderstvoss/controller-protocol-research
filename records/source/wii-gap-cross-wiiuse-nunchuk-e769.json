@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-wiiuse-nunchuk-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/nunchuk.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "ac5cfcf1cd6271b05076be6b7bff66b8e6b9237b456b726854751871041cbfbe",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "wiiuse GPL-3.0-or-later; normal Nunchuk calibration handshake and fallback/retry behavior at lines 42-116, not evidence that active MotionPlus register A40040 is physically mirrored."
+}

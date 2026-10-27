@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cemu-motionplus-visitor-unreachable",
+  "statement": "At pinned Cemu 29f2f1f, MotionPlusData is held in an optional separate from m_extension; m_extension's declared variant alternatives are monostate, NunchuckData and ClassicData. The report-0x37 decoder includes a MotionPlusData visitor but visits m_extension, making this MotionPlusData branch unreachable for the declared variant. Its existence in source is not evidence of a runtime gyro decode. No conclusion is made about other versions, forked code, alternate APIs or physical Wii Remotes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Pinned Cemu WiimoteControllerProvider.h 43-73 and WiimoteControllerProvider.cpp 492-550; static type/dispatch reasoning only, no instrumented application host validation."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-cross-cemu-provider-header-29f2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

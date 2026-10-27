@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-3-2-10-no-reattach",
+  "statement": "SDL3.2.10 marks a non-MotionPlus extension-presence change disconnected, removes the joystick and requests a rescan. For an otherwise still-enumerated standalone Wii HID device, the rescan does not delete/re-add it while device->dev stays open. The generic joystick-close wrapper and Wii close/free callbacks do not close that handle. Therefore this path does not reattach the joystick on an unchanged still-present hidraw device. This is a source-derived consumer limitation consistent with W2/W3, not a virtualgamepad protocol defect or physical observation. Full SDL quit, device removal or driver reinitialization is outside this claim.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL consumer source; physical Wii revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. 877399b: Wii HandleStatus1350-1384, UpdateDevice1512-1576, CloseJoystick1579-1587, FreeDevice1589-1591; generic HIDAPI_JoystickDisconnected762-800, rescan1071-1149 (predicate1118-1119), JoystickClose1626-1657. Conditional on device staying enumerated, driver enabled and open handle retained."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick"
+  ],
+  "experiments": [
+    "wii-w2-sdl-after-host-run",
+    "wii-w3-sdl-diagnosis-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-motionplus-layout-e1d35f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "a1f2ca12eb7959df79df2a54ada6dc137f806b698f60df8570fbb2399f66bbe9",
+  "lineage": "dolphin",
+  "locator": "GPL-2.0-or-later consumer source, pinned; 17-28 modes 04/05/07; 77-113 6-byte 14-bit layout; 120-170 register addresses and calibration domains. No upstream prose or code reproduced."
+}
