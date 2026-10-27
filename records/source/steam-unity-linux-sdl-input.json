@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-unity-linux-sdl-input",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/Unity-Technologies/InputSystem/06e08dfd47c62abc24fdf34e921580873c222c36/Packages/com.unity.inputsystem/Documentation~/hid-specification-introduction.md",
+  "revision": "06e08dfd47c62abc24fdf34e921580873c222c36",
+  "sha256": "150078bd5650991413f9589166eaaab4ff23d42dd702b344cbd9e8a4d34bfc2a",
+  "lineage": "Unity-Technologies/InputSystem",
+  "locator": "Linux HID input through SDL described at lines 5-20; Unity release-specific SDL version and Steam2026 behavior No evidence."
+}
