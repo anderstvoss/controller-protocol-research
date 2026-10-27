@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-sdl-usb-ids-877",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/usb_ids.h",
+  "revision": "877399b2b2cf21e67554ed9046410f268ce1d1b2",
+  "sha256": "4c36ab1a1fdf1a588f1112c841f29be326d2345e62b0850109a6a8fe692040bc",
+  "lineage": "libsdl-org/SDL",
+  "locator": "SDL Wii HIDAPI Nintendo product constants lines 92-98; pairs with wii-w4-sdl-3-2-10-wii source lines 182-190."
+}

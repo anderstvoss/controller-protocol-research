@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-xwiimote-devices-4df",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/doc/DEVICES",
+  "revision": "4df713d9037d814cc0c64197f69e5c78d55caaf1",
+  "sha256": "c3ff6398f222414ee15c12eabce9f5481dcc3915bd420ef58a026484226a38dc",
+  "lineage": "xwiimote/xwiimote",
+  "locator": "Xwiimote device catalogue lines 316-337, early RVL-036 board markings/colors, later revision differences; source observations are project documentation, not manufacturer complete revision roster. Do not reproduce private identifiers."
+}

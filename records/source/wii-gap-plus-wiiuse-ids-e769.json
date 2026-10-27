@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-wiiuse-ids-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/wiiuse_internal.h",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "76d77ce543fdd39f92afb3a5e1eeb344bbe7c7bc7948b7604dc2f86e1fd76b11",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "Wiiuse GPL-3.0-or-later, lines 159-177 and 227-242: 0306/0330 and Bluetooth class constants, inactive builtin MotionPlus identity code differs in this consumer; no real byte-for-byte physical capture."
+}
