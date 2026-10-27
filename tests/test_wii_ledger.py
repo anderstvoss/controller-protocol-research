@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 160)
+        self.assertEqual(len(claims), 166)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -128,6 +128,26 @@ class WiiLedger(unittest.TestCase):
             'wii-gap-dolphin-attach-driver-binding-alternatives',
         ]
         self.assertEqual(len(ids), 9)
+        for claim_id in ids:
+            claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
+            self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)
+            self.assertTrue(claim['sources'], claim_id)
+
+    def test_motionplus_cross_consumer_findings_source_only(self):
+        root = Path(__file__).resolve().parents[1]
+        ids = [
+            'wii-gap-cross-cemu-fa20-no-f6-40',
+            'wii-gap-cross-cemu-motionplus-visitor-unreachable',
+            'wii-gap-cross-cemu-exported-gyro-zero-sample',
+            'wii-gap-cross-wiiuse-mp-sample-zeroing',
+            'wii-gap-cross-cwiid-legacy-single-mp',
+            'wii-gap-cross-linux-kernel-sdl-layer-contrast',
+        ]
+        self.assertEqual(len(ids), 6)
         for claim_id in ids:
             claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
             self.assertEqual(claim['status'], 'source_supported', claim_id)
