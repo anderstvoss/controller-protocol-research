@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-kernel-menu-hold-450ms",
+  "statement": "Pinned Linux hid-steam IBEX input handler uses byte 2 bit 6 (Menu/start) to schedule a delayed gamepad-mode switch at 45*HZ/100 (nominal 450 ms) when client_opened is false and not already armed, cancels on release, and the callback only acts when lizard_mode is true. It toggles gamepad_mode and calls the existing lizard disable sequence when entering gamepad mode; leaving gamepad mode calls the lizard enable sequence only when client_opened remains false. The callback also clears evdev state on leaving. This is a host delayed-work path, not a proven physical long-press or measured timing. Linux hid-steam.c lines 2441-2458,1487-1521,880-905. Physical hold behavior: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 or SDL Triton 6defbc0 host-source pin; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired USB 28de:1302 source-derived consumer expectation only. All timings are host scheduling assumptions or source comments; physical measurement: No evidence."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

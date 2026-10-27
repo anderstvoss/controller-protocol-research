@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-kernel-ibex-evdev-open-close",
+  "statement": "Pinned Linux hid-steam input_open/input_close automatically toggle lizard settings only when neither STEAM_QUIRK_DECK nor STEAM_QUIRK_IBEX is set. For the wired 28de:1302 IBEX quirk, evdev input_open and input_close do NOT issue those lizard SET reports. Distinctly, sensor_open/sensor_close may send IMU settings unless client_opened is nonzero, and a Menu hold can schedule mode-switch output. Linux hid-steam.c lines 909-976,2441-2458. Direct-device runtime result: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 or SDL Triton 6defbc0 host-source pin; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired USB 28de:1302 source-derived consumer expectation only. All timings are host scheduling assumptions or source comments; physical measurement: No evidence."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

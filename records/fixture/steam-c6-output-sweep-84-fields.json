@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-sweep-84-fields",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-sweep-84-fields.hex",
+  "sha256": "c7be9b3f2ff7aae096f2503f622e8b5ff075ce6240fa2c9f9e5f554cd876c1a4",
+  "sources": [
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}
