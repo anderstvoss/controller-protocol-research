@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cemu-provider-header-29f2",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteControllerProvider.h",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "8b688af0f294bf0e87832477de95ceff9b7c2856cc1c8912aed55233e94a9f79",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0; WiimoteState m_motion_plus is a separate optional, while m_extension is monostate/NunchuckData/ClassicData, lines 43-73. This types the 0x37 visitor reachability claim."
+}

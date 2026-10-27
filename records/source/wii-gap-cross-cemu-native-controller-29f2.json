@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cemu-native-controller-29f2",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/NativeWiimoteController.cpp",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "650858c7190807c577a6bab8812ce32dcc33af21483684efe6e57c9630a850db",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0; get_motion_sample forwards provider state.motion_sample rather than m_motion_plus, lines 128-142, supporting exported motion-data path. No runtime outcome."
+}
