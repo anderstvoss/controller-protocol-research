@@ -144,3 +144,13 @@ extension calibration read; MP+Nunchuk has 18 successful A40020/16 replies,
 establishes delivery beyond the earlier refusal, with kernel mapping still
 shared. Repeated initialization and decoded application motion remain the next
 unestablished checkpoint. No additional model change or physical promotion.
+
+
+### W9 fixed F7 compatibility policy
+
+Current inventory: **167 Wii claims**. `wii-w9-f7-fixed-preparing-compat` pins
+the fixed non-ready value chosen by Anders: F7 is held at 0x02 while the active
+passthrough identity mirror applies. The source comment describing hardware is
+not our physical readback. No challenge is implemented or promoted; offset
+0x50 remains error 7. Dolphin ignores this byte when decoding downstream ID.
+Runtime shim observations remain not run in this source-only record.
