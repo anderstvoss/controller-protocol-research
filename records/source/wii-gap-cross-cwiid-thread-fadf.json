@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cwiid-thread-fadf",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/thread.c",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "491e601bd1180afbfcd06fafb74f133e203ec78f972384dd22c9b1635bfc490a",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "CWiid GPL-2.0-or-later; legacy status thread reads extension ID A400FE/2, maps MP as a single extension type and initializes ordinary extensions at A400F0/FB, lines 155-215; full MP+Nunchuk parity not established."
+}
