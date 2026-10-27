@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-xwiimote-header-4df",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/lib/xwiimote.h",
+  "revision": "4df713d9037d814cc0c64197f69e5c78d55caaf1",
+  "sha256": "2c3dcfd5388cfea6bb12478fb03c8718701b9834a148896ef898b472b871dedd",
+  "lineage": "xwiimote/xwiimote",
+  "locator": "Xwiimote public device policy descriptions lines 93-121: gen 1 includes occasional integrated Plus, gen 2 guarantees built-in MP; gen15 is indicative label, not universal classification."
+}

@@ -165,3 +165,10 @@ The reused post-Dolphin missing-MP-node preflight and excluded pilot remain
 explicit. No live passthrough-window success or MP+Nunchuk acceptance is
 inferred; no bank alias, challenge, physical or calibrated-rate promotion.
 See `docs/wii-w9-consumer-runs.md` for P3 scope and cleanup.
+
+### Remote Plus source pass
+
+Current inventory: **187 Wii claims**, adding nine source-only `wii-gap-plus-*`
+claims on Remote Plus identity and integrated MotionPlus gates. See
+`docs/wii-remote-plus.md`. Integrated MotionPlus ID bytes, calibration,
+F6/F7/40 and challenge behaviour remain unmeasured.

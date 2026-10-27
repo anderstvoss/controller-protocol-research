@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-kernel-core-v612",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-core.c",
+  "revision": "v6.12",
+  "sha256": "e6ad96a6735ccdfa62adb4d052d638dbfd71103e15233b375e309724a7a1a833",
+  "lineage": "torvalds/linux",
+  "locator": "Linux GPL-2.0-only: lines 411-567 MP identity, mapping, and connected extensions; 570-605 gen 1/gen 2 module lists; 811-907 name-before-PID classifier; 1868-1876 0306/0330 Bluetooth match."
+}

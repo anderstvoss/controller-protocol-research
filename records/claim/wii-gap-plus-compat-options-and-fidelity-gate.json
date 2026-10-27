@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-compat-options-and-fidelity-gate",
+  "statement": "A guarded WiiRemoteRevision Plus with Nintendo TR 0330 identity, builtin-MP existence and reused external MP registers is a source-backed proposed compatibility prototype for kernel, SDL, Dolphin and Cemu enumeration, but not a verified hardware-faithful Plus and not coverage for early 0306 Plus. A Plus VID/PID without live builtin MP is particularly misleading because the kernel's Gen 2 policy expects MP; deferring model changes until physical captures has stronger fidelity discipline but no immediate Plus support. Recommendations and lab arms are not tested outcomes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux Gen 2 flags and mapping 570-605,811-927; SDL Wii detection 182-191; Dolphin accepted IDs 1033-1037; Cemu native HID 5-48; wiiuse README 103-112. Implementation tradeoff inference only. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plus-sdl-usb-ids-877",
+    "wii-gap-plus-dolphin-real-3eb",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-plus-wiiuse-readme-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

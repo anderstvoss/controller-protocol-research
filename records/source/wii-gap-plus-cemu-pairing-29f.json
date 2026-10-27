@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-cemu-pairing-29f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/gui/wxgui/input/PairingDialog.cpp",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "b7c1318b67469e298c56cde5fe04d0aabc1b82424cddbc5b7fe6685f9237d4b0",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0: Bluetooth pairing name filter accepts RVL-CNT-01 and RVL-CNT-01-TR lines 229-238; separate HIDAPI vendor/PID path in existing corpus."
+}

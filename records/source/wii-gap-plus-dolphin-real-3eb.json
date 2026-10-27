@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-dolphin-real-3eb",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/3eb30c7620b4475b2e0404228ba0d2b238a132f1/Source/Core/Core/HW/WiimoteReal/WiimoteReal.cpp",
+  "revision": "3eb30c7620b4475b2e0404228ba0d2b238a132f1",
+  "sha256": "f4b900e31105df29b382236240a39318d029a74a602428b7521fde3d7550266a",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "Dolphin GPL-2.0-or-later: name prefix checks and recognized Nintendo VID/PID 0306/0330 lines 1006-1036. Consumer identification only."
+}

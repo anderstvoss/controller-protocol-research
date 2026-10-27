@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-wiiuse-readme-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/README.mkd",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "190fabe84d70c574bf270e1b63aef4626f55f235732fac2c2bc0530d7fea238a",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "Wiiuse project hardware matrix lines 103-112: Gen 1 original, Gen 1.5 integrated with RVL-CNT-01 name, Gen 2 integrated TR with newer firmware; revision narrative is library project documentation."
+}
