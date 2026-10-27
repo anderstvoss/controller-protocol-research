@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-mp-layout-3eb30c",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/3eb30c7620b4475b2e0404228ba0d2b238a132f1/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h",
+  "revision": "3eb30c7620b4475b2e0404228ba0d2b238a132f1",
+  "sha256": "a1f2ca12eb7959df79df2a54ada6dc137f806b698f60df8570fbb2399f66bbe9",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "GPL-2.0-or-later. MotionPlus calibration block/CRC 18-75, gyro flags 80-115; mapped 0x20 calibration, 0x40 downstream copied 16 bytes, F2 trigger, F6/F8/F9 downstream ID and FA self ID 185-242."
+}

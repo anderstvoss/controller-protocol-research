@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-history-calibration-rationale-58d646",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/58d64625f9feb020e56edd1be3316dac68f886ab/Source/Plugins/Plugin_Wiimote/Src/EmuDefinitions.h",
+  "revision": "58d64625f9feb020e56edd1be3316dac68f886ab",
+  "sha256": "38860432ce5c6d866c93a88289fe964a4e6aca881d9a483aae72b0cf39eec0e7",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "Dolphin GPL-2.0-or-later; 2010-05-28 lines 145-161 document game-observed checksum complaints and swapping invalid Nunchuk calibration for one treated as valid; developer interpretation, not independent physical measurement. Do not publish source calibration bytes."
+}

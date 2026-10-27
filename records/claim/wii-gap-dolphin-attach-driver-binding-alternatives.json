@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-driver-binding-alternatives",
+  "statement": "At Linux v6.12 hid-wiimote binds Nintendo 057e:0306 or 0330 only when the HID bus is Bluetooth. A per-device unbind/rebind to hid-generic, a driver-binding udev policy, or a machine-wide hid-wiimote module blacklist can prevent kernel write contention but disable the kernel Wii extension/MP evdev interfaces used by xwiimote and evtest on that device. A fixture-only alternate bus or PID can avoid the v6.12 wiimote ID table, but Dolphin must still enumerate/accept the HID path; this can alter other Wii consumers and cannot be promoted as product identity. Dolphin settings can change scanner/real-vs-ControllerInterface selection and whether sound is desired, but do not by themselves disconnect the kernel driver.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Kernel v6.12 core.c 1850-1894 ID table and module matching, 411-567,1100-1208; Dolphin 3eb30c IOhidapi.cpp 17-59 and WiimoteReal.cpp 650-745. Exact distro udev driver_override availability/policy not proved."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wii-gap-dolphin-attach-hidapi-3eb30c",
+    "wii-gap-dolphin-attach-real-3eb30c",
+    "wii-gap-dolphin-attach-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

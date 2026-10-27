@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-motionplus-mode-rechecks",
+  "statement": "After extension-port status, Dolphin clears Nunchuk/Classic and MotionPlus state, invalidates the report-mode cache and infers or re-reads active A400FA identity. For inactive MotionPlus it polls A600FE length 1, initializes A600F0=55 and writes desired A600FE mode 04/05/07. Mode writes set the current mode unknown, wait two seconds, and trigger active-mode rechecks; status and MP embedded extension-connectivity events can restart this cycle. Failed initialization can defer or retry, not prove that a single write achieved a stable gyro stream.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 449-573,660-741,851-883,1049-1106,1350-1401,1450-1485,1680-1734. Kernel v6.12 hotplug asynchronous."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-kernel-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

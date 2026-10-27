@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-report-calibration-and-later-gates",
+  "statement": "Dolphin ControllerInterface only applies gyro from MotionPlus reports after a 32-byte A40020 read has supplied MotionPlus fast/slow calibration; it parses the six-byte MP portion in report 0x37 and requires a known active mode. The 32-byte calibration has a CRC warning path that does not itself reject the parsed block. IR configuration writes sensitivity blocks to B00000/9 and B0001A/2, selects B00033 basic mode and B00030 tracking, and must finish before extension tasks. A standalone F2 calibration-trigger function exists but is not called from RunTasks or other inspected ControllerInterface call sites; it is not a mandatory pre-gyro gate in this pinned path. Lack of current verified timing, read-handler and mapping stability remains a separate question.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 403-448,574-659,898-1085,1100-1198,1352-1479. Current model codec.rs 313-380 and memory.rs 119-204; no physical timing proof."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-dolphin-attach-vg-memory-5a11e5",
+    "wii-gap-dolphin-attach-vg-codec-5a11e5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
