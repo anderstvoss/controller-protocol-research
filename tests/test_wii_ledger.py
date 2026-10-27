@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 138)
+        self.assertEqual(len(claims), 147)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -108,6 +108,29 @@ class WiiLedger(unittest.TestCase):
             self.assertEqual(claim['status'], 'source_supported', claim_id)
             self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
             self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)
+            self.assertTrue(claim['sources'], claim_id)
+
+    def test_dolphin_attachment_source_only(self):
+        root = Path(__file__).resolve().parents[1]
+        ids = [
+            'wii-gap-dolphin-attach-scanner-vs-controllerinterface',
+            'wii-gap-dolphin-attach-controller-task-order-and-failure',
+            'wii-gap-dolphin-attach-motionplus-mode-rechecks',
+            'wii-gap-dolphin-attach-passthrough-four-byte-id-f6',
+            'wii-gap-dolphin-attach-active-passthrough-calibration-copy-40',
+            'wii-gap-dolphin-attach-current-model-passthrough-read-denials',
+            'wii-gap-dolphin-attach-kernel-shared-register-competition',
+            'wii-gap-dolphin-attach-report-calibration-and-later-gates',
+            'wii-gap-dolphin-attach-driver-binding-alternatives',
+        ]
+        self.assertEqual(len(ids), 9)
+        for claim_id in ids:
+            claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
             self.assertIn('evidence_role: consumer', claim['applicability']['scope'], claim_id)
             self.assertEqual(claim['experiments'], [], claim_id)
             self.assertTrue(claim['sources'], claim_id)

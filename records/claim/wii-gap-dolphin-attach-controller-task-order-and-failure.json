@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-controller-task-order-and-failure",
+  "statement": "ControllerInterface RunTasks is serialized by a pending report-handler gate: periodic status, LED ACK, reporting mode 0x37 ACK, EEPROM accelerometer calibration read at 0x0016, IR enable/sensitivity/mode, speaker mute and disable ACKs, then extension and MotionPlus identity/mode tasks. Nonzero error ACK or missing reply can cause retry of the same unsatisfied prerequisite. Report handlers expire after 5 seconds, with read errors forwarded as empty results and readiness flags left unset.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c WiimoteController.cpp 340-485,899-1047,1500-1734; virtualgamepad codec.rs 277-380 and memory.rs 115-206. No host timing acceptance established."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-vg-codec-5a11e5",
+    "wii-gap-dolphin-attach-vg-memory-5a11e5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

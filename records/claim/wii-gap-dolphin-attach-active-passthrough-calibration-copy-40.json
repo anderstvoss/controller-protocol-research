@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-active-passthrough-calibration-copy-40",
+  "statement": "Dolphin's emulated MotionPlus reads exactly 16 bytes of the attached downstream accessory calibration from its normal register offset 0x20 and caches those same bytes in its own active register 0x40-0x4f; the reviewed copy does not reformat them. ControllerInterface asks A40040/16 for Nunchuk/Classic calibration if MotionPlus is active, and otherwise A40020/16 when normal extension is active. It checks the standard two-byte extension checksum but records calibration with a bad-checksum flag rather than automatically abandoning a successful read. The WiiBrew MotionPlus page covers calibration at the MotionPlus's 0x20 region but does not independently document A40040 forwarding, so retail copy behavior remains unverified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c MotionPlus.cpp 445-464, MotionPlus.h 186-208 and WiimoteController.cpp 606-656. Related prior unknown wii-gap-extension-calibration-checksum-unknown. No physical data, no assumed checksum correctness."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

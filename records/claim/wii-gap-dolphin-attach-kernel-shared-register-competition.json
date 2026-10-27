@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-kernel-shared-register-competition",
+  "statement": "The Linux v6.12 hid-wiimote driver responds to probe/status/hotplug and dedicated MotionPlus evdev open/close with its own A400F0=55, A400FB=00, A600F0=55, A600FB=00, A600FA read, A400FA read and A600FE 04/05/07 map transactions, plus report-mode/status requests. This shares the same mutable extension state with Dolphin raw HIDAPI, so a kernel reconciliation can reset Dolphin's mapping or race its reads. Dolphin emits a Linux driver warning but does not veto an open, and the source does not show kernel binding to be intrinsically fatal: observed success requires per-transaction attribution, not speculation. Opening an MP evdev node sets MP_USED and schedules mapping; mere hidraw open does not.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Kernel v6.12 hid-wiimote-core.c 411-567,867-944,946-1230, modules.c 2771-2835; Dolphin 3eb30c IOhidapi.cpp 17-85. No guarantee of exclusive order in mixed-host runs."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wii-gap-dolphin-attach-kernel-modules-v612",
+    "wii-gap-dolphin-attach-hidapi-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
