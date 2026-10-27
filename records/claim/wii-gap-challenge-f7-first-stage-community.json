@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-f7-first-stage-community",
+  "statement": "WiiBrew revision 120079 documents an inactive MotionPlus A600F7 first-stage progression 0x02,0x04,0x08,0x0c,0x0e and changing A60050-area contents during initialization. Dolphin 2019/2026 emulator register commentary independently records the same stage labels, but does not provide its own raw hardware trace. This is a hardware-derived community-reported observation at moderate confidence, not an owned physical experiment or proof of the same active A400F7 behavior on all external/integrated/TR revisions.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. WiiBrew oldid120079 introduction; Dolphin 59e1c834 MotionPlus.h 84-103, PR7861 header 116-135, 3eb30c7 header 224-231. Role device means community alleged behavior, not this corpus's own measurement. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-challenge-2019-initial-f7-59e1",
+    "wii-gap-challenge-pr7861-registers",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

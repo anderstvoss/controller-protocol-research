@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-libogc-regs-959",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/959871c08ed80d1a63b258bc207218623ea1b0e5/wiiuse/wiiuse_internal.h",
+  "revision": "959871c08ed80d1a63b258bc207218623ea1b0e5",
+  "sha256": "8576e4fd12ce97a8abf5a9d4c68316e11e932cceb93cb9d1e1a0b62956523fe8",
+  "lineage": "devkitPro/libogc",
+  "locator": "libogc Wiiuse pinned register constants lines 108-120 for normal extension, A600 activation and ID; source role: homebrew consumer. Its 0x50 report constant is not a challenge-register read."
+}
