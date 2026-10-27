@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-linux-core-v612",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-core.c",
+  "revision": "v6.12",
+  "sha256": "e6ad96a6735ccdfa62adb4d052d638dbfd71103e15233b375e309724a7a1a833",
+  "lineage": "torvalds/linux",
+  "locator": "Linux v6.12 GPL-2.0-only: initial status and classification 811-905, report/status handler 1414-1493, register init/read/map 411-557, reconciliation 1100-1205 and work scheduler 1208-1224. Static Gen 2 path, not a TR physical trace."
+}
