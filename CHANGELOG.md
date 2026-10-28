@@ -7,6 +7,9 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W9f counted stimulus: sustained commits, no post-map MP+Nunchuk
+  data without a new report-mode request, and a passing MP-only gyro control.
+  Separate pre-map frames and producer/consumer rate denominators; no model fix.
 - Record Plus P1 kernel/xwiimote gyro, SDL 3.2.10 gyro limits and bound
   Dolphin MP-only UI observations, all scoped to Tr with default built-in ID.
   Keep absent kernel ID logging and physical/status limits explicit.
