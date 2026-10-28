@@ -47,8 +47,9 @@ Wii U Pro and musical accessories are excluded from this base/extension table.
 These consumer units are not raw sensor units,canonical physical calibration or
 a promised universal evdev mapping for every revision. The Wii package must
 implement a golden shape from the pinned consumer source and validate actual
-hid-wiimote binding on an eligible host. Source-only claims plus explicit unknown
-device claims express the evidence boundary without a new claim-schema marker.
+hid-wiimote binding on an eligible host. Source-only provenance and explicit unknown device claims remain essential.
+The optional `evidence_role: consumer` marker now prevents host-side evidence
+from raising device evidence status independently of transport.
 
 ## C5 synthetic compatibility model
 

@@ -47,9 +47,43 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['wii-remote']['category'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
+        # SDL or kernel source analysis alone is not device-protocol evidence.
+        for controller in ['dualsense-edge', 'switch2-pro', 'xbox-series']:
+            with self.subTest(controller=controller):
+                self.assertEqual(rows[controller]['category'], 'Evidence in progress')
+                self.assertEqual(rows[controller]['consumer_category'], 'Source evidence')
+        for controller in ['switch-pro', 'xbox360']:
+            with self.subTest(controller=controller):
+                self.assertEqual(rows[controller]['category'], 'No evidence')
+                self.assertEqual(rows[controller]['consumer_category'], 'Source evidence')
         puck = rows['steam-controller-2026-puck']['transports']
         self.assertEqual(puck['usb'], 'Source evidence')
-        self.assertEqual(puck['source_only'], 'Source evidence')
+        self.assertNotIn('source_only', puck)
+        self.assertEqual(rows['steam-controller-2026-puck']['consumer_transports']['source_only'],
+                         'Source evidence')
+
+    def test_consumer_claims_do_not_promote_device_evidence(self):
+        claim_path = self.root / 'records/claim/pro2-physical-macro-controls.json'
+        claim = json.loads(claim_path.read_text())
+        self.assertNotIn('evidence_role', claim)
+        before = {row['id']: row for row in status(self.root)}['8bitdo-pro-2']
+        self.assertEqual(before['category'], 'Source evidence')
+        self.assertEqual(before['consumer_category'], 'No evidence')
+        claim['evidence_role'] = 'consumer'
+        claim_path.write_text(json.dumps(claim))
+        after = {row['id']: row for row in status(self.root)}['8bitdo-pro-2']
+        self.assertEqual(after['category'], 'Evidence in progress')
+        self.assertEqual(after['consumer_category'], 'Source evidence')
+        self.assertNotIn('source_only', after['transports'])
+        self.assertEqual(after['consumer_transports']['source_only'], 'Source evidence')
+
+    def test_evidence_role_enum_is_validated(self):
+        path = self.root / 'records/claim/pro2-physical-macro-controls.json'
+        claim = json.loads(path.read_text())
+        claim['evidence_role'] = 'invalid'
+        path.write_text(json.dumps(claim))
+        with self.assertRaises(Exception):
+            validate(self.root)
 
     def test_no_claims_still_produce_no_evidence(self):
         # Retain the original zero-evidence regression after adding the Wii ledger.

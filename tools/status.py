@@ -30,30 +30,41 @@ def status(root):
     for controller in load(root, 'controller'):
         own = [c for c in claims if c['applicability']['controller'] == controller['id']]
         category = 'No evidence'
+        consumer_category = 'No evidence'
         transports = {}
+        consumer_transports = {}
         for claim in own:
             level = STATUS_CATEGORY[claim['status']]
-            category = stronger(category, level)
             transport = claim['applicability']['transport']
-            transports[transport] = stronger(transports.get(transport, 'No evidence'), level)
+            if claim.get('evidence_role', 'device') == 'consumer':
+                consumer_category = stronger(consumer_category, level)
+                consumer_transports[transport] = stronger(
+                    consumer_transports.get(transport, 'No evidence'), level)
+            else:
+                category = stronger(category, level)
+                transports[transport] = stronger(
+                    transports.get(transport, 'No evidence'), level)
         rows.append({
             'id': controller['id'],
             'name': controller['name'],
             'kind': controller['kind'],
             'tracking': controller['tracking'],
             'category': category,
+            'consumer_category': consumer_category,
             'claims': dict(sorted(Counter(c['status'] for c in own).items())),
             'transports': dict(sorted(transports.items())),
+            'consumer_transports': dict(sorted(consumer_transports.items())),
         })
     return rows
 
 
 def markdown(rows):
-    lines = ['| Controller | Tracking | Category | Claims | By transport |', '| --- | --- | --- | --- | --- |']
+    lines = ['| Controller | Tracking | Device evidence | Consumer evidence | Claims | Device by transport | Consumer by transport |', '| --- | --- | --- | --- | --- | --- | --- |']
     for row in rows:
         claims = ', '.join(f'{status} {count}' for status, count in row['claims'].items()) or 'none'
         transports = ', '.join(f'{t}: {c}' for t, c in row['transports'].items()) or 'none'
-        lines.append(f"| {row['name']} (`{row['id']}`) | {row['tracking'] or ''} | {row['category']} | {claims} | {transports} |")
+        consumer_transports = ', '.join(f'{t}: {c}' for t, c in row['consumer_transports'].items()) or 'none'
+        lines.append(f"| {row['name']} (`{row['id']}`) | {row['tracking'] or ''} | {row['category']} | {row['consumer_category']} | {claims} | {transports} | {consumer_transports} |")
     return '\n'.join(lines)
 
 
