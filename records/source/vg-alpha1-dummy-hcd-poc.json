@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-dummy-hcd-poc",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/a5310c605fe033e3165a9b9ae65f5874de1f6ced/docs/POC_DUMMY_HCD_DUALSENSE.md",
+  "revision": "a5310c605fe033e3165a9b9ae65f5874de1f6ced",
+  "sha256": "416301935b1f4a7e8dcb5f2edf51e3c7ef250c0e7b2915a13eda27cacdd68e7a",
+  "lineage": "virtualgamepad",
+  "locator": "Archived historical dummy_hcd DualSense POC and reported Steam Controller Test gyro; virtual USB only, not physical or modern release acceptance."
+}
