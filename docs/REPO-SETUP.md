@@ -19,7 +19,7 @@ dependency is hash-locked instead.
 | Full-history gitleaks across every branch, tag and pull-request ref, weekly and per change | `gitleaks.yml` `Gitleaks (full history)` |
 | CodeQL `security-extended` for Python tooling and Actions workflows | `codeql.yml` |
 | OpenSSF Scorecard with SARIF publish | `scorecard.yml` |
-| SHA-pinned actions; `harden-runner` egress block on every Linux job | every workflow |
+| SHA-pinned actions; `harden-runner` egress audit (allowlist kept) on every Linux job | every workflow |
 | Hash-locked pip installs | `requirements-dev.txt`, `.github/requirements/pre-commit.txt` |
 | Ad hoc deep secret scan | `scripts/deep-scan.sh` |
 | Secret scanning, push protection, private vulnerability reporting, Dependabot alerts, branch protection, read-only Actions token, tag ruleset | server-side, Step 2 below |
@@ -121,8 +121,9 @@ reject it.
 - If you add, rename or remove a CI job, update the branch-protection
   contexts at the same time.
 - `required_linear_history` means PRs are squashed or rebased.
-- If a job fails with a blocked egress, add the endpoint to that job's
-  `harden-runner` allowlist.
+- `harden-runner` runs in audit mode: block mode intermittently dropped
+  GitHub IPs and left jobs stuck in progress (2026-10-28). Keep each job's
+  allowlist current with new endpoints so returning to block stays possible.
 - Regenerate hash locks after editing an `.in` file:
   `uv pip compile requirements-dev.in --generate-hashes --python-version 3.12 --output-file requirements-dev.txt`
   (and likewise for `.github/requirements/pre-commit.in`).

@@ -16,7 +16,7 @@ needed, rotation of whatever the data identifies.
 ## Security controls
 
 - GitHub Actions use commit-SHA-pinned third-party actions, read-only token
-  permissions and `step-security/harden-runner` egress allowlists.
+  permissions and `step-security/harden-runner` egress auditing against documented allowlists.
 - CI runs `tools/publication_guard.py`, offline record validation and the test
   suite on every change, plus a gitleaks scan across every branch and tag on
   every pull request, every push to `main` and weekly.

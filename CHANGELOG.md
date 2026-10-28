@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Run `step-security/harden-runner` in egress `audit` mode instead of `block`
+  in every workflow. Block mode intermittently dropped GitHub IPs during
+  checkout and runner status reporting, leaving jobs stuck in progress. The
+  allowlists stay as documented expected egress.
 - Record the W9e owner-window generic-binding retry: MP and child calibration
   transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
   the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access
