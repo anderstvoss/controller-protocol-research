@@ -199,3 +199,10 @@ A400F0=55 after mode 05. Kernel input companions and libxwiimote access are
 absent before and after. No MP+Nunchuk adoption or release policy follows;
 #258 still gates release use. Earlier #55 preflight records remain historical.
 See `docs/wii-w9e-generic-retry.md`.
+
+### Remote Plus consumer startup traces
+
+Current inventory: **203 Wii claims**, adding ten source-only
+`wii-gap-plustrace-*` consumer claims on TR / 057e:0330 startup ladders and
+the minimal reply contract. See `docs/wii-remote-plus-consumer-traces.md`.
+All acceptance experiments remain not run.
