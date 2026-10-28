@@ -8,6 +8,9 @@ affected schema's `schema_version`.
 ## Unreleased
 
 - Separate device and consumer evidence with an optional `evidence_role` claim marker, independent status columns and transport categories, and validator regression coverage. Historical consumer-only claims are being reclassified without changing their provenance or evidence strength.
+- Record the W9e per-device hid-generic bind refusal, verified wiimote restoration
+  and cleanup; pin version-matched stable HID source, preserving both Dolphin
+  arms and the kernel-node trade-off as unmeasured.
 
 - Extend Steam C6 wired research with six distinct-field synthetic haptic fixtures, offset-level assertions, SDL and Linux consumer timing assumptions, and kernel mid-session lizard/hidraw ownership claims; physical timing and replies remain unverified.
 
