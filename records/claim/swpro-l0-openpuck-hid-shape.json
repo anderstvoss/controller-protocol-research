@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-openpuck-hid-shape",
+  "statement": "Pinned OpenPuck compatibility firmware describes an emulated Pro Controller with HID input 0x30/0x21/0x81, a synthetic report descriptor, USB 0x80 responses and 0x21 subcommand replies with matching initialization paths.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Device-role source evidence of an emulated compatibility device, NOT a retail Nintendo HID descriptor or a physical capture."
+  },
+  "sources": [
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

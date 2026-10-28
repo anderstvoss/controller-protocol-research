@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-sdl-report-modes",
+  "statement": "SDL Switch HIDAPI recognizes full state report 0x30, full state plus MCU report 0x31, simple state report 0x3F, subcommand reply 0x21 and USB command acknowledgement 0x81; enhanced-report hint and input-only mode influence which path it attempts.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL 3.2.0 decoder and hints; no guarantee other SDL versions, kernel interception or physical firmware supports all modes."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

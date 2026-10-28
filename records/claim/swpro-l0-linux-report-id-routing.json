@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-report-id-routing",
+  "statement": "Pinned hid-nintendo declares output reports 0x01 (rumble plus subcommand), 0x10 (rumble only), 0x80 (USB command) and input 0x21 (subcommand reply), 0x30 (IMU), 0x3F (button), 0x81 (USB response).",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel source enumerates recognized IDs; this alone does not show retail report prevalence or firmware-level support."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

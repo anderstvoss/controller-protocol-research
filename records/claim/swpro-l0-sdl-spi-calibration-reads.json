@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-sdl-spi-calibration-reads",
+  "statement": "Pinned SDL 3.2.0 Switch HIDAPI defines SPI factory stick calibration address 0x603D..0x604E, user stick calibration 0x8010..0x8025, IMU factory calibration 0x6020..0x6037 and user IMU scale 0x8026..0x8039; its code uses these for consumer normalization.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host-read layout and fallback conventions from SDL; actual retail flash content, write persistence and physical calibration accuracy unmeasured."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

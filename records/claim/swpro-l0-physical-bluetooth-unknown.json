@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-physical-bluetooth-unknown",
+  "statement": "Transport-specific Bluetooth SDP/HID descriptor, HIDP framing, pairing/security, reconnect and input/output timing for actual Switch Pro hardware are unmeasured in this ledger.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux/SDL Bluetooth paths are consumer expectations; no radio sniff or physical device fixture."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
