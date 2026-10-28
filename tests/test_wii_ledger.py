@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 205)
+        self.assertEqual(len(claims), 210)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -35,6 +35,8 @@ class WiiLedger(unittest.TestCase):
             elif claim['id'] in {'wii-w9e-per-device-bind-blocked-result',
                                  'wii-w9e-consumer-arms-unmeasured-result'}:
                 expected = ['wii-w9e-per-device-bind-host-run']
+            elif claim['id'].startswith('wii-p1-'):
+                expected = [claim['id'].removesuffix('-result') + '-host-run']
             elif claim['id'].startswith('wii-w7-'):
                 expected = ['wii-w7-' + claim['id'].split('-')[2] + '-host-run']
             self.assertEqual(claim['experiments'], expected, claim['id'])

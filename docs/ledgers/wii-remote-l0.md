@@ -216,3 +216,14 @@ record the scheduled counted stimulus and timestamped report ordering. All
 180-second window are 0/0. The codec pauses until another report-mode request,
 which Dolphin sends in MP-only but not this Nunchuk sequence. No model fix or
 adoption follows. MP-only mapped gyro passes. See `docs/wii-w9f-stimulus.md`.
+
+### Plus P1 kernel-bound acceptance
+
+Current inventory: **210 Wii claims** (205 after W9f plus five wii-p1 claims). Five wii-p1 consumer claim sets qualify
+Tr separately: changing kernel/xwiimote gyro in MP-only and Nunchuk captures,
+no changing SDL gyro in two held-kernel 3.2.10 runs, and changing mapped gyro,
+acceleration and basic IR in bound Dolphin MP-only. Both devices are gen20.
+The owner-filtered kernel log contains detection but no inactive-ID hex line;
+no byte-level kernel log readback is claimed. No Original pass is inherited,
+no special-driver window is used, and no physical or release gate is cleared.
+See `docs/wii-plus-p1-host-runs.md`.
