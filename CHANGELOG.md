@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record the W9e owner-window generic-binding retry: MP and child calibration
+  transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
+  the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access
+  is observed. Preserve the earlier bind refusal and the release policy gate.
+
 - Separate device and consumer evidence with an optional `evidence_role` claim marker, independent status columns and transport categories, and validator regression coverage. Historical consumer-only claims are being reclassified without changing their provenance or evidence strength.
 - Record the W9e per-device hid-generic bind refusal, verified wiimote restoration
   and cleanup; pin version-matched stable HID source, preserving both Dolphin

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-dolphin-motionplus-nunchuk-result",
+  "statement": "Native Dolphin 2503 MP+Nunchuk with hid-generic, both shims on and imported synthetic caller calibration reaches mode 05, A40020/32 and A40040/16. The two MP chunks and child chunk match the imported blocks exactly. This path never requests F6, so no live F6 mirror pass is inferred. Only 28 report 0x37 frames (two distinct payloads) are observed; sampled late mapping views show no changing Nunchuk or gyro. The first unpassed checkpoint is changing decoded passthrough motion, after calibration transport. Both native and combined post-mode-05 A400F0=55 counts are zero. Removing bound-Wii-driver contention removes the prior reset observation but does not establish MP+Nunchuk acceptance or identify the remaining cause.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Generic-bound W9e retry; earlier #55 failed bind remains historical. Test/dev host precondition only; release gate virtualgamepad #258. No physical/radio/rate/game/challenge claim."
+  },
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-generic-dolphin-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
