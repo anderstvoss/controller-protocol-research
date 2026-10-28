@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- CI: bump `step-security/harden-runner` to v2.22.3, which fixes block mode
+  dropping allowed connections on GitHub-hosted Linux runners (the cause of
+  stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
+
 - Record the W9e owner-window generic-binding retry: MP and child calibration
   transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
   the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access
