@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-linux-v612113-core",
+  "kind": "kernel_source",
+  "url": "https://github.com/gregkh/linux/blob/v6.12.113/drivers/hid/hid-core.c",
+  "revision": "v6.12.113",
+  "sha256": "a36e29b0b55e4a8cace0bd4c4dd501c6d4136cd453da5fa8fe97683b42856d19",
+  "lineage": "Linux stable HID core and generic driver; not independent of earlier Linux records",
+  "locator": "hid_check_device_match and __hid_device_probe; HID device attribute group. Explicit binding still checks driver-specific match; no per-device driver_override attribute is exposed here. Paraphrased inspection of upstream stable version; not a hash of the Debian running kernel binary."
+}

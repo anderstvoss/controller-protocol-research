@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-consumer-arms-unmeasured-result",
+  "statement": "Neither native Dolphin MP+Nunchuk nor its MP-only control ran with hid-generic in W9e because per-device binding was refused. The first unpassed checkpoint is the host binding prerequisite, before F6. No observation establishes whether F6, A40020/32, A40040/16 or decoded Nunchuk and gyro would pass, whether non-Dolphin A400F0=55 would remain, or whether kernel evdev, MotionPlus and xwiimote access would be absent under a successful generic binding. Existing W9 bound-kernel observations remain separate. No adoption pass follows.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "evidence_role: consumer. W9e test/dev binding investigation only; release policy remains gated on virtualgamepad #258. No physical, radio, rate, game or challenge evidence."
+  },
+  "sources": [
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-per-device-bind-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
