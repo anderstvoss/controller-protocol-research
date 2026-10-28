@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0009-uhid-sdl-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0009"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.105 arm64, SDL 3.2.0 pinned 535d80b; three sequential 10-second USB/UHID sessions application IDs 7,7,65543.",
+  "semantic_outcome": "3/3 exact SDL selection, controls, neutral, changing gyro/accelerometer, child reaping and node removal. SDL rumble submission not physical compressed-rumble decoding."
+}
