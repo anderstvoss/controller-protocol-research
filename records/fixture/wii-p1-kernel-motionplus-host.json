@@ -4,7 +4,7 @@
   "kind": "virtual_host_run",
   "format": "acceptance_run_json",
   "path": "fixtures/acceptance/wii-p1-kernel-motionplus-host.json",
-  "sha256": "d1200352453c15ebb1a08fa32ba3d510053e8c3a4b737c2357dadd57689b7720",
+  "sha256": "20ffc9e54c7fc555dad899a75064b1411cb6b9deedc264de05fea97b14a698d9",
   "sources": [
     "wii-p1-plus-memory-source",
     "wii-gap-plustrace-linux-core-v612",

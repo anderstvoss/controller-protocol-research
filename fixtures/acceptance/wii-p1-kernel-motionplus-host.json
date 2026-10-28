@@ -45,7 +45,12 @@
     "actual_probe_binary_sha256": "89bb2fecd8134349af036da57b25655d4603284bf3cb5ac1916453d19a2d2af2",
     "original_private_artifact_sha256": "b8ad2b7a85fde7760a39cce1f137ee74c1baebcdb123feb69a9d427f51aa31dd",
     "consumer": "evtest 1.35 and libxwiimote same-capture readers",
-    "consumer_binary_sha256": "d34a2ea02e9c0bc0ae40ededac3a41cca6992f56c23b5528f441df20e037d05e"
+    "consumer_binary_sha256": "d34a2ea02e9c0bc0ae40ededac3a41cca6992f56c23b5528f441df20e037d05e",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139",
+    "xwiimote_package_version": "libxwiimote2t64 2-4.3",
+    "consumer_probe_source_sha256": "86c28d16426dedcab61ef3924fbdc5a8a8b23c3531840cbe4a88e97855b6e37e",
+    "xwiimote_library_sha256": "b9bee42b4001272899200b7b8189e9a20f6a5022b913f758e219ae5158147c18",
+    "evtest_binary_sha256": "23fb0983e856900997f8a13adb4b9cf1a2a774e99cee6cbfdb795f1c6ad030cc"
   },
   "resources": {
     "owned_consumer_children_gone": true,

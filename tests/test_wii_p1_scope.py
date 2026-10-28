@@ -29,6 +29,8 @@ class WiiP1Scope(unittest.TestCase):
             d = fixture(name)
             o = d['samples'][0]['observations']
             self.assertEqual(d['summaries']['disposition'], 'blocked')
+            self.assertEqual(len(d['environment']['consumer_library_sha256']), 64)
+            self.assertEqual(len(d['environment']['consumer_probe_source_sha256']), 64)
             self.assertTrue(o['hidapi_open'])
             self.assertEqual(o['disconnected_polls'], 0)
             self.assertEqual(o['removed_events'], 0)

@@ -45,7 +45,10 @@
     "actual_probe_binary_sha256": "89bb2fecd8134349af036da57b25655d4603284bf3cb5ac1916453d19a2d2af2",
     "original_private_artifact_sha256": "294b5a7269589791269a91477379ffbaa31ba647e44fad749848dedf1af3d2b2",
     "consumer": "SDL Debian 3.2.10+ds-1, explicit system 3.2.10 headers/library and owned kernel MP-event holder",
-    "consumer_binary_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7"
+    "consumer_binary_sha256": "d3c2864cf5c2db2592f9b28ee7c9fe807e8d68adfc6ddfc8ae5efd3f2924da7b",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139",
+    "consumer_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "consumer_probe_source_sha256": "204d75c7cb3e4b23e2c8b358af5c8d4b22ff37427b267f5d7a37add948be9fec"
   },
   "resources": {
     "owned_consumer_children_gone": true,

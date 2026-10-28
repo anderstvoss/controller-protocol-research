@@ -4,7 +4,7 @@
   "kind": "virtual_host_run",
   "format": "acceptance_run_json",
   "path": "fixtures/acceptance/wii-p1-sdl-motionplus-nunchuk-host.json",
-  "sha256": "33cb3b60b0f99ec36f407d982fdc1577aca0d335e75015181b0b849ac0f2631b",
+  "sha256": "f41ac32989c634731f42aab8f3d39854f58ed77b796dbfe42b83fa1e2a09c1c8",
   "sources": [
     "wii-p1-plus-memory-source",
     "wii-gap-plustrace-linux-core-v612",

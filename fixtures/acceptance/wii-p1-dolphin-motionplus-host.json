@@ -45,7 +45,8 @@
     "actual_probe_binary_sha256": "89bb2fecd8134349af036da57b25655d4603284bf3cb5ac1916453d19a2d2af2",
     "original_private_artifact_sha256": "e8257ea8b900c3d465fe024c82bd5edc2695d32aeaa8bfff6c030fe538804b9a",
     "consumer": "Dolphin Debian ARM64 2503+dfsg-1+deb13u1",
-    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1"
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139"
   },
   "resources": {
     "owned_consumer_children_gone": true,

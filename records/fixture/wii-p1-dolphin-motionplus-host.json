@@ -4,7 +4,7 @@
   "kind": "virtual_host_run",
   "format": "acceptance_run_json",
   "path": "fixtures/acceptance/wii-p1-dolphin-motionplus-host.json",
-  "sha256": "c1fedf56a5676111bdb4241a96d2f963d46ddf88ab174085b90247cc9e812572",
+  "sha256": "ab98169226a7ea0e4764ac05a98caf9668e4a09783436af759def9313715a14f",
   "sources": [
     "wii-p1-plus-memory-source",
     "wii-gap-plustrace-linux-core-v612",
