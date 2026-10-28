@@ -185,3 +185,17 @@ virtual device was closed. Both Dolphin arms and their motion/register/P3
 checkpoints remain unmeasured. The expected generic-binding kernel-node
 trade-off is unmeasured too. No acceptance extension or host-policy change
 follows. See `docs/wii-w9e-binding-preflight.md`.
+
+
+### W9e generic-binding retry
+
+Current inventory: **193 Wii claims**. Three new consumer claims preserve the
+owner-run 2.035782-second creation window, parameter readback 0 before probes,
+and persistent generic binding for the two dedicated devices. MP+Nunchuk
+reaches exact imported MP and child calibration, but sampled changing decoded
+Nunchuk/gyro remains unestablished. F6 was not requested on this path. The
+MP-only mapped gyro control passes; both arms have zero native and combined
+A400F0=55 after mode 05. Kernel input companions and libxwiimote access are
+absent before and after. No MP+Nunchuk adoption or release policy follows;
+#258 still gates release use. Earlier #55 preflight records remain historical.
+See `docs/wii-w9e-generic-retry.md`.
