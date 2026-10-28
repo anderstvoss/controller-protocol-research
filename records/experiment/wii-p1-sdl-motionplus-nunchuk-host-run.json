@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-p1-sdl-motionplus-nunchuk-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-p1-plus-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "fixtures": [
+    "wii-p1-sdl-motionplus-nunchuk-host"
+  ],
+  "procedure": "Create two exact-owned Plus Tr devices at published code PR #263 head with default built-in ID and same imported synthetic caller blocks. Keep wiimote bound, verify gen20/input/raw/LED identities, await owner grants and revalidate. Capture exact kernel evdev and libxwiimote concurrently for each attachment. Run SDL 3.2.10 MP-only and Nunchuk with an explicit kernel MP-event holder, exact-owned raw/input guard and separate cleanup. Run native Dolphin 2503 MP-only bound with an isolated emulated mapping profile and independent UI samples. Owner reads exact-device kernel log without changing debug settings; no inactive-ID hex is present. Close all consumers/devices idempotently and verify removal. No generic window, Cemu, Classic live or Plus generic passthrough.",
+  "semantic_outcome": "SDL 3.2.10 Plus MP+Nunchuk opens the exact-owned HIDAPI joystick during a 60-second poll with no disconnect/removal. An explicit concurrent kernel MP-event holder sees changing gyro. SDL exposes/enables gyro but all polled angular arrays remain zero. No changing decoded SDL gyro is established; capability or successful value polling is not delivery. The underlying virtual gyro is not physically zero and no model fix follows. This is a bounded consumer observation with a holder precondition, not general SDL acceptance."
+}

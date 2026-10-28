@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-p1-sdl-motionplus-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-p1-sdl-motionplus-host.json",
+  "sha256": "09c996e88f75bbcbd158b0dff23d92473c5ca9c23672af94964887d3c274836b",
+  "sources": [
+    "wii-p1-plus-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [
+    "wii-p1-sdl-motionplus-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced controlled virtual-device reader values, capabilities and owned-window observations to counts/ranges/booleans. No raw logs, scripts, screenshots, paths, association IDs, serials or wall clocks. Original private artifact SHA256 0e2b2849db8f0659d277a0a1be4b4e6654960877f3e26804f9d45d3afb88478e.",
+  "claims": []
+}

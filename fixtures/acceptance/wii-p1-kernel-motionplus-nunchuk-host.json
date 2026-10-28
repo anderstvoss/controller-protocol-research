@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner-confirmed exact-owned temporary hidraw/LED grants, revalidated by agent. Normal wiimote binding; no ignore-special window, agent sudo, persistent rule or debug setting change.",
+  "config": {
+    "consumer_role": true,
+    "revision": "Tr / Wii Remote Plus",
+    "seconds_bound": 22,
+    "binding": "wiimote",
+    "devtype": "gen20",
+    "motionplus_inactive_id_external_style": false,
+    "expected_model_inactive_id": "0000a4200005; source-selected, leading zero bytes unknown; not physical or kernel-log readback",
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "first_unpassed_checkpoint": "None through bounded kernel/xwiimote gyro; inactive full-ID kernel log unavailable.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "no_special_driver_window": true,
+    "caveat": "No inactive-ID hex line in kernel log; no Cemu, Classic live or generic-bound Plus passthrough run."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "87700df59fbfe7fef99f5ab35bd09aee53abf9ab",
+    "actual_probe_source_sha256": "8b226a129d439bcd81ab70f03b16283ca81f37239538ace29188d70cecca0df2",
+    "actual_probe_binary_sha256": "89bb2fecd8134349af036da57b25655d4603284bf3cb5ac1916453d19a2d2af2",
+    "original_private_artifact_sha256": "c48b3797669fcf66354d8186d007d3eab2508dd334a479e7302f233f0a464516",
+    "consumer": "evtest 1.35 and libxwiimote same-capture readers",
+    "consumer_binary_sha256": "d34a2ea02e9c0bc0ae40ededac3a41cca6992f56c23b5528f441df20e037d05e"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "devtype": "gen20",
+        "driver": "wiimote",
+        "motionplus_event_node_present": true,
+        "kernel_axes": {
+          "ABS_RX": {
+            "minimum": -3528,
+            "maximum": 2772,
+            "distinct_values": 2
+          },
+          "ABS_RY": {
+            "minimum": -10728,
+            "maximum": 7272,
+            "distinct_values": 2
+          },
+          "ABS_RZ": {
+            "minimum": -10728,
+            "maximum": 7272,
+            "distinct_values": 2
+          }
+        },
+        "xwiimote": {
+          "new": {
+            "kind": "new",
+            "result": 0
+          },
+          "open": {
+            "kind": "open",
+            "result": 0,
+            "available": 775,
+            "opened": 259,
+            "requested": 771
+          },
+          "motionplus_events": 76,
+          "distinct_motionplus_values": 2,
+          "minimum": [
+            -3528,
+            -10728,
+            -10728
+          ],
+          "maximum": [
+            2772,
+            7272,
+            7272
+          ],
+          "same_capture_as_evtest": true
+        },
+        "kernel_inactive_id_log": {
+          "owner_readonly_filter_obtained": true,
+          "gen20_detection_logged": true,
+          "full_inactive_hex_logged": false,
+          "logged_id_hex": null,
+          "scope": "The exact-device log has detection lines but no inactive-ID hex at its current level. No debug setting was enabled. The source-selected model reply is not a kernel log observation."
+        }
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Plus Tr MP+Nunchuk, kernel bound on Linux 6.12.113, is classified gen20 and has a MotionPlus evdev node. In one concurrent 18-second capture, all ABS_RX/RY/RZ axes and xwiimote MotionPlus events have two distinct driven values. This qualifies bounded software gyro delivery on this virtual Plus revision, not physical calibration, rates, all controls or decoded child acceptance. Exact-device owner-filtered kernel logs show detection but do not include inactive-ID hex; that byte-level kernel log observation remains unavailable."
+  }
+}

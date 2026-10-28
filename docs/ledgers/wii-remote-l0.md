@@ -206,3 +206,15 @@ Current inventory: **203 Wii claims**, adding ten source-only
 `wii-gap-plustrace-*` consumer claims on TR / 057e:0330 startup ladders and
 the minimal reply contract. See `docs/wii-remote-plus-consumer-traces.md`.
 All acceptance experiments remain not run.
+
+
+### Plus P1 kernel-bound acceptance
+
+Current inventory: **208 Wii claims**. Five wii-p1 consumer claim sets qualify
+Tr separately: changing kernel/xwiimote gyro in MP-only and Nunchuk captures,
+no changing SDL gyro in two held-kernel 3.2.10 runs, and changing mapped gyro,
+acceleration and basic IR in bound Dolphin MP-only. Both devices are gen20.
+The owner-filtered kernel log contains detection but no inactive-ID hex line;
+no byte-level kernel log readback is claimed. No Original pass is inherited,
+no special-driver window is used, and no physical or release gate is cleared.
+See `docs/wii-plus-p1-host-runs.md`.

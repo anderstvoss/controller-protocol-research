@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-p1-plus-memory-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/87700df59fbfe7fef99f5ab35bd09aee53abf9ab/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "87700df59fbfe7fef99f5ab35bd09aee53abf9ab",
+  "sha256": "d8e8c6c7638c3a46675cf8d54b6c244bf3e2fde46dc6a44e32d63a5d6993c8cd",
+  "lineage": "anderstvoss/virtualgamepad; P1 owner-approved Plus policy, not independent physical evidence",
+  "locator": "Plus default inactive A4200005, unknown existing leading zero bytes and Plus-only external-style compat option; public code PR #263 head used by these virtual-host runs. Active identities and current status/reporting policy unchanged."
+}

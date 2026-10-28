@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record Plus P1 kernel/xwiimote gyro, SDL 3.2.10 gyro limits and bound
+  Dolphin MP-only UI observations, all scoped to Tr with default built-in ID.
+  Keep absent kernel ID logging and physical/status limits explicit.
+
 - Record the W9e owner-window generic-binding retry: MP and child calibration
   transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
   the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access
