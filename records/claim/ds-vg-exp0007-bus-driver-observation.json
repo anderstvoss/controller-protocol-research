@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0007-bus-driver-observation",
+  "statement": "In 12 historical DualSense virtual host runs (3/3 for each baseline/rewrite and USB/virtual bus condition), USB-bus metadata bound playstation and virtual-bus metadata bound hid-generic; both produced input and hidraw children and cleaned up.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64, baseline 9b466e0, rewrite 1525534. Driver and bus changed together; no proof of USB physical protocol or causality across consumers."
+  },
+  "sources": [
+    "vg-alpha1-exp0007"
+  ],
+  "experiments": [
+    "ds-vg-exp0007-bus-compare-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
