@@ -21,6 +21,8 @@ records pin0fcb05b72344f40806cbe810de8872f1698bf053 as brief11 requests. P0 rese
 PR8 independently carries the first-release and SDL pins; this branch starts
 from clean main so it does not spread PR8's problematic commit ancestry. Merge
 main and retain both evidence sets after P0 lands. PR9 owns sc2-gap/sc2-src files;
-none are edited here. Existing fields express consumer evidence, so11a needs no
-additional claim marker. Per-transport Puck assertions follow owner comment
+none are edited here. Kernel and SDL claims are now marked `evidence_role: consumer`. Their
+source-only scopes remain intact, but consumer evidence no longer elevates
+the device category. OpenPuck layouts retain device-role source evidence of
+a compatibility implementation, not evidence of the physical controller. Per-transport Puck assertions follow owner comment
 6189359458 on virtualgamepad#176, preserving both USB and source-only evidence.

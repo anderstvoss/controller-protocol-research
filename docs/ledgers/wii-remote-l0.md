@@ -47,8 +47,9 @@ Wii U Pro and musical accessories are excluded from this base/extension table.
 These consumer units are not raw sensor units,canonical physical calibration or
 a promised universal evdev mapping for every revision. The Wii package must
 implement a golden shape from the pinned consumer source and validate actual
-hid-wiimote binding on an eligible host. Source-only claims plus explicit unknown
-device claims express the evidence boundary without a new claim-schema marker.
+hid-wiimote binding on an eligible host. Source-only provenance and explicit unknown device claims remain essential.
+The optional `evidence_role: consumer` marker now prevents host-side evidence
+from raising device evidence status independently of transport.
 
 ## C5 synthetic compatibility model
 
@@ -172,3 +173,36 @@ Current inventory: **187 Wii claims**, adding nine source-only `wii-gap-plus-*`
 claims on Remote Plus identity and integrated MotionPlus gates. See
 `docs/wii-remote-plus.md`. Integrated MotionPlus ID bytes, calibration,
 F6/F7/40 and challenge behaviour remain unmeasured.
+
+
+### W9e per-device binding preflight
+
+Current inventory: **190 Wii claims**, adding three `wii-w9e-*` claims on
+current research main after the 187-claim Remote Plus pass. The historical
+W9 adoption pin ceaa48a remains 178. A guarded owner-run per-device generic
+bind failed, the original wiimote binding was verified restored, and the
+virtual device was closed. Both Dolphin arms and their motion/register/P3
+checkpoints remain unmeasured. The expected generic-binding kernel-node
+trade-off is unmeasured too. No acceptance extension or host-policy change
+follows. See `docs/wii-w9e-binding-preflight.md`.
+
+
+### W9e generic-binding retry
+
+Current inventory: **193 Wii claims**. Three new consumer claims preserve the
+owner-run 2.035782-second creation window, parameter readback 0 before probes,
+and persistent generic binding for the two dedicated devices. MP+Nunchuk
+reaches exact imported MP and child calibration, but sampled changing decoded
+Nunchuk/gyro remains unestablished. F6 was not requested on this path. The
+MP-only mapped gyro control passes; both arms have zero native and combined
+A400F0=55 after mode 05. Kernel input companions and libxwiimote access are
+absent before and after. No MP+Nunchuk adoption or release policy follows;
+#258 still gates release use. Earlier #55 preflight records remain historical.
+See `docs/wii-w9e-generic-retry.md`.
+
+### Remote Plus consumer startup traces
+
+Current inventory: **203 Wii claims**, adding ten source-only
+`wii-gap-plustrace-*` consumer claims on TR / 057e:0330 startup ladders and
+the minimal reply contract. See `docs/wii-remote-plus-consumer-traces.md`.
+All acceptance experiments remain not run.

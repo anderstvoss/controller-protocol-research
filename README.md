@@ -34,6 +34,16 @@ before filing its first claim; each record links its tracking issue.
 | Source evidence | `source_supported` or `independently_corroborated` |
 | Physical evidence | `physically_observed` or `physically_validated` |
 
+The optional claim field `evidence_role` is `device` by default, or
+`consumer` for a claim about host software, drivers or application behavior.
+The device evidence category and device-by-transport column exclude consumer
+claims. A separate consumer evidence category and transport column report the
+strongest consumer statuses without promoting a device-protocol claim.
+`source_only` is a transport/evidence-acquisition scope, not a substitute for
+`evidence_role`; both device-layout research and consumer research can be
+source-only. A physically observed host behavior is not thereby a physical
+validation of the emulated hardware.
+
 These are evidence levels only. Whether a controller is implemented or in
 progress in a consuming project is tracked there, not here.
 
