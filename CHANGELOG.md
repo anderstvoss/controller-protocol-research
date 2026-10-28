@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W9f counted stimulus: sustained commits, no post-map MP+Nunchuk
+  data without a new report-mode request, and a passing MP-only gyro control.
+  Separate pre-map frames and producer/consumer rate denominators; no model fix.
+
 - Record the W9e owner-window generic-binding retry: MP and child calibration
   transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
   the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access

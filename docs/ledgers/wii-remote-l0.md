@@ -206,3 +206,13 @@ Current inventory: **203 Wii claims**, adding ten source-only
 `wii-gap-plustrace-*` consumer claims on TR / 057e:0330 startup ladders and
 the minimal reply contract. See `docs/wii-remote-plus-consumer-traces.md`.
 All acceptance experiments remain not run.
+
+
+### W9f counted stimulus and reporting boundary
+
+Current inventory: **205 Wii claims**. Two new wii-w9f consumer claims
+record the scheduled counted stimulus and timestamped report ordering. All
+28 MP+Nunchuk data frames precede mapping; post-map MP/child rates over the
+180-second window are 0/0. The codec pauses until another report-mode request,
+which Dolphin sends in MP-only but not this Nunchuk sequence. No model fix or
+adoption follows. MP-only mapped gyro passes. See `docs/wii-w9f-stimulus.md`.
