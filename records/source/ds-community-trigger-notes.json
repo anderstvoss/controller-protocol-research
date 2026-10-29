@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-community-trigger-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/iamdevmarcos/dualsense-controller/blob/455feab53c311a5a9788bdc44d48c00675e4c9ed/controller/TRIGGER-NOTICES.md",
+  "revision": "455feab53c311a5a9788bdc44d48c00675e4c9ed",
+  "sha256": "00000000000000000000000000000000eb0bf441663858e8c8fbd7e434079f8b",
+  "lineage": "iamdevmarcos-dualsense-controller",
+  "locator": "community trigger mode references lines 1-9; mode provenance; physical waveform not verified"
+}

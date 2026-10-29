@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-community-nondebug-input-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/nondebug/dualsense/blob/02338358b6b4be2d64dbf661ae2a47842156cfcf/README.md",
+  "revision": "02338358b6b4be2d64dbf661ae2a47842156cfcf",
+  "sha256": "00000000000000000000000000000000324a5599c1f6a506162b1ea3568352c4",
+  "lineage": "nondebug-dualsense",
+  "locator": "input USB 0x01 and button/trigger map lines 99-148; Bluetooth 151-192"
+}
