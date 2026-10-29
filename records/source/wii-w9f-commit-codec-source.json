@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-commit-codec-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/2789b1ee93e609471a4197fcab1adc1642728358/crates/gr-curated-controllers/src/wii_remote/codec/calibration_tests.rs",
+  "revision": "2789b1ee93e609471a4197fcab1adc1642728358",
+  "sha256": "5f25a1114ab26b684922fef9226a3b77ac13fb23561154db30a364b8fe5f3f5c",
+  "lineage": "anderstvoss/virtualgamepad; deterministic codec regression, not hardware",
+  "locator": "passthrough_commits_alternate_latest_gyro_and_child_without_dropping_either_edit: 24 protocol commits in each mode 05/Nunchuk and 07/Classic, with latest values and strict frame alternation. Tests-only PR #262; runtime unchanged."
+}

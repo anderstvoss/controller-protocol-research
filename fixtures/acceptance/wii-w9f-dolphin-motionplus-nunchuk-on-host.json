@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner alone ran the authorized brief ignore-special window and exact-device hidraw grants. Owner read back 0 before the arms; agent verified identities, linkage, generic binding and access. No agent sudo or persistent rule.",
+  "config": {
+    "consumer_role": true,
+    "seconds_bound": 180,
+    "provenance_class": "compat",
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "binding": "hid-generic",
+    "hid_wiimote_bound": false,
+    "owner_window": {
+      "initial_value": 0,
+      "restored_value": 0,
+      "seconds": 2.033653,
+      "three_generic_devices_created": true,
+      "off_control_not_run_because_on_did_not_pass": true
+    },
+    "first_unpassed_checkpoint": "Post-map data delivery paused: no new report-mode request after mapping; changing decoded motion remains unestablished. No model fix or adoption.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "ui_gyro_calibration_period_seconds": 0,
+    "release_use": "gated on virtualgamepad #258; test/dev observation only",
+    "stimulus_target_hz": 50
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+    "actual_probe_source_sha256": "7b62781c3c211d86cf133573c5670f10e89a0846bc72cea4a3fdaacfbcc736bc",
+    "actual_probe_binary_sha256": "0da857d9761223231638ac735de3d4ff61f37391d97bdb137b45819eeebec4ee",
+    "original_private_artifact_sha256": "75ddd5761c95b012227865f6c4dbb83733ca2a5b6a6d4ceb8a66c04812b61071",
+    "consumer": "Dolphin Debian ARM64 2503+dfsg-1+deb13u1",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true,
+    "parameter_restored_before_probes": true,
+    "no_led_nodes_created": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "trace": {
+          "counts": {
+            "native_raw_writes": 49,
+            "owned_enumeration_observations": 360,
+            "owned_raw_opens": 2,
+            "status_requests": 21
+          },
+          "native_report_modes": {
+            "30": 4,
+            "37": 1
+          },
+          "native_memory_reads": {
+            "000016/10": 1,
+            "a40020/32": 1,
+            "a40040/16": 1,
+            "a400fa/6": 2,
+            "a400fe/512": 1,
+            "a600fe/1": 1
+          },
+          "native_single_byte_register_writes": {
+            "a400f0/55": 1,
+            "a400fb/00": 3,
+            "a600f0/55": 1,
+            "a600fe/05": 1,
+            "b00030/08": 1,
+            "b00033/01": 1
+          },
+          "received_report_ids": {
+            "20": 22,
+            "21": 8,
+            "22": 16,
+            "30": 30,
+            "37": 28
+          },
+          "memory_read_reply_errors": {
+            "0": 7,
+            "7": 1
+          },
+          "memory_read_address_errors": {
+            "0016/0": 1,
+            "0020/0": 1,
+            "0030/0": 1,
+            "0040/0": 1,
+            "00fa/0": 2,
+            "00fe/0": 1,
+            "00fe/7": 1
+          },
+          "decoded_gyro_observed": false,
+          "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+        },
+        "stimulus": {
+          "successful_commits": 13018,
+          "commit_attempts": 13018,
+          "commit_errors": 0,
+          "producer_scope_seconds": 260.348709666,
+          "observed_commit_hz": 50.002168,
+          "scope": "Producer interval extends beyond consumer exit; do not divide this cumulative count by the consumer bound. Both arms use the identical scheduled atomic snapshot loop. Historical W9e commit counts were not retained."
+        },
+        "post_mode05_frames": {
+          "mp": 0,
+          "child": 0,
+          "rate_denominator_seconds": 180,
+          "mp_per_consumer_second": 0.0,
+          "child_per_consumer_second": 0.0,
+          "scope": "Average frames observed by native raw reader over the entire bounded consumer window, including setup; no physical cadence or latency qualification."
+        },
+        "p3": {
+          "native_a400f0_after_first_mode05": 0,
+          "combined_a400f0_after_first_mode05": 0
+        },
+        "report_mode_order": [
+          {
+            "mode": 48,
+            "after_map": false
+          },
+          {
+            "mode": 48,
+            "after_map": false
+          },
+          {
+            "mode": 48,
+            "after_map": false
+          },
+          {
+            "mode": 48,
+            "after_map": false
+          },
+          {
+            "mode": 55,
+            "after_map": false
+          }
+        ],
+        "pre_mode05_report37_count": 28,
+        "mapping_ui": {
+          "changing_gyroscope_observed": false,
+          "changing_nunchuk_observed": false
+        },
+        "f6_read_observed": false
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Corrected W9f scheduled atomic stimulus records 13018 successful commits with zero errors over a 260.348710-second producer interval extending beyond the 180-second native Dolphin MP+Nunchuk arm. All 28 observed report 0x37 frames precede mode 05; zero MP/child frames follow mapping (0/0 per consumer second over the full bound). Dolphin selects report 0x37 before mapping and does not resend it afterward, while the current codec pauses on that transition until another mode request. This is a reporting-policy boundary for separate review, not an authorized model fix. Mapping-view gyro and Nunchuk remain static in sampled observations despite successful imported MP/child calibration. F6 is not requested. Native and combined post-map A400F0=55 are zero. Sparse application commits are ruled out in this rerun, not retroactively in W9e. The first unpassed checkpoint remains changing decoded passthrough motion; no remaining cause or model fix is established."
+  }
+}

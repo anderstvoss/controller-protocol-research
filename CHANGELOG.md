@@ -11,6 +11,18 @@ affected schema's `schema_version`.
   dropping allowed connections on GitHub-hosted Linux runners (the cause of
   stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
 
+- Record W9g kernel-first gyro regressions and generic-bound native Dolphin
+  MP+Nunchuk decoding with the activation re-attach compat edge. Isolate the
+  edge-off reporting pause and F6-off calibration gate; keep raw frames separate
+  from the UI oracle, and preserve #258 release and physical-fidelity limits.
+
+- Record W9f counted stimulus: sustained commits, no post-map MP+Nunchuk
+  data without a new report-mode request, and a passing MP-only gyro control.
+  Separate pre-map frames and producer/consumer rate denominators; no model fix.
+- Record Plus P1 kernel/xwiimote gyro, SDL 3.2.10 gyro limits and bound
+  Dolphin MP-only UI observations, all scoped to Tr with default built-in ID.
+  Keep absent kernel ID logging and physical/status limits explicit.
+
 - Record the W9e owner-window generic-binding retry: MP and child calibration
   transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
   the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access

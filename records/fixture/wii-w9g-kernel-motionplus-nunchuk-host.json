@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-kernel-motionplus-nunchuk-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9g-kernel-motionplus-nunchuk-host.json",
+  "sha256": "ee5371b22c9518d1059deda764762284ac8bc8c3310ab89bf7f723b8b48071bd",
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df"
+  ],
+  "experiments": [
+    "wii-w9g-kernel-motionplus-nunchuk-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced same-capture evdev/xwiimote values, raw statuses and accepted host outputs into ranges, counts and relative intervals. Private artifact hash is SHA256 of ordered concatenation: evtest, xwiimote, raw tap, producer callback. No private logs, paths, IDs, screenshots or wall clocks. Original private artifact SHA256 0afa0795b5d638ceb13a4f82f87246d93e07834966cbfc4ed86278ca36b4ba2a.",
+  "claims": []
+}

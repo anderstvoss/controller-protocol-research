@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-dolphin-motionplus-nunchuk-mirror-off-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9g-dolphin-motionplus-nunchuk-mirror-off-host.json",
+  "sha256": "ab7691346ebd151a29df39df80c31670eff6f0cb62418f8f802864aff5241987",
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [
+    "wii-w9g-dolphin-motionplus-nunchuk-mirror-off-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned raw I/O and separate owned-window samples to counts, calibrated-read equality and booleans. No logs, private paths/IDs, screenshots or wall clocks. Private artifact hash covers ordered concatenation of raw I/O, final emitted Wiimote profile and UI observation receipt. Original private artifact SHA256 a010625f388443cd690ece39c8a8b8c37286f63bcd4fef7681b87f4524f30fb3.",
+  "claims": []
+}
