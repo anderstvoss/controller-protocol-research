@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "dsedge-l0-consumer-identity-separation",
+  "statement": "Linux identifies DualSense Edge using separate Sony product PID 0x0df2 and sets is_edge, enabling dedicated Fn/paddle input controls; SDL identifies the Edge by Sony product ID and presents an Edge-specific device name/type/extended buttons. The base DualSense PID 0x0ce6 remains a distinct controller; these device identities belong to the registry controller `dualsense-edge`, never silently merged into `dualsense`.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense-edge",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-playstation.c 1796-1835, 2950-2958; SDL 535d80b 524-533 and 829a65d 442-446; HHD 133-150. Both source paths are consumers or emulated identity; no physical Edge hardware validation."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

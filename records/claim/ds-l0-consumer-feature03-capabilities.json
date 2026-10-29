@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-consumer-feature03-capabilities",
+  "statement": "SDL's feature 0x03 capabilities probe with expected 48-byte response and marker 0x28 in data[2] gates *third-party PlayStation detection*, then extracts flags such as sensor/LED/rumble; Sony PID path assumes core capabilities instead. Source inspection gives no evidence that Sony 054c:0ce6 requires OpenPuck's synthetic 0x03 capabilities response to enumerate as DualSense.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL 535d80b 297-320, 435-457; 829a65d detection path. No proof what an individual Steam build queries; copying an emulator's 0x03 cannot substitute for physical spec."
+  },
+  "sources": [
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "openpuck-ps-layout"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
