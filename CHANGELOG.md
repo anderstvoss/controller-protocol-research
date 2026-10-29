@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- CI: bump `step-security/harden-runner` to v2.22.3, which fixes block mode
+  dropping allowed connections on GitHub-hosted Linux runners (the cause of
+  stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
+
 - Record W9g kernel-first gyro regressions and generic-bound native Dolphin
   MP+Nunchuk decoding with the activation re-attach compat edge. Isolate the
   edge-off reporting pause and F6-off calibration gate; keep raw frames separate
