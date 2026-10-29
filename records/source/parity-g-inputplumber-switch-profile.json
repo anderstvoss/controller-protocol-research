@@ -4,7 +4,7 @@
   "kind": "compatibility_implementation",
   "url": "https://github.com/ShadowBlip/InputPlumber/blob/b2fb40900506d329925d5a3f1bca54adf85f1279/rootfs/usr/share/inputplumber/devices/60-switch_pro.yaml",
   "revision": "b2fb40900506d329925d5a3f1bca54adf85f1279",
-  "sha256": "ccce00005d0a0000e6e40000ea740000a3ed94e853ef9e986001a982ed812ea3",
+  "sha256": "ff077f2811e1850a8594b4427685df77328f475d933c8bb06169b26c047e155f",
   "lineage": "shadowblip-inputplumber",
   "locator": "21-35 evdev 057e:2009 and *Pro Controller; IMU source commented out; gamepad/mouse/keyboard targets"
 }
