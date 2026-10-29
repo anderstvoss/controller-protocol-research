@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-feature20-firmware-shape",
+  "statement": "Community emulation describes GET feature 0x20 as a 64-byte firmware/version response; its bytes 44-45 carry a 16-bit feature/update version consumed by SDL, while Linux also parses hardware/firmware fields at bytes 24/28 and update version at 44.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "VIIPER docs 269-280; HHD feature handlers 195-213; Linux 1150-1176; SDL 427-432. Raw firmware strings/build dates vary; this is a community compatibility model plus host parser, not independently authenticated hardware bytes."
+  },
+  "sources": [
+    "ds-community-viiper-protocol",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-usb-handshake",
+  "statement": "Pinned hid-nintendo handles USB-specific output 0x80 command/status exchanges, distinguishing handshake 0x02, baudrate 0x03 and timeout management from ordinary rumble/subcommand output; it expects matching 0x81 acknowledgements.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source-only startup. USB command expectations are not established for Bluetooth or independent retail timing."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-hhd-feature-replies",
+  "statement": "HHD's emulated DualSense GET_REPORT handler supplies pinned stock/constructed features including pairing identity, and CRC signing on its Bluetooth mode, while treating unknown report requests separately.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD dualsense/__init__.py 195-221. Emulated fixture replies, not an independently captured firmware dump."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "ds-community-viiper-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

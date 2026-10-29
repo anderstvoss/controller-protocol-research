@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-subcmd-ack-byte",
+  "statement": "Community HID notes describe output 0x01 as packet-number (modulo 16), two four-byte motor words, subcommand ID and arguments; input 0x21 embeds common controller prefix then ACK byte at absolute offset 13, echoed subcommand ID at 14 and up to 35 reply-data bytes starting at 15. ACK uses high bit=1, NACK=0; low seven bits encode reply-data type; SPI read returns 0x90/0x10. OpenPuck's 0x21 emulator follows this layout for supported cases.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_notes.md 3-25, 132-156; bluetooth_hid_subcommands_notes.md 146-160; OpenPuck mode_switch_pro.cpp 717-826. Source-described wire shapes only; errors/ACK timing not physically captured."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

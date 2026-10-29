@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-community-viiper-protocol",
+  "kind": "research_lead",
+  "url": "https://github.com/DualSenseClient/VIIPER/blob/a37090342e6b8ddb0a0fa8876889a3a9ac00cf34/docs/devices/dualsense.md",
+  "revision": "a37090342e6b8ddb0a0fa8876889a3a9ac00cf34",
+  "sha256": "79587d29872f2055cf685f26d74e9a1b3aab3b1ecb595305a5f1d4325be66cb2",
+  "lineage": "DualSenseClient-VIIPER",
+  "locator": "input map 83-102, output DSOutputState 153-184, trigger 259-267, feature reports 269-280; compatibility-source document"
+}

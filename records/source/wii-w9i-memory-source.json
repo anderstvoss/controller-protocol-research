@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9i-memory-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/75edae54c06ece8f90eb812d8544089a32581352/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "75edae54c06ece8f90eb812d8544089a32581352",
+  "sha256": "1490e93ff1fda33bee1bb2dcb4908e49dadaebc99bbf866abde5d1f468b52ccd",
+  "lineage": "anderstvoss/virtualgamepad; virtual source model, not physical hardware",
+  "locator": "Immutable creation options gate F6 and 0x40 compatibility reads; Plus inactive identity defaults built-in with optional external style. Calibration comes only from imported caller resources; no physical or factory inference. W9i runs unchanged current main with two fresh Tr candidates and no earlier activation or deactivation."
+}

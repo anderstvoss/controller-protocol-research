@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-feature05-calibration",
+  "statement": "Linux requests DualSense feature 0x05 with 41-byte calibration payload and interprets gyro bias/plus-minus values and accelerometer calibration into Linux sensor-scale correction; a failed read is an initialization error.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1023-1105; host parsing not independent calibration of physical gyro."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

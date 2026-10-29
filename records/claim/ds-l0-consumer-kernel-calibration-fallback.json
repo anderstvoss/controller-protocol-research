@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-consumer-kernel-calibration-fallback",
+  "statement": "Linux hid-playstation aborts DualSense probe if feature 0x05 calibration GET_REPORT fails, but if the report is returned with zero gyro sensitivity denominator, it substitutes per-axis bias=0, numerator=DS_GYRO_RANGE, denominator=S16_MAX; for zero accelerometer span, bias=0, numerator=DS_ACC_RANGE, denominator=S16_MAX. It does not blindly accept divide-by-zero calibration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1023-1147 and probe 1816-1820; distinct from SDL's non-fatal short-read fallback."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

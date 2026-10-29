@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-imu-scaling-formulas",
+  "statement": "Common DualSense report IMU carries three signed gyro and accel LE16 samples with calibration read from feature 0x05. Linux normalizes each axis via (raw - bias) * sensitivity numerator / denominator; gyro denominator comes from positive/negative gyro calibrations and the fixed gyro range, accel uses plus/minus ±g spans. VIIPER documents approximate raw scale 16.384 gyro counts/(deg/s), 8192 accel counts/g, but firmware/IMU revisions and orientation need physical verification.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "VIIPER const.go 94-115; Linux 1069-1142 and sensor report path; SDL 555-666. The counts in VIIPER are its synthesis, not globally established physical resolution."
+  },
+  "sources": [
+    "ds-community-viiper-protocol",
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

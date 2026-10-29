@@ -250,3 +250,24 @@ pin changes, but physical activation and active mode switch edge counts and
 timing remain unmeasured. Consumer status re-probes and W9 kernel/SDL risks
 are ranked in `docs/wii-motionplus-activation-status.md`. All physical and
 host tests proposed here are not run.
+
+
+## W9h consumer follow-ups
+
+Current inventory: **230 Wii claims**. Five new `wii-w9h-*` consumer claims
+record the kernel-bound Plus gate, Original Nunchuk copy-off control, Original
+Classic mode 07, and independent Plus default/external ID arms. Decoded stick
+and gyro passes are bounded to generic test/dev binding under #258. Copy-off
+blocks Nunchuk stick calibration while gyro and buttons still respond; no
+all-child-controls refusal follows. See `docs/wii-w9h-followups.md`.
+
+
+## W9i fresh Plus follow-up
+
+Current inventory: **232 Wii claims**. Two `wii-w9i-*` consumer claims record
+independent fresh Tr MP+Nunchuk runs for default and external-style creation
+options. Both consumers read pre-map inactive FE byte 00 and pass bounded
+decoded gyro/stick with exact imported calibration. These close the W9h
+retained-mode sampling gap for those controls only. No kernel rerun, model/API
+change or inherited Original pass. See `docs/wii-w9i-fresh-plus.md`; generic
+binding release use remains gated on #258.

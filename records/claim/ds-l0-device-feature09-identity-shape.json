@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-feature09-identity-shape",
+  "statement": "Community device protocol models GET feature 0x09 as pairing/MAC identity (20 bytes total), populated from per-device identity, used by Linux/SDL for identification. It is not a generic player-index field and must not contain a fixed public real MAC.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "VIIPER docs 269-280; HHD GET_REPORT 195-213; Linux 1183-1203; SDL 418-425. Source-supported shape, no real pairing keys or physical MAC bytes stored."
+  },
+  "sources": [
+    "ds-community-viiper-protocol",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

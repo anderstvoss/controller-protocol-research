@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-openpuck-spi-identity",
+  "statement": "Pinned OpenPuck emulates device-info and SPI responses for stick/IMU calibration, exposes an emulated user-calibration mirror, and synthesizes acknowledgements for host subcommands including input mode, pairing, and SPI read/write.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "OpenPuck has authored factory bytes and emulator-persistence policy; these are not a verified retail EEPROM/SPI dump or proof of matching physical write semantics."
+  },
+  "sources": [
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

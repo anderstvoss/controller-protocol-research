@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-sensor-availability",
+  "statement": "SDL declares gyroscope/accelerometer sensors in enhanced report mode and reports distinct nominal rates 250 Hz for USB and 1000 Hz for Bluetooth (source comments/metadata); this is a consumer declaration, not a measured physical sensor or USB scheduling rate.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 802-842. Do not treat declared rate as observed output or verify Steam motion association from these calls alone."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

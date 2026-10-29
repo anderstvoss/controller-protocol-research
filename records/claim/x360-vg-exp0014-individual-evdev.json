@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0014-individual-evdev",
+  "statement": "Xbox virtual evdev SDL 3.2.0 accepted 156 individual control/endpoints and neutral observations across three sessions and clean removals.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64. First attempt held trigger before SDL ready and was excluded as startup calibration apparatus issue."
+  },
+  "sources": [
+    "vg-alpha1-exp0014"
+  ],
+  "experiments": [
+    "x360-vg-exp0014-evdev-individual-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

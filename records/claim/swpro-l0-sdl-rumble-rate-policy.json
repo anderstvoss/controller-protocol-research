@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-sdl-rumble-rate-policy",
+  "statement": "SDL Switch HIDAPI uses a 30 ms minimum interval for rumble writes and a 50 ms refresh policy for sustaining effects, while queuing and coalescing pending SDL low/high rumble magnitudes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL scheduling constants are host policy and not measured motor envelope, firmware polling rate, or universally required command cadence."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

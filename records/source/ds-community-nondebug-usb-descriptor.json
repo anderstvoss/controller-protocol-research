@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-community-nondebug-usb-descriptor",
+  "kind": "research_lead",
+  "url": "https://github.com/nondebug/dualsense/blob/02338358b6b4be2d64dbf661ae2a47842156cfcf/report-descriptor-usb.txt",
+  "revision": "02338358b6b4be2d64dbf661ae2a47842156cfcf",
+  "sha256": "90daeb195cf8c48b2cf8e211197cf3d9d6195fe0d5a1fb774ba7adaa07826df6",
+  "lineage": "nondebug-dualsense",
+  "locator": "Sony DualSense USB HID report 0x01, 0x02 and 0x05 declarations; physical-model descriptor transcript"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-physical-rumble-unknown",
+  "statement": "The actual Switch Pro HD-rumble response to encoded left/right motor words, idle encoding, frequency, amplitude envelope, acknowledgement and cross-mode behavior remains physically unvalidated.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Host encoding and OpenPuck motor reduction do not establish the actual actuator function. USB baseline first; separate Bluetooth bench remains required."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

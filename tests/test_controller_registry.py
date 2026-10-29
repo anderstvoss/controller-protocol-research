@@ -52,10 +52,12 @@ class ControllerRegistry(unittest.TestCase):
             with self.subTest(controller=controller):
                 self.assertEqual(rows[controller]['category'], 'Evidence in progress')
                 self.assertEqual(rows[controller]['consumer_category'], 'Source evidence')
-        for controller in ['switch-pro', 'xbox360']:
-            with self.subTest(controller=controller):
-                self.assertEqual(rows[controller]['category'], 'No evidence')
-                self.assertEqual(rows[controller]['consumer_category'], 'Source evidence')
+        # Independent community/emulator device evidence was added for Switch Pro
+        # in C; Xbox 360 remains consumer-only until its own L0 ledger.
+        self.assertEqual(rows['switch-pro']['category'], 'Source evidence')
+        self.assertEqual(rows['switch-pro']['consumer_category'], 'Source evidence')
+        self.assertEqual(rows['xbox360']['category'], 'No evidence')
+        self.assertEqual(rows['xbox360']['consumer_category'], 'Source evidence')
         puck = rows['steam-controller-2026-puck']['transports']
         self.assertEqual(puck['usb'], 'Source evidence')
         self.assertNotIn('source_only', puck)

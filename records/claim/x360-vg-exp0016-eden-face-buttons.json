@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0016-eden-face-buttons",
+  "statement": "The maintainer reported that Eden saw Xbox virtual North/Y as X and did not pick up West/X before a documented standard HID button-usage correction.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "User-reported, unversioned Eden observation. Standard-HID mapping, not XInput or physical controller; do not treat reported mismap as reproduced post-correction."
+  },
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

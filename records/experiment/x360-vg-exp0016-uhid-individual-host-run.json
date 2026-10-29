@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0016-uhid-individual-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.107 arm64, SDL 3.2.0 535d80b Linux event backend; three Xbox USB/UHID standard-HID sessions, exact process-owned input device.",
+  "semantic_outcome": "156 exact controls and neutral observations; three clean removals; X and Y observed in expected SDL positions after report descriptor correction. Not Steam/Eden retesting or XInput."
+}

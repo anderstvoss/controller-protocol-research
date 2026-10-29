@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-physical-usb-period-unknown",
+  "statement": "An actual Nintendo Switch Pro reference controller's nominal USB report interval and timing distribution are not established by a physical USB capture in this corpus; candidate 60/120/250 Hz source values are not interchangeable.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Bluetooth-oriented community cadence, emulator schedule and host rate-limits cannot be promoted to USB physical measurement."
+  },
+  "sources": [
+    "swpro-dekunukem-usb-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

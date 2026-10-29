@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-feature09-20-identity",
+  "statement": "Linux requests feature 0x09 (20-byte pairing/MAC) and 0x20 (64-byte firmware info); firmware offsets include hardware and software version fields and an update-version feature discriminator.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 90-95, 1150-1204. These are host decoder fields; no per-device serial, calibration or pairing contents imported."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

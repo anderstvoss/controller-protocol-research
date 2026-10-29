@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-colour-spi-no-evidence",
+  "statement": "No SPI colour read at 0x6050..0x605B or explicit reaction to an all-0xFF colour block is evidenced in the inspected Linux hid-nintendo or SDL 3.2.0 Switch HIDAPI initialization paths, even when device-info advertises colours in SPI.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source silence: hid-nintendo.c 2477-2637 and SDL_hidapi_switch.c 629-684, 936-1090, 1457-1567. Device-info colour flag semantics come from community source, not validated host read. No evidence, not proof of absence in all consumers."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

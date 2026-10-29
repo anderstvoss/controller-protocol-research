@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-touch-battery",
+  "statement": "SDL PS5 parser decodes two packed touch contacts using report-defined coordinates and sends joystick touch updates; it separately normalizes reported battery capacity/charging status for application consumers.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 1355-1405. Host UI presentation, not physical touchpad or battery accuracy."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

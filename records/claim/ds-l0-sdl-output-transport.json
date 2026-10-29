@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-output-transport",
+  "statement": "SDL outputs PS5 effects using 0x02 USB framing and 0x31 Bluetooth framing with an SDL-specific prefix and BT CRC. Rumble and LED effects require an enabled/enhanced mode; output request success does not attest physical haptics or audio routing.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 670-745, 1020-1068. SDL and Linux BT effect-prefix differences must not be conflated."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

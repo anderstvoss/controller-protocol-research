@@ -7,6 +7,21 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W9i independent fresh Tr default/external-style native Dolphin runs:
+  consumer pre-map FE byte 00, bounded decoded gyro/stick, exact calibration
+  and zero native post-map reinitialisation. Close the retained-mode sampling
+  gap without physical, whole-controller or release promotion.
+
+- Record W9h kernel-bound Plus regression, isolated Original Nunchuk copy-off
+  calibration gate, Original Classic mode 07 and separate Plus default/external
+  ID native Dolphin passes. Preserve decoded UI versus raw data, preliminary
+  sampling limits, synthetic caller provenance and generic-binding release gate.
+
+- CI: harden-runner uses `audit` instead of `block` on the macOS and Windows
+  policy-check legs; its pre-step ignores the step-level `if` and block mode
+  broke Windows DNS and revocation lookups (anderstvoss/virtualgamepad#260).
+  Linux jobs stay in `block`.
+
 - Document MotionPlus activation/deactivation 0x20 status transitions, Dolphin
   emulator versus documented device evidence, conditional F6 and Linux/SDL/
   Cemu/wiiuse/xwiimote re-probes. Rank creation-time compat, retain W9f

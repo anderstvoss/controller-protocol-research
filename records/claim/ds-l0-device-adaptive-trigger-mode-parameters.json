@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-adaptive-trigger-mode-parameters",
+  "statement": "Community trigger encoder defines Weapon 0x25 as LE16 two-position zone bitmask at params[0..1], force level minus one at params[2]; Feedback 0x21 and Vibration 0x26 use LE16 active-zone mask at params[0..1], LE32 3-bit-per-zone force bits at params[2..5], with Vibration frequency at params[8]; Off 0x05 zeroes remaining params.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "adaptive-triggers.js 72-95. These are supported example format definitions, not an exhaustive firmware mode table or independently validated actuator waveform."
+  },
+  "sources": [
+    "ds-community-trigger-encoding",
+    "ds-community-trigger-notes",
+    "ds-community-viiper-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-udev-60-steam-input",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/ValveSoftware/steam-devices/22ec85e5ff5ea2e15c56d71a41bcbef46356cd60/60-steam-input.rules",
+  "revision": "22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+  "sha256": "284930f83cf8fde8a247057d46f48083d5e4aefc23a54310db02cfc2dbe42e50",
+  "lineage": "ValveSoftware/steam-devices",
+  "locator": "Lines 1-17 grant Valve USB devices and hidraw MODE=0660/TAG+=uaccess, generic uinput access, Valve input devices and USB wakeup; source only, not evidence of Steam client open behavior."
+}

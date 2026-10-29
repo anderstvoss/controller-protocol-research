@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0021",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/docs/history/alpha-1/experiments/EXP-0021-control-exposure.md",
+  "revision": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+  "sha256": "59fac0468604dcc70f8d80a58d315072fafcefe30dc98034b726a06b999df0ac",
+  "lineage": "virtualgamepad",
+  "locator": "Historical Gate T deterministic control exposure boundaries documented in EXP-0021-control-exposure.md. Documentation of earlier runs; raw private logs not imported. Pinned as a document lead; its current repository revision is not the earlier test executable revision."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-hhd-touch-motion",
+  "statement": "HHD's emulated DualSense update path encodes joystick inputs and touchpad points, gyro/accelerometer values and IMU timestamp fields, advances the report sequence and conditionally applies BT CRC before input submission.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD dualsense/__init__.py 363-443, 514-548. Software candidate model, not a universal retail sensor clock or touch calibration."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "hhd-dualsense",
+    "ds-community-viiper-protocol",
+    "ds-community-nondebug-explorer"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

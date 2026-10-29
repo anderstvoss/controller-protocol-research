@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-hhd-steam-gyro-policy",
+  "statement": "HHD has an optional synchronous-gyro policy that sends refreshed reports on IMU timestamp events and a fallback generating timestamps if IMU updates stop; this is an emulator-specific compatibility strategy for Steam gyro-to-mouse.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD dualsense/__init__.py 363-368, 436-443, 516-548. Do not infer that the physical DualSense implements an identical event-driven report scheduler."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
