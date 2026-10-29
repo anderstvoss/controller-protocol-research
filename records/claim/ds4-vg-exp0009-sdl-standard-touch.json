@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-vg-exp0009-sdl-standard-touch",
+  "statement": "Three ten-second DS4 USB/UHID virtual runs passed exact SDL 3.2.0 discovery, neutral, all 15 buttons, six axes, touch and both motion sensors (documented distinct-sample counts 1523/1546/1650), typed rumble/RGB and cleanup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64; simulated DS4, no reference controller."
+  },
+  "sources": [
+    "vg-alpha1-exp0009"
+  ],
+  "experiments": [
+    "ds4-vg-exp0009-uhid-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

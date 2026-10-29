@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-dummy-hcd-steam-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-dummy-hcd-poc"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Historical archived virtualgamepad DualSense dummy_hcd USB-gadget POC, archived branch a5310c6, same-host Linux VM; Steam Controller Test version/build not supplied.",
+  "semantic_outcome": "Maintainer reports Steam detected changing gyro from the virtual USB gadget, and Linux enumerated a 054c:0ce6 device and input children. Historical virtual topology observation only, not physical USB/Steam release acceptance."
+}

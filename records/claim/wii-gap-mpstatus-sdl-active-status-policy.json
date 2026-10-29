@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-sdl-active-status-policy",
+  "statement": "SDL Wii HIDAPI resets packet/report mode on all 0x20. When MotionPlus mode is active it does not directly interpret base extension bit as ordinary hotplug; it conditionally schedules stage 1 A400FE/2 then stage 2 A600FE/2 checks. When MP inactive, an extension presence mismatch marks joystick disconnected for reinit. SDL on Linux delegates A600FE mapping to the kernel; neither branch reads F6. No status edge means no edge-specific reinit, though periodic checks may continue.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SDL_hidapi_wii.c 370-492,677-820,1350-1432,1540-1568. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-sdl-wii-877",
+    "wii-w4-sdl-3-2-10-wii"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

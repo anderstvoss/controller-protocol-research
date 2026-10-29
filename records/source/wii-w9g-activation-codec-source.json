@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-activation-codec-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/7445bfa88466f7c519a25d9b0341fc5b59957854/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "7445bfa88466f7c519a25d9b0341fc5b59957854",
+  "sha256": "fef4f8eac5dc47607b41cc4b8701940951d8cfadc1f1ec98672686adb5c6b17a",
+  "lineage": "anderstvoss/virtualgamepad; owner-approved activation status compatibility, not physical behavior",
+  "locator": "accept_inner previews an addressed write before queue admission; an active mode change with prior extension presence and the creation option enabled reserves ACK plus unplugged and current status. AwaitingMode remains until host report 0x12; MP-only initial activation and deactivation retain their existing status policy. Activation fidelity is unknown; wii-gap-mpstatus research will decide classification or retirement."
+}

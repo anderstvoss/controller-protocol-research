@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-sdl-driver-877",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/hidapi/SDL_hidapi_wii.c",
+  "revision": "877399b2b2cf21e67554ed9046410f268ce1d1b2",
+  "sha256": "6e4693d2b165ec1fa8cbdeec988d3825890192e24db45f9bc2059f2f4c63f959",
+  "lineage": "sdl-hidapi",
+  "locator": "SDL 3.2.10 source-only: register read/write and errors 249-354, MP detection 385-427, Linux activation no-op and mode selection 457-491, extension/joystick initialization 677-820, dynamic mode/status 1540-1568. No run."
+}

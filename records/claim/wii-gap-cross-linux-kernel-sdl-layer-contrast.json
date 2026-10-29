@@ -20,5 +20,6 @@
   "experiments": [],
   "conflicts_with": [],
   "supersedes": [],
-  "rejection_scope": null
+  "rejection_scope": null,
+  "evidence_role": "consumer"
 }

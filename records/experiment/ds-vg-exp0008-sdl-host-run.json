@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0008-sdl-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0008"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.105+deb13-arm64, SDL 3.2.0 (535d80badefc83c5c527ec5748f2a20d6a9310fe), USB/UHID; baseline 9b466e0 and rewrite f750835 family; three strong runs each, plus tightened-neutral repeat.",
+  "semantic_outcome": "Each strong run observed all 15 buttons, six axes, touch, finite changing sensors, increasing timestamps, typed 0x4000/0x8000 rumble and RGB 32/64/128, removal. Strong neutral-followup was 3/3 per branch. No latency or physical fidelity."
+}

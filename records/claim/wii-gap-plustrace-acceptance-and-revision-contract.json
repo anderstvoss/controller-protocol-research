@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-acceptance-and-revision-contract",
+  "statement": "An opt-in Wii Remote Plus TR creation variant should be validated separately from Original against kernel-bound Linux/xwiimote, SDL kernel-managed detection, Dolphin ControllerInterface and Cemu setup plus decoded gyro oracles. Unbinding hid-wiimote is not a general test precondition; W9e unbound native tests are owner-run test builds gated by virtualgamepad issue 258. The already-existing WiiRemoteRevision Tr inside virtualgamepad can keep registry family virtualgamepad.wii-remote with a separate revision manifest/acceptance matrix; a new public virtualgamepad.wii-remote-plus ID requires explicit owner API/catalog decision. All proposed tests not run.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 core 811-905, SDL driver 385-491, Dolphin CI 449-657, Cemu 239-380, xwiimote core 611-672; model code referenced in docs at pinned virtualgamepad commit 1c810c5. No host/physical run. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb",
+    "wii-gap-plustrace-cemu-provider-29f",
+    "wii-gap-plustrace-xwiimote-core-4df"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

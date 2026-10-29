@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0009-standard-hid-controls",
+  "statement": "After a corrected nine-byte standard HID descriptor/axis encoder, three Xbox virtual USB/UHID SDL 3.2.0 runs passed neutral, all standard controls and cleanup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64; earlier malformed-axis attempt excluded. Generic standard HID, not USB XInput, xpad, rumble, physical Xbox, or Xbox Series."
+  },
+  "sources": [
+    "vg-alpha1-exp0009"
+  ],
+  "experiments": [
+    "x360-vg-exp0009-uhid-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

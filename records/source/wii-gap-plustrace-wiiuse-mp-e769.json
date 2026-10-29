@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-wiiuse-mp-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "a6541f91ea6859e0fcd06cf504fc8b443d4cd25e628debdc261d126377fbeb5e",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "wiiuse GPL-3.0-or-later source-only: built-in/external inactive ID selection 45-85, gyro setup/report selection 86-104, mapped MP ID 106-166, mode 04/05 and retry/status/deactivate 170-235, Nunchuk and missing Classic downstream decode 244-315."
+}

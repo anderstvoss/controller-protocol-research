@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-reply-provenance-and-unknowns",
+  "statement": "A source-backed TR compatibility prototype must distinguish Bluetooth-bus PID/name from real built-in MP presence, answer status/ACK and register reads consistently, switch inactive A600 and mapped A400 identities across modes 04/05/07, and deliver correctly tagged gyro and child frames. Full physical TR inactive six-byte identity, exact FE, genuine calibration CRC, F6/F7/40 and challenge contents remain unmeasured. Existing optional F6 mirror and A40040 child calibration shims apply only with active MP+downstream for Dolphin, using caller-imported blocks; values without approved compat profile or caller data remain unserved.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. Linux core 411-557, Dolphin CI 543-657, Cemu provider 275-380, wiiuse 45-166, Dolphin MP emulation 95-154. Conditional compatibility inference, not physical measurement. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plustrace-dolphin-ciface-3eb",
+    "wii-gap-plustrace-cemu-provider-29f",
+    "wii-gap-plustrace-wiiuse-mp-e769",
+    "wii-gap-plus-dolphin-mp-3eb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

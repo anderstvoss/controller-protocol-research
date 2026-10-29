@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-rumble-word-tables",
+  "statement": "The community rumble table specifies frequency encoding as a log2 frequency transform and piecewise amplitude indices; the output format carries four bytes per left/right motor with high- and low-frequency/amplitude band fields. Community notes describe neutral words and warn that table extremes can damage actuators. Kernel and SDL implement *host encoders*; OpenPuck implements an emulator reduction rather than verified physical motor response.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "rumble_data_table.md lines 1-55, 55-332; bluetooth_hid_notes.md 43-65. This source-derived encoding is distinct from any proof of a specific physical amplitude/frequency response."
+  },
+  "sources": [
+    "swpro-dekunukem-rumble-data-table",
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

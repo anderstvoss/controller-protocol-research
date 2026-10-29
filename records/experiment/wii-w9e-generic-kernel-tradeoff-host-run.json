@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-kernel-tradeoff-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "fixtures": [
+    "wii-w9e-generic-kernel-tradeoff-host"
+  ],
+  "procedure": "Use merged code main c60c164 with unchanged caller resources and both shims on. Owner verifies parameter 0 and no other HID hotplug, opens a brief ignore-special window, and signals the waiting non-root producer to create two exact-owned devices. Owner restores and reads back 0 immediately, records duration, verifies generic binding, then grants raw access. Agent revalidates identities, driver and raw links. Run native Dolphin MP+Nunchuk for 180 seconds, then dedicated MP-only for 150 seconds, with isolated emulated mapping profiles, owned raw/radio observation guard and cleanup between consumers. Compare native and combined post-map writes; inspect owned mapping UI separately. Check exact-device input-node absence and libxwiimote ENODEV before and after. Close both devices idempotently and verify removal. No model change or optional shim-off run because MP+Nunchuk did not pass.",
+  "semantic_outcome": "Both owner-window-created virtual Wii devices retain hid-generic after ignore_special_drivers is restored to 0. Before and after the bounded native Dolphin arms, each exact HID root has zero input companions and libxwiimote iface creation returns -19 (ENODEV). Kernel evdev MotionPlus axes and xwiimote access are absent in this binding. This is a test/dev host trade-off, not a physical or release qualification."
+}

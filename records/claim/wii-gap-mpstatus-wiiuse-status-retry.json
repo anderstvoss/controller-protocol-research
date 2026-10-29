@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-wiiuse-status-retry",
+  "statement": "wiiuse uses status to probe unknown MP via A600FA/6 and handshake or remove ordinary extension at A400, resetting IR/report selection. MotionPlus enabling sends A600FE=04 or 05, waits 500 ms, and reads mapped A400FA/6 independently of unsolicited 0x20. Disabling sends A400F0=55, waits 500 ms, then requests status up to three times with extra waits. Delays are host-side waits, not physical transition timing. No F6 read.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. motion_plus.c 45-104,106-235 and events.c 538-650. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-wiiuse-motion-e769",
+    "wii-gap-mpstatus-wiiuse-events-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

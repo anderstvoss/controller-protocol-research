@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-dolphin-motionplus-nunchuk-on-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9f-commit-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic",
+    "wii-w9f-reporting-codec-source"
+  ],
+  "fixtures": [
+    "wii-w9f-dolphin-motionplus-nunchuk-on-host"
+  ],
+  "procedure": "Run the tests-only per-commit regression first. Compare the old private loops without claiming unretained historical counts. Use one atomic state update per scheduled 20 ms commit in both arms, change gyro/acceleration and Nunchuk controls on the same schedule, and count actual successful commits/errors. Owner creates three generic-bound devices in a brief ignore-special window and restores/readbacks 0 before grants. Run native Dolphin MP+Nunchuk for 180 seconds then dedicated MP-only for 150 seconds with isolated profiles and exact-owned raw/radio guard. Timestamp native observations, separate pre-map and post-map frames, inspect owned UI, preserve calibration/F6/P3 boundaries. Do not run reserved off control unless on passes. Close all three devices idempotently and verify HID/raw removal.",
+  "semantic_outcome": "Corrected W9f scheduled atomic stimulus records 13018 successful commits with zero errors over a 260.348710-second producer interval extending beyond the 180-second native Dolphin MP+Nunchuk arm. All 28 observed report 0x37 frames precede mode 05; zero MP/child frames follow mapping (0/0 per consumer second over the full bound). Dolphin selects report 0x37 before mapping and does not resend it afterward, while the current codec pauses on that transition until another mode request. This is a reporting-policy boundary for separate review, not an authorized model fix. Mapping-view gyro and Nunchuk remain static in sampled observations despite successful imported MP/child calibration. F6 is not requested. Native and combined post-map A400F0=55 are zero. Sparse application commits are ruled out in this rerun, not retroactively in W9e. The first unpassed checkpoint remains changing decoded passthrough motion; no remaining cause or model fix is established."
+}

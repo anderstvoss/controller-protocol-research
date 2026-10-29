@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-openpuck-mode",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/safijari/openpuck/blob/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/mode_switch_pro.cpp",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "13f5c426b06991b44c511e0fbe51cdd0f8133a1b5072233ad8f643356202c767",
+  "lineage": "openpuck",
+  "locator": "Emulated Pro HID report descriptor 55-89, per-slot mode 136-143, rumble 359-370, input battery/axes 387-515, synthetic SPI/calibration 544-686, subcommand replies 717-826, USB command 828-880. Compatibility implementation, not retail capture."
+}

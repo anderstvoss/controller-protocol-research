@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-dolphin-wiimoteemu-e1d",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "b235b625ded952a73573e599e54cc6e58c940537830dcb28e0656db627c268dd",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "GPL-2.0-or-later. Extension pin event and unsolicited status 429-447; mode suppression and 0x20 generation. Emulator only."
+}

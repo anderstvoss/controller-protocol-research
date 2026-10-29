@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 190)
+        self.assertEqual(len(claims), 232)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -27,9 +27,16 @@ class WiiLedger(unittest.TestCase):
             elif (claim['id'].startswith('wii-w8-') or
                   (claim['id'].startswith('wii-w9-') and claim['id'].endswith('-result'))):
                 expected = [claim['id'].removesuffix('-result') + '-host-run']
+            elif claim['id'].startswith(('wii-w9f-', 'wii-w9g-', 'wii-w9h-', 'wii-w9i-')):
+                expected = [claim['id'].removesuffix('-result') + '-host-run']
+            elif (claim['id'].startswith('wii-w9e-generic-')
+                  and claim['id'].endswith('-result')):
+                expected = [claim['id'].removesuffix('-result') + '-host-run']
             elif claim['id'] in {'wii-w9e-per-device-bind-blocked-result',
                                  'wii-w9e-consumer-arms-unmeasured-result'}:
                 expected = ['wii-w9e-per-device-bind-host-run']
+            elif claim['id'].startswith('wii-p1-'):
+                expected = [claim['id'].removesuffix('-result') + '-host-run']
             elif claim['id'].startswith('wii-w7-'):
                 expected = ['wii-w7-' + claim['id'].split('-')[2] + '-host-run']
             self.assertEqual(claim['experiments'], expected, claim['id'])
@@ -198,6 +205,32 @@ class WiiLedger(unittest.TestCase):
             'wii-gap-plus-compat-options-and-fidelity-gate',
         ]
         self.assertEqual(len(ids), 9)
+        for claim_id in ids:
+            claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
+            self.assertEqual(claim['status'], 'source_supported', claim_id)
+            self.assertEqual(claim['applicability']['controller'], 'wii-remote', claim_id)
+            self.assertEqual(claim['applicability']['transport'], 'source_only', claim_id)
+            self.assertIn('evidence_role:', claim['applicability']['scope'], claim_id)
+            self.assertEqual(claim['experiments'], [], claim_id)
+            self.assertEqual(claim['conflicts_with'], [], claim_id)
+            self.assertTrue(claim['sources'], claim_id)
+
+
+    def test_remote_plus_traces_source_only(self):
+        root = Path(__file__).resolve().parents[1]
+        ids = [
+            'wii-gap-plustrace-kernel-gen2-ladder',
+            'wii-gap-plustrace-kernel-mp-id-predicate-and-fallback',
+            'wii-gap-plustrace-xwiimote-sibling-only',
+            'wii-gap-plustrace-sdl-fe-probe-classic-limit',
+            'wii-gap-plustrace-dolphin-ciface-f6-40-sequence',
+            'wii-gap-plustrace-dolphin-real-guest-routing',
+            'wii-gap-plustrace-cemu-builtin-identity-nonactivation',
+            'wii-gap-plustrace-wiiuse-builtin-id-and-classic-gap',
+            'wii-gap-plustrace-reply-provenance-and-unknowns',
+            'wii-gap-plustrace-acceptance-and-revision-contract',
+        ]
+        self.assertEqual(len(ids), 10)
         for claim_id in ids:
             claim = json.loads((root / 'records/claim' / (claim_id + '.json')).read_text())
             self.assertEqual(claim['status'], 'source_supported', claim_id)

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-sdl-calibration-fallback",
+  "statement": "SDL tolerates a failed user-stick 0x8010 SPI read, but **requires** successful factory-stick 0x603D read to open; absent B2 A1 magic picks factory fields. Extracted 12-bit center/max/min equal to 0xFFF are replaced by synthetic center 2048 and max/min fractions. On failed factory IMU read it supplies default scale, rather than blocking open.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_switch.c 936-1026, 1028-1090, 1536-1551. The IMU user-scale condition is source-specific and should be regression-tested; no universal all-0xFF recovery guarantee."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

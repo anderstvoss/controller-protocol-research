@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0016-steam-trigger-disagreement",
+  "statement": "The maintainer reported DualSense virtual-controller trigger movement yielded no visible movement in a Steam test while some Sony controls differed between Steam and Eden.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "User-reported manual test, exact Steam/Eden versions and mappings absent. Uncorroborated and not proof of wire-axis error or physical DualSense behavior."
+  },
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

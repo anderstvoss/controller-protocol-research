@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0010-evdev-ff",
+  "statement": "Historical Switch Pro virtual uinput evdev runs completed conventional FF upload/update/start/stop/erase and killed-consumer cleanup, including expected stop-before-erase and exact typed magnitudes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64. Conventional evdev rumble, not Switch Pro compressed rumble fidelity."
+  },
+  "sources": [
+    "vg-alpha1-exp0010"
+  ],
+  "experiments": [
+    "vg-alpha1-exp0010-ff-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

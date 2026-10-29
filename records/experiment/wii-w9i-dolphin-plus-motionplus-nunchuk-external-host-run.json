@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9i-dolphin-plus-motionplus-nunchuk-external-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9i-codec-source",
+    "wii-w9i-memory-source",
+    "wii-w8-dolphin-2503-input"
+  ],
+  "fixtures": [
+    "wii-w9i-dolphin-plus-motionplus-nunchuk-external-host"
+  ],
+  "procedure": "Create exactly two fresh Tr MP+Nunchuk devices in the same owner-run brief window, default and external-style ID creation options; restore/read back ignore_special_drivers 0 before exact-device grants. No kernel rerun per handoff. Require generic binding, exact identity/linkage/access, no foreign holder, no earlier consumer or host output, and no prior activation/deactivation. Run each device once in native Dolphin 2503 for 180 seconds with isolated emulated profile, zero Real slots, synthetic imported caller calibration, signed stick names and dense owned-window sampling from first mapping view. Record native A600FE one-byte pre-map readback, mode 05, report-mode resend, F6, separate MP/child calibration, post-map raw frames and reinitialisation counts. Compare independent decoded gyro screenshots and opposite stick samples. Close consumers between arms, close both devices idempotently and verify HID/raw removal. No production behavior or host-policy change.",
+  "semantic_outcome": "Fresh Tr MP+Nunchuk with external-style inactive ID creation option passes native Dolphin 2503 bounded decoded gyro and Nunchuk stick. Consumer pre-map A600FE mode byte is 00 before first activation, with no earlier consumer or host output. Mode 05, report-mode resend, F6 and exact imported MP/child calibration succeed; independent dense samples show opposite decoded stick positions and changing gyro. No post-map native A400F0=55 or A600F0=55. No inherited Original or retained-mode-05 acceptance; no physical/radio/game/release/timing or whole-controller qualification."
+}

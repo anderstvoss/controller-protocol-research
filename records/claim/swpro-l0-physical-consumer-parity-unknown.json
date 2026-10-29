@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-physical-consumer-parity-unknown",
+  "statement": "The actual controller's Linux/SDL/Steam/Eden feature bindings, neutral axes, optional extras, rumble, USB/BT transition and teardown have not been compared against virtualgamepad using same-host reference fixtures.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Package B virtual-host evidence is pending PR #58; a virtual-only SDL success is not a physical-reference match. USB first; Bluetooth requires its own peer experiment."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

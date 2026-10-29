@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-openpuck-imu-sticks",
+  "statement": "Pinned OpenPuck Switch Pro emulation constructs a common input prefix with battery, three button bytes, two three-byte packed sticks and IMU samples; full 0x30 streaming is gated on a received report-mode 0x03/0x30 subcommand.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Device-side compatibility model, not physical packet-cadence or calibration validation. OpenPuck translates a distinct source controller's axes."
+  },
+  "sources": [
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

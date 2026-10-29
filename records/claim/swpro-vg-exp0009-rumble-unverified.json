@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0009-rumble-unverified",
+  "statement": "In the Switch Pro virtual SDL acceptance runs, SDL rumble submission succeeded; the document explicitly did not verify compressed HD-rumble decoding or physical-equivalent output.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64, SDL 3.2.0; positive API submission only, not accepted physical feedback semantics."
+  },
+  "sources": [
+    "vg-alpha1-exp0009"
+  ],
+  "experiments": [
+    "swpro-vg-exp0009-uhid-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

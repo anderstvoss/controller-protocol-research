@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0007-bus-compare-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0007"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.105+deb13-arm64, DualSense USB bus 0x03 versus virtual bus 0x06, baseline 9b466e0 and rewrite 1525534; three runs for each of four conditions.",
+  "semantic_outcome": "All 12 combinations report the document-listed driver binding: USB playstation; virtual hid-generic. Input and hidraw children existed; service errors none; cleanup observed. No equivalent consumer input semantics or controlled single-cause driver effect."
+}
