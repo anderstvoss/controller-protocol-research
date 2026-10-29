@@ -1,6 +1,6 @@
 # Steam Controller 2026 — Linux consumer contention decision brief
 
-**Research parity, prep for C6 and step 16**  
+**Research parity, prep for C6 and step 16**
 **Evidence:** source-only; initial baseline `947841357371f4cb1c09713700ee65926fec3a7f`; updated against merged main `8aeab2ba524bbdab3c41f84ef35ba73909bd1ca0` (2026-10-27). **No host/hardware execution.** This is the Steam companion to [Wii Dolphin contention](wii-dolphin-attachment.md) and its [technical appendix](wii-dolphin-attachment-technical.md). Scope is **direct wired USB HID `28de:1302`**, not Puck, BLE, LEDs or audio.
 
 **Decision for the buildout:** Run the step-16 matrix *both* with the Linux v7.3-rc1 `hid-steam` binding and with a confirmed unbound/generic HID path. Treat SDL HIDAPI recognition, kernel evdev registration, Steam-client acceptance and lizard state as **independent** observations; no combination is qualified from source alone. Do not infer that opening hidraw is exclusive ownership of the USB device.
