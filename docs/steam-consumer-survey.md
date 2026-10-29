@@ -1,6 +1,6 @@
 # Steam Controller 2026 — public software-consumer survey
 
-**Research parity, prep for C6 and step 16**  
+**Research parity, prep for C6 and step 16**
 **Evidence date:** 2026-10-27. Research `main` baseline `8aeab2ba524bbdab3c41f84ef35ba73909bd1ca0`, including merged PR #32. **All source-only; no consumer opened, no host or hardware tests run.** Companion: [contention matrix](steam-consumer-contention.md) is proposed separately in B, and [Wii consumer survey](wii-consumer-survey.md) supplies the structure. Direct `28de:1302` is the reference. Receiver `1304/1305` appears only to explain the interface gate, not to claim receiver support.
 
 ## Source and version pins
