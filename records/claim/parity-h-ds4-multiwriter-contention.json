@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "parity-h-ds4-multiwriter-contention",
+  "statement": "Concurrent kernel lightbar/rumble reports and SDL PS4 HIDAPI outputs can compete; actual hardware order and state are not established.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c and SDL 535d80b; hardware/client build not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 2277-2386; SDL PS4 924-973. Contention is a risk only, not a measured collision."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
