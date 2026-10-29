@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-dekunukem-usb-hid-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/USB-HID-Notes.md",
+  "revision": "b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+  "sha256": "8eceda485160ded5c32ed852261cea0f3d0444ba66ecc18811e6ea0565f41f25",
+  "lineage": "dekuNukem-Nintendo-Switch-RE",
+  "locator": "USB command 0x80, connection status 0x81, ordered handshake/baudrate/no-timeout: lines 5-43"
+}

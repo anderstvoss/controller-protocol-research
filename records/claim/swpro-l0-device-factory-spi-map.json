@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-factory-spi-map",
+  "statement": "Community SPI map assigns factory IMU calibration 0x6020..0x6037, factory stick calibration 0x603D..0x604E (left/right 9 bytes), body RGB 0x6050..0x6052, button RGB 0x6053..0x6055, left grip RGB 0x6056..0x6058 and right grip RGB 0x6059..0x605B. Subcommand 0x10 performs little-endian SPI reads with a bounded 0x1D-byte length.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "spi_flash_notes.md lines 90-112; bluetooth_hid_subcommands_notes.md 146-162; OpenPuck mode_switch_pro.cpp 544-688. Community layout corroborated only as an emulated read map; physical per-unit bytes remain unknown."
+  },
+  "sources": [
+    "swpro-dekunukem-spi-flash-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

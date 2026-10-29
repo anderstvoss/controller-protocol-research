@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0009-sdl-motion",
+  "statement": "Three ten-second virtual Switch Pro USB/UHID SDL 3.2.0 runs passed standard buttons, axes, neutral and changing gyro (1982/1982/1987 samples) and accelerometer (496/497/497 samples), plus cleanup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64; SDL 535d80b. Distinct samples are not a rate guarantee; no physical Switch Pro tested."
+  },
+  "sources": [
+    "vg-alpha1-exp0009"
+  ],
+  "experiments": [
+    "swpro-vg-exp0009-uhid-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

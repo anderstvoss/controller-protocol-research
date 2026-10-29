@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-led-battery-consumer",
+  "statement": "Pinned hid-nintendo maps battery/charging status from report byte fields, publishes power-supply and LED interfaces, and uses set-player-lights subcommand 0x30; host UI may interpret these independently of application input.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel evdev/LED/power consumer evidence; actual battery quantization and LED response not measured from a retail Pro controller."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

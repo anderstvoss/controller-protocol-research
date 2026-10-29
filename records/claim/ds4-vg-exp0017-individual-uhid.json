@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-vg-exp0017-individual-uhid",
+  "statement": "Final clean-build SDL 3.2.0 virtual UHID individual-control acceptance recorded 156 exact standard control/neutral observations and three removals for DS4.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.107 arm64; early D-pad failures excluded after neutral warmup; no touch, motion or output claim."
+  },
+  "sources": [
+    "vg-alpha1-exp0017"
+  ],
+  "experiments": [
+    "vg-alpha1-exp0017-uhid-individual-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

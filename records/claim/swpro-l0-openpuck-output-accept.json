@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-openpuck-output-accept",
+  "statement": "Pinned OpenPuck emulation accepts output 0x01 subcommands, 0x10 motor words, and USB 0x80 handshake commands; its HD-rumble approximation decodes left/right encoded words into generic haptic magnitudes for a different actuator.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-supported behavior of independent emulated device only; approximation is not a physical Switch actuator transfer function."
+  },
+  "sources": [
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

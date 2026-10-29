@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "fixtures": [
+    "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host"
+  ],
+  "procedure": "First pass the bound kernel/xwiimote regression with activation compat on. Owner runs the brief ignore-special creation window and exact-owned grants, restoring 0 before consumers. Revalidate generic binding and no foreign holders. Run native Dolphin 2503 for 180 seconds in a fresh isolated emulated ControllerInterface profile with correct signed Nunchuk stick input names and imported caller calibration. Inspect owned motion/extension mapping views independently from native transport traces. Run activation-off and F6-mirror-off controls only after the on arm passes. Close each owned consumer before the next arm; finally close all devices idempotently and verify removal.",
+  "semantic_outcome": "With re-attach off and both register shims on, Dolphin does not re-send 0x12 after mode 05, never reads F6, and receives zero post-map MP or child frames over 180 seconds, reproducing W9f. Native post-map A400F0=55 count is zero. Scope is virtual Original with hid-wiimote not bound, test/dev under #258; not game, radio, physical, release or Plus acceptance."
+}

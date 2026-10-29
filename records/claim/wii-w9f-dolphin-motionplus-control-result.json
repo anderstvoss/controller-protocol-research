@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-dolphin-motionplus-control-result",
+  "statement": "The W9f MP-only control uses the identical scheduled atomic stimulus, records sustained successful commits with zero errors, and shows changing mapping-view gyro during a 150-second native Dolphin arm. Observed MP frame counts/rates are separate from the decoded UI oracle. Native and combined post-mode-05 A400F0=55 are zero. This is a bounded MP-only positive control, not a passthrough or physical/rate acceptance.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9f stimulus rerun; generic binding is test/dev only under virtualgamepad #258. No physical, radio, game, calibrated cadence, latency or challenge evidence."
+  },
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9f-commit-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic",
+    "wii-w9f-reporting-codec-source"
+  ],
+  "experiments": [
+    "wii-w9f-dolphin-motionplus-control-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

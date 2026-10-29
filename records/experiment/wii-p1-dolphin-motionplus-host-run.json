@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-p1-dolphin-motionplus-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-p1-plus-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "fixtures": [
+    "wii-p1-dolphin-motionplus-host"
+  ],
+  "procedure": "Create two exact-owned Plus Tr devices at published code PR #263 head with default built-in ID and same imported synthetic caller blocks. Keep wiimote bound, verify gen20/input/raw/LED identities, await owner grants and revalidate. Capture exact kernel evdev and libxwiimote concurrently for each attachment. Run SDL 3.2.10 MP-only and Nunchuk with an explicit kernel MP-event holder, exact-owned raw/input guard and separate cleanup. Run native Dolphin 2503 MP-only bound with an isolated emulated mapping profile and independent UI samples. Owner reads exact-device kernel log without changing debug settings; no inactive-ID hex is present. Close all consumers/devices idempotently and verify removal. No generic window, Cemu, Classic live or Plus generic passthrough.",
+  "semantic_outcome": "Native Dolphin 2503 kernel-bound Plus MP-only, both creation shims on and external-style inactive-ID option off, reads both exact imported synthetic MP calibration chunks. Owned mapping-view samples show changing gyro, acceleration and basic IR with gyro calibration period 0 during the 150-second bound. This is a Plus-specific bounded software observation, not inherited Original acceptance, all-controls/continuous/rate/physical/game qualification or generic-bound Plus passthrough."
+}

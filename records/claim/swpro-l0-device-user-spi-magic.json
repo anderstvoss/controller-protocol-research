@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-user-spi-magic",
+  "statement": "Community notes specify B2 A1 user-calibration markers at 0x8010/11 (left), 0x801B/1C (right), 0x8026/27 (IMU), with data at 0x8012..1A, 0x801D..25 and 0x8028..3F respectively. Linux and SDL use the markers to select user over factory data. OpenPuck synthesizes a mutable user SPI mirror.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "spi_flash_notes.md 116-129; hid-nintendo.c 1080-1094, 1180-1215, 1273-1305; SDL_hidapi_switch.c 936-972, 1028-1065. Source agreement is not independent physical write-persistence verification."
+  },
+  "sources": [
+    "swpro-dekunukem-spi-flash-notes",
+    "audio-sdl-switch-pro",
+    "audio-linux-hid-nintendo",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

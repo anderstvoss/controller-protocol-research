@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/bluetooth_hid_subcommands_notes.md",
+  "revision": "b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+  "sha256": "16f6ee3fe68c6df286cc3c8234efdc0ab715fcd70bd151c4906035c5bb9d4881",
+  "lineage": "dekuNukem-Nintendo-Switch-RE",
+  "locator": "Subcommands 0x02 device info lines 53-64; report-mode 66-82; 0x10/0x11 SPI 146-173; IMU 306-314; vibration 379-381"
+}

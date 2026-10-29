@@ -10,6 +10,7 @@ class XboxSeriesLedger(unittest.TestCase):
         consumers = [c for c in claims if c['status'] == 'source_supported']
         self.assertEqual(len(consumers), 8)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only' for c in consumers))
+        self.assertTrue(all(c.get('evidence_role') == 'consumer' for c in consumers))
         gaps = [c for c in claims if c['status'] == 'unknown']
         self.assertEqual({c['applicability']['transport'] for c in gaps}, {'usb', 'bluetooth'})
         self.assertTrue(all(not c['experiments'] for c in claims))

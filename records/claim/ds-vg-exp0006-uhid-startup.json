@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0006-uhid-startup",
+  "statement": "Three corrected USB/UHID DualSense virtual sessions each bound the Linux playstation driver, exposed input children, serviced for five seconds and removed their owned nodes on explicit repeated close.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64; virtualgamepad alpha-1 history; earlier selector/identity instrumentation failures excluded. No physical controller."
+  },
+  "sources": [
+    "vg-alpha1-exp0006"
+  ],
+  "experiments": [
+    "ds-vg-exp0006-uhid-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

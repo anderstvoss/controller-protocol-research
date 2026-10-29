@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-subcmd-retry-ack",
+  "statement": "Pinned hid-nintendo packages subcommands as output 0x01 with incremented packet counter and eight encoded rumble bytes, waits for matching 0x21 reply subcommand ID, and retries once after a timed-out synchronous send.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host driver retry/ack policy; packet send success and source policy are not measured device response reliability."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

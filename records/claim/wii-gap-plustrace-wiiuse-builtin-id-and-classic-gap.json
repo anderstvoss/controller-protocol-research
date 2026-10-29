@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-wiiuse-builtin-id-and-classic-gap",
+  "statement": "Pinned wiiuse accepts inactive built-in A4200005 and external A6200005 on A600FA/6, initializes A600F0 and A400F0/FB, then activates 04 or 05, checks mapped A400FA ID and parses gyro/Nunchuk interleaving. Despite recognizing Classic passthrough ID it lacks Classic passthrough decoding in the event handler and does not expose an explicit enable mode 07 in its helper. Its Linux L2CAP backend cannot be validated through the project's UHID-only endpoint.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. wiiuse motion_plus.c 45-104,106-166,170-235,244-315; internal.h 227-242. Source-only. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-wiiuse-mp-e769",
+    "wii-gap-plus-wiiuse-ids-e769",
+    "wii-gap-consumer-wiiuse-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
