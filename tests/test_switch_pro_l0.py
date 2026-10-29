@@ -1,8 +1,13 @@
 import json
+import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+import status as status_module
+
 
 
 class SwitchProL0Ledger(unittest.TestCase):
@@ -34,6 +39,28 @@ class SwitchProL0Ledger(unittest.TestCase):
                           if claim["id"] == "swpro-l0-consumer-steam-neutral-causation-unknown")
         self.assertEqual(historical["evidence_role"], "consumer")
         self.assertIn("vg-alpha1-exp0016", historical["sources"])
+
+    def test_status_before_after_c(self):
+        # Compare to merged main after B, holding all source/experiment
+        # records fixed while omitting only this C package's 41 claims.
+        loader = status_module.load
+        def without_c(root, category):
+            records = loader(root, category)
+            if category == "claim":
+                return [r for r in records if not r["id"].startswith("swpro-l0-")]
+            return records
+        with patch.object(status_module, "load", side_effect=without_c):
+            prior = next(r for r in status_module.status(ROOT) if r["id"] == "switch-pro")
+        after = next(r for r in status_module.status(ROOT) if r["id"] == "switch-pro")
+        self.assertEqual(prior["category"], "No evidence")
+        self.assertEqual(after["category"], "Source evidence")
+        self.assertEqual(prior["consumer_category"], "Source evidence")
+        self.assertEqual(after["consumer_category"], "Source evidence")
+        print("\\n| Controller | Device before → after | Consumer before → after | Claims before → after |")
+        print("| --- | --- | --- | --- |")
+        print(f"| switch-pro | {prior['category']} → {after['category']} | "
+              f"{prior['consumer_category']} → {after['consumer_category']} | "
+              f"{sum(prior['claims'].values())} → {sum(after['claims'].values())} |")
 
     def test_pinned_independent_source_is_not_retail_capture(self):
         source = json.loads((ROOT / "records/source/swpro-openpuck-mode.json").read_text())
