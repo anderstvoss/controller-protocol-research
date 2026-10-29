@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-dolphin-motionplus-control-result",
+  "statement": "Native Dolphin 2503 MP-only control with hid-generic and both shims on reaches mode 05 without a child, receives both exact imported MP calibration chunks and shows a changing gyro indicator in the mapping view during a 150-second bound. Native raw observation sees 14002 report 0x37 frames, but decoded success is established by the separate UI samples, not raw counts. Both native and combined post-mode-05 A400F0=55 counts are zero. This is a bounded MP-only positive control, not MP+Nunchuk, rate, physical or game acceptance.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Generic-bound W9e retry; earlier #55 failed bind remains historical. Test/dev host precondition only; release gate virtualgamepad #258. No physical/radio/rate/game/challenge claim."
+  },
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-generic-dolphin-motionplus-control-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

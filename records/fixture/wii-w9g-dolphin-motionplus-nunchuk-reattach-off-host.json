@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host.json",
+  "sha256": "9402636cba7d57e848437c9ffe10ba19a19ae7202f4a497345ab3e67850b8657",
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [
+    "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned raw I/O and separate owned-window samples to counts, calibrated-read equality and booleans. No logs, private paths/IDs, screenshots or wall clocks. Private artifact hash covers ordered concatenation of raw I/O, final emitted Wiimote profile and UI observation receipt. Original private artifact SHA256 0fb141c3dd17c6142f9fa72e679002ebf2e85b0491b735d5efdab28985ae8faf.",
+  "claims": []
+}

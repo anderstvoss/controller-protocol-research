@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0010-evdev-ff",
+  "statement": "Historical Xbox virtual uinput evdev consumer accepted conventional FF upload/update/play/stop/erase and killed-consumer cleanup; all created nodes disappeared.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64. Legacy evdev FF not USB XInput rumble."
+  },
+  "sources": [
+    "vg-alpha1-exp0010"
+  ],
+  "experiments": [
+    "vg-alpha1-exp0010-ff-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

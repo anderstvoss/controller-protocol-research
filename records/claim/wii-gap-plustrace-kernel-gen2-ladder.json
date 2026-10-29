@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-kernel-gen2-ladder",
+  "statement": "On a Nintendo TR HID Bluetooth device Linux v6.12 first requests status and conditionally initializes an attached ordinary extension, selects Gen 2 and builtin MP policy, and then a worker reinitializes A400 and A600, probes A600FA/6, re-reads normal A400FA/6, and maps MP as 04/05/07 when an MP sensor consumer opens. Report mode/status handling is state-dependent. This is a conditional source call graph, not an observed retail Plus packet trace.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux core v6.12 411-557,570-605,811-905,1100-1224,1414-1493; modules 2712-2782. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

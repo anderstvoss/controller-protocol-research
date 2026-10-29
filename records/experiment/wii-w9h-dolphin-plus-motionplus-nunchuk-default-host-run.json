@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-dolphin-plus-motionplus-nunchuk-default-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-c5-classic-cpp",
+    "wii-c5-classic-h"
+  ],
+  "fixtures": [
+    "wii-w9h-dolphin-plus-motionplus-nunchuk-default-host"
+  ],
+  "procedure": "Use W9h published citation-only code, no behavioral/model/API change. First run kernel-bound Tr MP+Nunchuk with owner-confirmed exact-device grants, concurrent evdev/xwiimote and raw status reader; verify gyro and zero reinitialisation writes in first 18 seconds after mapping, then close it. Owner alone runs brief ignore-special window, restores/readbacks 0 and grants four exact virtual candidates. Revalidate generic identity/linkage/access and no foreign holders. Run native Dolphin 2503 with fresh isolated emulated profiles, correct signed stick names and imported synthetic caller calibration. Run copy-off Original Nunchuk, Original Classic mode 07, default-ID Plus Nunchuk, then external-style Plus only after default passes. Repeat the default Plus arm only to correct insufficient UI sampling, preserving preliminary archive separately. Keep raw transport separate from decoded UI. Close consumers between arms and all devices idempotently; verify removal.",
+  "semantic_outcome": "Tr MP+Nunchuk with default built-in inactive ID option passes native Dolphin bounded decoded gyro and Nunchuk stick with re-attach and both shims on. Mode 05, report-mode resend, F6 and both imported calibration blocks succeed. Independent dense owned-window samples qualify stick change; raw frames are not the decoded oracle. No Original pass is inherited; preliminary insufficient stick sampling is excluded from accepted repeat. No physical/radio/game/release/timing or whole-controller qualification."
+}

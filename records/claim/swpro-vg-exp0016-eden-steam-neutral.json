@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0016-eden-steam-neutral",
+  "statement": "The maintainer reported Steam showed Switch Pro virtual sticks offset about halfway down/right at demo neutral 0/0, whereas Eden's SDL backend did not; Eden reportedly observed HID gyro.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "User-reported consumer disagreement with missing exact builds/mapping provenance. No physical reference and no confirmed blame on Steam or virtualgamepad."
+  },
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

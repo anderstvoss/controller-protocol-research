@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-imu-rumble-ack-gates",
+  "statement": "Linux sends IMU enable 0x40 and vibration enable 0x48 as synchronous subcommands with expected 0x21 ACK before completing Pro initialization; report-mode enable 0x03/0x30 occurs between those two. SDL writes 0x48 while opening without treating the return as a required gate and sends 0x40 on sensor enable, not unconditionally on open.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-nintendo.c 1340-1377, 2600-2633; SDL_hidapi_switch.c 930-934, 1536-1567, 1790-1805. Both may inspect incoming input/replies during initialization, but neither source proves full *IMU* streaming before ACK; SDL's selected report mode is hint-dependent."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

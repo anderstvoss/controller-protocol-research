@@ -26,5 +26,6 @@
   "supersedes": [
     "wii-w7-cemu-consumer-result"
   ],
-  "rejection_scope": null
+  "rejection_scope": null,
+  "evidence_role": "consumer"
 }

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0011-evdev-mapping",
+  "statement": "Three DualSense evdev/uinput SDL 3.2.0 runs passed neutral, standard controls and conventional typed rumble using the corrected native mapping profile 0x8111.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64, SDL HIDAPI disabled; touch and auxiliary association unvalidated."
+  },
+  "sources": [
+    "vg-alpha1-exp0011"
+  ],
+  "experiments": [
+    "ds-vg-exp0011-evdev-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

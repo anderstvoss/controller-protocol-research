@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-kernel-tradeoff-result",
+  "statement": "Both owner-window-created virtual Wii devices retain hid-generic after ignore_special_drivers is restored to 0. Before and after the bounded native Dolphin arms, each exact HID root has zero input companions and libxwiimote iface creation returns -19 (ENODEV). Kernel evdev MotionPlus axes and xwiimote access are absent in this binding. This is a test/dev host trade-off, not a physical or release qualification.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Generic-bound W9e retry; earlier #55 failed bind remains historical. Test/dev host precondition only; release gate virtualgamepad #258. No physical/radio/rate/game/challenge claim."
+  },
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-generic-kernel-tradeoff-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-xwiimote-sibling-only",
+  "statement": "Pinned xwiimote requires a kernel wiimote HID parent and reads evdev sibling interfaces. It does not issue MotionPlus memory transactions; opening MotionPlus triggers the kernel MP_USED path and receives ABS_RX/RY/RZ evdev data. A missing kernel MP node means xwiimote has no independent gyro decoder, and Nunchuk/Classic remain evdev sibling interfaces.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. xwiimote core.c 335-393,611-672,1045-1090; Linux MP module 2771-2782. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

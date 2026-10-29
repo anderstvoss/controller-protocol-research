@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-kernel-open-feature-gates",
+  "statement": "Linux v7.3-rc1 hid-steam for direct USB 28de:1302 attempts serial GET via feature1 command 0xae with string attribute id 0x01 then GET attributes command 0x83; serial failure/empty uses placeholder and attribute failure logs but both are nonfatal for registration, which proceeds to lizard SET, evdev/sensor creation. Attribute tag ATTRIB_CONNECTION_INTERVAL_IN_US (0x0b) adjusts host sensor interval, not an IMU calibration. Direct wired probe does not send wireless dongle feature2 GET; conditional on WIRELESS quirk. Feature parsing/replies are consumer expectations, physical actual values: No evidence. K 618-717,1372-1420,1798-1804.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Valve udev 22ec85e5 / Linux v7.3-rc1 / SDL3 6defbc0 inspected; actual device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct 28de:1302 open path, other 2026 IDs only for conditional permission applicability; no host or physical evidence"
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

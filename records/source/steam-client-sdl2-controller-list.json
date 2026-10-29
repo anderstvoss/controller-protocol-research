@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-sdl2-controller-list",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/8acf7cfc0f88717e5c036f60f0314bfcafe39189/src/joystick/controller_list.h",
+  "revision": "8acf7cfc0f88717e5c036f60f0314bfcafe39189",
+  "sha256": "ca8cfc0b167cec020885f4809b697b3bdd53aa906f8fe190e2ea67d9e14760ed",
+  "lineage": "libsdl",
+  "locator": "SDL2 branch controller list at this immutable commit; no 28de:1302 entry, not a system-level enumeration or general absence proof."
+}

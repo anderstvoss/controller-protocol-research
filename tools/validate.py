@@ -42,6 +42,9 @@ def validate(root):
             if rec['parent'] == id:
                 raise ValueError('self reference: ' + id)
         if category == 'claim':
+            role = rec.get('evidence_role', 'device')
+            if role not in ('device', 'consumer'):
+                raise ValueError('invalid claim evidence_role: ' + id)
             reference(rec['applicability']['controller'], 'controller')
         if category == 'report':
             reference(rec['claim'], 'claim')

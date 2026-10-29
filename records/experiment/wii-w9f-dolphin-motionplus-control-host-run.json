@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-dolphin-motionplus-control-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9f-commit-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic",
+    "wii-w9f-reporting-codec-source"
+  ],
+  "fixtures": [
+    "wii-w9f-dolphin-motionplus-control-host"
+  ],
+  "procedure": "Run the tests-only per-commit regression first. Compare the old private loops without claiming unretained historical counts. Use one atomic state update per scheduled 20 ms commit in both arms, change gyro/acceleration and Nunchuk controls on the same schedule, and count actual successful commits/errors. Owner creates three generic-bound devices in a brief ignore-special window and restores/readbacks 0 before grants. Run native Dolphin MP+Nunchuk for 180 seconds then dedicated MP-only for 150 seconds with isolated profiles and exact-owned raw/radio guard. Timestamp native observations, separate pre-map and post-map frames, inspect owned UI, preserve calibration/F6/P3 boundaries. Do not run reserved off control unless on passes. Close all three devices idempotently and verify HID/raw removal.",
+  "semantic_outcome": "The W9f MP-only control uses the identical scheduled atomic stimulus, records sustained successful commits with zero errors, and shows changing mapping-view gyro during a 150-second native Dolphin arm. Observed MP frame counts/rates are separate from the decoded UI oracle. Native and combined post-mode-05 A400F0=55 are zero. This is a bounded MP-only positive control, not a passthrough or physical/rate acceptance."
+}

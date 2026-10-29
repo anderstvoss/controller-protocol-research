@@ -20,6 +20,7 @@ are copied.
 The prep described a fixture accepted by corpus PR6. Inspection shows PR6
 accepted the format, with no Xbox fixture record on current main. This ledger
 therefore links/hashes the public gamepadcapture artifact without fabricating a
-corpus fixture ID or repeating a physical promotion. No consumer-evidence schema
-marker is needed: source_only plus explicit scope and independent unknown
-USB/Bluetooth claims express the distinction (plan11a).
+corpus fixture ID or repeating a physical promotion. The consumer-evidence schema marker now tags the eight source-supported
+host/software claims as `consumer`. Their source-only transport scopes no
+longer elevate the device category, while the two unknown USB/Bluetooth gaps
+remain device-side. This supersedes the earlier plan11a shortcut.

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-cemu-provider-29f",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteControllerProvider.cpp",
+  "revision": "29f2f1fae4631e2317977debd9eacd55cc28dd7d",
+  "sha256": "440bb0abb0070af3d77e31e66d11b82e3020e76f678e73c53e962a63849fa722",
+  "lineage": "cemu-project/Cemu",
+  "locator": "Cemu MPL-2.0 source-only: initial status 55-70, status and extension handling 239-274, lower-16-bit FA response conflation and identity branch 275-380, calibration and data/ACK 381-449, requests and activation 925-950, report modes 1012-1045; Plus-specific decode risks."
+}

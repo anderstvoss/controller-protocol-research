@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-sdl-usb-initialization",
+  "statement": "Pinned SDL Switch HIDAPI separately handles proprietary USB 0x80 handshake/status/force-USB paths before regular input/subcommand processing, while also selecting a non-identical Bluetooth path.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL consumer source-only; connection behavior depends on configured path/hints, not proof of retail USB descriptor, topology or Bluetooth HCI behavior."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

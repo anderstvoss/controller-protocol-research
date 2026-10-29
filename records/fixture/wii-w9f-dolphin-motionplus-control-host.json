@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-dolphin-motionplus-control-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9f-dolphin-motionplus-control-host.json",
+  "sha256": "90b2f37be4c83daa80c3bdfc065caaa294abf690704eebfeab838426b3ddd243",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9f-commit-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic",
+    "wii-w9f-reporting-codec-source"
+  ],
+  "experiments": [
+    "wii-w9f-dolphin-motionplus-control-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced private counters, native timestamps and mapping samples to aggregate counts/rates and booleans; no raw bytes, images, scripts, identities, paths or wall clocks. Producer counters have their own longer interval; native rates use the full consumer bound.",
+  "claims": []
+}

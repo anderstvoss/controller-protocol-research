@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0010-evdev-ff",
+  "statement": "Historical DualSense virtual evdev consumer completed bounded rumble upload/update/start/stop/erase cycles and a killed-consumer cleanup condition; typed magnitudes and kernel extra stop-before-erase were recorded.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64; virtual uinput evdev FF, not physical actuators. Common four-family experiment."
+  },
+  "sources": [
+    "vg-alpha1-exp0010"
+  ],
+  "experiments": [
+    "vg-alpha1-exp0010-ff-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
