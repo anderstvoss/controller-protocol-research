@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-wired-input-40",
+  "statement": "Capture-recorded direct wired 28de:1302 with Steam stopped included occasional input 0x40 alongside predominantly 0x42 during the July 31 five ten-second windows (operator sanitized notes section 5). No per-window 0x40 count, input-body bytes, physical mouse action mapping, coexistent timing or raw revalidation is available; kernel/SDL source-only lizard interpretations do not turn this bounded observation into full desktop control validation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator July 31 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "usb",
+    "scope": "Notes section 5 only. Physical capture-recorded in historical operator consolidation, original recordings withheld. Not consumer or schema-level physical validation."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-direct-wired-20260731"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
