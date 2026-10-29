@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-s3-1302-report-shapes",
+  "statement": "Fresh 372-byte physical 28de:1302 report descriptor, raw SHA-256 315a037c849ef9510d222ae520bb18c1b72552d26eb116c91b0750901a5c51fd, declares input/body-byte pairs 40:5,41:8,42:53,43:14,44:5,45:45,79:1,7b:12; output/body-byte pairs 80:9,81:7,82:3,83:9,84:8,85:3,86:3,87:63,88:63,89:63; feature 01:63 and 02:63. IDs are hexadecimal, body lengths decimal; wire lengths add one ID byte. 40 spans Generic Desktop 0001, Button 0009 and Consumer 000c usage pages, 41 uses Keyboard 0007, and all remaining reports use vendor ff00. Top-level application usages are 0001:0002,0001:0006,ff00:0001. Lengths match steam-c6-input-42/45, steam-c6-battery-43, steam-c6-output-80-81 and steam-c6-output-82-85 and corroborate the July notes. These are physical descriptor declarations, not evidence of input traffic, output writes or field meaning.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "owner physical 2026 controller; hardware revision not recorded",
+    "firmware": "not supplied; not inferred from USB device version",
+    "transport": "usb",
+    "scope": "Fresh direct-wired descriptor acquisition through VM USB passthrough; descriptor declarations and reduced USB configuration only, not gameplay or consumer acceptance"
+  },
+  "sources": [
+    "steam-c6-sdl-structs",
+    "steam-ibex-linux-driver",
+    "sc2-src-capture-notes-2026"
+  ],
+  "experiments": [
+    "steam-s3-physical-descriptor"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
