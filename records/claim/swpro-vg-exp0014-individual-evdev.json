@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0014-individual-evdev",
+  "statement": "A fixed executable recorded 156 exact individual Switch Pro evdev SDL control/neutral observations across three sessions (IDs 7,7,65543), with three successful removals.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64, SDL 3.2.0. Preliminary run invalidated by rebuilding probe during execution excluded, not a historical failed experiment."
+  },
+  "sources": [
+    "vg-alpha1-exp0014"
+  ],
+  "experiments": [
+    "swpro-vg-exp0014-evdev-individual-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

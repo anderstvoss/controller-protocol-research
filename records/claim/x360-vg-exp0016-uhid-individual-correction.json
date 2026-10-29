@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-vg-exp0016-uhid-individual-correction",
+  "statement": "Following the Xbox standard-HID button-usage correction, pinned SDL 3.2.0 Linux-event consumer observed 156 expected controls and neutral outcomes, including X and Y in their intended SDL positions, across three clean virtual UHID sessions.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.107 arm64. No subsequent Eden/Steam retest, USB XInput, physical Xbox or dummy_hcd acceptance."
+  },
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [
+    "x360-vg-exp0016-uhid-individual-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0006-uhid-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0006"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.105+deb13-arm64, USB UHID DualSense production personality; Linux playstation driver. Three declared five-second sessions, corrected bounded identity selector.",
+  "semantic_outcome": "3/3 bound playstation, input children present, service completed, explicit double close and node removal; earlier failed selectors are invalid instrumentation and not pass/fail device evidence."
+}

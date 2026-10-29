@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0011-uhid-recheck",
+  "statement": "All four unchanged virtual USB/UHID families passed three historical ten-second SDL repetitions on Linux 6.12.107, with Sony touch/sensor/typed-output, Switch controls/motion, Xbox standard controls and exact cleanup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "A mixed-family run linked under the DualSense primary claim for navigation; this is not a new complete four-family comparison or physical parity."
+  },
+  "sources": [
+    "vg-alpha1-exp0011"
+  ],
+  "experiments": [
+    "vg-alpha1-exp0011-uhid-recheck-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

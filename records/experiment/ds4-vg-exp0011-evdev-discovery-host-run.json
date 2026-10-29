@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds4-vg-exp0011-evdev-discovery-host-run",
+  "kind": "virtual_host_run",
+  "status": "failed",
+  "sources": [
+    "vg-alpha1-exp0011"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.107 arm64, SDL 3.2.0 535d80b; combined DualShock 4 evdev node with BTN_TOUCH and gamepad axes.",
+  "semantic_outcome": "Exact SDL gamepad discovery failed because udev classified the combined touch/axis node as touchscreen; cleanup passed. This remains a historical negative and does not imply current production DS4 compound acceptance."
+}

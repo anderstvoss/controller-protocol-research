@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0011",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/docs/history/alpha-1/experiments/EXP-0011-evdev-sdl.md",
+  "revision": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+  "sha256": "e6ca18009e683e86bb544f8fe2ae8794d10a76c91e0f553a28c7db84a17c67b6",
+  "lineage": "virtualgamepad",
+  "locator": "Historical SDL evdev mapping and discovery documented in EXP-0011-evdev-sdl.md. Documentation of earlier runs; raw private logs not imported. Pinned as a document lead; its current repository revision is not the earlier test executable revision."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0008-sdl-standard-motion",
+  "statement": "SDL 3.2.0 observed all 15 standard buttons, six analog axes, neutral holds, touch activity, finite changing gyro/accelerometer samples and increasing sensor timestamps in passed baseline and rewrite DualSense USB/UHID runs.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Linux 6.12.105 arm64; SDL 535d80b. Strong and subsequently tightened-neutral 3/3 runs in each branch; no speed/latency or physical fidelity."
+  },
+  "sources": [
+    "vg-alpha1-exp0008"
+  ],
+  "experiments": [
+    "ds-vg-exp0008-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

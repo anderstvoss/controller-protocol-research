@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0017-uhid-individual-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0017"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.107 arm64, SDL 3.2.0 535d80b clean private build; DS/DS4/Switch HIDAPI, Xbox SDL Linux-event; three sessions per family.",
+  "semantic_outcome": "Final isolated control suite: 156 exact observations and three clean removals per family as recorded in core acceptance ledger. Earlier Sony D-pad readiness failures and cached-library combined run were invalidated apparatus artifacts, not accepted run records. No motion/touch/output acceptance from this run."
+}
