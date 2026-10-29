@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-full-input-shape",
+  "statement": "Pinned hid-nintendo parses full input reports using timer, battery/connection byte, three button bytes, packed 12-bit sticks (three bytes per stick), vibrator echo, and either subcommand reply or three six-axis IMU samples in report 0x30.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer struct/parser layout; units, orientation, actual packet cadence and validity require independent calibration and reference runs."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

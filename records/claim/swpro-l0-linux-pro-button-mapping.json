@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-pro-button-mapping",
+  "statement": "Pinned Linux consumer has a Pro-specific button mapping distinct from Joy-Con and maps left/right packed stick axes to ABS_X/Y and ABS_RX/RY and D-pad to ABS_HAT0X/Y. Consumer mapping names are not a universal native wire-label mapping.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "This maps Linux evdev semantics only; do not infer SDL or Steam spatial labels from kernel code alone."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

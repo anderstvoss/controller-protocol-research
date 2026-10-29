@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-linux-reprobe-and-contention",
+  "statement": "hid-wiimote v6.12 status 0x20 resets data report mode and on changed bit schedules hotplug worker, clearing extension/MP active flags on disconnect. The worker reinitializes A400 and A600, reads A600FA/6 and A400FA/6, conditionally remaps MP via A600FE 04/05/07, and requests another status. Repeated synthetic transitions risk reinit competition with SDL and hidraw; this is a source-derived risk, not an observed storm.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. hid-wiimote-core.c 411-557,1095-1224,1414-1457. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-linux-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

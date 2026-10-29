@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-cemu-status-policy",
+  "statement": "Cemu handles every 0x20, without prior-bit comparison, with IR configuration, conditional EEPROM 0016 and A600FA/6 MP probes; with status extension bit and unknown normal extension it writes A400F0=55, A400FB=00, reads A400FA/6; on disconnected it resets normal extension state. Absent a new status, these status-conditional retries do not happen, although initialization paths may. No A400F6 probe is present.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. WiimoteControllerProvider.cpp 239-381,925-950. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-cemu-provider-29f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

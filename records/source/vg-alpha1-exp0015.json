@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0015",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/docs/history/alpha-1/experiments/EXP-0015-reference-layouts.md",
+  "revision": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+  "sha256": "855474b97b5ec3d25caa78d88724e24415682ab5407c3f51030ef2054788df6c",
+  "lineage": "virtualgamepad",
+  "locator": "Historical maintainer-reported physical DualSense read-only inspection documented in EXP-0015-reference-layouts.md. Documentation of earlier runs; raw private logs not imported. Pinned as a document lead; its current repository revision is not the earlier test executable revision."
+}

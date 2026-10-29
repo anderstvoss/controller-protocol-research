@@ -7,6 +7,47 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W9i independent fresh Tr default/external-style native Dolphin runs:
+  consumer pre-map FE byte 00, bounded decoded gyro/stick, exact calibration
+  and zero native post-map reinitialisation. Close the retained-mode sampling
+  gap without physical, whole-controller or release promotion.
+
+- Record W9h kernel-bound Plus regression, isolated Original Nunchuk copy-off
+  calibration gate, Original Classic mode 07 and separate Plus default/external
+  ID native Dolphin passes. Preserve decoded UI versus raw data, preliminary
+  sampling limits, synthetic caller provenance and generic-binding release gate.
+
+- CI: harden-runner uses `audit` instead of `block` on the macOS and Windows
+  policy-check legs; its pre-step ignores the step-level `if` and block mode
+  broke Windows DNS and revocation lookups (anderstvoss/virtualgamepad#260).
+  Linux jobs stay in `block`.
+
+- Document MotionPlus activation/deactivation 0x20 status transitions, Dolphin
+  emulator versus documented device evidence, conditional F6 and Linux/SDL/
+  Cemu/wiiuse/xwiimote re-probes. Rank creation-time compat, retain W9f
+  reporting distinction and defer physical comparison to #52.
+- CI: bump `step-security/harden-runner` to v2.22.3, which fixes block mode
+  dropping allowed connections on GitHub-hosted Linux runners (the cause of
+  stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
+
+- Record W9g kernel-first gyro regressions and generic-bound native Dolphin
+  MP+Nunchuk decoding with the activation re-attach compat edge. Isolate the
+  edge-off reporting pause and F6-off calibration gate; keep raw frames separate
+  from the UI oracle, and preserve #258 release and physical-fidelity limits.
+
+- Record W9f counted stimulus: sustained commits, no post-map MP+Nunchuk
+  data without a new report-mode request, and a passing MP-only gyro control.
+  Separate pre-map frames and producer/consumer rate denominators; no model fix.
+- Record Plus P1 kernel/xwiimote gyro, SDL 3.2.10 gyro limits and bound
+  Dolphin MP-only UI observations, all scoped to Tr with default built-in ID.
+  Keep absent kernel ID logging and physical/status limits explicit.
+
+- Record the W9e owner-window generic-binding retry: MP and child calibration
+  transport succeeds, MP+Nunchuk changing decoded motion remains unestablished,
+  the MP-only gyro control passes, and loss of kernel Wii input/xwiimote access
+  is observed. Preserve the earlier bind refusal and the release policy gate.
+
+- Separate device and consumer evidence with an optional `evidence_role` claim marker, independent status columns and transport categories, and validator regression coverage. Historical consumer-only claims are being reclassified without changing their provenance or evidence strength.
 - Record the W9e per-device hid-generic bind refusal, verified wiimote restoration
   and cleanup; pin version-matched stable HID source, preserving both Dolphin
   arms and the kernel-node trade-off as unmeasured.

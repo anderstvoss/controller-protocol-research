@@ -47,8 +47,9 @@ Wii U Pro and musical accessories are excluded from this base/extension table.
 These consumer units are not raw sensor units,canonical physical calibration or
 a promised universal evdev mapping for every revision. The Wii package must
 implement a golden shape from the pinned consumer source and validate actual
-hid-wiimote binding on an eligible host. Source-only claims plus explicit unknown
-device claims express the evidence boundary without a new claim-schema marker.
+hid-wiimote binding on an eligible host. Source-only provenance and explicit unknown device claims remain essential.
+The optional `evidence_role: consumer` marker now prevents host-side evidence
+from raising device evidence status independently of transport.
 
 ## C5 synthetic compatibility model
 
@@ -184,3 +185,89 @@ virtual device was closed. Both Dolphin arms and their motion/register/P3
 checkpoints remain unmeasured. The expected generic-binding kernel-node
 trade-off is unmeasured too. No acceptance extension or host-policy change
 follows. See `docs/wii-w9e-binding-preflight.md`.
+
+
+### W9e generic-binding retry
+
+Current inventory: **193 Wii claims**. Three new consumer claims preserve the
+owner-run 2.035782-second creation window, parameter readback 0 before probes,
+and persistent generic binding for the two dedicated devices. MP+Nunchuk
+reaches exact imported MP and child calibration, but sampled changing decoded
+Nunchuk/gyro remains unestablished. F6 was not requested on this path. The
+MP-only mapped gyro control passes; both arms have zero native and combined
+A400F0=55 after mode 05. Kernel input companions and libxwiimote access are
+absent before and after. No MP+Nunchuk adoption or release policy follows;
+#258 still gates release use. Earlier #55 preflight records remain historical.
+See `docs/wii-w9e-generic-retry.md`.
+
+### Remote Plus consumer startup traces
+
+Current inventory: **203 Wii claims**, adding ten source-only
+`wii-gap-plustrace-*` consumer claims on TR / 057e:0330 startup ladders and
+the minimal reply contract. See `docs/wii-remote-plus-consumer-traces.md`.
+All acceptance experiments remain not run.
+
+
+### W9f counted stimulus and reporting boundary
+
+Current inventory: **205 Wii claims**. Two new wii-w9f consumer claims
+record the scheduled counted stimulus and timestamped report ordering. All
+28 MP+Nunchuk data frames precede mapping; post-map MP/child rates over the
+180-second window are 0/0. The codec pauses until another report-mode request,
+which Dolphin sends in MP-only but not this Nunchuk sequence. No model fix or
+adoption follows. MP-only mapped gyro passes. See `docs/wii-w9f-stimulus.md`.
+
+### Plus P1 kernel-bound acceptance
+
+Current inventory: **210 Wii claims** (205 after W9f plus five wii-p1 claims). Five wii-p1 consumer claim sets qualify
+Tr separately: changing kernel/xwiimote gyro in MP-only and Nunchuk captures,
+no changing SDL gyro in two held-kernel 3.2.10 runs, and changing mapped gyro,
+acceleration and basic IR in bound Dolphin MP-only. Both devices are gen20.
+The owner-filtered kernel log contains detection but no inactive-ID hex line;
+no byte-level kernel log readback is claimed. No Original pass is inherited,
+no special-driver window is used, and no physical or release gate is cleared.
+See `docs/wii-plus-p1-host-runs.md`.
+
+
+## W9g activation re-attach compatibility
+
+Current inventory: **215 Wii claims**. Five `wii-w9g-*` consumer claims record
+both kernel-bound gyro regressions and three generic-bound Dolphin arms.
+Original only; no Plus pass is inherited. Both bound captures pass. Generic
+Dolphin MP+Nunchuk passes bounded decoded gyro and stick only with re-attach
+compat and both shims on. Re-attach off reproduces the post-map reporting pause;
+F6 off reaches error 7 before calibration despite arriving raw frames.
+See `docs/wii-w9g-activation-status.md` for scopes and first unpassed checkpoints.
+The pair is still compat, not physical activation evidence; future
+`wii-gap-mpstatus-*` research decides faithful classification or retirement.
+
+### MotionPlus activation/status source review
+
+Current inventory: **225 Wii claims** (215 on W9g main and ten new
+source-only `wii-gap-mpstatus-*` claims). WiiBrew deactivation documents
+0x20 disconnect then reconnect; Dolphin emulator also simulates activation
+pin changes, but physical activation and active mode switch edge counts and
+timing remain unmeasured. Consumer status re-probes and W9 kernel/SDL risks
+are ranked in `docs/wii-motionplus-activation-status.md`. All physical and
+host tests proposed here are not run.
+
+
+## W9h consumer follow-ups
+
+Current inventory: **230 Wii claims**. Five new `wii-w9h-*` consumer claims
+record the kernel-bound Plus gate, Original Nunchuk copy-off control, Original
+Classic mode 07, and independent Plus default/external ID arms. Decoded stick
+and gyro passes are bounded to generic test/dev binding under #258. Copy-off
+blocks Nunchuk stick calibration while gyro and buttons still respond; no
+all-child-controls refusal follows. See `docs/wii-w9h-followups.md`.
+
+
+## W9i fresh Plus follow-up
+
+Current inventory: **232 Wii claims**. Two `wii-w9i-*` consumer claims record
+independent fresh Tr MP+Nunchuk runs for default and external-style creation
+options. Both consumers read pre-map inactive FE byte 00 and pass bounded
+decoded gyro/stick with exact imported calibration. These close the W9h
+retained-mode sampling gap for those controls only. No kernel rerun, model/API
+change or inherited Original pass. See `docs/wii-w9i-fresh-plus.md`; generic
+binding release use remains gated on #258.

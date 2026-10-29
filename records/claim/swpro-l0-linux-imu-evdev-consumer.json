@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-imu-evdev-consumer",
+  "statement": "Pinned hid-nintendo creates a separate IMU input node when the Pro controller is supported, with accelerometer ABS_X/Y/Z and gyro ABS_RX/RY/RZ, fuzz/resolution metadata and decoded three-sample reports.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel IMU node capability and scaling are consumer-specific; cannot claim physical motion equivalence, SDL association or sensor axes without reference."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

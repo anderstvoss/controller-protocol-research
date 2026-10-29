@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-sdl-kernel-lizard-contention",
+  "statement": "At pinned host sources, SDL's direct 28de:1302 Triton HIDAPI selection has no interface-number gate (429-451) and an active joystick periodically sends a single-setting lizard disable every 3 seconds (127-144,494-499); kernel IBEX registration sets its own lizard policy (1372-1406), and unlike 2015 input devices, IBEX evdev open/close does not toggle lizard (909-946). Thus application and kernel command policies differ even when each source path is valid. Which settings persist with both open, and actual Steam client writes: No evidence. This is source-only software behavior, not a live contention test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.2 versus v7.3-rc1; SDL pinned at 6defbc0; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct wired 28de:1302 source-consumer only; tests proposed in docs/steam-consumer-contention.md, not run"
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

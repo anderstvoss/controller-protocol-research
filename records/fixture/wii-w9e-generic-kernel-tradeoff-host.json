@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-kernel-tradeoff-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9e-generic-kernel-tradeoff-host.json",
+  "sha256": "3077c46de5a073aab52e6c88b45cf9fae7b2610cff61f70871aa9fb35b675a83",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-generic-kernel-tradeoff-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced private exact-owned observations to protocol counts, semantic booleans and resource hashes. No raw bytes, screenshots, machine identities, local scripts or wall clocks. Private artifact SHA256 cc825633abbefb0d14b7893e2444a525944d908b0e15d8ce0fd72cf22f9552ba.",
+  "claims": []
+}

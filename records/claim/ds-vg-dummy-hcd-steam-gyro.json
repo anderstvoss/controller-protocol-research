@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-dummy-hcd-steam-gyro",
+  "statement": "The maintainer's archived DualSense dummy_hcd POC notes report Steam Controller Test detecting changing gyro when the virtual device was presented through a same-host USB gadget; Linux enumerated gamepad, motion and touch children.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "historical archived POC a5310c6",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Historical archived POC from a different branch. Steam build unknown. No physical USB gadget fidelity, no proof UHID failure cause or production acceptance."
+  },
+  "sources": [
+    "vg-alpha1-dummy-hcd-poc"
+  ],
+  "experiments": [
+    "ds-vg-dummy-hcd-steam-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

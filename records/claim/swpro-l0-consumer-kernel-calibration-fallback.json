@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-kernel-calibration-fallback",
+  "statement": "Linux probes B2 A1 user-calibration markers; missing/invalid user magic falls back to factory addresses. Missing SPI reply or implausible factory/user stick centers causes constants center=2000, min=500, max=3500. IMU read failures use default offset/scale, while a successful all-0xFF IMU payload is not separately checked by this parser and may yield invalid units even with divisor protection.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-nintendo.c 1080-1215, 1244-1317. No observed retail failure handling; repeated uninitialized SPI values remain a potential calibration hazard."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

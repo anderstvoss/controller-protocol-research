@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-dolphin-real-guest-routing",
+  "statement": "Dolphin Real Wii Remote slot transmits guest-generated reports and receives physical reports, setting noncontinuous core mode at link, rather than running the native ControllerInterface MotionPlus calibration ladder. Thus specific MP, F7/F1/0x50 requirements are game/SDK dependent and no title-independent startup read/write sequence is verified. No Real-slot run is authorized.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin WiimoteReal.cpp 169-267,295-332,417-478; native CI differences 449-657. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-dolphin-real-3eb",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

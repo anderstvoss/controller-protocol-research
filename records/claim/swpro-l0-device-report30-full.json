@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-report30-full",
+  "statement": "Community HID notes define input 0x30 as report ID, timer at byte 1, battery/connection at byte 2, buttons at 3-5, packed 12-bit sticks at 6-11, vibrator feedback byte 12, and three six-axis IMU sample frames at bytes 13-48 (accelerometer then gyro, signed little-endian). Subcommand 0x03 selects full report mode 0x30.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_notes.md 116-181; bluetooth_hid_subcommands_notes.md 66-81; OpenPuck mode_switch_pro.cpp 411-515 and 801-806. Actual physical content/cadence/axes not measured."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

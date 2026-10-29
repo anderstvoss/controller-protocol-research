@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-sdl-fe-probe-classic-limit",
+  "statement": "Pinned SDL Wii HIDAPI requests A400FE/2 mapped extension tail and A600FE/2 inactive MP tail, not A600FA/6; checks masked F0FF == 0005, treats error 7 as no mapped extension, and Linux intentionally leaves A600FE mode activation to kernel. SDL exposes gyro for MP-only or MP+Nunchuk when probed, but its pinned Classic/Gamepad joystick-open path does not register an SDL gyro sensor. Report mode/status requests are conditional.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SDL 3.2.10 driver 249-427,457-491,550-585,677-820,1540-1568; no Plus host tests. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plus-sdl-usb-ids-877"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

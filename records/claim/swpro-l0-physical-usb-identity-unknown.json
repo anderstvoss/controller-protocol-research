@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-physical-usb-identity-unknown",
+  "statement": "The original retail Switch Pro controller's exact USB descriptor, HID collection/report declaration bytes, firmware revisions and USB enumeration topology are not authenticated by the three cited software implementations.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "No physical USB descriptor/GET dump; do not adopt OpenPuck's synthesized descriptor as retail evidence."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

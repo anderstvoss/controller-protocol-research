@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0011-evdev-mapping",
+  "statement": "Three corrected Switch Pro evdev/uinput SDL 3.2.0 runs passed neutral, standard controls and conventional rumble decoding.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 6.12.107 arm64, HIDAPI disabled. Earlier guide/capture button-map error corrected; no motion or HD-rumble evdev acceptance."
+  },
+  "sources": [
+    "vg-alpha1-exp0011"
+  ],
+  "experiments": [
+    "swpro-vg-exp0011-evdev-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner alone ran the authorized brief ignore-special window and exact-device hidraw grants. Owner read back 0 before the arms; agent verified identities, linkage, generic binding and access. No agent sudo or persistent rule.",
+  "config": {
+    "consumer_role": true,
+    "seconds_bound": 180,
+    "provenance_class": "compat",
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "binding": "hid-generic",
+    "hid_wiimote_bound": false,
+    "owner_window": {
+      "initial_value": 0,
+      "restored_value": 0,
+      "seconds": 2.035782,
+      "readback": "owner output and owner-written result; no agent privileged parameter access",
+      "two_devices_created_in_one_window": true,
+      "no_other_hid_hotplug_owner_confirmed": true
+    },
+    "first_unpassed_checkpoint": "Changing decoded Nunchuk and gyro not established after successful MP/child calibration; F6 was not requested.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "ui_gyro_calibration_period_seconds": 0,
+    "release_use": "gated on virtualgamepad #258; test/dev observation only"
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+    "actual_probe_source_sha256": "a451015d7f39a9d00927b81ebad96ca079ec9c78ec643fc8ec09bdb0c1a044c5",
+    "actual_probe_binary_sha256": "344d463565d5045d587b5aef4399efd3ed5c6f474de44141aa58ff8a5aa5a83f",
+    "original_private_artifact_sha256": "721d6555f341501164c43dac65f7ff84532919f546f018265494f03bde1fbb69",
+    "consumer": "Dolphin Debian ARM64 2503+dfsg-1+deb13u1",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true,
+    "parameter_restored_before_probes": true,
+    "no_led_nodes_created": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "trace": {
+          "counts": {
+            "native_raw_writes": 52,
+            "owned_enumeration_observations": 360,
+            "owned_raw_opens": 2,
+            "status_requests": 21
+          },
+          "native_report_modes": {
+            "30": 6,
+            "37": 1
+          },
+          "native_memory_reads": {
+            "000016/10": 1,
+            "a40020/32": 1,
+            "a40040/16": 1,
+            "a400fa/6": 2,
+            "a400fe/512": 1,
+            "a600fe/1": 1
+          },
+          "native_single_byte_register_writes": {
+            "a400f0/55": 1,
+            "a400fb/00": 3,
+            "a600f0/55": 1,
+            "a600fe/05": 1,
+            "b00030/08": 1,
+            "b00033/01": 1
+          },
+          "received_report_ids": {
+            "20": 22,
+            "21": 8,
+            "22": 16,
+            "30": 70,
+            "37": 28
+          },
+          "memory_read_reply_errors": {
+            "0": 7,
+            "7": 1
+          },
+          "memory_read_address_errors": {
+            "0016/0": 1,
+            "0020/0": 1,
+            "0030/0": 1,
+            "0040/0": 1,
+            "00fa/0": 2,
+            "00fe/0": 1,
+            "00fe/7": 1
+          },
+          "decoded_gyro_observed": false,
+          "gyro_oracle": "raw transport observations only; no decoded application-state oracle"
+        },
+        "p3": {
+          "native_a400f0_after_first_mode05": 0,
+          "combined_a400f0_after_first_mode05": 0,
+          "mode05_observed": true
+        },
+        "caller_calibration_chunk_matches": {
+          "0020": 1,
+          "0030": 1,
+          "0040": 1
+        },
+        "data37_distinct": 2,
+        "mapping_ui": {
+          "device_visible": true,
+          "changing_nunchuk_observed": false,
+          "changing_gyroscope_observed": false,
+          "scope": "Late sampled mapping view shows static Nunchuk stick/buttons and gyro; changing decoded motion is not established. No claim of universal zero gyro or physical incompatibility."
+        },
+        "f6_checkpoint": "Not requested on this initial setup path; reaching later calibration does not establish a live F6 mirror pass.",
+        "intentional_usability_diagnostic": "The one A400FE/512 error 7 is the prior source-pinned usability diagnostic, not a calibration failure."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "Native Dolphin 2503 MP+Nunchuk with hid-generic, both shims on and imported synthetic caller calibration reaches mode 05, A40020/32 and A40040/16. The two MP chunks and child chunk match the imported blocks exactly. This path never requests F6, so no live F6 mirror pass is inferred. Only 28 report 0x37 frames (two distinct payloads) are observed; sampled late mapping views show no changing Nunchuk or gyro. The first unpassed checkpoint is changing decoded passthrough motion, after calibration transport. Both native and combined post-mode-05 A400F0=55 counts are zero. Removing bound-Wii-driver contention removes the prior reset observation but does not establish MP+Nunchuk acceptance or identify the remaining cause."
+  }
+}

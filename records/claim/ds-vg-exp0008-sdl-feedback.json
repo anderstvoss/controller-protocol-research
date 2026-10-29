@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0008-sdl-feedback",
+  "statement": "The DualSense SDL probe submitted rumble and RGB while the virtual-controller runner observed typed feedback with magnitudes 0x4000/0x8000 within one 8-bit wire unit and RGB 32/64/128 exactly.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "SDL 3.2.0, Linux 6.12.105; output submission plus decoded virtual response, not measured physical motor/light behavior or Steam interoperability."
+  },
+  "sources": [
+    "vg-alpha1-exp0008"
+  ],
+  "experiments": [
+    "ds-vg-exp0008-sdl-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

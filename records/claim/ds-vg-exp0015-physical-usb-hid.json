@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0015-physical-usb-hid",
+  "statement": "A maintainer reports a physical DualSense 054c:0ce6 read-only inspection on Linux 6.12.107: 273-byte HID descriptor, GET 0x05 41 bytes, GET 0x09 20 bytes, GET 0x20 64 bytes, and 64 passive input reports each ID 0x01 and 64 bytes, with 64 distinct increasing timestamps.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "physical 054c:0ce6; maintainer 2026 alpha-1 report",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "maintainer-reported physical observation, not corpus physical validation. Broken trigger modules and stick drift reported; no output/SET or damaged-control fidelity tested. Raw descriptor, pairing and calibration contents remain private."
+  },
+  "sources": [
+    "vg-alpha1-exp0015"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-kernel-open-order",
+  "statement": "Linux hid-nintendo open initialization attempts USB 0x80 handshake, baudrate 0x03, second handshake and no-timeout 0x04 (when USB handshake succeeds); then 0x02 device info, user-magic and factory/user stick SPI 0x10 reads, IMU SPI calibration, IMU enable 0x40 ACK, set 0x30 report mode ACK, and vibration enable 0x48 ACK. Failures on key enable/mode steps block regular Pro init.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-nintendo.c 2518-2637; 1049-1077, 1080-1215, 1273-1377. This is observed source order, not a measured retail response trace; licensed Pro special-case differs."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

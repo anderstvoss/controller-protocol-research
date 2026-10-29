@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-dekunukem-rumble-data-table",
+  "kind": "research_lead",
+  "url": "https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/rumble_data_table.md",
+  "revision": "b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+  "sha256": "b3fe8e5daedcc56e6ef16d2ca4ff7dd868887b5af9199f078e86b39511523e79",
+  "lineage": "dekuNukem-Nintendo-Switch-RE",
+  "locator": "Frequency and amplitude encoding equations and tables: lines 1-55, 55-332; physical actuator-safe ranges"
+}

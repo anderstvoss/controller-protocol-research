@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-kernel-plus-motionplus-nunchuk-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9h-kernel-plus-motionplus-nunchuk-host.json",
+  "sha256": "fc635af80141f51f76cdb1c4a19853b172624db2aadd116c10ec5f9a6dced220",
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df"
+  ],
+  "experiments": [
+    "wii-w9h-kernel-plus-motionplus-nunchuk-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced controlled virtual-host I/O and independent owned-window or kernel-reader observations into counts, equality checks, booleans and relative intervals. No private paths, identities, scripts, logs, screenshots, GPL excerpts or wall clocks. Private artifact digest covers the ordered capture inputs described in environment. Original private artifact SHA256 1dce72f721f9590fee9b35bd2481552ae3376e4aa47183ef176b476c11e185e7.",
+  "claims": []
+}

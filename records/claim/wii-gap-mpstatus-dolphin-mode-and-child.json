@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-dolphin-mode-and-child",
+  "statement": "Dolphin's emulated active-to-active passthrough-mode switch among 04/05/07 does not re-enter Activate and therefore produces no intrinsic base detect-pin pulse. While active, downstream accessory changes update the embedded MotionPlus connectivity bit, not necessarily base status 0x20. Dolphin calls downstream initialization approximate. These are model effects, not independent hardware observations.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. MotionPlus.cpp 322-389,394-465; WiimoteEmu.cpp 429-447. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-dolphin-motionplus-3eb",
+    "wii-gap-mpstatus-dolphin-wiimoteemu-e1d",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

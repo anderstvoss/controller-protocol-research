@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-steam-neutral-causation-unknown",
+  "statement": "The observed historical Steam-versus-Eden virtual Switch neutral offset has not been causally attributed to malformed SPI calibration, player MAC identity, report mode, backend selection or a Steam mapping bug. Linux and SDL fallback policies alone cannot determine Steam's interpretation.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Historical B claim swpro-vg-exp0016-eden-steam-neutral (merged or to be linked when #58 merged); exact Steam/Eden builds and selected mappings absent. No source-based causal promotion. Historical virtual-host source vg-alpha1-exp0016 and B claim swpro-vg-exp0016-eden-steam-neutral now merged; not a physical reference."
+  },
+  "sources": [
+    "audio-sdl-switch-pro",
+    "audio-linux-hid-nintendo",
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

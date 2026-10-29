@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "swpro-vg-exp0011-evdev-sdl-host-run",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0011"
+  ],
+  "fixtures": [],
+  "procedure": "Historical documentary-only observation; no new lab execution or imported private raw captures. Linux 6.12.107 arm64, SDL 3.2.0 535d80b, HIDAPI disabled, three ten-second Switch Pro uinput/evdev sessions after button-map correction.",
+  "semantic_outcome": "3/3 standard controls, neutral, SDL rumble and decoded typed feedback; no HD rumble or gyro evdev claim."
+}
