@@ -16,7 +16,9 @@
     "swpro-openpuck-mode"
   ],
   "experiments": [],
-  "conflicts_with": [],
+  "conflicts_with": [
+    "swpro-l0-device-nominal-pro-report-period"
+  ],
   "supersedes": [],
   "rejection_scope": null,
   "evidence_role": "device"
