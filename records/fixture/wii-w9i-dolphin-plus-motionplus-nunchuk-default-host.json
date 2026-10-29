@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9i-dolphin-plus-motionplus-nunchuk-default-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9i-dolphin-plus-motionplus-nunchuk-default-host.json",
+  "sha256": "6026f471efe03c7b28b25f6184d44f4c2a075387fa57e3dc645ddafa49ddd2e0",
+  "sources": [
+    "wii-w9i-codec-source",
+    "wii-w9i-memory-source",
+    "wii-w8-dolphin-2503-input"
+  ],
+  "experiments": [
+    "wii-w9i-dolphin-plus-motionplus-nunchuk-default-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced exact-owned native I/O and independent decoded-window observations to counts, bytes, booleans, hashes and relative intervals. No private paths, identities, raw logs, screenshots or wall clocks. Ordered private digest: native I/O, initial profile, decoded UI receipt. Private artifact SHA256 04d375e6f0262a47da401c0aa6a7167c27934122929d024e993dda510d20c15e.",
+  "claims": []
+}

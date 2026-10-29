@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9i-dolphin-plus-motionplus-nunchuk-default-result",
+  "statement": "Fresh Tr MP+Nunchuk with default built-in inactive ID creation option passes native Dolphin 2503 bounded decoded gyro and Nunchuk stick. Consumer pre-map A600FE mode byte is 00 before first activation, with no earlier consumer or host output. Mode 05, report-mode resend, F6 and exact imported MP/child calibration succeed; independent dense samples show opposite decoded stick positions and changing gyro. No post-map native A400F0=55 or A600F0=55. No inherited Original or retained-mode-05 acceptance; no physical/radio/game/release/timing or whole-controller qualification.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Tr / virtual Wii Remote Plus PID 0330; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9i two independent fresh virtual Tr candidates, generic test/dev binding under #258, imported synthetic calibration, re-attach/F6/copy on. FE byte 00 is native readback; full inactive identity is not read back. No physical/radio/game/release/timing or whole-controller qualification."
+  },
+  "sources": [
+    "wii-w9i-codec-source",
+    "wii-w9i-memory-source",
+    "wii-w8-dolphin-2503-input"
+  ],
+  "experiments": [
+    "wii-w9i-dolphin-plus-motionplus-nunchuk-default-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
