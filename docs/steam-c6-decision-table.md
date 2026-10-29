@@ -1,6 +1,6 @@
 # Steam Controller 2026 — C6 compat versus faithful decisions
 
-**Research parity, prep for C6 and step 16**  
+**Research parity, prep for C6 and step 16**
 **Source-only comparison**, 2026-10-27; no physical captures, no Linux host, no Steam client inspection, no model implementation. Intended for step 14b policy review before the controlled step-16 lab. All choices are **recommendations for investigation**, not controller truth. Complements B [contention](https://github.com/anderstvoss/controller-protocol-research/blob/lane/steam-parity/b-consumer-contention/docs/steam-consumer-contention.md), C [survey](https://github.com/anderstvoss/controller-protocol-research/blob/lane/steam-parity/c-consumer-survey/docs/steam-consumer-survey.md) and D [permissions/open-path](https://github.com/anderstvoss/controller-protocol-research/blob/lane/steam-parity/d-permissions-open-path/docs/steam-permissions-open-path.md) **on separately staged, unmerged branches**. Do not treat those as existing `main` records until merged.
 
 ## Pinned consumer sources
