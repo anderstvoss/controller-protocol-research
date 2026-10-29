@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-switch-pro-consumer-routing",
+  "statement": "Pinned public host implementations provide distinct direct hidraw/feature-report and kernel-derived evdev consumer paths for Switch Pro. A virtual Switch Pro UHID node's host driver/SDL backend must be observed rather than assumed from VID/PID or mapping database.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions pinned in part 1 and G, host versions not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer-routing documentation only: SDL HIDAPI Switch reads feature/subcommand 0x80 USB handshake, 0x21 subcommand ACKs and 0x30 full IMU input; hid-nintendo owns handshake and creates evdev; joycond depends on hid-nintendo evdev and can create a separate virtual pad. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run. Additional independent source pin: Chromium Gamepad Linux udev input/hidraw enumeration; WebHID has both static and dynamic protection rules. InputPlumber source matching is version-scoped and does not assert a local host pass."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "parity-g-joycond-readme",
+    "parity-g-chromium-gamepad-linux",
+    "parity-g-chromium-webhid-blocklist",
+    "parity-g-inputplumber-switch-profile"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
