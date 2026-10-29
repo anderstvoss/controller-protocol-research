@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "steam-c6-sdl-sensor-4032us",
-  "statement": "The pinned SDL Triton consumer declares TRITON_SENSOR_UPDATE_INTERVAL_US=4032 microseconds and uses 1000000/4032 (about 248.016 Hz) as the advertised sensor update rate when opening the joystick. Its separate source comment says that the USB descriptor reports 1 kHz but actual sensing is about four milliseconds; this is SDL commentary, NOT a captured descriptor, verified sampling rate or hardware validation. SDL driver lines 40-41,570-582. Measured direct-wired sensor cadence and USB descriptor evidence: No evidence.",
+  "statement": "The pinned SDL Triton consumer declares TRITON_SENSOR_UPDATE_INTERVAL_US=4032 microseconds and uses 1000000/4032 (about 248.016 Hz) as the advertised sensor update rate when opening the joystick. Its separate source comment says that the USB descriptor reports 1 kHz but actual sensing is about four milliseconds; this is SDL commentary, NOT a captured descriptor, verified sampling rate or hardware validation. SDL driver lines 40-41,570-582. Measured direct-wired sensor cadence and USB descriptor evidence: No evidence. Cross-link: `sc2-july-puck-window-count-rate-inference` gives aggregate ~266/s ten-second official-Puck input 0x42 windows, NOT a physical direct-wired 1302 or sensor update rate, and the two numbers are not a confirmed disagreement. Physical wired timestamps and IMU cadence are explicitly scheduled for Session 2 of `docs/steam-physical-capture-plan.md`.",
   "status": "source_supported",
   "applicability": {
     "controller": "steam-controller-2026",
