@@ -76,7 +76,7 @@ class VirtualgamepadHistoricalBackfill(unittest.TestCase):
                   f"{a['consumer_category']} → {b['consumer_category']} | {n0} → {n1} |")
         # Source-ledger device evidence may be added independently after B.
         # B consumer-only additions must not change the device category.
-        self.assertEqual(after["xbox360"]["category"], "No evidence")
+        # F adds independently sourced device-side XUSB format claims; B still\n        # does not change the category when its consumer claims are removed.\n        self.assertEqual(before["xbox360"]["category"], "Source evidence")\n        self.assertEqual(after["xbox360"]["category"], "Source evidence")
 
 
 if __name__ == "__main__":

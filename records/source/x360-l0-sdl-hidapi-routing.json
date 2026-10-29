@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-sdl-hidapi-routing",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapijoystick.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "dd5fdc67313cdcca247c0d82f4600d98dc4b38560c66e16dcffa561e8f770e63",
+  "lineage": "libsdl",
+  "locator": "262 type hints, 312/346 IsSupportedDevice, 470-477 driver selection/open, 700-726 absence of HIDAPI driver, 1237-1283 device presence."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-sdl-gamepad-db",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/SDL_gamepad_db.h",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "91e056d1ccf20599cf6de06b109d6fc937595c3d415afb358a6a23c15c085cf6",
+  "lineage": "libsdl",
+  "locator": "Xbox 360 045e:028e platform-specific GUID mapping entry 798 Linux, 838 platform-specific alternative and 535 Atari-branded variant; do not infer native XUSB selection from mapping database."
+}
