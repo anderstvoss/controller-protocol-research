@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-engine-sdl-linux-paths",
+  "statement": "Inspected Godot controller documentation states Godot 4.5+ on Linux routes gamepad input through SDL3; Unity Input System HID introduction describes Linux gamepad and joystick HIDs delivered through SDL. These engine paths inherit respective bundled/selected SDL build behavior. Which specific engine build exposes 28de:1302 native Triton features: No evidence; this does not assert live Godot/Unity acceptance. Godot docs lines 7-15; Unity HID introduction lines 1-20.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "SDL tags and pinned public engine documents inspected 2026-10-27; device revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct USB 28de:1302 consumer software; versions and engine middleware only; no live test"
+  },
+  "sources": [
+    "steam-godot-linux-sdl3",
+    "steam-unity-linux-sdl-input"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
