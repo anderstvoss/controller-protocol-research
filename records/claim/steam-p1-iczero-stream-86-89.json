@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-p1-iczero-stream-86-89",
+  "statement": "Dissector names output 0x86 stream configure/stop (operation and target), 0x87 full target data, 0x88 dual-internal-channel data, and 0x89 partial data with explicit length. Dissector lines 63-77,161-212,754-795; README lines 57-60,101-119; haptics.rs lines 127-166 assembles a 0x87 payload paced by a speculative software bucket. Descriptor-backed body lengths in July notes (0x86=3; 0x87/88/89=63) are NOT proof that any wired host sends these, or that the streaming flow/actuator semantics are correct. Capture gate: Plan Session 3 passive host output ID inventory; meaningful streaming mode/status validation needs separate approved active-output setup, not raw write commands in Sessions 1-3. Source range is a hypothesis from iczero at 83c46d7, shared lineage 'sc2' with the previously imported sc2 README/dissector/haptics sources. No independent cross-source confirmation and no physical wired experiment.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "iczero source pin 83c46d7; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only research lead for direct 28de:1302; Plan Session 3 passive host output ID inventory; meaningful streaming mode/status validation needs separate approved active-output setup, not raw write commands in Sessions 1-3. No intentional feature/stream command injection; compare passive/consented host-originated traffic."
+  },
+  "sources": [
+    "sc2-src-dissector",
+    "sc2-src-haptics",
+    "sc2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

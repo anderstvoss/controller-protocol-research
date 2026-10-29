@@ -1,20 +1,21 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-direct-usb-descriptors",
-  "statement": "A historical operator note now records direct-wired 28de:1302 and its 372-byte HID report descriptor plus declared report IDs/output body lengths. Full USB configuration, interfaces, endpoints, HID descriptor bytes and feature/probe transactions have not been imported as physical fixtures.",
+  "statement": "Fresh experiment steam-s3-physical-descriptor imports the exact 372-byte physical direct-wired 28de:1302 HID report descriptor and reduced 41-byte USB configuration, with one HID interface and two interrupt endpoints. That descriptor-shape portion of the former gap is now observed; see steam-s3-1302-report-shapes and steam-s3-1302-usb-interface. Residual unknowns are physical feature/probe transactions, field semantics, firmware/revision variation and consumer acceptance; descriptor declarations alone do not resolve those.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "usb",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
+    "scope": "Residual evidence gap only after fresh physical descriptor acquisition. Earlier July observations remain historical, raw-not-revalidated evidence; the new direct descriptor fixture does not establish feature replies, field meanings or consumer behavior."
   },
   "sources": [
     "sc2-src-capture-notes-2026"
   ],
   "experiments": [
-    "sc2-exp-direct-wired-20260731"
+    "sc2-exp-direct-wired-20260731",
+    "steam-s3-physical-descriptor"
   ],
   "conflicts_with": [],
   "supersedes": [],

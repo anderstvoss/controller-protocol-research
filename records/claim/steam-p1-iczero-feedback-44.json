@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-p1-iczero-feedback-44",
+  "statement": "Dissector labels input 0x44 as TRITON_AUDIO_BUFFER_FEEDBACK, and tentatively decodes actuator byte plus status flags overrun/stopped/needs-more/enough/rejected/accepted/running conflict. Report presence and six-byte shape in prior Puck notes do not establish a wired 0x44 ACK, a byte-2 flag mapping or causation. Dissector lines 52-54,142-159,739-753; haptics.rs lines 4-15,60-92. Capture gate: Plan Session 1 rumble output correlated input and Session 2 output-window 0x44; Session 3 if a safe host-originated Ping. Source range is a hypothesis from iczero at 83c46d7, shared lineage 'sc2' with the previously imported sc2 README/dissector/haptics sources. No independent cross-source confirmation and no physical wired experiment.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "iczero source pin 83c46d7; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only research lead for direct 28de:1302; Plan Session 1 rumble output correlated input and Session 2 output-window 0x44; Session 3 if a safe host-originated Ping. No intentional feature/stream command injection; compare passive/consented host-originated traffic."
+  },
+  "sources": [
+    "sc2-src-dissector",
+    "sc2-src-haptics"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
