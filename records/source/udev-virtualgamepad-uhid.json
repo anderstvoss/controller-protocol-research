@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "udev-virtualgamepad-uhid",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/8f60dcce577ab02bd8ed8b3426349729d417393c/udev/70-virtualgamepad-uhid.rules",
+  "revision": "8f60dcce577ab02bd8ed8b3426349729d417393c",
+  "sha256": "d47e3a04fc21ab34e0a02ba518d77e6be2b7c8f21e589f5ebbbac3c1ae62d021",
+  "lineage": "virtualgamepad",
+  "locator": "lines 1-2 optional trusted-user device creation group and mode; local install required"
+}
