@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-feature02-calibration-unknown",
+  "statement": "An independent physically read reference for DS4 USB feature 0x02 calibration, including its per-device bytes and CRC/revision rules, is not available in this corpus. Linux source expects 37 bytes and extracts gyro/accel bias/scale data.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 346–352, 1938–2116; historical hid-sony.c 1704–1788. Community PS4 wiki source pending for independent device-side corroboration."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

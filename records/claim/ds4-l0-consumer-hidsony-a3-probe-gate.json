@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-hidsony-a3-probe-gate",
+  "statement": "Historical Linux v6.1 hid-sony performs firmware GET 0xA3/49 bytes and reads hardware/firmware at 35/41; unlike later hid-playstation, a failed version request aborts DS4 initialization. A virtual implementation targeting this historical driver must provide a compatible response.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-sony.c 1893–1915, 2851–2863. Version-specific host requirement; stub data content/fidelity remains unverified."
+  },
+  "sources": [
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-kernel-calibration-fallback",
+  "statement": "Linux DS4 calibration requests 0x02/37 bytes for USB with up to three attempts when contention returns mismatched reports, and 0x05/41 with CRC for Bluetooth; it computes gyro and accel coefficients, guards zero denominators. Probe may continue with inaccurate IMU if calibration fetch fails.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1938–2116, 2801–2805. Contention with Steam is an explicitly documented kernel-side concern, not proof of actual collision in virtualgamepad."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

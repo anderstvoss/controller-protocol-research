@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-kernel-a3-optional",
+  "statement": "Pinned hid-playstation requests firmware feature 0xA3/49 bytes with CRC disabled and reads HW version bytes 35–36 and firmware 41–42, but a failed read only warns and leaves sysfs version fields invalid: it does not abort DS4 probe.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 2121–2145, 2791–2795. Thus a synthetic 0xA3 stub is not a must-pass probe gate for this kernel revision."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

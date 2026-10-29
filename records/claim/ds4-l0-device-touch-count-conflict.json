@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-touch-count-conflict",
+  "statement": "A published community summary describes 'up to 3 touch points USB / 4 Bluetooth', whereas Linux's struct explicitly reserves three USB or four Bluetooth nine-byte *touch reports*, each of which contains two four-byte contact points; the terminology/count units disagree.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md 38–42 versus hid-playstation.c 454–505. Treat the kernel layout as a host parser contract; do not silently convert report slots into simultaneous fingers or claim actual packet count from physical hardware."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "ds4-l0-consumer-kernel-touch-report-buffer-count"
+  ],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

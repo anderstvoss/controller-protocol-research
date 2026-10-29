@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-usb05-output",
+  "statement": "Community DS4 protocol summary documents USB output report 0x05 (32 bytes) as the rumble/lightbar command path, distinct from Bluetooth's 0x11 78-byte command format.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md 20–29; OpenPuck hidGyro helpers are only a compatible-device implementation; physical LED/rumble fidelity unmeasured."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol",
+    "openpuck-ds4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

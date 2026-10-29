@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-revision-identity-unknown",
+  "statement": "Revision-specific retail descriptors, HID report differences and functional changes among Sony 054c:05c4 and 054c:09cc remain unmeasured in the corpus; consumer product matching does not demonstrate interchangeability.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux/SDL identity tables and pre-6.2 hid-sony consumers distinguish these product IDs. No retail descriptor diff supplied."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "ds4-linux-hid-sony-v61",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

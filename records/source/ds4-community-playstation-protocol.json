@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds4-community-playstation-protocol",
+  "kind": "research_lead",
+  "url": "https://github.com/noisyloop/game-research/blob/290e4a26eeed8a1f659150e23d527c39f46a3af3/docs/03-console-protocols/02-playstation.md",
+  "revision": "290e4a26eeed8a1f659150e23d527c39f46a3af3",
+  "sha256": "61101df2bc188bcfbb52d882d52b5076318138553b94cc428d27b01577e05bcb",
+  "lineage": "noisyloop-game-research",
+  "locator": "DS4 USB/BT table and 0x01/0x11 formats lines 13-43. Secondary community summary of the kernel and PSdevwiki, NOT independently captured retail DS4."
+}
