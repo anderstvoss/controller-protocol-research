@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-kernel-mp-id-predicate-and-fallback",
+  "statement": "Linux's inactive MP probe requests six bytes at A600FA and accepts exactly six bytes with last byte 0x05; it does not compare builtin A4200005 vs external A6200005. Probe failure prevents creation of MP evdev; builtin MP suppresses four-second polling but not the initial hotplug reconciliation probe or later scheduled status/hotplug work. Base input can persist.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux core v6.12 513-530,759-795,899-933,1100-1179; modules 2630-2667. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

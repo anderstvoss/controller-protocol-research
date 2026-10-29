@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner-confirmed exact-owned temporary hidraw/LED grants, revalidated by agent. Normal wiimote binding; no ignore-special window, agent sudo, persistent rule or debug setting change.",
+  "config": {
+    "consumer_role": true,
+    "revision": "Tr / Wii Remote Plus",
+    "seconds_bound": 80,
+    "binding": "wiimote",
+    "devtype": "gen20",
+    "motionplus_inactive_id_external_style": false,
+    "expected_model_inactive_id": "0000a4200005; source-selected, leading zero bytes unknown; not physical or kernel-log readback",
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "first_unpassed_checkpoint": "Changing SDL gyro unestablished: sensor not exposed.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "no_special_driver_window": true,
+    "caveat": "No inactive-ID hex line in kernel log; no Cemu, Classic live or generic-bound Plus passthrough run."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "87700df59fbfe7fef99f5ab35bd09aee53abf9ab",
+    "actual_probe_source_sha256": "8b226a129d439bcd81ab70f03b16283ca81f37239538ace29188d70cecca0df2",
+    "actual_probe_binary_sha256": "89bb2fecd8134349af036da57b25655d4603284bf3cb5ac1916453d19a2d2af2",
+    "original_private_artifact_sha256": "0e2b2849db8f0659d277a0a1be4b4e6654960877f3e26804f9d45d3afb88478e",
+    "consumer": "SDL Debian 3.2.10+ds-1, explicit system 3.2.10 headers/library and owned kernel MP-event holder",
+    "consumer_binary_sha256": "d3c2864cf5c2db2592f9b28ee7c9fe807e8d68adfc6ddfc8ae5efd3f2924da7b",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139",
+    "consumer_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "consumer_probe_source_sha256": "204d75c7cb3e4b23e2c8b358af5c8d4b22ff37427b267f5d7a37add948be9fec"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "sdl_version": 3002010,
+        "owned_hid_count": 1,
+        "raw_open": true,
+        "hidapi_open": true,
+        "window_ms": 60003,
+        "polls": 11219,
+        "disconnected_polls": 0,
+        "removed_events": 0,
+        "axis_events": 0,
+        "button_events": 250,
+        "sensor_events": 0,
+        "sensors": {
+          "accelerometer": {
+            "capable": false,
+            "enabled": false,
+            "samples": 0,
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              0,
+              0,
+              0
+            ]
+          },
+          "gyro": {
+            "capable": false,
+            "enabled": false,
+            "samples": 0,
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "sdl_revision": "release-3.2.10-0-g877399b2b (Debian 3.2.10+ds-1)",
+        "kernel_mp_event_held": true,
+        "concurrent_kernel_gyro_distinct_values": {
+          "ABS_RX": 2,
+          "ABS_RY": 2,
+          "ABS_RZ": 2
+        },
+        "decoded_gyro_change_observed": false,
+        "sample_scope": "Sensor API sample counts are polls of current values, not counts of fresh nonzero sensor updates."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "SDL 3.2.10 Plus MP-only opens the exact-owned HIDAPI joystick during a 60-second poll with no disconnect/removal. An explicit concurrent kernel MP-event holder sees changing gyro. SDL exposes no gyro sensor (capable false, enabled false, zero samples). No changing decoded SDL gyro is established; capability or successful value polling is not delivery. The underlying virtual gyro is not physically zero and no model fix follows. This is a bounded consumer observation with a holder precondition, not general SDL acceptance."
+  }
+}

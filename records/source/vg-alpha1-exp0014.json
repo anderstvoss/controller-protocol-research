@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-exp0014",
+  "kind": "research_lead",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/docs/history/alpha-1/experiments/EXP-0014-individual-evdev-mapping.md",
+  "revision": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+  "sha256": "11742a47b16e4f8fe68cd7c6af02af5ca8b0597272ece2cb43ed0b805bc285be",
+  "lineage": "virtualgamepad",
+  "locator": "Historical individual evdev controls documented in EXP-0014-individual-evdev-mapping.md. Documentation of earlier runs; raw private logs not imported. Pinned as a document lead; its current repository revision is not the earlier test executable revision."
+}

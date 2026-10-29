@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-xwiimote-core-4df",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/lib/core.c",
+  "revision": "4df713d9037d814cc0c64197f69e5c78d55caaf1",
+  "sha256": "cddb3f03723201a05c815a0fac0fd29f282f1b91cfcf7fa047b52d4a328d5546",
+  "lineage": "xwiimote/xwiimote",
+  "locator": "MIT-like upstream licence. Kernel parent 335-393, MotionPlus evdev opens 611-672, gyro ABS data 1045-1090. No raw register reads."
+}

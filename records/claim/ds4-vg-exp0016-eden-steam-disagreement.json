@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-vg-exp0016-eden-steam-disagreement",
+  "statement": "The maintainer reported DS4 HID gyro functioning in Eden nightly's SDL backend, but Steam showing right-stick movement on both triggers and trigger movement on right-stick Y.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "User-reported virtual-controller observation only. Exact Steam/Eden versions, backend maps and paths unavailable; neither a verified Steam defect nor physical DS4 evidence."
+  },
+  "sources": [
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

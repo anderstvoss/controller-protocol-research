@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-wiibrew-transition-bounds",
+  "statement": "WiiBrew community documentation describes the active 04/05/07 MotionPlus IDs, a status 0x20 disconnect then reconnect on A400F0=55 deactivation, and unsolicited 0x20 on extension changes followed by required 0x12 report-mode reselection. The reviewed pinned WiiBrew records do not establish a universal activation 0x20 pair, an active mode-switch edge count, a physical timing value or integrated Remote Plus status sequence; no negative physical assertion follows.",
+  "status": "source_supported",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. WiiBrew oldid 120079 MotionPlus introductory/activation/deactivation passages and oldid 123257 Wiimote Status Reporting. Reuses wii-gap-wiibrew-motionplus-deactivation and wii-gap-wiibrew-status-20-resend. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-gap-wiibrew-extensions-oldid121955"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

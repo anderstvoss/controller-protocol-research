@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-dolphin-ciface-f6-40-sequence",
+  "statement": "Dolphin native ControllerInterface uses status, LED ACK, report 0x37, EEPROM acceleration calibration and optional IR/speaker setup, then normal A400FA identity, A600FE/1 readability poll, A600F0=55 and A600FE mode activation. It accepts mapped A400FA/6 with byte five 05, reads A40020/32 gyro calibration for MP-only, and when a Nunchuk or Classic is downstream additionally requests A400F6/4 split child ID then A40040/16 child calibration. F7 and 0x50 challenge are not required by this specific host path.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin CI 3eb30c7 WiimoteController.cpp 340-445,449-657,709-742,851-879,1049-1069,1690-1731. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-dolphin-ciface-3eb",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
