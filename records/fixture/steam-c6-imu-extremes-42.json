@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-imu-extremes-42",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-imu-extremes-42.hex",
+  "sha256": "fe438ba00c7b133ad23b52896356d22c740e4a5624ced572645b503f1e59784f",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-input-42",
+    "steam-c6-input-scaling"
+  ]
+}

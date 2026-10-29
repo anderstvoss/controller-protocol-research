@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-real-speaker-pacing",
+  "statement": "Dolphin schedules outbound real-Wiimote reports against emulated CPU target host time, writing after a sleep-until deadline; it does not impose a fixed speaker-data interval in the inspected send path. It may duplicate incoming data reports, under RealWiiRemoteRepeatReports (default on), to present a near-200 Hz input rate to games, because its consumer comments report that games may withhold speaker reports near 100 Hz. The 200 Hz workaround is input duplication, not proof of 200 audio packets/s or a physical speaker acceptance cadence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiimoteReal.cpp 168-205, 317-332, 456-478; MainSettings.cpp 285-286. Compared to existing wii-gap-wiibrew-speaker-sample-formats-pacing: its 10 ms/2 kHz throughput suggestion is not contradicted by Dolphin's input-rate hack."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-core-e1d35f",
+    "audio-dolphin-wii-main-settings"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

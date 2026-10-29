@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-wiiuse-motionplus-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "a6541f91ea6859e0fcd06cf504fc8b443d4cd25e628debdc261d126377fbeb5e",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "wiiuse GPL-3.0; independent MotionPlus handshake and mapped identity at lines 106-160 and 183-228, interleaved gyro and Nunchuk events at 238-316. This inspected code has no F6 mirror or 0x40 calibration-cache prerequisite; omission is not proof registers are absent on hardware."
+}

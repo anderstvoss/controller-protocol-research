@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-kernel-motionplus-shared-hidraw-coexistence",
+  "statement": "MotionPlus input-node opening changes hid-wiimote shared kernel state, while raw HID reads occur on the same kernel HID object and do not themselves increment that MotionPlus input-node open state. Keeping the evdev node open may maintain the kernel's mapping while a separate SDL process uses hidraw, but this is conditional on kernel re-evaluation, successful mapping, permissions and SDL not resetting or superseding the mapping. Neither v6.12 nor the pinned mainline code guarantees a stable multi-consumer order.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Linux hid-wiimote v6.12 and mainline 734bef5; source behavior, no host runtime",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Modules MP open/close and core init_hotplug plus mapped-state check 950-1065; compare SDL initial extension probe 677-709. Hypothesis for host verification, not a measured pass."
+  },
+  "sources": [
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-linux-main-core-734bef",
+    "wii-gap-linux-main-modules-734bef"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

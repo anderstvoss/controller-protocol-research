@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cemu-exported-gyro-zero-sample",
+  "statement": "At pinned Cemu 29f2f1f the normal reader constructs WiimoteState.motion_sample using processed acceleration and magnitude of acceleration change while supplying zero-valued arrays for its remaining motion arguments. NativeWiimoteController::get_motion_sample forwards this provider sample rather than consuming the separately stored MotionPlus orientation. As written this exported path cannot evidence decoded MotionPlus angular velocity even if raw packets arrive; no assertion that all possible Cemu motion paths behave alike.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu provider.cpp 675-719; provider.h 43-73; NativeWiimoteController.cpp 128-142. Source-only sampled exported API, not a host/application result."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-cross-cemu-provider-header-29f2",
+    "wii-gap-cross-cemu-native-controller-29f2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

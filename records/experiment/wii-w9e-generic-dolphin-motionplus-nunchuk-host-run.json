@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-dolphin-motionplus-nunchuk-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "fixtures": [
+    "wii-w9e-generic-dolphin-motionplus-nunchuk-host"
+  ],
+  "procedure": "Use merged code main c60c164 with unchanged caller resources and both shims on. Owner verifies parameter 0 and no other HID hotplug, opens a brief ignore-special window, and signals the waiting non-root producer to create two exact-owned devices. Owner restores and reads back 0 immediately, records duration, verifies generic binding, then grants raw access. Agent revalidates identities, driver and raw links. Run native Dolphin MP+Nunchuk for 180 seconds, then dedicated MP-only for 150 seconds, with isolated emulated mapping profiles, owned raw/radio observation guard and cleanup between consumers. Compare native and combined post-map writes; inspect owned mapping UI separately. Check exact-device input-node absence and libxwiimote ENODEV before and after. Close both devices idempotently and verify removal. No model change or optional shim-off run because MP+Nunchuk did not pass.",
+  "semantic_outcome": "Native Dolphin 2503 MP+Nunchuk with hid-generic, both shims on and imported synthetic caller calibration reaches mode 05, A40020/32 and A40040/16. The two MP chunks and child chunk match the imported blocks exactly. This path never requests F6, so no live F6 mirror pass is inferred. Only 28 report 0x37 frames (two distinct payloads) are observed; sampled late mapping views show no changing Nunchuk or gyro. The first unpassed checkpoint is changing decoded passthrough motion, after calibration transport. Both native and combined post-mode-05 A400F0=55 counts are zero. Removing bound-Wii-driver contention removes the prior reset observation but does not establish MP+Nunchuk acceptance or identify the remaining cause."
+}

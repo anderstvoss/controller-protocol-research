@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-nunchuk-off-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9-dolphin-motionplus-nunchuk-off-host.json",
+  "sha256": "6036784d2ff53d3284745d9fd7919c4f690d6127b3cd725c760ce7b7435ebe6c",
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w9-dolphin-motionplus-nunchuk-off-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced exact-owned native trace/evdev and private UI observations to semantic counts, protocol addresses and booleans; no raw bytes, images, paths, identities or wall clocks. Original private artifact SHA256 46be19b818a82b43f7a383683d2b3704d4dfce278b0b8b1455a02dcbc209b27d.",
+  "claims": []
+}

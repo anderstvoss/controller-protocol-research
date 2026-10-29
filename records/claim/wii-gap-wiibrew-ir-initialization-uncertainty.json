@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-ir-initialization-uncertainty",
+  "statement": "The pinned WiiBrew Wiimote IR Camera / Initialization section describes an enable-and-sensitivity sequence that writes 0x08 to 0xB00030 both before and after sensitivity and mode configuration, while documenting three possible resulting camera states rather than deterministic readiness. As a possible workaround for this variability, the page recommends delaying at least 50 milliseconds between each byte transmission. It also describes an alternative console-style procedure starting with 0x01 at 0xB00030, and explains that setting bit 0x02 in the values sent by output reports 0x13 and 0x1A requests acknowledgement through input report 0x22. These are community-described sequences, not independently validated timing requirements or verified C5 fixes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew Wiimote oldid 123257, IR Camera / Initialization: non-deterministic three-state report, at-least-50-ms-per-byte proposed workaround, alternative 0x01 register start, and report 0x13/0x1A acknowledgement-request bit 0x02 producing report 0x22. Related: wii-kernel-ir-mode-policy, wii-gap-wiibrew-ir-sensitivity-configuration, wii-gap-linux-ir-output-metadata-loss. No camera-setting blocks copied; community documentation only."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

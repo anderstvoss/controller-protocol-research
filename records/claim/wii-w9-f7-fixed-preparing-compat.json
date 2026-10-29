@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-f7-fixed-preparing-compat",
+  "statement": "Dolphin 3eb30c7 assigns F7 a challenge-progress role associated with data at offset 0x50. Its enum distinguishes emulator-only activation 0x00, preparing 0x02, first-ready 0x0e and later second-stage values 0x14/0x1a. Its header comment describes hardware beginning at 0x02 after activation and progressing; Activate uses the emulator-only 0x00 until Update completes activation and selects 0x02. These source observations and a source comment are not physical readback of this project. Under the owner decision, the project compatibility policy holds F7 at 0x02 whenever the active-passthrough F6 mirror applies, never advances it and never serves 0x00 or readiness states. The challenge is unimplemented; offset 0x50 remains error 7. Dolphin ControllerInterface ignores F7 while decoding F6 read offsets 2,0,3, as recorded in wii-gap-dolphin-attach-passthrough-four-byte-id-f6. This fixed non-ready byte is compat, not faithful challenge emulation or a physical/game acceptance claim.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical MotionPlus revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. provenance_class: compat. Owner decision: https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6446669605. Source-derived value plus deliberate fixed non-ready policy; active passthrough with attached Nunchuk/Classic only. No physical readback, challenge implementation or runtime experiment yet."
+  },
+  "sources": [
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-attach-ciface-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

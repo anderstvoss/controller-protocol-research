@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-battery-status-43",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-battery-status-43.hex",
+  "sha256": "2641f086b0b0cbb199b447aee9b6391336b265aada7d1996bf57bcda2f019434",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-battery-43"
+  ]
+}

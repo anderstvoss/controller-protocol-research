@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-on-control-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9-dolphin-motionplus-on-control-host.json",
+  "sha256": "3924a91b275bc5ce03014707deab41b2a2d24bb4cbd1e537e2401e63e3ee2863",
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w9-dolphin-motionplus-on-control-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced exact-owned native trace/evdev and private UI observations to semantic counts, protocol addresses and booleans; no raw bytes, images, paths, identities or wall clocks. Original private artifact SHA256 a7ee15cb2ae953ddea8241f47694a507a4a308976929fd8e6ed3340450e8c656.",
+  "claims": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-input-42",
+  "statement": "At pinned Linux v7.3-rc1, wired 0x42 is exactly 54 bytes including ID at offset 0. Offsets: 1 sequence u8; 2-5 buttons u32 LE; 6-7 L trigger s16 LE; 8-9 R trigger s16 LE; 10-11/12-13 left stick X/Y s16 LE; 14-15/16-17 right stick X/Y s16 LE; 18-19/20-21 left pad X/Y s16 LE; 22-23 left pressure u16 LE; 24-25/26-27 right pad X/Y s16 LE; 28-29 right pressure u16 LE; 30-33 IMU timestamp u32 LE; 34-39 acceleration XYZ s16 LE; 40-45 angular-rate XYZ s16 LE; 46-53 quaternion WXYZ s16 LE (0x42 only). Kernel hid-steam.c:2325-2391, 2551-2570. SDL driver treats at least the 46-byte common prefix as a no-quaternion state, ignoring its trailing quaternion. No physical bytes asserted.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

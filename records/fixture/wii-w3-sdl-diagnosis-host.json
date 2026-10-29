@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "wii-w3-sdl-diagnosis-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w3-sdl-diagnosis-host.json",
+  "sha256": "a1933a7f893112bc4e979258e85509b4a105761330d62dfeab033a1da84eb877",
+  "sources": [
+    "virtualgamepad-wii-w3-baseline",
+    "wii-w1-sdl-3-2-10",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w3-sdl-diagnosis-host-run"
+  ],
+  "parent": null,
+  "transform": "Filtered private owned-virtual syscall JSONL to requested host reports, command/status/read replies and first DATA after status/mode; retained full report counts and relative timestamps. Removed raw application logs, absolute clocks, paths, identities and grant metadata. Original trace SHA256 3ae6463c1ac512ee25c7a08d814ecd45cd36faaa745e0150074f9ef50ff7f259. Original stdout/phase artifact SHA256 3a5a2225f653aba2fb5cb618fb0f347b36f65cb34021531cc008877aea4cc89b. Original per-profile result SHA256 2da304697f3c82d087a7fb62613c90a8eb3e2a433341989eff0669a6d13779ea, b6592dcfb70c16ed277fa5259ce167d8adaefcb64b4b0f40fd8edcee302242ce, bc07991db5a5b4df10f30e1fc78994ccae3aaab59195319d41457a4cfcdbb5af. No upstream code/text or real input capture.",
+  "claims": []
+}

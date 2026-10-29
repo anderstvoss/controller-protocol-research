@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-controllerinterface-motionplus-calibration-gate",
+  "statement": "Dolphin's ControllerInterface actively determines mapped MotionPlus identity, requests mode activation and re-reads after a wait, and reads active MotionPlus calibration from extension address space offset 0x20. Its gyro state update requires calibration to have been accepted. This differs from SDL Wii HIDAPI on Linux, which delegates mode activation to the kernel and applies fixed raw gyro scaling without a Wii calibration read; lack of Dolphin calibration data does not explain W4 SDL zero readings.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin e1d35f pinned software consumer; physical model unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. WiimoteController.cpp 449-605,846-877,1049-1070,1352-1400,1462-1470; compare wii-gap-sdl-linux-motionplus-activation-mode-noop."
+  },
+  "sources": [
+    "wii-gap-dolphin-controllerinterface-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

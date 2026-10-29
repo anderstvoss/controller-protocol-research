@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-2503-imu-gyro",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/9763c0a1e2b9db0c3861d25bc2f5a0ace6a15ee3/Source/Core/InputCommon/ControllerEmu/ControlGroup/IMUGyroscope.cpp",
+  "revision": "9763c0a1e2b9db0c3861d25bc2f5a0ace6a15ee3",
+  "sha256": "510e8d9f7a0bab5b165b8111cc7b690addbf2241dd1a0d0a5ad354ebf8cbb645",
+  "lineage": "dolphin-emulator",
+  "locator": "W8 post-merge source pin for bounded consumer interpretation. Gyro UI calibration period zero disables its extra stationary auto-calibration, not the imported MP calibration. No source excerpts or binaries redistributed."
+}

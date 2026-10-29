@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-kernel-motionplus-nunchuk-result",
+  "statement": "Original motionplus-nunchuk, wiimote bound, activation re-attach compat on: all three evdev gyro axes and same-capture xwiimote MotionPlus events change between two driven values during the bounded 18-second reader run. Mapped mode 05. No A400F0=55 or A600F0=55 in the first 18 seconds after mapping; re-initialisation starts at reader close, over 18 seconds after mapping. The raw tap observes unplugged then plugged status on activation. This is a virtual software regression, not physical fidelity, rate acceptance or kernel decoded child acceptance.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original / virtual Wii Remote PID 0306; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9g bound regression with owner-confirmed temporary grants and caller synthetic calibration; no physical/radio/game/rate/challenge or child acceptance."
+  },
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df"
+  ],
+  "experiments": [
+    "wii-w9g-kernel-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

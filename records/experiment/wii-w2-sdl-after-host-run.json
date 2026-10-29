@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w2-sdl-after-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w2-after",
+    "wii-w1-sdl-3-2-10",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w2-sdl-after-host"
+  ],
+  "procedure": "Build original tools/wii_w2 against specified comparison revision, same SDL3.2.10 helper. Hold both devices for one human grant round; verify identity/access after confirmation. Run baseline first, close it, then reverify and run revised case; keep wiimote bound. Actual-default hints then Wii-enabled/default-enumeration,12-second bounded children across4 attachment phases. Parse only exact owned raw/core paths; other internally enumerated virtual devices excluded from summaries.",
+  "semantic_outcome": "Default hints: owned Game Pad HID entry bus2 usage1/5 enumerates and opens; joystick remains evdev11buttons/0axes/hats/no sensors. With Wii hints enabled and default HID filtering, owned raw-path joystick opens via HIDAPI with6axes/26buttons/0hats and accel capability, no gyro. It disconnects during the attachment sequence and stays disconnected in later snapshots. This proves bounded initial claim only, not sustained extension/sensor/game acceptance; no timeout cause diagnosed. No further descriptor edits attempted."
+}

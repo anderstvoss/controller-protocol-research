@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-per-device-bind-blocked-result",
+  "statement": "On Linux 6.12.113+deb13-arm64, an exact-owned original virtual Wii HID initially bound to wiimote has no driver_override attribute. Anders attempted only its per-device wiimote unbind and explicit hid-generic bind; the bind write returned No such device. The guarded script restored wiimote, and the agent independently verified the driver link, exact identity and five input companions before idempotent close and HID/raw/LED removal. Both native Dolphin 2503 arms were not run: no hid-generic binding was established. F6, MP A40020/32, child A40040/16, decoded motion and non-Dolphin A400F0=55 are unmeasured in W9e. The expected absence of kernel evdev, MotionPlus and xwiimote access under hid-generic is also unmeasured.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9e test/dev binding investigation only; release policy remains gated on virtualgamepad #258. No physical, radio, rate, game or challenge evidence."
+  },
+  "sources": [
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-per-device-bind-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

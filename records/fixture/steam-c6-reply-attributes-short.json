@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-reply-attributes-short",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-reply-attributes-short.hex",
+  "sha256": "df6915442a83b423b6db3fdddfe700b0cb9f2dd3e2d2dccac036799db43f8b12",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-exchange"
+  ]
+}

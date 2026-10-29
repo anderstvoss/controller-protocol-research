@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-default-motionplus-nunchuk-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w8-dolphin-default-motionplus-nunchuk-host.json",
+  "sha256": "f987fb51cb02176a8aa804cfa7f02217358425004d9f79d71ad49f128b991afc",
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi"
+  ],
+  "experiments": [
+    "wii-w8-dolphin-default-motionplus-nunchuk-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device observations into versions, protocol addresses/counts and semantic outcomes. Removed raw bytes, logs, identities, host paths, serials, MACs and wall clocks. Original private artifact SHA256 c00c22ec2ed5c77c943b6d2fffe4cdc3dd5061d4e883cf5e04a1d713cdf8ec7b. Consumer and helper binaries are not redistributed.",
+  "claims": []
+}

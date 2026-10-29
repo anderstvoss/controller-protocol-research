@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-wiinupro-windows-bluetooth",
+  "statement": "Pinned WiinUSoft/WiinUPro project documentation describes a Windows Nintendo Bluetooth controller connection and translation to XInput, including Remote, Nunchuk, Classic/Classic Pro and some IR/motion/calibration settings. This is a Windows stack/emulated XInput consumer, not a Linux hidraw or evdev client; neither Linux virtual realization is an executable acceptance target for this specific Windows program without a distinct bridge.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; WiinUPro dc5700e ReadMe.txt 1-80; documented feature scope only, no native HID code execution verified."
+  },
+  "sources": [
+    "wii-gap-consumer-wiinupro-readme"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

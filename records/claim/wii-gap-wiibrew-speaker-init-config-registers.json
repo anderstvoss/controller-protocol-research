@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-speaker-init-config-registers",
+  "statement": "The pinned WiiBrew Speaker Initialization Sequence and Speaker Configuration sections place the speaker control register block at 0xA20000–0xA20009. The described preparation enables speaker output (0x14), mutes it (0x19), writes an initialization control at 0xA20009, writes an activation/preparation byte at 0xA20001, configures a seven-byte block starting at 0xA20001, writes a finalization byte at 0xA20008 and unmutes. Within the seven-byte configuration, offset 0x01 has an unspecified function; offset 0x02 selects signed 8-bit PCM (format flag 0x40) or 4-bit Yamaha ADPCM (flag 0x00); offsets 0x03–0x04 hold a little-endian rate divisor; offset 0x05 is the volume control (0x00–0xFF for 8-bit PCM, 0x00–0x40 for ADPCM); offsets 0x06–0x07 remain unspecified. The document calls other bytes' purposes incomplete, so the initialization and register semantics are not asserted as fully known. Writes into control registers require address-space selection; no example configuration bytes are reproduced.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew Wiimote oldid 123257; revision-specific retail behavior not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned raw Wiimote revision 123257, section Control Registers; Feedback Features / Speaker / Initialization Sequence; Speaker Configuration; hash-verified against virtualgamepad #158 issuecomment-6345183001. Related source: wii-gap-rnconrad-candidate-sdp-descriptor-structure corroborates speaker output IDs, not A2 register behavior. These addresses are documentary only. C5 explicitly refuses `speaker` in `acceptance/virtualgamepad.wii-remote.toml` `refused_operations`; this is source-research groundwork, not a C5 speaker support claim. No physical capture, timing oracle, wiki examples or code reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

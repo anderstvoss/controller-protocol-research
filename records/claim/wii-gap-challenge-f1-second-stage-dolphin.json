@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-f1-second-stage-dolphin",
+  "statement": "Dolphin PR 7861 and current pinned MotionPlus emulator report that games write challenge type 0 or 1 to active F1 once X is ready; the emulator handles F1 and publishes F7 PreparingY 0x14 then Ready 0x1a, while its commentary describes real intermediate 0x18 and approximately 1200ms for Y1. The reviewed independent WiiBrew, wiiuse, libogc, Cemu and Linux sources do not independently verify the exact F1-to-F7 physical sequence, and the emulator intentionally omits intermediate real states. Treat this as Dolphin hardware-derived commentary with low-to-moderate independent physical confidence, not an established retail time trace.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c7 MotionPlus.h 166-179,209-231 and MotionPlus.cpp 268-300,395-412; 2019 PR7861 head MotionPlus.h 58-135. Source-only, no independent F1 hardware trace. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-challenge-pr7861-registers",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-challenge-libogc-motionplus-959",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

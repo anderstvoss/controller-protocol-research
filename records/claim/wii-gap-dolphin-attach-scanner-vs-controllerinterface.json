@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-scanner-vs-controllerinterface",
+  "statement": "Dolphin's Linux HIDAPI scanner accepts a candidate by Wii name or known VID/PID, not by a required L2CAP session; it tests a temporary raw-hid write of the status-request report before creating a WiimoteHidapi. ControllerInterface AddDevice then connects, prepares and links the real HID transport before running its own gyro initialization tasks. Discovery/connection is distinct from success in ControllerInterface tasks and also distinct from Dolphin real-Wii passthrough-to-game mode.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Pinned Dolphin 3eb30c IOhidapi.cpp 61-164; WiimoteReal.cpp 210-260,495-520,650-745; WiimoteController.cpp 104-121,340-659. Linux UHID BUS_BLUETOOTH is not actual L2CAP."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-hidapi-3eb30c",
+    "wii-gap-dolphin-attach-real-3eb30c",
+    "wii-gap-dolphin-attach-ciface-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

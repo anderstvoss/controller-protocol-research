@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-motionplus-self-activation",
+  "statement": "Pinned Cemu's native Wiimote provider requests status, base accelerometer EEPROM calibration, MotionPlus identity and attachment identification. Upon its MotionPlus identity case it issues raw I2C init and A600FE mode 0x04 enable writes itself, unlike SDL 3.2.10's Linux Wii HIDAPI no-op activation. It has Nunchuk, Classic and Classic Pro identity branches, IR setup, LEDs, rumble and reporting controls. These are source-level intended commands, not proven backend acceptance; active kernel hid-wiimote may concurrently change extension mapping.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; Cemu 29f2f1f; provider.cpp 59-154, 243-386, 919-949, 1009-1090; WiimoteMessages.h 34-60. Verify mode 04 and status/report sequencing on owned virtual device."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

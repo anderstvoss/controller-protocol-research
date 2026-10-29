@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-fixed-none-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w4-sdl-fixed-none-host.json",
+  "sha256": "525ad9bdebfe8ef7c48ba5c599bc675b03132d5e8c7231aa689ebc7b4e81a09e",
+  "sources": [
+    "wii-w4-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick",
+    "wii-linux-modules"
+  ],
+  "experiments": [
+    "wii-w4-sdl-fixed-none-host-run"
+  ],
+  "parent": null,
+  "transform": "Parsed original owned-only JSON summary and host-output transitions; omitted private debug stderr, identities, paths, grant metadata and wall clocks. Private original per-profile artifact SHA256 206c03508349a1681f132f72c1de0995f77ba02373c880d6ee759ba9816f0935. Shared own-virtual UHID trace SHA256 b445a6cc9a3f166b73b6d792276bba1f48b891a2b7ae2eea6ca90cf4060d1cf1 retained privately; not a real input capture. No upstream code/text copied.",
+  "claims": []
+}

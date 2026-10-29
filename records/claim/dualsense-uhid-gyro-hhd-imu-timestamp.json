@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-imu-timestamp",
+  "statement": "HHD encodes gyro X/Y/Z as signed 16-bit fields in the DualSense enhanced input report, with acceleration as adjacent signed fields and an IMU timestamp as a 32-bit little-endian counter derived from incoming nanoseconds divided by 333. It chooses USB or Bluetooth report framing and offsets, and can synchronize emitted reports to incoming gyro/accel/IMU timestamp events for Steam gyro-to-mouse behavior. A roughly two-second absent-IMU fallback permits synthetic monotonic report timestamps; Bluetooth input reports receive CRC32.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "HHD adbd50ff and SDL 3.4.18 compatibility source, no independent DualSense hardware comparison",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. HHD const.py 16, 25-30, 69-147 and __init__.py 363-395, 436-442, 516-548. HHD's Steam rationale is source commentary, not a proven Steam internal requirement."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "hhd-dualsense"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

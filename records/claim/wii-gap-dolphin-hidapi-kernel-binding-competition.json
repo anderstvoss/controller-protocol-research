@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-hidapi-kernel-binding-competition",
+  "statement": "Pinned Dolphin HIDAPI enumerates and opens Wii Remote raw HID devices, but explicitly warns if Linux 'wiimote' instead of 'hid-generic' is bound, because Dolphin and the kernel can both mutate extension state. The warning does not block the open, prove an actual Dolphin failure, or establish that SDL requires hid-generic; SDL Wii HIDAPI has different Linux activation policy.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin e1d35f pinned software consumer; physical model unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. IOhidapi.cpp 17-59,106-162; Dolphin expects raw Wii HID replies, not kernel evdev gyro; warning is consumer policy."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

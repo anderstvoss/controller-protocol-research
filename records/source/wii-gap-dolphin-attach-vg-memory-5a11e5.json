@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-vg-memory-5a11e5",
+  "kind": "independent_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/5a11e507ac973c23ca10beb36edb44fc35034376/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "5a11e507ac973c23ca10beb36edb44fc35034376",
+  "sha256": "860c0085c6c3c7091004ea2f907635e1ae9f99dde9c3add22a75a572bf902ee4",
+  "lineage": "anderstvoss/virtualgamepad",
+  "locator": "virtualgamepad owner source; license as repository, no excerpt. Explicit address admission policy 117-209, MP read whitelist A40020..3F and FA..FF 239-286; downstream calibration only inactive 287-306; read reply error handling 307-343. Read-only inspection."
+}

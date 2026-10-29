@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-motionplus-crc32-calibration",
+  "statement": "Pinned Dolphin's MotionPlus emulator places a 32-byte calibration block at register offset 0x20, with separate 13-byte fast and slow gyro blocks containing yaw/roll/pitch zero offsets, axis scale factors and a unit scale byte, each followed by a UID byte and a 16-bit portion of one CRC32. Dolphin calculates CRC32 across the first 14 bytes and bytes 16-29, then stores its high/low halves in the two designated 16-bit checksum fields. This describes emulator-generated calibration, not real captured sensor data or factory defaults.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "MotionPlus.h 29-70, 186-197; MotionPlus.cpp 109-153. Source-emulator CRC algorithm and register layout, not direct hardware verification."
+  },
+  "sources": [
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

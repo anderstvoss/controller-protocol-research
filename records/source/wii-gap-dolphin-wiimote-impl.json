@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-wiimote-impl",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/8d2ad1a662472955497e5bb79d7b9ec6999e1f0d/Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp",
+  "revision": "8d2ad1a662472955497e5bb79d7b9ec6999e1f0d",
+  "sha256": "b235b625ded952a73573e599e54cc6e58c940537830dcb28e0656db627c268dd",
+  "lineage": "dolphin-emulator",
+  "locator": "Lines 79-165 virtual EEPROM saved-image import or synthetic fallback initialization; 110-144 source-emulated accelerometer/IR calibration and checksum invocation (no default byte values reproduced); 454-479 pass IR coordinates from user input into the camera model, not synthesized camera-point size; 610-665 source-mode IR and extension bus. Emulator behavior only, not measured retail calibration."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-cemu-gyro-decode-path-limits",
+  "statement": "Pinned Cemu includes six-byte MotionPlus raw value and slow-flag extraction in its 0x37 Core+Accel+IR+Extension data path; the reviewed code currently retains raw orientation values and comments out application of a MotionPlus calibration transform. It reads eight bytes of base accelerometer calibration and sixteen bytes for Nunchuk/Classic extensions, with incomplete MotionPlus calibration handling. Because its MotionPlus state and extension variant are separate and report-mode logic is extension/IR dependent, whether this decoder actually reaches live gyro for the surveyed profile is not established by source alone; it requires a Cemu host test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; Cemu 29f2f1f; provider.cpp 302-323, 378-430, 470-549, 1015-1048; WiimoteMessages.h 200-230. Do not claim calibrated rad/s, checksum verification or a successful gyro test."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

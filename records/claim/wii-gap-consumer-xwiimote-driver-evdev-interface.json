@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-xwiimote-driver-evdev-interface",
+  "statement": "Pinned libxwiimote validates that its HID parent has kernel driver name 'wiimote' and discovers separately named Wii core, acceleration, IR, MotionPlus, and accessory evdev children. Its MotionPlus interface open is O_RDONLY (or O_RDWR in writable mode) on the node, not hidraw and not Bluetooth pairing. Consequently any driver-bound UHID-Bluetooth instance with the expected HID parent and named children is a source-supported discovery candidate; uinput-only nodes without matching hid-wiimote HID parent are not direct libxwiimote candidates.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; xwiimote 4df713d; core.c 185-385 and 545-658; xwiimote.h 230-350. Not a measured app run; 'any bound device' still needs expected sysfs and interface names."
+  },
+  "sources": [
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-consumer-xwiimote-header",
+    "wii-gap-consumer-xwiimote-monitor"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

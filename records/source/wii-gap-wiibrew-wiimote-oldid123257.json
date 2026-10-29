@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-wiimote-oldid123257",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Wiimote&oldid=123257&action=raw",
+  "revision": "oldid=123257; 2026-09-01T02:50:51Z; 101655 bytes",
+  "sha256": "a5b35a8b8b19fb66a65f823db7a2e7ccd5e28c74ebf3e85cb1bcd2ccb33394d5",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "Sections Bluetooth Communication; SDP information; HID Interface; Data Reporting; EEPROM Memory; IR Camera Initialization/Sensitivity Settings/Data Formats. Hash/byte-length provenance: implementer comment https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6345183001 ; raw oldid body HTTP 200, text/x-wiki UTF-8, Accept-Encoding identity; exact alias and canonical-title revisions independently hash matched by implementer; cloud agent verified current rendered permanent links show matching oldids, without copying wiki text."
+}

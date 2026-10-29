@@ -1,0 +1,567 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-gyro-diagnosis",
+  "permission": "Anders applied and confirmed five temporary per-node grants supplied locally. Agent reverified exact identity/access and performed no grants/root/unbind/persistent policy.",
+  "config": {
+    "case": "motionplus",
+    "arm": "kernel",
+    "attachment_before_open": true,
+    "attachment_changes_during_child": 0,
+    "requested_observation_window_ms": 20000,
+    "drive_raw_pitch_roll_yaw": [
+      [
+        9000,
+        7000,
+        8500
+      ],
+      [
+        7000,
+        9000,
+        7800
+      ]
+    ],
+    "slow_flags": [
+      true,
+      true,
+      true
+    ],
+    "drive_period_ms": 250,
+    "commit_service_approximately_ms": 20,
+    "sdl_hints": "HIDAPI/WII/WII_PLAYER_LED/background enabled; inherited SDL_* removed; default HID filtering; no enumerate-all",
+    "order": "kernel/H3 both profiles; explicit successful H3 verification gate; no-holder both profiles; holder both profiles; fresh child per arm"
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "b23cb416397ec4698c4a2576f7504061447b286d",
+    "scope": "W5 bounded gyro diagnosis on an owned virtual device; no physical, calibration or rate acceptance",
+    "probe_executable_sha256": "34a41c7fa11f0465e0821e49e883f2631df0c9eabf64b0c7270d9e4adc787d96",
+    "probe_source_sha256": "edd9f24b1d9d8500481b1a04ffbb56870c4daf2f2cc1835d9ea07ef24b19fd7d",
+    "trace_source_sha256": "9930bc50c66a552cf04d075921d3c307811ddbaef50c455844756034ea57aea5",
+    "trace_library_sha256": "ada6734b90cdbb649fcdf6bbafebca4a8c7e44ee137788aee84e7f036a5b7364",
+    "sdl_probe_source_sha256": "1bfcb9d9d6a8a9500f6358efc39e44dbf804f7c2421368c5224cf464bfceb804",
+    "sdl_probe_executable_sha256": "a62015792916c76b8f2fbc9ae5c7bd0af020c69353428104b2fa6074d4e27251",
+    "sdl_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "sdl_version": "3.2.10+ds-1"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true,
+    "global_counts": "not_measured"
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "case": "motionplus",
+        "arm": "kernel",
+        "summary": {
+          "kind": "summary",
+          "holder": true,
+          "kernel_only": true,
+          "hidapi_open": false,
+          "sdl_version": 3002010,
+          "window_ms": 20010,
+          "polls": 0,
+          "disconnected_polls": 0,
+          "gyro_capable": false,
+          "gyro_enabled": false,
+          "accel_capable": false,
+          "accel_enabled": false,
+          "gyro_samples": 0,
+          "gyro_nonzero_samples": 0,
+          "gyro_events": 0,
+          "gyro_min": [
+            0,
+            0,
+            0
+          ],
+          "gyro_max": [
+            0,
+            0,
+            0
+          ],
+          "evdev": [
+            {
+              "code": 3,
+              "events": 93,
+              "min": -3528,
+              "max": 2772
+            },
+            {
+              "code": 4,
+              "events": 93,
+              "min": -10728,
+              "max": 7272
+            },
+            {
+              "code": 5,
+              "events": 93,
+              "min": -10728,
+              "max": 7272
+            }
+          ]
+        },
+        "identity_readbacks": [
+          {
+            "kind": "ids",
+            "phase": "before_init_api",
+            "banks": [
+              {
+                "bank": "a4",
+                "sent": true,
+                "reply": true,
+                "reply_error": 0,
+                "id_hex": "0000a4200405"
+              },
+              {
+                "bank": "a6",
+                "sent": true,
+                "reply": false,
+                "reply_error": 7,
+                "id_hex": ""
+              }
+            ]
+          },
+          {
+            "kind": "ids",
+            "phase": "drive_1s",
+            "banks": [
+              {
+                "bank": "a4",
+                "sent": true,
+                "reply": true,
+                "reply_error": 0,
+                "id_hex": "0000a4200405"
+              },
+              {
+                "bank": "a6",
+                "sent": true,
+                "reply": false,
+                "reply_error": 7,
+                "id_hex": ""
+              }
+            ]
+          },
+          {
+            "kind": "ids",
+            "phase": "drive_10s",
+            "banks": [
+              {
+                "bank": "a4",
+                "sent": true,
+                "reply": true,
+                "reply_error": 0,
+                "id_hex": "0000a4200405"
+              },
+              {
+                "bank": "a6",
+                "sent": true,
+                "reply": false,
+                "reply_error": 7,
+                "id_hex": ""
+              }
+            ]
+          },
+          {
+            "kind": "ids",
+            "phase": "after_drive",
+            "banks": [
+              {
+                "bank": "a4",
+                "sent": true,
+                "reply": true,
+                "reply_error": 0,
+                "id_hex": "0000a4200405"
+              },
+              {
+                "bank": "a6",
+                "sent": true,
+                "reply": false,
+                "reply_error": 7,
+                "id_hex": ""
+              }
+            ]
+          },
+          {
+            "kind": "ids",
+            "phase": "after_close",
+            "banks": [
+              {
+                "bank": "a4",
+                "sent": true,
+                "reply": false,
+                "reply_error": 7,
+                "id_hex": ""
+              },
+              {
+                "bank": "a6",
+                "sent": true,
+                "reply": true,
+                "reply_error": 0,
+                "id_hex": "0000a6200405"
+              }
+            ]
+          }
+        ],
+        "markers": [
+          {
+            "relative_ns": 0,
+            "label": "child_start"
+          },
+          {
+            "relative_ns": 92417,
+            "label": "holder_open"
+          },
+          {
+            "relative_ns": 3000184543,
+            "label": "before_init_api"
+          },
+          {
+            "relative_ns": 3003017502,
+            "label": "drive_start"
+          },
+          {
+            "relative_ns": 4007580461,
+            "label": "drive_1s"
+          },
+          {
+            "relative_ns": 13007965173,
+            "label": "drive_10s"
+          },
+          {
+            "relative_ns": 23004546345,
+            "label": "drive_end"
+          },
+          {
+            "relative_ns": 23004585011,
+            "label": "after_drive"
+          },
+          {
+            "relative_ns": 23013151511,
+            "label": "sdl_closed"
+          },
+          {
+            "relative_ns": 23056812636,
+            "label": "holder_closed"
+          },
+          {
+            "relative_ns": 24559483804,
+            "label": "after_close"
+          },
+          {
+            "relative_ns": 24563554845,
+            "label": "child_end"
+          }
+        ],
+        "transactions": [
+          {
+            "relative_ns": 1795875,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 3181459,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "55"
+          },
+          {
+            "relative_ns": 4239875,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "55"
+          },
+          {
+            "relative_ns": 6761917,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 8075667,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 9334417,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "04"
+          },
+          {
+            "relative_ns": 13219959,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 15904542,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 3000925252,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 3002187252,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 4008842461,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 4010017586,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 13009363132,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 13010758632,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23006882886,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23011385178,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23037692720,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23043164553,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "55"
+          },
+          {
+            "relative_ns": 23059009845,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "55"
+          },
+          {
+            "relative_ns": 23062546470,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23068008970,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23076372470,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 23082925178,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "report_id_hex": "16",
+            "write_data_hex": "55"
+          },
+          {
+            "relative_ns": 23089768761,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 24560557887,
+            "address_hex": "a400fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          },
+          {
+            "relative_ns": 24561939012,
+            "address_hex": "a600fa",
+            "actor": "probe",
+            "matching_raw_writes": 1,
+            "report_id_hex": "17",
+            "read_length": 6
+          }
+        ],
+        "packets": {
+          "gyro_packets": 1108,
+          "downstream_packets": 0,
+          "invalid_or_mismatched": 0,
+          "vectors": [
+            {
+              "raw_yaw_roll_pitch": [
+                7800,
+                9000,
+                7000
+              ],
+              "count": 561
+            },
+            {
+              "raw_yaw_roll_pitch": [
+                8500,
+                7000,
+                9000
+              ],
+              "count": 547
+            }
+          ],
+          "slow_flags": [
+            {
+              "yaw_roll_pitch": [
+                true,
+                true,
+                true
+              ],
+              "count": 1108
+            }
+          ],
+          "acked_map_modes": [
+            {
+              "mode": 4,
+              "count": 1
+            }
+          ],
+          "mode5_alternation_errors": 0
+        },
+        "private_cached_mode": "not_instrumented",
+        "actor_limit": "Unique equal raw write within100ms identifies an observed writer; multiple matches remain ambiguous; unmatched is kernel_or_untraced.",
+        "api_limit": "Markers bracket public SDL_Init/SDL_OpenJoystick, not private InitDevice. Explicit probe and SDL same-address replies may overlap.",
+        "attachment_before_open": true,
+        "attachment_changes_during_child": 0,
+        "child_exit_success": true
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Kernel-only motionplus: owned MotionPlus evdev holder produces changing ABS_RX/RY/RZ with expected raw-center/slow-scale extrema. Active mode04/05 packets decode both driven vectors, flags valid, and Nunchuk pass-through alternates. No SDL initialization or physical acceptance."
+  }
+}

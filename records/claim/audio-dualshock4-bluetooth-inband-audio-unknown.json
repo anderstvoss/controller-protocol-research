@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualshock4-bluetooth-inband-audio-unknown",
+  "statement": "No sample-bearing Bluetooth speaker/microphone stream report is established by audited Linux DS4 HID or SDL PS4 consumer code. The BT output 0x11 is used for HID effects, and Linux's BT audio_control header and SDL's volume-named fields are not decoded PCM. Bluetooth audio remains unknown rather than absent.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Searched pinned Linux hid-playstation DS4 output structures/send path and SDL_hidapi_ps4 BT effect path; no device capture or independent audio transport implementation."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

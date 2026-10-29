@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-feature-replies",
+  "statement": "HHD's virtual DualSense GET_REPORT handler returns configured stock feature data only for 0x05 calibration, 0x09 pairing identity and 0x20 firmware information. It specializes the pairing identity by controller index and signs Bluetooth feature responses with CRC32; it does not implement replies to every feature report advertised in the descriptor, and unknown requests are logged. The authored calibration payload is a compatibility-model response, not evidence of OEM per-device values.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "HHD adbd50ff and SDL 3.4.18 compatibility source, no independent DualSense hardware comparison",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. HHD virtual __init__.py 195-221; const.py 1008-1219 DS5_EDGE_STOCK_REPORTS and pairing factory; no MAC strings or report arrays reproduced."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "hhd-dualsense"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

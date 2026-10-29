@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-dolphin-wiimote-controller",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/409881c34357d0f105fd473167d15ab0bd9c1628/Source/Core/InputCommon/ControllerInterface/Wiimote/WiimoteController.cpp",
+  "revision": "409881c34357d0f105fd473167d15ab0bd9c1628",
+  "sha256": "913f784fa3c6313b0d3ed025a2a9a6fe295717d308ede18985f1250f5115a960",
+  "lineage": "dolphin-emulator",
+  "locator": "Installed2609a source pin. MainSettings215-216 names WiimoteControllerInterface; SDLGamepad125-142,354 uses SDL sensor APIs; direct WiimoteController1352-1378,1462-1468 parses MotionPlus with calibration. Source-only; no upstream code redistributed, no physical claim."
+}

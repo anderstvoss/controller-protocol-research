@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-clean-motionplus-nunchuk-result",
+  "statement": "Clean no-holder Cemu 29f2f1f ARM64 native Wiimote motionplus-nunchuk comparison with caller EEPROM and synthetic imported MP/Nunchuk calibration passes the base EEPROM read. All 18 native A40020/16 reads succeed: 17 returned payloads match the caller Nunchuk block and one matches the MP block first half. Native identity observations include Nunchuk before the first calibration request; concurrent kernel mapping can change the addressed device, so reply counts are not a sole-actor interpretation oracle. Repeated initialization/report-mode activity continues. Decoded application motion remains unobserved; no physical calibration, accurate rate, whole-controller or wrong-bank-defect claim follows. No companion event holder exists at each arm preflight and the runner opens none; this does not unbind the kernel driver or isolate its protocol output.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Clean no-holder preflight, kernel remains bound. Correct delivered calibration is distinct from decoded motion; no physical, calibrated-rate, radio or game promotion."
+  },
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w8-cemu-imported-clean-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

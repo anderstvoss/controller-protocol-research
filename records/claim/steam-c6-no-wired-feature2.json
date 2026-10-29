@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-no-wired-feature2",
+  "statement": "At pinned kernel source feature report ID2 appears only for wireless receiver connection-status exchange guarded by STEAM_QUIRK_WIRELESS. Wired 28de:1302 uses the IBEX quirk without WIRELESS, and SDL Triton driver sends only feature ID1 for settings; no wired feature2 request/response is established. No evidence for direct wired feature2 payload contents or reply bytes. Kernel:720-743,1793-1805,2751-2756; SDL:127-139,653-676.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "source inspection at fixed consumers",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "No observed physical or live consumer reply; intentionally no source-supported byte pattern asserted beyond described code paths."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

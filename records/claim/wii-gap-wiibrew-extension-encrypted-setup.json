@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-extension-encrypted-setup",
+  "statement": "WiiBrew's Extension Controllers encryption setup describes enabling encrypted exchange with value 0xAA at register 0xA400F0 and supplying a 16-byte key at 0xA40040 in three writes of lengths six, six and four. The encrypted byte transform is address-dependent through generated lookup tables. This corroborates the existence of Dolphin/rnconrad encrypted paths but does not resolve their disagreement about precisely when keys regenerate.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 121955 section Encryption setup and Registers / Initialization; Dolphin Extension.cpp lines 77-121. No crypto code or 16-byte key disclosed."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955",
+    "wii-c5-extension-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

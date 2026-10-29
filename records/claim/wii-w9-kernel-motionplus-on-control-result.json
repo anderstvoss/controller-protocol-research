@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-kernel-motionplus-on-control-result",
+  "statement": "Fresh MP-only shim-on kernel evdev control on Linux 6.12.113 passes: all ABS_RX/RY/RZ have two distinct driven values during 12 seconds. An earlier control preflight on the reused post-Dolphin device stopped before evtest because its MP node had disappeared. The fresh control preserves initial topology, verifies owned event linkage and opens only that node. This establishes bounded kernel delivery, not calibrated rates, physical fidelity or unchanged post-Dolphin attachment recovery.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Bounded virtual-host observation on code PR #256, not physical/radio/game, calibration accuracy or challenge evidence. Kernel stays bound; Cemu gyro excluded."
+  },
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w9-kernel-motionplus-on-control-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-history-calibration-register-58d646",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/58d64625f9feb020e56edd1be3316dac68f886ab/Source/Plugins/Plugin_Wiimote/Src/EmuMain.cpp",
+  "revision": "58d64625f9feb020e56edd1be3316dac68f886ab",
+  "sha256": "aa8987d9317d3d95991fb29ca3663fede9a8bfdbc1cd387d6f688410d0fafdd6",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "Dolphin GPL-2.0-or-later; 2010-05-28 legacy game-facing emulator maps known-valid Nunchuk calibration into active MotionPlus 0x40 at lines 504-529; historical implementation, not a physical register read."
+}

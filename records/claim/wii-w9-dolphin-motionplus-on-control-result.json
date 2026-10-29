@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-on-control-result",
+  "statement": "Shim-on MP-only native Dolphin 2503 control reads the exact caller MP calibration in two successful chunks and shows changing mapping-view gyro, accelerometer and two basic IR points over a 150-second bound. P3 still observes non-Dolphin initialization after mapping; no continuous-delivery, rate-accuracy, physical, game or complete-controller claim. This is an MP-only positive control, not MP+Nunchuk acceptance.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Bounded virtual-host observation on code PR #256, not physical/radio/game, calibration accuracy or challenge evidence. Kernel stays bound; Cemu gyro excluded."
+  },
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w9-dolphin-motionplus-on-control-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

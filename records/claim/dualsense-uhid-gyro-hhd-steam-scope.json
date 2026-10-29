@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-steam-scope",
+  "statement": "HHD's source explicitly associates gyro-timestamp-synchronized report emission with improving Steam gyro-to-mouse; its readme gives Steam motion-axis setup instructions. These documented consumer accommodations show a plausible UHID DualSense gyro path without dummy_hcd, but do not expose Steam's closed-source detection rules, prove HHD's current runtime compatibility on this project's host, or establish an SDL HIDAPI result for the exact HHD pin. The historical virtualgamepad assertion of a necessary dummy_hcd path is therefore not a protocol theorem.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "HHD adbd50ff and SDL 3.4.18 compatibility source, no independent DualSense hardware comparison",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. HHD virtual __init__.py 363-367, 436-442 and 523-548. Separate project history docs/CONTEXT_REASSESSMENT.md 19-23 correct BUS_VIRTUAL attribution; no Steam implementation inspection."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "hhd-dualsense"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

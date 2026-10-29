@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualshock4-sdl-audio-fields",
+  "statement": "SDL_hidapi_ps4 defines four output-effect level bytes after eight reserved bytes, at effects offsets 15,16,17,18 for left, right, microphone, and speaker. Its normal effects code zero-initializes the struct and fills rumble and lightbar only; it does not populate these levels or send microphone samples. SDL's full USB report 0x05 places the effect block at offset 4 and its official BT report 0x11 at offset 6, with a CRC on BT. The kernel's common DS4 effects block does not corroborate SDL's level offsets.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL layout evidence only; SDL full-report offsets of volume slots are USB 19-22 and official Bluetooth 21-24."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

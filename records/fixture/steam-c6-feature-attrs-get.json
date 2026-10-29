@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-attrs-get",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-feature-attrs-get.hex",
+  "sha256": "7c0584d080c43aacc3f14e960353ef4081c933f93cfaef1face6f9ccde57e126",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-feature-kernel-exchange",
+    "steam-c6-feature-registration"
+  ]
+}

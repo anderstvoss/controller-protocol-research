@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-sweep-84",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-sweep-84.hex",
+  "sha256": "9e6785ccbf7b4885d152bc17e912e15e7f5b10e7906ea3426ff13cb222393908",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}

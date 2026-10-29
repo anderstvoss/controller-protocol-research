@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-kernel-gen2-builtin-policy",
+  "statement": "Linux v6.12 hid-wiimote binds Bluetooth HID 0306 and 0330, maps recognized old name first to Gen 1 and TR name to Gen 2, then falls back to Nintendo VID/PID; Gen 2 modules set WIIPROTO_FLAG_BUILTIN_MP and suppress periodic MP hotplug polling while Gen 1 lacks that builtin flag. This is kernel classification/behavior only, not a measured physical early Plus startup or proof that 0330 identity alone works.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 core.c 570-605,811-927,1867-1877; modules.c 2630-2667; header flags 27-45. No host run. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-linux-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

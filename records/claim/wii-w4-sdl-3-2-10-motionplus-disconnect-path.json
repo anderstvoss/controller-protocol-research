@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-3-2-10-motionplus-disconnect-path",
+  "statement": "With MotionPlus active, SDL3.2.10 HandleStatus bypasses the direct extension-bit-change disconnect branch and can schedule a MotionPlus check. This does not make active pass-through hotplug safe: HandleButtonData sets m_bDisconnected when MotionPlus packet downstream-presence bits disagree with the cached extension type, and HandleResponse also sets it when MotionPlus sensor availability changes. UpdateDevice then removes the joystick through the same disconnect mechanism. A statement that the MotionPlus-active path never sets m_bDisconnected is incorrect. No live MotionPlus hotplug or physical acceptance follows from this source inspection.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL consumer source; physical Wii revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. 877399b: Wii NeedsPeriodicMotionPlusCheck430-443, HandleButtonData1266-1305 (disconnect1283/1288), HandleStatus1350-1384, HandleResponse1387-1433, UpdateDevice1512-1576. Separate source claim corrects the handoff wording; fixed-extension runs are a different observation."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-w4-sdl-3-2-10-joystick"
+  ],
+  "experiments": [
+    "wii-w2-sdl-after-host-run",
+    "wii-w3-sdl-diagnosis-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

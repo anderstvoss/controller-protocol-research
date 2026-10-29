@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-status-20-resend",
+  "statement": "The pinned WiiBrew Wiimote Status section documents input report 0x20 as a requested status response to output 0x15 and an unsolicited notification on attachment/detachment changes. The status carries core button bits and battery level together with flags: 0x01 low battery, 0x02 extension connected, 0x04 speaker enabled, 0x08 IR enabled, and 0x10,0x20,0x40,0x80 for player LEDs 1–4. Following an unsolicited extension status, the page documents that the host must send report 0x12 again to restore data-report delivery; the device stops its prior data mode after extension change. This is community protocol documentation, not an observed consumer reconnect test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Wiimote oldid 123257, Status Reporting / 0x20: Status and Data Reporting. Related: wii-kernel-status-ack-flow, wii-c5-report-layouts, wii-gap-wiibrew-continuous-versus-change-reports. Candidate C5 behavioural review; not a forced code decision. Community-source evidence only, not device measurement."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

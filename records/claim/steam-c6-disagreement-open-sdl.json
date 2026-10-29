@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-disagreement-open-sdl",
+  "statement": "Open-time policy discrepancy, SDL side: SDL Triton InitDevice registers wired controller with no feature GET exchange; on UpdateDevice active path it sends periodic 0x87 setting9=0, and on SetSensorsEnabled it sends 0x87 setting48=0x18 or0. Unlike Linux registration it does not issue feature serial/attributes request in this driver. Emulator must accept both consumer-specific call paths, not force kernel order on SDL. SDL:453-471,485-506,653-676.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 vs SDL 6defbc0",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host-consumer expectations differ; this is a source comparison, not a conflict between measured device captures. Common behavior and reconciliation are stated in claim."
+  },
+  "sources": [
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [
+    "steam-c6-disagreement-open-kernel"
+  ],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

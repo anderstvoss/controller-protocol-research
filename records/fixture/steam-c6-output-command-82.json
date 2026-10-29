@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-command-82",
+  "kind": "synthetic",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-c6-output-command-82.hex",
+  "sha256": "321715ffa003b968c4712a4124645bf222b0133db6c03e12791f12b06475c9e6",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-c6-output-82-85"
+  ]
+}

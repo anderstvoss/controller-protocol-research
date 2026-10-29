@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-fixed-extension",
+  "permission": "Read-only diagnostic observation plus temporary per-node grants applied/confirmed by Anders locally. Agent verified identity/access and performed no grants/root/unbind/persistent policy.",
+  "config": {
+    "case": "nunchuk",
+    "attachment_before_open": true,
+    "attachment_changes_during_child": 0,
+    "requested_observation_window_ms": 60000,
+    "sdl_hints": "HIDAPI/WII/WII_PLAYER_LED/background enabled; inherited SDL_* removed; default HID filtering; no enumerate-all"
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "abb94e226f77eab24b391b24fd181e71daad421f",
+    "scope": "W4 bounded fixed-topology virtual-host claim/control observations; no physical, calibrated-value or rate acceptance",
+    "probe_executable_sha256": "681a12dd298e7b5a31ef189eacb7dc14b64a0f56c0b6781b55be5017751a5cef",
+    "probe_source_sha256": "1e195dd68dfe4a9f4449fae5afef1f6feb18118cdd85e1667b78d11ccbd6b740",
+    "trace_source_sha256": "1a7e8e8fb0c3a486f676bbf110b7685d031b1b85cc1b43982975beece31784fd",
+    "trace_library_sha256": "0240205e3896290f8d3565139f57d29dd8fe560e287b02d74cb891bbac438aac",
+    "sdl_probe_source_sha256": "ed343a9d427c64e2251c65a0a679c119cebddc0749314b74295f19ae4bb01aab",
+    "sdl_probe_executable_sha256": "8684c116474327c202e1c7a935c6161adf2ae1f4d3e797f1d48f314801fed1e4",
+    "sdl_library_sha256": "2bb22e11b1b90806e48523d347e41fba1a98f9a5d36d75d720535184ef8674e7",
+    "sdl_version": "3.2.10+ds-1"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true,
+    "global_counts": "not_measured"
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Functional diagnosis has no creation-stage timing oracle; per-report timestamps use a separate relative monotonic clock"
+        }
+      },
+      "observations": {
+        "case": "nunchuk",
+        "sdl": {
+          "sdl_version": 3002010,
+          "owned_hid_count": 1,
+          "raw_open": true,
+          "hidapi_open": true,
+          "window_ms": 60002,
+          "polls": 11015,
+          "disconnected_polls": 0,
+          "removed_events": 0,
+          "axis_events": 723,
+          "button_events": 720,
+          "sensor_events": 3019,
+          "axes": [
+            {
+              "min": 0,
+              "max": 24271
+            },
+            {
+              "min": 0,
+              "max": 25205
+            },
+            {
+              "min": 0,
+              "max": 0
+            },
+            {
+              "min": 0,
+              "max": 0
+            },
+            {
+              "min": -32768,
+              "max": 32767
+            },
+            {
+              "min": 0,
+              "max": 0
+            }
+          ],
+          "button_seen_masks": [
+            1,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "sensors": {
+            "accelerometer": {
+              "capable": true,
+              "enabled": true,
+              "samples": 11015,
+              "min": [
+                -8.62985229,
+                -50.2100487,
+                -50.2100487
+              ],
+              "max": [
+                50.2100487,
+                18.4365025,
+                8.62985229
+              ]
+            },
+            "gyro": {
+              "capable": false,
+              "enabled": false,
+              "samples": 0,
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "player_led_capable": false,
+          "player_index_1_request": true,
+          "player_index_2_request": true
+        },
+        "host_outputs": [
+          {
+            "relative_ms": 20,
+            "value": {
+              "leds": [
+                false,
+                false,
+                true,
+                false
+              ],
+              "rumble": false
+            }
+          },
+          {
+            "relative_ms": 678,
+            "value": {
+              "leds": [
+                true,
+                false,
+                false,
+                false
+              ],
+              "rumble": false
+            }
+          },
+          {
+            "relative_ms": 699,
+            "value": {
+              "leds": [
+                false,
+                true,
+                false,
+                false
+              ],
+              "rumble": false
+            }
+          },
+          {
+            "relative_ms": 30686,
+            "value": {
+              "leds": [
+                false,
+                false,
+                true,
+                false
+              ],
+              "rumble": false
+            }
+          }
+        ],
+        "assessment": {
+          "claim_held": true,
+          "button_variation": true,
+          "axis_variation": true,
+          "axis_required": true,
+          "accelerometer_variation": true,
+          "accelerometer_required": true,
+          "gyro_variation": false,
+          "gyro_required": false,
+          "player_led_intent": true,
+          "disposition": "passed"
+        },
+        "attachment_before_open": true,
+        "attachment_changes_during_child": 0,
+        "input_drive": "Core button and raw accelerometer toggle every250ms; extension sticks/buttons and MotionPlus raw gyro values where present; explicit commits around20ms with request service. Application-driven diagnostic, not firmware cadence.",
+        "child_exit_success": true,
+        "limits": "Only core accelerometer/gyro types sampled; secondary Nunchuk accelerometer not sampled. Numeric extrema include startup and cached polling; no calibrated-value, mapping-completeness or sensor-rate acceptance. Axes absent on no-extension/MP-only because no stick/trigger source. Classic has no SDL accel capability. LED is retained software intent; capability flag false retained. Kernel and SDL share raw traffic; gyro cause not isolated."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Fixed-before-open nunchuk profile:60second owned HIDAPI claim held with no disconnect/removal, input button changes and retained LED intent observed. Applicable joystick-axis variation observed. Core accelerometer varies. No hotplug, calibrated numeric mapping, firmware cadence, physical delivery or full controller acceptance."
+  }
+}

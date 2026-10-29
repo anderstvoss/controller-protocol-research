@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-tr-motionplus-register-host-negotiation",
+  "statement": "In pinned Linux hid-wiimote, Gen20 (-TR) includes the built-in MotionPlus module, while MotionPlus discovery reads the six-byte ID at A600FA and accepts it based on the last byte being 0x05. The same kernel code writes 0x04 (standalone), 0x05 (Nunchuk pass-through), or 0x07 (Classic-style pass-through) to A600FE according to the extension. These are host initialization requirements and do not prove a TR-only physical identifier, register timing, or different calibration from external MotionPlus.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "RVL-CNT-01-TR host behavior versus external MotionPlus",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned Linux hid-wiimote-core.c lines 469-530, 594-605, 1100-1129; complements wii-tr-consumer-revision and C5 MotionPlus packing evidence without promoting device-side status."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-linux-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

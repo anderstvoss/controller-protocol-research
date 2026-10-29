@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-retroarch-udev-sensor-sibling-limitation",
+  "statement": "Pinned RetroArch Linux udev joypad backend opens ID_INPUT_JOYSTICK evdev devices and attempts one sensor sibling under the same HID ancestor. It first searches ID_INPUT_ACCELEROMETER and then falls back to the first event sensor with XYZ or RXYZ axes. If the selected node contains only ABS_RX/RY/RZ, it interprets those axes as Wii accelerometer, explicitly sets sensor_has_gyro=false, and rejects RETRO_SENSOR_GYROSCOPE_ENABLE. Thus motion from a separate hid-wiimote MotionPlus RXYZ-only node is not guaranteed available as libretro gyro, even if the kernel emits it. Its generic buttons/axes input and uinput joypad compatibility depend on udev tagging; absence of HID parent can block the sibling sensor search.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; RetroArch 1bbd7ed; udev_joypad.c 505-534, 556-640, 643-799, 940-1069, 1430-1487, 1700-1756. This distinguishes kernel decoded EV_ABS availability from RetroArch's current sensor interpretation; not a measured runtime failure."
+  },
+  "sources": [
+    "wii-gap-consumer-retroarch-udev"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

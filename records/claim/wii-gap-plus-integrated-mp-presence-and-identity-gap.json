@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-integrated-mp-presence-and-identity-gap",
+  "statement": "Wiiuse's pinned MP probe accepts a separate inactive builtin MotionPlus identifier code and uses the same MP activation mode 04 or 05 for compatible input; Dolphin emulated MP encodes a presumed integrated ID first-byte distinction but deliberately selects detachable/nonintegrated because users can disconnect emulated attachment. Linux Gen 2's builtin policy disables hotplug polling. These support physically permanently present but logically switchable MP, not exact early/TR inactive A600FA/6 bytes or an observed revision-specific mapped identity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. wiiuse motion_plus.c 42-80,175-205, internal.h 227-242; Dolphin MotionPlus.cpp 95-108; Linux v6.12 modules.c 2630-2667; WiiBrew oldid120079 has external MP mapping and is not integrated physical readback. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-wiiuse-mp-e769",
+    "wii-gap-plus-wiiuse-ids-e769",
+    "wii-gap-plus-dolphin-mp-3eb",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-wiibrew-motionplus-oldid120079"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-retroarch-1-20-udev",
+  "kind": "compatibility_implementation",
+  "url": "https://sources.debian.org/src/retroarch/1.20.0%2Bdfsg-2/input/drivers_joypad/udev_joypad.c/",
+  "revision": "Debian RetroArch 1.20.0+dfsg-2+b1; upstream Git b2ceb50",
+  "sha256": "146448b9fbb88647dc2c14b52641fa4f722ccc82bb11a23c47afa88f18bd95e1",
+  "lineage": "retroarch",
+  "locator": "Udev joypad driver table near lines780-802 has no sensor callbacks. This installed version is distinct from the survey source with later RXYZ sensor fallback. Consumer limitation, not Wii codec evidence."
+}

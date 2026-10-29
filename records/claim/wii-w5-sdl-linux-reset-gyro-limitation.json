@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-w5-sdl-linux-reset-gyro-limitation",
+  "statement": "SDL3.2.10 OpenJoystick unconditionally initializes/resets the extension before GetMotionPlusState. Under Linux its MotionPlus activation function neither sends the restoring map write nor assigns the cached active mode. Sensor registration/enable is not proof of gyro dispatch: dispatch also requires non-NONE cached mode. Ordinary periodic presence handling does not recover that mode merely because a kernel client later restores mapping. W5 virtual-host arms observe SDL A400F0 resets around these public API boundaries and no gyro events, including holder arms with later active readbacks and kernel gyro delivery. This supports a bounded consumer reset/ownership limitation; private cached mode was not directly instrumented and disconnects prevent uniquely assigning every zero to that variable. It does not assert all SDL Wii configurations fail or physical Wii equivalence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad b23cb41 / consumer SDL3.2.10 and Linux6.12.113; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Pinned SDL877399b source: InitializeExtension630-636, ReadExtensionControllerType677-709, OpenJoystick773-799, ActivateMotionPlusWithMode457-468, dispatch1266-1298, periodic1396-1435. W5 public API/reset/readback observations corroborate the conditional path, not private InitDevice/cached-mode instrumentation."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii"
+  ],
+  "experiments": [
+    "wii-w5-motionplus-control-host-run",
+    "wii-w5-motionplus-nunchuk-control-host-run",
+    "wii-w5-motionplus-holder-host-run",
+    "wii-w5-motionplus-nunchuk-holder-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-linux-kernel-sdl-layer-contrast",
+  "statement": "Linux v6.12 hid-wiimote probes normal accessory identity via A400FA, inactive MP via A600FA, maps MotionPlus with A600FE 04/05/07 and exposes MP ABS_RX/RY/RZ evdev. SDL 3.2.10 Wii HIDAPI reads active mapped identity and converts report gyro with fixed rates; its Linux activation function intentionally does not send A600FE or update the private mode. In these reviewed paths neither requires Dolphin's A400F6/4 or A40040/16. xwiimote consumes kernel evdev values while RetroArch's udev sensor classification can suppress RXYZ-only gyro; these are not independent raw protocol tests.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 hid-wiimote-core.c 411-567, modules.c 2712-2835; SDL 3.2.10 SDL_hidapi_wii.c 385-481,1206-1244; xwiimote core.c 346-380,1040-1094; RetroArch udev_joypad.c 556-640,1700-1756. No physical absence conclusion."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wii-gap-dolphin-attach-kernel-modules-v612",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-consumer-retroarch-udev"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

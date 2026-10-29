@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-wiiuse-bluez-l2cap-linux",
+  "statement": "Pinned Wiiuse Linux backend uses BlueZ adapter discovery plus AF_BLUETOOTH L2CAP control and interrupt sockets to a Bluetooth device, and performs its native handshake after socket connection. The surveyed Linux backend does not open a hidraw or evdev path. Consequently current linux.uhid.bluetooth and linux.uinput realizations lack the radio/L2CAP endpoint required to connect; Windows HID implementations are separate and cannot be inferred from the Linux backend.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; wiiuse e769bd7 os_nix.c 52-169,182-254; this is a source-level transport incompatibility, not a physical device result."
+  },
+  "sources": [
+    "wii-gap-consumer-wiiuse-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

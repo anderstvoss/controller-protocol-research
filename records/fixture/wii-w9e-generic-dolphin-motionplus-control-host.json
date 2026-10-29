@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9e-generic-dolphin-motionplus-control-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9e-generic-dolphin-motionplus-control-host.json",
+  "sha256": "7b4381efd700f81a0ca6bfffcc0fd7143772167f3962da4d380d493414a20645",
+  "sources": [
+    "wii-w9e-generic-main-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-w9e-linux-v612113-core",
+    "wii-w9e-linux-v612113-generic"
+  ],
+  "experiments": [
+    "wii-w9e-generic-dolphin-motionplus-control-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced private exact-owned observations to protocol counts, semantic booleans and resource hashes. No raw bytes, screenshots, machine identities, local scripts or wall clocks. Private artifact SHA256 395c1061a565640b1085224639a6e5d0c0396e6e82d4983a00f32bf0b6da787b.",
+  "claims": []
+}

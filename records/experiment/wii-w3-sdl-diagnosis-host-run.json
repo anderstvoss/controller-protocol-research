@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "wii-w3-sdl-diagnosis-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "virtualgamepad-wii-w3-baseline",
+    "wii-w1-sdl-3-2-10",
+    "wii-linux-modules"
+  ],
+  "fixtures": [
+    "wii-w3-sdl-diagnosis-host"
+  ],
+  "procedure": "Build original held helper and own-process LD_PRELOAD read/write tracer against unchanged mainb23fd25. Hold exact-owned device; Anders grants locally, confirms, agent rechecks. Three27-second SDL children: Wii-enabled dirty-only commits, actual-default explicit commits, Wii-enabled explicit commits. Six4-second phases with300ms service, Nunchuk attach/detach and MotionPlus attach/deactivate/detach. C child sends one explicit A400F055 at18seconds; activation/reprobe also comes from bound kernel. Capture host outputs and accepted device inputs at monotonic syscall boundaries. Close idempotently and verify owned HID/raw gone.",
+  "semantic_outcome": "Both Wii-enabled profiles initially claim owned HIDAPI then disconnect after Nunchuk attach, including the explicit repeated-application-commit control. Actual-default evdev control remains connected. Trace shows host0x12 within milliseconds after status and immediately resumed DATA, with register replies/ACKs continuing; DATA-pause deadlock is not supported by this run. Pinned SDL HandleStatus resets mode then marks extension changes disconnected to reinitialize; this host path matches debug/status/connection observations. No successful sustained HIDAPI reopen established or exact per-packet host actor asserted. MP activation and explicit deactivation writes/ACK/status sequences captured; no model change, invented cadence or physical acceptance."
+}

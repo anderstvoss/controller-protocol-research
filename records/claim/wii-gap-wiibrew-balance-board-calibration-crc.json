@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-balance-board-calibration-crc",
+  "statement": "Wii Balance Board page locates an unencrypted 32-byte block at 0xA40020–0xA4003F with per-corner big-endian 16-bit calibration samples for 0, 17 and 34 kg and a trailing four-byte CRC32. The CRC covers bytes 0x24–0x3B followed by 0x20–0x21 and 0x60–0x61, using reversed polynomial 0xEDB88320. Per-sensor load is estimated by interpolation between calibration anchors, then summed. This board-specific CRC does not establish a checksum rule for Nunchuk or Classic.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew pinned community documentation; no authenticated retail capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wii Balance Board > Calibration Data. Source-only, not a physical acceptance result. Outside C5 scope; wii-gap-extension-calibration-checksum-unknown stays unknown for Nunchuk and Classic."
+  },
+  "sources": [
+    "wii-gap-wiibrew-balance-board-oldid118266"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

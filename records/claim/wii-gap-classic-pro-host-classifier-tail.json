@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-classic-pro-host-classifier-tail",
+  "statement": "Pinned Linux hid-wiimote recognizes a Classic-family extension when the last two of its six identification bytes are 0x01, 0x01, without checking the first four bytes. Pinned SDL HIDAPI reads only the two trailing identity bytes at register 0xA400FE and maps 0x0101 to its generic gamepad/classic type. These host-side classifiers cannot on their own distinguish a Classic Controller Pro from a Classic Controller when those suffixes match; this does not establish either retail six-byte identity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Classic Controller family and candidate Classic Controller Pro",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer policy: Linux hid-wiimote-core.c lines 431-450; SDL_hidapi_wii.c lines 311-364. Distinguish suffix match from complete extension identity or analog/digital trigger semantics."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

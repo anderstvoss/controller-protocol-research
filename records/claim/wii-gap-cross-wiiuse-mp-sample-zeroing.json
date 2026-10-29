@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-wiiuse-mp-sample-zeroing",
+  "statement": "Pinned wiiuse's MotionPlus implementation identifies mapped extension modes via the ordinary extension ID, supports MP 04 and Nunchuk passthrough 05, and decodes gyro versus accessory frames using data flags. For gyro it zeroes from an initial qualifying incoming sample and applies fixed fast/slow scaling rather than gating MotionPlus gyro output on a Dolphin-style A40020/32 factory calibration read. Its reviewed MotionPlus sequence has no F6 mirror or active 40 cache read; the separate Nunchuk handler manages normal calibration with retry/fallback. It requires real Linux L2CAP for host connection.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Pinned wiiuse motion_plus.c 42-225,238-370; nunchuk.c 42-116; os_nix.c 52-254. Source-only, calibration method not a precision certification."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769",
+    "wii-gap-cross-wiiuse-nunchuk-e769",
+    "wii-gap-consumer-wiiuse-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

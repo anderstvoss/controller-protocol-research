@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualshock4-hid-output",
+  "statement": "Linux hid-playstation's DS4 USB output report 0x05 places the common HID effects block after one report-ID byte, while BT output 0x11 inserts hardware-control and audio-control header bytes before common effects and a trailing CRC. Common validity bytes gate rumble/lightbar/blink; the audited Linux DS4 effects struct has no per-field speaker/headphone/microphone volume, mic mute or PCM payload. SDL PS4 separately defines four audio-volume slots in its effect block, so the two consumers' representations differ; the SDL volume names do not demonstrate Linux or device support.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Zero-based offsets; kernel USB common starts full-report byte 1 and BT at byte 3, not the same layout as SDL."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-mp-emu-3eb30c",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/3eb30c7620b4475b2e0404228ba0d2b238a132f1/Source/Core/Core/HW/WiimoteEmu/MotionPlus.cpp",
+  "revision": "3eb30c7620b4475b2e0404228ba0d2b238a132f1",
+  "sha256": "933273dd3547af779ca7309d888563039d74b02809dbccd3917488aece9bdfc3",
+  "lineage": "dolphin-emu/dolphin",
+  "locator": "GPL-2.0-or-later. Emulator generated calibration/CRC 95-154; register access and transitions 190-389; downstream passthrough ID and calibration copy 394-465; simulated timing/challenge. Only emulator behavior, not hardware verification."
+}

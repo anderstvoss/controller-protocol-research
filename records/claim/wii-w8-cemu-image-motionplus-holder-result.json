@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-image-motionplus-holder-result",
+  "statement": "Cemu 29f2f1f ARM64 AppImage, motionplus, with an external kernel MP holder, reads base EEPROM at 0x0016 successfully with the synthetic caller image. Native requests remain in extension identity/activation exchange, with mixed success and error 7 responses at offset 0xFA. No native extension calibration request is observed; shared kernel traffic limits actor attribution. Decoded application motion is unobserved. No defaults, physical calibration or radio acceptance is inferred.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded virtual UHID observation with caller-image choice explicit. No decoded application-state, physical, radio, game, timing or whole-controller acceptance promotion."
+  },
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi"
+  ],
+  "experiments": [
+    "wii-w8-cemu-image-motionplus-holder-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

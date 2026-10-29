@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-consumer-xwiishow-gyro-normalization",
+  "statement": "Pinned xwiishow opens the MotionPlus evdev interface and converts EV_ABS ABS_RX/RY/RZ into XWII_EVENT_MOTION_PLUS; the library subtracts configurable per-axis zero offsets and optionally adjusts them with a gradual convergence factor. xwiishow supplies an interactive zeroing action; it does not implement raw MotionPlus I2C register decoding or read the MotionPlus calibration EEPROM itself. Opening that evdev FD invokes hid-wiimote's MP_USED activation under an attached kernel device.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned software consumer; retail Wii Remote revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer; xwiimote 4df713d; core.c 1040-1094,1944-1969; xwiishow.c 662-768. No physical calibration proof or measured runtime."
+  },
+  "sources": [
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-consumer-xwiimote-show",
+    "wii-gap-consumer-xwiimote-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

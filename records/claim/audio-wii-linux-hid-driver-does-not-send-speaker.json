@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-linux-hid-driver-does-not-send-speaker",
+  "statement": "In the pinned hid-wiimote-core.c and hid-wiimote-modules.c kernel consumer implementations, enumerated output commands and initialization writes address rumble/status/report mode, LEDs, IR camera, extension and MotionPlus operations. No speaker enable 0x14, mute 0x19, audio data 0x18, or write into speaker A2 registers is originated by these driver paths. This limits the kernel's own feature exposure; unrelated userspace hidraw/Dolphin passthrough may still originate such reports.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Inspected complete pinned Linux driver core and modules at 734bef548a96e8774d6eef5dfa2026c6edc4e80b for speaker handling, speaker report IDs and A2 writes; absence confined to those files."
+  },
+  "sources": [
+    "wii-gap-linux-main-core-734bef",
+    "wii-gap-linux-main-modules-734bef"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

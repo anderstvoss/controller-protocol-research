@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "dualsense-uhid-gyro-hhd-presentation",
+  "statement": "At pinned HHD adbd50ff, the virtual DualSense implementation creates a Linux UHID device with Sony VID 0x054C and standard DualSense PID 0x0CE6 or Edge PID 0x0DF2 (Edge default), choosing BUS_BLUETOOTH 0x05 by default or BUS_USB 0x03 optionally. It selects an Edge-labelled descriptor variant matching that bus, with gamepad inputs and feature-report declarations; the UHID helper synthesizes distinct ephemeral uniq and phys strings unless explicitly supplied. This does not create an actual Bluetooth radio connection or USB gadget topology.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "HHD adbd50ff and SDL 3.4.18 compatibility source, no independent DualSense hardware comparison",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. HHD virtual DualSense __init__.py 67-152; const.py 5-30, 180 onward (USB and Bluetooth report descriptors); uhid.py 21-26 and 193-220. Neither raw identifier data nor descriptor byte arrays copied."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "dualsense-uhid-gyro-hhd-uhid-source",
+    "hhd-dualsense"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

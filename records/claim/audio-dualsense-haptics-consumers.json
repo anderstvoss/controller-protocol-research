@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-haptics-consumers",
+  "statement": "SDL's PS5 HID consumer sends compatible motor-style rumble via common offsets 2/3, uses validity bit 1 to suppress audio-driven haptics while rumbling, and comments that stopping the emulated rumble permits audio haptics again. Linux's driver sends motor values and selects compatible vibration with valid_flag0 bits 0/1 (or valid_flag2 bit 2). Neither consumer source in this audit supplies PCM samples for the grip channels. The haptic audio channel mapping comes from separate UAC/lab evidence, not these HID handlers.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HID consumer behavior, not proof that audio-over-Bluetooth/haptic waveform streaming is implemented."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

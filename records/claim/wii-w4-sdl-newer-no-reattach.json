@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w4-sdl-newer-no-reattach",
+  "statement": "The inspected latest3.x release3.4.18 and SDL main retain the relevant Wii extension-change disconnect, generic joystick removal, open-handle rescan predicate and non-closing Wii callbacks. No reattach fix for this path was found at these exact commits. Both Wii files have identical hashes, but generic files differ; relevant paths were separately inspected. This is pinned consumer-source evidence only; neither newer version was installed or run, and future main can change.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL consumer source; physical Wii revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Latest3.x release3.4.18=829a65d769d935c4852f8159e964312c0957260a; main=8adc0f98837db84fd24f17c339e59dcf36a17156. Both Wii: HandleButtonData1268-1307, HandleStatus1352-1386, HandleResponse1389-1435, UpdateDevice1514-1578, CloseJoystick1581-1589/FreeDevice1591-1593. Generic disconnect810-848; latest rescan predicate1185-1186, CloseJoystick1703-1734; main predicate1184-1185, CloseJoystick1693-1724."
+  },
+  "sources": [
+    "wii-w4-sdl-latest-wii",
+    "wii-w4-sdl-latest-joystick",
+    "wii-w4-sdl-main-wii",
+    "wii-w4-sdl-main-joystick"
+  ],
+  "experiments": [
+    "wii-w2-sdl-after-host-run",
+    "wii-w3-sdl-diagnosis-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

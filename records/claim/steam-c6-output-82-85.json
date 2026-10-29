@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-output-82-85",
+  "statement": "SDL packed Triton structures declare four other output IDs but the pinned SDL gameplay path does not actively send them: 0x82 length4 = ID, side u8@1, command u8@2, gain_db i8@3; 0x83 length10 = ID, side u8@1, gain_db i8@2, frequency u16 LE@3, duration_ms u16 LE@5, lfo_freq u16 LE@7, depth u8@9; 0x84 length9 = ID, side u8@1, gain_db i8@2, duration_ms u16 LE@3, start frequency u16 LE@5, end frequency u16 LE@7; 0x85 length4 = ID, side u8@1, script id u8@2, gain_db i8@3. Acknowledgements and physical behavior: No evidence. SDL structs:185-245; Linux enum:328-334.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-c6-sdl-structs",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

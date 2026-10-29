@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-nonreaders-independent-consumers",
+  "statement": "In their inspected source paths Cemu 29f2f1f native Wii provider, wiiuse e769bd7, Linux v6.12 hid-wiimote, SDL Wii HIDAPI and libogc Wiiuse 959871c do not request MotionPlus F7 readiness, write F1 challenge-type, or request challenge data at 0x50 before their own MP detection/report processing. This is evidence of non-requirement in specified consumer code, not absence of physical registers or evidence that Nintendo Wii games skip the challenge. libogc's WM_SET_REPORT 0x50 code is a different protocol constant from extension address 0x50.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu provider 245-432,925-949; wiiuse motion_plus.c 42-225; Linux v6.12 core 411-567; SDL SDL_hidapi_wii.c 385-481,1206-1244; libogc 959871c motion_plus.c 20-124 and wiiuse_internal.h 67,108-120. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769",
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-gap-challenge-libogc-motionplus-959",
+    "wii-gap-challenge-libogc-regs-959"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-sdl-ps4",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapi_ps4.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "70ed3ef4ffc2b72a74cc9f6e04dbe0952c4230611c1cf76eddfad24d70b83276",
+  "lineage": "libsdl",
+  "locator": "109-123 output effects fields including four volume names; 656-677 zeroed audio levels; 924-973 USB/BT effects formatting/CRC. HID consumer not PCM implementation."
+}

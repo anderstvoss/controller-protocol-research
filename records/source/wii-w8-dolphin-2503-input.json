@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-2503-input",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/9763c0a1e2b9db0c3861d25bc2f5a0ace6a15ee3/Source/Core/InputCommon/ControllerInterface/Wiimote/WiimoteController.cpp",
+  "revision": "9763c0a1e2b9db0c3861d25bc2f5a0ace6a15ee3",
+  "sha256": "3b89836481a3da6812c8971504ec8101414de3ef905ea3d79fd139042c7097b6",
+  "lineage": "dolphin-emulator",
+  "locator": "Pinned upstream Dolphin 2503 source for interpreting observed discovery, calibration and speaker-setup order. The Debian binary is separately hashed in fixtures; vendor patches are not asserted identical to upstream. No source excerpts reproduced."
+}

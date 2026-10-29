@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-early-plus-kernel-name-ambiguity",
+  "statement": "Pinned Linux hid-wiimote maps Bluetooth name Nintendo RVL-CNT-01 to Gen10 and name Nintendo RVL-CNT-01-TR to Gen20 before loading model modules. Gen20 includes built-in MotionPlus, while Gen10 does not; therefore the original product-name classifier cannot by itself identify a non-TR early Wii Remote Plus with integrated MotionPlus. Runtime MotionPlus register probing is a separate host behavior, not a durable physical model identifier.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Early integrated Wii Remote Plus without -TR transport name",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host-side classification limitation: hid-wiimote-core.c lines 582-605, 809-865 and 1100-1129; retain wii-early-plus-revision-gap as unknown pending physical model and startup capture."
+  },
+  "sources": [
+    "wii-linux-core",
+    "wii-linux-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

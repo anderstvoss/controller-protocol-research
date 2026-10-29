@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-continuous-versus-change-reports",
+  "statement": "The WiiBrew Wiimote Data Reporting section describes output report 0x12 selecting continuous data reports when its designated flag is set and change-driven reporting otherwise, and requiring report mode selection again after extension connection/disconnection stops streaming. This provides a device-side protocol reference but no measured report-per-second cadence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 Data Reporting / mode selection and hotplug reset; avoid deriving clock-period requirements."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-cemu-default-memory",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/840db2771cbcef83b50ee9355c7b6165b95f234a/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "840db2771cbcef83b50ee9355c7b6165b95f234a",
+  "sha256": "9751b2e66a5523c9ae6bc395a0cc35636ae1f5fbd7a1c37e67c294eefe2b8975",
+  "lineage": "virtualgamepad",
+  "locator": "WiiEepromImage derives empty default at8-11; Memory default uses it at64-67; read rejects requests outside caller image with8 at198-212. No fabricated retail factory calibration. Consumer configuration boundary."
+}

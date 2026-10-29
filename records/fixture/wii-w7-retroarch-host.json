@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-retroarch-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w7-retroarch-host.json",
+  "sha256": "4ecfe79eef1d914169992686b06f2606d5f78ccf6ff07bebb3ef63ed93f8dac0",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w7-retroarch-1-20-udev",
+    "wii-gap-consumer-retroarch-udev"
+  ],
+  "experiments": [
+    "wii-w7-retroarch-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device summaries to counts, extrema, interface bits, versioned outcomes and checkpoint dispositions. Removed paths, identities, raw bytes, raw logs, wall clocks and debug text. Referenced survey claims remain unchanged. Private host-output trace SHA256 4ae718edef66e4b19c072e65e449c8d08794150dcd201fb72576079b32dac277. No third-party code or physical capture redistributed.",
+  "claims": []
+}

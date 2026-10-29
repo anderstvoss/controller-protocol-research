@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9-dolphin-motionplus-nunchuk-off-result",
+  "statement": "Native Dolphin 2503 MP+Nunchuk, compat shims off, reaches native device setup but all 14659 A400F6/4 requests receive error 7. No MP A40020/32 or child A40040/16 read occurs. After Dolphin maps mode 05, combined output includes A400F0=55 absent from native post-map writes, then inactive-bank traffic. This is consistent with bound-kernel contention and leaves the shim state gate unavailable; no live shim success or decoded Nunchuk/gyro is established. No driver or model change follows.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revisions unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. provenance_class: compat. Bounded virtual-host observation on code PR #256, not physical/radio/game, calibration accuracy or challenge evidence. Kernel stays bound; Cemu gyro excluded."
+  },
+  "sources": [
+    "wii-w9-compat-memory",
+    "wii-w9-f7-preparing-source",
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w9-dolphin-motionplus-nunchuk-off-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

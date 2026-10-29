@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-sdl-linux-motionplus-kernel-ownership",
+  "statement": "Pinned SDL HIDAPI normally writes its selected MotionPlus mode to A600FE, but on Linux the activation function deliberately skips that register write because the kernel driver maintains MotionPlus state. SDL continues to inspect MotionPlus IDs by its own reads. This is a Linux SDL consumer policy boundary, not proof that the hardware ignores activation writes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Wii Remote family as accessed through SDL HIDAPI on Linux",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_wii.c lines 385-427, 457-481: host/device control ownership differs across SDL operating-system backends. Complementary to wii-sdl-extension-modes, not a device claim."
+  },
+  "sources": [
+    "wii-sdl-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

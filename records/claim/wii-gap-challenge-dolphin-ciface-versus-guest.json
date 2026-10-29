@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-challenge-dolphin-ciface-versus-guest",
+  "statement": "Dolphin pinned ControllerInterface hardware-input initialization includes mapped extension identity, downstream F6, MP calibration A40020/32 and optional downstream calibration A40040/16 without F7 polling, F1 write or challenge data request in that host-side state machine. Dolphin Real Wii Remote mode delivers native register commands between the emulated console/game and device instead of invoking the ControllerInterface decoder. A game's challenge polling/rejection outcome therefore cannot be inferred from successful Dolphin ControllerInterface gyroscope observation or its absence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned source-only MotionPlus consumer and community records; no physical external/early-integrated/TR unit tested",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin 3eb30c7 WiimoteController.cpp 449-660; WiimoteReal.cpp 210-276; MotionPlus.h 209-231. Path separation, not guest experiment. Source-only; all lab plans not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-real-3eb30c",
+    "wii-gap-dolphin-attach-mp-layout-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

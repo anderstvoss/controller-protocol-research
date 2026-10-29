@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-classic-oldid120126",
+  "kind": "research_lead",
+  "url": "https://wiibrew.org/w/index.php?title=Wiimote%2FExtension_Controllers%2FClassic_Controller&oldid=120126&action=raw",
+  "revision": "oldid=120126; 2024-04-28T21:34:33Z; 19572 bytes",
+  "sha256": "757d898b3fb81d36dfafd2e20695e977c4bc550d7b67e534c001bd109f3a41cc",
+  "lineage": "wiibrew-community-documentation",
+  "locator": "WiiBrew pinned oldid 120126: Data Format 0x01, 0x02 and 0x03; Calibration (center learning on connection). Hash and byte-length provenance: https://github.com/anderstvoss/virtualgamepad/issues/158#issuecomment-6353893784 ; independently SHA-256/SHA-1/length-checked uploaded raw wikitext, consistent with the manifest and issue record. Page text excluded from git; community-source evidence only, no physical controller capture."
+}

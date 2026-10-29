@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-xwiimote-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w7-xwiimote-host.json",
+  "sha256": "845181d26c0c3e817810a8cebf42fd2f939a3aaa91747a074bec7da246d4a946",
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-w7-xwiimote-2-core",
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-consumer-xwiimote-header",
+    "wii-gap-consumer-xwiimote-monitor",
+    "wii-gap-consumer-xwiimote-show"
+  ],
+  "experiments": [
+    "wii-w7-xwiimote-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced owned virtual-device summaries to counts, extrema, interface bits, versioned outcomes and checkpoint dispositions. Removed paths, identities, raw bytes, raw logs, wall clocks and debug text. Referenced survey claims remain unchanged. Private host-output trace SHA256 4ae718edef66e4b19c072e65e449c8d08794150dcd201fb72576079b32dac277. No third-party code or physical capture redistributed.",
+  "claims": []
+}

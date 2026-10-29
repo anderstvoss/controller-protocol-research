@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-cross-cemu-fa20-no-f6-40",
+  "statement": "Pinned Cemu Wii provider identifies normal extensions by six-byte A400FA and requests 16-byte A40020 when a Nunchuk/Classic is selected; it separately reads A600FA and activates MotionPlus by A600F0=55 and A600FE=04. The inspected command/response path has no Dolphin-style A400F6/4 or active A40040/16 gate. Because mapped MP can take over the A40020 bank, successful A40020 transport replies alone do not establish that Cemu interpreted downstream calibration correctly.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned consumer implementations in docs/wii-motionplus-consumer-comparison.md; no physical Wii Remote revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu 29f2f1f WiimoteControllerProvider.cpp 324-432,925-950; WiimoteMessages.h 25-60; W8 merged results are a separate host record and are not experiments in this claim."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

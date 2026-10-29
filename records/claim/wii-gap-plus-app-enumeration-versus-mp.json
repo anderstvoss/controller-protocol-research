@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-app-enumeration-versus-mp",
+  "statement": "Pinned SDL Wii HIDAPI, Dolphin HIDAPI and Cemu native HIDAPI accept Nintendo 0306 and 0330 identities; SDL, Cemu and kernel still perform separate mapped/unmapped MotionPlus identity and state negotiation. Discovery alone never establishes gyro calibration, F6/40 compatibility or game acceptance; prior Cemu source-based motion export gaps remain separate.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original RVL-003, early integrated RVL-036 non-TR, later RVL-036 TR; no physical revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SDL USB IDs 92-98, SDL HID driver 182-191,385-481; Dolphin WiimoteReal.cpp 1012-1037; Cemu HidapiWiimote 5-48 and provider.cpp 925-950; Linux MP command path 411-567. All proposed physical or host tests are not run."
+  },
+  "sources": [
+    "wii-gap-plus-sdl-usb-ids-877",
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-gap-plus-dolphin-real-3eb",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-plus-kernel-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

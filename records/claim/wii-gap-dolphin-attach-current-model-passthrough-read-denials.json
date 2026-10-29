@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-dolphin-attach-current-model-passthrough-read-denials",
+  "statement": "At virtualgamepad main 5a11e5 the virtual Wii memory reader permits active MotionPlus calibration only at offsets 0x20..0x3f and its own FA..FF identifier (plus FE), so an active A400F6 read returns error 7. It permits downstream accessory calibration only at A40020..2f when no active MotionPlus intercepts A4, so active A40040 returns error 7 too. Thus a genuine MotionPlus+Nunchuk ControllerInterface path that has reached active passthrough with the extension-connected flag and not yet identified Nunchuk retries the F6 read instead of continuing to the A40020 MotionPlus calibration. A40040 is a second reachable protocol gap after F6 is supported, not demonstrated as the first observed stop on all runs.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned Dolphin 3eb30c and Linux v6.12 / virtualgamepad 5a11e5 source comparison; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. virtualgamepad memory.rs 240-306, read_chunk 307-344; codec.rs 277-378. Dolphin CIFace 543-658. Native binary outcome requires own host logs; #45 unmerged evidence must remain conditional."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-vg-memory-5a11e5",
+    "wii-gap-dolphin-attach-vg-codec-5a11e5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-cemu-imported-motionplus-nunchuk-result",
+  "statement": "Cemu 29f2f1f ARM64 native Wiimote with imported synthetic EEPROM, MP and Nunchuk blocks in the MP+Nunchuk profile passes the base EEPROM read, then remains in mapped/unmapped identity initialization exchange, including A600FA error 7. Its 44 A40020/16 reads succeed and match the active MP block first half, not the Nunchuk block; preceding native identity observations include mapped MP. A preexisting foreign browser companion holder was present; the clean no-holder preflight was blocked before application launch. This is an explicit coexistence comparison, not a clean retest of the original Nunchuk calibration path or a decoded-gyro pass. No library wrong-bank defect, sole-actor race cause or physical incompatibility is inferred.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded coexistence observation, not a clean no-holder retest. Correct mapped-bank delivery is distinct from application decoding; no calibrated-rate, physical, radio or game promotion."
+  },
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules"
+  ],
+  "experiments": [
+    "wii-w8-cemu-imported-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

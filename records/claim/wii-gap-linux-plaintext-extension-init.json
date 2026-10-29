@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-linux-plaintext-extension-init",
+  "statement": "Pinned Linux hid-wiimote-core.c initializes a connected extension by writing 0x55 to 0xA400F0 then 0x00 to 0xA400FB, and performs the analogous writes to 0xA600F0 and 0xA600FB for MotionPlus; its following ID reads do not implement an encrypted session in that host path. This is a host consumer setup policy, not proof that encrypted physical operation is unsupported.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Emulator or Linux/SDL host source behavior; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-wiimote-core.c lines 410-486; complementary to existing wii-kernel-extension-init but also specifies MP initialization; no device-side promotion."
+  },
+  "sources": [
+    "wii-linux-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

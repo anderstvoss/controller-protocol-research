@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-ir-extended-full-metadata",
+  "statement": "WiiBrew's IR Camera Data Formats section specifies extended mode as three bytes per tracked point with 10-bit coordinates and a 4-bit size, and full mode as nine bytes per point including four 7-bit bounding fields, reserved data and an 8-bit intensity field. Its description confirms packet-field meanings but does not establish a calibrated physical intensity-to-light relationship. Dolphin uses a synthetic geometric approximation, so retail intensity fidelity remains unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 123257 sections IR Camera / Data Formats / Extended Mode and Full Mode; Dolphin Camera.h 65-101 / cpp 139-170, no tables or captured data."
+  },
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-c5-camera-h",
+    "wii-c5-camera-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-kernel-lizard",
+  "statement": "Kernel wired IBEX sets lizard mode during registration according to lizard_mode policy: enabled branch sends feature1 [0x85] then [0x8e] (default digital mapping and settings); disabled branch sends feature1 [0x81] then [0x87,0x06,0x09,0x00,0x00,0x47,0x00,0x00] (disable lizard setting 9 and watchdog-enable setting 71). All writes use feature ID1 with 64-byte request buffer padded as needed; send return errors are not propagated by steam_set_lizard_mode, whose return type is void. hid-steam.c:145-245,517-585,873-911,1402-1407. No verified response payload for SET_REPORT.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

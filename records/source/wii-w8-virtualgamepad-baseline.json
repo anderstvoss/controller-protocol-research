@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-virtualgamepad-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/0da0d020bdcd5c28d6b63dd5007783c855e7e53c/crates/gr-curated-controllers/src/wii_remote/memory.rs",
+  "revision": "0da0d020bdcd5c28d6b63dd5007783c855e7e53c",
+  "sha256": "9751b2e66a5523c9ae6bc395a0cc35636ae1f5fbd7a1c37e67c294eefe2b8975",
+  "lineage": "virtualgamepad",
+  "locator": "W8 baseline uses existing caller EEPROM import and retains absent extension calibration error 7. Actual helper and executable hashes are recorded in each reduced fixture; no helper binaries or captures are redistributed."
+}

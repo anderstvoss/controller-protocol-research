@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-imported-motionplus-nunchuk-result",
+  "statement": "Native ARM64 Dolphin 2503 on merged W8 code enumerates and connects the MP+Nunchuk virtual Remote with caller EEPROM and imported synthetic MP/Nunchuk blocks, and reports mode 5. It then issues 12128 reads of A400F6/4 and receives 12128 error 7 replies before MP calibration. The mapping device is visible, but changing motion is not established. This names the unmodeled passthrough identity window; no additional model, codec, descriptor or API change is made, and no zero-gyro or physical incompatibility is inferred.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded virtual-host observation; mapping UI changes only where explicitly observed. No physical calibration, rate accuracy, audio, radio, game or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w8-merged-runtime",
+    "wii-w8-merged-memory",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi",
+    "wii-w8-dolphin-2503-imu-gyro",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-c5-nunchuk-cpp"
+  ],
+  "experiments": [
+    "wii-w8-dolphin-imported-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

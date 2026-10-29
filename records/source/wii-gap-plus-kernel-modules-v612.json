@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plus-kernel-modules-v612",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-modules.c",
+  "revision": "v6.12",
+  "sha256": "cc24eaef5f9d26afcc2eee61dbdc49ad83df9e3c9ad5c55e77dc5c5bca0b9ccb",
+  "lineage": "torvalds/linux",
+  "locator": "Linux GPL-2.0-only: lines 2630-2665 builtin MP module disables hotplug polling. source-only, separate from generic motion module."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-motionplus-crc32-calibration",
+  "statement": "The WiiBrew MotionPlus documentation identifies a 32-byte calibration region at 0xA60020 with distinct fast/slow yaw-roll-pitch zero/scale blocks, degree-per-six encoding, a per-block UID byte and split CRC32 covering calibration data except checksum fields. Dolphin's MotionPlus calibration model uses the same structural arrangement, but the underlying factory values and variant-specific validity remain unmeasured by this research lane.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documented Wii Remote family; precise physical hardware variant not independently captured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew oldid 120079 calibration section; pinned Dolphin MotionPlus.h lines 29-70, cpp 145-153. No physical dumps or default calibration byte values reproduced."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-c5-motionplus-h",
+    "wii-c5-motionplus-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

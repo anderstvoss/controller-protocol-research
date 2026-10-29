@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-kernel-motionplus-evdev-open-activates-used-flag",
+  "statement": "Linux hid-wiimote's MotionPlus probe allocates and registers a dedicated evdev sensor node without itself setting MP_USED. Opening that input node sets MP_USED and schedules hotplug re-evaluation; closing clears MP_USED and schedules re-evaluation. Therefore merely detecting a 'Nintendo Wii Remote Motion Plus' input device is insufficient to infer A600FE activation, whereas retaining a real open file descriptor is a justified host test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Linux hid-wiimote v6.12 and mainline 734bef5; source behavior, no host runtime",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Modules v6.12 wiimod_mp_open/close 2771-2795 and probe 2797-2839; mainline open/close 2763-2791 and probe 2793-2835."
+  },
+  "sources": [
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-linux-main-core-734bef",
+    "wii-gap-linux-main-modules-734bef"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

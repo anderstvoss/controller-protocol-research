@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-wiibrew-additional-accessory-identities",
+  "statement": "The pinned WiiBrew Extension Controllers Identification list distinguishes Wii-port accessory six-byte unencrypted IDs: Guitar Hero guitar 00 00 A4 20 01 03; Guitar Hero World Tour drums 01 00 A4 20 01 03; DJ Hero turntable 03 00 A4 20 01 03; TaTaCon drum 00 00 A4 20 01 11; uDraw tablet FF 00 A4 20 01 12; Drawsome tablet FF 00 A4 20 00 13; Densha de GO! Shinkansen controller 00 00 A4 20 03 10; Wii Balance Board 00 00 A4 20 04 02. The leading bytes distinguish devices even when the trailing type bytes coincide. The listed Balance Board identity is part of a standalone controller, not a plug-in accessory. These documented identities are outside the current C5 support manifest, which enumerates Nunchuk, Classic, Classic Pro and MotionPlus; importantly, the manifest lists Classic Pro explicitly as not-supported rather than treating mere enumeration as supported functionality.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "WiiBrew community documentation, no model-specific retail hardware capture",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WiiBrew pinned oldids: Extension Controllers oldid 121955, Identification and List of extension controllers. Related: wii-kernel-extension-init (classifies guitar/drums/turntable/Balance Board differently), wii-c5-extension-identifiers and Wii C5 acceptance/virtualgamepad.wii-remote.toml. No raw data or copied identification table; community data, no physical SKU validation. Community-source evidence only, not device measurement. C5 acceptance manifest specifically lists Classic Pro not-supported for both linux.uinput and linux.uhid.bluetooth; do not imply supported Classic Pro or additional listed accessories."
+  },
+  "sources": [
+    "wii-gap-wiibrew-extensions-oldid121955"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

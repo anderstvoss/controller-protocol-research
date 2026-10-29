@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-w7-cemu-consumer-result",
+  "statement": "Cemu native Wii Remote arms are blocked before discovery: no installed Cemu on this ARM64 host and no aarch64 Flathub ref. MP and MP+Nunchuk holder/no-holder subarms are not run. This is availability evidence, not Cemu non-support or a protocol failure.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "virtualgamepad840db277; installed version-pinned Linux consumers; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "evidence_role: consumer. W7 bounded local virtual-host results; explicit uinput comparison in RetroArch arm. Survey source expectations are not host passes. No physical, calibrated, radio or whole-controller promotion."
+  },
+  "sources": [
+    "wii-w7-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-consumer-cemu-hidapi",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [
+    "wii-w7-cemu-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

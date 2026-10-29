@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualsense-observed-playback-order",
+  "statement": "The EXP-0023 maintainer reports repeated sequential ALSA playback and human-confirmed routing: channel 1 left headphones, channel 2 right headphones, channel 3 left grip actuator, channel 4 right grip actuator. These subjective observations do not quantify crosstalk, timing, level, or headset microphone routing. An attempted onboard-speaker check without explicit HID routing did not establish audible speaker output; headset capture transferred but meaningful input response was not established.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "device 054c:0ce6; bcdDevice 1.00",
+    "firmware": "complete firmware not established",
+    "transport": "usb",
+    "scope": "Cited maintainer lab narrative; physical corroboration cannot be promoted without an accepted structured experiment and artifact."
+  },
+  "sources": [
+    "audio-vg-exp0023",
+    "audio-alsa-dualsense-hifi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

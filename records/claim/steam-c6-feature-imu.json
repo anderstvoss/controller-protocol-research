@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-feature-imu",
+  "statement": "Both consumers use feature1 command 0x87 with one (u8 setting, u16 LE value) entry, header [0x87,0x03]. SETTING_IMU_MODE index48; enable value 0x0018 enables raw accel+gyro; disable 0x0000. Thus sample 64-byte requests begin [0x01,0x87,0x03,0x30,0x18,0x00] and [0x01,0x87,0x03,0x30,0x00,0x00]. Linux sends on sensor open/close; SDL sends in SetSensorsEnabled, not necessarily base joystick open. No SET_REPORT response body is asserted. Linux:145-245,936-978; SDL driver:653-676.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host consumers at Linux v7.3-rc1 and SDL 6defbc0; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wired USB 28de:1302; host-side source parsing / host commands only, no live or physical validation. Refer to docs/steam-controller-2026-research-gaps.md C6 section."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

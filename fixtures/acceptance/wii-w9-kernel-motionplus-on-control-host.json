@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Human-confirmed exact-owned temporary raw/LED grants; identities and links revalidated. No agent sudo, unbind or persistent host policy.",
+  "config": {
+    "consumer_role": true,
+    "seconds_bound": 12,
+    "shim_options": {
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "provenance_class": "compat",
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "kernel_kept_bound": true,
+    "cold_device_isolation": false,
+    "first_unpassed_checkpoint": "No failure in fresh bounded kernel delivery control; reused-device node disappearance remains a separate limitation.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "ui_gyro_calibration_period_seconds": null,
+    "pilot_excluded": null
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "ebc3a030685e476242a4d6df96e17e14862e0398",
+    "actual_probe_source_sha256": "ead024d192a0c32a4d3b6b3abdc4e093d92e268bd926b7dc0ae0b034feb50507",
+    "actual_probe_binary_sha256": "627a709156afcc93cb7c0cebc48fce3f9e6297ea3ded6b9c595d1d2bdeac19a7",
+    "original_private_artifact_sha256": "e2a6dd94f6922376d765d057e7c584260670a14ccdc058ebc92a8f8857e59f25",
+    "consumer_binary_sha256": "23fb0983e856900997f8a13adb4b9cf1a2a774e99cee6cbfdb795f1c6ad030cc",
+    "consumer": "evtest 1.35"
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "axes": {
+          "ABS_RX": {
+            "distinct_values": 2,
+            "minimum": -3528,
+            "maximum": 2772
+          },
+          "ABS_RY": {
+            "distinct_values": 2,
+            "minimum": -10728,
+            "maximum": 7272
+          },
+          "ABS_RZ": {
+            "distinct_values": 2,
+            "minimum": -10728,
+            "maximum": 7272
+          }
+        },
+        "kernel_bound": true,
+        "decoded_gyro_observed": true,
+        "gyro_oracle": "Owned kernel evdev ABS_RX/RY/RZ values, not calibrated rates",
+        "earlier_reused_device_preflight": "blocked before evtest launch: MotionPlus node absent after Dolphin; core/accelerometer/IR remained",
+        "fresh_device_control": true,
+        "source_topology_preserved_at_phase_start": true
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Fresh MP-only shim-on kernel evdev control on Linux 6.12.113 passes: all ABS_RX/RY/RZ have two distinct driven values during 12 seconds. An earlier control preflight on the reused post-Dolphin device stopped before evtest because its MP node had disappeared. The fresh control preserves initial topology, verifies owned event linkage and opens only that node. This establishes bounded kernel delivery, not calibrated rates, physical fidelity or unchanged post-Dolphin attachment recovery."
+  }
+}

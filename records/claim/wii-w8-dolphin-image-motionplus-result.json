@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "wii-w8-dolphin-image-motionplus-result",
+  "statement": "Native Debian ARM64 Dolphin 2503, motionplus, with a private synthetic caller EEPROM image, enumerates the virtual Remote through HIDAPI and adds its ControllerInterface device according to its own notice log. The 10-byte base calibration read at 0x0016 succeeds and own-log base failures disappear. The consumer then repeatedly sends speaker-mute output 0x19 and expires handlers; no native MotionPlus calibration read is observed in the bound. Speaker behavior remains D7-gated and unchanged. Mapping UI and decoded motion are unobserved; raw reports and device addition are not decoded gyro acceptance. No physical compatibility or radio operation is inferred.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original virtual model; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Bounded virtual UHID observation with caller-image choice explicit. No decoded application-state, physical, radio, game, timing or whole-controller acceptance promotion."
+  },
+  "sources": [
+    "wii-w8-virtualgamepad-baseline",
+    "wii-gap-linux-v612-core",
+    "wii-gap-linux-v612-modules",
+    "wii-gap-dolphin-wiimote-header",
+    "wii-gap-dolphin-wiimote-impl",
+    "wii-w8-dolphin-2503-input",
+    "wii-w8-dolphin-2503-hidapi"
+  ],
+  "experiments": [
+    "wii-w8-dolphin-image-motionplus-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

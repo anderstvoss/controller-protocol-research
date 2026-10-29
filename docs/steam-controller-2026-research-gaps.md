@@ -116,3 +116,90 @@ Cells denote **coverage**, not an implementation commitment. “Source map” me
 - E5's extra independent sources are pinned as sc2-src-dissector and sc2-src-haptics. They share source lineage sc2; these records do not supply independent physical corroboration. No raw captures, serial numbers, host paths, packet payloads, GPL source excerpts or firmware are included.
 
 **Result:** an evidence gap index and explicit records for gaps/hypotheses only. No release acceptance, physical observation, kernel binding, SDL success, Steam success or working virtual Steam Controller is claimed.
+
+
+## C6 field map — Prep for step 14b, for the local agent (2026-10-22)
+
+**Verification: consumer-source-reviewed and synthetic only; no physical controller, HID host, USB descriptor, attached driver, SDL runtime, or Steam client test.** Scope: wired 28de:1302, registry ID steam-controller-2026. Linux [hid-steam.c v7.3-rc1](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c) (record steam-ibex-linux-driver); [SDL Triton driver](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c) (record steam-triton-sdl-driver); [SDL packed structure declarations](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h) (new hashed source steam-c6-sdl-structs). No GPL text is reproduced. All byte offsets below are **zero-based, including the report ID**; multibyte values are little-endian.
+
+### A. Input frames
+
+Kernel checks 0x42 as exactly **54 bytes** and 0x45 as exactly **46 bytes**. SDL parses at least the 46-byte common prefix of either, ignoring 0x42 quaternion tail. SDL alone decodes 0x47, **46 bytes** with a distinct trackpad timestamp and a reduced IMU timestamp. No wired occurrence of 0x45/0x47 is claimed. [Linux 2325–2392,2546–2589](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2325-L2392), [SDL 525–550](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L525-L550), [packed header 610–677](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h#L610-L677).
+
+| Offset(s) | 0x42 (54 bytes) | 0x45 (46 bytes) | 0x47 (46 bytes) |
+| --- | --- | --- | --- |
+| 0 | report ID 0x42 | report ID 0x45 | report ID 0x47 |
+| 1 | sequence u8 | identical | identical |
+| 2–5 | button bits u32 | identical | identical |
+| 6–7, 8–9 | analog triggers L/R, s16 each | identical | identical |
+| 10–11, 12–13, 14–15, 16–17 | sticks LX, LY, RX, RY, s16 each | identical | identical |
+| 18–19 | left trackpad X, s16 | identical | trackpad sample timestamp u16 |
+| 20–21, 22–23 | left pad Y s16, left pressure u16 | identical | left pad X/Y, s16 |
+| 24–25, 26–27, 28–29 | right pad X/Y s16, right pressure u16 | identical | left pressure u16, right pad X/Y s16 |
+| 30–33 | IMU timestamp u32 (SDL treats as microseconds) | identical | right pressure u16 at 30–31; IMU timestamp u16 at 32–33 (SDL 32 microseconds/tick) |
+| 34–39 | accel X/Y/Z, s16 each | identical | identical |
+| 40–45 | gyro X/Y/Z, s16 each | identical | identical |
+| 46–53 | quaternion W/X/Y/Z, s16 each | absent | absent |
+
+Button bit mapping: byte2 bits0–7 = A,B,X,Y,QAM,right stick click,menu,R4; byte3 bits0–7 = R5,right shoulder,D-pad down/right/left/up,view,left stick click; byte4 bits0–7 = Steam,L4,L5,left shoulder,right stick touch,right pad touch,right pad click,right trigger click; byte5 bits0–5 = left stick touch,left pad touch,left pad click,left trigger click,right grip touch,left grip touch. Byte5 bits6–7 are unmapped. [Linux 2356–2419](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2356-L2419); [SDL 60–98](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L60-L98).
+
+SDL converts raw triggers as 2*raw-32768, stick Y with inverted sign, pads as X=raw/65536+0.5 and Y=-raw/65536+0.5, pressure raw/32768, gyro (raw/32768)*2000 degrees/s to rad/s, and accel (raw/32768)*2g (axis swaps recorded in claim steam-c6-input-scaling). These are **consumer transforms**, not physical calibration. The touch fixture exercises u16 maximum 0xffff; SDL might calculate a normalized pressure above 1, which is not a measured real-device maximum. [SDL 222–348](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L222-L348).
+
+Additional input 0x43 battery (15 bytes): ID@0; charge state u8@1; percent u8@2; voltage u16@3, system voltage@5, input voltage@7, battery current@9, input current@11, temperature@13 ([Linux 337–365,2590–2604](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L337-L365)). Report 0x79 is ID + one-byte connect/disconnect state in receiver handling; no direct-wired 0x79 fixture or assumption ([Linux 2605–2616](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2605-L2616)).
+
+Claims: steam-c6-input-42, steam-c6-input-45, steam-c6-input-47, steam-c6-input-buttons, steam-c6-input-scaling, steam-c6-battery-43. Synthetic records include steam-c6-neutral-{42,45,47}, steam-c6-buttons-all-42, steam-c6-stick-trigger-{max,min}-42, steam-c6-touch-corners-pressure-42, steam-c6-imu-extremes-42, steam-c6-full-edge-45, steam-c6-timestamp-touch-47 and steam-c6-battery-status-43.
+
+### B. Conditional feature exchanges on the wired consumer paths
+
+Feature requests in these consumers use ID1 and a **64-byte host buffer**; the commands below are source-backed prefixes with *constructed zero fill*. Feature ID2 is for a wireless-receiver connection-status request, guarded by the kernel wireless quirk, and is **not established on wired 1302** (claim steam-c6-no-wired-feature2, status unknown). [Linux 433–665,720–743,1795–1811](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L433-L665).
+
+| Condition | Prefix bytes (hex) | Reply / handling | Fixture suffix |
+| --- | --- | --- | --- |
+| Kernel registration 1: GET string attribute | 01 ae 15 01 | SET then GET feature1. Check command echo, length and attribute ID. Bad/empty serial triggers kernel-internal fallback, not an emulated real serial. | feature-serial-get; reply-serial-empty |
+| Kernel registration 2: GET attributes | 01 83 00 | SET then GET feature1, verify message header and tagged values. Failure logs but does not block registration. reply-attributes-empty is only a structurally valid no-attribute example; reply-attributes-short illustrates -EPROTO. | feature-attrs-get; reply-attributes-empty; reply-attributes-short |
+| Kernel lizard enabled policy (default) | 01 85 then 01 8e | Two SETs; no defined reply content | feature-lizard-enable-map; feature-lizard-enable-defaults |
+| Kernel lizard disabled policy | 01 81 then 01 87 06 09 00 00 47 00 00 | Clear mappings; setting9=0 (lizard), setting71=0 (watchdog enabled flag). No returned reply content. | feature-lizard-disable-clear; feature-lizard-disable-kernel |
+| SDL active update | 01 87 03 09 00 00 | Lizard setting9=0; periodically refreshed by SDL, not a measured device watchdog | feature-lizard-disable-sdl |
+| Kernel sensors open / SDL sensors enabled | 01 87 03 30 18 00 | setting48=0x18 for raw gyro+accel | feature-imu-on |
+| Kernel sensors closed / SDL sensors disabled | 01 87 03 30 00 00 | setting48=0 | feature-imu-off |
+
+The kernel tries serial then attributes during registration, then its **conditional** lizard policy. SDL sends the lizard write on its active update path and IMU writes only when sensors are enabled/disabled. **There is no single required universal open sequence.** Kernel GET errors include -EPROTO for short or mismatched-length replies and bounded retries; physical successful reply payloads and SET ACK bytes remain **No evidence**. [Linux 433–717,873–978,1372–1411](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L433-L717); [SDL 127–139,453–506,653–676](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L127-L139). Claims: steam-c6-feature-kernel-exchange, steam-c6-feature-registration, steam-c6-feature-kernel-lizard, steam-c6-feature-sdl-lizard, steam-c6-feature-imu.
+
+### C. Host haptic output formats (all offsets LE; no ACK invented)
+
+| Report | Length | Offset layout | Basis |
+| --- | --- | --- | --- |
+| 0x80 | 10 | ID@0, type u8@1, intensity u16@2, left speed u16@4, left gain byte@6, right speed u16@7, right gain byte@9 | Kernel and SDL send it; SDL gains i8, kernel gains u8 |
+| 0x81 | 8 | ID@0, side u8@1, on duration u16@2 in microseconds, off duration u16@4 in microseconds, count u16@6 | Kernel emits; SDL declares |
+| 0x82 | 4 | ID@0, side u8@1, command u8@2, gain dB i8@3 | SDL struct declaration only |
+| 0x83 | 10 | ID@0, side u8@1, gain dB i8@2, frequency u16@3, duration ms u16@5, LFO frequency u16@7, depth u8@9 | SDL struct declaration only |
+| 0x84 | 9 | ID@0, side u8@1, gain dB i8@2, duration ms u16@3, start frequency u16@5, end frequency u16@7 | SDL struct declaration only |
+| 0x85 | 4 | ID@0, side u8@1, script id u8@2, gain dB i8@3 | SDL struct declaration only |
+
+[Kernel 328–391,751–815](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L328-L391), [SDL header 162–245](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h#L162-L245), [SDL write 595–624](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L595-L624). Corresponding fixtures are steam-c6-output-{rumble-80,pulse-81,command-82,lfo-83,sweep-84,script-85}; claims steam-c6-output-80-81 and steam-c6-output-82-85. Device ACKs, 0x44 flow control, other feedback, LEDs and audio: **No evidence** here (claim steam-c6-no-haptic-ack remains unknown); no fictional reply fixtures.
+
+### D. Consumer disagreement and implementation rules
+
+- 0x47 is decoded by SDL but not dispatched by Linux hid-steam. Paired claims steam-c6-disagreement-47-kernel and -47-sdl. **Supply 54-byte 0x42 for the common host baseline**; optional SDL 0x47 should not replace it.
+- 0x80 gain has SDL signed vs kernel unsigned declaration. Paired claims steam-c6-disagreement-gain-kernel and -gain-sdl. The common nonnegative raw range 0x00..0x7f is noncontroversial; physical negative semantics are untested.
+- Conditional feature-init sequences differ (kernel registration GET versus SDL active lizard write). Paired claims steam-c6-disagreement-open-kernel and -open-sdl. Accept both host request paths without requiring one global order.
+
+Existing sc2-gap-input-layout and sc2-gap-feature-roundtrip were updated to point to these new claims while **preserving remaining physical capture, firmware and live consumer unknowns**. All steam-c6 fixtures are synthetic with no parent, no experiment, and digests covering the **file bytes**, not an upstream capture. The synthetic structural GET replies are examples, not real attribute values. Nothing here claims completion of a checkpoint or task on #176.
+
+### E. Follow-up to research PR #27 — consumer runtime and asymmetric haptic fixtures
+
+**Follow-up to research PR #27, prep for step 14b.** Six new haptic *synthetic* fixture pairs (each hex packet plus a records/fixture manifest) supplement, rather than overwrite, the original all-zero fixtures: steam-c6-output-{rumble-80,pulse-81,command-82,lfo-83,sweep-84,script-85}-fields. Every declared byte field has a distinct non-zero pattern within its report; signed gain bytes and little-endian u16 fields are verified by field-offset decoding in tests/test_steam_c6_fixtures.py. These example non-zero type/side/command values verify **packing**, not valid physical command semantics or device acceptance. Sources: [Linux haptic structures and writes, lines 367–391,751–815](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L367-L391); [SDL packed output structures, lines 157–245](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h#L157-L245).
+
+**Consumer timing claims** (all status source_supported, source_only; no hardware measurement):
+
+- steam-c6-sdl-rumble-resend-40ms: SDL attempts to re-send output 0x80 when active rumble remains nonzero and the UpdateDevice loop finds at least **40 ms** since its last rumble write. SDL's comment says a hardware safety timeout of **about 50 ms**; **the 50 ms statement is not a physical measurement**. [SDL lines 40–44,494–505,595–615](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L40-L44).
+- steam-c6-sdl-sensor-4032us: SDL assumes a **4032 microsecond** sensor interval when registering gyro/accelerometer, approximately **248 Hz**, and comments that the USB descriptor advertises **1 kHz** even though measurements are about 4 ms. Those are SDL source assertions only, **not a captured USB descriptor or sample cadence**. [SDL lines 40–41,570–583](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L570-L583).
+- steam-c6-kernel-rumble-coalesce-20hz: kernel force-feedback code dispatches/coalesces rumble output with **HZ/20** nominal delay (20 Hz), rescheduling while active. This is consumer scheduling, not physical transmission jitter or device-side timeout. [Kernel lines 833–876](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L833-L876).
+
+**Kernel runtime ownership and mode claims** (all source_only):
+
+- steam-c6-kernel-menu-hold-450ms: Menu/start at **byte2 bit6** schedules a nominal **45*HZ/100 = 450 ms** mode toggle when no client owns the device; release cancels. Callback requires lizard_mode and conditionally sends the existing lizard mode settings sequence. In the *leave gamepad* branch, re-enable writes are guarded by the absence of a client. [Kernel 2441–2458,1487–1515](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2441-L2458).
+- steam-c6-kernel-ibex-evdev-open-close: both generic evdev open and close deliberately **skip lizard SETs for IBEX**, unlike the 2015 non-Deck/non-IBEX path. This does not suppress separate sensor-open writes or the menu timer. [Kernel 909–976](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L909-L976).
+- steam-c6-kernel-client-raw-forward: client_hdev open/close changes client_opened and schedules work_connect; while held, the kernel forwards raw input to the client, **does not decode 0x42/0x45 into evdev**, and skips IMU-mode SETs from sensor open/close. Registration is gated by connected && !client_opened. This is **not** proof that Steam was actually connected; battery/event paths have separate logic. [Kernel 1650–1675,2542–2589,948–976,1461–1485](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1650-L1675).
+
+The residual claims sc2-gap-input-layout and sc2-gap-feature-roundtrip now name these consumer findings, while preserving **No evidence** for physical report rates, real-device firmware, USB descriptor, hardware timeout, actual replies and consumer acceptance. Puck, receiver, BLE, LEDs, audio, lizard watchdog timing and any physical validation remain outside the follow-up scope.

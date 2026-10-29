@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-dolphin-wii-emulated-speaker",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/Speaker.cpp",
+  "revision": "e1d35f666cc35f6ead55d32ea2679df44d04da72",
+  "sha256": "7de2cd72f5fbacf1dbb009c5e9f5ec2297356364ac968b3f430c2e5e3e14c7d7",
+  "lineage": "dolphin",
+  "locator": "22-55 Yamaha ADPCM tables/predictor and clipping; 57-139 PCM/ADPCM decode, rate, volume and speaker mixer; 141-184 reset, register writes and TODO limitations. GPL code cited only."
+}
