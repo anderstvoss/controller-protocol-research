@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-community-nondebug-explorer",
+  "kind": "research_lead",
+  "url": "https://github.com/nondebug/dualsense/blob/02338358b6b4be2d64dbf661ae2a47842156cfcf/dualsense-explorer.html",
+  "revision": "02338358b6b4be2d64dbf661ae2a47842156cfcf",
+  "sha256": "7d1fef975e5ae13f6033d5221368bdd3439c7bb7e227f562210c5163f2b94f35",
+  "lineage": "nondebug-dualsense",
+  "locator": "Live WebHID capture and trigger effect mode/offset 294-309; physical input parser and output packet helpers"
+}

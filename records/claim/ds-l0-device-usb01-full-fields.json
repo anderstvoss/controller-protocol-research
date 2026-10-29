@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-usb01-full-fields",
+  "statement": "Community descriptor/Explorer and VIIPER report mapping document 64-byte USB 0x01: six 8-bit stick/analog-trigger axes at 1..6, sequence byte 7, button/hat fields, signed 16-bit gyro/accelerometer, sensor timestamp, two four-byte touch contacts and battery/charging status. Each contact encodes a 7-bit ID plus inactive bit 0x80 and packed 12-bit X/Y; physical sensor data and serial are not published.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "nondebug README.md 99-148, USB descriptor; Explorer parser; VIIPER docs 83-102; Linux 244-267. Community/compatible model; not an authenticated retail packet trace."
+  },
+  "sources": [
+    "ds-community-nondebug-input-notes",
+    "ds-community-nondebug-usb-descriptor",
+    "ds-community-nondebug-explorer",
+    "ds-community-viiper-protocol",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

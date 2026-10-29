@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-audio-vs-hid",
+  "statement": "Linux and SDL DualSense HID effects encode headset/speaker/mic routing controls, but the source paths cannot be taken as a PCM transport or an authenticated UAC profile. Existing maintainer EXP-0023 source covers the physical USB audio report separately.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 269-299 and 1361-1429; SDL_hidapi_ps5.c 169-192, 683-745; reused audio-vg-exp0023. No duplicate audio physical claim."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "audio-vg-exp0023"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

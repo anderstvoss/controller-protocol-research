@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-touchpad-format-dimensions",
+  "statement": "Community source and Linux decode two touch contacts, four bytes each with tracking ID/active-bit at the first byte (bit7=inactive) and packed 12-bit X/Y. Reference consumer bounds are width 1920 and height 1080 report units; SDL maps X/1920 and Y/1070 in its normalized touch consumer, so native coordinates and SDL normalized Y should not be conflated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 134-147, 175-178; VIIPER docs 43-54, const.go 109-116; nondebug Explorer. 1920x1080 is a published report-coordinate convention, not a measured panel geometry."
+  },
+  "sources": [
+    "ds-community-nondebug-input-notes",
+    "ds-community-viiper-protocol",
+    "ds-community-nondebug-explorer",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

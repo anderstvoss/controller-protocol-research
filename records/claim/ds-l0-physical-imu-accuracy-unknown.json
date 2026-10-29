@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-imu-accuracy-unknown",
+  "statement": "Physical DualSense gyro/accelerometer scale, orientation, timestamp quantum, drift and calibration correctness across revisions are not measured by the limited passive EXP-0015 read-only evidence.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "EXP-0015 notes 64 distinct increasing timestamps without calibrated motion or precise units, no physical comparison experiment."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "vg-alpha1-exp0015"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

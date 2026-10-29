@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-input-and-sensor-modes",
+  "statement": "SDL PS5 HIDAPI handles basic and enhanced USB/BT state, including six axes, button masks, dual touch contacts, gyroscope, accelerometer, sensor timestamps and battery state. Enhanced reporting and SDL sensor registration depend on mode/hints and device classification.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 90-138, 399-445, 802-855, 1355-1405. No independent Steam acceptance implied."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

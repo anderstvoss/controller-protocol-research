@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-output-usb-bt",
+  "statement": "Linux builds DualSense output report 0x02 on USB and 0x31 on Bluetooth; a common 47-byte effects block contains rumble, audio routing, mic, power-save and lightbar/player LED controls. Bluetooth adds sequence/header fields and CRC.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 269-316, 1251-1319. The source describes a kernel consumer, not physical sound, light or motor actuation."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

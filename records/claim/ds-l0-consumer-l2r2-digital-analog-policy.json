@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-consumer-l2r2-digital-analog-policy",
+  "statement": "SDL PS5 uses L2/R2 analog 8-bit pressure normally, but if analog is zero and corresponding digital L2/R2 button bit is set it forces reported axis to maximum (a compatibility fallback), instead of applying a fixed pressure threshold. Linux maps separate digital BTN_TL2/BTN_TR2 bits directly from button byte. No source establishes a physical L2/R2 digital press threshold in analog counts.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL 535d80b 1188-1199 and 1285-1294; 829a65d 1242-1251,1339-1348; Linux 1489-1492. Source-only consumer policy; no measured mechanical trigger threshold."
+  },
+  "sources": [
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

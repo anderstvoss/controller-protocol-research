@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-uhid-gyro-association-hypothesis",
+  "statement": "A plausible remaining explanation for the reported Steam gyro discrepancy is SDL/Steam motion-sensor-to-controller association or topology filtering for BUS_VIRTUAL/UHID, rather than the raw DualSense IMU report layout; a USB-gadget virtual topology succeeded when UHID did not.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Inference from archived POC lines 46-58 plus consumer source, not an isolated causality test. Steam/SDL builds, backend, GUID and selected sensor nodes must be captured to confirm; other differences remain possible."
+  },
+  "sources": [
+    "vg-alpha1-dummy-hcd-poc",
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [
+    "ds-vg-dummy-hcd-steam-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
