@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Capture fresh direct-wired Steam Controller 2026 report descriptor and reduced USB configuration; record physical report declarations, the SDL-only 0x47 deployment mismatch and feature-2 declaration versus unknown wired exchange. No field semantics, consumer acceptance or output effects promoted.
+
 - Ingest sanitized July–August 2026 direct/Puck Steam Controller input campaigns, descriptor shapes and historical encoder as provenance-limited research leads; narrow physical gaps without inventing packet fixtures or physical validation.
 
 - Record W9i independent fresh Tr default/external-style native Dolphin runs:

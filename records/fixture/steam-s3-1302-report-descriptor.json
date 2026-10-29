@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-s3-1302-report-descriptor",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-s3-1302-report-descriptor.hex",
+  "sha256": "56848c99f7eb6fd9bf3a2f10a2bff90fdc91b1f9b546f0e9189cb238c4b1c563",
+  "sources": [],
+  "experiments": [
+    "steam-s3-physical-descriptor"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-s3-1302-report-shapes",
+    "steam-s3-1302-usb-interface",
+    "steam-s3-1302-sdl47-descriptor-conflict",
+    "steam-s3-1302-feature2-declaration"
+  ]
+}
