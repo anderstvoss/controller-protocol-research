@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-s3-1302-sdl47-descriptor-conflict",
+  "statement": "Descriptor-versus-alternate-path mismatch: SDL consumer source steam-c6-input-47 accepts a 46-byte 47 report, but this fresh physical direct-wired 1302 descriptor declares no input 47. Marked conflicted to keep the deployment mismatch explicit, not to dispute that SDL can parse 47 or claim firmware never emits it. Judgement: the physical-descriptor realization must not advertise 47; any 47 encoder remains an explicit test-only diagnostic outside this descriptor until further physical evidence. Existing consumer source claims remain unchanged.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "owner physical 2026 controller; hardware revision not recorded",
+    "firmware": "not supplied; not inferred from USB device version",
+    "transport": "usb",
+    "scope": "Fresh direct-wired descriptor acquisition through VM USB passthrough; descriptor declarations and reduced USB configuration only, not gameplay or consumer acceptance"
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [
+    "steam-s3-physical-descriptor"
+  ],
+  "conflicts_with": [
+    "steam-c6-input-47",
+    "steam-c6-disagreement-47-sdl"
+  ],
+  "supersedes": [],
+  "rejection_scope": null
+}
