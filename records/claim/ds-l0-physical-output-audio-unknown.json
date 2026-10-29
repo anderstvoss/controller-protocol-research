@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-output-audio-unknown",
+  "statement": "Physical DualSense trigger/rumble/lightbar/mic and simultaneous USB-audio/HID feedback fidelity, timing and cross-routing remain incompletely validated despite the separately documented maintainer audio observations.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Reuse audio-vg-exp0023 without copying raw endpoint or channel samples; existing audio claims stay source-supported, not corpus physically-validated."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "audio-vg-exp0023"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

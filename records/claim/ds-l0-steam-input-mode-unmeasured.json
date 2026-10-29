@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-steam-input-mode-unmeasured",
+  "statement": "The archived POC does not provide a pinned Steam build or active SDL HIDAPI backend mapping and does not establish whether the behavior persists on current Steam/Input releases.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "No updated Steam/SDL differential bench; virtual_only limitation."
+  },
+  "sources": [
+    "audio-sdl-ps5",
+    "vg-alpha1-dummy-hcd-poc"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

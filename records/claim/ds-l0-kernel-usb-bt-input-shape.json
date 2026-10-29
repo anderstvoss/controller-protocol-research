@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-usb-bt-input-shape",
+  "statement": "Pinned Linux hid-playstation expects DualSense full input 0x01/64 bytes on USB and 0x31/78 bytes on Bluetooth; BT has different header placement and CRC validation, and the common parsed report has six analog controls, button groups, IMU, timestamp, two touch contacts and status bytes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 81-95, 244-267, 1448-1477; source-only consumer framing, not a retail capture."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

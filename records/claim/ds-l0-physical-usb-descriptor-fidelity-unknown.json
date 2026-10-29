@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-usb-descriptor-fidelity-unknown",
+  "statement": "Retail DualSense USB HID descriptor contents and full interface/endpoint realization are not independently reproduced or authenticated within this public corpus beyond the limited maintainer observations in EXP-0015.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "EXP-0015 (merged B claim ds-vg-exp0015-physical-usb-hid) reports a 273-byte descriptor and privately retained raw hash; no public retail fixture to compare with virtualgamepad."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "vg-alpha1-exp0015"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

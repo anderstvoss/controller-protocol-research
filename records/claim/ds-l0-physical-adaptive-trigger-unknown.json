@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-adaptive-trigger-unknown",
+  "statement": "Adaptive-trigger resistance/mode semantics and physically measured actuator response of a genuine DualSense have not been established from EXP-0015; its owner reports damaged trigger modules and did not actuate them.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "HID output fields and application APIs are not physical performance validation."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

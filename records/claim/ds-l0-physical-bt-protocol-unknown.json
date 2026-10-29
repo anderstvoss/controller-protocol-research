@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-bt-protocol-unknown",
+  "statement": "Physical DualSense Bluetooth HID descriptor, pairing/reconnect/security, report CRC edge cases, high-rate sensor behavior and output actuation remain unmeasured by a reference controller in this corpus.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Linux, SDL and HHD BT paths are software source evidence. No hardware Bluetooth capture or radio experiment."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
