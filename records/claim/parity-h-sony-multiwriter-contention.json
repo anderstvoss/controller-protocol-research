@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "parity-h-sony-multiwriter-contention",
+  "statement": "Concurrent Linux hid-playstation and independent raw SDL Sony output writers can interleave reports to one HID device; exact last-writer effects and physical collisions are unmeasured.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux 4056b3c and SDL 535d80b; hardware/client build not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "The kernel writes output reports and SDL independently writes output. A collision is possible by shared transport, not demonstrated. Kernel 1251-1429/SDL 555-700; no physical test."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
