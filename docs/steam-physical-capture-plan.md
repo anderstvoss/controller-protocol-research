@@ -156,7 +156,7 @@ Record each row as `observed`, `not observed during bounded window`, `blocked` o
 python tools/steam_capture_reduce.py \
   steam-p1-private/classified-PRIVATE.jsonl \
   steam-p1-private/s2-reduced-review-first.jsonl
-python -m unittest tests.test_steam_capture_reduce
+python -m unittest discover -s tests -p test_steam_capture_reduce.py
 ```
 
 The output retains per-report **relative** time, ID, direction, length and explicitly allowed input/output bytes, but drops unrecognized metadata. It hashes and omits all feature reply bytes by default (including `0xae`, `0x83`) and retains only the safe **command/length** of feature requests. Manually review entire reduced output for uniqueness/disclosure **before** incorporating any selected sanitized fixture into corpus `fixtures/` with hashes and explicit source/experiment/claim lineage under the schemas. `publication_guard.py` does not certify safety; run it and the schema validator on any public proposal. Keep descriptor/allowed packets only in a consented sanitized physical fixture; otherwise public JSON claims can include categorical outcomes, counts, sizes, relative timings and hashes without a payload. The raw pcap, exact device assignment and private logs stay offline indefinitely or follow the operator's own retention policy.
