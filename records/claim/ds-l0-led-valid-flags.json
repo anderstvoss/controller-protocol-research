@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-valid-flags",
+  "statement": "DualSense valid_flag1 (common byte 1) gates the LED fields: bit 0 mic-mute LED, bit 2 lightbar colour, bit 3 release/reset LED state, bit 4 player indicators (bit 1 is power-save, used for hardware mic mute, not an LED). valid_flag2 (common byte 38) bit 1 gates lightbar_setup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 159-170; SDL_hidapi_ps5.c 711-743 (0x01 microphone light, 0x04 LED colour, 0x08 reset LED state, 0x10 touchpad lights in ucEnableBits2). Linux calls bit 3 'release LEDs', SDL 'reset LED state'; no source defines the device's exact reaction to it."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

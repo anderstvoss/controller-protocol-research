@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-bt31-offsets",
+  "statement": "DualSense Bluetooth output report 0x31 carries the same 47-byte common block starting at byte 3 (after report ID, a sequence tag and a tag byte), so each LED field sits three bytes after its common offset: mute_button_led 11, valid_flag2 41, lightbar_setup 44, led_brightness 45, player_leds 46, RGB 47-49. CRC rules are claimed elsewhere.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 300-308; nondebug explorer 892-906 (sequence and 0x10 tag bytes before the common block). Bluetooth stays out of implementation scope (#164)."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "ds-community-nondebug-explorer"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

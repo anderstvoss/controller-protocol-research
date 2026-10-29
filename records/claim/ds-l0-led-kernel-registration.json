@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-kernel-registration",
+  "statement": "Linux hid-playstation registers the DualSense lightbar as one multicolor LED class device named '<input>:rgb:indicator' with red, green and blue sub-LEDs, and five white player LEDs (player1-player5, max brightness 1). It registers no LED class device for the mic-mute LED: the driver toggles the mute LED and the hardware mic mute itself on each mute-button press.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 871-905 (multicolor lightbar), 1222-1245 (player LED get/set), 1405-1430 (mute LED plus power-save mic mute), 1510-1525 (button toggle), 1744-1755 (player LED info). Kernel consumer behaviour only."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

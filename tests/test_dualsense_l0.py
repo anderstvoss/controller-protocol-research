@@ -17,11 +17,11 @@ class DualSenseL0Ledger(unittest.TestCase):
 
     def test_role_status_and_scope(self):
         claims = self.claims()
-        self.assertEqual(len(claims), 39)
+        self.assertEqual(len(claims), 51)
         self.assertEqual(Counter(x["evidence_role"] for x in claims),
-                         {"consumer": 20, "device": 19})
+                         {"consumer": 23, "device": 28})
         self.assertEqual(Counter(x["status"] for x in claims),
-                         {"source_supported": 31, "unknown": 7, "inferred": 1})
+                         {"source_supported": 40, "unknown": 8, "inferred": 3})
         self.assertTrue(all(x["applicability"]["controller"] == "dualsense"
                             and x["sources"] and not x["conflicts_with"]
                             for x in claims))

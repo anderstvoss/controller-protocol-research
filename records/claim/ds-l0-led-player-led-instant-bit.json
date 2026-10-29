@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-player-led-instant-bit",
+  "statement": "Setting bit 5 (0x20) of player_leds likely makes the player LEDs change instantly instead of fading. This rests on one SDL comment; SDL sets the bit on every player pattern, Linux never sets it.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 356-363 (comment and '| 0x20'); hid-playstation.c 1722-1733 (no 0x20). Single-source; needs a physical check."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-mute-led-off-on",
+  "statement": "DualSense mute_button_led value 0 turns the mic-mute LED off and 1 turns it on (solid). Linux writes only these two values, following its mic-mute toggle.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "nondebug explorer 934-937 (comment: 0 off, 1 on); SDL_hidapi_ps5.c 739-743; hid-playstation.c 1412-1415. Physical LED response not measured."
+  },
+  "sources": [
+    "ds-community-nondebug-explorer",
+    "audio-sdl-ps5",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

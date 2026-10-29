@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-consumer-connect-sequence",
+  "statement": "On connect Linux resets the LEDs, sets the lightbar to blue (0,0,128) and lights the centred player pattern for its assigned player ID. SDL reads feature 0x03 capability bits (byte 4 bit 2 lightbar, byte 20 bit 7 player LEDs), then sets lightbar colour from a seven-entry player colour table (blue, red, green, pink, orange, teal, white) and the matching player pattern, again on every player-index change; a hint can switch SDL's player lights off.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1863-1896; SDL_hidapi_ps5.c 323-365, 434-466, 765-776, 890-940. Consumer behaviour only; an acceptance test can compare a virtual device's received LED reports against this sequence."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

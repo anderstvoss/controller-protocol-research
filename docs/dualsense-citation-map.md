@@ -66,18 +66,18 @@ Source: `acceptance/virtualgamepad.dualsense.toml` (pinned revision above, origi
 | `rumble` / `acceptance/dualsense/rumble` | `linux.uhid.usb` | **wip** | `ds-l0-device-usb02-valid-flags` |
 | `rumble` / `acceptance/dualsense/rumble` | `linux.dummy_hcd.usb-hid` | **not-supported** | No evidence to override refusal |
 | `rumble` / `acceptance/dualsense/rumble` | `linux.usbip.usb-audio` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `lightbar` / `acceptance/dualsense/lightbar` | `linux.uinput` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `lightbar` / `acceptance/dualsense/lightbar` | `linux.uhid.usb` | **wip** | `ds-l0-device-usb02-valid-flags` |
+| `lightbar` / `acceptance/dualsense/lightbar` | `linux.uinput` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-common-offsets`, `ds-l0-led-valid-flags`, `ds-l0-led-lightbar-setup`; `ds-l0-device-usb02-valid-flags` |
+| `lightbar` / `acceptance/dualsense/lightbar` | `linux.uhid.usb` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-common-offsets`, `ds-l0-led-valid-flags`, `ds-l0-led-lightbar-setup`; `ds-l0-device-usb02-valid-flags` |
 | `lightbar` / `acceptance/dualsense/lightbar` | `linux.dummy_hcd.usb-hid` | **not-supported** | No evidence to override refusal |
-| `lightbar` / `acceptance/dualsense/lightbar` | `linux.usbip.usb-audio` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.uinput` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.uhid.usb` | **wip** | `ds-l0-device-usb02-valid-flags` |
+| `lightbar` / `acceptance/dualsense/lightbar` | `linux.usbip.usb-audio` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-common-offsets`, `ds-l0-led-valid-flags`, `ds-l0-led-lightbar-setup`; `ds-l0-device-usb02-valid-flags` |
+| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.uinput` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-player-led-bits`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
+| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.uhid.usb` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-player-led-bits`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
 | `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.dummy_hcd.usb-hid` | **not-supported** | No evidence to override refusal |
-| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.usbip.usb-audio` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.uinput` | **wip** | `ds-l0-device-usb02-valid-flags` |
-| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.uhid.usb` | **wip** | `ds-l0-device-usb02-valid-flags` |
+| `player-indicators` / `acceptance/dualsense/player-indicators` | `linux.usbip.usb-audio` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-player-led-bits`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
+| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.uinput` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-mute-led-off-on`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
+| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.uhid.usb` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-mute-led-off-on`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
 | `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.dummy_hcd.usb-hid` | **not-supported** | No evidence to override refusal |
-| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.usbip.usb-audio` | **wip** | `ds-l0-device-usb02-valid-flags` |
+| `microphone-led` / `acceptance/dualsense/microphone-led` | `linux.usbip.usb-audio` | **wip** | `ds-l0-led-inventory`, `ds-l0-led-mute-led-off-on`, `ds-l0-led-valid-flags`; `ds-l0-device-usb02-valid-flags` |
 | `adaptive-triggers` / `acceptance/dualsense/adaptive-triggers` | `linux.uinput` | **wip** | `ds-l0-device-adaptive-trigger-mode-block` |
 | `adaptive-triggers` / `acceptance/dualsense/adaptive-triggers` | `linux.uhid.usb` | **wip** | `ds-l0-device-adaptive-trigger-mode-block` |
 | `adaptive-triggers` / `acceptance/dualsense/adaptive-triggers` | `linux.dummy_hcd.usb-hid` | **not-supported** | No evidence to override refusal |

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-lightbar-setup",
+  "statement": "On probe Linux sends valid_flag2 bit 1 with lightbar_setup bit 1 ('light out', fade out) so it can take over the lightbar: on Bluetooth the controller runs its own startup lightbar animation and keeps a colour, on USB the lightbar starts off. SDL instead sends a reset-LED-state request (valid_flag1 bit 3) before its first colour and player-light update.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 165-170, 1677-1700, 1863-1872; SDL_hidapi_ps5.c 704-717, 765-776. Consumer behaviour only; the controller's own startup animation is stated by the Linux comment, not observed."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
