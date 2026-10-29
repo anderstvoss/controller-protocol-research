@@ -1,17 +1,21 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-puck-usb-descriptors",
-  "statement": "No imported physical Puck descriptor fixture establishes its seven-interface USB configuration, non-HID functions, slot interfaces and pogo behavior.",
+  "statement": "Historical physical Puck notes record identity 28de:1304 and a 372-byte HID descriptor but do not preserve the full USB configuration, interface/endpoint descriptors, physical slot order or non-HID and pogo interfaces. Kernel seven-interface source topology is not physical validation.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026-puck",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "usb",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
   },
-  "sources": [],
-  "experiments": [],
+  "sources": [
+    "sc2-src-capture-notes-2026"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

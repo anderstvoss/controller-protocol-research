@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-historical-encoder-42-buttons",
+  "statement": "Historical research-lead encoder bitmask ordering for 0x42 bits 0–31: 0–3 A,B,X,Y; 4 QAM; 5 R3; 6 View; 7 R4; 8 R5; 9 right bumper;10–13 D-pad down,right,left,up;14 Menu;15 L3;16 Steam;17 L4;18 L5;19 left bumper;20 right stick touch;21 right pad touch;22 right pad click;23 right trigger click;24 left stick touch;25 left pad touch;26 left pad click;27 left trigger click;28 right grip touch;29 left grip touch;30–31 unassigned. Kernel/SDL pinned source maps agree except bits 6 and 14 are Menu/View respectively, reversed versus historical encoder. This is an inferred software cross-check, not physical field validation.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "source_only",
+    "scope": "Research lead only; section 9 historical encoder mapping not correlated with captures."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

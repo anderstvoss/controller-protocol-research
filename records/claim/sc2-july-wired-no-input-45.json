@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-wired-no-input-45",
+  "statement": "The five retained direct-wired input windows did not report 0x45, despite its descriptor declaration. This is bounded non-observation in operator notes, not proof of global absence, firmware-independent behavior or a contradiction of kernel/SDL source-only 0x45 format.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "usb",
+    "scope": "Notes §5 and §8; no per-report 0x45 shape from these physical windows."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-direct-wired-20260731"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

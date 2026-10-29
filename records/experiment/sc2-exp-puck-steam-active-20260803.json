@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "sc2-exp-puck-steam-active-20260803",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "sc2-src-capture-notes-2026"
+  ],
+  "fixtures": [],
+  "procedure": "Historical Steam-active official-Puck run on 2026-08-03, 28de:1304 receiver, Steam and Steam Input enabled at preflight; seven ten-second READY/DONE operator actions: 1 idle, 2 Steam menu open/dismiss/neutral, 3 native controls plus motion, 4 Ping output action, 5 exit Steam then wait about seven seconds and exercise fallback, 6 relaunch Steam and repeat input/Ping, 7 Puck disconnect/reconnect. Original window 5 was inconclusive because Steam exited before the timed window; targeted --start-at 5 retry confirmed actions 5-7. Input-only hidraw with framed individual reads; no host outputs/feature transactions, no report-level timestamps. Original summaries: windows1,4 had 42/43/7b; windows2,3 additionally 40 (6 bytes); original mistimed window5 included 40,41 (9 bytes),42,43,7b. The targeted retry recorded 40/41 alongside native 42 and lifecycle 79 body 01 disconnect then 02 reconnect. A historical guide also noted six-byte 44 in active/fallback work without precisely attributed window. Withheld raw not revalidated.",
+  "semantic_outcome": "Historical operator confirmed Ping caused visible/audible/tactile feedback without observing causative host output; retries confirmed native-plus-fallback and 79 transitions. Original action5 remains inconclusive for transition timing, even though retry actions5-7 confirmed."
+}

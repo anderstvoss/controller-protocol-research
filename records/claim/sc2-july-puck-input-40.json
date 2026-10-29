@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-40",
+  "statement": "Capture-recorded fallback mouse input 0x40 at 6 wire bytes (5 body) in the stopped-Puck right-pad mouse window (432 reports) and Steam-active actions/retry (six-byte reports); native 0x42 continued simultaneously. Exact pointer movement/button encoding is not correlated against captures.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Notes §6–8; consumer mapping not established."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "openpuck",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

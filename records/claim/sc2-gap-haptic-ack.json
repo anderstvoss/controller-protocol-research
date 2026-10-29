@@ -1,21 +1,24 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-haptic-ack",
-  "statement": "The 0x44 report is tentatively described as feedback or flow control in independent research; its physical layout, timing and failure semantics are not confirmed.",
+  "statement": "Historical Puck active/fallback guide notes 0x44 input at six wire bytes, but no correlated host write or ACK/flow-control semantics. Independent dissector feedback interpretation remains tentative and device response protocol unverified.",
   "status": "inferred",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
   },
   "sources": [
     "sc2",
     "sc2-src-dissector",
-    "sc2-src-haptics"
+    "sc2-src-haptics",
+    "sc2-src-capture-notes-2026"
   ],
-  "experiments": [],
+  "experiments": [
+    "sc2-exp-puck-steam-active-20260803"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-identity-descriptor",
+  "statement": "Capture-recorded 2026-07-31 official USB-facing Puck identity was Valve 28de:1304 and reviewed HID descriptor length 372 bytes; distinct from historical OpenPuck compatibility 28de:1142, which was not the observed Puck. Agrees with pinned kernel receiver identity and current OpenPuck compatibility ID; no complete receiver USB topology was verified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Physical official receiver identity and one HID descriptor length, note §3 and §6."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "sc2-migration-kernel-ids",
+    "openpuck"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
