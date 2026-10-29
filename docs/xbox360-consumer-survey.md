@@ -31,4 +31,14 @@ Pinned sources from this G package: `parity-g-wine-winebus` (`winebus.sys/main.c
 
 **Outstanding unknowns:** exact Steam private report behavior, current SDL2/controller-specific backend and GUID selection on this host, runtime browser WebHID dynamic blocklist and chooser decision, live InputPlumber match and FF path, HHD acting as a consumer (not as emulator), and USB/IP actual composite audio support. Part 2 H–K supply specific contention, compat decisions, permissions and capture gates. There are **no actual host runs** in G.
 
+
+## Xbox 360 bound vs unbound: survey-sized H contention summary
+
+| Consumer | Native 045e:028e with Linux `xpad` **bound** | USB `xpad` unbound / virtual standard-HID UHID (all **not run**) |
+| --- | --- | --- |
+| evdev, SDL Linux-event, RetroArch | Kernel xpad decodes 20-byte XUSB into legacy `BTN_X/Y`, joystick axes, optional FF and independent LED class; see `x360-l0-consumer-xpad-face-legacy-codes` and `x360-l0-consumer-xpad-ff-uinput` (xpad.c 420–467, 883–951, 1542–1759) | Generic hid-input processes HID usages and may generate evdev; xpad USB FF/LED surfaces **do not follow automatically**; see `x360-l0-consumer-hidinput-button-usage-list` (hid-input.c 795–835) |
+| SDL Xbox360 HIDAPI, Steam Input, Wine/Proton | SDL's XUSB decoder requires controller type/interface eligibility (SDL_hidapi_xbox360.c 62–95, 243–338); Steam's private endpoint sharing and FF writes **No evidence** | Standard-HID UHID is not native XUSB, so same VID/PID does not prove SDL selected its XUSB decoder; SDL event path and Wine/Steam choices require live instrumentation; see `x360-l0-consumer-sdl360-vs-generic-hid` |
+
+The full H contention brief, proposed test matrix and owner gates are in [`docs/xbox360-consumer-contention.md`](xbox360-consumer-contention.md) (**research PR #84; separate, unmerged**). This short section is an interface to that H work, not a second physical hardware claim. No Xbox 360 controller is on hand. Tests not run.
+
 **Cloud agent (realized-controller research parity)**
