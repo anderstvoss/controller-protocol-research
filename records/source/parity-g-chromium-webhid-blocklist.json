@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-chromium-webhid-blocklist",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/chromium/chromium/blob/2444730dbdb3afd302b0315555bf03eca9c020bf/services/device/public/cpp/hid/hid_blocklist.cc",
+  "revision": "2444730dbdb3afd302b0315555bf03eca9c020bf",
+  "sha256": "c34bb61e1eca4f29b166c8ac044f900e126919b50ebe752836cb9920e5b43e2a",
+  "lineage": "chromium-chromium",
+  "locator": "38-100 static security-key rules; 143-178 usage and report filtering; 248-300 vendor/product dynamic/static checks; 323-342 downloaded additions. No universal WebHID permission inference"
+}

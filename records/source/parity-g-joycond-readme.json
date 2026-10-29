@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-joycond-readme",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/README.md",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "6ec8dee2d88c47af8291e6ed75e610851e8f30fd56afac853bafae1b19c82532",
+  "lineage": "joycond",
+  "locator": "1-24 hid-nintendo evdev dependency and Pro pairing Plus/Minus virtual uinput device, Steam consumer route; no generic UHID wire protocol."
+}
