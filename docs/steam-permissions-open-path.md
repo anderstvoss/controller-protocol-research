@@ -1,6 +1,6 @@
 # Steam Controller 2026 — permission grants and consumer open-path requirements
 
-**Research parity, prep for C6 and step 16**  
+**Research parity, prep for C6 and step 16**
 **Source-only evidence (2026-10-27)**, no hardware, no host, no permission testing. Scope: direct wired `28de:1302`, with `1303` BLE and `1304/1305` receivers **only** as udev-rule applicability examples, not receiver/Bluetooth support claims. This is an input to [virtualgamepad #258](https://github.com/anderstvoss/virtualgamepad/issues/258), not the finished host audit.
 
 ## Immutable sources
