@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-sdl-enhanced-switch",
+  "statement": "SDL3 PS4 HIDAPI's enhanced mode is selected by user hint and application usage; Bluetooth may begin in simple mode, calibration GET on official controllers may activate advanced reports, and a dummy output path is used to trigger enhanced mode when authorized.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps4.c 274–351, 684–789, 835–896. This is SDL's policy and not all apps or transports use enhanced input."
+  },
+  "sources": [
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

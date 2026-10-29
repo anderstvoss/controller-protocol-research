@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-kernel-touch-report-buffer-count",
+  "statement": "Linux DS4 full input structs have one touch-report count followed by up to three USB or four Bluetooth nine-byte touch samples; each sample carries a timestamp plus two four-byte contact points. Kernel checks count does not exceed the respective array size before processing.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 454–505, 2395–2441, 2527–2547. Three/four counts are packet *history slots*, not simultaneous fingers."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

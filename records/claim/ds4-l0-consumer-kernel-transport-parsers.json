@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-kernel-transport-parsers",
+  "statement": "Linux hid-playstation expects DS4 USB input 0x01/64 bytes, BT minimal 0x01/10, BT enhanced 0x11/78 including CRC; USB output 0x05/32 and BT output 0x11/78, differentiating transport framing in parsing and output.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 335–353, 468–539, 2395–2451. Host code is consumer evidence."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-revision-and-dongle-routing",
+  "statement": "Linux registers classic DS4, revised DS4 and Sony dongle paths separately using product matching; dongle report input follows an independent hotplug calibration state, so 054c:0ba0 is not automatically equivalent to a connected 05c4/09cc DS4. SDL differentiates path by Sony identity and enhanced-report availability.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 2776–2782, 1912–1931, 2938–2948; hid-sony.c 52–83, 2850–2915; SDL PS4 device support lines 207–351. Physical revision mappings remain unmeasured."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4",
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

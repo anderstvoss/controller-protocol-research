@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-feature12-pairing-unknown",
+  "statement": "The original DS4 USB pairing feature 0x12's exact retail payload and semantics are not independently captured in this corpus; Linux asks for a 16-byte response and uses its first six payload bytes as device identity.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 346–353, 2148–2175. Note historic hid-sony used feature 0x81 instead; firmware-specific device feature support needs a reference."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

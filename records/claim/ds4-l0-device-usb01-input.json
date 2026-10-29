@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-usb01-input",
+  "statement": "The public community DS4 summary describes the USB full-state input as 0x01/64 bytes with LX/LY/RX/RY, hat/face, shoulders/other buttons, analog triggers, signed motion samples, timestamp and packed touch contacts. The independent OpenPuck implementation is a compatible-device lead, not retail packet confirmation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md lines 20–42. Full bit-level descriptor and retail revision differences await PS4 wiki export."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol",
+    "openpuck-ds4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

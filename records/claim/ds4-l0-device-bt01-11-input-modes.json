@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-bt01-11-input-modes",
+  "statement": "The community documentation distinguishes a minimal Bluetooth 0x01/10-byte input path from a full Bluetooth 0x11/78-byte path with a two-byte prefix, CRC32 and motion/touch; a calibration-feature read is described as enabling the enhanced mode.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md 13–29. Transport behavior is documentary, not a controlled wireless sniff."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

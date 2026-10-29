@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-imu-and-touch-units",
+  "statement": "Community DS4 summary describes signed 16-bit IMU groups and 1920×942 touch coordinate convention; Linux parses calibration from separate transport-dependent feature reports and exposes motion normalized through bias/sensitivity coefficients.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md 31–42; hid-playstation.c 468–505, 2006–2116. Units/mapping differ between raw packet, kernel evdev and SDL consumer."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
