@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-wine-winebus",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wine-mirror/wine/blob/66caeb46aea4aa8fe6f87b7a209e7867651c09dd/dlls/winebus.sys/main.c",
+  "revision": "66caeb46aea4aa8fe6f87b7a209e7867651c09dd",
+  "sha256": "8bdd30a353cbf346a6174960cac846733f81d5c4454200003bcc8baf11de78a8",
+  "lineage": "wine",
+  "locator": "hidraw policy and Sony Bluetooth fixup 395-403; 501-570 is_hidraw_enabled; evdev selection and shared device link handling. Host consumer only."
+}
