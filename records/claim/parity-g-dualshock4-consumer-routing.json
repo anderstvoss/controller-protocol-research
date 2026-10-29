@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-dualshock4-consumer-routing",
+  "statement": "Pinned public host implementations provide distinct direct hidraw/feature-report and kernel-derived evdev consumer paths for DualShock 4. A virtual DualShock 4 UHID node's host driver/SDL backend must be observed rather than assumed from VID/PID or mapping database.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "source revisions pinned in part 1 and G, host versions not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer-routing documentation only: SDL PS4 HIDAPI reads calibration features 0x02 (USB)/0x05 (BT), input 0x01/0x11 and writes lightbar/FF; modern kernel optional firmware 0xA3; historical hid-sony required it. Wine supports BT hidraw fixing. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4",
+    "parity-g-wine-winebus"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
