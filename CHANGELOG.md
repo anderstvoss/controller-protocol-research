@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add a source-only direct-wired Steam Controller 2026 physical-capture plan, bounded USBmon sessions and a fail-closed review-only transfer reducer with tests; no physical or virtual-host execution claimed.
+
 - Ingest sanitized July–August 2026 direct/Puck Steam Controller input campaigns, descriptor shapes and historical encoder as provenance-limited research leads; narrow physical gaps without inventing packet fixtures or physical validation.
 
 - Record W9i independent fresh Tr default/external-style native Dolphin runs:
