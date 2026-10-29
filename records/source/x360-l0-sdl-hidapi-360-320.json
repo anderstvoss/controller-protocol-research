@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-sdl-hidapi-360-320",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapi_xbox360.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "3c5e6173610835bc92bb5a4fdc0ffe3316b46c92803a539b6df35e00c7fb30fb",
+  "lineage": "libsdl",
+  "locator": "62-95 HIDAPI support routing, 97-107 player LED, 199-209 output FF, 243-305 input decode, 308-338 read loop."
+}

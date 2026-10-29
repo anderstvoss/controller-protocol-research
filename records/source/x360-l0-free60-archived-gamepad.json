@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-free60-archived-gamepad",
+  "kind": "research_lead",
+  "url": "https://github.com/Free60Project/wiki/blob/ab1fe1994706b74e8d68ab292b817a45f6fd0710/docs/Hardware/Accessories/GamePad.md",
+  "revision": "ab1fe1994706b74e8d68ab292b817a45f6fd0710",
+  "sha256": "49ba5ee426890cbd5185363c6adb7e6d3a97235f1e6a135a74e2e86e72c05772",
+  "lineage": "free60-wiki",
+  "locator": "GamePad.md lines 1-69: speculation and wireless Play'n'Charge pinouts; crucially archived file lacks the historic wired report/rumble/LED tables. No protocol-field claim cites it."
+}
