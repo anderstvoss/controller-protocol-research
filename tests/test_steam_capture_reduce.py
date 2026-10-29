@@ -14,8 +14,10 @@ spec.loader.exec_module(module)
 
 class SteamCaptureReduceTests(unittest.TestCase):
     def example(self, **kw):
-        return dict(session="S2", kind="input", t_rel_ms=32.125,
-                    report_hex="42 00 00", **kw)
+        row = dict(session="S2", kind="input", t_rel_ms=32.125,
+                   report_hex="42 00 00")
+        row.update(kw)
+        return row
 
     def test_input_keeps_report_id_bytes_timing_but_no_metadata(self):
         row = self.example(serial_number="PRIVATE", host_path="PRIVATE",
