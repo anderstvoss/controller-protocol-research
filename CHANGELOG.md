@@ -7,6 +7,19 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document MotionPlus activation/deactivation 0x20 status transitions, Dolphin
+  emulator versus documented device evidence, conditional F6 and Linux/SDL/
+  Cemu/wiiuse/xwiimote re-probes. Rank creation-time compat, retain W9f
+  reporting distinction and defer physical comparison to #52.
+- CI: bump `step-security/harden-runner` to v2.22.3, which fixes block mode
+  dropping allowed connections on GitHub-hosted Linux runners (the cause of
+  stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
+
+- Record W9g kernel-first gyro regressions and generic-bound native Dolphin
+  MP+Nunchuk decoding with the activation re-attach compat edge. Isolate the
+  edge-off reporting pause and F6-off calibration gate; keep raw frames separate
+  from the UI oracle, and preserve #258 release and physical-fidelity limits.
+
 - Record W9f counted stimulus: sustained commits, no post-map MP+Nunchuk
   data without a new report-mode request, and a passing MP-only gyro control.
   Separate pre-map frames and producer/consumer rate denominators; no model fix.

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-dolphin-emulator-detect-model",
+  "statement": "Dolphin emulates a disconnected detect pin for its 20 ms MotionPlus activation/deactivation state and reconnects it when active; inactive state instead follows the downstream accessory. Its emulated Wii Remote emits unsolicited 0x20 and disables data reports when effective detect state changes. Depending on downstream accessory, an operation produces two edges or one. This is emulator choice and comments, not physical packet capture.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. MotionPlus.cpp 322-389 and WiimoteEmu.cpp 429-447 and 553-585. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-dolphin-motionplus-3eb",
+    "wii-gap-mpstatus-dolphin-wiimoteemu-e1d"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
