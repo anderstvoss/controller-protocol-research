@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
+  group: ci-prepr-${{ github.sha }}
   cancel-in-progress: true
 
 jobs:
