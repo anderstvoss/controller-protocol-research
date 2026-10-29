@@ -240,3 +240,13 @@ F6 off reaches error 7 before calibration despite arriving raw frames.
 See `docs/wii-w9g-activation-status.md` for scopes and first unpassed checkpoints.
 The pair is still compat, not physical activation evidence; future
 `wii-gap-mpstatus-*` research decides faithful classification or retirement.
+
+### MotionPlus activation/status source review
+
+Current inventory: **225 Wii claims** (215 on W9g main and ten new
+source-only `wii-gap-mpstatus-*` claims). WiiBrew deactivation documents
+0x20 disconnect then reconnect; Dolphin emulator also simulates activation
+pin changes, but physical activation and active mode switch edge counts and
+timing remain unmeasured. Consumer status re-probes and W9 kernel/SDL risks
+are ranked in `docs/wii-motionplus-activation-status.md`. All physical and
+host tests proposed here are not run.
