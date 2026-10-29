@@ -8,11 +8,12 @@
     "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Historical B claim swpro-vg-exp0016-eden-steam-neutral (merged or to be linked when #58 merged); exact Steam/Eden builds and selected mappings absent. No source-based causal promotion."
+    "scope": "Historical B claim swpro-vg-exp0016-eden-steam-neutral (merged or to be linked when #58 merged); exact Steam/Eden builds and selected mappings absent. No source-based causal promotion. Historical virtual-host source vg-alpha1-exp0016 and B claim swpro-vg-exp0016-eden-steam-neutral now merged; not a physical reference."
   },
   "sources": [
     "audio-sdl-switch-pro",
-    "audio-linux-hid-nintendo"
+    "audio-linux-hid-nintendo",
+    "vg-alpha1-exp0016"
   ],
   "experiments": [],
   "conflicts_with": [],
