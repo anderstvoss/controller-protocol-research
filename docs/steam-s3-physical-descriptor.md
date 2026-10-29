@@ -85,6 +85,9 @@ that every report was transmitted or that its fields/effects are understood.
 - `0x86` through `0x89`, `0x44`, `0x79` and `0x7b` declarations do not authorize
   streaming effects, acknowledgements, receiver behavior or automatic emission.
   Desktop pointer/keyboard declarations do not authorize lizard companions.
+- `sc2-gap-direct-usb-descriptors` is narrowed without promoting its residual
+  unknowns: exact HID bytes/configuration are now observed, but feature/probe
+  exchanges, field meanings, firmware variation and consumer acceptance are not.
 - The descriptor must land through owner review of this research PR before
   virtualgamepad adopts it. One interface clears the interface-count check,
   but 14a still needs the implementation/fixture-hash test after adoption.

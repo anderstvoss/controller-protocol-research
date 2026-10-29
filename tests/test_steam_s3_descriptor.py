@@ -128,6 +128,10 @@ class SteamS3Descriptor(unittest.TestCase):
         self.assertIn("steam-c6-input-47", conflict["conflicts_with"])
         self.assertEqual(record("claim", "steam-c6-no-wired-feature2")["status"], "unknown")
         self.assertEqual(record("claim", "steam-c6-input-47")["status"], "source_supported")
+        gap = record("claim", "sc2-gap-direct-usb-descriptors")
+        self.assertEqual(gap["status"], "unknown")
+        self.assertIn(EXPERIMENT, gap["experiments"])
+        self.assertIn("Residual unknowns", gap["statement"])
 
 
 if __name__ == "__main__":
