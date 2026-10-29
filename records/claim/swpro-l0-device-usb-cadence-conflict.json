@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-usb-cadence-conflict",
+  "statement": "Published source models disagree on the full-report cadence used as an emulator baseline: generic community 0x30 mode notes say 60 Hz, another community note singles out Pro at 120 Hz, and OpenPuck's emulated USB report schedule targets 4 ms (~250 Hz). None of these is a measured retail USB period.",
+  "status": "conflicted",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_subcommands_notes.md 66-78; bluetooth_hid_notes.md 116-118; OpenPuck mode_switch_pro.cpp 20-25. This is model/documentation disagreement, not proof that firmware violates a fixed period."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

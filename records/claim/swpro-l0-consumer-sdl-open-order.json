@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-sdl-open-order",
+  "statement": "SDL first probes device info (Bluetooth via 0x02 subcommand, USB via proprietary status), establishes USB handshake path when opening, reads stick user 0x8010 then factory 0x603D calibration, reads factory IMU 0x6020 then optionally user IMU 0x8026, calls vibration enable 0x48, sets report mode based on hints/usage, and forces USB reports. IMU 0x40 is sent when application enables sensors and may be retried later.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_switch.c 629-684, 936-1090, 1457-1480, 1511-1567, 773-915, 1800-1805, 2617-2634. It does not universally send IMU enable before every 0x30 stream."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

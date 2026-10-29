@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-usb-cmd-sequence",
+  "statement": "The community USB HID notes describe 0x80/0x81 USB controller commands: status 0x01, initial handshake 0x02, baudrate 0x03, second handshake 0x02 and no-timeout/force-USB 0x04. Handshake 0x02 may be sent once before 0x03, followed by a second after baud switch; OpenPuck emulates matching 0x80/0x81 command classes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "USB-HID-Notes.md lines 5-43; hid-nintendo.c 2518-2546; OpenPuck mode_switch_pro.cpp 828-872. Community-described device protocol, physical timings and per-revision differences unmeasured."
+  },
+  "sources": [
+    "swpro-dekunukem-usb-hid-notes",
+    "audio-linux-hid-nintendo",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
