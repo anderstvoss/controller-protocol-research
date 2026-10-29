@@ -28,8 +28,12 @@ class SwitchProL0Ledger(unittest.TestCase):
                 self.assertEqual(c["evidence_role"], "device")
         self.assertTrue(all(c["status"] not in
                             {"physically_observed", "physically_validated"} for c in claims))
-        self.assertTrue(all(not any("vg-alpha1" in source for source in c["sources"])
-                            for c in claims))
+        self.assertTrue(all(not any("vg-alpha1" in source for source in claim["sources"])
+                            for claim in claims if claim["id"] != "swpro-l0-consumer-steam-neutral-causation-unknown"))
+        historical = next(claim for claim in claims
+                          if claim["id"] == "swpro-l0-consumer-steam-neutral-causation-unknown")
+        self.assertEqual(historical["evidence_role"], "consumer")
+        self.assertIn("vg-alpha1-exp0016", historical["sources"])
 
     def test_pinned_independent_source_is_not_retail_capture(self):
         source = json.loads((ROOT / "records/source/swpro-openpuck-mode.json").read_text())
