@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "parity-j-dualsense-report-cadence",
+  "statement": "HHD's compatible motion scheduler and virtualgamepad's nominal 4 ms timestamp do not prove that every physical DualSense emits input at 250 Hz or that rumble writes have identical resend cadence on UHID, USB and BT.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD source runtime choices, Linux/SDL sensor parser; the actual physical device cadence is not measured. #166 time-base lab required."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

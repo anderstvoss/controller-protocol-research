@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-udev-switch-pro-hidraw-grants",
+  "statement": "Valve public steam-devices rules grant hidraw for Nintendo 057e:2009 over USB and Bluetooth using MODE=0660 and TAG+=uaccess, without proving the closed client uses a particular subcommand or selected backend.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "steam-devices 60-steam-input.rules 52-56; actual ACL depends on installation, logind seat and enumeration."
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input",
+    "udev-systemd-uaccess"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

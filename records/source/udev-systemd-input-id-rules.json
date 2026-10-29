@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "udev-systemd-input-id-rules",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/systemd/systemd/blob/ede1e572502d876a7e59f6ef837c1f02f0e931ca/rules.d/60-input-id.rules",
+  "revision": "ede1e572502d876a7e59f6ef837c1f02f0e931ca",
+  "sha256": "7ed83002c98b7f7d6a35a5b4b18c6457ceda9de4837cb18b3d43f430da2ed7c4",
+  "lineage": "systemd-udev",
+  "locator": "1-20 invokes input_id builtin on input devices"
+}

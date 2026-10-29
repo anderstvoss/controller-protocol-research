@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "parity-j-ds4-report-cadence",
+  "statement": "virtualgamepad's DS4 codec 4 ms synthetic frame advance and SDL/kernel consumption do not authenticate a universal retail USB/BT input interval or rumble resend interval; no physical DS4 timing reference on hand.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "DS4 code 951-955 and SDL PS4 host implementation; no reference physical device timing, no sample rate promotion."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4",
+    "ds4-community-playstation-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

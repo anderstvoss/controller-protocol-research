@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "parity-j-xbox360-report-cadence",
+  "statement": "Linux xpad and SDL decode a native 20-byte wired Xbox 360 input and FF 00 08 outputs, but the inspected source and secondary XUSB summary do not measure a physical device-wide input interval, rumble resend timer or receiver cadence.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c 883-951,1569-1579; SDL 243-338; protoR2 secondary 179-230; #166 physical timing unknown."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "x360-l0-sdl-hidapi-360-320",
+    "x360-l0-community-protor2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
