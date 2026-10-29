@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-dualsense-consumer-routing",
+  "statement": "Pinned public host implementations provide distinct direct hidraw/feature-report and kernel-derived evdev consumer paths for DualSense. A virtual DualSense UHID node's host driver/SDL backend must be observed rather than assumed from VID/PID or mapping database.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions pinned in part 1 and G, host versions not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer-routing documentation only: SDL PS5 requests feature 0x09/0x20/0x05, parses USB report 0x01 and sends output 0x02; kernel hid-playstation probes feature/identity and drives FF/LED. Wine has explicit Sony BT hidraw fixups. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run. Additional independent source pin: Chromium Gamepad Linux udev input/hidraw enumeration; WebHID has both static and dynamic protection rules. InputPlumber source matching is version-scoped and does not assert a local host pass."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "parity-g-wine-winebus",
+    "parity-g-chromium-gamepad-linux",
+    "parity-g-chromium-webhid-blocklist",
+    "parity-g-inputplumber-dualsense-hidraw"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

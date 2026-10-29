@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-chromium-gamepad-linux",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/chromium/chromium/blob/2444730dbdb3afd302b0315555bf03eca9c020bf/device/gamepad/gamepad_platform_data_fetcher_linux.cc",
+  "revision": "2444730dbdb3afd302b0315555bf03eca9c020bf",
+  "sha256": "6458dbb4657ef6f0b3a35203848dc45dab3b7ae0c0188114b5c68bb81937117f",
+  "lineage": "chromium-chromium",
+  "locator": "105-160 udev input+hidraw watcher; 213-250 joydev and Nintendo special handling; 292-315 evdev registration"
+}

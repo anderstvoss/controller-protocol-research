@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-inputplumber-dualsense-hidraw",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/ShadowBlip/InputPlumber/blob/b2fb40900506d329925d5a3f1bca54adf85f1279/src/input/source/hidraw/dualsense.rs",
+  "revision": "b2fb40900506d329925d5a3f1bca54adf85f1279",
+  "sha256": "c2e375c05a1e330673328eddf3e73aa0bba42bce85d14a706ecb74a6b23b850e",
+  "lineage": "shadowblip-inputplumber",
+  "locator": "36-55 Sony DS5 PID/Edge PID source driver and raw node access; 85-100 evdev FF handling; 350-375 analog normalization"
+}
