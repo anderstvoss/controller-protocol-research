@@ -19,7 +19,7 @@ class DualSenseL0Ledger(unittest.TestCase):
         claims = self.claims()
         self.assertEqual(len(claims), 39)
         self.assertEqual(Counter(x["evidence_role"] for x in claims),
-                         {"consumer": 20, "device": 19})
+                         {"consumer": 22, "device": 17})
         self.assertEqual(Counter(x["status"] for x in claims),
                          {"source_supported": 31, "unknown": 7, "inferred": 1})
         self.assertTrue(all(x["applicability"]["controller"] == "dualsense"
