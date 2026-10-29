@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-sdl-calibration-fallback",
+  "statement": "SDL PS4 requests feature 0x02 calibration and, on Bluetooth, 0x05 calibration; failed/short or zero calibration falls back to identity bias/scale then converts raw IMU values into SDL sensor units instead of aborting joystick open.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps4.c 462–647. Source only; do not confuse with kernel normalization."
+  },
+  "sources": [
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

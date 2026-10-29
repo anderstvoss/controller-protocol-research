@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-hidsony-feature81",
+  "statement": "Historical Linux v6.1 hid-sony DS4 USB/dongle path reads 0x81/7-byte GET_REPORT to recover MAC starting at offset 1; a missing/short response is an error; Bluetooth instead attempts to parse uniq.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-sony.c 505–508, 2598–2638. Historical consumer source, not a universal device-side feature requirement."
+  },
+  "sources": [
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

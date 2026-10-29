@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-kernel-pairing12",
+  "statement": "Current hid-playstation requests DS4 USB feature 0x12/16-byte pairing info to derive MAC; BT uses HIDP's uniq string. Failure of required identity acquisition aborts probe, unlike firmware 0xA3.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 2148–2175 and 2784–2789; host protocol expectation not a retail pairing dump."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
