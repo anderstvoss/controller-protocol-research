@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "parity-h-switch-pro-subcommand-contention",
+  "statement": "The Linux hid-nintendo initialization and SDL Switch HIDAPI each have source-defined subcommand/report-mode state machines, making simultaneous raw-command ownership a potential conflict; success/failure under mixed open is not measured.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Linux 4056b3c and SDL 535d80b; hardware/client build not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-nintendo.c 2369-2633; SDL_hidapi_switch.c 1536-1567,1790-1805. No hardware run."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

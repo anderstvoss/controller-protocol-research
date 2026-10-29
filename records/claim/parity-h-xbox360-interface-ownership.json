@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "parity-h-xbox360-interface-ownership",
+  "statement": "Linux xpad's vendor-specific USB driver and SDL's native Xbox360 HIDAPI decoder are independent consumer routes; generic standard-HID UHID does not automatically bind xpad, and native USB endpoint arbitration without xpad has not been measured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "Linux 4056b3c and SDL 535d80b; hardware/client build not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c 118-132/477-503; SDL_xbox360.c 62-95. No evidence of selected Steam backend or physical arbitration."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "x360-l0-sdl-hidapi-360-320"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
