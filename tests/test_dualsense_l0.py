@@ -79,7 +79,7 @@ class DualSenseL0Ledger(unittest.TestCase):
         def without_d(root, category):
             records = read(root, category)
             if category == "claim":
-                return [x for x in records if not x["id"].startswith("ds-l0-")]
+                return [x for x in records if not x["id"].startswith(("ds-l0-", "dsedge-l0-"))]
             return records
         with patch.object(status_module, "load", side_effect=without_d):
             previous = next(x for x in status_module.status(ROOT)
