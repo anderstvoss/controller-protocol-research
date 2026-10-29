@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- CI: harden-runner uses `audit` instead of `block` on the macOS and Windows
+  policy-check legs; its pre-step ignores the step-level `if` and block mode
+  broke Windows DNS and revocation lookups (anderstvoss/virtualgamepad#260).
+  Linux jobs stay in `block`.
+
 - Document MotionPlus activation/deactivation 0x20 status transitions, Dolphin
   emulator versus documented device evidence, conditional F6 and Linux/SDL/
   Cemu/wiiuse/xwiimote re-probes. Rank creation-time compat, retain W9f
