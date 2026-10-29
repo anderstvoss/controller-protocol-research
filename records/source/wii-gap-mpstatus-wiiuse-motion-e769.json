@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-wiiuse-motion-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "a6541f91ea6859e0fcd06cf504fc8b443d4cd25e628debdc261d126377fbeb5e",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "GPL-3.0-or-later. Inactive MP probe 45-104, active FA handshake 106-166, activation 170-198, disable and 500 ms waits/retries 199-235."
+}

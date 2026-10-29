@@ -227,3 +227,13 @@ The owner-filtered kernel log contains detection but no inactive-ID hex line;
 no byte-level kernel log readback is claimed. No Original pass is inherited,
 no special-driver window is used, and no physical or release gate is cleared.
 See `docs/wii-plus-p1-host-runs.md`.
+
+### MotionPlus activation/status source review
+
+Current inventory: **220 Wii claims** (210 on Plus P1 main and ten new
+source-only `wii-gap-mpstatus-*` claims). WiiBrew deactivation documents
+0x20 disconnect then reconnect; Dolphin emulator also simulates activation
+pin changes, but physical activation and active mode switch edge counts and
+timing remain unmeasured. Consumer status re-probes and W9 kernel/SDL risks
+are ranked in `docs/wii-motionplus-activation-status.md`. All physical and
+host tests proposed here are not run.

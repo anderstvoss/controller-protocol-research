@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-xwiimote-kernel-only",
+  "statement": "xwiimote opens kernel Wii evdev children including MotionPlus, with no direct Wii register commands. Status edges reach xwiimote only through hid-wiimote reconciliation and updated nodes; without a new edge xwiimote continues existing interfaces. A generic binding without Wii kernel children does not gain xwiimote motion from synthetic status.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original external MotionPlus and integrated Remote Plus distinguished where possible; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. lib/core.c 335-393,611-672,1045-1090 and kernel hotplug 1095-1224. Source-only; all physical and proposed host experiments not run."
+  },
+  "sources": [
+    "wii-gap-mpstatus-xwiimote-core-4df",
+    "wii-gap-mpstatus-linux-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
