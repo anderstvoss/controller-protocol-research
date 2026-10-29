@@ -1,20 +1,24 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-battery-cadence",
-  "statement": "Source parsers describe 0x43 battery fields, but physical battery event cadence, validity and charging transitions are unmeasured.",
+  "statement": "Historical official-Puck notes report 0x43 input at 15 wire bytes, with 2–3 reports per ten-second stopped window, matching kernel/SDL parser shape. Battery field values, charge transitions, timing distribution and per-report timestamps remain unavailable.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
   },
   "sources": [
     "steam-ibex-linux-driver",
-    "steam-triton-sdl-driver"
+    "steam-triton-sdl-driver",
+    "sc2-src-capture-notes-2026"
   ],
-  "experiments": [],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

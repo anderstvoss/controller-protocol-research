@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sc2-src-capture-notes-2026",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/anderstvoss/virtualgamepad/7cb46009c8a4d570be2953bef971a17f3f2ca39f/docs/STEAM_CONTROLLER_2026_CAPTURE_NOTES.md",
+  "revision": "7cb46009c8a4d570be2953bef971a17f3f2ca39f",
+  "sha256": "b5c62817c79cf14c2aef0c83394455c5d129d7d5cb76a82f70c73b8de1f83310",
+  "lineage": "operator-2026-july-august-sanitized-notes",
+  "locator": "Entire document §§1–15, operator-authored sanitized consolidation. Historical local commits 232f093, 15d1f86, 65bd980, c5a4db7, bc5c195, d8c682c, 81dfca0, 540484b, d36e637, a117b25, 084a547, d4daf84, bc8e8da, 5487d29, c74ac56, 8a387a6, ab219dd, 8c8ee34, a9a3fde, 3925f8d, 32896d5, ca0fa2d, d9e0cf4, 1d3bc36 are unrecoverable locators, not independently inspected evidence. Raw captures were not re-opened or revalidated (§1); no raw/host identifiers imported."
+}

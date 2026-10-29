@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-44",
+  "statement": "Capture-recorded historical workstream guide mentions an observed 0x44 input report of 6 wire bytes (5 body) during active/fallback work, without assigning it to a specific timed window or button. Its feedback/acknowledgement interpretation in independent research remains provisional; no host-output causation captured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Historical guide summary in notes §7–8; report presence not ACK semantics."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "sc2-src-dissector",
+    "sc2-src-haptics"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

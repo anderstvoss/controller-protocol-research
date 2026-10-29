@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "sc2-exp-direct-wired-20260731",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "sc2-src-capture-notes-2026"
+  ],
+  "fixtures": [],
+  "procedure": "Historical direct wired physical run on 2026-07-31, 28de:1302; Steam stopped; Linux hidraw input-only capture, no host-to-device output or feature traffic and no per-report timestamps. Five operator READY-confirmed ten-second nonempty windows: (1) neutral, (2) face/menu/Steam/QAM/rear presses and releases, (3) stick center/extrema/diagonal, (4) trigger rest/mid/full, (5) pad touch/click/pressure plus controller motion. Framing was u16-LE wire length followed by a complete input report including the ID. Raw captures withheld; notes were consolidated without independent raw verification.",
+  "semantic_outcome": "Operator notes record descriptor length 372, 54-byte native 0x42 report and occasional 0x40. No individual control-byte correlations or detailed per-window counts retained. 'passed' describes historical operator-confirmed windows only, not present-day verification."
+}

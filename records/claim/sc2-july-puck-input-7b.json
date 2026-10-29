@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-7b",
+  "statement": "Capture-recorded official Puck included 0x7b input at 13 wire bytes (12 body); Steam-stopped window counts 20,19,18,20,17. The notes call it periodic status but leave all content semantics and exact intervals unresolved. Independent research describes 0x7b, which agrees at report-ID level; this does not prove the researcher's field interpretations.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Physical count/length per notes §6–8; no per-report timestamps."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "sc2-src-dissector",
+    "sc2"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
