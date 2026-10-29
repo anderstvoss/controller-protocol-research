@@ -62,7 +62,7 @@
       "wii-c5-classic-h"
     ],
     "source_expected_inactive_identity_suffix": "A4200005",
-    "identity_scope": "Configured source policy; no claim that native Dolphin read the entire inactive identity."
+    "identity_scope": "Configured creation policy, not a full inactive identity readback. The accepted repeat reused the same device after mode 05 deactivation; its pre-map inactive FE mode byte was 05. Fresh mode 00 decoded-stick acceptance is not established by this repeat."
   },
   "environment": {
     "synthetic": false,
@@ -88,8 +88,11 @@
       "io_sha256": "c90288066ed8a6d62aa45c1e53c7f32e74d64b509f5cc1d3b9553e44133924c0",
       "changing_stick_qualified": false,
       "used_for_complete_stick_acceptance": false,
-      "reason": "Both saved stick snapshots hit the same stimulus phase. Preliminary data is retained separately; a fresh repeat with dense owned-window sampling supplies the accepted result and counts."
-    }
+      "reason": "Both saved stick snapshots hit the same stimulus phase. Preliminary data is retained separately; a fresh consumer profile on the same virtual device with dense owned-window sampling supplies the accepted result and counts."
+    },
+    "accepted_repeat_device_reused": true,
+    "accepted_repeat_pre_map_inactive_mode_byte": 5,
+    "preliminary_pre_map_inactive_mode_byte": 0
   },
   "resources": {
     "owned_consumer_children_gone": true,

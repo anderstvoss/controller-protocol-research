@@ -57,11 +57,16 @@ immutable for its device.
 
 An initial default Plus run passed transport and gyro but both saved stick
 images hit the same stimulus phase. Its changing-stick observation is unavailable
-and its archive is retained separately. A fresh 180-second repeat uses dense
+and its archive is retained separately. A 180-second repeat with a fresh consumer profile on the same device uses dense
 owned-window sampling, capturing opposite decoded stick positions before PNG
 conversion, with separate motion samples. Only that fully observed repeat
 supplies complete Plus stick acceptance and the counts below. The external-style
-control started only after the default repeat passed.
+control started only after the default repeat passed. The accepted repeat follows
+mode 05 deactivation and has pre-map inactive FE mode byte 05; the preliminary
+fresh-device run has byte 00. No full inactive identity was read back. Thus the
+repeat qualifies the default creation option with retained mode 05, not fresh
+mode 00 decoded-stick acceptance. This does not establish a fully controlled
+fresh-device comparison of the two ID styles.
 
 | Final generic arm | Post-map MP / child frames over 180 seconds |
 | --- | --- |

@@ -75,6 +75,24 @@ class WiiW9hScope(unittest.TestCase):
         self.assertFalse(d['environment']['preliminary_run']['changing_stick_qualified'])
         self.assertFalse(d['environment']['preliminary_run']['used_for_complete_stick_acceptance'])
 
+    def test_claim_citations_and_reused_plus_identity_scope(self):
+        for name in ['original-motionplus-nunchuk-copy-off',
+                     'plus-motionplus-nunchuk-default', 'plus-motionplus-nunchuk-external']:
+            claim = json.loads((ROOT / 'records/claim' /
+                                ('wii-w9h-dolphin-' + name + '-result.json')).read_text())
+            self.assertNotIn('wii-c5-classic-cpp', claim['sources'])
+            self.assertNotIn('wii-c5-classic-h', claim['sources'])
+        classic = json.loads((ROOT / 'records/claim/'
+                              'wii-w9h-dolphin-original-motionplus-classic-on-result.json').read_text())
+        self.assertIn('wii-c5-classic-cpp', classic['sources'])
+        self.assertIn('wii-c5-classic-h', classic['sources'])
+        d = arm('dolphin-plus-motionplus-nunchuk-default')
+        self.assertTrue(d['environment']['accepted_repeat_device_reused'])
+        self.assertEqual(d['environment']['accepted_repeat_pre_map_inactive_mode_byte'], 5)
+        self.assertEqual(d['environment']['preliminary_pre_map_inactive_mode_byte'], 0)
+        self.assertIn('Fresh mode 00 decoded-stick acceptance is not established',
+                      d['config']['identity_scope'])
+
     def test_kernel_plus_gate_precedes_generic_and_separates_cleanup(self):
         d = arm('kernel-plus-motionplus-nunchuk')
         o = observed(d)

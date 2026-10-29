@@ -4,7 +4,7 @@
   "kind": "virtual_host_run",
   "format": "acceptance_run_json",
   "path": "fixtures/acceptance/wii-w9h-dolphin-plus-motionplus-nunchuk-default-host.json",
-  "sha256": "f117030b84728675322616fbf605d3853dfdaf8721783c456df52412d34c9f22",
+  "sha256": "5dee9ed017a951b6535c7434b4497dbd98ee1b631d1c2dc94531a3991dc37371",
   "sources": [
     "wii-w9h-codec-source",
     "wii-w9h-memory-source",

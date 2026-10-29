@@ -14,9 +14,7 @@
   "sources": [
     "wii-w9h-codec-source",
     "wii-w9h-memory-source",
-    "wii-w8-dolphin-2503-input",
-    "wii-c5-classic-cpp",
-    "wii-c5-classic-h"
+    "wii-w8-dolphin-2503-input"
   ],
   "experiments": [
     "wii-w9h-dolphin-plus-motionplus-nunchuk-default-host-run"
