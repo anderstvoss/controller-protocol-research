@@ -90,7 +90,7 @@ class DualSenseL0Ledger(unittest.TestCase):
         self.assertEqual(updated["category"], "Source evidence")
         self.assertEqual(previous["consumer_category"], "Source evidence")
         self.assertEqual(updated["consumer_category"], "Source evidence")
-        self.assertEqual(sum(updated["claims"].values()) - sum(previous["claims"].values()), 39)
+        self.assertEqual(sum(updated["claims"].values()) - sum(previous["claims"].values()), 51)
         print("\n| Controller | Device before → after | Consumer before → after | Claims before → after |")
         print("| --- | --- | --- | --- |")
         print(f"| dualsense | {previous['category']} → {updated['category']} | "
