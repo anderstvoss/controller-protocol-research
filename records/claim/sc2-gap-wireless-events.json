@@ -1,20 +1,24 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-wireless-events",
-  "statement": "A real Puck slot's 0x79 connection/disconnection state machine, loss recovery and report delivery sequence are not captured.",
+  "statement": "Historical official-Puck operator notes now record two-byte 0x79 lifecycle reports with disconnect body 01 then reconnect 02 in the Steam-active targeted retry; a stopped-Puck window lists two such events. Exact timing, addressed slot bits, loss recovery, persistence, independent multi-slot behavior and unredacted raw artifacts remain unvalidated.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026-puck",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "usb",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
   },
   "sources": [
     "steam-ibex-linux-driver",
-    "steam-triton-sdl-driver"
+    "steam-triton-sdl-driver",
+    "sc2-src-capture-notes-2026"
   ],
-  "experiments": [],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

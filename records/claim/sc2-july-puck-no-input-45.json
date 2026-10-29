@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-no-input-45",
+  "statement": "Neither five stopped-Puck window count summaries nor the retained Steam-active report-ID sets/retry recorded 0x45; this is bounded non-observation, not a claim that the receiver or BLE path can never send 0x45. Source-only decoders accept a 0x45 alternate report.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Notes §6–8; input-only, 0x45 absence per retained summaries."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

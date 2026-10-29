@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-41",
+  "statement": "Capture-recorded fallback keyboard input 0x41 at 9 wire bytes (8 body), including stopped-Puck lizard 8 reports, keyboard 18, reconnect 1; repeated in Steam-active fallback retry. Exact key/modifier and release semantics remain unresolved.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Notes §6–8; controlled key/byte diffs unavailable."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "openpuck",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

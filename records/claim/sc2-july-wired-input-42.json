@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-wired-input-42",
+  "statement": "Capture-recorded direct wired 28de:1302 emitted 0x42 input with 54 wire bytes including ID (53 body), after the framed-read correction. This agrees with source-only Linux/SDL 0x42 54-byte field shapes but does not verify individual field values or rate. It is physical observation transcribed in operator notes; original raw withheld.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "usb",
+    "scope": "Notes §5 and §8; source-only decoder agreement, not consumer event confirmation."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [
+    "sc2-exp-direct-wired-20260731"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Ingest sanitized July–August 2026 direct/Puck Steam Controller input campaigns, descriptor shapes and historical encoder as provenance-limited research leads; narrow physical gaps without inventing packet fixtures or physical validation.
+
 - Record W9i independent fresh Tr default/external-style native Dolphin runs:
   consumer pre-map FE byte 00, bounded decoded gyro/stick, exact calibration
   and zero native post-map reinitialisation. Close the retained-mode sampling

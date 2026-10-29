@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-lizard-native-coexistence",
+  "statement": "Capture-recorded Puck retained native 0x42 input when Steam was stopped and when 0x40 mouse / 0x41 keyboard fallback reports were active. The Steam-active targeted retry reconfirmed coexistence; this contradicts an exclusive either/or desktop-versus-native assumption, not source-only lizard-policy settings or a verified seven-second watchdog.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Operator windows and retry, notes §6, §7, §11."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "openpuck",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

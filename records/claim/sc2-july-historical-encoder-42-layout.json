@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-historical-encoder-42-layout",
+  "statement": "Historical native encoder research lead (not capture-correlated): 0x42 has 53 body bytes, LE: byte0 sequence;1–4 button u32;5–6/7–8 triggers u16;9–16 sticks four s16;17–22 left pad X/Y/pressure three s16;23–28 right pad X/Y/pressure three s16;29–32 timestamp u32;33–38 accelerometer XYZ s16;39–44 gyro XYZ s16;45–52 opaque extension. Cross-check with kernel/SDL source-only maps: offsets and LE widths agree, but kernel parses trigger fields s16 and pad pressure u16; kernel calls final 8 bytes a quaternion s16[4], not opaque. These mismatches are historical code-vs-consumer field-map hypotheses, not independent physical contradictions or proof.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "source_only",
+    "scope": "Research lead only, historical code inspected in notes §9; unrecoverable commit 15d1f86, not cited independently."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

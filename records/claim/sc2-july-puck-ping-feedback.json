@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-ping-feedback",
+  "statement": "Capture-recorded Steam-active Puck operator requested Ping and observed feedback described as haptic/sound. The causative host-to-device output report or feature exchange was not captured by input-only hidraw, so this does not establish command ID, actuator, intensity, ACK or decoding; SDL/kernel output format claims remain source-only.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Physical feedback observation, no bidirectional capture; notes §7, §10."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "sc2-exp-puck-steam-stopped-20260731",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "sc2-src-capture-notes-2026"
+  ],
+  "fixtures": [],
+  "procedure": "Historical official-Puck physical run on 2026-07-31, 28de:1304, Steam stopped, receiver transport (USB-facing Puck), Linux hidraw input-only capture; host output not monitored; no per-report timestamps. Five READY-confirmed ten-second nonempty windows: idle/neutral; lizard control; right-pad mouse; keyboard controls; disconnect/reconnect. Counts in ID order 40,41,42,43,79,7b: idle=(0,0,2661,3,0,20); lizard=(0,8,2661,2,0,19); mouse=(432,0,2656,2,0,18); keyboard=(0,18,2657,3,0,20); disconnect/reconnect=(1,1,1990,2,2,17). Zero means not listed in retained window summary, not a universal impossibility. Framing uses u16-LE wire length before each entire HID input report; original raw packets withheld and not revalidated.",
+  "semantic_outcome": "Notes record 372-byte descriptor, 0x42 continuing alongside fallback mouse/keyboard, and two lifecycle frames in reconnect window. Counts are whole-window totals; instantaneous frequency, jitter, ordering and disconnected duration cannot be established."
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-42",
+  "statement": "Capture-recorded official Puck 28de:1304 continuously presented native input 0x42 (54 wire bytes, 53 body), with window totals 2661,2661,2656,2657,1990 over 10 seconds for idle,lizard,mouse,keyboard,disconnect/reconnect, respectively. The native report size agrees with kernel/SDL source-only 0x42 shape; no report-level timing or raw semantics verified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Operator counts and input shape, notes §6–8."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

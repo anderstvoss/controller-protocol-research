@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-wired-identity-descriptor",
+  "statement": "Capture-recorded 2026-07-31 direct wired identity was Valve 28de:1302 and the reviewed HID descriptor was 372 bytes; this is not a complete USB/interface descriptor fixture. The identity agrees with pinned kernel and SDL source-only driver matches, but the historic notes' physical observation is not a host consumer test.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "usb",
+    "scope": "Physical direct wired identity and descriptor size, note §3 and §5."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "sc2-migration-kernel-ids",
+    "steam-triton-sdl-identities"
+  ],
+  "experiments": [
+    "sc2-exp-direct-wired-20260731"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

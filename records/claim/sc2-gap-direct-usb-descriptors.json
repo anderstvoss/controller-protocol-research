@@ -1,17 +1,21 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-direct-usb-descriptors",
-  "statement": "No imported physical 2026 wired-controller USB descriptor, HID collections, feature-report lengths, interface or string-descriptor fixture exists.",
+  "statement": "A historical operator note now records direct-wired 28de:1302 and its 372-byte HID report descriptor plus declared report IDs/output body lengths. Full USB configuration, interfaces, endpoints, HID descriptor bytes and feature/probe transactions have not been imported as physical fixtures.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "not measured",
     "firmware": "not measured",
     "transport": "usb",
-    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
+    "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md. Historical July 2026 operator-note ingestion narrows this open gap; original raw data withheld; physical promotion is not justified."
   },
-  "sources": [],
-  "experiments": [],
+  "sources": [
+    "sc2-src-capture-notes-2026"
+  ],
+  "experiments": [
+    "sc2-exp-direct-wired-20260731"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

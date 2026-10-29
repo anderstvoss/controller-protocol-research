@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "sc2-july-puck-input-43",
+  "statement": "Capture-recorded Puck Steam-stopped and active sessions included 0x43 at 15 wire bytes (14 body); 2–3 reports per ten-second stopped window. This matches Linux/SDL source-only 0x43 battery-status wire length, but its physical payload fields, values, and charging cadence are unverified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "operator notes: July–August 2026; hardware revision unrecorded",
+    "firmware": "not recorded",
+    "transport": "receiver",
+    "scope": "Notes §6–8, source-only 0x43 agreement not physical battery decoding."
+  },
+  "sources": [
+    "sc2-src-capture-notes-2026",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
