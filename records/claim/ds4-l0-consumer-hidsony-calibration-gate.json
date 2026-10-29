@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-hidsony-calibration-gate",
+  "statement": "Historical hid-sony rejects DS4 probe on failed calibration GET; it retries 0x02 USB report-ID mismatches and 0x05 Bluetooth CRC mismatches, and requests version 0xA3 before registering ordinary functionality.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-sony.c 1704–1788, 2850–2862. Distinct from later kernel's non-fatal DS4 calibration policy."
+  },
+  "sources": [
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

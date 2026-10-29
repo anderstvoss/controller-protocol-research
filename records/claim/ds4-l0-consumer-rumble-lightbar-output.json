@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-rumble-lightbar-output",
+  "statement": "Linux and SDL build DS4 USB 0x05 and Bluetooth 0x11 rumble/lightbar outputs with transport-specific valid flags and CRC controls; host scheduling and output event success are not proof of physical rumble/LED parity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 507–539, 2277–2386; SDL_hidapi_ps4.c 924–973. Physical force and lightbar calibration untested."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

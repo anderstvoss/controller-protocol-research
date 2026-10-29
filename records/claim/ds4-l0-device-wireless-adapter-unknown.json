@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-wireless-adapter-unknown",
+  "statement": "Sony 054c:0ba0 wireless adapter / dongle cannot be assumed byte-for-byte identical to native DS4 USB or Bluetooth; report hotplug/calibration behavior and interface differences require independent reference capture.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c dongle state 2776–2782, 1912–1931; historical hid-sony.c 1866–1889. This is a distinct receiver physical gap."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

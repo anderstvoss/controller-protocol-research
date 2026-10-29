@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-consumer-sdl-a3-no-evidence",
+  "statement": "No GET_REPORT 0xA3 request is found in the pinned SDL 3.2.0 PS4 HIDAPI implementation; an 0xA3 firmware stub may be necessary for historical hid-sony and useful for version metadata in newer kernel, but there is no evidence SDL itself requires it for PS4 HIDAPI acceptance.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps4.c 76–80, 207–351, 462–647; Linux contrasts. No evidence is scoped to this pinned SDL consumer, not universal."
+  },
+  "sources": [
+    "audio-sdl-ps4",
+    "audio-linux-hid-playstation",
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

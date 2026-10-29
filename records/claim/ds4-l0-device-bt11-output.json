@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-bt11-output",
+  "statement": "Community DS4 summary identifies Bluetooth output report 0x11/78 bytes with transport-specific prefix and CRC32 for rumble/lightbar commands.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community playstation.md 20–29; Bluetooth security, pairing, ACK and physical response not measured."
+  },
+  "sources": [
+    "ds4-community-playstation-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

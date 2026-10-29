@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-featurea3-firmware-unknown",
+  "statement": "DS4 firmware feature 0xA3 is expected as 49 bytes by both pinned Linux consumers and contains host-decoded hardware/firmware version offsets, but no authentic retail report bytes or comprehensive firmware-revision matrix were captured in this corpus.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 2121–2145; hid-sony.c 1893–1915. Do not treat an implementation stub as validated physical firmware identity."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "ds4-linux-hid-sony-v61"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

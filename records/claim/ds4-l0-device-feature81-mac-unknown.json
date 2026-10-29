@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-l0-device-feature81-mac-unknown",
+  "statement": "Historical hid-sony expected USB feature 0x81 of length 7, with MAC beginning at offset 1, whereas current hid-playstation requests pairing 0x12; no independent source here verifies actual device-side coexistence or transport/revision policy.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "research revisions: Linux 4056b3c, historical Linux v6.1 830b3c6, SDL 535d80b, OpenPuck 29f4d1e, community 290e4a2; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-sony.c 505–508, 2615–2638; hid-playstation.c 2148–2175. Manufacturer MAC values explicitly excluded from publication."
+  },
+  "sources": [
+    "ds4-linux-hid-sony-v61",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

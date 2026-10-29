@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds4-linux-hid-sony-v61",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/830b3c68c1fb1e9176028d02ef86f3cf76aa2476/drivers/hid/hid-sony.c",
+  "revision": "830b3c68c1fb1e9176028d02ef86f3cf76aa2476",
+  "sha256": "297b84f9fb1093511590bbaf57f89119cdbf998ca3650099b045b5fb0204b88d",
+  "lineage": "linux-kernel",
+  "locator": "Historical Linux v6.1 pre-hid-playstation DS4 implementation, driver type mapping 52-84, DS4 controller handling, feature calibration and output setup; inspect source line references in E ledger."
+}
