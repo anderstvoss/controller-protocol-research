@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-p1-iczero-feature-ids",
+  "statement": "Dissector's feature command enumeration (not HID report IDs) lists mapping get/clear/set 0x80-0x82, attributes 0x83-0x84, default mappings 0x85, reset 0x86, settings set/clear/get 0x87-0x89, setting label/max/default 0x8a-0x8c, mode/default-settings 0x8d-0x8e, pulse 0x8f and potentially destructive bootloader/off commands 0x90/0x9f. Dissector lines 3-43,518-555,812-832. This is broader than inspected wired kernel/SDL actual requests, and field names/side effects are NOT verified against an authentic 1302. Do not send reset/bootloader/shutdown or unknown GETs as a result of this lead. Capture gate: Plan Session 1 capture host-originated feature1 commands and replies and Session 3 optional passive Steam trace; follow-up feature-command matrix requires separate explicitly authorized device-safe test design. Source range is a hypothesis from iczero at 83c46d7, shared lineage 'sc2' with the previously imported sc2 README/dissector/haptics sources. No independent cross-source confirmation and no physical wired experiment.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "iczero source pin 83c46d7; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only research lead for direct 28de:1302; Plan Session 1 capture host-originated feature1 commands and replies and Session 3 optional passive Steam trace; follow-up feature-command matrix requires separate explicitly authorized device-safe test design. No intentional feature/stream command injection; compare passive/consented host-originated traffic."
+  },
+  "sources": [
+    "sc2-src-dissector"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
