@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-wireless-x360w",
+  "kind": "research_lead",
+  "url": "https://github.com/zeromiyi/x360w/blob/a8ac63058f29e071bbf2a7c051845db5b8f67ca1/README.md",
+  "revision": "a8ac63058f29e071bbf2a7c051845db5b8f67ca1",
+  "sha256": "7d7f0002ddde2fc6dd1697b799c43b9e7e293837736860349df17cdb8624f90f",
+  "lineage": "x360w",
+  "locator": "Wireless receiver USB FF/5D/81, receiver IN presence/status, OUT rumble and LED commands, compatibility tests. Hardware-linked software project, not generic wired USB XUSB."
+}

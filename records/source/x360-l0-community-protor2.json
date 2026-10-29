@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-community-protor2",
+  "kind": "research_lead",
+  "url": "https://github.com/mattiasbrandt/protoR2/blob/4c0d06274810ea1f5c1ad5d7f56e91b715947953/docs/spec-sheets/xbox-controller-input.md",
+  "revision": "4c0d06274810ea1f5c1ad5d7f56e91b715947953",
+  "sha256": "08d2c03f728aa20ac8a6e87a24a0da12ceef5681529524f4ca4c8b17de5cb27c",
+  "lineage": "protor2",
+  "locator": "Sections 3 sources checked, 5.1 wired report bytes 0..19 lines 175-202, 5.2 wireless receiver 203-231, 9 quick reference 528-540. Independent secondary research derived from USB Host Shield driver, no new retail capture."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-sdl360-wire-parser",
+  "statement": "SDL Xbox360 HIDAPI parser accepts packets whose first byte is 0x00 and decodes D-pad hat and buttons from bytes 2-3, analog triggers from 4-5 into signed SDL axis domain, sticks from LE16 at 6-13 with OS-specific Y inversion, and delivers mapped SDL face/guide events. The 829a65d path preserves the same basic decoder with added Steam handling.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_xbox360.c 243-338 at 535d80b and 295-396 at 829a65d. Applies only when Xbox360 HIDAPI driver selected, not to arbitrary HID usages."
+  },
+  "sources": [
+    "x360-l0-sdl-hidapi-360-320",
+    "x360-l0-sdl-hidapi-360-3418"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

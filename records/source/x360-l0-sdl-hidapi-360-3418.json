@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-sdl-hidapi-360-3418",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/829a65d769d935c4852f8159e964312c0957260a/src/joystick/hidapi/SDL_hidapi_xbox360.c",
+  "revision": "829a65d769d935c4852f8159e964312c0957260a",
+  "sha256": "dccd00c1f5cd2f8e7ef8d6d7d729801c1ec5cc5cae8693fa2f5266ac786025ae",
+  "lineage": "libsdl",
+  "locator": "86-129 routing, 133-140 player LED, 238-263 FF, 295-361 20-byte parse, 363-396 read loop."
+}
