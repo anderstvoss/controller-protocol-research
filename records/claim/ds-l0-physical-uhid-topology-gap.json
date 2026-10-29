@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-physical-uhid-topology-gap",
+  "statement": "No physical DualSense reference-versus-virtual matched test in this corpus has proved that a Linux USB/UHID presentation exposes every sensor/output surface identically to actual USB device topology.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "The historical USB gadget POC is still software and cannot establish physical parity. No firmware or topology promotion."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-hhd-device-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

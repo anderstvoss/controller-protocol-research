@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-consumer-probe-feature-failure-tolerance",
+  "statement": "Linux DualSense initialization requires successful GET 0x09 MAC, GET 0x20 firmware and GET 0x05 calibration: failed reads abort device probe. SDL on Sony device sets standard capabilities regardless of 0x03; GET 0x09 and GET 0x20 are optional/length-checked during enhanced startup, and calibration short read (<35) is ignored in favor of its non-hardware-calibration path. For third-party devices, an invalid/failed GET 0x03 capability response can exclude HIDAPI support.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 1783-1820; SDL 535d80b 300-320, 418-445, 555-567; SDL 829a65d 434-457. Other feature requests and physical bus error cases not comprehensively enumerated."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-sdl-ps5-3418"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

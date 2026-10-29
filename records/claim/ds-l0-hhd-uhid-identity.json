@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-hhd-uhid-identity",
+  "statement": "Pinned HHD virtual DualSense chooses Sony VID/PID, USB or Bluetooth UHID bus metadata, selected report descriptor and different report offsets/mappings according to its configured transport.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD dualsense/__init__.py 67-151. Device-side behavior of a *software emulator*, not retail DualSense USB/BT descriptor evidence."
+  },
+  "sources": [
+    "dualsense-uhid-gyro-hhd-device-source",
+    "dualsense-uhid-gyro-hhd-uhid-source",
+    "hhd-dualsense",
+    "ds-community-nondebug-usb-descriptor"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

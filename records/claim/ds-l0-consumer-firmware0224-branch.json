@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-consumer-firmware0224-branch",
+  "statement": "SDL pinned at 535d80b reads feature 0x20 bytes 44-45 as little-endian firmware_version; for 0x0224 and later, it enables improved compatible rumble using valid-flag2 bit 0x04 and full amplitude; below 0x0224, older valid-flag0 bit 0x01 is used and amplitudes are halved. SDL at 829a65d separately caches enhanced_rumble on Sony Edge, unknown version 0, or firmware >=0x0224. Linux instead tests update_version >= version 2.21 for base DualSense, while Edge always uses v2.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL 535d80b 427-432, 683-700; SDL 829a65d 434-447, 719-733; Linux 1150-1176, 1796-1810. The synthetic 0x0224 selects SDL improved-rumble path; no source indicates it is universally mandatory or an authentic physical revision."
+  },
+  "sources": [
+    "audio-sdl-ps5",
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

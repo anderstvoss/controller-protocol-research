@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-feature05-shape",
+  "statement": "Community USB HID descriptor and compatibility feature documentation include GET feature 0x05 calibration (41 bytes total). Linux/SDL parse gyro bias/plus-minus/speed and accelerometer plus/minus endpoints as LE16 values; HHD emits a synthetic calibration reply for virtual operation.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "nondebug report-descriptor-usb.txt Feature 0x05; VIIPER docs 269-280; Linux 1023-1064; SDL 555-629. Source-dependent interpretation; no valid physical per-device calibration captured."
+  },
+  "sources": [
+    "ds-community-nondebug-usb-descriptor",
+    "ds-community-viiper-protocol",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

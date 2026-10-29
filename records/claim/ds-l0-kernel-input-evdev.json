@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-kernel-input-evdev",
+  "statement": "Linux hid-playstation maps the common DualSense report to gamepad evdev axes/buttons, a separate motion/IMU device and touchpad input endpoints; a successful PlayStation driver bind alone does not prove SDL sensor association.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1448-1555 and separate input-device setup. Real consumer behavior still needs exact-device lab."
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

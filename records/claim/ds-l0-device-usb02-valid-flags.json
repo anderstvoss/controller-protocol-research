@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-device-usb02-valid-flags",
+  "statement": "USB 0x02 has a 47-byte common output body with valid_flag0/1 bytes: motor/rumble-select bits, speaker/mic volume and audio routing enables; valid_flag1 governs mute LED/power-save/lightbar/player indicator, while a later flag byte controls LED setup and improved rumble. Two trigger-effect blocks (right then left) are 11 bytes each; sound/LED/rumble fields are separately gated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "VIIPER docs 153-184 and state.go 102-139; adaptive-triggers.js 98-105; Linux hid-playstation.c 149-169, 269-316. Emulator and consumer source agree on basic layout, not full physical flag acceptance."
+  },
+  "sources": [
+    "ds-community-viiper-protocol",
+    "ds-community-trigger-encoding",
+    "ds-community-trigger-notes",
+    "dualsense-uhid-gyro-hhd-device-source",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

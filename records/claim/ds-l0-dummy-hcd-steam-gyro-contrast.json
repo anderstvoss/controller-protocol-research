@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-dummy-hcd-steam-gyro-contrast",
+  "statement": "The archived virtualgamepad dummy_hcd POC reports that Steam Controller Test detected changing DualSense gyro via same-host USB-gadget presentation whereas gyro was missing in the prior UHID virtual-controller presentation despite the stated shared report/layout/feature/timing settings.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Archived docs/POC_DUMMY_HCD_DUALSENSE.md lines 46-58; B experiment ds-vg-dummy-hcd-steam-host-run. Historical maintainer-observed virtual consumers only, not a controlled physical-reference comparison."
+  },
+  "sources": [
+    "vg-alpha1-dummy-hcd-poc"
+  ],
+  "experiments": [
+    "ds-vg-dummy-hcd-steam-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
