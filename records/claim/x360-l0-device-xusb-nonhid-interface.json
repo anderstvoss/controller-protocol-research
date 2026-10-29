@@ -8,10 +8,12 @@
     "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "protoR2 179-202; xpad.c 477-501. Community secondary reference plus consumer source agreement; physical descriptor not captured. Not an architectural obligation for virtualgamepad's deliberately generic-HID UHID mode."
+    "scope": "protoR2 179-202; xpad.c 477-501. Community secondary reference plus consumer source agreement; physical descriptor not captured. Not an architectural obligation for virtualgamepad's deliberately generic-HID UHID mode. Independently pinned USB Host Shield XBOXUSB.cpp 244-269 is a custom USB host path and kernel xpad.c 477-503 binds vendor-specific interface; still no retail physical descriptor."
   },
   "sources": [
-    "x360-l0-community-protor2"
+    "x360-l0-community-protor2",
+    "x360-l0-usbhost-wired",
+    "xbox-series-linux-xpad"
   ],
   "experiments": [],
   "conflicts_with": [],

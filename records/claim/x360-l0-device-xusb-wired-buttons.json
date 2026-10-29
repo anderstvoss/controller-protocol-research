@@ -8,10 +8,11 @@
     "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "protoR2 179-202, 530-535. Secondary only; no measured analog threshold, no direct physical observation. Distinct from generic HID usage mapping."
+    "scope": "protoR2 179-202, 530-535. Secondary only; no measured analog threshold, no direct physical observation. Distinct from generic HID usage mapping. Independently pinned USB Host Shield XBOXUSB.cpp 244-269 validates header, big-endian button/triggers and LE16 sticks; no retail capture."
   },
   "sources": [
-    "x360-l0-community-protor2"
+    "x360-l0-community-protor2",
+    "x360-l0-usbhost-wired"
   ],
   "experiments": [],
   "conflicts_with": [],
