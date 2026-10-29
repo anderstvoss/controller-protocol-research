@@ -43,7 +43,7 @@ The owner/local agent can pull and hash those exact pages or a stable wiki revis
 | Does `0ba0` wireless adapter equal native DS4 USB? | **No evidence**. Kernel uses a dedicated dongle hotplug state and delayed calibration | `ds4-l0-consumer-revision-and-dongle-routing`, `ds4-l0-device-wireless-adapter-unknown` |
 | How many touch points does the report contain? | **Conflicted terminology** in community secondary summary versus kernel's report history arrays: three USB/four BT *samples* holding two contact slots each. No primary retail packet comparison | `ds4-l0-device-touch-count-conflict` ↔ `ds4-l0-consumer-kernel-touch-report-buffer-count` |
 
-Historical B evidence remains valid and limited: `ds4-vg-exp0009-sdl-controls`, `ds4-vg-exp0011-combined-node-discovery`, `ds4-vg-exp0012-interrupted-split` etc. Historical DS4 combined node failed; interrupted split trial was **blocked**, not failed; source research here does not imply a present production regression or physical parity.
+Historical B evidence remains valid and limited: `ds4-vg-exp0009-sdl-standard-touch`, `ds4-vg-exp0011-combined-node-discovery`, `ds4-vg-exp0012-interrupted-split` etc. Historical DS4 combined node failed; interrupted split trial was **blocked**, not failed; source research here does not imply a present production regression or physical parity.
 
 ## Future lab gates (proposed only; no reference controller in this agent session)
 
