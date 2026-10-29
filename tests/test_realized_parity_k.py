@@ -5,7 +5,6 @@ class CitationMapsK(unittest.TestCase):
  def test_four_maps_are_source_only_and_have_manifest_cells(self):
   for c in ["switch-pro","dualsense","dualshock4","xbox360"]:
    s=(ROOT/"docs"/(c+"-citation-map.md")).read_text()
-   manifest=(ROOT.parent/"__nonexistent__")
    self.assertIn("uncited",s)
    self.assertIn("acceptance/",s)
    self.assertIn("not run",s.lower())
