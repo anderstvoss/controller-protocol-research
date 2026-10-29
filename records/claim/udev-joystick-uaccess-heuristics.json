@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "udev-joystick-uaccess-heuristics",
+  "statement": "systemd 60-input-id.rules calls input_id; builtin input_id determines ID_INPUT_JOYSTICK by evdev capabilities with joystick/keyboard heuristics; 70-uaccess grants TAG+=uaccess to input devices with ID_INPUT_JOYSTICK. This does not grant blanket hidraw device access.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "systemd 60-input-id.rules 1-20; udev-builtin-input_id.c 157-321; 70-uaccess.rules.in 72-73,113-130."
+  },
+  "sources": [
+    "udev-systemd-uaccess",
+    "udev-systemd-input-id-rules",
+    "udev-systemd-input-id-builtin"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

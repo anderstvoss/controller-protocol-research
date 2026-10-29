@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "udev-virtual-device-creator-access",
+  "statement": "virtualgamepad's optional installed rules grant dedicated trusted groups mode 0660 on /dev/uhid and /dev/uinput for device creation; separate input/hidraw nodes still follow their own udev ACL and seat policies.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "virtualgamepad udev/70-virtualgamepad-{uhid,uinput}.rules lines 1-2; installing grants is an administrator opt-in and cannot be inferred from repo files."
+  },
+  "sources": [
+    "udev-virtualgamepad-uhid",
+    "udev-virtualgamepad-uinput",
+    "udev-systemd-uaccess"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
