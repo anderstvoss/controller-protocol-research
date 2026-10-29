@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-dolphin-original-motionplus-classic-on-result",
+  "statement": "Original MP+Classic mode 07 with re-attach and both shims on passes native Dolphin bounded decoded gyro, both Classic sticks and selected A/B button transitions. Report mode is re-sent after mapping, F6 and both imported calibration blocks succeed. No consumer workaround or inheritance from Nunchuk; other buttons/triggers, physical/radio/game/release/timing remain unqualified.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original / virtual Wii Remote PID 0306; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9h controlled local virtual-host experiment, synthetic imported calibration and explicit binding/creation flags. Independent decoded oracle is separate from raw frames; no physical/radio/game/release/timing or whole-controller qualification. #258 gates generic-binding release use."
+  },
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-c5-classic-cpp",
+    "wii-c5-classic-h"
+  ],
+  "experiments": [
+    "wii-w9h-dolphin-original-motionplus-classic-on-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

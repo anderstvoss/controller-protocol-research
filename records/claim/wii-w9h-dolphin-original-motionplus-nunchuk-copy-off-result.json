@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-dolphin-original-motionplus-nunchuk-copy-off-result",
+  "statement": "Original MP+Nunchuk with re-attach/F6 on and 0x40 copy off re-sends report mode and reads F6 and MP calibration, but child 0x40/16 repeatedly returns error 7. Decoded gyro changes and Nunchuk buttons respond while the correctly bound Nunchuk stick stays centered. Together with W9g copied-block on acceptance under identical imported resources, this isolates the copy requirement for decoded Original Nunchuk stick on this native Dolphin path; it does not show a gyro requirement or qualify Plus/Classic copy necessity.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original / virtual Wii Remote PID 0306; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9h controlled local virtual-host experiment, synthetic imported calibration and explicit binding/creation flags. Independent decoded oracle is separate from raw frames; no physical/radio/game/release/timing or whole-controller qualification. #258 gates generic-binding release use."
+  },
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-w8-dolphin-2503-input"
+  ],
+  "experiments": [
+    "wii-w9h-dolphin-original-motionplus-nunchuk-copy-off-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
