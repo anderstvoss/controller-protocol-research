@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner ran the brief ignore-special creation window, restored and read back 0, verified each exact-owned virtual device and applied hidraw grants. Agent revalidated identity, generic binding and access before consumers. No agent sudo or persistent policy.",
+  "config": {
+    "consumer_role": true,
+    "revision": "Original / virtual Wii Remote PID 0306",
+    "seconds_bound": 180,
+    "binding": "hid-generic",
+    "hid_wiimote_bound": false,
+    "binding_scope": "test/dev only; release gate #258 remains",
+    "owner_window": {
+      "initial_value": 0,
+      "restored_value": 0,
+      "creation_complete": true,
+      "window_seconds": 2.048141
+    },
+    "creation_options": {
+      "motionplus_activation_reattach_status": true,
+      "motionplus_passthrough_id_mirror": false,
+      "motionplus_passthrough_calibration_copy": true
+    },
+    "caller_eeprom_image_imported": true,
+    "extension_blocks_imported": true,
+    "synthetic_resources": {
+      "synthetic": true,
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "factory_data": false,
+      "source": "Pinned Dolphin fallback layout/constants, caller-selected synthetic lab blocks; no imported resource is a project default"
+    },
+    "first_unpassed_checkpoint": "F6 downstream identity read returns error 7; calibration decoding is not reached.",
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "gyro_calibration_period_seconds": 0,
+    "nunchuk_stick_bindings": {
+      "Up": "Nunchuk Y+",
+      "Down": "Nunchuk Y-",
+      "Left": "Nunchuk X-",
+      "Right": "Nunchuk X+"
+    },
+    "profile_names_source": "wii-w8-dolphin-2503-input"
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "7445bfa88466f7c519a25d9b0341fc5b59957854",
+    "actual_probe_source_sha256": "cac2369e44703bec36c4ee1eb5b4787864102b20276aa58bf4877ecab5d01e37",
+    "actual_probe_binary_sha256": "5a0bab19812db7d02d07b5d910860949ee0bb3cf2afd9508e5d6e4856dbbbbf9",
+    "original_private_artifact_sha256": "a010625f388443cd690ece39c8a8b8c37286f63bcd4fef7681b87f4524f30fb3",
+    "consumer": "native Dolphin 2503 ControllerInterface, isolated emulated mapping profile",
+    "consumer_package": "2503+dfsg-1+deb13u1",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "consumer_observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139",
+    "runner_source_sha256": "1c4016efa1c25852fb5a930b66fb854cf6faa1af1412272396649eb10e7a91f4",
+    "raw_reduction_source_sha256": "3d7229b3bcc5d5a30cc7456edf4d8ed50af3dee604b72d2d686b78c481d01450",
+    "observation_guard_scope": "Exact-owned raw access and blocked foreign raw/input/USB and Bluetooth radio observations; not a complete sandbox."
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "native_transport": {
+          "post_map_report_mode_37_resent": true,
+          "post_map_read_requests": [
+            {
+              "bank": "0xa4",
+              "address": 246,
+              "count": 4,
+              "occurrences": 8934
+            },
+            {
+              "bank": "0xa4",
+              "address": 250,
+              "count": 6,
+              "occurrences": 1
+            }
+          ],
+          "read_reply_errors": [
+            {
+              "address": 246,
+              "error": 7,
+              "occurrences": 8934
+            },
+            {
+              "address": 250,
+              "error": 0,
+              "occurrences": 1
+            }
+          ],
+          "f6_success": false,
+          "f7_fixed_compat_byte_observed": null,
+          "mp_calibration_matches_caller": false,
+          "child_calibration_matches_caller": false,
+          "pre_map_report37_count": 28,
+          "post_map_frames": {
+            "mp": 8947,
+            "child": 8946,
+            "mp_per_consumer_second": 49.705556,
+            "child_per_consumer_second": 49.7,
+            "denominator_scope": "Full bounded consumer lifetime, includes initial setup. Counts only raw reads after accepted mode 05 request."
+          },
+          "native_a400f0_55_after_map": 0,
+          "decoded_gyro_observed": false,
+          "scope": "Native raw trace proves transport/order/counts; UI is the independent decoded consumer oracle. Pre-map report 0x37 frames are excluded from passthrough counts."
+        },
+        "mapping_ui": {
+          "changing_gyro_observed": false,
+          "changing_nunchuk_stick_observed": false,
+          "scope": "Repeated owned motion and extension views have stationary gyro and centered Nunchuk stick, despite raw post-map frames. F6 identity read is blocked before calibration."
+        },
+        "first_unpassed_checkpoint": "F6 downstream identity read returns error 7; calibration decoding is not reached."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "With re-attach on, F6 mirror off and calibration copy on, Dolphin re-sends 0x12 but repeatedly receives error 7 at F6. Raw post-map MP and child frames arrive, but decoded gyro and Nunchuk are not established and neither calibration read is reached. Native post-map A400F0=55 count is zero. Scope is virtual Original with hid-wiimote not bound, test/dev under #258; not game, radio, physical, release or Plus acceptance."
+  }
+}
