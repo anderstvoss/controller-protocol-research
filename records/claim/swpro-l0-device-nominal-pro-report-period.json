@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-nominal-pro-report-period",
+  "statement": "Community notes describe full 0x30 Pro Controller reports at a nominal 120 Hz (~8.33 ms), while other controller modes are described at 60 Hz. The 0x03 subcommand note says standard full mode pushes at 60 Hz, without distinguishing Pro in that section.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_notes.md 116-118; bluetooth_hid_subcommands_notes.md 66-78. Community documentation has divergent general/Pro cadence statements; specifically USB cadence not independently measured."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-info02-fields",
+  "statement": "Community subcommand 0x02 response payload has firmware bytes 0-1, controller type byte 2 (0x03 Pro), an unknown byte 3, a six-byte Bluetooth MAC at 4-9, a mostly constant byte 10 and a byte 11 indicating whether SPI-provided colours should be used. OpenPuck generates a compatible reply, with its own fixed firmware and synthetic identity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_subcommands_notes.md 53-64; spi_flash_notes.md 94-97; OpenPuck mode_switch_pro.cpp 756-767. Neither any retail MAC nor firmware byte string is copied."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes",
+    "swpro-dekunukem-spi-flash-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-physical-spi-calibration-unknown",
+  "statement": "Physical per-device factory/user SPI calibration contents, protected regions, writable semantics, neutral and IMU axes across revisions are not observed in this research corpus.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Addresses are source backed, but EEPROM/SPI model and correction values must be verified against owner-authorized reference."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

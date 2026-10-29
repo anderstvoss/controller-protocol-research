@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-dolphin-plus-motionplus-nunchuk-default-result",
+  "statement": "Tr MP+Nunchuk with default built-in inactive ID option passes native Dolphin bounded decoded gyro and Nunchuk stick with re-attach and both shims on. Mode 05, report-mode resend, F6 and both imported calibration blocks succeed. Independent dense owned-window samples qualify stick change; raw frames are not the decoded oracle. No Original pass is inherited; preliminary insufficient stick sampling is excluded from accepted repeat. No physical/radio/game/release/timing or whole-controller qualification.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Tr / virtual Wii Remote Plus PID 0330; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9h controlled local virtual-host experiment, synthetic imported calibration and explicit binding/creation flags. Independent decoded oracle is separate from raw frames; no physical/radio/game/release/timing or whole-controller qualification. #258 gates generic-binding release use."
+  },
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-w8-dolphin-2503-input"
+  ],
+  "experiments": [
+    "wii-w9h-dolphin-plus-motionplus-nunchuk-default-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

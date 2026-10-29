@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-linux-mac-uniq",
+  "statement": "hid-nintendo reads the six MAC bytes in subcommand 0x02 device-info, formats a MAC string and assigns that string as evdev uniq for both main gamepad and separate IMU input node.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-nintendo.c 2477-2515, 2130-2134, 2188-2198. This is a host identity/association field and not physical Bluetooth pairing verification."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

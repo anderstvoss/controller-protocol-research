@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-sdl-mac-serial-guid",
+  "statement": "SDL 3.2.0 Switch HIDAPI reads device info and copies its six MAC bytes, then derives a hyphenated device serial from them via HIDAPI_SetDeviceSerial. It sets GUID byte 15 to the parsed controller type, not to the MAC; player index is assigned separately via SetDevicePlayerIndex and LED mapping.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_switch.c 629-652, 1357-1454, 1498-1509. A stable *per-instance virtual MAC* can affect SDL serial/USB/BT duplicate selection, but no evidence that MAC changes Steam's gyro mapping directly."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

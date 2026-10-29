@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-codec-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/74e5fab1ef05ea695cc6a59f341242da875a8fe0/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "74e5fab1ef05ea695cc6a59f341242da875a8fe0",
+  "sha256": "e8d5020cbd631cfdcd361fb48c6e4e105460af0e55637ecd0e98677d522b04f5",
+  "lineage": "anderstvoss/virtualgamepad; virtual source model, not physical hardware",
+  "locator": "Activation from inactive with existing child presence uses the default-on compat edge; active mode switches keep one status, AwaitingMode still requires report 0x12. Comments cite merged #65; behavior is unchanged from main cd052cd."
+}

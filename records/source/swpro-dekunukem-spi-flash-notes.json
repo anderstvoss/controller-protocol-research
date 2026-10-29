@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-dekunukem-spi-flash-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/spi_flash_notes.md",
+  "revision": "b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+  "sha256": "72fb87c28d799d0a81a3bafad800d1765f6a19b0778163c6e98f22ed36d41346",
+  "lineage": "dekuNukem-Nintendo-Switch-RE",
+  "locator": "Factory SPI, colours and user-cal magic: lines 90-129; calibration packing 154-245"
+}
