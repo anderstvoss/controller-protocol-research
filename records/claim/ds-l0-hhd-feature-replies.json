@@ -11,7 +11,8 @@
     "scope": "HHD dualsense/__init__.py 195-221. Emulated fixture replies, not an independently captured firmware dump."
   },
   "sources": [
-    "dualsense-uhid-gyro-hhd-device-source"
+    "dualsense-uhid-gyro-hhd-device-source",
+    "ds-community-viiper-protocol"
   ],
   "experiments": [],
   "conflicts_with": [],

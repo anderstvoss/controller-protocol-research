@@ -8,12 +8,11 @@
     "revision": "source revisions: Linux 4056b3c, SDL 535d80b/829a65d, HHD adbd50f and community pinned commits; physical firmware unknown",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "SDL 535d80b 297-320, 435-457; 829a65d detection path. No proof what an individual Steam build queries; copying an emulator's 0x03 cannot substitute for physical spec."
+    "scope": "SDL 535d80b 297-320, 435-457; 829a65d detection path. No proof what an individual Steam build queries; copying an emulator's 0x03 cannot substitute for physical spec. No pinned OpenPuck source file in this claim specifically establishes the shape of Sony feature 0x03; no evidence for that requirement."
   },
   "sources": [
     "audio-sdl-ps5",
-    "dualsense-uhid-gyro-sdl-ps5-3418",
-    "openpuck-ps-layout"
+    "dualsense-uhid-gyro-sdl-ps5-3418"
   ],
   "experiments": [],
   "conflicts_with": [],

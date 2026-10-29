@@ -13,7 +13,8 @@
   "sources": [
     "dualsense-uhid-gyro-hhd-device-source",
     "dualsense-uhid-gyro-hhd-uhid-source",
-    "hhd-dualsense"
+    "hhd-dualsense",
+    "ds-community-nondebug-usb-descriptor"
   ],
   "experiments": [],
   "conflicts_with": [],

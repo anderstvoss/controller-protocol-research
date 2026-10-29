@@ -12,7 +12,9 @@
   },
   "sources": [
     "dualsense-uhid-gyro-hhd-device-source",
-    "hhd-dualsense"
+    "hhd-dualsense",
+    "ds-community-viiper-protocol",
+    "ds-community-nondebug-explorer"
   ],
   "experiments": [],
   "conflicts_with": [],
