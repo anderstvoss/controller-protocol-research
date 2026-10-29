@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-eden-sdl",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/eden-emulator/mirror/blob/26a03d2473787abf3223b2d0e65b291eee00c1e1/src/input_common/drivers/sdl_driver.cpp",
+  "revision": "26a03d2473787abf3223b2d0e65b291eee00c1e1",
+  "sha256": "ff6037c3d2cea0f590053f5517672a0f89d4e17f3c58b13fee1076048d49bb82",
+  "lineage": "eden-emulator",
+  "locator": "19-74 SDL3 bindings, SDL gamepad joystick enumeration/sensor path; Github mirror of upstream, not pinned Eden binary or version acceptance."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-retroarch-udev",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libretro/RetroArch/blob/d164f9ab0b049e499ec7edebb58efba2abd05c54/input/drivers_joypad/udev_joypad.c",
+  "revision": "d164f9ab0b049e499ec7edebb58efba2abd05c54",
+  "sha256": "e31281654aa7598d0ef04cbfc10e409dea79099b06c516bd2a37a7d1cdf4d859",
+  "lineage": "retroarch",
+  "locator": "59-70 udev/evdev hotplug; 120-160 FF, sensor sibling and Sony touchpad; source-level consumer not end-to-end tested."
+}
