@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-sdl3-versions",
+  "statement": "Source pins demonstrate an SDL3 Triton HIDAPI driver and 28de:1302/1303 controller mapping in stable release-3.4.0, absent as a Triton source file at inspected release-3.2.30; release-3.4.10 contains a changed Triton rumble report path and release notes call out a new Steam Controller rumble fix. The supported fact is the public consumer version/source transition, not physical successful haptics or that all apps ship this SDL build. SDL3 3.4.0 driver 281-339 and controller_list.h 605-606; SDL3 3.4.10 driver 594-623.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "SDL tags and pinned public engine documents inspected 2026-10-27; device revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct USB 28de:1302 consumer software; versions and engine middleware only; no live test"
+  },
+  "sources": [
+    "steam-client-sdl3-triton-first-release",
+    "steam-client-sdl3-triton-rumble-release"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

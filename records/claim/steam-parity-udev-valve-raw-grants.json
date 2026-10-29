@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-udev-valve-raw-grants",
+  "statement": "ValveSoftware/steam-devices at 22ec85e5, 60-steam-input.rules lines 1-14 grants MODE 0660 + uaccess to USB vendor 28de ancestry, vendor-matched hidraw, HID hidraw bus IDs 0003/0005/0006, and input vendor 28de when each node's actual match conditions hold. Rules are vendor-wide, not specific 28de:1302/1303/1304/1305; no grant to /dev/uhid is established in the inspected rules. Actual user seat ACLs and synthesized UHID node ancestry: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Valve udev 22ec85e5 / Linux v7.3-rc1 / SDL3 6defbc0 inspected; actual device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct 28de:1302 open path, other 2026 IDs only for conditional permission applicability; no host or physical evidence"
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-sdl3-triton-first-release",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/a962f40bbba175e9716557a25d5d7965f134a3d3/src/joystick/hidapi/SDL_hidapi_steam_triton.c",
+  "revision": "a962f40bbba175e9716557a25d5d7965f134a3d3",
+  "sha256": "8ada77d43c2f3258bd09c304a442771c147ea786f4d707e4a02947b51ef6e463",
+  "lineage": "libsdl",
+  "locator": "SDL3 release-3.4.0: earliest inspected stable release tag with Triton driver; version matrix, no live runtime validation."
+}

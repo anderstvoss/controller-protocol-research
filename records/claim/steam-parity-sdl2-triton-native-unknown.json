@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-sdl2-triton-native-unknown",
+  "statement": "The inspected SDL2 branch at commit 8acf7cfc0f88717e5c036f60f0314bfcafe39189 lists legacy Valve PIDs 1101/1102/1105/1106/1142/1201/1202/1205 but no 28de:1302 in controller_list.h lines 592-603; SDL_hidapi_steam.c 952-993 uses SDL_IsJoystickSteamController and a default-disabled Steam HIDAPI hint. Inferred that its inspected native Steam driver does not explicitly select Triton 1302. Whether the Linux SDL2 evdev fallback accepts a generic 1302 device: No evidence. No claim of absent support in all SDL2 versions.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "SDL tags and pinned public engine documents inspected 2026-10-27; device revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct USB 28de:1302 consumer software; versions and engine middleware only; no live test"
+  },
+  "sources": [
+    "steam-client-sdl2-legacy-steam",
+    "steam-client-sdl2-controller-list"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

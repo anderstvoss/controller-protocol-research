@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-parity-udev-uinput-wakeup",
+  "statement": "Valve Steam input udev rules line 5 apply uaccess with static node to generic /dev/uinput, not conditioned on the Steam 2026 VID/PID, and line 17 enables USB power/wakeup on matching vendor 28de devices with power/wakeup attr. Uinput access potentially permits host-wide input injection; the wakeup action is not a permission grant. Actual host permission provisioning or Steam client use: No evidence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Valve udev 22ec85e5 / Linux v7.3-rc1 / SDL3 6defbc0 inspected; actual device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct 28de:1302 open path, other 2026 IDs only for conditional permission applicability; no host or physical evidence"
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
