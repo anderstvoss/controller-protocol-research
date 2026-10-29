@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "udev-systemd-input-id-hwdb",
+  "kind": "research_lead",
+  "url": "https://github.com/systemd/systemd/blob/ede1e572502d876a7e59f6ef837c1f02f0e931ca/hwdb.d/60-input-id.hwdb",
+  "revision": "ede1e572502d876a7e59f6ef837c1f02f0e931ca",
+  "sha256": "b40698948080f10b907473d379ac6f40ea62afa5f85b88fdd65c651dd71e18dd",
+  "lineage": "systemd-udev",
+  "locator": "input device identification hints and exceptions, not universal controller ACLs"
+}
