@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-linux-rumble-framing",
+  "statement": "Pinned Linux packages an output rumble report with report ID, incrementing packet counter and eight rumble bytes; source frequency/amplitude lookup encodes separate motors and provides evdev FF_RUMBLE via kernel memless callback when compiled.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Output bytes and host FF mapping are consumer code; high-definition actuator waveform response and retail force/intensity fidelity unverified."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

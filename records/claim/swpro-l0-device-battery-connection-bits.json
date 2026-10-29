@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-device-battery-connection-bits",
+  "statement": "Community 0x30 input prefix assigns high battery nibble levels 8/6/4/2/0 for full through empty, with charging flag as its least significant bit, and low connection nibble including host/Switch USB-powered bit 0. OpenPuck synthesizes the fields in byte 2 for emulated battery status.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21 / Linux 4056b3c / SDL 535d80b / OpenPuck 29f4d1e (as cited); retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bluetooth_hid_notes.md 139-148; OpenPuck mode_switch_pro.cpp 387-412, 475-489. Voltage thresholds, transitions and retail battery accuracy unmeasured."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
