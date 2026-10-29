@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-device-xusb-wired20",
+  "statement": "A pinned independent secondary XUSB reference documents Xbox 360 wired USB 045e:028e report type 0x00, 20-byte input with header 00 14: digital buttons and D-pad bits at bytes 2-3, LT/RT at 4-5, four signed 16-bit little-endian stick axes at bytes 6-13, and tail bytes 14-19 typically reserved.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "protoR2 179-202, 528-536, traced to USB Host Shield XBOXUSB parser. Secondary reference only (no retail physical capture or manufacturer XUSB body specification in corpus)."
+  },
+  "sources": [
+    "x360-l0-community-protor2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

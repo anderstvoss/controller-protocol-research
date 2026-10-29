@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-device-xusb-wired-buttons",
+  "statement": "Independent secondary Xbox 360 wired XUSB reference describes two bytes of digital buttons (A/B/X/Y, shoulder/guide, start/back/sticks, D-pad) and eight-bit analog triggers at 4 and 5 in the 20-byte 00 14 input report.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "protoR2 179-202, 530-535. Secondary only; no measured analog threshold, no direct physical observation. Distinct from generic HID usage mapping."
+  },
+  "sources": [
+    "x360-l0-community-protor2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

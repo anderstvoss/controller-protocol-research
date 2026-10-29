@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-xpad-sticks-trigger-ranges",
+  "statement": "xpad exposes stick axes ABS_X, ABS_Y, ABS_RX, ABS_RY with range -32768..32767, fuzz 16 flat 128; left/right trigger ABS_Z, ABS_RZ with 0..255 (unless mapped as BTN_TL2/TR2). Linux xpad inverts stick Y on decode and leaves stick X as signed LE16.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c 452-467, 930-951, 1907-1925, 1973-2025. Compare to SDL semantic values independently; not a generic UHID policy."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

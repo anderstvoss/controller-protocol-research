@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-exp0016-hid-usage-correction",
+  "statement": "The pinned generic HID Button usage ordinal rule explains why an explicit list of button usages must be selected to preserve intended Linux/SDL face semantics for standard-HID UHID, rather than assuming Xbox xpad BTN_X/BTN_Y defaults. B's EXP-0016 demonstrated a corrected virtual HID descriptor with neutral results across three SDL sessions, not actual Microsoft XUSB parity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-input.c 795-835, SDL_gamepad_db.h 798; B x360-vg-exp0016-uhid-individual-correction (156 controls/3 sessions); physical Xbox hardware and native XInput remain untested."
+  },
+  "sources": [
+    "x360-l0-linux-hid-input",
+    "x360-l0-sdl-gamepad-db"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
