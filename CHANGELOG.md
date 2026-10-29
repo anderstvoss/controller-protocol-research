@@ -11,6 +11,9 @@ affected schema's `schema_version`.
   emulator versus documented device evidence, conditional F6 and Linux/SDL/
   Cemu/wiiuse/xwiimote re-probes. Rank creation-time compat, retain W9f
   reporting distinction and defer physical comparison to #52.
+- CI: bump `step-security/harden-runner` to v2.22.3, which fixes block mode
+  dropping allowed connections on GitHub-hosted Linux runners (the cause of
+  stuck CodeQL jobs, anderstvoss/virtualgamepad#260). Egress policy stays `block`.
 
 - Record W9g kernel-first gyro regressions and generic-bound native Dolphin
   MP+Nunchuk decoding with the activation re-attach compat edge. Isolate the
