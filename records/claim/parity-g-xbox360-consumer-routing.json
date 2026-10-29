@@ -8,12 +8,15 @@
     "revision": "source revisions pinned in part 1 and G, host versions not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Consumer-routing documentation only: xpad decodes native XUSB on vendor-specific USB interface and has its own FF/LED; virtualgamepad UHID is deliberately standard HID, decoded via HID usages/evdev and not automatically the SDL XUSB decoder. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run."
+    "scope": "Consumer-routing documentation only: xpad decodes native XUSB on vendor-specific USB interface and has its own FF/LED; virtualgamepad UHID is deliberately standard HID, decoded via HID usages/evdev and not automatically the SDL XUSB decoder. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run. Additional independent source pin: Chromium Gamepad Linux udev input/hidraw enumeration; WebHID has both static and dynamic protection rules. InputPlumber source matching is version-scoped and does not assert a local host pass."
   },
   "sources": [
     "xbox-series-linux-xpad",
     "x360-l0-sdl-hidapi-360-320",
-    "x360-l0-linux-hid-input"
+    "x360-l0-linux-hid-input",
+    "parity-g-chromium-gamepad-linux",
+    "parity-g-chromium-webhid-blocklist",
+    "parity-g-inputplumber-xbox360-profile"
   ],
   "experiments": [],
   "conflicts_with": [],

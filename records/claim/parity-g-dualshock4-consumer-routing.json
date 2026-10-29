@@ -8,12 +8,14 @@
     "revision": "source revisions pinned in part 1 and G, host versions not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "Consumer-routing documentation only: SDL PS4 HIDAPI reads calibration features 0x02 (USB)/0x05 (BT), input 0x01/0x11 and writes lightbar/FF; modern kernel optional firmware 0xA3; historical hid-sony required it. Wine supports BT hidraw fixing. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run."
+    "scope": "Consumer-routing documentation only: SDL PS4 HIDAPI reads calibration features 0x02 (USB)/0x05 (BT), input 0x01/0x11 and writes lightbar/FF; modern kernel optional firmware 0xA3; historical hid-sony required it. Wine supports BT hidraw fixing. No actual Steam, SDL, browser, Wine, InputPlumber or emulator host test was run. Additional independent source pin: Chromium Gamepad Linux udev input/hidraw enumeration; WebHID has both static and dynamic protection rules. InputPlumber source matching is version-scoped and does not assert a local host pass."
   },
   "sources": [
     "audio-linux-hid-playstation",
     "audio-sdl-ps4",
-    "parity-g-wine-winebus"
+    "parity-g-wine-winebus",
+    "parity-g-chromium-gamepad-linux",
+    "parity-g-chromium-webhid-blocklist"
   ],
   "experiments": [],
   "conflicts_with": [],
