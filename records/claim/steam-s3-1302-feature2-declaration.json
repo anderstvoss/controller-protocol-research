@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-s3-1302-feature2-declaration",
+  "statement": "Fresh physical direct-wired 1302 descriptor declares feature IDs 1 and 2, each 63 body bytes (64 including ID). Declaration of feature 2 does not establish wired requests, payload meanings or reply bytes: steam-c6-no-wired-feature2 remains unknown about actual exchange. Judgement: retain the explicit unsupported wired feature-2 policy until a separately authorized physical transaction trace supplies those semantics; do not erase the declared feature from the descriptor.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "owner physical 2026 controller; hardware revision not recorded",
+    "firmware": "not supplied; not inferred from USB device version",
+    "transport": "usb",
+    "scope": "Fresh direct-wired descriptor acquisition through VM USB passthrough; descriptor declarations and reduced USB configuration only, not gameplay or consumer acceptance"
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-s3-physical-descriptor"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
