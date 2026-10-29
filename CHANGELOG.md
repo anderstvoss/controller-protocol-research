@@ -7,6 +7,9 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add a source-only direct-wired Steam Controller 2026 physical-capture plan, bounded USBmon sessions and a fail-closed review-only transfer reducer with tests; no physical or virtual-host execution claimed.
+- Extend the Steam capture plan for an owner-reported transient USB bootloader, paired bare-metal/VM pre-attach enumeration, passive host-command discrimination, version markers per session, and the already merged S3 physical descriptor evidence; no extra hardware observation claimed.
+
 - Capture fresh direct-wired Steam Controller 2026 report descriptor and reduced USB configuration; record physical report declarations, the SDL-only 0x47 deployment mismatch and feature-2 declaration versus unknown wired exchange. No field semantics, consumer acceptance or output effects promoted.
 
 - Add iczero Steam 2026 streaming, feedback, periodic-status and feature research leads plus two July-capture review follow-ups; preserve single-lineage/source-only evidence limits.
