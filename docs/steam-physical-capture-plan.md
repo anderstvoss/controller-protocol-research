@@ -161,7 +161,9 @@ Repeat as separately labelled trials, **fresh attach and new private logs**. No 
 
 ### Session 0 — any Linux; unprivileged physical descriptor and endpoint inventory
 
-**Prereqs:** connected direct USB `28de:1302`, `lsusb` and Python 3. No `sudo`. These commands are safe to run now and are also copied into #159. Run from an empty temporary working directory; private files are **not** for a Git commit.
+**Status: descriptor and main-stage USB interface step complete by research #82**, merged into main as `aeac7a5` (physical experiment `steam-s3-physical-descriptor`): **372 bytes**, raw descriptor SHA-256 `315a037c849ef9510d222ae520bb18c1b72552d26eb116c91b0750901a5c51fd`, **one HID interface** (one configuration; interface 0), two interrupt endpoints (`0x81` IN / `0x01` OUT), no input `0x47` declared, and feature report 2 declared. Firmware and bcdDevice were *not recorded* in #82; feature-2 transactions remain unmeasured. **Keep these Session 0 commands** for a different host and after an owner-observed version change; repeating must not be called first acquisition or double-counted as new evidence.
+
+**Prereqs:** connected direct USB `28de:1302`, `lsusb` and Python 3. No `sudo`. These commands are safe to rerun and are also copied into #159. Run from an empty temporary working directory; private files are **not** for a Git commit.
 
 ```sh
 set -eu
@@ -177,6 +179,8 @@ LC_ALL=C lsusb -v -d 28de:1302 2>/dev/null |
 for d in /sys/bus/usb/devices/*; do
   [ -r "$d/idVendor" ] && [ -r "$d/idProduct" ] || continue
   [ "$(cat "$d/idVendor")" = 28de ] && [ "$(cat "$d/idProduct")" = 1302 ] || continue
+  printf 'bcdDevice device-version marker (not firmware proof): '
+  cat "$d/bcdDevice"
   printf 'configuration interface count: '
   cat "$d/bNumInterfaces"
   for i in "$d":*; do
@@ -188,11 +192,11 @@ for d in /sys/bus/usb/devices/*; do
 done
 ```
 
-**Check:** `wc -c` is expected from July notes to be **372**; mismatch → halt schema/descriptor assumptions and record new version. Source `steam-ibex-linux-driver` predicts direct unified interface and collection-based selection; `lsusb`/sysfs may falsify topology assumption. `lsusb -v` may display other identifying strings not labeled serial: manually inspect the scrubbed text before any publication. If no matched sysfs path, insufficient permissions or more than one device, **stop**; do not choose an arbitrary controller. **Restore:** none; no driver state modified. Private descriptor bytes can be copied to an explicitly reviewed corpus fixture after separate disclosure check; retain full USB configuration offline until scrubbed.
+**Check:** `wc -c` and the one-interface topology have been physically observed in #82; on a repeat, compare against **372 bytes**, one HID interface and endpoints `0x81`/`0x01`. A mismatch or changed `bcdDevice` calls for a distinct version-scoped record; it does not retroactively erase #82. Never infer the firmware version from `bcdDevice`. Stop for any firmware update prompt. Source `steam-ibex-linux-driver` predicts direct unified interface and collection-based selection; `lsusb`/sysfs may falsify topology assumption. `lsusb -v` may display other identifying strings not labeled serial: manually inspect the scrubbed text before any publication. If no matched sysfs path, insufficient permissions or more than one device, **stop**; do not choose an arbitrary controller. **Restore:** none; no driver state modified. Private descriptor bytes can be copied to an explicitly reviewed corpus fixture after separate disclosure check; retain full USB configuration offline until scrubbed.
 
 ### Session 1 — Linux 7.3+ **hid-steam bound**; usbmon bidirectional registration, evdev, IMU, Menu, rumble and unplug
 
-**Prereqs:** already-installed `usbmon` + `tshark` (or text usbmon reader), `evtest` and optional `fftest`; consent to monitor the *entire USB bus* privately. Check `uname -r`, `lsusb -d 28de:1302` and the `driver` symlink of the matched HID device. If it is not `hid-steam`, **stop S1**, do not force bind. Temporarily close Steam, SDL and other client readers; only this host state permits the expected kernel evdev path. Find the matched bus/device number locally, not from static examples.
+**Prereqs:** record S1's `bcdDevice` device-version marker via the S0 sysfs command and any passively observed, positively identified `0x83` firmware/version attribute (or `not observed`), plus kernel and driver binding; never infer firmware from a device-version marker. Stop if an update prompt appears. Already-installed `usbmon` + `tshark` (or text usbmon reader), `evtest` and optional `fftest`; consent to monitor the *entire USB bus* privately. Check `uname -r`, `lsusb -d 28de:1302` and the `driver` symlink of the matched HID device. If it is not `hid-steam`, **stop S1**, do not force bind. Temporarily close Steam, SDL and other client readers; only this host state permits the expected kernel evdev path. Find the matched bus/device number locally, not from static examples.
 
 ```sh
 uname -r
@@ -219,7 +223,7 @@ In **terminal B**, while capture is running: (1) manually unplug/replug to inclu
 
 ### Session 2 — same host; SDL3 3.4.10+ `testcontroller` and controlled input diffs
 
-**Prereqs:** `hid-steam` remains bound, Steam not running, `testcontroller` compiled/installed from an identified SDL3 **3.4.10 or later** that includes Triton HIDAPI; version and library path verified locally. A system `pkg-config` version alone **does not** prove this executable's linked version. Do not assume SDL calls sensor enable or rumble automatically; exercise those controls in the application if supported and mark unavailable functions as blocked.
+**Prereqs:** record S2's `bcdDevice` device-version marker and a passively identified `0x83` version attribute or `not observed`; stop for update prompt. `hid-steam` remains bound, Steam not running, `testcontroller` compiled/installed from an identified SDL3 **3.4.10 or later** that includes Triton HIDAPI; version and library path verified locally. A system `pkg-config` version alone **does not** prove this executable's linked version. Do not assume SDL calls sensor enable or rumble automatically; exercise those controls in the application if supported and mark unavailable functions as blocked.
 
 ```sh
 pkg-config --modversion sdl3
@@ -239,13 +243,15 @@ Using the UI, **if it provides the control**: opt into accel/gyro then disable (
 
 ### Session 3 — optional, Anders-controlled Steam client (passive)
 
-**Prereqs:** explicit user consent and chosen account; never enter credentials under a recorder. Avoid chat, browser, purchase, cloud configuration and Steam account fields during recording. Start only after S1/S2 have clean baselines. In terminal A run the same `sudo timeout --signal=INT 180 tshark -i usbmonBUS -w steam-p1-private/s3-bus-PRIVATE.pcapng` (sudo solely for usbmon). In terminal B Anders starts **Steam manually** after capture begins, observes discovery, a neutral window, one input, optional *Identify/Ping* once with low output, close/exit, then watches lizard fallback and unplug/replug. Do not run any command that reads Steam profile/account files. **Expected:** Steam's physical host requests, liveness and order are **No evidence**; record every observed report ID/feature command plus host output, return status, relative time and user-visible effect without declaring an API acceptance. Observe any `0x44` after haptics or `0x86..0x89` only *passively*. Do not play/capture arbitrary audio streams, write unknown feature commands, or modify Steam settings for the study. **Stop:** privacy spillover, app/account telemetry on bus, unexpected update/firmware prompt, unwanted effects. **Restore:** close Steam and capture, verify original device use; omit S3 entirely if not approved.
+**Prereqs:** record S3's `bcdDevice` device-version marker and a passively observed, positively identified `0x83` version attribute or `not observed`. **Stop, do not accept, any firmware update prompt.** Explicit user consent and chosen account; never enter credentials under a recorder. Avoid chat, browser, purchase, cloud configuration and Steam account fields during recording. Start only after S1/S2 have clean baselines. In terminal A run the same `sudo timeout --signal=INT 180 tshark -i usbmonBUS -w steam-p1-private/s3-bus-PRIVATE.pcapng` (sudo solely for usbmon). In terminal B Anders starts **Steam manually** after capture begins, observes discovery, a neutral window, one input, optional *Identify/Ping* once with low output, close/exit, then watches lizard fallback and unplug/replug. Do not run any command that reads Steam profile/account files. **Expected:** Steam's physical host requests, liveness and order are **No evidence**; record every observed report ID/feature command plus host output, return status, relative time and user-visible effect without declaring an API acceptance. Observe any `0x44` after haptics or `0x86..0x89` only *passively*. Do not play/capture arbitrary audio streams, write unknown feature commands, or modify Steam settings for the study. **Stop:** privacy spillover, app/account telemetry on bus, unexpected update/firmware prompt, unwanted effects. **Restore:** close Steam and capture, verify original device use; omit S3 entirely if not approved.
 
 ### Interpretation and boundaries
 
 Record each row as `observed`, `not observed during bounded window`, `blocked` or `inconclusive`, including explicit denominator/window duration and USB capture loss count. Never translate a 10-second report count into 1 kHz hardware polling or assume SDL's 4032 µs rate was measured. A generic `fftest`/evdev success proves kernel output behavior only; SDL's `testcontroller` success is an **actual consumer observation**, not virtualgamepad/UHID acceptance. Compare separate bound/unbound and client-opening-order scenarios only under a later explicitly authorized session.
 
 ## C. Private capture reduction, disclosure and publication
+
+**Session E enumeration disclosure:** Even a filtered udev log may show unrelated USB product IDs and unexpected identifying properties. Keep both unfiltered kernel logs and filtered udev event logs private. **Manually reduce** to attributable bootloader/main stage VID:PID, interface *class numbers*, relative times, bcdDevice version markers and generic host type/hypervisor/passthrough category; remove host paths, VM names, USB port topology, serials, MAC addresses, unique IDs and absolute timestamps. The existing HID payload reducer does **not** accept raw udev/dmesg as input. A passive `0x83` reply may contain serial or calibration data: retain a version-like value only if separately identified and reviewed for publication, otherwise publish only attribute ID/length or `not observed`. No VM-only negative is physical bare-metal evidence.
 
 **Threat model:** usbmon records the *whole bus*, including unrelated devices, every HID/feature payload, USB string descriptors, hardware unique IDs, and sometimes sensitive on-device input. **Never** commit raw `.pcapng`, unfiltered usbmon text, local sysfs paths, full `lsusb`, a trace with user names/account data, serial values, Bluetooth/MAC addresses, hostnames, full URB IDs or wall-clock times. Use a dedicated quiet bus if possible and verify no unrelated device traffic. The literal USB iSerial and feature-`0xae` serial reply **must be dropped or salted/hash summarized**, never copied verbatim. `0x83` attributes may include unique identifiers; withhold raw attribute bodies until field-level review. Preserve HID **report descriptor bytes**, report ID/length/direction, and non-identifying *input/output report payloads*, including unknown extension bytes, only after a human review and per-frame allowlist. Preserve raw artifacts **offline**, never in a public issue.
 
