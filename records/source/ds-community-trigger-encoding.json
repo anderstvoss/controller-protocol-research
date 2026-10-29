@@ -4,7 +4,7 @@
   "kind": "research_lead",
   "url": "https://github.com/iamdevmarcos/dualsense-controller/blob/455feab53c311a5a9788bdc44d48c00675e4c9ed/controller/adaptive-triggers.js",
   "revision": "455feab53c311a5a9788bdc44d48c00675e4c9ed",
-  "sha256": "000000000000000000000000000000008e221ee1703030611a986a47c58411e2",
+  "sha256": "665231acac84519d859b82723c8dba4faf712cb3863b50189abe4349119ce5ca",
   "lineage": "iamdevmarcos-dualsense-controller",
   "locator": "output 0x02 flags and 11-byte adaptive trigger modes 65-105; software encoder model only"
 }

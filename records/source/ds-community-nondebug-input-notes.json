@@ -4,7 +4,7 @@
   "kind": "research_lead",
   "url": "https://github.com/nondebug/dualsense/blob/02338358b6b4be2d64dbf661ae2a47842156cfcf/README.md",
   "revision": "02338358b6b4be2d64dbf661ae2a47842156cfcf",
-  "sha256": "00000000000000000000000000000000324a5599c1f6a506162b1ea3568352c4",
+  "sha256": "d5c93082c34af2d0b17000a5b18a59aaeec8935401961103195d96d3100aea20",
   "lineage": "nondebug-dualsense",
   "locator": "input USB 0x01 and button/trigger map lines 99-148; Bluetooth 151-192"
 }
