@@ -7,8 +7,8 @@
     "controller": "switch-pro",
     "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
     "firmware": "not measured",
-    "transport": "source_only",
-    "scope": "Host encoding and OpenPuck motor reduction do not establish the actual actuator function."
+    "transport": "usb",
+    "scope": "Host encoding and OpenPuck motor reduction do not establish the actual actuator function. USB baseline first; separate Bluetooth bench remains required."
   },
   "sources": [
     "audio-linux-hid-nintendo",

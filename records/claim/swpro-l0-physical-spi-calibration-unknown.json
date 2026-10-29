@@ -7,7 +7,7 @@
     "controller": "switch-pro",
     "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
     "firmware": "not measured",
-    "transport": "source_only",
+    "transport": "usb",
     "scope": "Addresses are source backed, but EEPROM/SPI model and correction values must be verified against owner-authorized reference."
   },
   "sources": [

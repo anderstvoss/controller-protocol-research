@@ -7,7 +7,7 @@
     "controller": "switch-pro",
     "revision": "source revisions Linux 4056b3c, SDL 535d80b, OpenPuck 29f4d1e; physical device revision unmeasured",
     "firmware": "not measured",
-    "transport": "source_only",
+    "transport": "bluetooth",
     "scope": "Linux/SDL Bluetooth paths are consumer expectations; no radio sniff or physical device fixture."
   },
   "sources": [
