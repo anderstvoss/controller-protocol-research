@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9f-reporting-codec-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "c60c16409e91e39ddba56a78475bdabe3780d1d0",
+  "sha256": "f4d50d8e4ed62016f72a07be4438aaad0f14992f4322c8f081ec2ec7203ae7cc",
+  "lineage": "anderstvoss/virtualgamepad; current modeled reporting state machine, not physical behavior",
+  "locator": "accept changes Reporting to AwaitingMode when mp_mode changes; input suppresses data in AwaitingMode; output 0x12 resumes Reporting::Running. W9f observes a missing post-map report-mode request. No policy fix or faithful inference."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plustrace-cemu-builtin-identity-nonactivation",
+  "statement": "Pinned Cemu reads A600FA/6 but matches response solely by low 16-bit FA, sharing handler with A400FA. Its builtin inactive A4200005 branch only notes inactive MP, while external A6200005 branch activates with A600F0=55 and A600FE=04. Status also branches to EEPROM 0016/8, optional normal A400FA/6, and Cemu reads A40020/16 child calibration rather than F6/40. This pinned consumer limitation does not authorize inventing external identity for a retail TR Plus or claiming decoded gyro.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR/Gen 2 pinned consumer paths; no retail or firmware revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu WiimoteControllerProvider.cpp 55-70,239-380,925-950,1012-1045; WiimoteMessages.h 25-60. Static source only. All acceptance/physical experiments explicitly not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-cemu-provider-29f",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

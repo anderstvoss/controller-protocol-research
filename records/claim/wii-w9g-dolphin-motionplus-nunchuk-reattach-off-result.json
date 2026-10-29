@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-result",
+  "statement": "With re-attach off and both register shims on, Dolphin does not re-send 0x12 after mode 05, never reads F6, and receives zero post-map MP or child frames over 180 seconds, reproducing W9f. Native post-map A400F0=55 count is zero. Scope is virtual Original with hid-wiimote not bound, test/dev under #258; not game, radio, physical, release or Plus acceptance.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original / virtual Wii Remote PID 0306; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9g native Dolphin 2503, generic-bound test/dev only under #258, imported caller synthetic calibration and specified independent compat flags. UI decoded oracle is separate from raw transport and frame counts. No Plus, Cemu, radio, physical, game or release acceptance."
+  },
+  "sources": [
+    "wii-w9g-activation-codec-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [
+    "wii-w9g-dolphin-motionplus-nunchuk-reattach-off-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "wii-p1-sdl-motionplus-nunchuk-result",
+  "statement": "SDL 3.2.10 Plus MP+Nunchuk opens the exact-owned HIDAPI joystick during a 60-second poll with no disconnect/removal. An explicit concurrent kernel MP-event holder sees changing gyro. SDL exposes/enables gyro but all polled angular arrays remain zero. No changing decoded SDL gyro is established; capability or successful value polling is not delivery. The underlying virtual gyro is not physically zero and no model fix follows. This is a bounded consumer observation with a holder precondition, not general SDL acceptance.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Tr / virtual Wii Remote Plus, Bluetooth PID 0330; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. Plus-specific kernel-bound software experiment at P1 code PR head; no Original inheritance. Source default built-in identity, caller synthetic calibration, no physical/radio/rate/game/challenge evidence. #258 release gate remains for special-driver windows."
+  },
+  "sources": [
+    "wii-p1-plus-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [
+    "wii-p1-sdl-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

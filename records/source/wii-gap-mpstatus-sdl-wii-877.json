@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-sdl-wii-877",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/hidapi/SDL_hidapi_wii.c",
+  "revision": "877399b2b2cf21e67554ed9046410f268ce1d1b2",
+  "sha256": "6e4693d2b165ec1fa8cbdeec988d3825890192e24db45f9bc2059f2f4c63f959",
+  "lineage": "libsdl-org/SDL",
+  "locator": "SDL zlib licence. MP state/reset 370-492, initialization 677-820, status and staged FE probes 1350-1432, periodic check 1540-1568."
+}
