@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "udev-systemd-uaccess",
-  "kind": "kernel_source",
+  "kind": "compatibility_implementation",
   "url": "https://github.com/systemd/systemd/blob/ede1e572502d876a7e59f6ef837c1f02f0e931ca/rules.d/70-uaccess.rules.in",
   "revision": "ede1e572502d876a7e59f6ef837c1f02f0e931ca",
   "sha256": "54b8509d61ac662e92b5635df8c12735cfcca9f5756713f4aa49cd50a869d7dd",
