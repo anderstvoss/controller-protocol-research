@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-independent-consumer",
+  "permission": "Owner ran the 2.064523-second ignore-special window, restored/read back 0, then verified/granted four exact virtual candidates. Agent revalidated identity, linkage, generic binding and access before consumers. No agent sudo or persistent policy.",
+  "config": {
+    "consumer_role": true,
+    "revision": "Tr / virtual Wii Remote Plus PID 0330",
+    "binding": "hid-generic",
+    "hid_wiimote_bound": false,
+    "binding_scope": "test/dev only; #258 gates release use",
+    "seconds_bound": 180,
+    "owner_window": {
+      "initial_value": 0,
+      "restored_value": 0,
+      "creation_complete": true,
+      "window_seconds": 2.064523
+    },
+    "creation_options": {
+      "motionplus_activation_reattach_status": true,
+      "motionplus_passthrough_id_mirror": true,
+      "motionplus_passthrough_calibration_copy": true,
+      "motionplus_inactive_id_external_style": false
+    },
+    "synthetic_resources": {
+      "synthetic": true,
+      "factory_or_physical_calibration": false,
+      "eeprom_length": 42,
+      "eeprom_sha256": "d2a775ab613d7f88d81b3298643440b03ff2c7bb4d1a024e2d6e5e3f5b5ad3a8",
+      "motionplus_length": 32,
+      "motionplus_sha256": "b8487195d07cf540a5785c580d138790a2990404da7b52102d189fd989540953",
+      "nunchuk_length": 16,
+      "nunchuk_sha256": "d5a462f17e6e9b136cf1c3487201fb1ed631e7d3b837c69418d0323eb68f7421",
+      "classic": {
+        "synthetic": true,
+        "classic_sha256": "0004980225a9ff9cb8aad02512d856f14e4b9ce9b77e50ecc4c643e0b2d99a09",
+        "length": 16,
+        "source_records": [
+          "wii-c5-classic-cpp",
+          "wii-c5-classic-h",
+          "wii-gap-dolphin-classic-calibration-layout",
+          "wii-gap-dolphin-calibration-additive-checksums"
+        ],
+        "source_constants": {
+          "center_8_bit": 128,
+          "gate_radius_8_bit": 97,
+          "trigger_neutral": 0
+        },
+        "no_retail_factory_or_hardware_claim": true
+      }
+    },
+    "first_unpassed_checkpoint": "None through bounded decoded gyro and Nunchuk stick.",
+    "gyro_calibration_period_seconds": 0,
+    "no_real_slots": true,
+    "no_game_content": true,
+    "no_radio": true,
+    "correct_signed_stick_bindings": true,
+    "profile_name_sources": [
+      "wii-w8-dolphin-2503-input",
+      "wii-c5-classic-h"
+    ],
+    "source_expected_inactive_identity_suffix": "A4200005",
+    "identity_scope": "Configured source policy; no claim that native Dolphin read the entire inactive identity."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "6.12.113+deb13-arm64",
+    "architecture": "aarch64",
+    "git_sha": "74e5fab1ef05ea695cc6a59f341242da875a8fe0",
+    "behavior_baseline_main": "cd052cdc4b22a999ec8b8438191dd727aa32d110",
+    "actual_probe_source_sha256": "3c623fc8b2ae18d36923a1bf0d6cb47a7ffbaed65c8afc559269a2e2bbf57407",
+    "actual_probe_binary_sha256": "7a6f1aac6b6c3717685064756027e7ac24dd5b178ea6f8ffff38ea12dda30141",
+    "original_private_artifact_sha256": "3fb9451a54daffe30f43c0b947c250e9120a066eb8561b2be20f2a98f30341c5",
+    "private_digest_input_order": "native raw I/O, initial emitted profile, UI observation receipt",
+    "consumer": "native Dolphin 2503 ControllerInterface with isolated emulated profile",
+    "consumer_package": "2503+dfsg-1+deb13u1",
+    "consumer_binary_sha256": "bfadb09c1578e8e042fcd9d20ea6ffc540b6440452c14495f5db3527030440a1",
+    "observation_hook_sha256": "ec812ff1fc73a088be2b45761e3e250591e9d79a543868cc35ac602760d99139",
+    "observation_guard_scope": "Exact-owned raw allowlist and blocked foreign raw/input/USB/Bluetooth radio attempts; observation aid, not a complete sandbox.",
+    "runner_source_sha256": "f23e126c6724cd2b3db9f4c28f58a4a781385f54ba520cc169508a45fc78edce",
+    "reducer_source_sha256": "a4e53db132dc2b91285618673d7c574ed7973db04a49b3b30343d06544f41658",
+    "dense_stick_sampler_source_sha256": "9e30468dac6a0a887bbe9b328e55e656de826fe736b7a82ae1257a3fdb33a628",
+    "distinct_decoded_stick_positions_sampled": 2,
+    "preliminary_run": {
+      "io_sha256": "c90288066ed8a6d62aa45c1e53c7f32e74d64b509f5cc1d3b9553e44133924c0",
+      "changing_stick_qualified": false,
+      "used_for_complete_stick_acceptance": false,
+      "reason": "Both saved stick snapshots hit the same stimulus phase. Preliminary data is retained separately; a fresh repeat with dense owned-window sampling supplies the accepted result and counts."
+    }
+  },
+  "resources": {
+    "owned_consumer_children_gone": true,
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "owned_led_nodes_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "Bounded functional observation; no timing acceptance or latency measurement"
+        }
+      },
+      "observations": {
+        "native_transport": {
+          "expected_mode": 5,
+          "mapped_mode": 5,
+          "post_map_mode_37_resent": true,
+          "post_map_read_requests": [
+            {
+              "bank": "0xa4",
+              "address": 32,
+              "length": 32,
+              "count": 1
+            },
+            {
+              "bank": "0xa4",
+              "address": 64,
+              "length": 16,
+              "count": 1
+            },
+            {
+              "bank": "0xa4",
+              "address": 246,
+              "length": 4,
+              "count": 1
+            },
+            {
+              "bank": "0xa4",
+              "address": 250,
+              "length": 6,
+              "count": 1
+            }
+          ],
+          "post_map_read_replies": [
+            {
+              "address": 32,
+              "error": 0,
+              "count": 1
+            },
+            {
+              "address": 48,
+              "error": 0,
+              "count": 1
+            },
+            {
+              "address": 64,
+              "error": 0,
+              "count": 1
+            },
+            {
+              "address": 246,
+              "error": 0,
+              "count": 1
+            },
+            {
+              "address": 250,
+              "error": 0,
+              "count": 1
+            }
+          ],
+          "f6_success": true,
+          "f7_fixed_byte": 2,
+          "mp_calibration_matches_import": true,
+          "child_calibration_matches_import": true,
+          "post_map_frames": {
+            "mp": 4484,
+            "child": 4483,
+            "mp_per_full_consumer_second": 24.911111,
+            "child_per_full_consumer_second": 24.905556,
+            "denominator_seconds": 180,
+            "scope": "Full bounded consumer lifetime including setup; only frames after first map counted. Not a guaranteed or physical rate."
+          },
+          "pre_map_report37_count": 28,
+          "native_post_map_a400f0_55": 0,
+          "native_post_map_a600f0_55": 0,
+          "raw_trace_is_decoded_gyro_oracle": false
+        },
+        "mapping_ui": {
+          "changing_gyro_observed": true,
+          "changing_nunchuk_stick_observed": true,
+          "changing_accelerometer_observed": true,
+          "changing_ir_observed": true,
+          "all_buttons_or_physical_rates_qualified": false,
+          "scope": "Dense owned-window stick sampling captured two opposite decoded positions; independent motion screenshots show changing gyro/accel/IR. Default external-style ID option false. No Original acceptance inherited."
+        },
+        "first_unpassed_checkpoint": "None through bounded decoded gyro and Nunchuk stick.",
+        "source_control_scope": "No production model/API/codec/descriptor modification or consumer workaround. Only declared creation flags differ."
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "passed",
+    "semantic_outcome": "Tr MP+Nunchuk with default built-in inactive ID option passes native Dolphin bounded decoded gyro and Nunchuk stick with re-attach and both shims on. Mode 05, report-mode resend, F6 and both imported calibration blocks succeed. Independent dense owned-window samples qualify stick change; raw frames are not the decoded oracle. No Original pass is inherited; preliminary insufficient stick sampling is excluded from accepted repeat. No physical/radio/game/release/timing or whole-controller qualification."
+  }
+}

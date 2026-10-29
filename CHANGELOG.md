@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record W9h kernel-bound Plus regression, isolated Original Nunchuk copy-off
+  calibration gate, Original Classic mode 07 and separate Plus default/external
+  ID native Dolphin passes. Preserve decoded UI versus raw data, preliminary
+  sampling limits, synthetic caller provenance and generic-binding release gate.
+
 - CI: harden-runner uses `audit` instead of `block` on the macOS and Windows
   policy-check legs; its pre-step ignores the step-level `if` and block mode
   broke Windows DNS and revocation lookups (anderstvoss/virtualgamepad#260).
