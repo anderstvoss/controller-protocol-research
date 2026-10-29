@@ -272,6 +272,43 @@ The output retains per-report **relative** time, ID, direction, length and expli
 
 Use the existing schemas exactly. Templates below are **illustrative payloads** to fill in after execution, not pre-existing experiments or physical claims. Each session has independent IDs; retain `not_run` until its run is performed. Add the `records/experiment/` and `records/claim/` files only when a source pointer, outcome and reviewed evidence exist. If a real physical claim is to be upgraded to `physically_observed`/`physically_validated`, `tools/validate.py` requires a passed `controlled_physical` experiment **and linked physical fixture referencing that claim**; notes alone cannot satisfy the gate.
 
+**Dedicated Session E experiment skeletons — distinct host observations, not executed:** Use the existing `experiment.schema.json` fields only. Host/hypervisor/passthrough and firmware **markers** belong in the `procedure` and eventually the reviewed `semantic_outcome`, rather than invented JSON properties. Keep full private host metadata off-repo. The `sc2-src-dissector` source shares the earlier research lineage and is only a hypothesis source; it is not boot-sequence confirmation.
+
+```json
+{
+  "schema_version": 1,
+  "id": "steam-p1-e-bare-metal-experiment",
+  "kind": "controlled_physical",
+  "status": "not_run",
+  "sources": ["sc2-src-capture-notes-2026", "sc2-src-dissector"],
+  "fixtures": [],
+  "procedure": "E bare-metal: kernel=<to record>; host_type=bare_metal; hypervisor=none; passthrough=none; E1-E5 trials; boot VID:PID/classes and bcdDevice device-version markers=<not run>; main 1302 bcdDevice=<not run>; passive 0x83 firmware attribute=<not observed>; monotonic add/remove relative times; usbmon optional/authorized only.",
+  "semantic_outcome": null
+}
+```
+
+```json
+{
+  "schema_version": 1,
+  "id": "steam-p1-e-vm-experiment",
+  "kind": "controlled_physical",
+  "status": "not_run",
+  "sources": ["sc2-src-capture-notes-2026", "sc2-src-dissector"],
+  "fixtures": [],
+  "procedure": "E VM: kernel=<to record>; host_type=vm; hypervisor family=<to record>; USB passthrough method=<to record>; E1-E5 trials; host may see bootloader before guest; boot/main bcdDevice device-version markers=<not run>; passive 0x83 firmware attribute=<not observed>; compare only to independently recorded bare-metal experiment.",
+  "semantic_outcome": null
+}
+```
+
+**Version-marker slots are required in *every* session's own experiment `procedure`:** `bcdDevice=<hex-or-not-observed> (device-version marker only)`, `0x83_firmware_attribute=<passively-identified-safe-marker-or-not-observed>`, host type, kernel/build, and whether an update prompt appeared (`no` or `stopped`). Record version at session start, rather than carrying forward #82's unknown marker; Steam can change the firmware between runs. A version attribute must not be guessed from a numeric ID. For an eventual claim use `applicability.firmware = "unverified; bcdDevice marker XX"` unless actual firmware identity was independently verified; never promote the version marker as firmware proof.
+
+| Planned session experiment ID | Per-session `procedure` additions (template values, not facts) |
+| --- | --- |
+| `steam-p1-s0-descriptor-experiment` | `host_type=...; kernel=...; bcdDevice=...; 0x83_firmware_attribute=not observed (unless separately observed); #82 descriptor comparison=...; update_prompt=no/stopped` |
+| `steam-p1-s1-kernel-experiment` | `host_type=...; kernel=...; hid-steam binding=...; bcdDevice=...; 0x83_firmware_attribute=...; update_prompt=no/stopped` |
+| `steam-p1-s2-sdl-experiment` | `host_type=...; kernel=...; SDL3 binary/version=...; bcdDevice=...; 0x83_firmware_attribute=...; update_prompt=no/stopped` |
+| `steam-p1-s3-steam-experiment` | `host_type=...; kernel=...; Steam build (no account data)=...; bcdDevice=...; 0x83_firmware_attribute=...; update_prompt=no/stopped` |
+
 ```json
 {
   "schema_version": 1,
@@ -280,7 +317,7 @@ Use the existing schemas exactly. Templates below are **illustrative payloads** 
   "status": "not_run",
   "sources": ["sc2-src-capture-notes-2026"],
   "fixtures": [],
-  "procedure": "S0: sysfs HID report descriptor, scrubbed USB config/interface/endpoint inventory on physical direct 1302; read-only ordinary user.",
+  "procedure": "S0 repeat: compare with #82 physical descriptor and USB topology via read-only sysfs; host_type=<to record>; kernel=<to record>; bcdDevice=<version marker or not observed, not firmware proof>; 0x83_firmware_attribute=<passive safe marker or not observed>; update_prompt=no/stopped.",
   "semantic_outcome": null
 }
 ```
@@ -291,12 +328,12 @@ S1/S2/S3 experiment IDs `steam-p1-s1-kernel-experiment`, `steam-p1-s2-sdl-experi
 {
   "schema_version": 1,
   "id": "steam-p1-s0-descriptor-claim",
-  "statement": "TO REPLACE ONLY AFTER S0: report descriptor bytes/hash, USB interface and endpoint topology with a bounded physical outcome; never include identifiers.",
+  "statement": "TO REPLACE ONLY AFTER AN ACTUAL S0 RERUN: independent comparison against the already observed #82 372-byte descriptor and interface shape, noting only version-specific differences; do not duplicate #82 as a new run.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
     "revision": "physical revision to be recorded non-identifyingly",
-    "firmware": "unmeasured unless safely verified",
+    "firmware": "unverified; record bcdDevice version marker separately, not firmware proof",
     "transport": "usb",
     "scope": "S0 direct wired authentic physical device; not an emulated host test"
   },
