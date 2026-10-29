@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-hidinput-button-usage-list",
+  "statement": "Linux hid-input maps HID Button usage n from 1 through 16 under a Game Pad application to BTN_GAMEPAD + (n-1), and higher buttons to BTN_TRIGGER_HAPPY offsets. Because generic HID Button usage positions are ordinal, they do not automatically equal xpad's legacy BTN_X/BTN_Y codes; explicit descriptor usage list matters for X/Y, as EXP-0016 demonstrated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-input.c 795-835; EXP-0016 B record x360-vg-exp0016-uhid-individual-correction reports correction, but the historic run did not demonstrate xpad/XUSB binding."
+  },
+  "sources": [
+    "x360-l0-linux-hid-input"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

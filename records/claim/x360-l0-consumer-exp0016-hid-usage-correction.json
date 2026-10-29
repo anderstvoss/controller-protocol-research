@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-exp0016-hid-usage-correction",
+  "statement": "EXP-0016 identifies the precise standard-HID descriptor correction: instead of consecutive Button usages 1–16, declare usages 1,2,4,5,7,8,11,12,13,14,15 followed by five constant padding bits. Linux hid-input maps Game Pad usage n through BTN_GAMEPAD + n-1, and the corrected descriptor yields expected legacy xpad X/Y numeric assignments 307/308 without changing report length, button-packing order or axes. The B virtual UHID test is SDL Linux-event/evdev acceptance, not native XUSB.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "virtualgamepad pinned EXP-0016 lines 26–47, 63–68 and B x360-vg-exp0016-uhid-individual-correction; kernel hid-input.c 795–835 and xpad.c 420–450, 921–928; SDL_gamepad_db.h 798. Historical UHID source evidence; not Steam/Eden retest or physical XUSB validation."
+  },
+  "sources": [
+    "x360-l0-linux-hid-input",
+    "x360-l0-sdl-gamepad-db",
+    "vg-alpha1-exp0016"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

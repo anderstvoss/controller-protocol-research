@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-xpad-id-usb-binding",
+  "statement": "Linux xpad.c identifies 045e:028e as wired XTYPE_XBOX360 and 045e:0719 as XTYPE_XBOX360W with D-pad button mapping. It is a USB driver for vendor-specific Xbox interface classification and is not invoked merely because a UHID device uses Xbox-like VID/PID.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c 118-132, 477-503, 2103-2112; a standard-HID UHID device has no USB interface for xpad to bind. Consumer binding fact, not device descriptor proof."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

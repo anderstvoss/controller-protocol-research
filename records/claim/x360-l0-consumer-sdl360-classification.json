@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-sdl360-classification",
+  "statement": "SDL 3.2.0 Xbox 360 HIDAPI eligibility requires SDL_GAMEPAD_TYPE_XBOX360, rejects the 045e:0719 wireless receiver and chatpad interfaces >0; on macOS typically defers wired controllers to GCController except Steam virtual exception. SDL hidapijoystick chooses a matching enabled driver via IsSupportedDevice, so standard-HID presentation cannot be assumed to run its XUSB decoder from VID/PID alone.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_xbox360.c 62-95 and 829a65d 86-129; SDL_hidapijoystick.c 262, 312-346,470-477. Need instrument actual SDL backend/driver in the #148 lab to decide which path ran."
+  },
+  "sources": [
+    "x360-l0-sdl-hidapi-360-320",
+    "x360-l0-sdl-hidapi-360-3418",
+    "x360-l0-sdl-hidapi-routing"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

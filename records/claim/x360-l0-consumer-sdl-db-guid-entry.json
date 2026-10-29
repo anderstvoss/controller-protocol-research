@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-sdl-db-guid-entry",
+  "statement": "SDL_gamepad_db.h at 535d80b has a Linux GUID mapping entry for Microsoft 045e:028e (030000005e0400008e02000010010000) defining A/B, shoulders, D-pad hat, trigger axes and sticks for evdev-style joystick; other platform variants exist. This maps recognized controls; it does not prove HIDAPI XUSB attachment or physical controller identity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_gamepad_db.h 798 (Linux) and 838 (other platform) and 535 (Atari-branded variant); preserve GUID/version/platform specificity."
+  },
+  "sources": [
+    "x360-l0-sdl-gamepad-db"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

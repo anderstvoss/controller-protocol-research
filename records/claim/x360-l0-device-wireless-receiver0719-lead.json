@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-device-wireless-receiver0719-lead",
+  "statement": "Independent community and wireless-receiver implementation document the 045e:0719 USB receiver as its own multi-slot proprietary 2.4 GHz protocol gateway, not a wired 045e:028e controller or ordinary Bluetooth controller; per-slot status/disconnect and prefixed controller reports differ.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "protoR2 203-230; x360w README wireless receiver protocol cheatsheet and stated original receiver testing; Free60 archived GamePad.md 35-69 covers only wireless connector pinouts (not input frame). Future lead only, no receiver capture in this corpus."
+  },
+  "sources": [
+    "x360-l0-community-protor2",
+    "x360-l0-wireless-x360w",
+    "x360-l0-free60-archived-gamepad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

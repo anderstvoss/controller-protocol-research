@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-usbhost-wired",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/felis/USB_Host_Shield_2.0/blob/e5bc9950ba5389b67ad99175c312154af53df71d/XBOXUSB.cpp",
+  "revision": "e5bc9950ba5389b67ad99175c312154af53df71d",
+  "sha256": "407bba7b654fefcdb20d471ab96930f2b4187d7403b058b2130b9f8f2f8861e6",
+  "lineage": "usb-host-shield",
+  "locator": "XBOXUSB.cpp wired controller report decode, setLedRaw 0x01 0x03, setRumbleOn 0x00 0x08; source line ranges verified in pinned revision"
+}

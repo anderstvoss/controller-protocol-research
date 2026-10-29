@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-consumer-sdl-backend-selection-unmeasured",
+  "statement": "The pinned consumer code cannot determine whether SDL, Steam or Eden currently routes a specific virtualgamepad UHID instance through Xbox360 HIDAPI, evdev SDL gamepad mapping or a generic HID path without exact GUID/interface, driver debug selection and application build from a live test.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "No evidence of a pinned current Steam/Eden backend trace resolving #148; source-only selection rules cannot be promoted to a run result."
+  },
+  "sources": [
+    "x360-l0-sdl-hidapi-360-320",
+    "x360-l0-sdl-hidapi-routing",
+    "x360-l0-sdl-gamepad-db"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

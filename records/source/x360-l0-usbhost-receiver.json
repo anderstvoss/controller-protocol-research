@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-usbhost-receiver",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/felis/USB_Host_Shield_2.0/blob/e5bc9950ba5389b67ad99175c312154af53df71d/XBOXRECV.cpp",
+  "revision": "e5bc9950ba5389b67ad99175c312154af53df71d",
+  "sha256": "e9d8e6361406d617625c90d618a0a9c25297a7f79f0b739834371bc0ee861d09",
+  "lineage": "usb-host-shield",
+  "locator": "XBOXRECV.cpp receiver status, slots, distinct 12-byte wireless LED/rumble commands; no direct retail wire capture"
+}

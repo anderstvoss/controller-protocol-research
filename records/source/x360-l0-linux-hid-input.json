@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "x360-l0-linux-hid-input",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-input.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "957cfc353a89e10454497f8ce8c47c57d930bbcb74895695d944b71f40deb618",
+  "lineage": "linux-kernel",
+  "locator": "795-835 generic HID Button usage maps under Game Pad application to BTN_GAMEPAD + usage - 1 for codes 1..16 and BTN_TRIGGER_HAPPY after 16; generic path not xpad."
+}
