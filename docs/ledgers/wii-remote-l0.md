@@ -228,9 +228,22 @@ no byte-level kernel log readback is claimed. No Original pass is inherited,
 no special-driver window is used, and no physical or release gate is cleared.
 See `docs/wii-plus-p1-host-runs.md`.
 
+
+## W9g activation re-attach compatibility
+
+Current inventory: **215 Wii claims**. Five `wii-w9g-*` consumer claims record
+both kernel-bound gyro regressions and three generic-bound Dolphin arms.
+Original only; no Plus pass is inherited. Both bound captures pass. Generic
+Dolphin MP+Nunchuk passes bounded decoded gyro and stick only with re-attach
+compat and both shims on. Re-attach off reproduces the post-map reporting pause;
+F6 off reaches error 7 before calibration despite arriving raw frames.
+See `docs/wii-w9g-activation-status.md` for scopes and first unpassed checkpoints.
+The pair is still compat, not physical activation evidence; future
+`wii-gap-mpstatus-*` research decides faithful classification or retirement.
+
 ### MotionPlus activation/status source review
 
-Current inventory: **220 Wii claims** (210 on Plus P1 main and ten new
+Current inventory: **225 Wii claims** (215 on W9g main and ten new
 source-only `wii-gap-mpstatus-*` claims). WiiBrew deactivation documents
 0x20 disconnect then reconnect; Dolphin emulator also simulates activation
 pin changes, but physical activation and active mode switch edge counts and
