@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "parity-g-inputplumber-xbox360-profile",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/ShadowBlip/InputPlumber/blob/b2fb40900506d329925d5a3f1bca54adf85f1279/rootfs/usr/share/inputplumber/devices/60-xbox_360_gamepad.yaml",
+  "revision": "b2fb40900506d329925d5a3f1bca54adf85f1279",
+  "sha256": "000000000000000000000000000000005bbb2f41c7496f58d809246b048eef61",
+  "lineage": "shadowblip-inputplumber",
+  "locator": "19-54 evdev generic Xbox and 045e:{028e,028f,02a1} source selection"
+}
