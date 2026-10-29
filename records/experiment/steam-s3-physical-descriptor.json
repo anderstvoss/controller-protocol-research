@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "steam-s3-physical-descriptor",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [
+    "steam-s3-1302-report-descriptor"
+  ],
+  "procedure": "Owner connected a physical Steam Controller 2026 by direct USB and assigned USB passthrough to a Linux 6.12 ARM64 VM. Read-only USB enumeration identified 28de:1302. Read the single matching HID report_descriptor sysfs attribute twice and compared every byte and SHA-256; both reads were 372 bytes, raw digest 315a037c849ef9510d222ae520bb18c1b72552d26eb116c91b0750901a5c51fd. Privately retained binary and serial-filtered USB enumeration. Separately read the USB configuration descriptor (41 bytes, raw digest fabe2b688f2e7da5a123e849e9d4b112692590fbecda9ac5334e3f67beb887bc); public reduced configuration bytes are reproduced in docs/steam-s3-physical-descriptor.md. Report fixture is a reversible lowercase hexadecimal rendering with no byte replacement, omission or synthetic padding. Inspected bytes for unit identifiers; report items contain no serial, address or unit-specific strings. No feature GET/SET, interrupt input acquisition, output write, driver rebind, policy change or consumer test was performed. Firmware version was not supplied; no value inferred from USB bcdDevice.",
+  "semantic_outcome": "Observed one configuration with one HID interface 0, no alternate setting, interrupt endpoints 0x81 IN and 0x01 OUT, max packet 64 bytes and interval 1. Three top-level HID applications: Generic Desktop Mouse (0001:0002), Generic Desktop Keyboard (0001:0006), vendor (ff00:0001). Numbered inputs/body bytes: 40:5,41:8,42:53,43:14,44:5,45:45,79:1,7b:12. Outputs/body bytes: 80:9,81:7,82:3,83:9,84:8,85:3,86:3,87:63,88:63,89:63. Features 01 and 02 each declare 63 body bytes. No input 47 declaration. Descriptor observation only: declarations do not establish transmitted reports, field semantics, feature behavior, output effects, timing or virtual consumer acceptance."
+}
