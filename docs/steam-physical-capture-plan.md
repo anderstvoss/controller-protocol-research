@@ -68,6 +68,97 @@ The table enumerates direct-`1302` unknown/inferred/conflicted claim rows plus N
 - For every action record a neutral baseline, start/end marker in the local operator log, success/fail/inconclusive, and relative seconds since capture start. Host logs, paths, URB identifiers and wall-clock timestamps stay off-repo. Stop immediately for an update prompt, battery/thermal warnings, unexpected output, unwanted high-amplitude haptics, sensitive device spillover, or inability to identify the target device (E may intentionally show a transient bootloader before `1302`).
 - Prefer unplug and replug for a fresh registration only when safe; this is an ordinary operator action, not a driver-binding change. After any session close all readers, stop the capture, unplug/reconnect controller to return to default enumeration if necessary, verify bound driver and evdev/hidraw return; no persistent changes are intended. A failed probe is inconclusive, not evidence of absent support.
 
+### Session E — pre-attach bootloader enumeration, **bare metal and VM separately**, no sudo
+
+**Prerequisites and owner controls:** use the same read-only commands on (1) a bare-metal Linux host and (2) a VM, with Steam/SDL closed and the authorized controller disconnected. Start observers **before** plugging in on bare metal; start them before hypervisor passthrough on the VM. Use a quiet USB port, a private directory and an ordinary user account. Record `host_type=bare_metal/vm`, kernel, hypervisor family/version (or none), and passthrough method (device/port/controller; no host-specific paths). The hypervisor may see a pre-passthrough stage that the guest cannot. **Never treat VM absence as a bare-metal negative.**
+
+**Terminal A: filtered udev add/remove events (ordinary user, no sudo).** Keep blank lines to separate events, prefix allowed property lines with monotonic-relative *delivery* time, and keep the output **private**. Event delivery time is not a USB-wire or firmware clock. `PRODUCT` and IDs can also mention other devices: review attribution before publishing any derived table.
+
+```sh
+umask 077
+mkdir -p steam-p1-private
+stdbuf -oL udevadm monitor --udev --property \
+  --subsystem-match=usb --subsystem-match=hid |
+python3 -u -c '
+import re, sys, time
+start = time.monotonic()
+allowed = re.compile(r"^(ACTION|PRODUCT|ID_VENDOR_ID|ID_MODEL_ID|ID_USB_INTERFACES|DEVTYPE)=")
+for line in sys.stdin:
+    item = line.strip()
+    if allowed.match(item):
+        print(f"+{time.monotonic()-start:.6f}s {item}", flush=True)
+    elif not item:
+        print("", flush=True)
+' > steam-p1-private/e-udev-filtered-PRIVATE.txt
+```
+
+**Terminal B: optional dmesg** if readable as an ordinary user. **Do not sudo** when access is restricted; instead record `blocked`. This log is host-wide and **never** goes into the corpus.
+
+```sh
+dmesg -w > steam-p1-private/e-dmesg-PRIVATE.txt
+```
+
+**Terminal C: optional read-only sysfs sampler for transient USB class and bcdDevice** (no sudo). Run simultaneously, for 45 seconds. It permits only VID `28de` to avoid inventorying unrelated devices. A short-lived stage or a bootloader with a different VID may be missed: mark it inconclusive and privately identify the boot-stage vendor before a more narrowly authorized retry. Do not automatically widen the filter.
+
+```sh
+python3 -u - <<'PY' > steam-p1-private/e-sysfs-stages-PRIVATE.tsv
+from pathlib import Path
+import time
+
+root = Path("/sys/bus/usb/devices")
+start = time.monotonic()
+seen = {}
+while time.monotonic() - start < 45:
+    for device in root.iterdir():
+        try:
+            vid = (device / "idVendor").read_text().strip().lower()
+            if vid != "28de":
+                continue
+            pid = (device / "idProduct").read_text().strip().lower()
+            bcd = (device / "bcdDevice").read_text().strip().lower()
+            classes = []
+            for interface in root.glob(device.name + ":*"):
+                if (interface / "bInterfaceClass").is_file():
+                    num = (interface / "bInterfaceNumber").read_text().strip()
+                    cls = (interface / "bInterfaceClass").read_text().strip()
+                    classes.append((num, cls))
+            observation = (pid, bcd, tuple(sorted(classes)))
+            if seen.get(device.name) != observation:
+                seen[device.name] = observation
+                print(f"+{time.monotonic()-start:.6f}s vid={vid} pid={pid} bcdDevice={bcd} interface_number_class={sorted(classes)}", flush=True)
+        except (OSError, ValueError):
+            continue  # transient device removed during read
+    time.sleep(0.025)
+PY
+```
+
+Repeat as separately labelled trials, **fresh attach and new private logs**. No unbind/rebind, firmware writes, USB reset or custom SET commands. A separately booted 6.12/generic host is permitted; changing the driver on a running host is not part of this session.
+
+| Trial | Outcome favoring **P: automatic power-on transition** | Outcome favoring **H: host-command transition** | Limit |
+| --- | --- | --- | --- |
+| **E1** already powered on versus fully off when data cable attached | Boot stage follows application of power and an already-on controller may enumerate directly as `1302` | It stays in boot stage until a host-specific request, despite being powered | Power state can change boot policy independently; time alone is not causation |
+| **E2** pre-power by charge-only supply or powered hub with **no upstream data**; then connect data | Boot stage finishes while data-isolated; host receives `1302` only | Boot stage remains until data connection and a correlated host request | Cable move may itself reset power; verify **actual** data isolation |
+| **E3** Linux 7.3+ `hid-steam`-bound vs **separately booted** 6.12 unbound/generic (Steam and SDL closed) | Both show boot→main without the newer driver's feature setup | Bound host sends a specific bootloader-directed request not seen on generic host | USB enumeration occurs on *both* hosts; kernel difference alone is not a command proof |
+| **E4** optional owner-approved **usbmon attach-time** capture (starting before plugging in) | Full trace shows the transition without a preceding nonstandard host bootloader-mode command | A host→bootloader command with completed URB consistently precedes departure, unlike negative controls | GET_DESCRIPTOR and SET_CONFIGURATION are ordinary host enumeration; timestamp correlation is not causation |
+| **E5** bare-metal attach vs VM passthrough *after hypervisor enumeration* | Bare metal sees bootloader/main; guest sees only the main stage because host already completed boot | Hypervisor's trace identifies an earlier bootloader-directed command, before guest handoff | Guest cannot observe pre-passthrough host traffic; VM absence is **not** disproof |
+
+**E4 exception:** when separately approved, use the Session 1 bus-scoped, bounded usbmon command with `sudo` **only for usbmon access**, starting **before** attach. The other E commands must never use sudo. Watch **passively** for the candidate `0x90` `REBOOT_TO_BOOTLOADER` feature command from source-only `steam-p1-iczero-feature-ids`; no authentic wired-device trigger has been proven. **Never send `0x90` or `0x9f`**, even for diagnosis. Do not send reset, shutdown, factory, streaming or other unknown feature commands.
+
+**Expected outcome:** Anders's report predicts bootloader add → removal → main `1302` on at least one host, **not** that it is universal, mandatory or triggered by a particular opcode. Record boot-stage VID:PID, interface class numbers, bcdDevice **version marker**, first add/removal, main-stage add and their relative delta. Include observed request/complete pairs (if E4 captured) and their *classification*, not private raw bus payload. For each host record missing event coverage explicitly; if a stage is too fast for sysfs, do not invent its class or version. A passive `0x83` version attribute is recorded only when actually observed; default E has no feature capture.
+
+**Stop/restore:** stop if attribution is ambiguous, several target-like devices appear, update prompt appears, privacy spillover, unsafe feedback or unexpected reboot occurs. Keep failures/incomplete windows `inconclusive`. Ctrl-C both unprivileged monitors; sampler exits after 45 seconds. Normal manual unplug/replug is permissible; no persistent settings change. Leave private logs off-repo, redact per Section C.
+
+**Bare-metal versus VM comparison (fill from independent experiments, never copy one column to the other):**
+
+| Field | Bare-metal `steam-p1-e-bare-metal-experiment` | VM `steam-p1-e-vm-experiment` |
+| --- | --- | --- |
+| Host/kernel/hypervisor/passthrough | **not run** | **not run** |
+| Bootloader VID:PID / interface classes / bcdDevice | **not run** | **not run** |
+| Main `1302` bcdDevice version marker, passive `0x83` firmware attribute if available | **not run** | **not run** |
+| Add → remove → main add, relative elapsed time | **not run** | **not run** |
+| E1–E5 trial support (P/H/mixed/inconclusive) | **not run** | **not run** |
+| Capture completeness and guest's pre-passthrough visibility | **not run** | **not run** |
+
 ### Session 0 — any Linux; unprivileged physical descriptor and endpoint inventory
 
 **Prereqs:** connected direct USB `28de:1302`, `lsusb` and Python 3. No `sudo`. These commands are safe to run now and are also copied into #159. Run from an empty temporary working directory; private files are **not** for a Git commit.
