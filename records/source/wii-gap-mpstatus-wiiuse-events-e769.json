@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-mpstatus-wiiuse-events-e769",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/events.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "04a212ebb476f4e5ea0cc2217df432b3f94f7cdfa90a9c664bab4f2903533be8",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "GPL-3.0-or-later. Status handler 538-650, attachment change A400 handshake and report-mode reselection."
+}
