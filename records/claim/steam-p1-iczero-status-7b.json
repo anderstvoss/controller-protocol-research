@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-p1-iczero-status-7b",
+  "statement": "Dissector identifies 0x7b as Puck periodic wireless status (lines 59-61,79-100) but does not establish an equivalent report on wired 1302; prior Puck counts are NOT direct wired confirmation. Absence during bounded wired traces is not a universal prohibition. Periodic payload semantics remain opaque. Capture gate: Plan Session 1/Session 2 complete time-bounded wired input report ID inventory; separately schedule Puck research later. Source range is a hypothesis from iczero at 83c46d7, shared lineage 'sc2' with the previously imported sc2 README/dissector/haptics sources. No independent cross-source confirmation and no physical wired experiment.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "iczero source pin 83c46d7; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only research lead for direct 28de:1302; Plan Session 1/Session 2 complete time-bounded wired input report ID inventory; separately schedule Puck research later. No intentional feature/stream command injection; compare passive/consented host-originated traffic."
+  },
+  "sources": [
+    "sc2-src-dissector",
+    "sc2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
