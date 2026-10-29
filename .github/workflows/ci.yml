@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, 'lane/steam-parity/**']
   workflow_dispatch:
 
 permissions:
