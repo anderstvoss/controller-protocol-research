@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-dekunukem-bluetooth-hid-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/bluetooth_hid_notes.md",
+  "revision": "b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+  "sha256": "d1363c6aba2add69c9cb20ef8cc65382287582da92fffe4f4e66580026e8c810",
+  "lineage": "dekuNukem-Nintendo-Switch-RE",
+  "locator": "Output 0x01/0x10 and rumble 3-64; input 0x30 timing 116-118; standard report byte and IMU layout 132-181"
+}
