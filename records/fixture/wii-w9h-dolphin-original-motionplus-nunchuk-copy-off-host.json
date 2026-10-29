@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-dolphin-original-motionplus-nunchuk-copy-off-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-w9h-dolphin-original-motionplus-nunchuk-copy-off-host.json",
+  "sha256": "50720e349e14db74777946384136db5746ee748f2f94aecee9499656742f7815",
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-w8-dolphin-2503-input",
+    "wii-c5-classic-cpp",
+    "wii-c5-classic-h"
+  ],
+  "experiments": [
+    "wii-w9h-dolphin-original-motionplus-nunchuk-copy-off-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced controlled virtual-host I/O and independent owned-window or kernel-reader observations into counts, equality checks, booleans and relative intervals. No private paths, identities, scripts, logs, screenshots, GPL excerpts or wall clocks. Private artifact digest covers the ordered capture inputs described in environment. Original private artifact SHA256 aa804f0c216cd3955fc0b356faef831ab1e85d1ea778f13025b6f5484785ccc4.",
+  "claims": []
+}

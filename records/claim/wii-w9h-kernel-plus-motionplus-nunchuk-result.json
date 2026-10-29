@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-w9h-kernel-plus-motionplus-nunchuk-result",
+  "statement": "Tr MP+Nunchuk with default built-in inactive identity and re-attach on passes the kernel-bound gate: mode 05, two driven values on all three evdev gyro axes and 93 same-capture xwiimote MotionPlus events. No A400F0/A600F0 reinitialisation in the first 18 seconds after mapping; first such writes occur at reader-close cleanup after 22.2 seconds. Software regression only, no physical timing, child-controls or factory-calibration claim.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Tr / virtual Wii Remote Plus PID 0330; physical revision unmeasured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "evidence_role: consumer. W9h controlled local virtual-host experiment, synthetic imported calibration and explicit binding/creation flags. Independent decoded oracle is separate from raw frames; no physical/radio/game/release/timing or whole-controller qualification. #258 gates generic-binding release use."
+  },
+  "sources": [
+    "wii-w9h-codec-source",
+    "wii-w9h-memory-source",
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-plustrace-xwiimote-core-4df"
+  ],
+  "experiments": [
+    "wii-w9h-kernel-plus-motionplus-nunchuk-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
