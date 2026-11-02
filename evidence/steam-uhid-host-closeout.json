@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_probe_observations",
+  "candidate_revision": "8f60dcce577ab02bd8ed8b3426349729d417393c",
+  "pinned_research_revision": "719befa86bbff044cb0cdc524d66085a4b610800",
+  "executed_probe_identity": {
+    "probe_source_sha256": "75886253fcc862a8c6463de7d3dbcca6d976c5fb32dea92af696ff3a4abd91d4",
+    "probe_binary_sha256": "5036d60f56b4881bc55457f5a12f6987966cc25ff2554ee4f5a00a9d5b3c76a8",
+    "modified_file_manifest_sha256": "5dfc1fc78845b0b0c84030cc019a1d30109d532e797005525a7816b07c1154d1",
+    "manifest_definition": "SHA256 of compact sorted-key JSON mapping relative modified/untracked source filenames to file SHA256; probe entry uses executed source snapshot."
+  },
+  "modified_file_manifest": [
+    {
+      "file": "Cargo.lock",
+      "sha256": "c785d63022e5045e1f5616cc4ba5f8cb78467b71bf95d391258cf972982c0d6b"
+    },
+    {
+      "file": "Cargo.toml",
+      "sha256": "9bd3579391f79a764ce05d9e9b190bdeec928efd9a5cde254cdf202801ba2cc3"
+    },
+    {
+      "file": "crates/gr-curated-controllers/src/common.rs",
+      "sha256": "288660489b5efa37582a2238ce420238036d0bd97edc3b869b764a5e63703c6b"
+    },
+    {
+      "file": "crates/gr-curated-controllers/tests/dualsense_uhid_live.rs",
+      "sha256": "6ac0eaf07cca66e620fd4191bddbb336996cc53d047d437863bc895aee0c8977"
+    },
+    {
+      "file": "docs/SDL_ACCEPTANCE.md",
+      "sha256": "63141f6ebf5fa10b41696b9128f2cd4d29925196ea8903a7a829682fbdeff472"
+    },
+    {
+      "file": "docs/plans/pre-controller-buildout/03-steam-uhid-consumer-probe.md",
+      "sha256": "607bbc4495b5c0ade42f82de0a8d5d657ef0b24dd9533e8dd5e301355324e696"
+    },
+    {
+      "file": "examples/steam_uhid_probe.rs",
+      "sha256": "75886253fcc862a8c6463de7d3dbcca6d976c5fb32dea92af696ff3a4abd91d4"
+    },
+    {
+      "file": "scripts/hidapi-device-info.c",
+      "sha256": "22eac669022b18029f4cfe277c221df4fee9edacedfdd4b42e9b18409007bafb"
+    },
+    {
+      "file": "udev/71-virtualgamepad-input-lab.rules",
+      "sha256": "a7e6e9ff03aa7900336d0466cfc33f9af99cc7041ce886db21d5adf9a9226074"
+    },
+    {
+      "file": "udev/tests/test_input_lab_seat.py",
+      "sha256": "763cf32db2f16620b3a9ddd715a193dd521c7e5750f9c73de989fe77bfa720f5"
+    },
+    {
+      "file": "udev/virtualgamepad-input-lab-seat.py",
+      "sha256": "1bedde6a552fe14c739ab1f0c84a6a073d7e2da53ce5113f0da0c3c0e8c1ba0e"
+    }
+  ],
+  "validation_probe_source_sha256": "d4d6b8dbbd2f1c6fa3af5acbdd4538b6b703bd9eb8f59730b383a67872f80ec3",
+  "validation_source_difference": "Executed source copied a Vec with to_vec; final Clippy-clean source moves that owned Vec into the same destination. The four deterministic probe tests passed on both versions. Probe remains uncommitted and is not included in the research PR.",
+  "environment": {
+    "kernel": "7.3.0-1-mainline",
+    "distro": "EndeavourOS",
+    "architecture": "x86_64",
+    "sdl_revision": "e0232c5b9d972ad394d597ce858185cd15a0f1a7",
+    "sdl_build": "Release, HIDAPI on, tests and examples off; private prefix scoped per command",
+    "sdl_hint": "SDL_JOYSTICK_HIDAPI=1; SDL_JOYSTICK_HIDAPI_STEAM=1; SDL_JOYSTICK_HIDAPI_PS5=1",
+    "steam_client_version": "1792618285",
+    "steam_client_version_evidence": "Previously supplied About Steam observation; not independently re-read during these runs",
+    "steam_build_date": "2026-10-21",
+    "steam_package": "1.0.0.87-3",
+    "access": "Exact owned hidraw read/write open verified before consumer probes; existing access sufficed without new ACL or policy changes.",
+    "steam_udev": "steam-devices provides both USB-parent rules and a Valve HID-path rule that can match UHID."
+  },
+  "procedure": {
+    "invocation": "cargo run --locked --example steam_uhid_probe --features experimental -- CASE SECONDS",
+    "sdl_phase": "Steam exited before all three sequential runs; private SDL prefix and both helper executables scoped to each invocation.",
+    "steam_phase": "Steam running and SDL helper unset; human listing answers obtained during the respective live cases.",
+    "neutral_fixture": "steam-c6-neutral-42",
+    "neutral_fixture_sha256": "9a8dbffa394564f2ca852d2df23293f499051196a5cb44e336bd9a4edec4d90f",
+    "reverse_protocol": "Raw UHID FEATURE=0, OUTPUT=1, INPUT=2. Numbered feature SET validated; each request replied before next drain. Supported synthetic feature commands 83/87/ae; unsupported requests return -95 and malformed buffers -22. GET replies include one report ID.",
+    "cleanup": "Normal completion closes consumer children and controller repeatedly, then verifies owned HID nodes disappear. Child guard kills/reaps its owned process group on error; fake-provider tests verify no pending request across polling.",
+    "private_artifacts": "Only whitelisted reduced fields published; raw output, exact device nodes, process identity and logs retained privately."
+  },
+  "cases": [
+    {
+      "phase": "sdl",
+      "case": "ibex",
+      "duration_seconds": 20,
+      "kernel_inventory": {
+        "hid_devices": 2,
+        "drivers": [
+          "hid-steam",
+          "hid-steam"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "probe_summary": {
+        "output_reports": 26,
+        "feature_gets": 4,
+        "feature_sets": 10,
+        "lizard_disable_seen": true
+      },
+      "request_accounting": {
+        "requests": 14,
+        "replies": 14,
+        "pending": 0,
+        "opens": 1,
+        "closes": 0
+      },
+      "input_submission": {
+        "count": 1880,
+        "consumer_delivery": null,
+        "reason": "submission alone does not prove consumer delivery"
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 10462,
+        "product_id": 4866,
+        "interface_number": -1,
+        "usage_page": 65280,
+        "usage": 1,
+        "bus_type": 0
+      },
+      "sdl": {
+        "consumer_version": 3005000,
+        "consumer_revision": "SDL-3.5.0-release-3.4.0-1683-ge0232c5b9",
+        "exact_joystick_matches": 1,
+        "neutral_observed": true,
+        "consumer_closed": true,
+        "error": "required sensor observations missing, invalid or nonmonotonic",
+        "passed": false,
+        "duration_ms": 1001,
+        "opened": true,
+        "backend": {
+          "reason": "no opened device matching the reviewed SDL 3.2.0 Linux GUID/path signature; requested hints are not observations",
+          "value": null
+        },
+        "exit_code": 1
+      },
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      }
+    },
+    {
+      "phase": "sdl",
+      "case": "puck",
+      "duration_seconds": 20,
+      "kernel_inventory": {
+        "hid_devices": 1,
+        "drivers": [
+          "hid-steam"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "probe_summary": {
+        "output_reports": 0,
+        "feature_gets": 0,
+        "feature_sets": 0,
+        "lizard_disable_seen": false
+      },
+      "request_accounting": {
+        "requests": 0,
+        "replies": 0,
+        "pending": 0,
+        "opens": 1,
+        "closes": 1
+      },
+      "input_submission": {
+        "count": 1876,
+        "consumer_delivery": null,
+        "reason": "submission alone does not prove consumer delivery"
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 10462,
+        "product_id": 4868,
+        "interface_number": -1,
+        "usage_page": 65280,
+        "usage": 2,
+        "bus_type": 0
+      },
+      "sdl": {
+        "consumer_version": 3005000,
+        "consumer_revision": "SDL-3.5.0-release-3.4.0-1683-ge0232c5b9",
+        "exact_joystick_matches": 0,
+        "neutral_observed": false,
+        "consumer_closed": false,
+        "error": "expected exactly one matching gamepad",
+        "passed": false,
+        "duration_ms": 0,
+        "opened": false,
+        "backend": {
+          "reason": "no opened device matching the reviewed SDL 3.2.0 Linux GUID/path signature; requested hints are not observations",
+          "value": null
+        },
+        "exit_code": 1
+      },
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      }
+    },
+    {
+      "phase": "sdl",
+      "case": "dualsense",
+      "duration_seconds": 20,
+      "kernel_inventory": {
+        "hid_devices": 1,
+        "drivers": [
+          "playstation"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 1356,
+        "product_id": 3302,
+        "interface_number": -1,
+        "usage_page": 1,
+        "usage": 5,
+        "bus_type": 0
+      },
+      "sdl": {
+        "consumer_version": 3005000,
+        "consumer_revision": "SDL-3.5.0-release-3.4.0-1683-ge0232c5b9",
+        "exact_joystick_matches": 1,
+        "neutral_observed": true,
+        "consumer_closed": true,
+        "error": "required sensor observations missing, invalid or nonmonotonic",
+        "passed": false,
+        "duration_ms": 1000,
+        "opened": true,
+        "backend": {
+          "reason": "no opened device matching the reviewed SDL 3.2.0 Linux GUID/path signature; requested hints are not observations",
+          "value": null
+        },
+        "exit_code": 1
+      },
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      },
+      "reverse_request_accounting": {
+        "value": null,
+        "reason": "Production DualSense service handles protocol requests; this wrapper does not expose its request counters."
+      }
+    },
+    {
+      "phase": "steam",
+      "case": "ibex",
+      "duration_seconds": 180,
+      "kernel_inventory": {
+        "hid_devices": 2,
+        "drivers": [
+          "hid-steam",
+          "hid-steam"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "probe_summary": {
+        "output_reports": 0,
+        "feature_gets": 668,
+        "feature_sets": 776,
+        "lizard_disable_seen": true
+      },
+      "request_accounting": {
+        "requests": 1444,
+        "replies": 1444,
+        "pending": 0,
+        "opens": 1,
+        "closes": 0
+      },
+      "input_submission": {
+        "count": 15365,
+        "consumer_delivery": null,
+        "reason": "submission alone does not prove consumer delivery"
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 10462,
+        "product_id": 4866,
+        "interface_number": -1,
+        "usage_page": 65280,
+        "usage": 1,
+        "bus_type": 0
+      },
+      "manual_listing": "No controller listed",
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      }
+    },
+    {
+      "phase": "steam",
+      "case": "puck",
+      "duration_seconds": 90,
+      "kernel_inventory": {
+        "hid_devices": 1,
+        "drivers": [
+          "hid-steam"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "probe_summary": {
+        "output_reports": 0,
+        "feature_gets": 0,
+        "feature_sets": 8303,
+        "lizard_disable_seen": false
+      },
+      "request_accounting": {
+        "requests": 8303,
+        "replies": 8303,
+        "pending": 0,
+        "opens": 1,
+        "closes": 0
+      },
+      "input_submission": {
+        "count": 8457,
+        "consumer_delivery": null,
+        "reason": "submission alone does not prove consumer delivery"
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 10462,
+        "product_id": 4868,
+        "interface_number": -1,
+        "usage_page": 65280,
+        "usage": 2,
+        "bus_type": 0
+      },
+      "manual_listing": "No controller listed",
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      }
+    },
+    {
+      "phase": "steam",
+      "case": "dualsense",
+      "duration_seconds": 90,
+      "kernel_inventory": {
+        "hid_devices": 1,
+        "drivers": [
+          "playstation"
+        ],
+        "evdev_nodes": 0
+      },
+      "exact_node_access": {
+        "read_write": true,
+        "error_kind": null
+      },
+      "cleanup": {
+        "owned_nodes_removed": true,
+        "close_repeated": true
+      },
+      "hidapi": {
+        "vendor_id": 1356,
+        "product_id": 3302,
+        "interface_number": -1,
+        "usage_page": 1,
+        "usage": 5,
+        "bus_type": 0
+      },
+      "manual_listing": "DualSense is listed",
+      "input_report_delivery": {
+        "value": null,
+        "reason": "Neutral input submission and state observation do not instrument exact report delivery inside each consumer."
+      },
+      "reverse_request_accounting": {
+        "value": null,
+        "reason": "Production DualSense service handles protocol requests; this wrapper does not expose its request counters."
+      }
+    }
+  ],
+  "retained_touch_result": "Separate isolated DualSense SDL run passed three create/use/close iterations with touch down/move/up, motion, typed output feedback and removal.",
+  "limitations": [
+    "No physical fidelity, full controls, gameplay or latency acceptance.",
+    "Neutral-only SDL diagnostics returned nonzero for missing changing sensor observations even when opened and neutral state were observed.",
+    "No exact input-report delivery instrumentation inside SDL or Steam; missing delivery observations remain unknown.",
+    "Lifecycle OPEN/CLOSE counts include instrumentation access and are not attributed to a particular consumer.",
+    "Lizard-disable detection identifies a setting command, not whether the kernel or userspace originated it.",
+    "The synthetic Steam feature response profile is limited; a negative client listing does not demonstrate a USB-topology requirement.",
+    "Puck topology explanation is source-supported, not a demonstrated runtime rejection reason.",
+    "Probe GET replies are short synthetic buffers: five bytes for empty identity/attributes and four for settings, unlike the padded 64-byte corpus identity/attribute fixtures. Negative Steam listing applies to this limited stub and does not reject a complete wired implementation."
+  ],
+  "tier_decision": "linux.uhid.usb satisfies brief 03 wired criterion through observed kernel binding and SDL opening. Steam client compatibility and faithful Puck topology remain separate."
+}
