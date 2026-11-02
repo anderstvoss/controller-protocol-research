@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record the D9 x86-64 Steam UHID host probe: separate SDL/Steam phases, corrected raw feature types and reply framing, verified node access and cleanup; preserve negative discovery and unknown delivery evidence.
+
 - Add a source-only direct-wired Steam Controller 2026 physical-capture plan, bounded USBmon sessions and a fail-closed review-only transfer reducer with tests; no physical or virtual-host execution claimed.
 - Extend the Steam capture plan for an owner-reported transient USB bootloader, paired bare-metal/VM pre-attach enumeration, passive host-command discrimination, version markers per session, and the already merged S3 physical descriptor evidence; no extra hardware observation claimed.
 

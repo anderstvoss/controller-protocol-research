@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-closeout-sdl-triton-e0232c5",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/e0232c5b9d972ad394d597ce858185cd15a0f1a7/src/joystick/hidapi/SDL_hidapi_steam_triton.c",
+  "revision": "e0232c5b9d972ad394d597ce858185cd15a0f1a7",
+  "sha256": "11dedf48afbec74ee373538618fe123dc66cc854c07419cdb8d559fc063074c4",
+  "lineage": "libsdl",
+  "locator": "Direct Triton selection, receiver interface filter, enabling hint and feature settings in the driver used by the private host build."
+}

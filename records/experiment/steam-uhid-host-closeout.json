@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "steam-uhid-host-closeout",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "fixtures": [
+    "steam-c6-neutral-42"
+  ],
+  "procedure": "Three sequential neutral-only cases on prepared x86-64 Linux 7.3 host: wired IBEX, single-node Puck and production DualSense control. Separate SDL-only and Steam-only phases, exact hidraw read/write access checks, corrected UHID type/framing acknowledgements and repeated close/removal. Full reduced observations, candidate/patch hashes and commands are in evidence/steam-uhid-host-closeout.json. Passed means bounded experiment and cleanup completed, not that every consumer accepted every case.",
+  "semantic_outcome": "IBEX bound hid-steam and SDL opened the exact node with neutral state; single-node Puck bound hid-steam with readable/writable hidraw but SDL selected no gamepad. DualSense SDL opened and observed neutral. Steam manual case outcomes are in the evidence table. Wired linux.uhid.usb meets brief 03 kernel-or-SDL criterion. No actual consumer report-delivery or physical-fidelity claim; neutral-only SDL sensor diagnostics are not acceptance passes. Earlier type-2 feature counters and Puck permission attribution are superseded."
+}
