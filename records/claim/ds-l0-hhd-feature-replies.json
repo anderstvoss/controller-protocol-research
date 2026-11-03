@@ -8,7 +8,7 @@
     "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "HHD dualsense/__init__.py 195-221. Emulated fixture replies, not an independently captured firmware dump."
+    "scope": "HHD dualsense/__init__.py 195-221. Emulated fixture replies, not an independently captured firmware dump. Part 2 I role correction: this HHD virtual-emulator policy is consumer/compatibility implementation evidence; it is not retail DualSense device shape. No claim status or sources changed."
   },
   "sources": [
     "dualsense-uhid-gyro-hhd-device-source",
@@ -18,5 +18,5 @@
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,
-  "evidence_role": "device"
+  "evidence_role": "consumer"
 }
