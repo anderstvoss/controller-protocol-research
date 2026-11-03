@@ -28,7 +28,7 @@ These projects emulate a Nintendo personality *toward a console or host*, rather
 
 **Conflicts:** No confirmed contradiction between independent physical Joy-Con observations was located, since this study has no physical capture. `joycon-g-nxbt-unused-stick-emulator` must not override the explicit `No evidence` for real unused-side stick bytes in A2. `joycontrol` not implementing NFC does not conflict with consumer NFC implementations that read real hardware (see B lane); their roles differ. No `conflicts_with` reference is warranted for these non-conflicting scopes.
 
-**Not run:** Bluetooth pairing, a Switch-console session, Linux UHID recognition, SDL, NFC and IR tests. Source paths and implementation specifics are pinned in the six `joycon-g-*` source records.
+**Not run:** Bluetooth pairing, a Switch-console session, Linux UHID recognition, SDL, NFC and IR tests. Source paths and implementation specifics are pinned in the eight `joycon-g-*` source records.
 
 ## Implementer acceptance probes (proposed; not run)
 
