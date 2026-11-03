@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-sdl2-strict-open",
+  "statement": "Pinned SDL2 release 2.30.12 requires successful factory SPI stick calibration, vibration-enable subcommand and input-report-mode subcommand before completing direct HIDAPI Joy-Con opening. Pinned SDL3 does not make the latter two write return values fatal in its corresponding open caller.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "SDL2 release-2.30.12 at 8236e01; SDL3 at 535d80b; Linux v5.16 df0cc57 and later 4056b3c; joycond 0df025a; HHD 4184f03; all source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Direct HIDAPI branch of SDL2 and SDL3 only, not evdev or a host experiment."
+  },
+  "sources": [
+    "joycon-d-sdl2-switch",
+    "joycon-sdl-switch"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
