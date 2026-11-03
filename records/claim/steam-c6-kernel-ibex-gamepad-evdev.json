@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-kernel-ibex-gamepad-evdev",
+  "statement": "In Linux v7.3-rc1 hid-steam, the wired IBEX gamepad evdev node is named Steam Controller and copies bustype, vendor, product and version from the HID device; the USB consumer identity therefore carries BUS_USB and vendor/product 0x28de:0x1302, with version inherited rather than fixed here (hid-steam.c:1043-1059). Its key capabilities are BTN_TR2, BTN_TL2, BTN_TR, BTN_TL, BTN_Y, BTN_B, BTN_X, BTN_A, BTN_DPAD_UP, BTN_DPAD_RIGHT, BTN_DPAD_LEFT, BTN_DPAD_DOWN, BTN_SELECT, BTN_MODE, BTN_START, BTN_THUMBR, BTN_THUMBL, BTN_THUMB, BTN_THUMB2, BTN_GRIPL, BTN_GRIPR, plus BTN_BASE, BTN_GRIPL2 and BTN_GRIPR2 for IBEX (hid-steam.c:1060-1084). Absolute capabilities are ABS_X/Y [-32767,32767] fuzz 0 flat 0 resolution 6553; ABS_HAT0X/Y [-32767,32767] fuzz 256 flat 0 resolution 1638; ABS_HAT2X/Y [0,32767] fuzz 0 flat 0 resolution 5461; ABS_RX/RY [-32767,32767] fuzz 0 flat 0 resolution 6553; and ABS_HAT1X/Y [-32767,32767] fuzz 256 flat 0 resolution 1638 (hid-steam.c:1086-1127,60-79). Under CONFIG_STEAM_FF, IBEX advertises EV_FF/FF_RUMBLE (hid-steam.c:1128-1134). The gamepad registration does not set input property bits. This is pinned kernel consumer shape, not an observed device event stream.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 source at cee9395acd8043be0644b25c34bfa86623f2b935; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only for direct wired USB 28de:1302 gamepad evdev capability registration. Does not assert that a host created or received events from a device."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
