@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-full-report-per-side",
+  "statement": "The source-described full Joy-Con input report 0x30 uses right-side button bits at absolute byte 3, shared bits at 4, left-side button bits at 5, packed 12-bit left stick at 6-8, right stick at 9-11, and three signed six-axis samples starting at byte 13. The unused half-stick payload value is not established by these sources.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Normal 0x30 input, not Bluetooth pairing or simple mode. Source-only layout from community notes interpreted by kernel."
+  },
+  "sources": [
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "joycon-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
