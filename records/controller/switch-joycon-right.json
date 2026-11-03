@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "switch-joycon-right",
+  "name": "Nintendo Switch Joy-Con (R)",
+  "kind": "controller",
+  "parent": "switch-joycon-family",
+  "tracking": "anderstvoss/virtualgamepad#297",
+  "notes": ""
+}

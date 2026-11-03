@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-joycond-udev-rules",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/udev/89-joycond.rules",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "859d796b0bb1cdfa5ac343f0c071dc7eb07f12c8af4a3377e8c6699e037e967e",
+  "lineage": "joycond",
+  "locator": "11-16 tag hid-nintendo main event nodes for 2006/2007/200e (not Combined, Virtual or IMU) for joycond with mode 0600."
+}

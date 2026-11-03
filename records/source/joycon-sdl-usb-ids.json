@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-sdl-usb-ids",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/usb_ids.h",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "dc5ba57e9d3d39242c4f7675ca5340459ca5202c091878774a38bcb854279e64",
+  "lineage": "libsdl",
+  "locator": "90-94 Joy-Con grip 0x200e, left 0x2006, pair 0x2008 (commented as used by joycond), right 0x2007, Pro 0x2009."
+}

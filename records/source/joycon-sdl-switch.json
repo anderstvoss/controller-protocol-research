@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-sdl-switch",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapi_switch.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "a55cbd9df00707114c511fae33149900e556d362c37a7f9c255d821b12e4a030",
+  "lineage": "libsdl",
+  "locator": "608-626 grip slot fallback by interface number; 806-811 simple-mode stick handling for Joy-Con PIDs; 850-870 combined pair uses right IMU as primary plus per-half sensors; 1155-1190 controller type read from device info; 1300-1316 Joy-Con driver eligibility by PID 2006/2007/200e; 1369-1378 names and gamepad types per half; 1604-1605 vertical-mode hint."
+}

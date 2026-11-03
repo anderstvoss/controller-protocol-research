@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add Switch 1 Joy-Con registry IDs (family, left, right) and a source-only survey of how hid-nintendo, joycond and SDL3 present single halves and pairs; four consumer claims, no device-protocol or host evidence.
+
 - Record the D9 x86-64 Steam UHID host probe: separate SDL/Steam phases, corrected raw feature types and reply framing, verified node access and cleanup; preserve negative discovery and unknown delivery evidence.
 
 - Add a source-only direct-wired Steam Controller 2026 physical-capture plan, bounded USBmon sessions and a fail-closed review-only transfer reducer with tests; no physical or virtual-host execution claimed.

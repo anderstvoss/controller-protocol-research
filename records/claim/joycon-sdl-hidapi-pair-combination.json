@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "joycon-sdl-hidapi-pair-combination",
+  "statement": "SDL HIDAPI, at the pinned revision, opens Joy-Con halves (2006, 2007, and 200e grip interfaces) directly and, unless the combine hint is disabled (default true), automatically joins the first unparented left and right into a virtual 'Switch Joy-Con (L/R)' device with PID 0x2008 without any user gesture. The combined device reports the right half's IMU as its primary sensor and also exposes per-half sensors.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "source revisions pinned in the cited source records; host versions not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL3 source only; SDL2 and the Linux evdev backend were not surveyed; no host run."
+  },
+  "sources": [
+    "joycon-sdl-switch",
+    "joycon-sdl-hidapijoystick",
+    "joycon-sdl-usb-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
