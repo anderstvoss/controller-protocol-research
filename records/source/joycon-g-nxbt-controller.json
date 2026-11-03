@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-nxbt-controller",
+  "kind": "independent_implementation",
+  "url": "https://github.com/Brikwerk/nxbt/blob/ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975/nxbt/controller/controller.py",
+  "revision": "ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975",
+  "sha256": "e0eacd643ed53d08280c175c5ef96bac6cc615f26dc99cd98158103ac698c3bb",
+  "lineage": "Brikwerk-nxbt",
+  "locator": "1-42 explicit L, R and Pro enumerations and product names."
+}

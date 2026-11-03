@@ -7,7 +7,7 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Add Switch 1 Joy-Con source-only L/R device ledger (A1–A7), nine device/consumer-scoped claims and an explicit unverified independent-emulator gap; no hardware or host tests.
+- Add Switch 1 Joy-Con source-only L/R device ledger (A1–A7), nine A1–A7 claims and an independently pinned joycontrol/nxbt emulator comparison (three G claims); no hardware or host tests.
 
 - Add Switch 1 Joy-Con registry IDs (family, left, right) and a source-only survey of how hid-nintendo, joycond and SDL3 present single halves and pairs; four consumer claims, no device-protocol or host evidence.
 

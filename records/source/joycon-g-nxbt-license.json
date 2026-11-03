@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-nxbt-license",
+  "kind": "research_lead",
+  "url": "https://github.com/Brikwerk/nxbt/blob/ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975/LICENSE",
+  "revision": "ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975",
+  "sha256": "0eb6e677879a73f5ba10aa5eab4a48e0c056ff08f08b7c77cd312f5be4e9b16c",
+  "lineage": "Brikwerk-nxbt",
+  "locator": "1-21 MIT licence and attribution."
+}

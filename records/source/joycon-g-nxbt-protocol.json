@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-nxbt-protocol",
+  "kind": "independent_implementation",
+  "url": "https://github.com/Brikwerk/nxbt/blob/ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975/nxbt/controller/protocol.py",
+  "revision": "ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975",
+  "sha256": "9d382914027bbaf0b138b4ac73e118975760302d20253ea0fc5b7c31a21a7d02",
+  "lineage": "Brikwerk-nxbt",
+  "locator": "18-125 controller type/connection info and opposite-stick synthetic bytes; 140-213 MCU subcommand handling; 330-455 SPI and calibration logic. MIT source paraphrased only."
+}

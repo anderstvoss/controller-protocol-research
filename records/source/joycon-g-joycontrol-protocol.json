@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-joycontrol-protocol",
+  "kind": "independent_implementation",
+  "url": "https://github.com/mart1nro/joycontrol/blob/18a09da1a04306534ff9e1df8a1a69c0192a3244/joycontrol/protocol.py",
+  "revision": "18a09da1a04306534ff9e1df8a1a69c0192a3244",
+  "sha256": "19f53310b0d21768adb7fe1f4df3896a5498712f0e70a41120166fc4cdedc5a5",
+  "lineage": "mart1nro-joycontrol",
+  "locator": "120-205 host-oriented report/mode handling, NFC TODO; 260-390 subcommands; 385-430 pairing and NFC limits; GPL code paraphrased only."
+}

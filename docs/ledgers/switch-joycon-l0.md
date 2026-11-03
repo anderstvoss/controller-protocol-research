@@ -1,6 +1,6 @@
 # Switch 1 Joy-Con L/R — L0 source-only device ledger
 
-**Joy-Con research, prep for virtualgamepad #297.** This ledger is source-only. No retail Joy-Con, Bluetooth connection, Linux host, USB Charging Grip or virtualgamepad build was tested. The underlying Joy-Con registry and four consumer claims are in pending corpus PR #92; this lane depends on that PR.
+**Joy-Con research, prep for virtualgamepad #297.** This ledger is source-only. No retail Joy-Con, Bluetooth connection, Linux host, USB Charging Grip or virtualgamepad build was tested. The Joy-Con registry and four seed consumer claims were merged from corpus PR #92. This lane is based on that merged groundwork.
 
 ## Evidence and shared Nintendo lineage
 
@@ -18,7 +18,17 @@ The common report prefix, subcommand framing and acknowledgments, SPI read envel
 
 ## G. Independent device-emulator lineage
 
-Candidate projects for independent corroboration are `nxbt`, `joycontrol`, and maintained forks. **No evidence** from pinned files in those codebases has yet been validated in this ledger: do not count these projects as corroboration, attribute Linux or SDL implementations to them, or assume their behavior matches physical Joy-Con. They require separately hashed, commit-pinned source records and documented licences before claims are added.
+These projects emulate a Nintendo personality *toward a console or host*, rather than reading real retail packets. Their implementation can corroborate a consumer-facing **emulation shape**, but is not a physical measurement. Both source repositories and licences are pinned at full Git commit IDs, with one source record per inspected file. No upstream code is reproduced.
+
+| Project / pin | Licence | Audited scope and relation to A/C | Limit / conflict |
+| --- | --- | --- | --- |
+| **mart1nro/joycontrol**, `18a09da1a04306534ff9e1df8a1a69c0192a3244` | GPL-3.0, pinned `joycon-g-joycontrol-license` | Public README and `controller.py` enumerate L type `0x01`, R type `0x02`, Pro type `0x03`; the Bluetooth protocol handler supports full-state input and common subcommand replies. Code contains conditional `0x31` handling. | NFC is explicitly **not implemented** at this pin. Do not copy its pending/unimplemented MCU behavior as device evidence or infer retail NFC. Combined Joy-Con pairing is noted as unresolved in protocol code. |
+| **Brikwerk/nxbt**, `ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975` | MIT, pinned `joycon-g-nxbt-license` | README and controller enumeration support L/R/Pro emulation toward a Switch; protocol handler selects type bytes `0x01`/`0x02`/`0x03`, maintains per-side 12-bit stick representations, colors and device-info/subcommand support. | For the unused stick it emits three zero bytes for the opposite half. **This is emulator design, not evidence those bytes are correct on retail firmware.** It has basic MCU state/config reply cases, not a verified IR/NFC implementation. |
+| **Maintained forks** | **No evidence** | No independently reviewed, current and commit-pinned fork was qualified in this study. | Do not guess maintenance state or treat a fork's inherited code as an independent protocol lineage. |
+
+**Conflicts:** No confirmed contradiction between independent physical Joy-Con observations was located, since this study has no physical capture. `joycon-g-nxbt-unused-stick-emulator` must not override the explicit `No evidence` for real unused-side stick bytes in A2. `joycontrol` not implementing NFC does not conflict with consumer NFC implementations that read real hardware (see B lane); their roles differ. No `conflicts_with` reference is warranted for these non-conflicting scopes.
+
+**Not run:** Bluetooth pairing, a Switch-console session, Linux UHID recognition, SDL, NFC and IR tests. Source paths and implementation specifics are pinned in the six `joycon-g-*` source records.
 
 ## Implementer acceptance probes (proposed; not run)
 

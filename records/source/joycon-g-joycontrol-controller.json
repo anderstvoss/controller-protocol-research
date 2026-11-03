@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-joycontrol-controller",
+  "kind": "independent_implementation",
+  "url": "https://github.com/mart1nro/joycontrol/blob/18a09da1a04306534ff9e1df8a1a69c0192a3244/joycontrol/controller.py",
+  "revision": "18a09da1a04306534ff9e1df8a1a69c0192a3244",
+  "sha256": "bb40d2a6b496101949dd67c1013ec18da5ce414535600c0c89f8ef60d77b63ba",
+  "lineage": "mart1nro-joycontrol",
+  "locator": "1-30 L/R/Pro enum and naming semantics."
+}
