@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-joycond-systemd-unit",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/systemd/joycond.service",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "fa79d0d6d1953db8365d8722736ef58af859f87bd179ea6c3e55fc7fa94458e9",
+  "lineage": "joycond",
+  "locator": "Lines 1-15: service starts daemon as root, restarts it and enables in multi-user target."
+}

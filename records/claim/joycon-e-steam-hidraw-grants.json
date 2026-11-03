@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-steam-hidraw-grants",
+  "statement": "Pinned public steam-devices rules grant hidraw access via mode 0660 and uaccess to Nintendo Joy-Con 057e:2006 and 057e:2007 by one bracket-pattern rule, with no specific grants for combined 2008 or grip 200e; closed Steam Input behavior remains unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Public rules only; negative matching limited to pinned file; no distribution ACL measured."
+  },
+  "sources": [
+    "joycon-e-steam-input-rules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

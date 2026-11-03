@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-joycontrol-readme",
+  "kind": "independent_implementation",
+  "url": "https://github.com/mart1nro/joycontrol/blob/18a09da1a04306534ff9e1df8a1a69c0192a3244/README.md",
+  "revision": "18a09da1a04306534ff9e1df8a1a69c0192a3244",
+  "sha256": "f6c61f714062c639a0eea19a87a81e2f3b492da36690121085d2e211279fbb87",
+  "lineage": "mart1nro-joycontrol",
+  "locator": "1-12 Joy-Con L/R/Pro emulation and removed NFC support; 13-69 transport and testing limitations."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-subcommand-matrix",
+  "statement": "The Switch Joy-Con family shares 0x02 device information, 0x03 report mode, 0x10 SPI reads, 0x30 player lights, 0x40 IMU enable and 0x48 vibration enable with the Nintendo protocol family. The common command list includes Joy-Con-relevant pairing and MCU commands, but exact responses to unused commands are not established.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel definitions and the cited public subcommand notes, source-only; refer to swpro-l0-device-subcmd-ack-byte rather than copying its wire envelope."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

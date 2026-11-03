@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-joycond-event-policy",
+  "statement": "Pinned joycond udev rules grant uaccess to Joy-Con IMU input nodes but remove uaccess and set mode 0600 on physical main event nodes, excluding combined, virtual and IMU names.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "joycond 72 and 89 rules for 2006/2007/200e; no effective udev resolution on a host."
+  },
+  "sources": [
+    "joycon-e-joycond-udev72",
+    "joycon-joycond-udev-rules"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

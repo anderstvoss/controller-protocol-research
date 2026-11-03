@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-joycond-service-root",
+  "statement": "Pinned joycond systemd unit runs the daemon as root with automatic restart; its module config requests LED timer. The uinput requirement is associated with joycond virtual combined-pad creation but non-root authorization is not demonstrated.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned systemd files and existing joycond consumer claim; no service installed or started."
+  },
+  "sources": [
+    "joycon-e-joycond-systemd-unit",
+    "joycon-e-joycond-module",
+    "joycon-joycond-virt-combined"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
