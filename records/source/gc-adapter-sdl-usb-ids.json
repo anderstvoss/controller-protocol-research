@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-sdl-usb-ids",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/48d30d139acfdaf0825beee5e9a59bf3f9852a28/src/joystick/usb_ids.h",
+  "revision": "48d30d139acfdaf0825beee5e9a59bf3f9852a28",
+  "sha256": "6fd2b764ceeaecd8e6e048fa5b245c7d20bd5b7c97480309907000a8f00fb3ab",
+  "lineage": "libsdl",
+  "locator": "line 122 USB_PRODUCT_NINTENDO_GAMECUBE_ADAPTER 0x0337; line 131 Switch 2 GameCube controller 0x2073"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-linux-no-specific-driver",
+  "statement": "At the pinned kernel revision, hid-ids.h has no 057e:0337 entry and hid-quirks.c has no quirk for it, so no Nintendo-specific kernel driver binds the adapter; any binding falls to the generic USB HID path. What evdev the generic path exposes depends on the adapter's report descriptor, which no pinned source records.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux kernel driver binding"
+  },
+  "sources": [
+    "gc-adapter-linux-hid-ids",
+    "gc-adapter-linux-hid-quirks"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

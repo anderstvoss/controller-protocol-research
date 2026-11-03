@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-descriptors-unknown",
+  "statement": "The adapter's USB configuration, interface and endpoint descriptors, HID report descriptor, polling interval and string descriptors are not recorded by any pinned source. Dolphin discovers endpoints at runtime instead of hard-coding them.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "USB and HID descriptors"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
