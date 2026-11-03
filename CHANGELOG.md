@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Register the Switch 2 GameCube USB controller with source-only SDL/Linux protocol records and a not-run physical capture plan.
+
 - Survey GameCube adapter consumers, per-port uinput compatibility decisions and source-only libusb/udev grants for #258.
 
 - Source-pin out-of-tree and user-space GameCube USB adapter bridges, Android USB manager and emulator backends; record source-only evdev and USB gaps.

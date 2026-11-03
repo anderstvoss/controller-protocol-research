@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-command-handshake",
+  "statement": "SDL uses a sequence of USB bulk commands and calibration/feature reads during opening. The Linux driver uses an eight-byte command header on USB bulk OUT with bulk IN responses and a staged init including report-format selection and firmware information. Precise ACK side effects on retail hardware are unmeasured.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Native USB startup and command/reply state machine"
+  },
+  "sources": [
+    "sdl-switch2",
+    "switch2-gc-linux-usb",
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

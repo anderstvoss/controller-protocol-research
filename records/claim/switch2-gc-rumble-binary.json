@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-rumble-binary",
+  "statement": "Both SDL and Linux use GameCube-specific single-motor on/off rumble modulation with output command 0x03; their separate code paths use encoded HD rumble for other Switch 2 controller types, not this one.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Switch 2 GameCube output command and actuator distinction"
+  },
+  "sources": [
+    "sdl-switch2",
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

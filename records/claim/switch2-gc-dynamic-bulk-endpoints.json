@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-dynamic-bulk-endpoints",
+  "statement": "SDL and the Linux Nintendo Switch 2 USB driver discover bulk IN and OUT endpoints at enumeration rather than hard-code endpoint numbers. SDL specifically looks at interface 1; Linux obtains endpoints from the bound interface. Neither source measures retail USB descriptor bytes.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Native USB transport endpoint discovery"
+  },
+  "sources": [
+    "sdl-switch2",
+    "switch2-gc-linux-usb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

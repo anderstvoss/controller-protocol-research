@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-sdl-libusb",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/d6fbbbe14dddfa09d6168267a0fcd39dea5a398a/src/hidapi/SDL_hidapi.c",
+  "revision": "d6fbbbe14dddfa09d6168267a0fcd39dea5a398a",
+  "sha256": "fb7c91544a114c4a77e9fe28755cd2da5aa8cf106026e4c2a786a441887bf2fe",
+  "lineage": "libsdl",
+  "locator": "774-824 libusb-required list, including Switch 2 GameCube PID and adapter, and backend selection; 825 onward USB adapter setting"
+}
