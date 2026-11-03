@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-cemu-direct-libusb",
+  "statement": "The Cemu GameCube adapter provider uses libusb hotplug, interface claim, dynamic endpoint discovery and direct interrupt transfers for 0x13 initialization, 37-byte input and 0x11 rumble. It exposes four internal controllers, not four evdev nodes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Cemu native adapter backend"
+  },
+  "sources": [
+    "gc-adapter-cemu-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

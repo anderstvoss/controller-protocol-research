@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Source-pin out-of-tree and user-space GameCube USB adapter bridges, Android USB manager and emulator backends; record source-only evdev and USB gaps.
+
 - Document Joy-Con (R) source-only NFC/IR MCU state, NFC polling/read/write flow and IR register/image fragment policy; five scoped claims, no tag contents or host tests.
 
 - Add Joy-Con single/pair consumer survey, SDL2 2.30.12 open and pair differences, kernel v5.16 history and compat/faithful identity decisions; five source-only claims, no host measurements.

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-eden-backend",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/eden-emulator/mirror/395613b01f918b559f0a3b1718c78f81987c49d4/src/input_common/drivers/gc_adapter.cpp",
+  "revision": "395613b01f918b559f0a3b1718c78f81987c49d4",
+  "sha256": "b777fc32192f35c8d99178640bd11ba25f2b5be26362a55678b2624c58427020",
+  "lineage": "Eden/yuzu-lineage",
+  "locator": "19-72 libusb wrapper; 230-293 USB discovery, detach, claim and SET_PROTOCOL; 299-328 dynamic endpoint selection and 0x13 init; 351-381 software rumble modulation and 0x11 output"
+}

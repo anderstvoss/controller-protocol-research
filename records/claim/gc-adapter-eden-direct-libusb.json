@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-eden-direct-libusb",
+  "statement": "The Eden GameCube adapter backend discovers and claims the adapter through libusb, dynamically selects endpoints, writes 0x13 and 0x11, and supplies its own port state; the native adapter path is not an evdev consumer.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Eden native adapter backend"
+  },
+  "sources": [
+    "gc-adapter-eden-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

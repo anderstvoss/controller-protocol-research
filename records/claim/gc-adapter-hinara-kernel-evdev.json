@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-hinara-kernel-evdev",
+  "statement": "The out-of-tree Hinara kernel USB driver opens adapter interrupt endpoints using endpoint descriptors, supplies their descriptor bInterval to its URBs, registers per-port Linux input devices with four stick axes and two analog trigger axes in 0..255, and exposes memless rumble.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Out-of-tree kernel USB adapter consumer behavior"
+  },
+  "sources": [
+    "gc-adapter-hinara-kmod"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

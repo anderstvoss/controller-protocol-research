@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-toadking-four-uinput-pads",
+  "statement": "The pinned ToadKing daemon opens the physical adapter using libusb and creates or destroys a separate uinput evdev pad when each port transitions between connected and empty; it does not expose four native USB devices.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "ToadKing consumer bridge and per-port lifecycle"
+  },
+  "sources": [
+    "gc-adapter-toadking-uinput"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-dolphin-android",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/dolphin-emu/dolphin/df4bd441dec5d6f3cff606eea76f183963e97a44/Source/Android/app/src/main/java/org/dolphinemu/dolphinemu/utils/GCAdapter.kt",
+  "revision": "df4bd441dec5d6f3cff606eea76f183963e97a44",
+  "sha256": "7c856500d159832a8bda2aeb7e18c4feefc825ac177b9c671e13535886dec824",
+  "lineage": "dolphin-emulator",
+  "locator": "25-62 Android UsbManager discovery and permission request; 87-115 identity, init and read/write via UsbDeviceConnection; 122-164 claim and dynamic endpoints; 177-214 hotplug handling"
+}

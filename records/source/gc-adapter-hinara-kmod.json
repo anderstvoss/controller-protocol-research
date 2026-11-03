@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-hinara-kmod",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/Hinara/gamecube-adapter/2e88356950334e5b89a5c944a968ab86f54ddfba/usb-gamecube-adapter.c",
+  "revision": "2e88356950334e5b89a5c944a968ab86f54ddfba",
+  "sha256": "2a7ec32061f892bd6da51e2022cfcc232759e766fabc21d2c7720b731be089d6",
+  "lineage": "Hinara/gamecube-adapter",
+  "locator": "10-24 and 156-172 rumble; 109-128 key and axis parse; 175-246 hotplug input and absolute ranges; 324-356 report and endpoint interval; 383-410 discover interrupt endpoints and write init 0x13; 474-543 USB driver binding and cleanup"
+}

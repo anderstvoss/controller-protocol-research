@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-toadking-external-sdl-map",
+  "statement": "ToadKing documents an externally supplied SDL2 GameController mapping via environment configuration for its virtual pads; this does not establish an equivalent built-in SDL gamecontrollerdb mapping.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL GameController mapping for uinput bridge"
+  },
+  "sources": [
+    "gc-adapter-toadking-sdl-map"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

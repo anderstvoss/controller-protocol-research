@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-toadking-sdl-map",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/ToadKing/wii-u-gc-adapter/41d08ab0b23e16271fab6995b079d42eb1e82a8f/SDL_GameController.txt",
+  "revision": "41d08ab0b23e16271fab6995b079d42eb1e82a8f",
+  "sha256": "499c1fecfcd49fee8d149ffe9a028d274a305114cb56aacbc7ee6ff759057232",
+  "lineage": "ToadKing/wii-u-gc-adapter",
+  "locator": "1-17 explicit external SDL_GAMECONTROLLERCONFIG mapping, usable for multiple port indices and listing unsupported controls"
+}

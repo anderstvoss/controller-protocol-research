@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-descriptor-details-unconfirmed",
+  "statement": "The pinned app and kernel implementations do not by themselves establish a hardware-verified USB or HID descriptor, interrupt bInterval value, string descriptors or polling cadence; adapter descriptor details remain unknown.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Hardware USB descriptor and polling details"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
