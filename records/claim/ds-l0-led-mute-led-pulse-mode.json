@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-mute-led-pulse-mode",
+  "statement": "A third mute_button_led mode, pulsing, is likely: SDL documents value 0x02 as pulse and VIIPER names an Off/On/Breathing mode set. Only SDL gives the numeric value, and neither source shows a physical observation.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_ps5.c 742 (comment: 0x00 off, 0x01 solid, 0x02 pulse; SDL itself sends 0); VIIPER dualsense.md 103-107 (mode names, no values). Linux never sends a value above 1. Needs a physical LED-only check."
+  },
+  "sources": [
+    "audio-sdl-ps5",
+    "ds-community-viiper-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

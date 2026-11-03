@@ -85,6 +85,10 @@ The archived [DualSense `dummy_hcd` POC](https://github.com/anderstvoss/virtualg
 
 `ds-l0-dummy-hcd-steam-gyro-contrast` is a `source_supported` **consumer** historical observation citing the archived source and merged B experiment. The distinct `ds-l0-uhid-gyro-association-hypothesis` is **inferred**, not observed: Steam/SDL might treat sensor association differently when the device originates from `BUS_VIRTUAL`/UHID rather than a USB HID interface. This is a *testable explanation*, not a proven root cause or a reason to edit source report bytes. `ds-l0-steam-input-mode-unmeasured` explicitly preserves missing Steam build, backend and mapping provenance.
 
+## LED inventory (added 2026-10-29)
+
+Twelve `ds-l0-led-*` claims cover the three LED functions, their offsets on USB and Bluetooth, valid bits, value meanings and Linux/SDL connect behaviour. Nine are `source_supported`; `mute-pulse-mode` and `player-led-instant-bit` are `inferred` (single numeric source), and `led-brightness-levels` is `unknown`. Summary and the physical LED-only check list: `docs/dualsense-led-inventory.md`.
+
 ## Physical evidence still missing
 
 - A genuine DualSense 054c:0ce6 was read-only inspected in EXP-0015: 273-byte HID descriptor, 0x05/0x09/0x20 feature lengths, 64 increasing timestamps and limited USB audio descriptor fields. The source does **not** provide the actual raw descriptor/calibration/pairing bytes for public cross-reference. Damaged triggers and stick drift make affected mechanical observations unsuitable for quantitative fidelity.
