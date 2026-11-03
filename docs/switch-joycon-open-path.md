@@ -33,7 +33,7 @@ At SDL `535d80badefc83c5c527ec5748f2a20d6a9310fe`:
 4. IMU calibration is **optional**: failure uses defaults in the SDL routine, but the joystick marks sensors supported only after successful calibration. The vibration-enable return is ignored by this caller. Enhanced-report hint initialization chooses full `0x30` for Joy-Con in automatic mode to avoid the simple-mode stick-as-D-pad limitation. The code does not use all kernel-fatal subcommands with the same conditions.
 5. For synchronous subcommands SDL accepts only `0x21` with matching subcommand and ACK bit, and retries to its configured attempt limit (normally five). For Bluetooth output, it uses a distinct padded output size from USB.
 
-This source pin shows **meaningful differences** between hid-nintendo and SDL3. A device that passes one open path may fail the other. SDL2 exact version and divergence are **No evidence** in this pass; an SDL2 tag/commit must be pinned before specifying differences.
+This source pin shows **meaningful differences** between hid-nintendo and SDL3. A device that passes one open path may fail the other. SDL2 is outside this C/E lane's pinned SDL3 evidence. The separate D/F research draft (#96) pins SDL2 `release-2.30.12` and records the stricter vibration-enable and report-mode success gates at joystick open; that comparison is source-only, not a host test.
 
 Source locators: `joycon-sdl-switch` 355–510, 605–700, 775–855, 930–1100, 1130–1210, 1300–1565.
 
@@ -59,7 +59,7 @@ Source: `joycon-hid-nintendo-bus-binding`, `joycon-linux-hid-nintendo`, `joycon-
 ## Proposed host tests (not run)
 
 - **BT kernel:** present separately created BUS_BLUETOOTH 2006 and 2007 UHID instances with an explicitly sourced descriptor; trace every `0x01` request and `0x21` matched ACK, including retries, and separate fatal vs defaulted paths.
-- **BT SDL3 and SDL2:** pin library build/driver selection and open both direct HIDAPI and evdev backends; compare device-info failure, factory/user SPI failure, sensor visibility and 0x3F-to-0x30 transitions.
+- **BT SDL3 and SDL2:** pin installed library build/driver selection and open both direct HIDAPI and evdev backends; compare device-info failure, factory/user SPI failure, sensor visibility and 0x3F-to-0x30 transitions.
 - **Grip USB:** only after a receiver-like topology is implemented, check USB bus identity 200e, interface-to-side mapping, two handshakes, optional baud and no-timeout, SL/SR exclusion and IMU nodes.
 - **Identity:** capture from *authorized physical hardware*, privately, a sanitized HID descriptor shape and name/uniq expectations. No physical capture was performed here.
 
