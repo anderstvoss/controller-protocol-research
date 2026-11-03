@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-joycontrol-mcu-unimplemented",
+  "statement": "Pinned joycontrol has a named NFC/IR MCU command pathway but explicitly leaves NFC communication unimplemented and its README reports NFC support removed; this is a limitation of that emulator, not a claim that retail NFC/IR is absent.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-right",
+    "revision": "joycontrol 18a09da1a04306534ff9e1df8a1a69c0192a3244 GPL-3.0; nxbt ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975 MIT; source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "GPL application implementation limitation only; does not contradict Eden/Yamakaky physical-controller consumer MCU parsing."
+  },
+  "sources": [
+    "joycon-g-joycontrol-protocol",
+    "joycon-g-joycontrol-readme"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

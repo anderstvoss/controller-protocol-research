@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-joycond-udev72",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/udev/72-joycond.rules",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "bcddaba4ced054813180925ef7921aae37cbc30a8a77bda911206527c31d7442",
+  "lineage": "joycond",
+  "locator": "Lines 1-10 IMU event uaccess grants; lines 12-19 physical main input uaccess removal for Joy-Con L/R and grip, excluding virtual/combined and IMU."
+}

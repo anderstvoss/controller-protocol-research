@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-calibration-per-side",
+  "statement": "Pinned Linux code uses factory stick calibration addresses 0x603d (left) and 0x6046 (right), user calibration magic/data addresses 0x8010/0x8012 (left) and 0x801b/0x801d (right), and shared factory/user IMU regions 0x6020/0x8026. Left/right stick calibration packing is decoded with different ordering.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Joy-Con-specific side selection in kernel and shared SPI map from prior Switch Pro claims; no per-unit SPI bytes, persistence, serial contents or body values observed."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "swpro-dekunukem-spi-flash-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
