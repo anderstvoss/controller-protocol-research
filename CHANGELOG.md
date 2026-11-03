@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add Switch 1 Joy-Con registry IDs (family, left, right) and a source-only survey of how hid-nintendo, joycond and SDL3 present single halves and pairs; four consumer claims, no device-protocol or host evidence.
+
 - Register the GameCube USB adapter (WUP-028) and add a source-only survey: pinned SDL, Dolphin and Linux sources, corroborated report/init/rumble claims, single-lineage power and brake claims, and the finding that both native consumers need a USB-level device rather than hidraw. No physical or host evidence claimed.
 
 - Record the D9 x86-64 Steam UHID host probe: separate SDL/Steam phases, corrected raw feature types and reply framing, verified node access and cleanup; preserve negative discovery and unknown delivery evidence.
