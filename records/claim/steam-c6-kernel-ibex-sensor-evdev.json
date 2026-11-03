@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-c6-kernel-ibex-sensor-evdev",
+  "statement": "In Linux v7.3-rc1 hid-steam, the wired IBEX sensor evdev node is named Steam Controller Motion Sensors and copies bustype, vendor, product and version from the HID device; the USB consumer identity therefore carries BUS_USB and vendor/product 0x28de:0x1302, with version inherited rather than fixed here (hid-steam.c:1163-1200). The node sets INPUT_PROP_ACCELEROMETER and advertises EV_MSC/MSC_TIMESTAMP (hid-steam.c:1201-1203). ABS_X/Y/Z accelerometer axes are [-32768,32768], fuzz 128, flat 0, resolution 16384; ABS_RX/RY/RZ gyro axes are [-32768,32768], fuzz 0, flat 0, resolution 16 (hid-steam.c:70-78,1211-1230). This is pinned kernel consumer shape, not an observed device event stream.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Linux v7.3-rc1 source at cee9395acd8043be0644b25c34bfa86623f2b935; physical revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer evidence only for direct wired USB 28de:1302 motion-sensor evdev capability registration. Does not assert that a host created or received events from a device."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

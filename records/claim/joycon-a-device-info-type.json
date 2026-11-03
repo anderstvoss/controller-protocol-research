@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-device-info-type",
+  "statement": "Joy-Con L and R use the common 0x02 device-info reply payload; controller type is data byte 2 with L type 0x01 and R type 0x02, and the six-byte MAC follows at data bytes 4-9. This is not evidence of any particular retail firmware or MAC.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Protocol fields inferred from pinned Linux consumer parser and community format; no hardware dump. Firmware bytes and colour indicator map inherited from swpro-l0-device-info02-fields."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "swpro-dekunukem-bluetooth-hid-subcommands-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
