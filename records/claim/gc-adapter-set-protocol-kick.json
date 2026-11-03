@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-set-protocol-kick",
+  "statement": "Both consumers send the HID class request SET_PROTOCOL (bmRequestType 0x21, bRequest 11, wValue 1, interface 0) through libusb before use. SDL notes this is needed for Nyko and EVORETRO clones that share the 057e:0337 identity. A virtual device must accept this request without effect on other state.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "consumer host request at open"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-consumer-neutral-calibration",
+  "statement": "Consumers derive stick and trigger neutral from the device rather than fixed constants: Dolphin returns the first sample after a port connects as the pad origin, and SDL starts each port with an assumed range (128 plus or minus 88, trigger minimum 40) and widens it from observed samples. A virtual port's first report after attach and its value ranges therefore shape calibration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "consumer calibration of analog values"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

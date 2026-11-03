@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-rumble-output",
+  "statement": "Rumble is a 5-byte interrupt OUT report: 0x11 followed by one byte per port. Both consumers skip WaveBird ports. Value 1 starts rumble and 0 stops it.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: interrupt OUT rumble report"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

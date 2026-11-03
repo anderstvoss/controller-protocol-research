@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-linux-hid-ids",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/6628e7d4c6b25c8d18f1345e3a20d21829aae7e4/drivers/hid/hid-ids.h",
+  "revision": "6628e7d4c6b25c8d18f1345e3a20d21829aae7e4",
+  "sha256": "4beaae21baf1b93abdfc5bbe3f509bfa03d97d53bcb2d7f3b40320d4ae312eeb",
+  "lineage": "linux-kernel",
+  "locator": "Nintendo IDs 1120-1133: no 0x0337 entry; 0x2073 NS2_GCCON present (Switch 2 GameCube controller, not this device)"
+}

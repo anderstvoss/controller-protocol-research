@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-port-power-bit",
+  "statement": "SDL treats port status bit 0x04 as the adapter's second (power) USB cable being connected and only allows rumble when it is set and the port is wired. Dolphin does not read this bit. Single lineage; the meaning of the remaining status bits is not stated by either source.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: per-port status byte, rumble power"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
