@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-player-led-bits",
+  "statement": "DualSense player_leds bits 0-4 each switch one of the five player LEDs, with bit 2 the centre LED. Linux and SDL use the same centred player patterns: 0x04, 0x0A, 0x15, 0x1B and 0x1F for players 1-5.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 1714-1735 (centred pattern comment and table), 1222-1245 (one bit per LED); SDL_hidapi_ps5.c 343-365 (same table); nondebug explorer 350-354 (LED1-LED5 map to bits 0-4) and 862-882 (uses 0x04, 0x0A, 0x15, 0x1B). Physical left-to-right order beyond the centre bit is not measured."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "ds-community-nondebug-explorer"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

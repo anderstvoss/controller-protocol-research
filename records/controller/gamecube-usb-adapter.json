@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "gamecube-usb-adapter",
+  "name": "Nintendo GameCube Controller Adapter for Wii U and Switch (WUP-028)",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#296",
+  "notes": "One USB device carrying four GameCube controller ports (wired or WaveBird receiver per port). Clones in Wii U mode share the identity; PC-mode clones that enumerate as generic HID joysticks are out of scope."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-sdl-hidapi-libusb-required",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/48d30d139acfdaf0825beee5e9a59bf3f9852a28/src/hidapi/SDL_hidapi.c",
+  "revision": "48d30d139acfdaf0825beee5e9a59bf3f9852a28",
+  "sha256": "fb7c91544a114c4a77e9fe28755cd2da5aa8cf106026e4c2a786a441887bf2fe",
+  "lineage": "libsdl",
+  "locator": "SDL_libusb_required list 774-792; RequiresLibUSB 794-813; SDL_HIDAPI_ShouldIgnoreDevice 1071-1084 (non-libusb path ignores required devices)"
+}

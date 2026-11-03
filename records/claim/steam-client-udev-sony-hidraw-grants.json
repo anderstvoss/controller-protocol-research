@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-udev-sony-hidraw-grants",
+  "statement": "Valve steam-devices public udev source marks hidraw USB/Bluetooth Sony 054c:0ce6 (and Edge 0df2) MODE=0660 TAG+=uaccess; permissions only, not evidence of private Steam feature requests.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "steam-devices 60-steam-input.rules 40-50. No proof that the rule is installed on the test host, or that active-logind seat ACL is present."
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input",
+    "udev-systemd-uaccess"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

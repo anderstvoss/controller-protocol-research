@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-inventory",
+  "statement": "The DualSense output path drives three separate LED functions: an RGB lightbar set by three 8-bit colour bytes, five player-indicator LEDs set by one bitmask byte (bits 0-4), and a microphone-mute LED set by its own mode byte. Each has its own valid bit in the output report.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "VIIPER dualsense.md 150-184 (output state names mute light, player LEDs, lightbar); nondebug explorer 192-197, 350-365 (five player LED and mute LED controls); SDL_hidapi_ps5.c 169-192, 711-743; hid-playstation.c 159-163, 270-298. Sources agree on the three functions; no physical brightness, colour accuracy or timing is measured."
+  },
+  "sources": [
+    "ds-community-viiper-protocol",
+    "ds-community-nondebug-explorer",
+    "audio-sdl-ps5",
+    "audio-linux-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

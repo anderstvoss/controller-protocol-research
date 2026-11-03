@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-button-bits",
+  "statement": "Buttons 1 bits 0 to 7 are A, B, X, Y, D-pad left, right, down, up; buttons 2 bits 0 to 3 are Start, Z, R digital and L digital. SDL maps Z to right shoulder and the L/R digital bits to trigger-bottom buttons; Dolphin maps them to the GameCube pad bits directly.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: per-port button bytes"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

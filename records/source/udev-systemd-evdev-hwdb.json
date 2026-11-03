@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "udev-systemd-evdev-hwdb",
+  "kind": "research_lead",
+  "url": "https://github.com/systemd/systemd/blob/ede1e572502d876a7e59f6ef837c1f02f0e931ca/hwdb.d/60-evdev.hwdb",
+  "revision": "ede1e572502d876a7e59f6ef837c1f02f0e931ca",
+  "sha256": "955fb326d9c9811f829b83afa1cab147a08b8484c3224cec2d7dc3310ff9a1ab",
+  "lineage": "systemd-udev",
+  "locator": "evdev hardware database; rules vary by product and distribution install"
+}

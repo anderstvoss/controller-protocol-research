@@ -8,6 +8,9 @@ affected schema's `schema_version`.
 ## Unreleased
 
 - Pin the wired Steam Controller 2026 gamepad and sensor evdev capability shapes from Linux v7.3-rc1; these are consumer source claims, not observed virtual-device events.
+
+- Register the GameCube USB adapter (WUP-028) and add a source-only survey: pinned SDL, Dolphin and Linux sources, corroborated report/init/rumble claims, single-lineage power and brake claims, and the finding that both native consumers need a USB-level device rather than hidraw. No physical or host evidence claimed.
+
 - Record the D9 x86-64 Steam UHID host probe: separate SDL/Steam phases, corrected raw feature types and reply framing, verified node access and cleanup; preserve negative discovery and unknown delivery evidence.
 
 - Add a source-only direct-wired Steam Controller 2026 physical-capture plan, bounded USBmon sessions and a fail-closed review-only transfer reducer with tests; no physical or virtual-host execution claimed.

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-linux-hid-quirks",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/6628e7d4c6b25c8d18f1345e3a20d21829aae7e4/drivers/hid/hid-quirks.c",
+  "revision": "6628e7d4c6b25c8d18f1345e3a20d21829aae7e4",
+  "sha256": "a083536b8a3cfb77ae5d9ad22519921fda9f8ab2272ff1f384d4bdf753407c2b",
+  "lineage": "linux-kernel",
+  "locator": "Only Nintendo entries are Bluetooth Wii Remote lines 585-586; no 057e:0337 quirk"
+}
