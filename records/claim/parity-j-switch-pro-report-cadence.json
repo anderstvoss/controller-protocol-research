@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "parity-j-switch-pro-report-cadence",
+  "statement": "Sources disagree on nominal Switch Pro USB input cadence (host source descriptions 60/120 Hz versus OpenPuck compatibility 250 Hz). Consumer request/report-mode and rumble enable timing are source-driven; no universal physical 250 Hz report period is established.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Switch C report-period conflict; hid-nintendo 2600-2633 enable sequencing; SDL 1536-1567,1790-1805. No hardware timestamp measurements; #166 must measure."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "udev-systemd-input-id-builtin",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/systemd/systemd/blob/ede1e572502d876a7e59f6ef837c1f02f0e931ca/src/udev/udev-builtin-input_id.c",
+  "revision": "ede1e572502d876a7e59f6ef837c1f02f0e931ca",
+  "sha256": "41f2bee4ea2bc706b77c70108e0b1cb93f6046851a69e863b56d7c2f8bf2c28f",
+  "lineage": "systemd-udev",
+  "locator": "157-321 joystick key/axis heuristics and ID_INPUT_JOYSTICK=1 assignment"
+}

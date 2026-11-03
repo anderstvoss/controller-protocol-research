@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-udev-xbox360-no-specific-grant",
+  "statement": "In inspected Valve 60-steam-input.rules, no targeted 045e:028e or 045e:0719 hidraw grant was identified. Generic input event ACL or host-specific rules may still grant input; absence here is not proof physical Xbox or virtual UHID is inaccessible.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "60-steam-input.rules 1-249; other Microsoft 045e PID such as 0b22 is unrelated. No evidence of a dedicated published 028e rule or the user's installed ruleset."
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input",
+    "udev-systemd-uaccess"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
