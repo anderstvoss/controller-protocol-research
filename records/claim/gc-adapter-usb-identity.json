@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-usb-identity",
+  "statement": "Both pinned consumers identify the adapter by USB vendor 0x057e and product 0x0337 (SDL usb_ids.h line 122 and driver match; Dolphin libusb hotplug filter). No physical USB descriptor, bcdDevice, strings or serial was measured.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: USB device identity"
+  },
+  "sources": [
+    "gc-adapter-sdl-usb-ids",
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

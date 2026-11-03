@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-led-brightness-levels",
+  "statement": "The DualSense output common block has an led_brightness byte (common byte 42) that Linux, SDL and VIIPER all name, but no pinned source defines its values or which LEDs it affects. Linux and SDL leave it zero.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 293 (field only); SDL_hidapi_ps5.c 186 (ucLedBrightness, never written); VIIPER dualsense.md 179. Source pending: a July 2026 Linux patch reportedly describes player-indicator brightness levels; not yet pinned or hashed."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "ds-community-viiper-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

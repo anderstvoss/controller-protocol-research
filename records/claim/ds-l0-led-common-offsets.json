@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-led-common-offsets",
+  "statement": "In the 47-byte DualSense output common block, mute_button_led is byte 8, valid_flag2 byte 38, lightbar_setup byte 41, led_brightness byte 42, player_leds byte 43 and lightbar red/green/blue bytes 44-46. In USB output report 0x02 each sits one byte later (report ID first).",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "source revisions: Linux 4056b3c, SDL 535d80b, VIIPER a370903, nondebug 0233835; physical firmware/revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c 270-298 and 309-315 (common struct with 47-byte size assertion, USB wrapper); SDL_hidapi_ps5.c 169-192 (same offsets as commented indices, names ucMicLightMode/ucLedAnim/ucLedBrightness/ucPadLights); VIIPER dualsense.md 158-184 (same order: MuteLightMode, LightFade, LightBrightness, PlayerLeds, LedRed/Green/Blue). Field names differ by source; offsets agree."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5",
+    "ds-community-viiper-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

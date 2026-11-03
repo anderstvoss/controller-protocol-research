@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-client-udev-ds4-hidraw-grants",
+  "statement": "Valve steam-devices public rules grant 054c:05c4,09cc,0ba0 raw Sony USB HID and 05c4/09cc BT matched paths with MODE=0660 and TAG+=uaccess; this does not prove Steam's closed client opens these nodes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "public Steam rules 22ec85e, systemd ede1e57, kernel 4056b3c, SDL 535d80b or virtualgamepad 8f60dcc; host not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "steam-devices 60-steam-input.rules 25-38; the 0ba0 dongle is not a generic DS4 USB controller."
+  },
+  "sources": [
+    "steam-client-udev-60-steam-input",
+    "udev-systemd-uaccess"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

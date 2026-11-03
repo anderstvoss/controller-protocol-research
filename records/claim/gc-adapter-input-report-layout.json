@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-input-report-layout",
+  "statement": "The adapter input is 37 bytes: byte 0 is 0x21, followed by four 9-byte port blocks in port order. Each block is: status, buttons 1, buttons 2, main stick X, main stick Y, C-stick X, C-stick Y, analog L, analog R. Both consumers reject other sizes or a different first byte.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: interrupt IN report"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

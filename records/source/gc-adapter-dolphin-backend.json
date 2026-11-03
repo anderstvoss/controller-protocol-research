@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-dolphin-backend",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/dolphin-emu/dolphin/df4bd441dec5d6f3cff606eea76f183963e97a44/Source/Core/InputCommon/GCAdapter.cpp",
+  "revision": "df4bd441dec5d6f3cff606eea76f183963e97a44",
+  "sha256": "44a17ff2daa92d39dfc5afaf71d7ee60fd6af1d89962b36fb9c4e5ad4512428e",
+  "lineage": "dolphin-emulator",
+  "locator": "ControllerType and payload sizes 97-110; libusb hotplug on 057e:0337 418-424; kernel driver detach 660-690; SET_PROTOCOL control transfer 694; claim interface 710; endpoint discovery 735-748; 0x13 init 753-755; origin on new connection 845-856; IdentifyControllerType 862-871; ProcessInputPayload 873-960; rumble output 1030-1050"
+}
