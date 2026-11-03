@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-eden-irs",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/eden-emulator/mirror/blob/07677aa5006b45dc511269f2c4b2d055cab679bb/src/input_common/helpers/joycon_protocol/irs.cpp",
+  "revision": "07677aa5006b45dc511269f2c4b2d055cab679bb",
+  "sha256": "d27cb6b3527cfea7069e8be7088b2655b032a35601aa399974ad46886448689f",
+  "lineage": "eden-emulator-mirror",
+  "locator": "1-95 IR enable, modes/resolutions; 95-150 300-byte fragment ACK/retry; 150-290 configuration register and checksum flow; GPL code paraphrased only."
+}

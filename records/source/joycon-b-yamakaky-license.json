@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-yamakaky-license",
+  "kind": "research_lead",
+  "url": "https://github.com/Yamakaky/joy/blob/a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e/LICENSE",
+  "revision": "a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e",
+  "sha256": "48a14fa5d992f4de3e37cdde51068027ff12b4e8672ece7a2c04b7661992dfaa",
+  "lineage": "Yamakaky-joy",
+  "locator": "1-21 MIT license; provenance only."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-eden-nfc",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/eden-emulator/mirror/blob/07677aa5006b45dc511269f2c4b2d055cab679bb/src/input_common/helpers/joycon_protocol/nfc.cpp",
+  "revision": "07677aa5006b45dc511269f2c4b2d055cab679bb",
+  "sha256": "24d2f1e3dc55f5a268493dd7c9b90a917797fb5cafb1e736b8e01af93efe97b5",
+  "lineage": "eden-emulator-mirror",
+  "locator": "1-110 enable, polling, tag presence; 110-230 read/write transition; 245-410 bounded MCU state, fragment handling; GPL code paraphrased only; derived partly from yuzu."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-ir-mode-registers",
+  "statement": "Source implementations enumerate IR mode 0x06 clustering and 0x07 image transfer, paged sensor register writes for resolution, exposure, gain, LEDs, flip, filtering and configuration finalization. Supported source-listed image sizes include 320 by 240, 160 by 120, 80 by 60, 40 by 30 and an Eden-only 20 by 15 format.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-right",
+    "revision": "Yamakaky/joy a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e; Eden 07677aa5006b45dc511269f2c4b2d055cab679bb; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no physical device",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Right Joy-Con IR MCU; different independent implementations list different resolution coverage; exact defaults, image fidelity and device firmware unverified."
+  },
+  "sources": [
+    "joycon-b-yamakaky-ir",
+    "joycon-b-yamakaky-ir-registers",
+    "joycon-b-eden-irs",
+    "joycon-b-eden-types"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
