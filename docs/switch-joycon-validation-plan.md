@@ -1,0 +1,50 @@
+# Switch 1 Joy-Con L/R — staged lab qualification plan
+
+**Joy-Con research, prep for virtualgamepad #297.** This is a coordinated **test plan, not a test report**. No retail Joy-Con, Charging Grip, Bluetooth host, virtual Joy-Con, SDL application, NFC tag or IR camera was exercised in these research PRs. All rows start **not run**. Source-only results reside in draft research lanes [A/G #94](https://github.com/anderstvoss/controller-protocol-research/pull/94), [C/E #95](https://github.com/anderstvoss/controller-protocol-research/pull/95), [D/F #96](https://github.com/anderstvoss/controller-protocol-research/pull/96), and [B #97](https://github.com/anderstvoss/controller-protocol-research/pull/97).
+
+## Qualification gates and evidence classes
+
+1. **S0 — source integrity:** record immutable source revisions, SHA-256 hashes, exact line locators, licences, and whether a conclusion comes from a device note, kernel consumer, userspace consumer or emulator. The repository's CI guards, validator, tests and policy hooks are necessary but not device validation. No evidence status may imply retail observation from source code alone.
+2. **P1 — private retail reference:** only if authorized Switch 1 physical L and R hardware and a lab host become available. Record controller revision/firmware *categories* and experimental method privately; capture controlled button, stick, IMU, report-mode and outbound subcommand response behavior. Derive sanitized, byte-position-level summaries for public claims. Retail HID descriptor bytes and transport-visible name are a **gate** before calling a generated UHID descriptor faithful. Do not publish device addresses, serials, pairing secrets, raw capture files or NFC contents.
+3. **V1 — synthetic protocol unit tests:** after an initial virtualgamepad codec exists, use entirely synthetic identity and test data. Assertions here establish encoder/decoder behavior against specified fields, *not* physical fidelity. Missing retail evidence remains explicitly unknown.
+4. **V2 — measured Linux virtual-host tests:** after a candidate implementation exists, use an isolated recorded Linux host with fixed kernel, SDL2/SDL3 versions and session permissions. Confirm UHID binding/open/feedback and lifecycle. This proves the particular virtual target and consumer combination, not the retail source.
+5. **A1 — integration acceptance:** exercise root API creation/removal, native function matrix, host consumer acceptance, identity isolation and timing under #166. Promotion to supported cells requires attached reproducible evidence and a failing-then-passing regression for discovered defects.
+
+Record separately **source-supported**, **synthetic tested**, **virtual-host tested**, and **retail physically measured**. Do not use one status as a proxy for another.
+
+## Lab matrix (proposed, every test not run)
+
+| ID / stage | Configuration and stimulus | Required observations / negative checks | Source or open question |
+| --- | --- | --- | --- |
+| JC-01 P1 | Independently identify physical L and R on Bluetooth; collect private HID descriptor, name, bus, product ID, report lengths and firmware metadata | Confirm or reject descriptor/name assumptions; redact unique per-unit fields before any public derived record | A1, C3, F; retail descriptor currently **No evidence** |
+| JC-02 V2 | Create separate synthetic BUS_BLUETOOTH 057e:2006 L and 057e:2007 R UHID targets, one at a time | Kernel bind, number and names of evdev/IMU nodes, visible identities; reject accidentally created synthetic 057e:2008 hardware target | C1, C3, D, F |
+| JC-03 V1/V2 | Issue subcommand 0x02 with correct report 0x21 reply, wrong ID, missing reply, truncated reply and unsupported type | Trace kernel and SDL3 differences; kernel requires valid info path, SDL3 can use PID fallback. Do **not** put actual MAC bytes in logs | A1, C1, C2 |
+| JC-04 V1/V2 | Read SPI 0x10 for left/right factory and user stick regions, user magic and factory IMU regions; corrupt magic, length and calibration | Verify correct 12-bit unpacking/order per half; kernel fallback vs SDL3 fatal factory stick read, calibration fallback where supported | A4, C1, C2 |
+| JC-05 V2 | Accept/reject 0x40 IMU enable, 0x03 full-report mode and 0x48 vibration enable independently; repeat using SDL2 2.30.12 and pinned SDL3 | Record exactly which failure aborts kernel probe or joystick open, which uses fallback, retry counts and absence of orphaned nodes | A3, C1/C2, D SDL2 delta |
+| JC-06 P1/V1/V2 | Neutral, each distinct button, D-pad, both SL/SR, rail-relevant state and stick extremes; change from 0x3F to 0x30 | Validate bit positions, per-half active controls, 12-bit domain, report size and unknown opposite-stick bytes; no fill value promoted from nxbt alone | A2, G |
+| JC-07 P1/V1/V2 | Static 3-axis poses, axis-isolated motion, positive/negative rotations, multiple 0x30 frames | Decode all three time-adjacent IMU samples; check right-side Y/Z normalization independently from raw signs and record coordinate convention | A5, C1, D |
+| JC-08 V1/V2 | Request LEDs, right-only home LED, vibration/no-vibration report framing, sustained command traffic and stop | Verify reply/LED semantics, L/R rumble slots and per-half isolation. HID output bytes and evdev FF are **not** proof of physical HD rumble | A3/A6 |
+| JC-09 P1/V2 | Monitor full and simple report interarrival distributions, command/reply latency and reconnect | Report sample counts, percentiles and dropped inputs; distinguish observed rates from kernel 60 ms pacing/strict-mode policy and nominal 15 ms source claim | A7, C1 |
+| JC-10 V2 | Compare SDL3 HIDAPI, SDL2 HIDAPI, forced SDL evdev, and standalone kernel evdev routes | Capture device name/GUID/type, pair behavior, mapped controls, motion, who owns subcommands and permission failures; pin exact builds and hints | C2, D |
+| JC-11 V2 | Install and remove pinned relevant udev policies in an isolated host; observe effective permissions with and without active seat/joycond | Record effective hidraw, physical main evdev, IMU event, and uinput grants; check that policy ordering does not lead to duplicate capture or feedback | E1/E2, virtualgamepad #258 |
+| JC-12 V2 | Create two independent halves, pair/unpair through joycond and SDL, disconnect either half mid-session | Confirm in-process or uinput 2008 identity *only at consumer layer*; prevent duplicates and test cleanup and paired-state rollback | D/F, virtualgamepad #163 |
+| JC-13 P1/V2, optional | Attach real USB Charging Grip or implement a dedicated USB-receiver test shape separately | Record 057e:200e interface split, 0x80/0x81 handshakes, optional baud, SL/SR exclusion, side selection; never conflate with BT halves | C4, #165 |
+| JC-14 V1 | Synthetic R-only MCU state transitions: 0x20/0x21/0x22, 0x31 input, 0x11 output, CRC-8, delays and timeouts | Verify allowed status progression, busy/retry/error behavior and cleanup; L must not expose R MCU | B1 |
+| JC-15 V1, optional P1 | Synthetic NFC poll/detect/read/write fragments, reorder/loss/cancel; optional retail checks using non-sensitive test tag in private lab | Validate state-machine terminal conditions, timeouts and tag-loss. Never ingest tag identifiers, keys or contents into public corpus | B2 |
+| JC-16 V1, optional P1 | Generate nonpersonal 160x120 synthetic grayscale data as 64 indexed 300-byte fragments; drop, duplicate and reorder fragments | Validate ACK/re-request, 64-fragment assembly, frame boundary, CRC and cancellation; camera fidelity requires separate physical test | B3 |
+| JC-17 A1 | For each in-scope realization, repeated root API create/ready/remove cycles, independent L/R identities, injected failures and concurrent instances | Record exact candidate SHA, host/consumer versions, median and tail creation/removal latency, failure rollback and resource leakage; set budget after measurement | #166, #297 acceptance |
+| JC-18 A1 | Run per-side native-function matrix including battery, LEDs, IMU, rumble, SPI, rail, MCU and unsupported realizations | Each cell is N/A, WIP, provisional or verified with explicit provider limit; no false alias of NFC/IR to generic gamepad controls | #297, #161, #162, #163 |
+
+**Priority:** JC-01 (if hardware), JC-02–07, JC-10–12 and JC-17 are the primary Bluetooth-bus faithful-emulation gates. JC-13 is optional receiver topology. JC-14–16 are right-only MCU stretch tests. Closed-source Steam Input behavior remains a host experiment, not an inference from public udev rules.
+
+## Reproducibility and publication checklist
+
+For each test, store a **private** raw run manifest with: test ID, operator authorization, date, candidate commit SHA, source/codec revision, Linux kernel and configuration, transport/backend, SDL/joycond version, test stimuli, observed ordered reports, negative cases, results, failure logs and measured durations. Keep unique device IDs, BT addresses, pairing information and NFC/IR sensitive content out of the public corpus. Public artifacts should be minimized and sanitized or fully synthetic; do not write a raw report to the public repository before the publication guard and human review.
+
+For each passing claim promotion, link a claim ID to the controlled experiment record and fixture, use the corpus schema's evidence-status requirements, explain failure cases and known untested firmware revisions, and link the exact implementation commit and consumer version. A normal CI pass alone does not qualify a physical or virtual-host result.
+
+## Merge and implementation dependencies
+
+Research PR #96 uses Markdown-only references to claims proposed in #94 and #95; merge order, **if approved**, should place #94 and #95 before #96, with #97 independently sequenced. The draft branches also edit the same CHANGELOG section, so conflicts must be resolved against the current main at merge time. No merge, virtualgamepad implementation, hardware test or live capture is authorized by this document. Await owner feedback before implementation.
+
+**Cloud agent (Joy-Con research)**
