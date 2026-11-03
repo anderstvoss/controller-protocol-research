@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-c-kernel-version-and-identity",
+  "statement": "The pinned kernel matches half PIDs on Bluetooth, performs HID parsing, sets a high bit in HID version for SDL2 mappings, and assigns the device-info MAC to its input uniq; it does not compare a pinned retail descriptor byte string.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source-only Linux consumer identity policy. Exact descriptor and physical HID product names are not established."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
