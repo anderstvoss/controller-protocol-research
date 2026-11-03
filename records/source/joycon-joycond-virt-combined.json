@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-joycond-virt-combined",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/src/virt_ctlr_combined.cpp",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "3793154e165bb256375c381085fd00151281ee351b1b2199604a33acfd80f8fb",
+  "lineage": "joycond",
+  "locator": "20-80 event forwarding with SL/SR remapped to BTN_TRIGGER_HAPPY1-4; 85-217 forwarded FF and LED; 236-330 uinput device named 'Nintendo Switch Combined Joy-Cons', VID 057e, PID 0x2008, BUS_VIRTUAL."
+}

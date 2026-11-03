@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-linux-hid-nintendo",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-nintendo.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "0ed5027206c64408b513cab219b05a5753cc6ed364883c7460abc8ba1074982f",
+  "lineage": "linux-kernel",
+  "locator": "315-324 controller type values; 660-678 and 690-693 PID-based Joy-Con/Charging Grip helpers vs type-based left/right helpers; 1030 home LED; 1756-1765 per-half stick/button reporting with SL/SR skipped on the grip; 2115-2175 separate IMU input node named after the main node with MAC uniq; 2190-2210 main input node identity (name, bus, VID/PID, MAC uniq) and per-half button config; 2310-2370 per-device player LED allocation and home LED only on right-capable types; 2495-2551 device-info MAC and type byte, USB handshake mandatory for the grip; 2884-2905 device table (Joy-Con L/R Bluetooth only, Charging Grip USB only)."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-joycond-ctlr-mgr",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/src/ctlr_mgr.cpp",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "b538369982f43248352c727e2d028908433a50b48d39332985a8bc377461ddeb",
+  "lineage": "joycond",
+  "locator": "10-56 pairing-state dispatch (lone, virtual Pro, waiting for partner, horizontal); 94-120 combined L/R virtual controller creation and player LEDs on both halves; 202-221 re-pairing by MAC."
+}

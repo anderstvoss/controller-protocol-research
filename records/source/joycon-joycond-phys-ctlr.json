@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-joycond-phys-ctlr",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/src/phys_ctlr.cpp",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "ffdc7aec13f6682beca95b6d9d7d1bbf3ee34ec3864e3869cc1e0a80d6bd6e83",
+  "lineage": "joycond",
+  "locator": "240-247 Charging Grip node classified as left or right by presence of BTN_TL; 404-450 pairing gesture rules per model; grip and serial halves always wait for a partner."
+}

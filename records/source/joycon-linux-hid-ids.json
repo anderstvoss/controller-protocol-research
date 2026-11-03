@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-linux-hid-ids",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-ids.h",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "27a23b9f29653d592e51b9ec5f6e10c4129724c464148e66112508cd8ca14bf5",
+  "lineage": "linux-kernel",
+  "locator": "1111-1120 Nintendo vendor ID and Joy-Con L 0x2006, Joy-Con R 0x2007, Pro 0x2009, Charging Grip 0x200e product IDs."
+}

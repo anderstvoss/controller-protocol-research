@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-hid-nintendo-bus-binding",
+  "statement": "At the pinned kernel revision, hid-nintendo matches Joy-Con (L) 057e:2006 and Joy-Con (R) 057e:2007 only as Bluetooth HID devices. The only USB Joy-Con entry is the Charging Grip 057e:200e, and for the grip the driver treats a failed USB handshake as fatal. A USB-bus UHID device with a single Joy-Con PID does not match the driver table.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "source revisions pinned in the cited source records; host versions not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel device-table and probe source only. The consequence that an unmatched USB-bus device falls to another HID driver is generic HID-core behaviour and was not run on a host. No physical Joy-Con, no host binding observed."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "joycon-linux-hid-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
