@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-rumble-brake-value",
+  "statement": "With its rumble-brake hint enabled, SDL writes value 2 for a hard stop of the motor in a port's rumble byte. Dolphin never writes 2. Single lineage; device behaviour for 2 or other values is not measured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "transport detail: rumble byte values beyond 0 and 1"
+  },
+  "sources": [
+    "gc-adapter-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

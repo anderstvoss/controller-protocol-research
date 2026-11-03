@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-consumers-require-usb-device",
+  "statement": "Neither pinned consumer reaches the adapter through hidraw. SDL lists 057e:0337 as libusb-required and its HIDAPI layer ignores the device on non-libusb backends; Dolphin opens it only through libusb hotplug and detaches any kernel driver. A UHID realization with the native identity would therefore not be opened by either consumer's adapter path; reaching them needs a USB-level device (for example dummy_hcd or USB/IP).",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "consumer discovery and access path on Linux"
+  },
+  "sources": [
+    "gc-adapter-sdl-hidapi-libusb-required",
+    "gc-adapter-dolphin-backend"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
