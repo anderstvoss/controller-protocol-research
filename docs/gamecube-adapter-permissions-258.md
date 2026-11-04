@@ -1,0 +1,17 @@
+# GameCube adapter — host permissions inventory for virtualgamepad #258
+
+**GameCube USB research, prep for #296** · Public-source inventory only; no host permissions or claims were tested. These are proposed audit rows, **not** a provisioning recommendation or a substitute for #258 review.
+
+| Consumer or implementation | Object and grant | Need and scope | Driver detach / conflict | Source lines; unresolved test |
+| --- | --- | --- | --- | --- |
+| Valve public steam-devices rule | USB device node for 057e:0337; `MODE=0660`, `TAG+=uaccess` | Intended seat-ACL read/write access to USB device; depends on user session/udev deployment | Rule alone does not prove Steam uses adapter, attempts detach or successfully claims interface | `steam-client-udev-60-steam-input` line 236; verify actual ACL and udev application **not run** |
+| Dolphin published device rule | USB device node for 057e:0337; `TAG+=uaccess` (no explicit MODE) | Seat ACL subject to distro rule processing | Desktop Dolphin attempts kernel detach and interface claim; check privilege requirements and detach failure, **not run** | [Dolphin udev rule](https://github.com/dolphin-emu/dolphin/blob/843b030eda4d42672e8aea2b5607f4ba3048bd36/Data/51-usb-device.rules#L1-L2); `gc-adapter-dolphin-backend` 660–710 |
+| SDL native adapter | USB device node, read/write ACL or sufficient permissions for libusb | Required for 0x13 and 0x11 OUT plus interrupt IN; hidraw grant alone insufficient | Depending on backend, libusb may detach a kernel driver, affecting other clients | `gc-adapter-consumers-require-usb-device`, `gc-adapter-sdl-hidapi-libusb-required`; test simultaneous opens **not run** |
+| Cemu and Eden direct backends | USB device node, libusb permission and claimed interface | Direct native adapter access, not `/dev/input/event*` | Both call kernel-driver detach if active; ownership collision needs test | `gc-adapter-cemu-backend` 195–247; `gc-adapter-eden-backend` 268–328; **not run** |
+| ToadKing bridge | USB adapter node **and** `/dev/uinput` write | libusb native adapter input/output, virtual per-port device creation and FF injection | Calls libusb detach; uinput permission is a distinct security grant | `gc-adapter-toadking-uinput` 126–220, 550–565; **not run** |
+| Hinara kernel module | Kernel USB driver bind, device-specific module loading | Module loading/install privileged; user apps subsequently see evdev node permissions | Conflicts with user-space libusb claim; detach can interrupt kernel-created input nodes | `gc-adapter-hinara-kmod` 474–543; **not run** |
+| Generic evdev consumers | `/dev/input/event*` and possible FF event write permission | Consumer seat ACL or group policy; no 057e:0337 direct USB grant necessary when consuming four uinput pads | No native adapter command or detach | `parity-g-retroarch-udev`; `gc-adapter-toadking-four-uinput-pads`; **not run** |
+
+**Release decision pending #258:** preferred provisioning is per-device, seat-scoped USB grants where native libusb is deliberately enabled, not global world-writable USB or unrestricted `/dev/uinput`. Do not treat USB-device mode and `uaccess` as equivalent: udev applies a mode at node creation; active-seat ACL is a separate mechanism. Detach privilege and interface ownership are kernel/distribution-specific **No evidence** until a tested environment is recorded. Browser sandbox, Flatpak confinement, container USB passthrough and multi-session ACL behavior: **No evidence**.
+
+**Cloud agent (GameCube USB research)**

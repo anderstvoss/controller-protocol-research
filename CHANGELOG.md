@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Survey GameCube adapter consumers, per-port uinput compatibility decisions and source-only libusb/udev grants for #258.
+
 - Source-pin out-of-tree and user-space GameCube USB adapter bridges, Android USB manager and emulator backends; record source-only evdev and USB gaps.
 
 - Document Joy-Con (R) source-only NFC/IR MCU state, NFC polling/read/write flow and IR register/image fragment policy; five scoped claims, no tag contents or host tests.
