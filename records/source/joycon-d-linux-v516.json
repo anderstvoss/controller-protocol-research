@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-linux-v516",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/df0cc57e057f18e44dac8e6c18aba47ab53202f9/drivers/hid/hid-nintendo.c",
+  "revision": "df0cc57e057f18e44dac8e6c18aba47ab53202f9",
+  "sha256": "8855b30dd2c83b5a2b0cbb8238441a79b0c32feb33011737d93f805b91cfd14a",
+  "lineage": "linux-kernel-v516",
+  "locator": "Source file exists in v5.16 release commit; HID table includes Joy-Con L/R Bluetooth and Charging Grip USB, and IMU parsing and enable. File absent at inspected v5.15. Upstream release comparison only."
+}

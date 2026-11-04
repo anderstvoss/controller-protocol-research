@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-nfc-state-machine",
+  "statement": "Pinned Eden Joy-Con NFC consumer enters MCU report 0x31, enables MCU, waits for standby and NFC-ready, starts polling, detects a tag by NFC state, reads indexed response fragments until a terminal state, and for writes verifies target identity, enters write-ready, sends indexed data and waits for write-done. Tag-loss and timeouts are error paths.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-right",
+    "revision": "Yamakaky/joy a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e; Eden 07677aa5006b45dc511269f2c4b2d055cab679bb; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no physical device",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Protocol-level consumer flow only; no tag content, NFC keys, retail interoperability or actual operation captured."
+  },
+  "sources": [
+    "joycon-b-eden-nfc",
+    "joycon-b-eden-types"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

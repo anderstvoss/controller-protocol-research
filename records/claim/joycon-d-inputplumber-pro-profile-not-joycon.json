@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-inputplumber-pro-profile-not-joycon",
+  "statement": "The pinned InputPlumber Switch Pro device profile matches the 057e:2009 Pro ID and a Pro Controller name; it is not itself a Joy-Con 2006/2007 input profile. Availability of a dedicated Joy-Con profile is not established by this source.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "SDL2 release-2.30.12 at 8236e01; SDL3 at 535d80b; Linux v5.16 df0cc57 and later 4056b3c; joycond 0df025a; HHD 4184f03; all source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Negative finding limited to the selected Pro profile, not an exhaustive scan of all versions."
+  },
+  "sources": [
+    "parity-g-inputplumber-switch-profile"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
