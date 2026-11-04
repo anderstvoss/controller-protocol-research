@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-nxbt-readme",
+  "kind": "independent_implementation",
+  "url": "https://github.com/Brikwerk/nxbt/blob/ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975/README.md",
+  "revision": "ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975",
+  "sha256": "8de13664d43b5e6a4cf27655a06df8df71e92ede20eff6026acc1086326ae5f0",
+  "lineage": "Brikwerk-nxbt",
+  "locator": "1-70 host/console Bluetooth controller-emulation scope and multi-controller usage. README licensing note."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-hhd-virtual-ids",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hhd-dev/hhd/blob/4184f03b8df01e471a0cdbefc3a1297244bbac27/src/hhd/controller/virtual/uinput/const.py",
+  "revision": "4184f03b8df01e471a0cdbefc3a1297244bbac27",
+  "sha256": "4a27492da5f6f30cc69f03fd626c7382461962440b10906b3710a720208a2e10",
+  "lineage": "hhd-dev-hhd",
+  "locator": "Lines 31-34 virtual/uinput identity tuple definitions for Joy-Con left, right, combined and grip; output-side constants, not input-profile matching."
+}

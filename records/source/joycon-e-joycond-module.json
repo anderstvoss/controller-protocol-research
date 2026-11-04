@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-e-joycond-module",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/DanielOgorchock/joycond/blob/0df025ac5dc284b1f31172b6b252321ba788c4de/systemd/joycond.conf",
+  "revision": "0df025ac5dc284b1f31172b6b252321ba788c4de",
+  "sha256": "90f02548e3c360e00a543616c401ad4e3b783db2fc8a2bdc74a7868fb15545ae",
+  "lineage": "joycond",
+  "locator": "Lines 1-2: LED timer module configuration."
+}

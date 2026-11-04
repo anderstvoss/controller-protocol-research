@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-sdl2-switch",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/8236e01a9f758d15927624925c6043f84d8a261f/src/joystick/hidapi/SDL_hidapi_switch.c",
+  "revision": "8236e01a9f758d15927624925c6043f84d8a261f",
+  "sha256": "635a49cbd551553cec255443c594c6d843c5e16cf9bce93f226f8b0799281a3e",
+  "lineage": "libsdl-sdl2",
+  "locator": "Lines 1050-1085 type probe; 1195-1235 Joy-Con PID eligibility; 1358-1510 device init and open; 811-900 factory calibration requirement. Tag release-2.30.12."
+}

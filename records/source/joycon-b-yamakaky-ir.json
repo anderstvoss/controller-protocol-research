@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-yamakaky-ir",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/Yamakaky/joy/blob/a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e/crates/joycon-sys/src/mcu/ir.rs",
+  "revision": "a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e",
+  "sha256": "4ce98aa7490d3ada5d972f1e42b85a52dade01128573548793586900d3c23b51",
+  "lineage": "Yamakaky-joy",
+  "locator": "1-95 IR mode, ACK/missing fragment packet and 300-byte fragment; 115-165 layout tests. MIT license."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-nxbt-unused-stick-emulator",
+  "statement": "Pinned nxbt intentionally sets the inactive opposite stick's three reported bytes to zero in its emulated L/R Nintendo controller state; this is a synthetic implementation choice and cannot establish the retail Joy-Con inactive-side byte invariant.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "joycontrol 18a09da1a04306534ff9e1df8a1a69c0192a3244 GPL-3.0; nxbt ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975 MIT; source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Only nxbt emulation, not source support for physical inactive-stick values; see A2 No evidence."
+  },
+  "sources": [
+    "joycon-g-nxbt-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

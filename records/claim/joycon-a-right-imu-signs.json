@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-right-imu-signs",
+  "statement": "The pinned hid-nintendo consumer negates right-half IMU gyro Y/Z and accelerometer Y/Z values after calibration, retaining X, to present a common right-handed coordinate convention; it delivers three samples per full input report.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-right",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host interpretation only, not physical board coordinate validation or actual measured IMU motion."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

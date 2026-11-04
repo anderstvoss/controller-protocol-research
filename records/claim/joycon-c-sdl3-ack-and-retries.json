@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-c-sdl3-ack-and-retries",
+  "statement": "SDL3 matches a subcommand reply by report 0x21, echoed subcommand ID and ACK high bit, retries its synchronous writer several times, and chooses 0x30 for Joy-Con in auto enhanced-report mode.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL3 HIDAPI source; not proof of hardware response or enumeration."
+  },
+  "sources": [
+    "joycon-sdl-switch"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

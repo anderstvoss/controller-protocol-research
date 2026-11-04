@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-a-home-led-and-rail-buttons",
+  "statement": "The pinned kernel exposes Joy-Con SL/SR as additional shoulder controls only for non-Charging Grip halves; its home LED capability is limited to the right-capable Joy-Con personality, while player LEDs are supported on both halves.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel input/LED capabilities; in-band rail attach-state packet and retail LED behavior remain unmeasured."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "joycon-g-device-emulator-type-matrix",
+  "statement": "Two separate emulation implementations, joycontrol and nxbt, implement L, R and Pro type selector values 0x01, 0x02 and 0x03 for Nintendo-facing Bluetooth controller personalities. Their source agreement does not qualify physical retail bytes independently of existing dekuNukem/host-consumer lineage.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "joycontrol 18a09da1a04306534ff9e1df8a1a69c0192a3244 GPL-3.0; nxbt ec4b800ad6c55de96bb6c7f9f84b5bdc59a4c975 MIT; source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Independent emulator implementation behavior at exact pins; no device capture or successful Switch host session verified."
+  },
+  "sources": [
+    "joycon-g-joycontrol-controller",
+    "joycon-g-nxbt-controller",
+    "joycon-g-joycontrol-readme",
+    "joycon-g-nxbt-readme"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

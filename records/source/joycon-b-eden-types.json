@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-eden-types",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/eden-emulator/mirror/blob/07677aa5006b45dc511269f2c4b2d055cab679bb/src/input_common/helpers/joycon_protocol/joycon_types.h",
+  "revision": "07677aa5006b45dc511269f2c4b2d055cab679bb",
+  "sha256": "7ce97ad4b7ac84c5dfe7b9c86ba83e29ef64c6bb432d4c5608f1568eb7e2a185",
+  "lineage": "eden-emulator-mirror",
+  "locator": "155-260 MCU command/mode/NFC/IR enums; 250-305 resolution and registers; 300-390 protocol state enums; GPL code paraphrased only."
+}

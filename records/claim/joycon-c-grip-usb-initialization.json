@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "joycon-c-grip-usb-initialization",
+  "statement": "For USB Charging Grip 057e:200e, hid-nintendo requires an initial USB handshake 0x80/0x02, optionally attempts 3 Mbaud setup, requires a second handshake and sends no-timeout command without waiting for reply; device-info type distinguishes L/R and SDL has interface-number fallback.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; joycond 0df025ac5dc284b1f31172b6b252321ba788c4de; steam-devices 22ec85e5ff5ea2e15c56d71a41bcbef46356cd60",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "USB Charging Grip transport, not individual USB Joy-Con PID; no actual grip connected."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "joycon-sdl-switch"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

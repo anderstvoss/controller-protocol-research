@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-hhd-output-ids-not-input",
+  "statement": "Pinned HHD virtual-uinput output constants list Nintendo Joy-Con left/right, pair and grip VID/PID identities, but those output definitions do not establish a Joy-Con input consumer or native HID protocol parser.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "SDL2 release-2.30.12 at 8236e01; SDL3 at 535d80b; Linux v5.16 df0cc57 and later 4056b3c; joycond 0df025a; HHD 4184f03; all source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HHD source is an output identity table only; input backend behavior unknown."
+  },
+  "sources": [
+    "joycon-d-hhd-virtual-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
