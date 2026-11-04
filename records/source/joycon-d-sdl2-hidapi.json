@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-sdl2-hidapi",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/8236e01a9f758d15927624925c6043f84d8a261f/src/joystick/hidapi/SDL_hidapijoystick.c",
+  "revision": "8236e01a9f758d15927624925c6043f84d8a261f",
+  "sha256": "b1f047c2fd3eda2a36fe89d406bfbfa5919c998c63244e0d4b4d16d1b9c580bc",
+  "lineage": "libsdl-sdl2",
+  "locator": "Lines 570-611 combine Joy-Cons hint; 1025-1070 left/right grouping by PID/grip side and synthetic 2008 HIDAPI pair."
+}

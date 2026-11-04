@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-d-kernel-first-v516",
+  "statement": "Comparing upstream release tags, Linux v5.16 includes hid-nintendo source with Bluetooth Joy-Con L/R HID table, USB Charging Grip entry and IMU implementation, whereas v5.15 lacks the source file; first-support release in this bounded tag comparison is v5.16.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-family",
+    "revision": "SDL2 release-2.30.12 at 8236e01; SDL3 at 535d80b; Linux v5.16 df0cc57 and later 4056b3c; joycond 0df025a; HHD 4184f03; all source-only",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Only upstream source tags checked; not installed kernel packaging or a test on the Arch 7.3+ target."
+  },
+  "sources": [
+    "joycon-d-linux-v516"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

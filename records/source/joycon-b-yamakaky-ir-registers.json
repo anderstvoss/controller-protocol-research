@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-yamakaky-ir-registers",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/Yamakaky/joy/blob/a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e/crates/joycon-sys/src/mcu/ir_register.rs",
+  "revision": "a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e",
+  "sha256": "683015074f88d5e60c4ffe0956f16db65d3754eabb8d5befa81012386935c7a1",
+  "lineage": "Yamakaky-joy",
+  "locator": "1-110 config registers; 150-235 register page/offset mapping and resolution enum including fragment counts. MIT license."
+}

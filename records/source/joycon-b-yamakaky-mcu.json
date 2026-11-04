@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-yamakaky-mcu",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/Yamakaky/joy/blob/a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e/crates/joycon-sys/src/mcu/mod.rs",
+  "revision": "a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e",
+  "sha256": "bd74cb9869c86deaa6aa0b7e5b4162e851ead5f5eb894e88fc3f82c35260bd53",
+  "lineage": "Yamakaky-joy",
+  "locator": "1-57 MCU input report classes, 74-235 nested configuration, CRC and mode/request enums, 280-350 report offsets. MIT license; independent consumer parser."
+}
