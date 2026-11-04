@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "joycon-b-ir-image-ack-retry",
+  "statement": "Pinned Eden consumer decodes IR data from 0x31 at payload offset 49, reads indexed 300-byte image fragments from absolute byte 59, acknowledges an expected or duplicate fragment and requests resend for a missing fragment; frame dimensions determine fragment count.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-right",
+    "revision": "Yamakaky/joy a9900ccf9a77aa5ca6c8db3283bdc6e9cd2ee31e; Eden 07677aa5006b45dc511269f2c4b2d055cab679bb; dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756; no physical device",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source implementation only; no actual IR frame, optical measurement or latency captured."
+  },
+  "sources": [
+    "joycon-b-eden-irs",
+    "joycon-b-yamakaky-ir",
+    "joycon-b-yamakaky-mcu"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
