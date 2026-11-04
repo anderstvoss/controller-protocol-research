@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-dolphin-android-usbmanager",
+  "statement": "Dolphin Android uses UsbManager permission requests and UsbDeviceConnection with dynamic interface endpoints for the adapter, writes 0x13 and five-byte rumble and reads input; Android bulkTransfer API use does not establish bulk USB endpoint type.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Android host USB API and permission path"
+  },
+  "sources": [
+    "gc-adapter-dolphin-android"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

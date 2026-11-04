@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-toadking-uinput",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/ToadKing/wii-u-gc-adapter/39a18f97bf3ecc037e9360cae9e15b4e81923d8e/wii-u-gc-adapter.c",
+  "revision": "39a18f97bf3ecc037e9360cae9e15b4e81923d8e",
+  "sha256": "a021301e41fb92b2395a94005b586b005f9d6a8a30ff3dec8b6d8c0b3667c9f6",
+  "lineage": "ToadKing/wii-u-gc-adapter",
+  "locator": "29-36 VID/PID and fixed endpoint addresses; 40-65 key and axis codes; 109-220 four-port uinput setup, axis domains and FF; 329-350 attach/detach and status bit 0x04; 378-410 axis reporting; 469-497 init/input; 497-532 power-gated rumble; 550-566 libusb kernel detach"
+}

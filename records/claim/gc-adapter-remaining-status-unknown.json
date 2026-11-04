@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-remaining-status-unknown",
+  "statement": "No evidence establishes the meaning of adapter status bits outside the previously sourced 0x04, 0x10 and 0x20 fields for the inspected implementations; physical meaning and any vendor-specific alternatives remain unknown.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Remaining adapter per-port status semantics; not measured"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

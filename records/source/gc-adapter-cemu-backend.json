@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-cemu-backend",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/cemu-project/Cemu/3f8dd913cfd4c8247ad65ab41ba6ef0a55926769/src/input/api/GameCube/GameCubeControllerProvider.cpp",
+  "revision": "3f8dd913cfd4c8247ad65ab41ba6ef0a55926769",
+  "sha256": "3f88dce1c6457561cb9aecb2b53b82e3846815de86d544ca22472ae01cc525c6",
+  "lineage": "cemu-project/Cemu",
+  "locator": "5-36 libusb hotplug; 66-76 four logical controllers per adapter; 163-253 USB open/detach/claim/dynamic endpoints/0x13; 257-305 report parsing and status; 309-344 0x11 four-port rumble"
+}

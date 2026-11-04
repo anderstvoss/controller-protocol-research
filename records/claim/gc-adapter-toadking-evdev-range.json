@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gc-adapter-toadking-evdev-range",
+  "statement": "The pinned ToadKing uinput bridge registers four stick axes and two analog triggers on ABS_X, ABS_Y, ABS_RX, ABS_RY, ABS_Z and ABS_RZ, raw 0..255 or an optional narrower application range; it inverts the two Y axes and separately emits digital trigger clicks as EV_KEY.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "ToadKing uinput axis/key compatibility mapping"
+  },
+  "sources": [
+    "gc-adapter-toadking-uinput"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
