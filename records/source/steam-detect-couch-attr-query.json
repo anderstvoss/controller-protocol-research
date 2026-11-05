@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-couch-attr-query",
+  "kind": "research_lead",
+  "url": "https://github.com/CouchTurtle/sc2-research/blob/b46d5173501ec6814cb99c5769289ffce72f488d/tools/attr_query.py",
+  "revision": "b46d5173501ec6814cb99c5769289ffce72f488d",
+  "sha256": "1edaad26287c1ae7b6719129dc70ab6ace4aea96b18c7dd7fd5b45e07ea6b176",
+  "lineage": "CouchTurtle/sc2-research",
+  "locator": "144-173 request/reply parser for tagged attributes, 175-201 string attributes; tool reads a connected controller, no execution in this task"
+}
