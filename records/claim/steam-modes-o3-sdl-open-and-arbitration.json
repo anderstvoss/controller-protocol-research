@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o3-sdl-open-and-arbitration",
+  "statement": "SDL3 Triton HIDAPI uses per-driver SDL_JOYSTICK_HIDAPI_STEAM then global SDL_JOYSTICK_HIDAPI fallback; direct 1302 selection is VID/PID with no interface-number filter. Active SDL joystick sends 0x87 setting9=0 about every 3s, and explicit sensor enable/disable sends key48; close does not restore. SDL Linux evdev backend also skips device when higher-priority SDL HIDAPI owns VID/PID; Linux hid-steam separately unregisters native synthetic evdev on raw open. Neither guarantees all potential Steam virtual/native duplicates avoided.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O3 pinned source behavior; actual SDL hint default can depend on built SDL options and runtime overrides."
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-modes-sdl-linux",
+    "steam-modes-sdl-joystick",
+    "steam-modes-sdl-hints",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

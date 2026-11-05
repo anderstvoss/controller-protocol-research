@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sc26re-registry",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/ibex_settings_registry.c",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "5951abc880d94cf8cb0baad3a1da8911e686518510e12b4c703e17d021a05183",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "44-54 key9 default1; 94-117 keys48/50/71; 232-259 init/defaults persistence; 453-512 setting protocol"
+}

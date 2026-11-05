@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-proton-controller-routing",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/ValveSoftware/Proton/bc896217ffcd67f892f952b010f898fe7bd0f0a1/docs/CONTROLLERS.md",
+  "revision": "bc896217ffcd67f892f952b010f898fe7bd0f0a1",
+  "sha256": "955b0d17eafacc83a751c4dacead1e239049d171fce047f1c467185568d53c67",
+  "lineage": "ValveSoftware/Proton",
+  "locator": "Proton docs/CONTROLLERS.md:5-15 input API distinctions, 30-87 Wine/SDL2/HID mapping, 101-107 mapped virtual XInput plus native routes"
+}

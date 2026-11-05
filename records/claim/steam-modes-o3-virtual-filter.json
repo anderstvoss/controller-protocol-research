@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o3-virtual-filter",
+  "statement": "SDL identifies the Linux Steam Virtual Gamepad as Valve VID/PID 28de:11ff, scans/orders its slots, and ignores 11ff by default unless SDL_GAMECONTROLLER_ALLOW_STEAM_VIRTUAL_GAMEPAD is true. SDL_GAMECONTROLLER_IGNORE_DEVICES and SDL_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT then govern generic VID/PID filtering. InputPlumber reports Steam often sets ignore devices at game launch, but exact Steam Stable 1792618285 environment and per-game configuration are not proven by that second-hand source.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O3 SDL and O4 secondary Steam launch evidence; do not assume game can access 11ff without SDL allow flag."
+  },
+  "sources": [
+    "steam-modes-sdl-linux",
+    "steam-modes-sdl-gamepad",
+    "steam-modes-sdl-joystick",
+    "steam-modes-inputplumber-manager",
+    "steam-modes-hhd-overlay"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

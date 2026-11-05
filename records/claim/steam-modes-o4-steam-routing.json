@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o4-steam-routing",
+  "statement": "Public Valve guidance describes Steam Input mappings to gamepad or mouse/keyboard; Linux hid-steam comments describe external hidraw clients including Steam synthesizing uinput or XTest events. Valve udev provides conditional access to hidraw and uinput; SDL and HHD code recognizes Valve virtual 28de:11ff. Published D9 physical S3 confirms Steam-listed real 1302 and accepted key9=0/key50=900 among interleaved physical SET traffic, not which process wrote each transaction. Proton's pinned controller integration documentation says mapped Steam controllers appear to Windows games as virtual XInput alongside other APIs, whereas unmapped controllers are visible via physical APIs. Proprietary Steam Stable behavior on desktop vs Big Picture vs games, virtual devices' lifetime and per-game Steam Input off handback remain unknown.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O4 Steam routing inference; physically observed data cross-linked to steam-d9-steam-setting-acceptance and D9 doc, not newly measured."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-client-udev-60-steam-input",
+    "steam-modes-sdl-linux",
+    "steam-modes-sdl-gamepad",
+    "steam-modes-sdl-joystick",
+    "steam-modes-inputplumber-manager",
+    "steam-modes-hhd-overlay",
+    "steam-modes-proton-controller-routing"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

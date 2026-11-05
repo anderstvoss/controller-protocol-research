@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-hhd-overlay",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/hhd-dev/hhd/4184f03b8df01e471a0cdbefc3a1297244bbac27/src/hhd/plugins/overlay/controllers.py",
+  "revision": "4184f03b8df01e471a0cdbefc3a1297244bbac27",
+  "sha256": "ad258dfcb156c917fde1ba8d0ceddcb7d63c2787652473087ce1735d21c54e0e",
+  "lineage": "hhd-dev/hhd",
+  "locator": "Steam virtual 28de:11ff excluded from HHD overlay controller iteration; not evidence of when Steam creates it"
+}
