@@ -1,0 +1,3340 @@
+{
+  "schema_version": 1,
+  "captures": {
+    "face-01": {
+      "capture_sha256": "1d214de2da7fcf1f5b7668e62e51da2577324d032dc447dadb433230ad756b89",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 29720,
+        "43/15": 34,
+        "44/6": 10
+      },
+      "completion_status_counts": {
+        "0": 29764
+      },
+      "operator_missed_windows": []
+    },
+    "buttons-02": {
+      "capture_sha256": "af23ad53e46dfbced2700d20a3b98d0bdd89179ed74cb7ccc5b5bf3ea35dc310",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44621,
+        "43/15": 51
+      },
+      "completion_status_counts": {
+        "0": 44672
+      },
+      "operator_missed_windows": []
+    },
+    "buttons-03": {
+      "capture_sha256": "6f606f2a1222e12164dab9223d53049b87c32f59b061deb5838c742e1eaf0558",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44642,
+        "43/15": 51,
+        "44/6": 28
+      },
+      "completion_status_counts": {
+        "0": 44721
+      },
+      "operator_missed_windows": []
+    },
+    "touch-04": {
+      "capture_sha256": "01c06ed0343c3a5e151444740bbb81c858b3658cd3b178a0bf822e257a7a23ff",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44639,
+        "43/15": 51
+      },
+      "completion_status_counts": {
+        "0": 44690
+      },
+      "operator_missed_windows": []
+    },
+    "analog-05": {
+      "capture_sha256": "93bc80f2d3cfcb6590b4a311aecab9c932de0a184daef7655a852bfce6f74824",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 74394,
+        "43/15": 86
+      },
+      "completion_status_counts": {
+        "0": 74480
+      },
+      "operator_missed_windows": []
+    },
+    "left-pad-06": {
+      "capture_sha256": "2036413452658edbf53ea9ed23816a03ca4b9bd64922a0de6b163c235974d7c5",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44629,
+        "43/15": 52
+      },
+      "completion_status_counts": {
+        "0": 44681
+      },
+      "operator_missed_windows": []
+    },
+    "right-pad-07": {
+      "capture_sha256": "47404ea1cf9fbdb143fd10db8490567b21b5786ecd5424375b6cbbdf2bab31cf",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 59519,
+        "43/15": 68
+      },
+      "completion_status_counts": {
+        "0": 59587
+      },
+      "operator_missed_windows": [
+        "INNER EDGE HOLD",
+        "INNER EDGE CROSSING",
+        "RIGHT stick TOUCH plus INNER EDGE"
+      ]
+    },
+    "inner-edge-07b": {
+      "capture_sha256": "0ab15f10352afbb829022d097bd58c27f4da5033e46158ad4d1b0840c079188e",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 37190,
+        "43/15": 43
+      },
+      "completion_status_counts": {
+        "0": 37233
+      },
+      "operator_missed_windows": []
+    },
+    "pad-stick-07c": {
+      "capture_sha256": "af343794f450f796e971f5a944f6ed57ff2713953f725491a47fc28238b4b170",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 37192,
+        "43/15": 43,
+        "44/6": 2
+      },
+      "completion_status_counts": {
+        "0": 37237
+      },
+      "operator_missed_windows": []
+    },
+    "motion-08": {
+      "capture_sha256": "257428109ae6803a917a4e6509307e35e787cf5915f2a8188338bdfd760c67a3",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44572,
+        "43/15": 51
+      },
+      "completion_status_counts": {
+        "0": 44623
+      },
+      "operator_missed_windows": []
+    },
+    "sdl-motion-08b": {
+      "capture_sha256": "7518e30b2df6e9c0da9c0c0550c47f86c5adbdc570b03003289d4cb29ccd39c2",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this input-only reduction",
+      "input_id_wire_lengths": {
+        "42/54": 44633,
+        "43/15": 51,
+        "41/9": 4,
+        "40/6": 2
+      },
+      "completion_status_counts": {
+        "0": 44690
+      },
+      "operator_missed_windows": []
+    }
+  },
+  "input_fixture": "steam-d9-native-input-reference",
+  "input_index": [
+    {
+      "fixture_index": 0,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 3911,
+      "t_rel_ms": 15755.19,
+      "selection": "flag-rise",
+      "control": "button.a",
+      "bit": 0,
+      "active": true
+    },
+    {
+      "fixture_index": 1,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 3942,
+      "t_rel_ms": 15880.175,
+      "selection": "flag-fall",
+      "control": "button.a",
+      "bit": 0,
+      "active": false
+    },
+    {
+      "fixture_index": 2,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 3999,
+      "t_rel_ms": 16110.178,
+      "selection": "flag-rise",
+      "control": "button.a",
+      "bit": 0,
+      "active": true
+    },
+    {
+      "fixture_index": 3,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 4034,
+      "t_rel_ms": 16250.29,
+      "selection": "flag-fall",
+      "control": "button.a",
+      "bit": 0,
+      "active": false
+    },
+    {
+      "fixture_index": 4,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 4104,
+      "t_rel_ms": 16533.143,
+      "selection": "flag-rise",
+      "control": "button.a",
+      "bit": 0,
+      "active": true
+    },
+    {
+      "fixture_index": 5,
+      "capture": "face-01",
+      "window": "A",
+      "primary_sample_ordinal": 4146,
+      "t_rel_ms": 16702.188,
+      "selection": "flag-fall",
+      "control": "button.a",
+      "bit": 0,
+      "active": false
+    },
+    {
+      "fixture_index": 6,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7347,
+      "t_rel_ms": 29597.387,
+      "selection": "flag-rise",
+      "control": "button.b",
+      "bit": 1,
+      "active": true
+    },
+    {
+      "fixture_index": 7,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7391,
+      "t_rel_ms": 29774.353,
+      "selection": "flag-fall",
+      "control": "button.b",
+      "bit": 1,
+      "active": false
+    },
+    {
+      "fixture_index": 8,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7449,
+      "t_rel_ms": 30008.415,
+      "selection": "flag-rise",
+      "control": "button.b",
+      "bit": 1,
+      "active": true
+    },
+    {
+      "fixture_index": 9,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7494,
+      "t_rel_ms": 30189.362,
+      "selection": "flag-fall",
+      "control": "button.b",
+      "bit": 1,
+      "active": false
+    },
+    {
+      "fixture_index": 10,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7544,
+      "t_rel_ms": 30391.528,
+      "selection": "flag-rise",
+      "control": "button.b",
+      "bit": 1,
+      "active": true
+    },
+    {
+      "fixture_index": 11,
+      "capture": "face-01",
+      "window": "B",
+      "primary_sample_ordinal": 7579,
+      "t_rel_ms": 30531.397,
+      "selection": "flag-fall",
+      "control": "button.b",
+      "bit": 1,
+      "active": false
+    },
+    {
+      "fixture_index": 12,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10236,
+      "t_rel_ms": 41235.67,
+      "selection": "flag-rise",
+      "control": "button.x",
+      "bit": 2,
+      "active": true
+    },
+    {
+      "fixture_index": 13,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10273,
+      "t_rel_ms": 41384.536,
+      "selection": "flag-fall",
+      "control": "button.x",
+      "bit": 2,
+      "active": false
+    },
+    {
+      "fixture_index": 14,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10335,
+      "t_rel_ms": 41634.554,
+      "selection": "flag-rise",
+      "control": "button.x",
+      "bit": 2,
+      "active": true
+    },
+    {
+      "fixture_index": 15,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10368,
+      "t_rel_ms": 41767.528,
+      "selection": "flag-fall",
+      "control": "button.x",
+      "bit": 2,
+      "active": false
+    },
+    {
+      "fixture_index": 16,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10426,
+      "t_rel_ms": 42001.576,
+      "selection": "flag-rise",
+      "control": "button.x",
+      "bit": 2,
+      "active": true
+    },
+    {
+      "fixture_index": 17,
+      "capture": "face-01",
+      "window": "X",
+      "primary_sample_ordinal": 10458,
+      "t_rel_ms": 42129.56,
+      "selection": "flag-fall",
+      "control": "button.x",
+      "bit": 2,
+      "active": false
+    },
+    {
+      "fixture_index": 18,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13398,
+      "t_rel_ms": 53973.783,
+      "selection": "flag-rise",
+      "control": "button.y",
+      "bit": 3,
+      "active": true
+    },
+    {
+      "fixture_index": 19,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13445,
+      "t_rel_ms": 54163.761,
+      "selection": "flag-fall",
+      "control": "button.y",
+      "bit": 3,
+      "active": false
+    },
+    {
+      "fixture_index": 20,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13499,
+      "t_rel_ms": 54380.778,
+      "selection": "flag-rise",
+      "control": "button.y",
+      "bit": 3,
+      "active": true
+    },
+    {
+      "fixture_index": 21,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13545,
+      "t_rel_ms": 54565.737,
+      "selection": "flag-fall",
+      "control": "button.y",
+      "bit": 3,
+      "active": false
+    },
+    {
+      "fixture_index": 22,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13596,
+      "t_rel_ms": 54771.891,
+      "selection": "flag-rise",
+      "control": "button.y",
+      "bit": 3,
+      "active": true
+    },
+    {
+      "fixture_index": 23,
+      "capture": "face-01",
+      "window": "Y",
+      "primary_sample_ordinal": 13641,
+      "t_rel_ms": 54952.893,
+      "selection": "flag-fall",
+      "control": "button.y",
+      "bit": 3,
+      "active": false
+    },
+    {
+      "fixture_index": 24,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4000,
+      "t_rel_ms": 16113.265,
+      "selection": "flag-rise",
+      "control": "button.up",
+      "bit": 13,
+      "active": true
+    },
+    {
+      "fixture_index": 25,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4028,
+      "t_rel_ms": 16226.41,
+      "selection": "flag-fall",
+      "control": "button.up",
+      "bit": 13,
+      "active": false
+    },
+    {
+      "fixture_index": 26,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4087,
+      "t_rel_ms": 16464.378,
+      "selection": "flag-rise",
+      "control": "button.up",
+      "bit": 13,
+      "active": true
+    },
+    {
+      "fixture_index": 27,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4118,
+      "t_rel_ms": 16589.28,
+      "selection": "flag-fall",
+      "control": "button.up",
+      "bit": 13,
+      "active": false
+    },
+    {
+      "fixture_index": 28,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4166,
+      "t_rel_ms": 16782.278,
+      "selection": "flag-rise",
+      "control": "button.up",
+      "bit": 13,
+      "active": true
+    },
+    {
+      "fixture_index": 29,
+      "capture": "buttons-02",
+      "window": "D-pad UP",
+      "primary_sample_ordinal": 4201,
+      "t_rel_ms": 16923.28,
+      "selection": "flag-fall",
+      "control": "button.up",
+      "bit": 13,
+      "active": false
+    },
+    {
+      "fixture_index": 30,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 6975,
+      "t_rel_ms": 28099.576,
+      "selection": "flag-rise",
+      "control": "button.down",
+      "bit": 10,
+      "active": true
+    },
+    {
+      "fixture_index": 31,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 7009,
+      "t_rel_ms": 28235.455,
+      "selection": "flag-fall",
+      "control": "button.down",
+      "bit": 10,
+      "active": false
+    },
+    {
+      "fixture_index": 32,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 7063,
+      "t_rel_ms": 28453.429,
+      "selection": "flag-rise",
+      "control": "button.down",
+      "bit": 10,
+      "active": true
+    },
+    {
+      "fixture_index": 33,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 7096,
+      "t_rel_ms": 28586.578,
+      "selection": "flag-fall",
+      "control": "button.down",
+      "bit": 10,
+      "active": false
+    },
+    {
+      "fixture_index": 34,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 7145,
+      "t_rel_ms": 28783.477,
+      "selection": "flag-rise",
+      "control": "button.down",
+      "bit": 10,
+      "active": true
+    },
+    {
+      "fixture_index": 35,
+      "capture": "buttons-02",
+      "window": "D-pad DOWN",
+      "primary_sample_ordinal": 7181,
+      "t_rel_ms": 28928.497,
+      "selection": "flag-fall",
+      "control": "button.down",
+      "bit": 10,
+      "active": false
+    },
+    {
+      "fixture_index": 36,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 9940,
+      "t_rel_ms": 40043.638,
+      "selection": "flag-rise",
+      "control": "button.left",
+      "bit": 12,
+      "active": true
+    },
+    {
+      "fixture_index": 37,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 9972,
+      "t_rel_ms": 40172.758,
+      "selection": "flag-fall",
+      "control": "button.left",
+      "bit": 12,
+      "active": false
+    },
+    {
+      "fixture_index": 38,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 10025,
+      "t_rel_ms": 40385.608,
+      "selection": "flag-rise",
+      "control": "button.left",
+      "bit": 12,
+      "active": true
+    },
+    {
+      "fixture_index": 39,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 10058,
+      "t_rel_ms": 40518.612,
+      "selection": "flag-fall",
+      "control": "button.left",
+      "bit": 12,
+      "active": false
+    },
+    {
+      "fixture_index": 40,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 10106,
+      "t_rel_ms": 40712.688,
+      "selection": "flag-rise",
+      "control": "button.left",
+      "bit": 12,
+      "active": true
+    },
+    {
+      "fixture_index": 41,
+      "capture": "buttons-02",
+      "window": "D-pad LEFT",
+      "primary_sample_ordinal": 10143,
+      "t_rel_ms": 40861.847,
+      "selection": "flag-fall",
+      "control": "button.left",
+      "bit": 12,
+      "active": false
+    },
+    {
+      "fixture_index": 42,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13347,
+      "t_rel_ms": 53769.103,
+      "selection": "flag-rise",
+      "control": "button.right",
+      "bit": 11,
+      "active": true
+    },
+    {
+      "fixture_index": 43,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13388,
+      "t_rel_ms": 53933.992,
+      "selection": "flag-fall",
+      "control": "button.right",
+      "bit": 11,
+      "active": false
+    },
+    {
+      "fixture_index": 44,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13433,
+      "t_rel_ms": 54114.829,
+      "selection": "flag-rise",
+      "control": "button.right",
+      "bit": 11,
+      "active": true
+    },
+    {
+      "fixture_index": 45,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13467,
+      "t_rel_ms": 54252.927,
+      "selection": "flag-fall",
+      "control": "button.right",
+      "bit": 11,
+      "active": false
+    },
+    {
+      "fixture_index": 46,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13508,
+      "t_rel_ms": 54417.908,
+      "selection": "flag-rise",
+      "control": "button.right",
+      "bit": 11,
+      "active": true
+    },
+    {
+      "fixture_index": 47,
+      "capture": "buttons-02",
+      "window": "D-pad RIGHT",
+      "primary_sample_ordinal": 13545,
+      "t_rel_ms": 54567.103,
+      "selection": "flag-fall",
+      "control": "button.right",
+      "bit": 11,
+      "active": false
+    },
+    {
+      "fixture_index": 48,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17002,
+      "t_rel_ms": 68493.133,
+      "selection": "flag-rise",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": true
+    },
+    {
+      "fixture_index": 49,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17039,
+      "t_rel_ms": 68642.084,
+      "selection": "flag-fall",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": false
+    },
+    {
+      "fixture_index": 50,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17118,
+      "t_rel_ms": 68960.138,
+      "selection": "flag-rise",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": true
+    },
+    {
+      "fixture_index": 51,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17153,
+      "t_rel_ms": 69101.122,
+      "selection": "flag-fall",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": false
+    },
+    {
+      "fixture_index": 52,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17237,
+      "t_rel_ms": 69440.094,
+      "selection": "flag-rise",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": true
+    },
+    {
+      "fixture_index": 53,
+      "capture": "buttons-02",
+      "window": "LEFT shoulder bumper",
+      "primary_sample_ordinal": 17275,
+      "t_rel_ms": 69592.112,
+      "selection": "flag-fall",
+      "control": "button.left-shoulder",
+      "bit": 19,
+      "active": false
+    },
+    {
+      "fixture_index": 54,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20590,
+      "t_rel_ms": 82947.331,
+      "selection": "flag-rise",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": true
+    },
+    {
+      "fixture_index": 55,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20633,
+      "t_rel_ms": 83120.27,
+      "selection": "flag-fall",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": false
+    },
+    {
+      "fixture_index": 56,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20677,
+      "t_rel_ms": 83297.301,
+      "selection": "flag-rise",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": true
+    },
+    {
+      "fixture_index": 57,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20723,
+      "t_rel_ms": 83483.278,
+      "selection": "flag-fall",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": false
+    },
+    {
+      "fixture_index": 58,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20775,
+      "t_rel_ms": 83692.427,
+      "selection": "flag-rise",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": true
+    },
+    {
+      "fixture_index": 59,
+      "capture": "buttons-02",
+      "window": "RIGHT shoulder bumper",
+      "primary_sample_ordinal": 20810,
+      "t_rel_ms": 83833.406,
+      "selection": "flag-fall",
+      "control": "button.right-shoulder",
+      "bit": 9,
+      "active": false
+    },
+    {
+      "fixture_index": 60,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23436,
+      "t_rel_ms": 94412.585,
+      "selection": "flag-rise",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": true
+    },
+    {
+      "fixture_index": 61,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23475,
+      "t_rel_ms": 94569.478,
+      "selection": "flag-fall",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": false
+    },
+    {
+      "fixture_index": 62,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23548,
+      "t_rel_ms": 94863.552,
+      "selection": "flag-rise",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": true
+    },
+    {
+      "fixture_index": 63,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23585,
+      "t_rel_ms": 95012.505,
+      "selection": "flag-fall",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": false
+    },
+    {
+      "fixture_index": 64,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23657,
+      "t_rel_ms": 95302.483,
+      "selection": "flag-rise",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": true
+    },
+    {
+      "fixture_index": 65,
+      "capture": "buttons-02",
+      "window": "LEFT stick CLICK",
+      "primary_sample_ordinal": 23693,
+      "t_rel_ms": 95447.612,
+      "selection": "flag-fall",
+      "control": "button.left-stick-click",
+      "bit": 15,
+      "active": false
+    },
+    {
+      "fixture_index": 66,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26449,
+      "t_rel_ms": 106549.633,
+      "selection": "flag-rise",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": true
+    },
+    {
+      "fixture_index": 67,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26485,
+      "t_rel_ms": 106694.696,
+      "selection": "flag-fall",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": false
+    },
+    {
+      "fixture_index": 68,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26557,
+      "t_rel_ms": 106984.639,
+      "selection": "flag-rise",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": true
+    },
+    {
+      "fixture_index": 69,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26601,
+      "t_rel_ms": 107161.689,
+      "selection": "flag-fall",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": false
+    },
+    {
+      "fixture_index": 70,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26667,
+      "t_rel_ms": 107427.766,
+      "selection": "flag-rise",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": true
+    },
+    {
+      "fixture_index": 71,
+      "capture": "buttons-02",
+      "window": "RIGHT stick CLICK",
+      "primary_sample_ordinal": 26701,
+      "t_rel_ms": 107564.82,
+      "selection": "flag-fall",
+      "control": "button.right-stick-click",
+      "bit": 5,
+      "active": false
+    },
+    {
+      "fixture_index": 72,
+      "capture": "buttons-03",
+      "window": "VIEW button",
+      "primary_sample_ordinal": 5743,
+      "t_rel_ms": 23136.183,
+      "selection": "flag-rise",
+      "control": "button.view",
+      "bit": 14,
+      "active": true
+    },
+    {
+      "fixture_index": 73,
+      "capture": "buttons-03",
+      "window": "VIEW button",
+      "primary_sample_ordinal": 5786,
+      "t_rel_ms": 23310.372,
+      "selection": "flag-fall",
+      "control": "button.view",
+      "bit": 14,
+      "active": false
+    },
+    {
+      "fixture_index": 74,
+      "capture": "buttons-03",
+      "window": "VIEW button",
+      "primary_sample_ordinal": 5851,
+      "t_rel_ms": 23571.358,
+      "selection": "flag-rise",
+      "control": "button.view",
+      "bit": 14,
+      "active": true
+    },
+    {
+      "fixture_index": 75,
+      "capture": "buttons-03",
+      "window": "VIEW button",
+      "primary_sample_ordinal": 5892,
+      "t_rel_ms": 23737.376,
+      "selection": "flag-fall",
+      "control": "button.view",
+      "bit": 14,
+      "active": false
+    },
+    {
+      "fixture_index": 76,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8263,
+      "t_rel_ms": 33288.389,
+      "selection": "flag-rise",
+      "control": "button.menu",
+      "bit": 6,
+      "active": true
+    },
+    {
+      "fixture_index": 77,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8318,
+      "t_rel_ms": 33510.406,
+      "selection": "flag-fall",
+      "control": "button.menu",
+      "bit": 6,
+      "active": false
+    },
+    {
+      "fixture_index": 78,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8355,
+      "t_rel_ms": 33659.47,
+      "selection": "flag-rise",
+      "control": "button.menu",
+      "bit": 6,
+      "active": true
+    },
+    {
+      "fixture_index": 79,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8411,
+      "t_rel_ms": 33884.593,
+      "selection": "flag-fall",
+      "control": "button.menu",
+      "bit": 6,
+      "active": false
+    },
+    {
+      "fixture_index": 80,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8461,
+      "t_rel_ms": 34086.404,
+      "selection": "flag-rise",
+      "control": "button.menu",
+      "bit": 6,
+      "active": true
+    },
+    {
+      "fixture_index": 81,
+      "capture": "buttons-03",
+      "window": "MENU button",
+      "primary_sample_ordinal": 8507,
+      "t_rel_ms": 34271.371,
+      "selection": "flag-fall",
+      "control": "button.menu",
+      "bit": 6,
+      "active": false
+    },
+    {
+      "fixture_index": 82,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 10890,
+      "t_rel_ms": 43871.512,
+      "selection": "flag-rise",
+      "control": "button.qam",
+      "bit": 4,
+      "active": true
+    },
+    {
+      "fixture_index": 83,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 10929,
+      "t_rel_ms": 44028.54,
+      "selection": "flag-fall",
+      "control": "button.qam",
+      "bit": 4,
+      "active": false
+    },
+    {
+      "fixture_index": 84,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 10978,
+      "t_rel_ms": 44226.516,
+      "selection": "flag-rise",
+      "control": "button.qam",
+      "bit": 4,
+      "active": true
+    },
+    {
+      "fixture_index": 85,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 11020,
+      "t_rel_ms": 44395.545,
+      "selection": "flag-fall",
+      "control": "button.qam",
+      "bit": 4,
+      "active": false
+    },
+    {
+      "fixture_index": 86,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 11068,
+      "t_rel_ms": 44588.561,
+      "selection": "flag-rise",
+      "control": "button.qam",
+      "bit": 4,
+      "active": true
+    },
+    {
+      "fixture_index": 87,
+      "capture": "buttons-03",
+      "window": "QAM / quick-access button",
+      "primary_sample_ordinal": 11108,
+      "t_rel_ms": 44749.515,
+      "selection": "flag-fall",
+      "control": "button.qam",
+      "bit": 4,
+      "active": false
+    },
+    {
+      "fixture_index": 88,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 13776,
+      "t_rel_ms": 55497.829,
+      "selection": "flag-rise",
+      "control": "button.steam",
+      "bit": 16,
+      "active": true
+    },
+    {
+      "fixture_index": 89,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 13822,
+      "t_rel_ms": 55682.846,
+      "selection": "flag-fall",
+      "control": "button.steam",
+      "bit": 16,
+      "active": false
+    },
+    {
+      "fixture_index": 90,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 13872,
+      "t_rel_ms": 55884.695,
+      "selection": "flag-rise",
+      "control": "button.steam",
+      "bit": 16,
+      "active": true
+    },
+    {
+      "fixture_index": 91,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 13922,
+      "t_rel_ms": 56085.694,
+      "selection": "flag-fall",
+      "control": "button.steam",
+      "bit": 16,
+      "active": false
+    },
+    {
+      "fixture_index": 92,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 13979,
+      "t_rel_ms": 56315.695,
+      "selection": "flag-rise",
+      "control": "button.steam",
+      "bit": 16,
+      "active": true
+    },
+    {
+      "fixture_index": 93,
+      "capture": "buttons-03",
+      "window": "STEAM button",
+      "primary_sample_ordinal": 14032,
+      "t_rel_ms": 56528.7,
+      "selection": "flag-fall",
+      "control": "button.steam",
+      "bit": 16,
+      "active": false
+    },
+    {
+      "fixture_index": 94,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 17812,
+      "t_rel_ms": 71756.968,
+      "selection": "flag-rise",
+      "control": "button.l4",
+      "bit": 17,
+      "active": true
+    },
+    {
+      "fixture_index": 95,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 17845,
+      "t_rel_ms": 71889.945,
+      "selection": "flag-fall",
+      "control": "button.l4",
+      "bit": 17,
+      "active": false
+    },
+    {
+      "fixture_index": 96,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 17930,
+      "t_rel_ms": 72231.99,
+      "selection": "flag-rise",
+      "control": "button.l4",
+      "bit": 17,
+      "active": true
+    },
+    {
+      "fixture_index": 97,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 17960,
+      "t_rel_ms": 72353.003,
+      "selection": "flag-fall",
+      "control": "button.l4",
+      "bit": 17,
+      "active": false
+    },
+    {
+      "fixture_index": 98,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 18039,
+      "t_rel_ms": 72670.975,
+      "selection": "flag-rise",
+      "control": "button.l4",
+      "bit": 17,
+      "active": true
+    },
+    {
+      "fixture_index": 99,
+      "capture": "buttons-03",
+      "window": "LEFT rear L4",
+      "primary_sample_ordinal": 18067,
+      "t_rel_ms": 72783.988,
+      "selection": "flag-fall",
+      "control": "button.l4",
+      "bit": 17,
+      "active": false
+    },
+    {
+      "fixture_index": 100,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20594,
+      "t_rel_ms": 82963.136,
+      "selection": "flag-rise",
+      "control": "button.l5",
+      "bit": 18,
+      "active": true
+    },
+    {
+      "fixture_index": 101,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20619,
+      "t_rel_ms": 83064.158,
+      "selection": "flag-fall",
+      "control": "button.l5",
+      "bit": 18,
+      "active": false
+    },
+    {
+      "fixture_index": 102,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20703,
+      "t_rel_ms": 83403.16,
+      "selection": "flag-rise",
+      "control": "button.l5",
+      "bit": 18,
+      "active": true
+    },
+    {
+      "fixture_index": 103,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20731,
+      "t_rel_ms": 83515.16,
+      "selection": "flag-fall",
+      "control": "button.l5",
+      "bit": 18,
+      "active": false
+    },
+    {
+      "fixture_index": 104,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20812,
+      "t_rel_ms": 83842.132,
+      "selection": "flag-rise",
+      "control": "button.l5",
+      "bit": 18,
+      "active": true
+    },
+    {
+      "fixture_index": 105,
+      "capture": "buttons-03",
+      "window": "LEFT rear L5",
+      "primary_sample_ordinal": 20844,
+      "t_rel_ms": 83971.143,
+      "selection": "flag-fall",
+      "control": "button.l5",
+      "bit": 18,
+      "active": false
+    },
+    {
+      "fixture_index": 106,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 23808,
+      "t_rel_ms": 95911.356,
+      "selection": "flag-rise",
+      "control": "button.r4",
+      "bit": 7,
+      "active": true
+    },
+    {
+      "fixture_index": 107,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 23834,
+      "t_rel_ms": 96016.343,
+      "selection": "flag-fall",
+      "control": "button.r4",
+      "bit": 7,
+      "active": false
+    },
+    {
+      "fixture_index": 108,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 23920,
+      "t_rel_ms": 96363.335,
+      "selection": "flag-rise",
+      "control": "button.r4",
+      "bit": 7,
+      "active": true
+    },
+    {
+      "fixture_index": 109,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 23947,
+      "t_rel_ms": 96471.366,
+      "selection": "flag-fall",
+      "control": "button.r4",
+      "bit": 7,
+      "active": false
+    },
+    {
+      "fixture_index": 110,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 24024,
+      "t_rel_ms": 96782.335,
+      "selection": "flag-rise",
+      "control": "button.r4",
+      "bit": 7,
+      "active": true
+    },
+    {
+      "fixture_index": 111,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R4",
+      "primary_sample_ordinal": 24055,
+      "t_rel_ms": 96906.448,
+      "selection": "flag-fall",
+      "control": "button.r4",
+      "bit": 7,
+      "active": false
+    },
+    {
+      "fixture_index": 112,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 26841,
+      "t_rel_ms": 108129.528,
+      "selection": "flag-rise",
+      "control": "button.r5",
+      "bit": 8,
+      "active": true
+    },
+    {
+      "fixture_index": 113,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 26876,
+      "t_rel_ms": 108270.527,
+      "selection": "flag-fall",
+      "control": "button.r5",
+      "bit": 8,
+      "active": false
+    },
+    {
+      "fixture_index": 114,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 26961,
+      "t_rel_ms": 108613.629,
+      "selection": "flag-rise",
+      "control": "button.r5",
+      "bit": 8,
+      "active": true
+    },
+    {
+      "fixture_index": 115,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 26987,
+      "t_rel_ms": 108717.588,
+      "selection": "flag-fall",
+      "control": "button.r5",
+      "bit": 8,
+      "active": false
+    },
+    {
+      "fixture_index": 116,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 27067,
+      "t_rel_ms": 109040.652,
+      "selection": "flag-rise",
+      "control": "button.r5",
+      "bit": 8,
+      "active": true
+    },
+    {
+      "fixture_index": 117,
+      "capture": "buttons-03",
+      "window": "RIGHT rear R5",
+      "primary_sample_ordinal": 27096,
+      "t_rel_ms": 109156.581,
+      "selection": "flag-fall",
+      "control": "button.r5",
+      "bit": 8,
+      "active": false
+    },
+    {
+      "fixture_index": 118,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44398,
+      "t_rel_ms": 178856.353,
+      "selection": "flag-rise",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": true
+    },
+    {
+      "fixture_index": 119,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44443,
+      "t_rel_ms": 179037.318,
+      "selection": "flag-fall",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": false
+    },
+    {
+      "fixture_index": 120,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44519,
+      "t_rel_ms": 179343.386,
+      "selection": "flag-rise",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": true
+    },
+    {
+      "fixture_index": 121,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44571,
+      "t_rel_ms": 179553.512,
+      "selection": "flag-fall",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": false
+    },
+    {
+      "fixture_index": 122,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44656,
+      "t_rel_ms": 179895.38,
+      "selection": "flag-rise",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": true
+    },
+    {
+      "fixture_index": 123,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44705,
+      "t_rel_ms": 180092.336,
+      "selection": "flag-fall",
+      "control": "button.left-trigger-click",
+      "bit": 27,
+      "active": false
+    },
+    {
+      "fixture_index": 124,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53245,
+      "t_rel_ms": 214495.789,
+      "selection": "flag-rise",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": true
+    },
+    {
+      "fixture_index": 125,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53282,
+      "t_rel_ms": 214644.925,
+      "selection": "flag-fall",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": false
+    },
+    {
+      "fixture_index": 126,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53347,
+      "t_rel_ms": 214906.821,
+      "selection": "flag-rise",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": true
+    },
+    {
+      "fixture_index": 127,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53385,
+      "t_rel_ms": 215059.867,
+      "selection": "flag-fall",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": false
+    },
+    {
+      "fixture_index": 128,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53439,
+      "t_rel_ms": 215276.936,
+      "selection": "flag-rise",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": true
+    },
+    {
+      "fixture_index": 129,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53478,
+      "t_rel_ms": 215433.94,
+      "selection": "flag-fall",
+      "control": "button.right-trigger-click",
+      "bit": 23,
+      "active": false
+    },
+    {
+      "fixture_index": 130,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3276,
+      "t_rel_ms": 13197.191,
+      "selection": "flag-rise",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": true
+    },
+    {
+      "fixture_index": 131,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3357,
+      "t_rel_ms": 13524.359,
+      "selection": "flag-fall",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": false
+    },
+    {
+      "fixture_index": 132,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3553,
+      "t_rel_ms": 14313.491,
+      "selection": "flag-rise",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": true
+    },
+    {
+      "fixture_index": 133,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3643,
+      "t_rel_ms": 14676.3,
+      "selection": "flag-fall",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": false
+    },
+    {
+      "fixture_index": 134,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3855,
+      "t_rel_ms": 15530.381,
+      "selection": "flag-rise",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": true
+    },
+    {
+      "fixture_index": 135,
+      "capture": "touch-04",
+      "window": "LEFT stick TOUCH",
+      "primary_sample_ordinal": 3961,
+      "t_rel_ms": 15957.253,
+      "selection": "flag-fall",
+      "control": "touch.left-stick",
+      "bit": 24,
+      "active": false
+    },
+    {
+      "fixture_index": 136,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6107,
+      "t_rel_ms": 24602.536,
+      "selection": "flag-rise",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": true
+    },
+    {
+      "fixture_index": 137,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6203,
+      "t_rel_ms": 24989.372,
+      "selection": "flag-fall",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": false
+    },
+    {
+      "fixture_index": 138,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6394,
+      "t_rel_ms": 25758.395,
+      "selection": "flag-rise",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": true
+    },
+    {
+      "fixture_index": 139,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6484,
+      "t_rel_ms": 26121.393,
+      "selection": "flag-fall",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": false
+    },
+    {
+      "fixture_index": 140,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6494,
+      "t_rel_ms": 26161.385,
+      "selection": "flag-rise",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": true
+    },
+    {
+      "fixture_index": 141,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6534,
+      "t_rel_ms": 26322.446,
+      "selection": "flag-fall",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": false
+    },
+    {
+      "fixture_index": 142,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6761,
+      "t_rel_ms": 27237.445,
+      "selection": "flag-rise",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": true
+    },
+    {
+      "fixture_index": 143,
+      "capture": "touch-04",
+      "window": "RIGHT stick TOUCH",
+      "primary_sample_ordinal": 6922,
+      "t_rel_ms": 27885.466,
+      "selection": "flag-fall",
+      "control": "touch.right-stick",
+      "bit": 20,
+      "active": false
+    },
+    {
+      "fixture_index": 144,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 9418,
+      "t_rel_ms": 37940.582,
+      "selection": "flag-rise",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": true
+    },
+    {
+      "fixture_index": 145,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 9474,
+      "t_rel_ms": 38166.612,
+      "selection": "flag-fall",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": false
+    },
+    {
+      "fixture_index": 146,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 9534,
+      "t_rel_ms": 38407.568,
+      "selection": "flag-rise",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": true
+    },
+    {
+      "fixture_index": 147,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 9702,
+      "t_rel_ms": 39084.607,
+      "selection": "flag-fall",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": false
+    },
+    {
+      "fixture_index": 148,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 9918,
+      "t_rel_ms": 39954.634,
+      "selection": "flag-rise",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": true
+    },
+    {
+      "fixture_index": 149,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 10156,
+      "t_rel_ms": 40913.608,
+      "selection": "flag-fall",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": false
+    },
+    {
+      "fixture_index": 150,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 10387,
+      "t_rel_ms": 41844.754,
+      "selection": "flag-rise",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": true
+    },
+    {
+      "fixture_index": 151,
+      "capture": "touch-04",
+      "window": "LEFT grip TOUCH",
+      "primary_sample_ordinal": 10573,
+      "t_rel_ms": 42593.675,
+      "selection": "flag-fall",
+      "control": "touch.left-grip",
+      "bit": 29,
+      "active": false
+    },
+    {
+      "fixture_index": 152,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 12440,
+      "t_rel_ms": 50114.927,
+      "selection": "flag-rise",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": true
+    },
+    {
+      "fixture_index": 153,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 12660,
+      "t_rel_ms": 51000.793,
+      "selection": "flag-fall",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": false
+    },
+    {
+      "fixture_index": 154,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 12977,
+      "t_rel_ms": 52277.861,
+      "selection": "flag-rise",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": true
+    },
+    {
+      "fixture_index": 155,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 13233,
+      "t_rel_ms": 53308.877,
+      "selection": "flag-fall",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": false
+    },
+    {
+      "fixture_index": 156,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 13570,
+      "t_rel_ms": 54666.922,
+      "selection": "flag-rise",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": true
+    },
+    {
+      "fixture_index": 157,
+      "capture": "touch-04",
+      "window": "RIGHT grip TOUCH",
+      "primary_sample_ordinal": 13747,
+      "t_rel_ms": 55379.941,
+      "selection": "flag-fall",
+      "control": "touch.right-grip",
+      "bit": 28,
+      "active": false
+    },
+    {
+      "fixture_index": 158,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 15841,
+      "t_rel_ms": 63815.167,
+      "selection": "flag-rise",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": true
+    },
+    {
+      "fixture_index": 159,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 15936,
+      "t_rel_ms": 64198.146,
+      "selection": "flag-fall",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": false
+    },
+    {
+      "fixture_index": 160,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 16260,
+      "t_rel_ms": 65503.182,
+      "selection": "flag-rise",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": true
+    },
+    {
+      "fixture_index": 161,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 16374,
+      "t_rel_ms": 65962.319,
+      "selection": "flag-fall",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": false
+    },
+    {
+      "fixture_index": 162,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 16608,
+      "t_rel_ms": 66905.336,
+      "selection": "flag-rise",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": true
+    },
+    {
+      "fixture_index": 163,
+      "capture": "touch-04",
+      "window": "LEFT pad TOUCH",
+      "primary_sample_ordinal": 16782,
+      "t_rel_ms": 67606.23,
+      "selection": "flag-fall",
+      "control": "touch.left-pad",
+      "bit": 25,
+      "active": false
+    },
+    {
+      "fixture_index": 164,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 18747,
+      "t_rel_ms": 75522.447,
+      "selection": "flag-rise",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": true
+    },
+    {
+      "fixture_index": 165,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 18959,
+      "t_rel_ms": 76376.46,
+      "selection": "flag-fall",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": false
+    },
+    {
+      "fixture_index": 166,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 19190,
+      "t_rel_ms": 77306.457,
+      "selection": "flag-rise",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": true
+    },
+    {
+      "fixture_index": 167,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 19338,
+      "t_rel_ms": 77903.673,
+      "selection": "flag-fall",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": false
+    },
+    {
+      "fixture_index": 168,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 19532,
+      "t_rel_ms": 78684.535,
+      "selection": "flag-rise",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": true
+    },
+    {
+      "fixture_index": 169,
+      "capture": "touch-04",
+      "window": "RIGHT pad TOUCH",
+      "primary_sample_ordinal": 19772,
+      "t_rel_ms": 79651.561,
+      "selection": "flag-fall",
+      "control": "touch.right-pad",
+      "bit": 21,
+      "active": false
+    },
+    {
+      "fixture_index": 170,
+      "capture": "analog-05",
+      "window": "LEFT stick LEFT",
+      "primary_sample_ordinal": 4203,
+      "t_rel_ms": 16930.224,
+      "selection": "min",
+      "control": "left-stick-x",
+      "wire_offset": 10,
+      "raw_value": -32767
+    },
+    {
+      "fixture_index": 171,
+      "capture": "analog-05",
+      "window": "LEFT stick RIGHT",
+      "primary_sample_ordinal": 8555,
+      "t_rel_ms": 34462.438,
+      "selection": "max",
+      "control": "left-stick-x",
+      "wire_offset": 10,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 172,
+      "capture": "analog-05",
+      "window": "LEFT stick UP / FORWARD",
+      "primary_sample_ordinal": 12969,
+      "t_rel_ms": 52244.732,
+      "selection": "max",
+      "control": "left-stick-y",
+      "wire_offset": 12,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 173,
+      "capture": "analog-05",
+      "window": "LEFT stick DOWN / BACK",
+      "primary_sample_ordinal": 17404,
+      "t_rel_ms": 70111.044,
+      "selection": "min",
+      "control": "left-stick-y",
+      "wire_offset": 12,
+      "raw_value": -32767
+    },
+    {
+      "fixture_index": 174,
+      "capture": "analog-05",
+      "window": "RIGHT stick LEFT",
+      "primary_sample_ordinal": 21901,
+      "t_rel_ms": 88227.122,
+      "selection": "min",
+      "control": "right-stick-x",
+      "wire_offset": 14,
+      "raw_value": -32767
+    },
+    {
+      "fixture_index": 175,
+      "capture": "analog-05",
+      "window": "RIGHT stick RIGHT",
+      "primary_sample_ordinal": 26300,
+      "t_rel_ms": 105947.361,
+      "selection": "max",
+      "control": "right-stick-x",
+      "wire_offset": 14,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 176,
+      "capture": "analog-05",
+      "window": "RIGHT stick UP / FORWARD",
+      "primary_sample_ordinal": 30803,
+      "t_rel_ms": 124087.621,
+      "selection": "max",
+      "control": "right-stick-y",
+      "wire_offset": 16,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 177,
+      "capture": "analog-05",
+      "window": "RIGHT stick DOWN / BACK",
+      "primary_sample_ordinal": 35319,
+      "t_rel_ms": 142280.974,
+      "selection": "min",
+      "control": "right-stick-y",
+      "wire_offset": 16,
+      "raw_value": -32767
+    },
+    {
+      "fixture_index": 178,
+      "capture": "analog-05",
+      "window": "LEFT trigger HALF",
+      "primary_sample_ordinal": 40401,
+      "t_rel_ms": 162754.098,
+      "selection": "max",
+      "control": "left-trigger",
+      "wire_offset": 6,
+      "raw_value": 23565
+    },
+    {
+      "fixture_index": 179,
+      "capture": "analog-05",
+      "window": "LEFT trigger FULL",
+      "primary_sample_ordinal": 44398,
+      "t_rel_ms": 178856.353,
+      "selection": "max",
+      "control": "left-trigger",
+      "wire_offset": 6,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 180,
+      "capture": "analog-05",
+      "window": "RIGHT trigger HALF",
+      "primary_sample_ordinal": 49834,
+      "t_rel_ms": 200754.74,
+      "selection": "max",
+      "control": "right-trigger",
+      "wire_offset": 8,
+      "raw_value": 12922
+    },
+    {
+      "fixture_index": 181,
+      "capture": "analog-05",
+      "window": "RIGHT trigger FULL",
+      "primary_sample_ordinal": 53245,
+      "t_rel_ms": 214495.789,
+      "selection": "max",
+      "control": "right-trigger",
+      "wire_offset": 8,
+      "raw_value": 32767
+    },
+    {
+      "fixture_index": 182,
+      "capture": "left-pad-06",
+      "window": "center TOUCH ONLY",
+      "primary_sample_ordinal": 4777,
+      "t_rel_ms": 19244.411,
+      "selection": "max",
+      "control": "left-pad-pressure",
+      "wire_offset": 22,
+      "raw_value": 946
+    },
+    {
+      "fixture_index": 183,
+      "capture": "left-pad-06",
+      "window": "center LIGHT PRESSURE",
+      "primary_sample_ordinal": 7770,
+      "t_rel_ms": 31301.655,
+      "selection": "max",
+      "control": "left-pad-pressure",
+      "wire_offset": 22,
+      "raw_value": 1236
+    },
+    {
+      "fixture_index": 184,
+      "capture": "left-pad-06",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 10644,
+      "t_rel_ms": 42878.929,
+      "selection": "max",
+      "control": "left-pad-pressure",
+      "wire_offset": 22,
+      "raw_value": 31844
+    },
+    {
+      "fixture_index": 185,
+      "capture": "left-pad-06",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 10406,
+      "t_rel_ms": 41919.875,
+      "selection": "flag-rise",
+      "control": "pad-flag.left",
+      "bit": 26,
+      "active": true
+    },
+    {
+      "fixture_index": 186,
+      "capture": "left-pad-06",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 10794,
+      "t_rel_ms": 43482.944,
+      "selection": "flag-fall",
+      "control": "pad-flag.left",
+      "bit": 26,
+      "active": false
+    },
+    {
+      "fixture_index": 187,
+      "capture": "left-pad-06",
+      "window": "LEFT EDGE",
+      "primary_sample_ordinal": 13768,
+      "t_rel_ms": 55464.199,
+      "selection": "min",
+      "control": "left-pad-x",
+      "wire_offset": 18,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 188,
+      "capture": "left-pad-06",
+      "window": "RIGHT EDGE",
+      "primary_sample_ordinal": 16746,
+      "t_rel_ms": 67461.43,
+      "selection": "max",
+      "control": "left-pad-x",
+      "wire_offset": 18,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 189,
+      "capture": "left-pad-06",
+      "window": "TOP EDGE",
+      "primary_sample_ordinal": 20048,
+      "t_rel_ms": 80763.698,
+      "selection": "max",
+      "control": "left-pad-y",
+      "wire_offset": 20,
+      "raw_value": 27740
+    },
+    {
+      "fixture_index": 190,
+      "capture": "left-pad-06",
+      "window": "BOTTOM EDGE",
+      "primary_sample_ordinal": 23125,
+      "t_rel_ms": 93158.906,
+      "selection": "min",
+      "control": "left-pad-y",
+      "wire_offset": 20,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 191,
+      "capture": "left-pad-06",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 26869,
+      "t_rel_ms": 108242.357,
+      "selection": "min",
+      "control": "left-pad-circle",
+      "wire_offset": 18,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 192,
+      "capture": "left-pad-06",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 27244,
+      "t_rel_ms": 109753.287,
+      "selection": "max",
+      "control": "left-pad-circle",
+      "wire_offset": 18,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 193,
+      "capture": "left-pad-06",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 26869,
+      "t_rel_ms": 108242.357,
+      "selection": "min",
+      "control": "left-pad-circle",
+      "wire_offset": 20,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 194,
+      "capture": "left-pad-06",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 27126,
+      "t_rel_ms": 109277.269,
+      "selection": "max",
+      "control": "left-pad-circle",
+      "wire_offset": 20,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 195,
+      "capture": "right-pad-07",
+      "window": "center TOUCH ONLY",
+      "primary_sample_ordinal": 3082,
+      "t_rel_ms": 12414.348,
+      "selection": "max",
+      "control": "right-pad-pressure",
+      "wire_offset": 28,
+      "raw_value": 2073
+    },
+    {
+      "fixture_index": 196,
+      "capture": "right-pad-07",
+      "window": "center LIGHT PRESSURE",
+      "primary_sample_ordinal": 6646,
+      "t_rel_ms": 26772.531,
+      "selection": "max",
+      "control": "right-pad-pressure",
+      "wire_offset": 28,
+      "raw_value": 4193
+    },
+    {
+      "fixture_index": 197,
+      "capture": "right-pad-07",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 9829,
+      "t_rel_ms": 39594.752,
+      "selection": "max",
+      "control": "right-pad-pressure",
+      "wire_offset": 28,
+      "raw_value": 15337
+    },
+    {
+      "fixture_index": 198,
+      "capture": "right-pad-07",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 9736,
+      "t_rel_ms": 39220.753,
+      "selection": "flag-rise",
+      "control": "pad-flag.right",
+      "bit": 22,
+      "active": true
+    },
+    {
+      "fixture_index": 199,
+      "capture": "right-pad-07",
+      "window": "center FIRMER PRESSURE",
+      "primary_sample_ordinal": 9939,
+      "t_rel_ms": 40038.782,
+      "selection": "flag-fall",
+      "control": "pad-flag.right",
+      "bit": 22,
+      "active": false
+    },
+    {
+      "fixture_index": 200,
+      "capture": "right-pad-07",
+      "window": "LEFT EDGE",
+      "primary_sample_ordinal": 13359,
+      "t_rel_ms": 53816.021,
+      "selection": "min",
+      "control": "right-pad-x",
+      "wire_offset": 24,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 201,
+      "capture": "right-pad-07",
+      "window": "RIGHT EDGE",
+      "primary_sample_ordinal": 16034,
+      "t_rel_ms": 64592.211,
+      "selection": "max",
+      "control": "right-pad-x",
+      "wire_offset": 24,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 202,
+      "capture": "right-pad-07",
+      "window": "TOP EDGE",
+      "primary_sample_ordinal": 19260,
+      "t_rel_ms": 77588.422,
+      "selection": "max",
+      "control": "right-pad-y",
+      "wire_offset": 26,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 203,
+      "capture": "right-pad-07",
+      "window": "BOTTOM EDGE",
+      "primary_sample_ordinal": 22419,
+      "t_rel_ms": 90314.68,
+      "selection": "min",
+      "control": "right-pad-y",
+      "wire_offset": 26,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 204,
+      "capture": "right-pad-07",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 25982,
+      "t_rel_ms": 104669.014,
+      "selection": "min",
+      "control": "right-pad-circle",
+      "wire_offset": 24,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 205,
+      "capture": "right-pad-07",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 25794,
+      "t_rel_ms": 103910.96,
+      "selection": "max",
+      "control": "right-pad-circle",
+      "wire_offset": 24,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 206,
+      "capture": "right-pad-07",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 26175,
+      "t_rel_ms": 105445.949,
+      "selection": "min",
+      "control": "right-pad-circle",
+      "wire_offset": 26,
+      "raw_value": -32766
+    },
+    {
+      "fixture_index": 207,
+      "capture": "right-pad-07",
+      "window": "EDGE CIRCLE",
+      "primary_sample_ordinal": 25794,
+      "t_rel_ms": 103910.96,
+      "selection": "max",
+      "control": "right-pad-circle",
+      "wire_offset": 26,
+      "raw_value": 32766
+    },
+    {
+      "fixture_index": 208,
+      "capture": "pad-stick-07c",
+      "window": "CENTER PAD ONLY",
+      "primary_sample_ordinal": 6188,
+      "t_rel_ms": 24927.434,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": false,
+      "pad_touch": true
+    },
+    {
+      "fixture_index": 209,
+      "capture": "pad-stick-07c",
+      "window": "CENTER ADD STICK",
+      "primary_sample_ordinal": 8123,
+      "t_rel_ms": 32722.691,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": true,
+      "pad_touch": false
+    },
+    {
+      "fixture_index": 210,
+      "capture": "pad-stick-07c",
+      "window": "CENTER REMOVE STICK",
+      "primary_sample_ordinal": 10150,
+      "t_rel_ms": 40887.735,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": false,
+      "pad_touch": true
+    },
+    {
+      "fixture_index": 211,
+      "capture": "pad-stick-07c",
+      "window": "INNER PAD ONLY",
+      "primary_sample_ordinal": 15787,
+      "t_rel_ms": 63597.251,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": false,
+      "pad_touch": true
+    },
+    {
+      "fixture_index": 212,
+      "capture": "pad-stick-07c",
+      "window": "INNER ADD STICK",
+      "primary_sample_ordinal": 17774,
+      "t_rel_ms": 71601.244,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": true,
+      "pad_touch": false
+    },
+    {
+      "fixture_index": 213,
+      "capture": "pad-stick-07c",
+      "window": "INNER REMOVE STICK",
+      "primary_sample_ordinal": 19814,
+      "t_rel_ms": 79819.409,
+      "selection": "steady-reported-state",
+      "control": "same-side-pad-stick",
+      "stick_touch": false,
+      "pad_touch": true
+    },
+    {
+      "fixture_index": 214,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1392,
+      "t_rel_ms": 5608.109,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 215,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1393,
+      "t_rel_ms": 5612.035,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 216,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1394,
+      "t_rel_ms": 5616.095,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 217,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1395,
+      "t_rel_ms": 5619.979,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 218,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1396,
+      "t_rel_ms": 5623.979,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 219,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1397,
+      "t_rel_ms": 5627.98,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 220,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1398,
+      "t_rel_ms": 5632.032,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 221,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1399,
+      "t_rel_ms": 5635.98,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 222,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1400,
+      "t_rel_ms": 5640.136,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 223,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1401,
+      "t_rel_ms": 5643.98,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 224,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1402,
+      "t_rel_ms": 5648.103,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 225,
+      "capture": "face-01",
+      "window": "neutral-initial",
+      "primary_sample_ordinal": 1403,
+      "t_rel_ms": 5651.992,
+      "selection": "consecutive-timing-sample",
+      "control": "report-cadence"
+    },
+    {
+      "fixture_index": 226,
+      "capture": "motion-08",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5643,
+      "t_rel_ms": 22733.354,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 227,
+      "capture": "motion-08",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 10112,
+      "t_rel_ms": 40736.605,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 228,
+      "capture": "motion-08",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14581,
+      "t_rel_ms": 58739.831,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 229,
+      "capture": "motion-08",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19050,
+      "t_rel_ms": 76743.347,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 230,
+      "capture": "motion-08",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 23518,
+      "t_rel_ms": 94742.688,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 231,
+      "capture": "motion-08",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27988,
+      "t_rel_ms": 112751.131,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 232,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5602,
+      "t_rel_ms": 22567.49,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 233,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5007,
+      "t_rel_ms": 20170.379,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 234,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5372,
+      "t_rel_ms": 21640.397,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 235,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 6578,
+      "t_rel_ms": 26498.584,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 236,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5373,
+      "t_rel_ms": 21644.365,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 237,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5045,
+      "t_rel_ms": 20323.38,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 238,
+      "capture": "sdl-motion-08b",
+      "window": "FACE UP stationary",
+      "primary_sample_ordinal": 5381,
+      "t_rel_ms": 21676.398,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    },
+    {
+      "fixture_index": 239,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 10074,
+      "t_rel_ms": 40581.713,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 240,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 9668,
+      "t_rel_ms": 38946.808,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 241,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 10920,
+      "t_rel_ms": 43989.776,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 242,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 9268,
+      "t_rel_ms": 37334.661,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 243,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 9368,
+      "t_rel_ms": 37737.722,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 244,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 9328,
+      "t_rel_ms": 37576.648,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 245,
+      "capture": "sdl-motion-08b",
+      "window": "LEFT EDGE DOWN stationary",
+      "primary_sample_ordinal": 10892,
+      "t_rel_ms": 43877.745,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    },
+    {
+      "fixture_index": 246,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14546,
+      "t_rel_ms": 58597.235,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 247,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14034,
+      "t_rel_ms": 56534.995,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 248,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14159,
+      "t_rel_ms": 57038.005,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 249,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14995,
+      "t_rel_ms": 60406.055,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 250,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14579,
+      "t_rel_ms": 58730.252,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 251,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14573,
+      "t_rel_ms": 58706.028,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 252,
+      "capture": "sdl-motion-08b",
+      "window": "FRONT EDGE DOWN stationary",
+      "primary_sample_ordinal": 14940,
+      "t_rel_ms": 60185.175,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    },
+    {
+      "fixture_index": 253,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19017,
+      "t_rel_ms": 76609.368,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 254,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 18608,
+      "t_rel_ms": 74961.357,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 255,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19263,
+      "t_rel_ms": 77600.328,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 256,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19714,
+      "t_rel_ms": 79416.362,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 257,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19626,
+      "t_rel_ms": 79062.347,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 258,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19338,
+      "t_rel_ms": 77902.349,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 259,
+      "capture": "sdl-motion-08b",
+      "window": "ROLL motion",
+      "primary_sample_ordinal": 19304,
+      "t_rel_ms": 77765.458,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    },
+    {
+      "fixture_index": 260,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 23488,
+      "t_rel_ms": 94620.809,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 261,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 24219,
+      "t_rel_ms": 97565.682,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 262,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 23285,
+      "t_rel_ms": 93802.759,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 263,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 24140,
+      "t_rel_ms": 97247.794,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 264,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 23473,
+      "t_rel_ms": 94560.72,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 265,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 24135,
+      "t_rel_ms": 97226.643,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 266,
+      "capture": "sdl-motion-08b",
+      "window": "PITCH motion",
+      "primary_sample_ordinal": 23951,
+      "t_rel_ms": 96485.846,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    },
+    {
+      "fixture_index": 267,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27958,
+      "t_rel_ms": 112627.933,
+      "selection": "middle-of-window",
+      "control": "motion-observation"
+    },
+    {
+      "fixture_index": 268,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27930,
+      "t_rel_ms": 112515.93,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 34
+    },
+    {
+      "fixture_index": 269,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27928,
+      "t_rel_ms": 112506.925,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 36
+    },
+    {
+      "fixture_index": 270,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 28017,
+      "t_rel_ms": 112865.941,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 38
+    },
+    {
+      "fixture_index": 271,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27897,
+      "t_rel_ms": 112383.06,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 40
+    },
+    {
+      "fixture_index": 272,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 27902,
+      "t_rel_ms": 112402.888,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 42
+    },
+    {
+      "fixture_index": 273,
+      "capture": "sdl-motion-08b",
+      "window": "YAW motion",
+      "primary_sample_ordinal": 28285,
+      "t_rel_ms": 113944.954,
+      "selection": "absolute-field-peak",
+      "control": "motion-observation",
+      "wire_offset": 44
+    }
+  ],
+  "output_fixture": "steam-d9-native-output-reference",
+  "output_index": [
+    {
+      "fixture_index": 0,
+      "capture": "ping-09",
+      "t_rel_ms": 0.0,
+      "wire_bytes": 4,
+      "report_id": "0x85",
+      "status": 0,
+      "completed_bytes": 4
+    },
+    {
+      "fixture_index": 1,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 0.0,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 2,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 41.894,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 3,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 83.934,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 4,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 125.825,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 5,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 167.889,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 6,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 209.875,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 7,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 251.988,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 8,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 252.469,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 9,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10313.977,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 10,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10355.958,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 11,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10397.597,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 12,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10439.768,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 13,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10481.872,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 14,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10523.746,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 15,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10566.018,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    },
+    {
+      "fixture_index": 16,
+      "capture": "sdl-rumble-10",
+      "t_rel_ms": 10566.486,
+      "wire_bytes": 10,
+      "report_id": "0x80",
+      "status": 0,
+      "completed_bytes": 10
+    }
+  ],
+  "reverse_summaries": {
+    "ping-09": {
+      "capture_sha256": "4211a1e4ddd028b9fa085262a163eb8c74c9661f5b2939bfed8318af6dc198e5",
+      "output_id_wire_length_counts": {
+        "85/4": 1
+      },
+      "feature_command_status_counts": {
+        "87/0": 40
+      },
+      "output_status_counts": {
+        "0": 1
+      },
+      "feedback_44_count": 0,
+      "pending_observed_host_commands": 0,
+      "no_ACK_semantics_inferred": true,
+      "windows": [
+        {
+          "label": "neutral-initial",
+          "output_id_wire_length_counts": {},
+          "feedback_44_count": 0
+        },
+        {
+          "label": "PING ONCE",
+          "output_id_wire_length_counts": {
+            "85/4": 1
+          },
+          "feedback_44_count": 0
+        },
+        {
+          "label": "neutral-after-PING",
+          "output_id_wire_length_counts": {},
+          "feedback_44_count": 0
+        }
+      ]
+    },
+    "sdl-rumble-10": {
+      "capture_sha256": "706be9eea8793a36cb34b5fa36796c23df0df4a5748ca01cb273e23e4827b5fb",
+      "output_id_wire_length_counts": {
+        "80/10": 16
+      },
+      "feature_command_status_counts": {
+        "87/0": 9,
+        "ae/0": 1,
+        "83/0": 1,
+        "85/0": 1,
+        "8e/0": 1
+      },
+      "output_status_counts": {
+        "0": 16
+      },
+      "feedback_44_count": 18,
+      "pending_observed_host_commands": 0,
+      "no_ACK_semantics_inferred": true,
+      "windows": [
+        {
+          "label": "neutral-initial",
+          "output_id_wire_length_counts": {},
+          "feedback_44_count": 0
+        },
+        {
+          "label": "LOW frequency channel",
+          "output_id_wire_length_counts": {
+            "80/10": 8
+          },
+          "feedback_44_count": 9
+        },
+        {
+          "label": "neutral-after-LOW frequency channel",
+          "output_id_wire_length_counts": {},
+          "feedback_44_count": 0
+        },
+        {
+          "label": "HIGH frequency channel",
+          "output_id_wire_length_counts": {
+            "80/10": 8
+          },
+          "feedback_44_count": 9
+        },
+        {
+          "label": "neutral-after-HIGH frequency channel",
+          "output_id_wire_length_counts": {},
+          "feedback_44_count": 0
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Host paths, addresses, URB identifiers, real unit identities and absolute capture/marker times are omitted.",
+    "Raw captures and full private feature payloads stay outside the corpus.",
+    "Input fixture contains selected exact 54-byte report 0x42 payloads; all fields reviewed as native state/counters, not identifiers.",
+    "Output fixture contains only reviewed 0x80 rumble and 0x85 script parameters. Unknown 0x44 bodies are withheld; counts do not prove ACK semantics.",
+    "Input capture drop counters were not supplied to this reduction; sequence continuity is not a zero-loss certification.",
+    "Steam exposes per-side Trackpad Lockout controls; a later owner screenshot shows both enabled. Suppression is configuration-dependent; a disabled-setting comparison was not performed."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-output-reference",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-native-output-reference.hex",
+  "sha256": "ca4c298fa25137584830812c755e3ab5a5ea58b14bf54244f01f98dc61c2d084",
+  "sources": [],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-steam-ping-script",
+    "steam-d9-sdl-rumble-channels"
+  ]
+}

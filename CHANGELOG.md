@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record labelled D9 wired native inputs, configuration-dependent pad/stick lockout, SDL-enabled motion, Steam Ping and separate brief rumble channels; retain selected non-identifying payloads and operator caveats.
+
 - Record D9 wired Steam Controller 2026 kernel/Steam feature exchanges, model attribute values and accepted setting writes; add opt-in model-field reduction while preserving serial/identifier withholding. Review follow-up corrects the three ED lengths, records only the safe one-byte value and serial character classes, and withholds all opaque tails.
 
 - Survey GameCube adapter consumers, per-port uinput compatibility decisions and source-only libusb/udev grants for #258.
