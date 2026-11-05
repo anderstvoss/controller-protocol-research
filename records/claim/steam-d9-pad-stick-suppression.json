@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-pad-stick-suppression",
+  "statement": "With the owner keeping a finger on the right pad, all 4470 reports with right-stick touch asserted across center/inner-edge comparison sequences had right-pad touch clear and right-pad X/Y/pressure zero. Pad reporting returned when stick touch cleared. Initial center pad-only window includes early stick contact noted by the owner. Suppression is already in the received USB input payload; whether firmware defaults or a Steam-configured rule enabled it is not isolated. Left-pad independence is an owner UI observation, not tested by a simultaneously active left pad in this capture. No exact geometric dead-zone percentage is established. The owner later showed Steam's per-side Trackpad Lockout controls, both enabled in the displayed view. Treat this as configuration-dependent behavior, not an immutable controller property. Disabled-setting behavior and the feature setting that programs this policy were not measured.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

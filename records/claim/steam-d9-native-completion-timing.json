@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-completion-timing",
+  "statement": "Target report 0x42 USB completion intervals have a median near 4001 microseconds in these bounded captures; the first face-button capture has 29720 primary reports and all 29719 observed sequence deltas equal one modulo 256. Other sessions can contain longer gaps, including SDL setup/teardown. The twelve selected consecutive samples are examples, not a certification of hardware polling frequency, loss-free capture or universal firmware cadence.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
