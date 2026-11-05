@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-midi-lfo-reference",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-midi-lfo-reference.hex",
+  "sha256": "0b145f8c91ade9ce77cd2a90311fe1750ab82af118bc621dd728380c133490df",
+  "sources": [],
+  "experiments": [
+    "steam-d9-midi-pilot",
+    "steam-d9-midi-channels"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-midi-lfo-framing",
+    "steam-d9-midi-channel-routing"
+  ]
+}

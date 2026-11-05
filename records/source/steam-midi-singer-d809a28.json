@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-midi-singer-d809a28",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/CrazyCritic89/SteamHapticsSinger/d809a28acb1e4f5aeb92fe50ef06869eb7b07060/main.cpp",
+  "revision": "d809a28acb1e4f5aeb92fe50ef06869eb7b07060",
+  "sha256": "e4d0fcb99e65699cc7667e9e91122a45ef00384fe1e6dd54038bc597f685d6b8",
+  "lineage": "steam-haptics-player-family",
+  "locator": "Triton HID enumeration; MIDI channel-to-haptic mapping, note-on/off 0x83 writes and gain modifiers. Shared lineage with the older Singer and Pixel note helpers; no independent physical corroboration."
+}

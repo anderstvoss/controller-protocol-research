@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-audio-iczero-client-83c46d7",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/iczero/steam-controller-stuff/83c46d7c5711f7497f83336526755fbf50d0c5af/hid-sctrl/src/bin/audio-test.rs",
+  "revision": "83c46d7c5711f7497f83336526755fbf50d0c5af",
+  "sha256": "e5a0cd3d4dbacac84d690a7253eb8d771f1994d2bec549e531c130d7fce3ecf0",
+  "lineage": "sc2",
+  "locator": "Wired 8-kHz s16le test-audio client: internal group configure, stereo split/scaling0.9, per-target0x87 chunks and stream-status handling. Shared lineage with sc2 haptics/dissector; not independent corroboration of Pixel source interpretations."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-midi-pilot",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-midi-singer-d809a28"
+  ],
+  "fixtures": [
+    "steam-d9-midi-lfo-reference"
+  ],
+  "procedure": "2026-11-05 Pacific D9 direct-wired 28de:1302 with Steam/Dolphin/SDL closed. Owner starts bounded full-snaplen usbmon, then runs generated two-note SMF through unmodified SteamHapticsSinger d809a28. Notes 57 and 69 on MIDI channel 0, velocity32, 480 PPQN, tempo500000us/quarter, 192tick holds and separate silences. All player gain modifiers -20; no looping/direct velocity. Pair private USB submissions/completions after capture closes. Retain only reviewed 0x83 output fields/zero tails and relative timing; exclude raw captures, feature contents, real identifiers, USB addresses/URBs, host paths/accounts and absolute clocks. No agent root action or feature injection, firmware update, bootloader or wireless work. bcdDevice0404 is only a version marker; firmware attribute not observed. Evidence file records capture/stimulus/client binary hashes and successful completions.",
+  "semantic_outcome": "Both pilot signals received according to owner, second more audible and higher pitched. Twelve padded output0x83 requests completed; no observed input0x44 and no pending host writes. Exact physical location, calibrated sound frequency and PCM streaming remain unmeasured."
+}

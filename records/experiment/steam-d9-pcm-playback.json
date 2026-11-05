@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-pcm-playback",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-audio-player-e06e48d",
+    "steam-audio-tritonlib-d470e0d",
+    "steam-audio-iczero-client-83c46d7",
+    "sc2-src-haptics",
+    "sc2-src-dissector"
+  ],
+  "fixtures": [
+    "steam-d9-pcm-stream-reference"
+  ],
+  "procedure": "2026-11-05 Pacific D9 bare-metal direct-wired28de:1302, bcdDevice0404 marker, firmware attribute not observed. Steam/Dolphin/SDL closed. Owner starts bounded full-snaplen usbmon then runs source-reviewed unmodified upstream clients. Pixel e06e48d with TritonLibd470e0d: first2s8-kHz stereo s16le WAV at peak1024, left220Hz/right440Hz250ms; repeat2.5s with equal440Hz500ms left/right at peak4096, ramps and silence. iczero83c46d7 replays the same moderate waveform as raw stereoPCM, using its own0.9 scaling and per-target0x87 framing. A separately reviewed minimal companion writes only output86010200/86010500 after each process, including errors. Pair USB requests/completions privately after capture closes; reconstruct every meaningful channel byte and compare to the generated stimulus/client transformation. Select complete known0x86/87/88/44 packets with zero unused/reserved tails, relative timing and safe metadata. Retain no raw capture, opaque feature content, serial/addresses/URBs, paths/accounts or absolute clocks in this repository. Owner performs all root capture steps. No agent root action, custom firmware feature commands, updates, bootloader, wireless or arbitrary user audio.",
+  "semantic_outcome": "Three waveform byte-correspondence checks passed; moderate equal-frequency left/right output clearly heard/felt for both clients. Internal mode0 accepted while pad mode0 rejected; caller-visible buffering statuses observed, including two0x01 indications in mono playback. All observed output transfers and explicit stops completed with no pending writes. Exact native buffering, calibrated sound and other formats remain unmeasured."
+}
