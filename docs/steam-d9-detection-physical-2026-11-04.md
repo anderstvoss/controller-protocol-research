@@ -80,8 +80,26 @@ in this run; its name/effect is not inferred from that result alone.
 
 All requests asked for 64 bytes. All observed GET completions returned 63 bytes,
 including report ID 1, despite the descriptor's 63-body-byte maximum. Serial
-replies declare inner length 20; contents are withheld. `0xED` replies declare
-inner length 1; the unreviewed value is withheld.
+replies declare inner length 20; the NUL-terminated string has 13 characters.
+Selector 1 has the character-class pattern `UUUDDDDDDDUUD`, and selector 0
+has `UUUDUDDDDDDDD` (`U` uppercase ASCII, `D` decimal digit). These patterns
+contain no actual serial characters. Observed serial SET header fragments are
+`01 ae 16 01`, `01 ae 15 01`, `01 ae 15 00`, and `01 ae 01 01`.
+Several requests have opaque nonzero tails; full serial requests and replies
+remain withheld.
+
+The three `0xED` GETs declare inner lengths 1, 24, and 0, in that order,
+after SETs declaring 24, 9, and 11. The first meaningful one-byte reply is
+`00`, a non-identifying single value; its reviewed four-byte prefix is
+`01 ed 01 00`. This does **not** establish that all ED replies have length 1.
+Opaque bytes outside that first declared payload and the other ED bodies
+remain withheld. Replaying the reviewed value with fresh zero padding is a
+compat choice, not an exact replay of the entire physical frame.
+
+The two `0xDC` SETs declare length 2 and body `01 02`; the two `0xE2`
+SETs declare length 2 and body `01 20`. These small command parameters are
+non-identifying. A successful completion establishes acknowledgement only;
+it does not establish command semantics or retained state.
 
 | S3 command | SET count/status | GET count/status |
 | --- | --- | --- |

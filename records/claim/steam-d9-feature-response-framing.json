@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "steam-d9-feature-response-framing",
-  "statement": "Across kernel-only and Steam physical sessions, feature GET requests asked for64 bytes but all observed GET completions delivered63 bytes including report ID1. Attributes have declared inner length30 and six5-byte entries; serial replies have declared inner length20 with contents withheld; ED replies have declared inner length1 with unreviewed value withheld. SET requests delivered64 bytes. Steam session C1 SETs returned-32(STALL)100 times; DC/E2 SETs and ED SET/GET completed0. See ordered sanitized exchange summaries; these are observed outcomes, not authorization to inject those commands or an explanation of their semantics.",
+  "statement": "Across kernel-only and Steam physical sessions, feature GET requests asked for 64 bytes but all observed GET completions delivered 63 bytes including report ID 1. Attributes have declared inner length 30 and six 5-byte entries. Serial replies declare inner length 20 with 13-character NUL-terminated strings; actual characters are withheld. Selector 1 has class pattern UUUDDDDDDDUUD and selector 0 UUUDUDDDDDDDD (U uppercase ASCII, D digit). Accepted serial request prefixes: 01 ae 16 01, 01 ae 15 01, 01 ae 15 00, 01 ae 01 01; opaque request tails withheld. The three ED replies declare inner lengths 1, 24, 0 after SETs declaring 24, 9, 11. Only the first meaningful one-byte value (00) is reviewed as non-identifying; its prefix is 01 ed 01 00, with opaque tails and other ED bodies withheld. SET requests delivered 64 bytes. Steam session C1 SETs returned -32 (STALL) 100 times. DC SET body 01 02 and E2 SET body 01 20 (both declared length 2, twice each) completed status 0; ED SET/GET also completed status 0. These are observed outcomes, not authorization to inject commands or an explanation of semantics; no retention is established.",
   "status": "physically_observed",
   "applicability": {
     "controller": "steam-controller-2026",
-    "revision": "HW_ID0x48; retail physical revision otherwise unverified",
-    "firmware": "Observed build timestamp0x6ACFF323; bcdDevice0404 is a separate version marker",
+    "revision": "HW_ID 0x48; retail physical revision otherwise unverified",
+    "firmware": "Observed build timestamp 0x6ACFF323; bcdDevice 0404 is a separate version marker",
     "transport": "usb",
-    "scope": "Direct wired physical1302 on D9; firmware/session scoped. Not Puck/BT, universal values, actuator effects or virtual acceptance."
+    "scope": "Direct wired physical 1302 on D9; firmware/session scoped. Not Puck/BT, universal values, actuator effects or virtual acceptance."
   },
   "sources": [
     "steam-ibex-linux-driver"
