@@ -16,7 +16,8 @@
     "steam-ibex-linux-driver",
     "steam-triton-sdl-driver",
     "openpuck",
-    "sc2-src-dissector"
+    "sc2-src-dissector",
+    "steam-detect-couch-firmware"
   ],
   "experiments": [],
   "conflicts_with": [],
