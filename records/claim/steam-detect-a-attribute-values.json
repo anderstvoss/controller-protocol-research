@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-a-attribute-values",
+  "statement": "Public 1302 compatibility implementations supply GET_ATTRIBUTES_VALUES (feature1 opcode 0x83) as a nonempty sequence of five tag/u32LE records: 1 product=0x1302, 2 capabilities=0, 10 bootloader build, 4 firmware build and 9 hardware revision. Linux v7.3 recognizes the 5-byte numeric record format but only consumes tag11 as an optional sensor interval; SDL Triton wired InitDevice does not query attributes. Claimed Steam-side attribute gate is source-author testimony, not public Valve client validation. C6 returns zero entries.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "A: 1302 public implementations, not verified private Steam gate"
+  },
+  "sources": [
+    "steam-detect-openpuck-controller-attr",
+    "steam-detect-couch-firmware",
+    "steam-detect-hidmaestro-1302",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
