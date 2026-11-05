@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gamecube",
+  "name": "Nintendo Switch 2 GameCube Controller (USB)",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#296",
+  "notes": "Distinct curated device from both the four-port WUP-028 USB adapter and the Switch 2 Pro Controller. Shares host-command conventions with Switch 2 controller family but has GameCube-specific analog triggers and click buttons. Only a physical capture plan exists; no hardware result."
+}

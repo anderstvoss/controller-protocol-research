@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-linux-hid",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/77c7155e2707ba5b1d56f3dc1acead48cf17f98d/drivers/hid/hid-nintendo.c",
+  "revision": "77c7155e2707ba5b1d56f3dc1acead48cf17f98d",
+  "sha256": "24c36517d7030a3fb5d46131314e356cca931562c55bf028bb091dd4690c360d",
+  "lineage": "Linux kernel",
+  "locator": "2965-3052 GC button, trigger and report-format constants; 3288-3319 button mappings; 3431-3486 GC on/off rumble vs other HD rumble; 3610-3669 GC evdev axis ranges and FF; 3760-3810 identity/calibration reads; 3933-4037 0x0a GC and unified input decoding; 4100-4185 USB init and LED; 4256-4270 firmware type branching; 4372-4385 GC naming; 4470-4479 USB HID match"
+}
