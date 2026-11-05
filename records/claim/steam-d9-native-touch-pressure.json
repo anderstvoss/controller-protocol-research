@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-touch-pressure",
+  "statement": "Independent touch windows correlate left/right stick touch to bits 24/20, grip touch to 29/28, and pad touch to 25/21. Some windows contain extra contacts and grip windows contain incidental left-pad contact; these are preserved, not treated as clean negatives. Pad coordinate samples reach +/-32766; source-interpreted unsigned pressure fields peak at left 946/1236/31844 for touch/light/firmer and right 2073/4193/15337. Firmer windows also set consumer-labelled click bits 26/22. They do not establish mechanical switches, calibrated force, universal thresholds or the entire representable range.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

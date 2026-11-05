@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-steam-ping-script",
+  "statement": "One owner-triggered Steam Ping produced exact output report 85 05 0c 00 (four wire bytes), completed status zero, with owner-observed vibration and chirping through haptics. Raw selector 5, script 12 and signed gain 0 follow the source-declared script layout; actuator-selector meaning and a separate speaker endpoint are not established. No input 0x44 occurred in the bounded Ping window.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

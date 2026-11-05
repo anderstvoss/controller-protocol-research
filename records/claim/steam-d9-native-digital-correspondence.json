@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-digital-correspondence",
+  "statement": "Owner-labelled direct-wired input windows map 22 digital controls to the existing native 0x42 button bits: A/B/X/Y=0/1/2/3; QAM=4, right-stick click=5, Menu=6, R4/R5=7/8, right shoulder=9, D-pad down/right/left/up=10/11/12/13, View=14, left-stick click=15, Steam=16, L4/L5=17/18, left shoulder=19, right/left trigger click=23/27. Each intended button had three observed press/release cycles except View, which had two after the owner reported one missed press. Trigger full travel reaches 32767; stick cardinal extrema reach +/-32767. This is device correspondence for these labelled windows, not universal calibration or Steam virtual acceptance.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
