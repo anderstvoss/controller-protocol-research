@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-input-output-reference",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "fixtures": [
+    "steam-d9-native-input-reference",
+    "steam-d9-native-output-reference"
+  ],
+  "procedure": "2026-11-04 Pacific, D9 bare-metal EndeavourOS x86-64 kernel 7.3.0-1-mainline. Owner-operated bounded full-snaplen binary usbmon captures of only the attributed real direct-wired 28de:1302. Each batch records bcdDevice 0404 as a device-version marker; firmware attribute not observed in each input-only reduction. Steam Stable 1792618285 running for button/touch/pressure/analogue/Ping batches; owner granted normal Steam input control and desktop bindings caused documented mouse/keyboard side effects. Steam button opened Big Picture in one batch. Close Steam fully before the SDL sensor/rumble batches. Private SDL 3.5.0, source e0232c5b9d972ad394d597ce858185cd15a0f1a7, source hash verified; ordinary high-level sensor-enable/rumble APIs only. Match mmap USB headers and target metadata privately; retain only selected complete report payloads, relative times and non-identifying summaries. Per-frame input allowlist is exactly report 0x42/54 with known sequence/buttons/axes/pressure/sensor fields; output allowlist is 0x80/10 and 0x85/4. Serial/unknown feature bytes, USB addresses/URB identifiers, paths/accounts and absolute marker times withheld. Selected packet payloads are unmodified; container metadata is omitted before corpus import, so these are physical selections rather than byte-replaced sanitized fixtures. No agent root action, custom physical feature injection, forbidden commands, firmware update, bootloader, receiver or Bluetooth work. Owner caveats/missed actions retained in evidence and document.",
+  "semantic_outcome": "Labelled input and bidirectional-output reference obtained. Exclude the three missed original right-pad special windows; repeat them with preparation countdowns, then confirm same-side suppression with fixed-contact comparison. View has two rather than three presses; grip/rear/motion windows have documented incidental contacts/movement; yaw is not a calibrated pure-axis action. Initial Steam-motion fields froze; SDL-enabled repeat produced changing accel/gyro/quaternion. Steam Ping and both brief SDL rumble trials had successful transport completions and owner feedback. This experiment measures physical protocol correspondence only."
+}

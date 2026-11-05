@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sc26re-lizard",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/lizard.c",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "b292fb61cb79ea8b7d17d9f87dc5bc7b66e0b68247a626255738fd09495e73bb",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "19-30 report 40/41 and replacement timer 10s; 65-82 defaults; 308-395 watchdog/settings; 420-483 mapping state and emission"
+}

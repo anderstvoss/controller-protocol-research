@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-sc26re-settings",
+  "kind": "independent_implementation",
+  "url": "https://github.com/mwdmwd/sc26re/blob/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/ibex_settings_registry.c",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "5951abc880d94cf8cb0baad3a1da8911e686518510e12b4c703e17d021a05183",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "54 lizard setting9 default1; 94-97 setting48 IMU and key50 sleep inactivity timeout default900, range0..32767; firmware replacement registry not proof stock Steam listing"
+}

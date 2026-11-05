@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-b-default-mapping",
+  "statement": "Feature opcode 0x85 sets default digital mappings and opcode 0x8e loads default settings. Linux v7.3 sends them for enabled lizard policy, but SDL Triton does not require these on wired InitDevice. Neither is an attribute getter or evidence of a Steam-client list gate. A host SET completion is distinct from a subsequent feature GET reply.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "B: source meanings and observed counts do not isolate Steam-origin requests"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "sc2-src-dissector",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

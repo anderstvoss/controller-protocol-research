@@ -1,0 +1,3556 @@
+{
+  "schema_version": 1,
+  "sessions": {
+    "S1": {
+      "raw_capture_sha256": "c04bc1d1952b193e012a1463109b88f8d485c359b571dcf547209ed9b3c52803",
+      "feature_exchanges": [
+        {
+          "session": "S1",
+          "kind": "feature_request",
+          "t_rel_ms": 15607.353,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S1",
+          "kind": "feature_reply",
+          "t_rel_ms": 15607.924,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S1",
+          "kind": "feature_request",
+          "t_rel_ms": 15608.461,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S1",
+          "kind": "feature_reply",
+          "t_rel_ms": 15608.967,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S1",
+          "kind": "feature_request",
+          "t_rel_ms": 15609.496,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x85",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S1",
+          "kind": "feature_request",
+          "t_rel_ms": 15609.966,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x8e",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        }
+      ],
+      "unpaired_control_events": 0,
+      "pending_control_events": 0,
+      "firmware_build_timestamp_hex": "0x6ACFF323",
+      "bcdDevice_marker": "0404",
+      "capture_drop_counter": "not supplied; matched observed control requests/completions only"
+    },
+    "S3": {
+      "raw_capture_sha256": "cb654f7f71af823d8402bf092235eeff2373b70775f11996acfeedbd7a3224fb",
+      "feature_exchanges": [
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8210.804,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 8211.302,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8211.752,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 8212.342,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8212.846,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 8213.415,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8213.823,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 50,
+              "value": 900
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8216.194,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8737.967,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8738.47,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8739.04,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8739.633,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 8877.559,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 9050.593,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 12051.673,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13090.08,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13090.781,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13091.29,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13091.752,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13092.206,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13092.745,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13093.236,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13093.734,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13094.226,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13094.719,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13095.206,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13095.717,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13096.414,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13097.023,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13097.588,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13098.096,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13098.588,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13099.061,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13099.599,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13100.105,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13100.659,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13101.129,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13101.628,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13102.122,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13102.651,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13103.163,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13103.854,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13104.428,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13105.08,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13105.554,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13106.063,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13106.507,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13106.978,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13107.516,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13107.987,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13108.53,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13109.009,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13109.554,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13110.03,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13110.514,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13111.02,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13111.525,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13112.021,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13112.53,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13113.005,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13113.538,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13114.031,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13114.602,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13115.069,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13115.559,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13116.041,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13116.553,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xdc",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13151.518,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xe2",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13152.011,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 34,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13152.532,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 35,
+              "value": 80
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13153.039,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 84,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13153.588,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 85,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13154.145,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 50,
+              "value": 900
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13154.676,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13157.379,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13157.877,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13158.536,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13159.089,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13159.531,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13160.003,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13160.668,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13161.201,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13186.58,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13188.306,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13784.152,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 13784.732,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 13785.19,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 13785.73,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 15053.111,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 15184.673,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 15185.318,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 15185.903,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 15186.4,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 15389.021,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 15389.56,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 15390.095,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 15390.734,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 18053.901,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 21055.578,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 24056.468,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 27058.41,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 33165.402,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 33165.904,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 33166.394,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 33166.867,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 33167.252,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x85",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 33167.672,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x8e",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34157.457,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 34158.118,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34158.593,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 34159.04,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34159.642,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 34160.111,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34160.708,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 50,
+              "value": 900
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34162.748,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34670.057,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34670.576,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34671.053,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34671.592,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34672.128,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34672.635,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34673.293,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34673.838,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34674.439,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34674.919,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34675.41,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34675.879,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34676.414,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34676.843,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34677.389,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34677.928,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34678.412,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34678.882,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34679.357,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34679.849,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34680.334,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34680.846,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34681.398,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34681.887,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34682.354,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34682.827,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34683.304,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34683.835,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34684.299,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34684.873,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34685.465,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34685.951,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34686.435,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34687.075,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34687.581,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34688.137,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34688.789,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34689.372,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34689.803,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34690.331,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34690.856,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34691.365,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34691.834,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34692.318,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34692.913,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34693.459,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34693.894,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34694.384,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34694.88,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34695.349,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34695.825,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xc1",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": -32,
+          "completion_bytes": 0
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34696.372,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xdc",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34731.572,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xe2",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34732.168,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 34,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34732.707,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 35,
+              "value": 80
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34733.187,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 84,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34733.738,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 85,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34734.299,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34734.901,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34735.505,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34736.06,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34736.55,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34737.034,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34737.735,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34738.334,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34738.877,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34739.333,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34739.912,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34740.464,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34741.028,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x81",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34741.507,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 48,
+              "value": 0
+            },
+            {
+              "key": 7,
+              "value": 7
+            },
+            {
+              "key": 8,
+              "value": 7
+            },
+            {
+              "key": 49,
+              "value": 2
+            },
+            {
+              "key": 82,
+              "value": 3
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34742.235,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 24,
+              "value": 0
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            },
+            {
+              "key": 52,
+              "value": 65535
+            },
+            {
+              "key": 53,
+              "value": 65535
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34742.984,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 46,
+              "value": 0
+            },
+            {
+              "key": 46,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34768.273,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34770.606,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34818.072,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 34820.56,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 45,
+              "value": 100
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 36130.357,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 38869.27,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 38869.797,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 38918.342,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 38918.906,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 38967.541,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 38968.034,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xed",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 39131.882,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 39886.493,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 39887.067,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 39887.661,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 39888.138,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 40125.905,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 40126.468,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 40127.007,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 40127.635,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 65,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 42133.769,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 45134.499,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x87",
+          "payload_withheld": true,
+          "settings": [
+            {
+              "key": 9,
+              "value": 0
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 45394.456,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x85",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 45394.934,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x8e",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 47780.645,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 47781.104,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0xae",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 47781.519,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_reply",
+          "t_rel_ms": 47781.974,
+          "report_id": "0x01",
+          "wire_bytes": 63,
+          "inner_command": "0x83",
+          "payload_withheld": true,
+          "attributes": [
+            {
+              "id": 1,
+              "value": 4866
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 10,
+              "value": 1758656814
+            },
+            {
+              "id": 4,
+              "value": 1792013091
+            },
+            {
+              "id": 9,
+              "value": 72
+            },
+            {
+              "id": 11,
+              "value": 4000
+            }
+          ],
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 63
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 47782.363,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x85",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        },
+        {
+          "session": "S3",
+          "kind": "feature_request",
+          "t_rel_ms": 47782.837,
+          "report_id": "0x01",
+          "wire_bytes": 64,
+          "inner_command": "0x8e",
+          "payload_withheld": true,
+          "requested_bytes": 64,
+          "completion_status": 0,
+          "completion_bytes": 64
+        }
+      ],
+      "unpaired_control_events": 0,
+      "pending_control_events": 0,
+      "firmware_build_timestamp_hex": "0x6ACFF323",
+      "bcdDevice_marker": "0404",
+      "capture_drop_counter": "not supplied; matched observed control requests/completions only"
+    }
+  },
+  "limits": "Serial replies and full feature payloads withheld. Attribute and setting values use explicit model-field allowlists. Status zero proves observed completion, not persistent storage or physical effect. No origin attribution for interleaved kernel/userspace requests. No USB capture drop counter supplied."
+}

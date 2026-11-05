@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-openpuck-controller-attr",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/safijari/openpuck/blob/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/ReversePuckFirmware/identity.cpp",
+  "revision": "29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d",
+  "sha256": "f2ad447510fd0a6fd40b6d66dbdca29c082f6e5cfa050fd4417e366271b91671",
+  "lineage": "safijari/openpuck",
+  "locator": "9-18: attributed physical-derived 1302 five-tag numeric GET 0x83, not a new physical read; 20-28: synthetic identity construction"
+}

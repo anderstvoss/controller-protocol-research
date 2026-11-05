@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-steam-setting-acceptance",
+  "statement": "With Stable Steam 1792618285, 55 observed feature 1 command87 writes completed status 0. Accepted keys/values:7=7,8=7,9=0,24=0,34=100,35=80,45=100,46=0,48=0,49=2,50=900,52=65535,53=65535,82=3,84=0,85=0. Multi-setting blocks include duplicate 52/53 and 46 keys. Exact 64-byte submitted frames are selected in their observed order; padding outside the declared settings payload is zero. Completion success establishes transport acceptance only: retention, readback, factory defaults, ranges and physical effects are not proven. The firmware timestamp scopes this evidence.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "HW_ID 0x48; retail physical revision otherwise unverified",
+    "firmware": "Observed build timestamp 0x6ACFF323; bcdDevice 0404 is a separate version marker",
+    "transport": "usb",
+    "scope": "Direct wired physical 1302 on D9; firmware/session scoped. Not Puck/BT, universal values, actuator effects or virtual acceptance."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-steam-feature-capture"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

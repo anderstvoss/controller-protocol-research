@@ -268,6 +268,17 @@ python -m unittest discover -s tests -p test_steam_capture_reduce.py
 
 The output retains per-report **relative** time, ID, direction, length and explicitly allowed input/output bytes, but drops unrecognized metadata. It hashes and omits all feature reply bytes by default (including `0xae`, `0x83`) and retains only the safe **command/length** of feature requests. Manually review entire reduced output for uniqueness/disclosure **before** incorporating any selected sanitized fixture into corpus `fixtures/` with hashes and explicit source/experiment/claim lineage under the schemas. `publication_guard.py` does not certify safety; run it and the schema validator on any public proposal. Keep descriptor/allowed packets only in a consented sanitized physical fixture; otherwise public JSON claims can include categorical outcomes, counts, sizes, relative timings and hashes without a payload. The raw pcap, exact device assignment and private logs stay offline indefinitely or follow the operator's own retention policy.
 
+### D9 model-field disclosure extension (2026-11-04)
+
+Owner decision virtualgamepad #159 comment 6645358188 permits reviewed model-level
+attributes and accepted settings. The default reducer still withholds all feature
+bytes. The opt-in `--model-attributes` and `--model-settings` switches retain only
+explicit ID/key allowlists and reject malformed or unreviewed fields. They never
+publish a raw feature payload, real serial, radio ID or opaque attribute.
+See `docs/steam-d9-detection-physical-2026-11-04.md` and its linked physical records
+for firmware-scoped values and completion-only limits. Earlier default disclosure
+rules remain in force; this is not blanket permission for unknown fields.
+
 ## D. Session record templates (do not commit fabricated run results)
 
 Use the existing schemas exactly. Templates below are **illustrative payloads** to fill in after execution, not pre-existing experiments or physical claims. Each session has independent IDs; retain `not_run` until its run is performed. Add the `records/experiment/` and `records/claim/` files only when a source pointer, outcome and reviewed evidence exist. If a real physical claim is to be upgraded to `physically_observed`/`physically_validated`, `tools/validate.py` requires a passed `controlled_physical` experiment **and linked physical fixture referencing that claim**; notes alone cannot satisfy the gate.

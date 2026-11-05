@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o2-menu-and-wired-sensor",
+  "statement": "Kernel module lizard_mode default true gates native gamepad and sensor emission until gamepad_mode is enabled; 0x42 or 0x45 Menu bit at byte2 bit6 schedules a toggle at 45*HZ/100 nominal 450 milliseconds, canceled upon release. Callback sends mapping/lizard commands, and IBEX gamepad evdev open/close alone does not toggle lizard. Importantly, wired 1302 sensor input callbacks are NOT installed in hid-steam's sensors_register (only 2015 wired and 2026 wireless/BLE install them), so opening wired 1302 sensor evdev does not itself send key48 even though the callback implementation does; SDL explicitly sends key48 on sensor enable.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O2 consumer source correction relative to generalized steam-c6-feature-imu: wired sensor-open lacks callback. D9 650ms Menu hold not exact threshold measurement."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

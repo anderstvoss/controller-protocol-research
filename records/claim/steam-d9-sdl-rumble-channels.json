@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-sdl-rumble-channels",
+  "statement": "Two normal SDL rumble calls requested separate low/high-frequency channels at 4096/65535 for 250 ms, each followed by an explicit stop. The capture contains sixteen successful 10-byte output 0x80 completions: seven left-speed=4096/right=0, seven right-speed=4096/left=0, and two zero-speed stops; type, intensity and both gains are zero. The owner felt both brief trials and requested no repeat. Eighteen input 0x44 reports appeared, nine per channel window, so one ACK per output must not be inferred. This does not measure a vibration period or prove physical actuator placement.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; physical revision not independently re-read",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attributes not re-read in each input-only reduction",
+    "transport": "usb",
+    "scope": "D9 bare metal, labelled physical sessions and known consumer operations only. No virtual Steam acceptance, universal firmware behavior, calibrated force or wireless result."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-c6-sdl-structs",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

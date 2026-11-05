@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-steam-settings",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-steam-settings.hex",
+  "sha256": "c7fff8370461718464be414547590332139805972b2ceff94fa848b2154000a4",
+  "sources": [],
+  "experiments": [
+    "steam-d9-steam-feature-capture"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-steam-setting-acceptance"
+  ]
+}

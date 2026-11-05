@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sdl-linux",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/linux/SDL_sysjoystick.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "b7d34469509a19b16d4bce197baa0418bebef6822439a4290e0c92878e151680",
+  "lineage": "libsdl-org/SDL",
+  "locator": "237-251 virtual gamepad slot; 337-348 higher-priority joystick driver check; 867-928 virtual 11ff enumeration"
+}

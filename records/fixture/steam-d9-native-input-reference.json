@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-native-input-reference",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-native-input-reference.hex",
+  "sha256": "9fb74308ccdf34884b07da5d4f8f0f53c27a7758dcff4572afcec9cf6436bea3",
+  "sources": [],
+  "experiments": [
+    "steam-d9-native-input-output-reference"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-native-digital-correspondence",
+    "steam-d9-native-touch-pressure",
+    "steam-d9-pad-stick-suppression",
+    "steam-d9-native-completion-timing",
+    "steam-d9-sdl-enabled-motion"
+  ]
+}

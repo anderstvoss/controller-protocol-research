@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-kernel-feature-capture",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "fixtures": [
+    "steam-d9-1302-attributes"
+  ],
+  "procedure": "D9 bare-metal EndeavourOS x86-64 kernel 7.3.0-1-mainline; direct wired 28de:1302 only. bcdDevice=0404 (device-version marker only); observed 0x83 firmware build timestamp=0x6ACFF323. Owner-operated bounded tshark 4.7.4 binary usbmon capture, full 65535 snaplen, started before reattachment. Steam/SDL/Dolphin closed; one replug, idle45s. Owner reported no update prompt or other issue. No feature injection, firmware update, bootloader emulation, Puck or Bluetooth investigation. Pair control submission/completion privately by bus/device/URB identifier; attribute values explicitly reviewed as model-level under owner decision 6645358188. Serial frames and unknown feature payloads withheld. Record raw hashes and sanitized relative-time sequence in evidence/steam-d9-feature-exchanges.json; raw captures stay outside all repositories. Capture drop counter not supplied; conclusions bounded to paired observed events.",
+  "semantic_outcome": "6 feature exchanges, all report 1 and requested 64 bytes. GETs complete 63 bytes; six model attributes are identical across sessions. No unmatched/pending observed control events. Kernel serial/attribute probes and85/8e SETs all complete status 0."
+}
