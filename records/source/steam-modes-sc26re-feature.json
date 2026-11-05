@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sc26re-feature",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/valve_feature.c",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "37947b98a7b04a6c18f492f9459bac883e8a6cdc341b14ac506611c38802c2d6",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "505-523 feature response; 566-600 clear/default digital mappings; 643-650 SET handling; replacement firmware only"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sdl-hints",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/include/SDL3/SDL_hints.h",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "33d92747f3ad3067dacd68f9448ad0f61623639022249bce9ad7efe344a5c30c",
+  "lineage": "libsdl-org/SDL",
+  "locator": "1899-1915 Steam HIDAPI hint documentation and global/allow hints from same pinned header"
+}

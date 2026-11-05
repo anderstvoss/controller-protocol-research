@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-inputplumber-manager",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/ShadowBlip/InputPlumber/117cb04e949f842397b96178bcc0d7fc7ba23acf/src/input/manager.rs",
+  "revision": "117cb04e949f842397b96178bcc0d7fc7ba23acf",
+  "sha256": "11c31aaab685f00b48e9fa30c025a0a16f924817ab19350db6841dd471ef9962",
+  "lineage": "ShadowBlip/InputPlumber",
+  "locator": "Steam launch ignore-devices note near Manager declaration, secondary testimony, not Steam client source"
+}

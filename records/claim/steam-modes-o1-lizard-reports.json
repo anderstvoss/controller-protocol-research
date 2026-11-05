@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o1-lizard-reports",
+  "statement": "The physically acquired wired 1302 HID descriptor declares top-level Mouse 0001:0002, Keyboard 0001:0006 and vendor ff00:0001 on one USB interface; lizard input 0x40 has five-byte mouse body, input 0x41 eight-byte keyboard body, and native report 0x42 is independent. sc26re implements report 40/41 generation; these declarations and replacement semantics do not prove when retail firmware emits or its exact mapping.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O1 source-only model cross-links physically acquired steam-s3-1302-report-shapes; original measured status remains in that claim."
+  },
+  "sources": [
+    "steam-modes-sc26re-lizard",
+    "steam-ibex-linux-driver",
+    "sc2-src-capture-notes-2026"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

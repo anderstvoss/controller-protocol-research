@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sdl-gamepad",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/SDL_gamepad.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "3cf5c5659000003e36afec693d91d6175da757e1c31518ce0afdb7d554439630",
+  "lineage": "libsdl-org/SDL",
+  "locator": "161-171 hint lists; 3309-3335 virtual 11ff allow hint and ignore/except lists"
+}

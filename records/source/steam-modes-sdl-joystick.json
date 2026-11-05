@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-sdl-joystick",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/SDL_joystick.c",
+  "revision": "6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1",
+  "sha256": "3a16148c0b01e2c80401734a7db3608cab6a4e31d55d0b6352d4b6a7b50673a2",
+  "lineage": "libsdl-org/SDL",
+  "locator": "925-946 higher-priority driver; 3507-3513 virtual 28de:11ff identity; 3736-3751 ignore integration"
+}

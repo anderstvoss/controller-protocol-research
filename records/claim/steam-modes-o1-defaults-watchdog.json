@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-o1-defaults-watchdog",
+  "statement": "Linux hid-steam lizard_mode default true is host policy; sc26re replacement initializes lizard and mappings true, default key9 and key71 true, and implements a ten-second restore timer on lizard-off writes. OpenPuck receiver has a seven-second fallback and SDL sends lizard-disable about every three seconds. Stock wired Triton firmware initial state, actual watchdog expiry, reboot persistence and USB detach semantics remain unmeasured by this source lane.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Wired 28de:1302; pinned kernel 7.3-rc1, SDL3 6defbc0, sc26re 518fa; Steam Stable 1792618285 physical observation separately scoped D9",
+    "firmware": "Replacement firmware is not retail device proof; observed physical D9 firmware build 0x6ACFF323 belongs to #101",
+    "transport": "source_only",
+    "scope": "O1 source-vs-device distinction: 3s SDL, 7s receiver, 10s replacement; none is a direct stock firmware measurement."
+  },
+  "sources": [
+    "steam-modes-sc26re-lizard",
+    "steam-modes-sc26re-registry",
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "openpuck",
+    "sc2-src-dissector"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
