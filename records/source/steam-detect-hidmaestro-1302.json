@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-hidmaestro-1302",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hifihedgehog/HIDMaestro/blob/77c4ddbad6cff428e79bc5f76d84eeef85cc8c7f/profiles/valve/steam-controller-2.json",
+  "revision": "77c4ddbad6cff428e79bc5f76d84eeef85cc8c7f",
+  "sha256": "ddb46c384cd88a99ca6b95c1d1a6792748f8a47ed648bb5b38278cdd13c9fa05",
+  "lineage": "hifihedgehog/HIDMaestro",
+  "locator": "2-14 USB/IP 28de:1302 persona; 35-165 0x83 attributes, 0xae string index handling and 0x87 echo; 172-207 interface0; 208-213 autonomous 4ms reports; self-reported Steam support, not independent verification"
+}

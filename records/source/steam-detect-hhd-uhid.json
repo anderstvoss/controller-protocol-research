@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-hhd-uhid",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hhd-dev/hhd/blob/4184f03b8df01e471a0cdbefc3a1297244bbac27/src/hhd/controller/virtual/sd/__init__.py",
+  "revision": "4184f03b8df01e471a0cdbefc3a1297244bbac27",
+  "sha256": "a3f6dbb199dace5a643126a0c41204a2f69b48a92d45d9af83b7adbd1825e9ea",
+  "lineage": "hhd-dev/hhd",
+  "locator": "94-105 UHID BUS_USB and identity options; 150-225 GET 0x83/0xae, SET success; 250-266 setting decode; Steam Deck-derived, not direct 1302"
+}

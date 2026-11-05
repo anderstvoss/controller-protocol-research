@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-b-setting50",
+  "statement": "Setting key50 is SLEEP_INACTIVITY_TIMEOUT (u16 little-endian value), with default 900 and legal 0..32767 in a published replacement firmware registry; key9 is LIZARD_MODE. The C6 codec rejects key50 atomically. This is a plausible Steam claim failure but host-origin not distinguished from kernel and no Steam-side rejection logic is public.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "B: 0x87 settings and 50 rejected in virtual codec"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-detect-sc26re-settings",
+    "steam-detect-couch-firmware"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

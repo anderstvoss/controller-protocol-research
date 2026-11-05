@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-c-prior-art",
+  "statement": "HHD uses a Deck-derived 28de:12ff USB-bus UHID persona and nine attribute records with unconditional SET success; InputPlumber uses a non-1205 compatibility PID for Steam Deck UHID and records a Steam interface-number gate for real 1205; SC Controller uses uinput Xbox/desktop identities. OpenPuck 1304 is receiver hardware and does not establish 1302 UHID acceptance. HIDMaestro declares a direct 1302 USB/IP persona with five attributes and additional string-index replies, but self-reported support does not independently prove why it was listed.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "C: compare virtual implementations without equating different transport/persona paths"
+  },
+  "sources": [
+    "steam-detect-hhd-uhid",
+    "steam-detect-hhd-output",
+    "steam-detect-inputplumber-uhid",
+    "steam-detect-sc-controller-uinput",
+    "openpuck",
+    "steam-detect-hidmaestro-1302"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
