@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-hidinput-raw-coexistence",
+  "statement": "In pinned Linux v7.3 hid-steam the physical 28de:1302 HID starts with HIDINPUT but without HIDRAW while a layered client starts with HIDRAW only. Opening the raw client removes kernel-created gamepad/sensor evdev asynchronously but does not disconnect physical HIDINPUT. The IBEX raw callback returns zero and HID core processes report fields and HIDINPUT events; therefore physical report 0x40 mouse and 0x41 keyboard can still reach the host if firmware emits them while a raw client is open. No direct wired measurement of their emission under competing clients is claimed.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Host kernel v7.3-rc1 (cee9395), direct wired USB 28de:1302 HID input mapping; Puck receiver only for separate comparison; Steam Stable 1792618285 remains unobserved this lane",
+    "firmware": "Wired retail firmware unchanged/unmeasured by follow-up; physically observed D9 attributes remain under #101 only",
+    "transport": "source_only",
+    "scope": "Host consumer code conclusion (O2/O5); conditioned on nonempty mouse/keyboard report fields and firmware emission; kernel paths do not prove retail response to setting9/71."
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-modes-followup-linux-hid-core",
+    "steam-modes-followup-linux-hid-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

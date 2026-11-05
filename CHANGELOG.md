@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Clarify wired Steam Controller raw-HID versus physical HIDINPUT mouse/keyboard coexistence, separate Puck-path restoration latency from a stock watchdog measurement, and distinguish Steam discovery, managed activation and virtual output in the D9 matrix/checklist.
+
 - Research Steam Controller 2026 lizard firmware, kernel native/raw handoff, SDL HIDAPI arbitration and Steam virtual-device routing; add evidence-labeled visibility matrix and owner-only D9 observation checklist (source-only; no retail watchdog claim).
 
 - Record D9 wired Steam Controller 2026 kernel/Steam feature exchanges, model attribute values and accepted setting writes; add opt-in model-field reduction while preserving serial/identifier withholding. Review follow-up corrects the three ED lengths, records only the safe one-byte value and serial character classes, and withholds all opaque tails.
