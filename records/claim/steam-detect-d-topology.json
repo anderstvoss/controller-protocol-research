@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-d-topology",
+  "statement": "Linux v7.3 direct 1302 hid-steam and SDL Triton direct 1302 paths do not check a physical USB parent or interface number. Public InputPlumber evidence of a Steam 1205 interface gate cannot be promoted to 1302. Valve udev grants hidraw device access; D9 Steam hidraw open means access was achieved but cannot rule out a separate USB metadata criterion. Bootloader-first is operator-reported, not a demonstrated Steam enumeration prerequisite.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "D: private Steam discovery path remains unknown"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-triton-sdl-hidraw",
+    "steam-client-udev-60-steam-input",
+    "steam-detect-inputplumber-uhid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

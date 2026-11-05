@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-e-string-echo",
+  "statement": "A source-reported 1302 USB/IP emulator serves GET_STRING_ATTRIBUTE index 0, 1, and 3 and an echo-style GET for opcode 0x87 after SET; virtual C6 currently serves index 1 and structural errors otherwise, with unknown key50 failing. Additional string requests and SET/GET sequencing are plausible Steam gates; there is no source-backed proof Steam Stable 1792618285 actually requests index3 or an 0x87 reply. Capture before deciding a compat change.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Source pins enumerated in corresponding source records; actual retail version not identified",
+    "firmware": "not measured for D9; published firmware tuples not adopted",
+    "transport": "source_only",
+    "scope": "E: isolate optional extended identity and command-ack behavior from 0x83 and setting50"
+  },
+  "sources": [
+    "steam-detect-hidmaestro-1302",
+    "steam-ibex-linux-driver",
+    "steam-detect-couch-attr-query"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

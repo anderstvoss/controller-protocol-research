@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-sc-controller-uinput",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/kozec/sc-controller/blob/2e2fe855afff693950827a45637cea3290eae782/scc/uinput.py",
+  "revision": "2e2fe855afff693950827a45637cea3290eae782",
+  "sha256": "b939225d6cf11661a402454bd1f85b644241d108dfb4a9ec315f4f658df8cf9f",
+  "lineage": "kozec/sc-controller",
+  "locator": "367-370 virtual Xbox 045e:028e and 409-411 mouse plus 531-533 keyboard 28de:1142, not a native 1302 HID persona"
+}

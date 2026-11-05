@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-couch-firmware",
+  "kind": "research_lead",
+  "url": "https://github.com/CouchTurtle/sc2-research/blob/b46d5173501ec6814cb99c5769289ffce72f488d/docs/FIRMWARE_PROTOCOL.md",
+  "revision": "b46d5173501ec6814cb99c5769289ffce72f488d",
+  "sha256": "c42c22016c46e7024ec69062977b402582ac053f74113deb384a0e1edf7f3114",
+  "lineage": "CouchTurtle/sc2-research",
+  "locator": "369-418 feature-1/2 attribute model and purported live five-tag entries; 420-459 numeric attr IDs and settings registry; 171-177 bootloader used during firmware update; independent author's notes, not new measurement"
+}

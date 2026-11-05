@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-detect-hhd-output",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/hhd-dev/hhd/blob/4184f03b8df01e471a0cdbefc3a1297244bbac27/src/hhd/plugins/outputs.py",
+  "revision": "4184f03b8df01e471a0cdbefc3a1297244bbac27",
+  "sha256": "ce1aa390cc37e2895f735ccfaa092d9d06b582b6539b1002bc3c8f4ae1d484a3",
+  "lineage": "hhd-dev/hhd",
+  "locator": "135-140: configures Hori Steam mode virtual device as 28de:12ff; distinct from genuine 1302"
+}
