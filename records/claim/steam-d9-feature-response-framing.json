@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-feature-response-framing",
+  "statement": "Across kernel-only and Steam physical sessions, feature GET requests asked for64 bytes but all observed GET completions delivered63 bytes including report ID1. Attributes have declared inner length30 and six5-byte entries; serial replies have declared inner length20 with contents withheld; ED replies have declared inner length1 with unreviewed value withheld. SET requests delivered64 bytes. Steam session C1 SETs returned-32(STALL)100 times; DC/E2 SETs and ED SET/GET completed0. See ordered sanitized exchange summaries; these are observed outcomes, not authorization to inject those commands or an explanation of their semantics.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "HW_ID0x48; retail physical revision otherwise unverified",
+    "firmware": "Observed build timestamp0x6ACFF323; bcdDevice0404 is a separate version marker",
+    "transport": "usb",
+    "scope": "Direct wired physical1302 on D9; firmware/session scoped. Not Puck/BT, universal values, actuator effects or virtual acceptance."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-kernel-feature-capture",
+    "steam-d9-steam-feature-capture"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

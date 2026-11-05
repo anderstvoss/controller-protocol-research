@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-steam-feature-capture",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "fixtures": [
+    "steam-d9-1302-attributes",
+    "steam-d9-steam-settings"
+  ],
+  "procedure": "D9 bare-metal EndeavourOS x86-64 kernel7.3.0-1-mainline; direct wired28de:1302 only. bcdDevice=0404 (device-version marker only); observed0x83 firmware build timestamp=0x6ACFF323. Owner-operated bounded tshark4.7.4 binary usbmon capture, full65535 snaplen, started before reattachment. Stable Steam1792618285 opened during90s capture, controller replugged once, owner confirmed listing, idle10s then normal Steam close; SDL/Dolphin absent. Owner reported no update prompt or other issue. No feature injection, firmware update, bootloader emulation, Puck or Bluetooth investigation. Pair control submission/completion privately by bus/device/URB identifier; attribute values explicitly reviewed as model-level under owner decision6645358188. Serial frames and unknown feature payloads withheld. Record raw hashes and sanitized relative-time sequence in evidence/steam-d9-feature-exchanges.json; raw captures stay outside all repositories. Capture drop counter not supplied; conclusions bounded to paired observed events.",
+  "semantic_outcome": "218 feature exchanges, all report1 and requested64 bytes. GETs complete63 bytes; six model attributes are identical across sessions. No unmatched/pending observed control events. Owner real-controller listing confirmed. Recorded87 writes to16 model keys complete status0; C1 SET stalls100 times with status-32. DC/E2 SET and ED SET/GET complete status0. Successful writes do not prove readback, persistence or physical effect."
+}
