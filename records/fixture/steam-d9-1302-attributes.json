@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-1302-attributes",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-1302-attributes.hex",
+  "sha256": "de9e1aee455ba1a335da3740f6aea1f3c5d066e987b89b982b0e44cf6d20c9d3",
+  "sources": [],
+  "experiments": [
+    "steam-d9-kernel-feature-capture",
+    "steam-d9-steam-feature-capture"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-1302-model-attributes",
+    "steam-d9-feature-response-framing"
+  ]
+}

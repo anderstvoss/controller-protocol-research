@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-1302-model-attributes",
+  "statement": "Direct wired controller returned exact 63-byte feature 1 response beginning 01 83 1e, followed by six one-byte-ID/little-endian-u32 attributes in order:1=0x1302,2=0,10=0x68D2F92E,4=0x6ACFF323,9=0x48,11=4000. Remaining 30 bytes are zero. Ten observed 83 GET completions across S1/S3 returned identical bytes. IDs and model-level meanings follow the pinned kernel source; firmware build matches the independent Steam controller-info log label. No unit identifiers are present in this selected frame; identity attribute 0 and radio IDs are excluded. This is observed model/version-scoped data, not universal defaults for every firmware.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "HW_ID 0x48; retail physical revision otherwise unverified",
+    "firmware": "Observed build timestamp 0x6ACFF323; bcdDevice 0404 is a separate version marker",
+    "transport": "usb",
+    "scope": "Direct wired physical 1302 on D9; firmware/session scoped. Not Puck/BT, universal values, actuator effects or virtual acceptance."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-kernel-feature-capture",
+    "steam-d9-steam-feature-capture"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
