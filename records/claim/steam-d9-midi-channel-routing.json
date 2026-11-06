@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "steam-d9-midi-channel-routing",
-  "statement": "The pinned Singer client maps separately labelled MIDI channels 0,1,2,3 to output0x83 selectors 4,3,1,0 respectively. Its same MIDI note pair produces frequency fields 226/450 for channels0/1 and 220/440 for channels2/3, all gain-20. The owner experienced the pairs on grip channels with some audibility and felt the pad-channel pairs with little audibility. Exact left/right actuator location was not independently qualified; source-named selector meanings, calibrated pitch, loudness and MIDI interface semantics are not promoted.",
+  "statement": "The pinned Singer client maps separately labelled MIDI channels 0,1,2,3 to output 0x83 selectors 4,3,1,0 respectively. Its same MIDI note pair produces frequency fields 226/450 for channels 0/1 and 220/440 for channels 2/3, all gain -20. The owner experienced the pairs on grip channels with some audibility and felt the pad-channel pairs with little audibility. Exact left/right actuator location was not independently qualified; source-named selector meanings, calibrated pitch, loudness and MIDI interface semantics are not promoted.",
   "status": "physically_observed",
   "applicability": {
     "controller": "steam-controller-2026",
