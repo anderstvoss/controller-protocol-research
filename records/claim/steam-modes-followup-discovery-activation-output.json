@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-discovery-activation-output",
+  "statement": "Steam input visibility needs separately tested USB/HID discovery, SDL/raw-open usability, Steam managed device activation, virtual-device existence/emission, and game-specific input visibility. Raw hidraw opening or 0x83/0xae GET probes cannot alone prove managed Steam controller activation; kernel and HIDAPI enumerators issue GETs too (OpenPuck observed). Proton documents mapped virtual XInput alongside direct APIs while SDL recognizes the Linux virtual Steam pad 28de:11ff only under its explicit allow hint. This staged model is a testable interpretation, not a verified proprietary Steam 1792618285 acceptance predicate.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Host kernel v7.3-rc1 (cee9395), direct wired USB 28de:1302 HID input mapping; Puck receiver only for separate comparison; Steam Stable 1792618285 remains unobserved this lane",
+    "firmware": "Wired retail firmware unchanged/unmeasured by follow-up; physically observed D9 attributes remain under #101 only",
+    "transport": "source_only",
+    "scope": "O4/O5 D9 research lead; unrelated Steam public #13394 operator report only in explanatory doc, not a new pinned claim source."
+  },
+  "sources": [
+    "openpuck",
+    "steam-ibex-linux-driver",
+    "steam-modes-proton-controller-routing",
+    "steam-modes-sdl-gamepad",
+    "steam-modes-sdl-joystick",
+    "steam-modes-inputplumber-manager"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

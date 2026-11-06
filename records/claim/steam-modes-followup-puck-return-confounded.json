@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-puck-return-confounded",
+  "statement": "CouchTurtle reports that on a physical Puck receiver path, lizard input reports 0x40/0x41 resumed within about eight seconds of terminating Steam on 2026-05-19. The published test does not rule out hid-steam client-close registration 0x85/0x8e restoring lizard; therefore it measures a post-Steam-exit restoration outcome, not an isolated autonomous retail firmware watchdog. The Puck result cannot set the default timer of the distinct wired 28de:1302 emulator. SDL 3s, OpenPuck 7s and sc26re 10s are separate host/firmware policies.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Host kernel v7.3-rc1 (cee9395), direct wired USB 28de:1302 HID input mapping; Puck receiver only for separate comparison; Steam Stable 1792618285 remains unobserved this lane",
+    "firmware": "Wired retail firmware unchanged/unmeasured by follow-up; physically observed D9 attributes remain under #101 only",
+    "transport": "source_only",
+    "scope": "O1 comparison; physically reported Puck source but no independently performed experiment in this lane; all direct-wired timing remains unknown."
+  },
+  "sources": [
+    "steam-modes-followup-couch-puck-observation",
+    "steam-ibex-linux-driver",
+    "openpuck",
+    "steam-modes-sc26re-lizard",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

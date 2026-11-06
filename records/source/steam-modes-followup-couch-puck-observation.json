@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-couch-puck-observation",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/CouchTurtle/sc2-research/b46d5173501ec6814cb99c5769289ffce72f488d/docs/HID_REPORT_FORMAT.md",
+  "revision": "b46d5173501ec6814cb99c5769289ffce72f488d",
+  "sha256": "a0281762904da58dba7df01fc5ad3005ed922fccab8f99b3369da46da431bbd1",
+  "lineage": "CouchTurtle/sc2-research",
+  "locator": "37-60 physical Puck interface; 113-123 author-reported 2026-05-19 Steam-exit lizard 0x40/0x41 at ~8s; kernel confound not excluded"
+}
