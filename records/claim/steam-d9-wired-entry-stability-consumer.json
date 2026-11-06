@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-entry-stability-consumer",
+  "statement": "Two clean physical UI controls stayed stable; two baseline virtual runs replaced the entry on opening Controller list. Baseline AE and 83 replies were byte-identical within each instance. Steam raw release/reopen and native input re-registration bracketed the failure. Two private virtual runs accepting exact named record reads with synthetic empty replies had no observed raw reopen or controller-info failure, and stable lists. Both opened Begin Test; one details transition remained visually unclear. This is consumer evidence supporting the absent-read workaround, not physical validation of synthetic replies or proof of evdev UI identity.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Direct wired 1302; physical bcdDevice 0404",
+    "firmware": "Physical feature session build attribute 0x6ACFF323; not re-read in every UI-only control",
+    "transport": "usb",
+    "scope": "Wired named-read metadata and consumer stability only; no pairing material, receiver, Bluetooth, bootloader or setting writes."
+  },
+  "sources": [
+    "steam-stability-sc26re-feature-header",
+    "steam-stability-sc26re-named-settings",
+    "steam-modes-sc26re-feature"
+  ],
+  "experiments": [
+    "steam-d9-wired-entry-stability"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

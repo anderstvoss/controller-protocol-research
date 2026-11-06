@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-stability-sc26re-feature-header",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/valve_feature.h",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "eb30c4fe5521378d4bfcde42c787dc506d7bc9ae28fa2a2876a86276f45628c2",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "55-57: named-setting read ED, stage EE and commit EF command identities; replacement firmware only"
+}
