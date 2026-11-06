@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record supervised D9 MIDI-to-haptics and PCM playback through pinned upstream players, exact padded/short framing, configuration feedback, generated waveform correspondence and qualitative audibility limits.
+
 - Record labelled D9 wired native inputs, configuration-dependent pad/stick lockout, SDL-enabled motion, Steam Ping and separate brief rumble channels; retain selected non-identifying payloads and operator caveats.
 - Research Steam Controller 2026 lizard firmware, kernel native/raw handoff, SDL HIDAPI arbitration and Steam virtual-device routing; add evidence-labeled visibility matrix and owner-only D9 observation checklist (source-only; no retail watchdog claim).
 

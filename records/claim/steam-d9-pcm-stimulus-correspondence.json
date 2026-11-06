@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-pcm-stimulus-correspondence",
+  "statement": "All meaningful physical PCM output bytes matched the generated stimulus after the pinned clients transformations. Pixel stereo8-kHz16-bit trials produced31980 and39990 bytes per internal channel after its documented first60-byte skip and final padding; iczero mono chunks produced40000 bytes per channel matching its float32 scaling by0.9. At initial peak1024 the owner felt both sides, hearing the right more clearly; at peak4096/32767, equal440-Hz500-ms left/right windows were clean and clearly heard/felt through both clients. These are byte correspondence and qualitative feedback, not calibrated acoustic frequency/loudness, a separate speaker endpoint, USB Audio Class or USB MIDI.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired28de:1302; D9 bare metal",
+    "firmware": "bcdDevice0404 device-version marker; firmware attribute not observed in this reduction",
+    "transport": "usb",
+    "scope": "2026-11-05 Pacific, bounded generated-waveform playback with pinned normal upstream clients and explicit stops; no wireless, firmware update, USB audio/MIDI interface or universal buffer behavior claim."
+  },
+  "sources": [
+    "steam-audio-player-e06e48d",
+    "steam-audio-tritonlib-d470e0d",
+    "steam-audio-iczero-client-83c46d7",
+    "sc2-src-haptics",
+    "sc2-src-dissector"
+  ],
+  "experiments": [
+    "steam-d9-pcm-playback"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
