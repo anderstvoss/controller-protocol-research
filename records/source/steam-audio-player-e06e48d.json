@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-audio-player-e06e48d",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/Pixel1011/SteamHapticsPlayer/e06e48d1570eab51a19c933dfaac1dfcb5157b9c/playPCMSrc/main.cpp",
+  "revision": "e06e48d1570eab51a19c933dfaac1dfcb5157b9c",
+  "sha256": "87aa3672a3321f5e16f66dd9c7a5e0c467417278765928b67534523fb7d40925",
+  "lineage": "steam-haptics-player-family",
+  "locator": "Wired stereo PCM client selection and playback invocation. Source-only; not a USB Audio Class interface."
+}

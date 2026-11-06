@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-pcm-stream-reference",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-pcm-stream-reference.hex",
+  "sha256": "7deb2c14901c9445f6d493d9528df9672ec4a06a508c5457c3f08264f5a8f395",
+  "sources": [],
+  "experiments": [
+    "steam-d9-pcm-playback"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-pcm-framing-feedback",
+    "steam-d9-pcm-stimulus-correspondence"
+  ]
+}

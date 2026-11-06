@@ -7,6 +7,15 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Correct D9 #106 claim prose spacing; audit #105 without changing its statements, preserving all numeric tokens and
+  evidence meaning. Missing boundaries were present in manually authored claim
+  strings, not introduced by the packet reducer, JSON serialization or Markdown
+  reflow. Audit the final serialized prose and applicability text as part of the
+  contribution checklist so exporters cannot silently preserve this authoring
+  mistake.
+
+- Record supervised D9 MIDI-to-haptics and PCM playback through pinned upstream players, exact padded/short framing, configuration feedback, generated waveform correspondence and qualitative audibility limits.
+
 - Clarify wired Steam Controller raw-HID versus physical HIDINPUT mouse/keyboard coexistence, separate Puck-path restoration latency from a stock watchdog measurement, and distinguish Steam discovery, managed activation and virtual output in the D9 matrix/checklist.
 
 - Record labelled D9 wired native inputs, configuration-dependent pad/stick lockout, SDL-enabled motion, Steam Ping and separate brief rumble channels; retain selected non-identifying payloads and operator caveats.

@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "captures": {
+    "pcm-13": {
+      "capture_sha256": "bb91e2578a2bac67d0faaae2877e20f19d1bdee233e3f95971db53aadbf94c9d",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this reduction",
+      "client_revision": "e06e48d1570eab51a19c933dfaac1dfcb5157b9c",
+      "client_binary_sha256": "f9cd0cf1241924c1b3280adf5518fc9d6b067896f358ec038b83ac5ee9b41086",
+      "stimulus_sha256": "4f1bf56adbda845c1c707b3cb91b507401b7b4ebb12e4f80858336964393ec30",
+      "output_id_wire_size_counts": {
+        "86/4": 6,
+        "88/64": 1066
+      },
+      "output_completion_status_counts": {
+        "0": 1072
+      },
+      "feedback_target_status_counts": {
+        "440102": 2,
+        "440002": 2,
+        "440402": 2,
+        "440302": 2,
+        "440120": 1,
+        "440020": 1,
+        "440410": 1,
+        "440310": 1,
+        "440108": 206,
+        "440008": 8,
+        "440004": 7,
+        "440104": 205
+      },
+      "feedback_tail_all_zero": true,
+      "unused_stereo_slot_bytes_all_zero": true,
+      "pending_observed_writes": 0,
+      "channel_bytes": [
+        31980,
+        31980
+      ],
+      "channel_data_sha256": [
+        "0d9caf1d45e31b181bc8968b2bb002cb12d90030c33c3b367e11fa60933cb0f4",
+        "b8365c52b273426dcb012c346ba34f5c0ccf09f30bf5232c32cb1b812e7a5c2c"
+      ],
+      "samples_match_documented_stimulus_transformation": true,
+      "capture_drop_count": "not supplied; do not infer zero loss"
+    },
+    "pcm-14": {
+      "capture_sha256": "d3c5ad4117fa63b04ee65a8bd9dc42a2763db7a537d9446c23cd43c85c8f177c",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this reduction",
+      "client_revision": "e06e48d1570eab51a19c933dfaac1dfcb5157b9c",
+      "client_binary_sha256": "f9cd0cf1241924c1b3280adf5518fc9d6b067896f358ec038b83ac5ee9b41086",
+      "stimulus_sha256": "9368a89e0e1aa0217139fb2264fce48eb0025ada3eb1fe6eb7789f1e8f06c315",
+      "output_id_wire_size_counts": {
+        "86/4": 6,
+        "88/64": 1333
+      },
+      "output_completion_status_counts": {
+        "0": 1339
+      },
+      "feedback_target_status_counts": {
+        "440102": 3,
+        "440002": 3,
+        "440402": 2,
+        "440302": 2,
+        "440120": 1,
+        "440020": 1,
+        "440410": 1,
+        "440310": 1,
+        "440108": 272,
+        "440008": 25,
+        "440004": 24,
+        "440104": 266
+      },
+      "feedback_tail_all_zero": true,
+      "unused_stereo_slot_bytes_all_zero": true,
+      "pending_observed_writes": 0,
+      "channel_bytes": [
+        39990,
+        39990
+      ],
+      "channel_data_sha256": [
+        "05fa0374b424a13f08a88af672772e063258bc61adc1b074b97e8f014de56262",
+        "60556f8fed3032fb1d44733066f95ca9470d82e8c10c0a05a9683a40e76417ba"
+      ],
+      "samples_match_documented_stimulus_transformation": true,
+      "capture_drop_count": "not supplied; do not infer zero loss"
+    },
+    "pcm-mono-15": {
+      "capture_sha256": "482fc4bc078749eec897764dfaa79b5b3b5c2391abb5cf962469a76d75d50a76",
+      "bcdDevice": "0404",
+      "firmware_attribute": "not observed in this reduction",
+      "client_revision": "83c46d7c5711f7497f83336526755fbf50d0c5af",
+      "client_binary_sha256": "baefe146dee70a914670f397239cb1022bef8ef80ff3e9706b60a17d8c7d5df1",
+      "stimulus_sha256": "82918a2ccdb2fea4ec2be58b71eefbd17e5d382a72f116910cf8f1193196877e",
+      "output_id_wire_size_counts": {
+        "86/4": 3,
+        "87/64": 1290,
+        "87/12": 2
+      },
+      "output_completion_status_counts": {
+        "0": 1295
+      },
+      "feedback_target_status_counts": {
+        "440120": 1,
+        "440020": 1,
+        "440008": 547,
+        "440108": 424,
+        "440004": 386,
+        "440101": 2,
+        "440104": 307,
+        "440102": 3,
+        "440002": 2,
+        "440402": 1,
+        "440302": 1
+      },
+      "feedback_tail_all_zero": true,
+      "unused_stereo_slot_bytes_all_zero": true,
+      "pending_observed_writes": 0,
+      "channel_bytes": [
+        40000,
+        40000
+      ],
+      "channel_data_sha256": [
+        "570539677e105ce0fd64223314fda28ed6c31d7ef9dbfee0015a849aa723fcf7",
+        "7f4cbd546e234824c4220bfedf46fa724f385d3cb2e85c17ba308555e29e98a1"
+      ],
+      "samples_match_documented_stimulus_transformation": true,
+      "capture_drop_count": "not supplied; do not infer zero loss"
+    }
+  },
+  "selected_packets": [
+    {
+      "fixture_ordinal": 0,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 0,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 1016
+    },
+    {
+      "fixture_ordinal": 1,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 1081,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 933
+    },
+    {
+      "fixture_ordinal": 2,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 2020,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 3,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 3006,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 4,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 4007,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 5,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 4894,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 6,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 12153,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 862
+    },
+    {
+      "fixture_ordinal": 7,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 13115,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 777
+    },
+    {
+      "fixture_ordinal": 8,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 13894,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 9,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 13937,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 963
+    },
+    {
+      "fixture_ordinal": 10,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 14938,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 11,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 15867,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 1029
+    },
+    {
+      "fixture_ordinal": 12,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 15893,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 13,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 16937,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 14,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 30938,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 15,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 31896,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 16,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 35895,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 17,
+      "capture": "pcm-13",
+      "kind": "input",
+      "t_rel_us": 37178,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 18,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 510813,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 269
+    },
+    {
+      "fixture_ordinal": 19,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 636436,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 766
+    },
+    {
+      "fixture_ordinal": 20,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 760186,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 944
+    },
+    {
+      "fixture_ordinal": 21,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 1212071,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 1099
+    },
+    {
+      "fixture_ordinal": 22,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 1337685,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 481
+    },
+    {
+      "fixture_ordinal": 23,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 1461436,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 740
+    },
+    {
+      "fixture_ordinal": 24,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 2008939,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 144
+    },
+    {
+      "fixture_ordinal": 25,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 2010821,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 233
+    },
+    {
+      "fixture_ordinal": 26,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 2036197,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 979
+    },
+    {
+      "fixture_ordinal": 27,
+      "capture": "pcm-13",
+      "kind": "output",
+      "t_rel_us": 2037212,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 952
+    },
+    {
+      "fixture_ordinal": 28,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 0,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 1187
+    },
+    {
+      "fixture_ordinal": 29,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 1259,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 844
+    },
+    {
+      "fixture_ordinal": 30,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 2105,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 31,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 3095,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 32,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 4067,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 33,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 5191,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 34,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 12235,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 960
+    },
+    {
+      "fixture_ordinal": 35,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 13255,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 821
+    },
+    {
+      "fixture_ordinal": 36,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 14081,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 37,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 14102,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 1012
+    },
+    {
+      "fixture_ordinal": 38,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 15117,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 39,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 15976,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 133
+    },
+    {
+      "fixture_ordinal": 40,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 16113,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 41,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 17072,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 42,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 31143,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 43,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 32067,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 44,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 36037,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 45,
+      "capture": "pcm-14",
+      "kind": "input",
+      "t_rel_us": 37111,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 46,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 510978,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 277
+    },
+    {
+      "fixture_ordinal": 47,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 762227,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 904
+    },
+    {
+      "fixture_ordinal": 48,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 1011602,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 691
+    },
+    {
+      "fixture_ordinal": 49,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 1512226,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 980
+    },
+    {
+      "fixture_ordinal": 50,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 1761601,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 826
+    },
+    {
+      "fixture_ordinal": 51,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 2010978,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 268
+    },
+    {
+      "fixture_ordinal": 52,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 2509726,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 543
+    },
+    {
+      "fixture_ordinal": 53,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 2511603,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 666
+    },
+    {
+      "fixture_ordinal": 54,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 2552885,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 346
+    },
+    {
+      "fixture_ordinal": 55,
+      "capture": "pcm-14",
+      "kind": "output",
+      "t_rel_us": 2553251,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 945
+    },
+    {
+      "fixture_ordinal": 56,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 0,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 1040
+    },
+    {
+      "fixture_ordinal": 57,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 2065,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 58,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 3035,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 59,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 204508,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 683
+    },
+    {
+      "fixture_ordinal": 60,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 205305,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 947
+    },
+    {
+      "fixture_ordinal": 61,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 220253,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 62,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 221204,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 63,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 225051,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 64,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 234100,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 65,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 324090,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 66,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 702325,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 836
+    },
+    {
+      "fixture_ordinal": 67,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 952321,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 978
+    },
+    {
+      "fixture_ordinal": 68,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 1202293,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 875
+    },
+    {
+      "fixture_ordinal": 69,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 1712294,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 902
+    },
+    {
+      "fixture_ordinal": 70,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 1818205,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 71,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 1988429,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 938
+    },
+    {
+      "fixture_ordinal": 72,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 2235335,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 931
+    },
+    {
+      "fixture_ordinal": 73,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 2720432,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 74,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 2756467,
+      "wire_bytes": 64,
+      "status": 0,
+      "completed_bytes": 64,
+      "completion_delta_us": 1088
+    },
+    {
+      "fixture_ordinal": 75,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 2760363,
+      "wire_bytes": 12,
+      "status": 0,
+      "completed_bytes": 12,
+      "completion_delta_us": 869
+    },
+    {
+      "fixture_ordinal": 76,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 2777282,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 1115
+    },
+    {
+      "fixture_ordinal": 77,
+      "capture": "pcm-mono-15",
+      "kind": "output",
+      "t_rel_us": 2778417,
+      "wire_bytes": 4,
+      "status": 0,
+      "completed_bytes": 4,
+      "completion_delta_us": 960
+    },
+    {
+      "fixture_ordinal": 78,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 2803250,
+      "wire_bytes": 6
+    },
+    {
+      "fixture_ordinal": 79,
+      "capture": "pcm-mono-15",
+      "kind": "input",
+      "t_rel_us": 2804247,
+      "wire_bytes": 6
+    }
+  ],
+  "stop_companion_binary_sha256": "7040c2f31bb65bdc381870bbb9e3e30b2e8deebd9a22f79254634191b7fcdfa8",
+  "owner_feedback": {
+    "pcm-13": {
+      "left": "felt, not very audible",
+      "right": "felt and audible"
+    },
+    "pcm-14": {
+      "both": "clean and clearly felt/heard, same tone"
+    },
+    "pcm-mono-15": {
+      "both": "clean and clearly felt/heard, same tone"
+    }
+  },
+  "inferences_not_made": [
+    "No USB Audio Class or USB MIDI interface",
+    "No calibrated acoustic frequency/loudness",
+    "No one-acknowledgement-per-write rule",
+    "No measured native FIFO capacity or watermarks",
+    "No semantics for output0x89 or uncaptured stream formats"
+  ]
+}

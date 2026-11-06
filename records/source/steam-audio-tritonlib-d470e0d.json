@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-audio-tritonlib-d470e0d",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/Pixel1011/TritonLib/d470e0d3bb6309505a201561278b72d1a9dc16f2/src/TritonController.cpp",
+  "revision": "d470e0d3bb6309505a201561278b72d1a9dc16f2",
+  "sha256": "720651ff6ac84cf1a4597ee206b154339e9e4354757a773626d3d0f252ca03e7",
+  "lineage": "steam-haptics-player-family",
+  "locator": "PCM setup/disable and 0x88 dual-channel packet construction/pacing; notes reuse Singer and PCM credits iczero knowledge. Source-only until physical measurements."
+}
