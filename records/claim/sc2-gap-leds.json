@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "sc2-gap-leds",
-  "statement": "LED and player-feedback identities, feature commands and actual observable output behavior for Steam Controller 2026/Puck remain unmeasured.",
+  "statement": "Wired LED brightness and RGBW override now have bounded physical evidence: key 45 brightness and C5 four-byte red/green/blue/white stimuli 25 gated by key 37=1. E9 returned four zeros at the tested values; its cause and higher-value behavior remain untested. Calibrated transfer, full ranges, reset/restart persistence, player identities, Puck/receiver and Bluetooth output control remain unmeasured.",
   "status": "unknown",
   "applicability": {
     "controller": "steam-controller-2026",
@@ -11,7 +11,10 @@
     "scope": "Evidence gap only; source and physical requirements described in docs/steam-controller-2026-research-gaps.md."
   },
   "sources": [],
-  "experiments": [],
+  "experiments": [
+    "steam-d9-wired-led-slider",
+    "steam-d9-wired-rgbw-trials"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

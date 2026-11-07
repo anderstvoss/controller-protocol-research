@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-uhid-feature-error-collapse",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/uhid.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "07eb905e156af79fec3bbda79110909114d1e288a107500f23de84a0c7f08cf7",
+  "lineage": "linux-mainline",
+  "locator": "uhid_hid_get_report and uhid_hid_set_report: nonzero userspace reply err becomes -EIO, independently of the numeric protocol error. Same behavior observed on D9 Linux 7.3 raw client; no source copied."
+}

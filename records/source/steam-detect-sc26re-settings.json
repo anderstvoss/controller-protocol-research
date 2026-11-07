@@ -6,5 +6,5 @@
   "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
   "sha256": "5951abc880d94cf8cb0baad3a1da8911e686518510e12b4c703e17d021a05183",
   "lineage": "mwdmwd/sc26re",
-  "locator": "54 lizard setting9 default1; 94-97 setting48 IMU and key50 sleep inactivity timeout default900, range0..32767; firmware replacement registry not proof stock Steam listing"
+  "locator": "54 lizard setting 9 default 1; 94-97 setting 48 IMU and key 50 sleep inactivity timeout default 900, range 0..32767; firmware replacement registry not proof stock Steam listing; 83 key 37 rgbw_led_override_enabled default 0 range 0..1; 91 key 45 led_user_brightness range 0..100, replacement registry only"
 }

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-rgbw-override",
+  "statement": "With Steam closed, four-byte C5 basis stimuli at raw value 25 produced no visible change with override disabled. Setting 37 initially read 0; command 87 accepted a write of 1, and command 89 then read 1. This enabled owner-observed red, green, blue and white for byte positions 0 through 3 respectively. Zeroing the channels produced off between enabled trials. Restoring setting 37 to 0 returned normal wired green, confirmed by the owner. All selected captured control completions had status 0. E9 declared length 4 in a 63-byte numbered reply and returned four zeros even during visibly active stimuli. Retain RGBW intent separately from override and readback. Brightness calibration and persistence are not established.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Physical direct-wired 1302; device-version marker 0404 checked before LED work",
+    "firmware": "Live build attribute not re-read in these colour sessions",
+    "transport": "usb",
+    "scope": "Owner-supervised wired RGBW basis values 25 and 0, plus mixing with white 10, with override values 0 and 1. No wireless, persistence, calibrated colour or complete-range validation."
+  },
+  "sources": [
+    "steam-detect-sc26re-settings"
+  ],
+  "experiments": [
+    "steam-d9-wired-rgbw-trials"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

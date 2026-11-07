@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-led-consumer",
+  "statement": "Two fresh private virtual instances passed exact synthetic LED and named-read roundtrips: brightness, override and RGBW intent were retained independently; repeated 63-byte replies were freshly padded; malformed requests were rejected atomically; and 77 requests and replies matched in each cycle, with zero write failures and complete owned removal. Invalid protocol replies submitted -22 internally; the Linux UHID raw client saw errno 5 for nonzero errors, as kernel source specifies. This evidence is bounded to the tested candidate and host. Actual optical behavior is established only by separate physical experiments.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Experimental wired USB-bus UHID candidate; no retail revision claim",
+    "firmware": "Synthetic compatibility state; no live firmware claim",
+    "transport": "usb",
+    "scope": "Virtual host protocol/error/lifecycle evidence. No physical colour fidelity, wireless or calibrated optics."
+  },
+  "sources": [
+    "steam-d9-uhid-feature-error-collapse"
+  ],
+  "experiments": [
+    "steam-d9-virtual-led-roundtrip"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

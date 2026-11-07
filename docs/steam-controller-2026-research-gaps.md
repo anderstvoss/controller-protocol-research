@@ -92,7 +92,7 @@ Cells denote **coverage**, not an implementation commitment. “Source map” me
 | Periodic Puck 0x7b | Not necessary for direct cable until shown otherwise | Claimed periodic by independent README; unknown cadence/meaning | E5 I:35; ID:60-61; existing L:sc2-cadence | **unsupported** beyond independent source report | Full timed receiver report capture at idle and activity | sc2-cadence |
 | Four receiver slots, bonding/pairing, churning | Out of direct wired tier | C1 describes slots on interfaces 2-5; OpenPuck HID compatibility interfaces 0-3 | C1 K:1607-1610; C2 T:442-445; C3 O:670-677 | **confirmed** source-level four-slot expectation, physical lifecycle **unknown** | Independent per-slot connect/routing/output/remove/reconnect, bond persistence, receiver-wide failure | sc2-gap-puck-slots |
 | Firmware, serial, product/board IDs | Attribute enums exist, values unknown | Bond/receiver serial behavior unknown | C1 K:262-283; E5 I:41-60 | **unsupported** physical query contents | Safe controller and receiver feature GET, product/firmware/version variants | sc2-gap-firmware-serial |
-| LEDs/player feedback | No accepted physical mapping | Slot/receiver indications unknown | E1 H:65-66; source leads in K command enum | **unsupported** | Output enumeration, per-slot LED behaviors/observed feedback, if hardware exposes them | sc2-gap-leds |
+| LEDs/player feedback | Wired brightness key45; RGBW C5 gated by key37, qualitative physical response | Slot/receiver indications unknown | steam-d9-wired-led-brightness; E1 H:65-66 | **partial physical evidence** | Calibrated response, full ranges, persistence and per-slot behavior remain unmeasured | sc2-gap-leds |
 | Audio or haptic-streamed audio | Independent readme describes 8 kHz streaming experiment | Receiver audio path unverified | E5 I:5-9, 57-118; IH:36-70 | **unsupported** actual host output and audio semantics | Privacy-reviewed physical host→device write capture, audio marker and haptic measurement; no firmware redistribution | sc2-gap-audio; sc2-gap-host-output-capture |
 | BLE identity 28de:1303 (facts only) | C1 matches IBEX BLE ID | Not a Puck USB mode | C1 K:2754-2760; C2 T structs:556 | **confirmed** source ID, **missing** measured BLE behavior | Exact device enumeration/descriptor trace if Bluetooth project #164 elects to study it; no radio design here | sc2-gap-ble-identity |
 | Internal Nereid 28de:1305 (facts only) | Not direct wired | C1 lists separate Steam Machine internal receiver ID, not physical Puck 1304 | C1 K:2766-2772; C2 T:121-125 | **confirmed** source ID only | Separate receiver capture if later in scope; no Puck equivalence claim | steam-ibex-linux-ids |
@@ -218,3 +218,61 @@ The notes explicitly distinguish **capture-recorded** (transcribed input window 
 **Gaps narrowed:** physical identity/report-mix observation and lizard coexistence now have operator-note provenance, rather than merely third-party source inference; `0x79` lifecycle values and Ping feedback are recorded; descriptor length and output shapes are reported historically. The corresponding `sc2-gap-*` claims remain open because no physical fixture exists in this corpus. No source-only consumer claim is promoted to physical validation. The schema's `physically_observed` status requires an experiment linked to a real physical fixture; no schema-supported count-summary fixture format exists, so these operator-note claims remain `source_supported` or `inferred` and the three `controlled_physical` experiments have empty fixture arrays. The status is intentionally conservative; a schema/fixture-policy decision is needed before any physical-tier promotion.
 
 **Outstanding (notes §14):** isolated field-map/pressure/IMU/opaque-extension correlation; `0x43/0x44/0x7b` contents; physical `0x45` mode; timestamped Steam liveness; host-to-device haptics/LED/feature exchange and acknowledgements; complete Puck USB topology and independent four-slot routing; Bluetooth acquisition/pairing; actual Linux/Steam/SDL recognition and reverse effects. The historical encoder's body offsets mostly match kernel/SDL parsers, but trigger and pad-pressure signedness, Menu/View mask bits and final eight bytes differ. These are *inferred historical code-vs-source cross-checks*, not captured mappings.
+
+## D9 wired brightness follow-up
+
+The owner changed only Steam's LED Brightness slider during passive capture.
+Successful command `87` setting `45` writes track the displayed traversal, with
+visible dimming near 24% and brightening toward 75%. Repeated nearby writes
+follow slider actions; the final observed value is 98 after a 100 write. Do not
+claim exact UI synchronization, physical readback or persistence.
+
+The physical meaningful-prefix fixture and relative projection are linked by
+`steam-d9-wired-led-brightness`. This supports exposing the last accepted raw
+brightness intent on a virtual controller. A subsequent explicitly owner-authorized direct colour trial is recorded below; wireless operation remains a separate gap.
+
+### Direct RGBW override (Steam closed)
+
+The owner authorized direct wired colour trials with Steam closed. Four-byte
+C5 basis stimuli, one component at raw value 25 and others at 0, produced no
+visible change with override disabled. Setting 37 read 0. Repeating the same
+payloads with setting 37 set to 1, verified through command 89, produced red,
+green, blue and white for byte positions 0 through 3. Zero colour gave off
+between trials. Restoring the original override value 0 returned normal wired
+green, confirmed by the owner. No persistent commit or firmware action was used.
+
+All selected transfers completed with status 0. E9 returned four zero bytes
+throughout the basis and mixing sessions, including visibly active components
+at raw 25 and white at raw 10. It is not faithful accepted-intent readback at
+these tested values. The cause and higher-value behavior remain untested. Keep
+raw RGBW intent, override intent and wire readback separate.
+
+See `steam-d9-wired-rgbw-override`,
+`steam-d9-led-colour-readback-quantization` and
+[`steam-d9-rgbw-colour.json`](../evidence/steam-d9-rgbw-colour.json).
+
+### Mixing and virtual roundtrip limits
+
+Pairwise raw-25 mixtures produced owner-described orange-yellow, blue-biased
+cyan and light pink/purple. Adding white 10 produced lighter or less saturated
+descriptions. These are qualitative observations, not sRGB coordinates or equal
+optical powers. `steam-d9-wired-rgbw-mixing-observation` records those limits.
+
+Four logical channels are established. Physical LED package count and die
+allocation remain unclear. The owner reads the silkscreen as central LED1
+flanked by D20 and D4; markings and package appearance do not establish which
+components emit light. The open-source board description models four PWM
+channels but does not resolve emitter packaging. Calibration, complete ranges,
+reset/restart persistence and wireless control remain unverified.
+
+Two fresh owned virtual candidates each matched 77 feature requests with 77
+submitted replies. Brightness, override, four basis and six mixed raw-intent
+checks, repeated exact getters, atomic invalid requests and double-close/removal
+passed, with zero unmatched requests or write failures. See
+`steam-d9-virtual-led-consumer` and
+[`steam-d9-virtual-led-roundtrip.json`](../evidence/steam-d9-virtual-led-roundtrip.json).
+This is consumer evidence, separate from physical optical observations.
+
+Linux UHID maps every nonzero feature reply error to raw-client EIO. The runs
+verified internal Invalid acknowledgements (-22) and client errno 5 separately;
+they do not establish physical USB STALL propagation or change a shared API.

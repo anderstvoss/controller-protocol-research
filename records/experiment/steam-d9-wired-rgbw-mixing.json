@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-rgbw-mixing",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [
+    "steam-d9-rgbw-mix-prefix",
+    "steam-d9-led-readback-prefix"
+  ],
+  "procedure": "The direct-wired setup and guarded non-root client were the same as steam-d9-wired-rgbw-trials, with Steam closed. The owner ran a bounded passive 300-second full-snaplen usbmon capture. Setting 37 was read as 0, set to 1 and verified as 1. Six five-second C5 windows, each with eight-second preparation and zero colour between, used raw RGBW tuples (25,25,0,0), (25,25,0,10), (0,25,25,0), (0,25,25,10), (25,0,25,0) and (25,0,25,10). Owner descriptions were recorded without assumed sRGB targets. Zero colour was restored, key 37 was set back to 0 and read as 0, then the handle was closed. No other controller client, persistent commit or firmware action was used. Relative projections are in evidence/steam-d9-rgbw-colour.json.",
+  "semantic_outcome": "The owner described orange-tinted yellow, a lighter/tan variant with white 10, blue-tinted cyan, light sky blue with white 10, light pink/purple, then a lighter shade with white 10. All selected controls completed with status 0. E9 returned four zeros for every tested mixture. The observed hue changes do not establish calibrated colour coordinates, spectral purity or physical emitter-package arrangement."
+}
