@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-named-setting-framing",
+  "statement": "Physical Steam ED reads use NUL-terminated paths user/wireless_transport, esb/bond and esb/bond_2 with SET declared lengths 24, 9 and 11. GET replies all complete 63 bytes including report ID, status 0, with declared inner lengths 1, 24 and 0. The transport scalar is zero. The entire populated primary record and every opaque reserved tail are withheld. An absent secondary record is physically observed, but both records being absent is synthetic virtual policy, not a captured physical state.",
+  "status": "physically_observed",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Direct wired 1302; physical bcdDevice 0404",
+    "firmware": "Physical feature session build attribute 0x6ACFF323; not re-read in every UI-only control",
+    "transport": "usb",
+    "scope": "Wired named-read metadata and consumer stability only; no pairing material, receiver, Bluetooth, bootloader or setting writes."
+  },
+  "sources": [
+    "steam-stability-sc26re-feature-header",
+    "steam-stability-sc26re-named-settings",
+    "steam-modes-sc26re-feature"
+  ],
+  "experiments": [
+    "steam-d9-named-setting-review"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-named-read-prefix",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-named-read-prefix.hex",
+  "sha256": "4cd7851c131af5fa2e88125e1690e7cfb3a28c8c9e8558f6b1713c546f9b71d3",
+  "sources": [],
+  "experiments": [
+    "steam-d9-named-setting-review"
+  ],
+  "parent": null,
+  "transform": "Physical ED transport reply meaningful prefix only; complete wire length was 63. Opaque reserved tail and both bond payloads excluded, not replaced with fabricated physical bytes. Named path/length metadata lives in the paired capture projection.",
+  "claims": [
+    "steam-d9-named-setting-framing"
+  ]
+}
