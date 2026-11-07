@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-rgbw-red-prefix",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-rgbw-red-prefix.hex",
+  "sha256": "80140eab787425f72dc67bda074d8e8c29e51a7a33eec8f174f4ff4285467c85",
+  "sources": [],
+  "experiments": [
+    "steam-d9-wired-rgbw-trials"
+  ],
+  "parent": null,
+  "transform": "Meaningful prefix of a physical 64-byte numbered feature SET: C5 declared length 4, first RGBW channel 25, others 0. Synthetic stimulus sent to physical device; observation/transport evidence is physical, not a claim the bytes originated from the device. Padding omitted; paired transport/status projection in evidence/steam-d9-rgbw-colour.json.",
+  "claims": [
+    "steam-d9-wired-rgbw-override"
+  ]
+}

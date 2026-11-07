@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-led-slider",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-detect-sc26re-settings"
+  ],
+  "fixtures": [
+    "steam-d9-led-brightness-prefix"
+  ],
+  "procedure": "Owner-operated passive 180-second full-snaplen usbmon capture of real wired 1302 on D9 x86-64 kernel 7.3.0-1-mainline, Stable Steam 1792618285. Device version 0404 verified immediately before capture; firmware build attribute not re-read. Owner used Steam LED Settings slider: initial displayed 100%, lowered through 24 to 25%, raised through about 82 then 75%, restored toward 100%. Relative owner intent/observation markers include switching/typing delay. No agent feature injection or firmware action. Device detached before reduction; select the unique 64-byte numbered feature SET 87 key 45 target signature, tied to the pre-capture identity check; no descriptor attachment event is asserted. Capture and complete private output remain outside the repo.",
+  "semantic_outcome": "Observed successful command 87 setting 45 writes follow the owner brightness changes. Owner saw dimming near 24%, brightening toward 75%, and subtle change near full brightness. Values reach 100 but later repeated writes end at 98, so no exact final physical brightness or persistence claim. This establishes retained raw brightness intent as representable output, not RGB colour control."
+}

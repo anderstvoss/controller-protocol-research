@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-led-colour-readback-quantization",
+  "statement": "E9 returned four zero bytes during visibly active wired RGBW stimuli: the basis trials used raw channel value 25, and the mixing trials also used white value 10. It is therefore not faithful readback of accepted RGBW intent at these tested values. The cause and behavior at higher values are untested; no conversion rule or higher-range prediction is established.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Physical direct-wired 1302; device-version marker 0404 checked before LED work",
+    "firmware": "Live build attribute not re-read in these colour sessions",
+    "transport": "usb",
+    "scope": "Owner-supervised wired RGBW basis values 25 and 0, plus mixing with white 10, with override values 0 and 1. No wireless, persistence, calibrated colour or complete-range validation."
+  },
+  "sources": [],
+  "experiments": [
+    "steam-d9-wired-rgbw-trials",
+    "steam-d9-wired-rgbw-mixing"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

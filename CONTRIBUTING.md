@@ -54,6 +54,10 @@ sanitized fixture:
 4. Do not commit upstream source code, vendor documents or firmware. Cite them
    in `records/source/` by URL, revision and hash instead.
 
+Vendor-firmware static analysis is not accepted in this public corpus. Keep it
+in the owner-designated private notes repository after verifying its visibility.
+Even private notes must contain neither firmware bytes nor disassembly listings.
+
 ## Licensing
 
 By contributing, you agree that data you add under `records/`, `fixtures/`,

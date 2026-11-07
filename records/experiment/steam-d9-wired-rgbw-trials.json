@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-rgbw-trials",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-detect-sc26re-settings"
+  ],
+  "fixtures": [
+    "steam-d9-rgbw-red-prefix",
+    "steam-d9-led-readback-prefix"
+  ],
+  "procedure": "The owner explicitly expanded the passive LED investigation to direct wired colour testing without Steam. Only the physical wired 1302 was connected; Steam, Dolphin, System Settings and SDL were closed. The non-root client verified physical USB ancestry and absence of raw holders before opening. The owner ran bounded full-snaplen usbmon captures. An initial E9 read returned a 63-byte numbered reply with declared length 4 and four zeros. Four supervised C5 basis stimuli used one component at raw value 25 and the others at 0 for five seconds, restoring zeros after each trial. The owner reported no visible changes with override disabled. Command 89 read setting 37 as 0. The same payloads and timing were repeated after command 87 set key 37 to 1, verified by command 89. The owner saw red, green, blue and white respectively, with off between trials. Finally, zero colour was sent, the original override value 0 was restored and verified, and the handle was closed. No persistent commit, firmware action, receiver or Bluetooth command was used. Live firmware attributes were not re-read in these sessions.",
+  "semantic_outcome": "C5 four-byte RGBW controls visibly worked when setting 37 override was enabled. All selected captured SET and GET completions had status 0. E9 returned four zeros during visibly active raw-25 channel stimuli, so it is not faithful accepted-intent readback at these tested values. The cause and higher-value behavior remain untested. Capture counts, relative timing, stimuli and sanitized observations are in evidence/steam-d9-rgbw-colour.json. No calibrated luminance, colourimetry, full-range or restart-persistence claim is made."
+}

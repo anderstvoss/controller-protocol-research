@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-rgbw-pwm-board",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/boards/valve/steam_controller_ibex/steam_controller_ibex_nrf52833.dts",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "91dc48bb67672a70e3faa7e1690789b333c5b33f3cd0aeff818886b5c0468ff5",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "203-225: replacement-firmware board description models four PWM 1 channels, red/green/blue/white at 20 kHz. Establishes source modeling only, not LED package count, optical spectra or independent physical pin attestation."
+}

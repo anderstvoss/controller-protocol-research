@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-led-readback-prefix",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-led-readback-prefix.hex",
+  "sha256": "0cdccf5c21adfac3332dba0fd7735d1881dfc772db2a9648e820091d43d8e614",
+  "sources": [],
+  "experiments": [
+    "steam-d9-wired-rgbw-trials",
+    "steam-d9-wired-rgbw-mixing"
+  ],
+  "parent": null,
+  "transform": "Meaningful seven-byte prefix of observed physical numbered E9 GET replies: report ID 1, command E9, declared length 4, four zero values. The measured transfer is 63 bytes; unused tail omitted rather than invented. Selected completed transfers at the tested raw values are projected in evidence/steam-d9-rgbw-colour.json.",
+  "claims": [
+    "steam-d9-led-colour-readback-quantization"
+  ]
+}

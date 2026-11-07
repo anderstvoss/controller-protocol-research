@@ -1,0 +1,1260 @@
+{
+  "schema_version": 1,
+  "scope": "Experimental private virtualgamepad compatibility candidate based on main baf9d4e; typed named reads and separately retained brightness, override and RGBW intent. Only observed zero E9 replies at the tested raw values are recorded. Public implementation was not merged at experiment time; trace instrumentation remains private.",
+  "clock": "microseconds relative to each instance origin; process identities, paths and absolute clocks omitted",
+  "cases": [
+    {
+      "cycle": 1,
+      "binary_sha256": "1252f4286b41f78ef79e8bcbcf1f4195fe5a2d45cf5bdb73b38fef5fa2a230f2",
+      "guard": "exact child-process synthetic phys and instance; HID identity and virtual UHID ancestry rechecked on opened raw node; physical Valve USB absent, competing clients absent",
+      "feature_requests": 77,
+      "feature_replies": 77,
+      "unmatched_requests": 0,
+      "all_replies_submitted": true,
+      "client_events": [
+        {
+          "t_us": 110310,
+          "kind": "opened_owned_virtual_only"
+        },
+        {
+          "t_us": 112931,
+          "kind": "retained_checked",
+          "expected": {
+            "led_brightness": "None",
+            "led_override": "None",
+            "led_rgbw": "None"
+          }
+        },
+        {
+          "t_us": 113482,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            45,
+            75,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 115813,
+          "kind": "retained_checked",
+          "expected": {
+            "led_brightness": "Some(75)"
+          }
+        },
+        {
+          "t_us": 115960,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 117095,
+          "kind": "set",
+          "command": 137,
+          "values": [
+            37
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 118515,
+          "kind": "retained_checked",
+          "expected": {
+            "led_override": "Some(true)"
+          }
+        },
+        {
+          "t_us": 119590,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 119724,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 0, 0])"
+          }
+        },
+        {
+          "t_us": 120827,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 121955,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 123068,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 124206,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 125359,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 127618,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 0, 0])"
+          }
+        },
+        {
+          "t_us": 127781,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 128889,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 130019,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 131160,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 132313,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 132411,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 25, 0])"
+          }
+        },
+        {
+          "t_us": 133580,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 134694,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 135802,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 136850,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 138087,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            0,
+            25
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 140374,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 0, 25])"
+          }
+        },
+        {
+          "t_us": 140504,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 141619,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 142771,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 143867,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 145039,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            25,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 145182,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 25, 0, 0])"
+          }
+        },
+        {
+          "t_us": 146300,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 147463,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 148647,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 149785,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 150914,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            25,
+            0,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 153253,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 25, 0, 10])"
+          }
+        },
+        {
+          "t_us": 154323,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 155502,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 156619,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 157726,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 158864,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 161126,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 25, 0])"
+          }
+        },
+        {
+          "t_us": 161251,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 162422,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 163552,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 164692,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 165795,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            25,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 168135,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 25, 10])"
+          }
+        },
+        {
+          "t_us": 168375,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 169477,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 170642,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 171747,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 172896,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 175177,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 0])"
+          }
+        },
+        {
+          "t_us": 175302,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 176449,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 177617,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 178745,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 179963,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            25,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 180118,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 10])"
+          }
+        },
+        {
+          "t_us": 181210,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 182357,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 183507,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 184657,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 185756,
+          "kind": "set_error",
+          "command": 197,
+          "expected_errno": 5
+        },
+        {
+          "t_us": 188062,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 10])"
+          }
+        },
+        {
+          "t_us": 189283,
+          "kind": "set_error",
+          "command": 135,
+          "expected_errno": 5
+        },
+        {
+          "t_us": 191473,
+          "kind": "retained_checked",
+          "expected": {
+            "led_override": "Some(true)"
+          }
+        },
+        {
+          "t_us": 191644,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            117,
+            115,
+            101,
+            114,
+            47,
+            119,
+            105,
+            114,
+            101,
+            108,
+            101,
+            115,
+            115,
+            95,
+            116,
+            114,
+            97,
+            110,
+            115,
+            112,
+            111,
+            114,
+            116,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 192803,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 193882,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 195028,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 196206,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            101,
+            115,
+            98,
+            47,
+            98,
+            111,
+            110,
+            100,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 197337,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 198461,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 199596,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 200746,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            101,
+            115,
+            98,
+            47,
+            98,
+            111,
+            110,
+            100,
+            95,
+            50,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 201828,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 202936,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 204050,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 205196,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 206317,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 208577,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 0, 0])",
+            "led_override": "Some(false)"
+          }
+        },
+        {
+          "t_us": 208590,
+          "kind": "client_closed"
+        },
+        {
+          "t_us": 322716,
+          "kind": "probe_exited",
+          "code": 0
+        },
+        {
+          "t_us": 324405,
+          "kind": "owned_nodes_removed"
+        }
+      ],
+      "write_failures": 0,
+      "owned_hid_and_raw_removed": true,
+      "probe_exit_code": 0
+    },
+    {
+      "cycle": 2,
+      "binary_sha256": "1252f4286b41f78ef79e8bcbcf1f4195fe5a2d45cf5bdb73b38fef5fa2a230f2",
+      "guard": "exact child-process synthetic phys and instance; HID identity and virtual UHID ancestry rechecked on opened raw node; physical Valve USB absent, competing clients absent",
+      "feature_requests": 77,
+      "feature_replies": 77,
+      "unmatched_requests": 0,
+      "all_replies_submitted": true,
+      "client_events": [
+        {
+          "t_us": 86781,
+          "kind": "opened_owned_virtual_only"
+        },
+        {
+          "t_us": 88986,
+          "kind": "retained_checked",
+          "expected": {
+            "led_brightness": "None",
+            "led_override": "None",
+            "led_rgbw": "None"
+          }
+        },
+        {
+          "t_us": 89140,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            45,
+            75,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 91340,
+          "kind": "retained_checked",
+          "expected": {
+            "led_brightness": "Some(75)"
+          }
+        },
+        {
+          "t_us": 91500,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 92630,
+          "kind": "set",
+          "command": 137,
+          "values": [
+            37
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 93837,
+          "kind": "retained_checked",
+          "expected": {
+            "led_override": "Some(true)"
+          }
+        },
+        {
+          "t_us": 94934,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 95070,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 0, 0])"
+          }
+        },
+        {
+          "t_us": 96187,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 97453,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 98609,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 99832,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 100983,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 101120,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 0, 0])"
+          }
+        },
+        {
+          "t_us": 102214,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 103337,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 104507,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 105703,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 107291,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 107448,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 25, 0])"
+          }
+        },
+        {
+          "t_us": 108606,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 109748,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 110845,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 111976,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 113079,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            0,
+            25
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 115320,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 0, 25])"
+          }
+        },
+        {
+          "t_us": 115417,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 116536,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 117651,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 118789,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 119892,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            25,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 122120,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 25, 0, 0])"
+          }
+        },
+        {
+          "t_us": 123338,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 124435,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 125575,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 126730,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 127846,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            25,
+            0,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 130064,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 25, 0, 10])"
+          }
+        },
+        {
+          "t_us": 130141,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 131264,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 132398,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 133530,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 134689,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 136938,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 25, 0])"
+          }
+        },
+        {
+          "t_us": 138154,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 139260,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 140403,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 141550,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 142685,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            25,
+            25,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 144952,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 25, 25, 10])"
+          }
+        },
+        {
+          "t_us": 146120,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 147271,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 148417,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 149583,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 150745,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            25,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 152975,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 0])"
+          }
+        },
+        {
+          "t_us": 153055,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 154182,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 155319,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 156462,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 157612,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            25,
+            0,
+            25,
+            10
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 159889,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 10])"
+          }
+        },
+        {
+          "t_us": 160998,
+          "kind": "set",
+          "command": 233,
+          "values": [],
+          "result": 64
+        },
+        {
+          "t_us": 162117,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 163257,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 164365,
+          "kind": "exact_lossy_colour_get"
+        },
+        {
+          "t_us": 165570,
+          "kind": "set_error",
+          "command": 197,
+          "expected_errno": 5
+        },
+        {
+          "t_us": 165699,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([25, 0, 25, 10])"
+          }
+        },
+        {
+          "t_us": 166857,
+          "kind": "set_error",
+          "command": 135,
+          "expected_errno": 5
+        },
+        {
+          "t_us": 166956,
+          "kind": "retained_checked",
+          "expected": {
+            "led_override": "Some(true)"
+          }
+        },
+        {
+          "t_us": 168082,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            117,
+            115,
+            101,
+            114,
+            47,
+            119,
+            105,
+            114,
+            101,
+            108,
+            101,
+            115,
+            115,
+            95,
+            116,
+            114,
+            97,
+            110,
+            115,
+            112,
+            111,
+            114,
+            116,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 169208,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 170328,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 171438,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 172578,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            101,
+            115,
+            98,
+            47,
+            98,
+            111,
+            110,
+            100,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 173674,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 174841,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 175992,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 177170,
+          "kind": "set",
+          "command": 237,
+          "values": [
+            101,
+            115,
+            98,
+            47,
+            98,
+            111,
+            110,
+            100,
+            95,
+            50,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 178269,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 179354,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 180497,
+          "kind": "exact_named_get"
+        },
+        {
+          "t_us": 181637,
+          "kind": "set",
+          "command": 197,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 182761,
+          "kind": "set",
+          "command": 135,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "result": 64
+        },
+        {
+          "t_us": 184974,
+          "kind": "retained_checked",
+          "expected": {
+            "led_rgbw": "Some([0, 0, 0, 0])",
+            "led_override": "Some(false)"
+          }
+        },
+        {
+          "t_us": 184992,
+          "kind": "client_closed"
+        },
+        {
+          "t_us": 298970,
+          "kind": "probe_exited",
+          "code": 0
+        },
+        {
+          "t_us": 300640,
+          "kind": "owned_nodes_removed"
+        }
+      ],
+      "write_failures": 0,
+      "owned_hid_and_raw_removed": true,
+      "probe_exit_code": 0
+    }
+  ],
+  "qualification": "Two earlier helper attempts are excluded from this successful pair: first stopped before raw open due to a too-specific namespace guard; second exercised positive paths but stopped on an incorrect client-errno expectation. Exact kernel -EIO translation was then source-checked; final pair asserts both internal -22 and client errno 5. Each excluded probe also closed and removed its device. No production behavior was changed to satisfy this client expectation."
+}
