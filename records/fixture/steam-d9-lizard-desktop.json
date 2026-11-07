@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-lizard-desktop",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-lizard-desktop.hex",
+  "sha256": "58d526a6e8fb1279ca8128a48991543d18b69e798fb077ffddf9ca183a7f0f8d",
+  "sources": [],
+  "experiments": [
+    "steam-d9-lizard-mapping"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-lizard-control-mapping",
+    "steam-d9-lizard-sdl-transition",
+    "steam-d9-lizard-relative-scaling"
+  ]
+}

@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record owner-guided wired lizard desktop mappings, reconnect setup, normal SDL transitions and bounded pad scaling.
+
 - Correct D9 #106 claim prose spacing; audit #105 without changing its statements, preserving all numeric tokens and
   evidence meaning. Missing boundaries were present in manually authored claim
   strings, not introduced by the packet reducer, JSON serialization or Markdown

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-lizard-relative-scaling",
+  "statement": "Slow interior pad movements with settled holds support approximate compatibility scales of 128 native coordinate units per right-pad mouse count and 1024 per left-pad scroll count. Right-pad Y and left-pad vertical scroll reverse the native positive-Y sign; horizontal signs follow native positive X. For example right-pad vertical travel of about 13842 units yielded -108 counts; left-pad horizontal travel of about 17054 units yielded +16 counts and vertical travel about 18871 units yielded -19. Uneven movement, contact settling, report phase and rounding prevent an exact firmware transfer-function claim. The first right-pad horizontal center window contained early movement and is not stationary evidence. Fractional accumulation at these scales is a virtual compatibility model, not replay of an established retail filter.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Physical direct-wired 1302; hid-steam bound",
+    "firmware": "Not independently re-read in each action session; no firmware update performed",
+    "transport": "usb",
+    "scope": "Bounded owner-guided windows and normal SDL open/close only; no wireless, watchdog or calibrated transfer function."
+  },
+  "sources": [],
+  "experiments": [
+    "steam-d9-lizard-mapping"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
