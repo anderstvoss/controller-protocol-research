@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-lizard-mode-writes",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-lizard-mode-writes.hex",
+  "sha256": "7da146048147fb1f3e800edd7068e087643c3e2468d774fc782e08fd5be30ab5",
+  "sources": [],
+  "experiments": [
+    "steam-d9-lizard-mapping"
+  ],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "steam-d9-lizard-sdl-transition"
+  ]
+}

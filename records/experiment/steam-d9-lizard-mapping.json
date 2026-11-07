@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-lizard-mapping",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-closeout-sdl-triton-e0232c5"
+  ],
+  "fixtures": [
+    "steam-d9-lizard-desktop",
+    "steam-d9-lizard-mode-writes"
+  ],
+  "procedure": "D9 EndeavourOS x86-64 kernel 7.3.0-1-mainline, direct-wired 28de:1302, hid-steam bound and lizard_mode parameter enabled. Owner-operated bounded full-snaplen passive usbmon captures; no agent physical feature writes. Steam, Dolphin, System Settings and SDL consumers closed except a normal SDL 3.5.0 gamepad open/update/close interval using source e0232c5. Individually guided controls, slow pad/trigger movements and a separate reconnect-only window. Firmware build was not individually re-read per action session; no firmware update occurred. Retain selected whole mouse 0x40/6-byte and keyboard 0x41/9-byte input reports with known fields only. Raw captures remain private; transport addresses, absolute times, string descriptors and unknown replies are omitted. See evidence/steam-d9-lizard-mapping.json and docs/steam-d9-lizard-mapping.md for action-window counts and caveats.",
+  "semantic_outcome": "Observed desktop mapping and normal SDL mouse suppression/restoration, including retained keyboard mapping during setting-9 mouse disable. Native button/trigger correspondence avoids inventing an analogue click threshold. Pad scale is an approximate observed compatibility fit, not exact firmware filtering, rounding or timing. No watchdog measured."
+}
