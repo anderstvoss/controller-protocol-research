@@ -30,7 +30,8 @@ record link to a specific snapshot; otherwise it uses local Git HEAD.
 The records are linked individually, and the generator retains the original
 statement, status, role, revision, firmware, transport, scope, conflict and
 supersession references. Source pages preserve the URL, pinned revision,
-SHA-256, lineage and locator. Experiment pages preserve the procedure, run
+SHA-256, lineage and locator. Existing retained evidence artifacts are linked
+without new interpretation. Experiment pages preserve the procedure, run
 status, semantic outcome and fixture links. Fixture pages preserve their kind,
 format, hash, ancestry and transformation descriptions. Existing narrative
 documents are **linked, never consolidated by rewriting**.
