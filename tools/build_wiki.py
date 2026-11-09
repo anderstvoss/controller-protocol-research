@@ -168,7 +168,8 @@ class Writer:
                   "- [Experiments](experiments/index.md) — procedure, outcome and associated fixtures\n"
                   "- [Fixtures](fixtures/index.md) — reviewed payload metadata and transformation lineage\n"
                   "- [Report shapes](reports.md) — measured or source-scoped report descriptions\n"
-                  "- [Research documents](research-documents.md) — existing narrative investigations, unchanged\n"\n                  "- [Retained artifacts](evidence-artifacts.md) — existing evidence/ files, linked without reinterpretation\n\n"
+                  "- [Research documents](research-documents.md) — existing narrative investigations, unchanged\n"
+                  "- [Retained artifacts](evidence-artifacts.md) — existing evidence/ files, linked without reinterpretation\n\n"
                   "A physically observed host/consumer path is not proof of physical device fidelity. "
                   "The original records retain their precise status and transport applicability.\n")
         claim_index = [
