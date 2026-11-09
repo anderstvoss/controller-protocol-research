@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-retail-physical-unknown",
+  "statement": "No controlled physical run establishes retail descriptor bytes, USB endpoint numbers and polling behavior, input calibration and control parity, rumble strength, LED effect or identity-value semantics for the available Switch 2 GameCube controller.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Retail USB and control behavior, capture pending"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

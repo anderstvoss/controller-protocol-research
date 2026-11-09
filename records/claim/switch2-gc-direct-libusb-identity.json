@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-direct-libusb-identity",
+  "statement": "SDL explicitly lists Nintendo Switch 2 GameCube 057e:2073 as requiring its libusb backend; Linux registers the same model in dedicated vendor-class USB and HID Nintendo paths. This is source-only consumer matching, not a measured physical descriptor.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer native USB identity/discovery"
+  },
+  "sources": [
+    "switch2-gc-sdl-libusb",
+    "switch2-gc-linux-usb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-trigger-zero-calibration",
+  "statement": "SDL and Linux separately read GameCube trigger calibration values from flash, then scale analog L/R independently of their digital click events. Consumer calibration fallback and actual retail neutral values remain unmeasured.",
+  "status": "independently_corroborated",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Analog trigger baseline and conversion"
+  },
+  "sources": [
+    "sdl-switch2",
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

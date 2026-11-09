@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Register the Switch 2 GameCube USB controller with source-only SDL/Linux protocol records and a not-run physical capture plan.
+
 - Record owner-guided wired lizard desktop mappings, reconnect setup, normal SDL transitions and bounded pad scaling.
 
 - Correct D9 #106 claim prose spacing; audit #105 without changing its statements, preserving all numeric tokens and

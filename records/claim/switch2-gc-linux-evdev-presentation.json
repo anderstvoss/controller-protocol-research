@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-linux-evdev-presentation",
+  "statement": "The pinned Linux Nintendo GC path exposes four stick axes at signed 16-bit domain, analog triggers ABS_Z and ABS_RZ over 0..4095, two D-pad hat axes, separate trigger buttons, FF_RUMBLE and optional player LEDs. This describes host representation only.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-gamecube",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel consumer evdev axes, buttons and output"
+  },
+  "sources": [
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

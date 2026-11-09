@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-gc-linux-usb",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/9417132df63e5cd7230433af05198538e759f3ae/drivers/hid/hid-nintendo-switch2-usb.c",
+  "revision": "9417132df63e5cd7230433af05198538e759f3ae",
+  "sha256": "c0bed151d80471552ec7cb0a0254a4084e00ec2cf99fde5da88aa5214cde2bb4",
+  "lineage": "Linux kernel",
+  "locator": "17-20 URB buffers; 155-205 8-byte command header and USB bulk output; 288-338 response queue; 340-445 USB bulk endpoint discovery and interface binding; 471-489 USB GC controller match"
+}
