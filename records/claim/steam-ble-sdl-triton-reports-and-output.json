@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-sdl-triton-reports-and-output",
+  "statement": "SDL Triton classifies 28de:1303 as the same Triton controller type as wired 28de:1302. The reviewed driver decodes input 0x42 and BLE-named 0x45 using a common no-quaternion field prefix, additionally supports 0x47 with a distinct timestamp representation, and handles 0x43 battery. Its lizard-disable SET on feature ID 1 repeats roughly every 3000 ms, sensor support assumes 4032 us per update, and it resends ordinary 0x80 rumble after 40 ms. These are consumer implementation choices, not measured BLE device rates. SDL controller_list.h lines 672-675; SDL Triton driver lines 130-146,243-379,436-458,483-565,568-697; structs lines 550-560,609-697.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. No private-SDL live BLE consumer test has been run here."
+  },
+  "sources": [
+    "steam-closeout-sdl-triton-e0232c5",
+    "steam-ble-sdl-triton-531acc",
+    "steam-ble-sdl-structs-531acc",
+    "steam-ble-sdl-ids-531acc"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

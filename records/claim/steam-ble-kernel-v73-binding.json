@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-kernel-v73-binding",
+  "statement": "Linux v7.3 hid-steam matches 28de:1303 with HID_BLUETOOTH_DEVICE and STEAM_QUIRK_IBEX plus STEAM_QUIRK_BLE. The IBEX path accepts a sole BLE HID interface independent of USB interface numbering. It initializes connected state without the receiver-only wireless-status query. Kernel lines 1589-1631, 1735-1833, 2751-2761.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Source proof of match criteria, not a D9 bind result."
+  },
+  "sources": [
+    "steam-ble-linux-v73"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

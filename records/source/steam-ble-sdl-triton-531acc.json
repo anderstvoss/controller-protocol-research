@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-sdl-triton-531acc",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a/src/joystick/hidapi/SDL_hidapi_steam_triton.c",
+  "revision": "531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a",
+  "sha256": "13620442bfea65b19c67c03add8bdb80005ebc963ad505b8461cbb6ed608e95e",
+  "lineage": "libsdl",
+  "locator": "Direct Triton selection 436-458; periodic lizard disable 483-505; input/battery parser 523-563; sensor rate 568-580; rumble/feature/IMU 593-697."
+}

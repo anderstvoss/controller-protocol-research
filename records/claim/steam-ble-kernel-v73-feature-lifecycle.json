@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-kernel-v73-feature-lifecycle",
+  "statement": "Linux v7.3 hid-steam uses controller feature ID 1 and 64-byte nominal report capacity for IBEX SET_REPORT/GET_REPORT. It performs attribute and unit-string queries on registration, applies lizard settings, then registers input, sensors and battery. A layered hidraw client's open withdraws native interfaces and its close permits them to re-register; raw close does not itself promise a lizard restoration write. Sensor open/close can send IMU settings. Kernel lines 435-665, 667-717, 880-975, 1372-1418 and 1633-1874.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Exact BLE GATT request bytes and physical reply completion remain unmeasured."
+  },
+  "sources": [
+    "steam-ble-linux-v73"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

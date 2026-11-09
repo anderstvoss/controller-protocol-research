@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-hogp-path",
+  "statement": "Pinned BlueZ HID-over-GATT requires an attached GATT HID service and obtains VID/PID/version from device metadata. Once Report Map and enumerated reports are available, BlueZ creates a UHID_CREATE2 HID device with BUS_BLUETOOTH and the acquired Report Map; it need not construct a physical USB interface. HOGP enforces security/bonding on the real radio path. BlueZ hog.c lines 62-85,188-206; shared hog.c lines 842-897; uhid.c lines 391-445.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Virtual UHID bypasses real HOGP pairing and cannot assert Bluetooth RF functionality."
+  },
+  "sources": [
+    "steam-ble-bluez-hog-profile",
+    "steam-ble-bluez-hog-shared",
+    "steam-ble-bluez-uhid"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

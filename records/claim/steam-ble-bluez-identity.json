@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-identity",
+  "statement": "BlueZ derives UHID phys and uniq from actual host-side and peer-side Bluetooth socket endpoints, and populates name, vendor, product and version via UHID_CREATE2. This is a host-side presentation convention, not a requirement that a local synthetic UHID contain a real controller's address. BlueZ shared hog.c lines 803-853 and uhid.c lines 391-435.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Host-visible synthetic identity policy must be decided separately from the feature-report unit serial."
+  },
+  "sources": [
+    "steam-ble-bluez-hog-shared",
+    "steam-ble-bluez-uhid"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

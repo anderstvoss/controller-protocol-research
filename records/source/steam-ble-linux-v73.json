@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-linux-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/hid/hid-steam.c",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "a48b7304d7eb2ebc2f5e294bbef7abb50d997cebc0acf686e34c0067a9f389f2",
+  "lineage": "linux-mainline",
+  "locator": "Annotated v7.3 tag peeled to commit; report IDs and sizes 316-335, 2530-2619; feature exchange 435-665; probe/lizard/raw client 880-975, 1372-1418, 1589-1874; Bluetooth match 2751-2761; source inspection, not physical."
+}
