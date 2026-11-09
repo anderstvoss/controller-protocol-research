@@ -1,0 +1,21 @@
+site_name: Controller Protocol Evidence Wiki
+site_description: Source-linked and evidence-status-preserving controller protocol research
+docs_dir: generated
+site_dir: site
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+nav:
+  - Controllers: index.md
+  - All claims: claims.md
+  - Pinned sources: sources/index.md
+  - Experiments: experiments/index.md
+  - Fixtures: fixtures/index.md
+  - Report shapes: reports.md
+  - Research documents: research-documents.md
