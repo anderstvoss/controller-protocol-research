@@ -344,7 +344,10 @@ def main():
     revision = args.ref or git_revision(root)
     if revision != "main" and (len(revision) != 40 or any(c not in "0123456789abcdef" for c in revision)):
         parser.error("--ref must be a lowercase full commit SHA (or main for a non-git test corpus)")
-    output = args.output or root / "docs/wiki/generated"
+    output = (args.output or root / "docs/wiki/generated").resolve()
+    canonical = (root / "docs/wiki/generated").resolve()
+    if output.is_relative_to(root) and output != canonical:
+        parser.error("in-repository wiki output must be docs/wiki/generated; source trees are read-only")
     pages = Writer(root, revision, records).build(rows)
     write_pages(output, pages, check=args.check)
     print("{} wiki pages {} ({} claims, {} sources)".format(
