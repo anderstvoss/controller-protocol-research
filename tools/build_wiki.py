@@ -168,7 +168,7 @@ class Writer:
                   "- [Experiments](experiments/index.md) — procedure, outcome and associated fixtures\n"
                   "- [Fixtures](fixtures/index.md) — reviewed payload metadata and transformation lineage\n"
                   "- [Report shapes](reports.md) — measured or source-scoped report descriptions\n"
-                  "- [Research documents](research-documents.md) — existing narrative investigations, unchanged\n\n"
+                  "- [Research documents](research-documents.md) — existing narrative investigations, unchanged\n"\n                  "- [Retained artifacts](evidence-artifacts.md) — existing evidence/ files, linked without reinterpretation\n\n"
                   "A physically observed host/consumer path is not proof of physical device fidelity. "
                   "The original records retain their precise status and transport applicability.\n")
         claim_index = [
@@ -270,6 +270,21 @@ class Writer:
             lines.append("\n")
         self.page("reports.md", "".join(lines))
 
+    def evidence_artifacts(self):
+        lines = [
+            self.header("Retained evidence artifacts"),
+            "The following files are already published under evidence/. They are "
+            "linked without parsing, modifying or assigning a new claim status. "
+            "Refer to the associated claim, experiment and fixture records for "
+            "provenance and semantic interpretation.\n\n",
+        ]
+        for path in sorted((self.root / "evidence").rglob("*")):
+            if not path.is_file():
+                continue
+            relative = path.relative_to(self.root).as_posix()
+            lines.append("- [" + code(relative) + "](" + self.blob(relative) + ")\n")
+        self.page("evidence-artifacts.md", "".join(lines))
+
     def documents(self):
         lines = [
             self.header("Research documents"),
@@ -289,6 +304,7 @@ class Writer:
         self.fixtures()
         self.reports()
         self.documents()
+        self.evidence_artifacts()
         return self.pages
 
 
