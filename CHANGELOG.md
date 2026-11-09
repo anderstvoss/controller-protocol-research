@@ -7,8 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Add a read-only, source-linked evidence wiki generator and optional MkDocs
-  documentation under `docs/wiki/`; source records and fixtures stay unchanged.
+- Create a manually authored, corpus-cited controller protocol wiki covering
+  all registered controllers/families, with protocol, consumer and lab subpages,
+  a separate evidence-snapshot refresh procedure and optional MkDocs rendering.
+  Existing evidence data and research ledgers remain unchanged.
 
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 

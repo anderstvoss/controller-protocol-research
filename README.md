@@ -114,7 +114,8 @@ in each fixture. No real device identity or capture data is included.
 
 ## Evidence wiki
 
-[Source-linked evidence wiki](docs/wiki/README.md) documents the read-only
-controller/claim/source/experiment/fixture indexes and generation workflow.
-The canonical JSON records remain authoritative; the optional Markdown/MkDocs
-presentation preserves claim status, scope, lineage and contradictions.
+[Read the manually curated technical wiki](docs/wiki/pages/index.md)
+for controller protocols, report maps, consumer behavior and lab validation.
+The [wiki guide](docs/wiki/README.md) explains its **on-request editorial
+refresh** policy. Existing JSON evidence, fixtures and research notes remain
+authoritative and unchanged.

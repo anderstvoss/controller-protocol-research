@@ -1,84 +1,60 @@
-# Wiki publishing and maintenance
+# Wiki maintenance, review and publishing
 
-## Policy
+The wiki lives in **docs/wiki/pages/** and is manually authored. It is
+deliberately a **reviewed snapshot** of the evidence corpus rather than a
+continuously synchronized database.
 
-- **One authoritative corpus.** Do not move, delete, rewrite or merge source,
-  claim, experiment, fixture or report records to make documentation tidier.
-  Existing research documents remain intact.
-- **Additive documentation.** The generator produces only an auxiliary
-  `docs/wiki/generated/` tree; the existing corpus is read-only.
-- **Status is evidence-specific.** Never infer physical device support from
-  a host-driver code path, a virtual-host fixture, a synthetic trace, or a
-  source-only comparison.
-- **Pinned citations.** Every individual claim links to its original JSON;
-  source entries link to their pinned URL, revision, digest and lineage.
-  Generated links use a Git commit SHA when available.
-- **Contradictions are first-class.** Preserve `conflicts_with`, `supersedes`
-  and `rejection_scope`; do not resolve by claim count or recency alone.
-- **No confidential material.** Publishing a generated page is subject to
-  the same privacy and publication guard as the corpus itself.
+## Authority and update steps
 
-## Local regeneration and review
+1. Record the target corpus **full Git commit SHA** and the last reviewed
+   snapshot (wiki home and editorial changelog).
+2. Read added/changed claim JSON, source records, experiments, fixtures and
+   original research notes. Group by controller, transport and behavior.
+3. Write or revise the technical explanation; include raw report tables,
+   consumer/driver distinctions, open questions and implementation constraints
+   only where they are actually supported.
+4. Directly cite the **individual corpus claim records** with full-SHA
+   permalinks. Cite source records for provenance when useful; do not copy
+   upstream code, private captures, serials or identifiers.
+5. Preserve conflict, supersession, uncertainty and device/consumer evidence
+   roles. A source-only parser cannot be promoted to physically verified.
+6. Run read-only wiki link checking, publication guard, normal corpus
+   validation and tests. Review every rendered page for accuracy, privacy
+   and meaningful interpretation.
+7. Update the reviewed SHA and document chapter-level changes in the wiki
+   changelog only **after** the editorial review. Open a documentation PR.
 
-Run from the repository root:
+Do not run an automatic page generator. No wiki update is implied merely by
+merging a new corpus claim. Historical docs and source records remain intact.
 
-~~~sh
-python tools/publication_guard.py
-python tools/validate.py
-python -m unittest discover -s tests
-python tools/build_wiki.py
-python tools/build_wiki.py --check
-~~~
+## Reading and preview
 
-Review the diff in `docs/wiki/generated/` before publishing. The content is
-generated solely from existing reviewed JSON and the research-document file
-listing. It does **not** fetch upstream code, access physical controllers or
-interpret fixture packet bytes. Re-run the publication guard after generation.
+On GitHub, start at [wiki home](pages/index.md).
 
-For an immutable published snapshot, check out the intended corpus commit and
-run the generator with `--ref` set to that full SHA. Record that SHA in release
-notes; do not link source claims to a moving branch for a published version.
-
-## Local website preview (optional dependency)
-
-MkDocs Material is **not** required for the corpus validator or Markdown
-generation. Install it in an isolated documentation environment and run:
+To preview a searchable site with the optional MkDocs Material package:
 
 ~~~sh
 python -m mkdocs serve -f docs/wiki/mkdocs.yml
 python -m mkdocs build -f docs/wiki/mkdocs.yml --strict
 ~~~
 
-The `docs/wiki/mkdocs.yml` file points at the generated Markdown. The site is a
-searchable representation of existing records; it does not host external
-source blobs, firmware or private captures.
+No dependency or publishing workflow is introduced for MkDocs by this PR.
+The static website, if eventually enabled, must be built from an explicitly
+reviewed commit and should display that commit's reviewed **corpus revision**
+prominently. GitHub Pages is appropriate; a separate GitHub Wiki repository
+is not, since it would weaken atomic PR review and provenance.
 
-## Deployment choices
+## What can be validated automatically
 
-**Recommended:** use GitHub Pages from an owner-reviewed, SHA-pinned GitHub
-Actions workflow. On every approved `main` change, validate the corpus, run the
-publication guard, regenerate the wiki from that same commit, build MkDocs and
-publish the static output. Keep Actions read-only by default and give only the
-specific Pages job the minimum permissions required.
+A link checker can establish that local pages exist and citations point to
+existing corpus records. It cannot decide whether prose correctly interprets
+raw reports, whether a source lineage is independent, or whether a physical
+experiment genuinely establishes hardware behavior. Those remain **manual
+review responsibilities**.
 
-**Simplest:** commit the generated Markdown to the research repository, link to
-its `generated/index.md`, and review these files in the same PR as the evidence
-that changes them. No separate wiki repository or deployment is required.
+## Privacy and licensing
 
-**Do not** enable a new public publishing pipeline without reviewing the repo's
-existing branch, disclosure, dependency and GitHub Pages protections.
-
-## Suggested future information architecture
-
-- Controller page: family/parent, identity, evidence categories by transport,
-  claims grouped by role and transport, gaps and contradictions.
-- Claim drill-down: exact statement and scope, status, source pins, experiments,
-  opposing claims and source-document pointers.
-- Source lineage: code/document revision, hash and locator, shared ancestry.
-- Experiment drill-down: protocol, physical/synthetic/virtual-host distinction,
-  status, semantic outcome and fixture hashes.
-- Research narrative: existing corpus-backed guides and decision tables,
-  linked rather than duplicated.
-
-A generated wiki should never become an alternate evidence ingestion interface.
-New findings must first be added to validated corpus records.
+The existing publication and history guards remain mandatory. This wiki
+only cites the corpus's reviewed materials and outside public documentation.
+Never introduce raw private captures, device-specific MAC addresses,
+serials, calibration images, account metadata or firmware contents here.
