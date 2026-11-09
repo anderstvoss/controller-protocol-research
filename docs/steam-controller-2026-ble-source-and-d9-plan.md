@@ -32,7 +32,9 @@ All pinned source file SHA-256 values reside in `records/source/steam-ble-*.json
 
 The exact `e0232c5` Triton driver is retrievable at its pinned upstream commit; the corpus already records its SHA-256. SDL classifies `1302` and `1303` as Triton (`controller_list.h:671-674` at the D9 revision). Later `531acc0` still classifies both. SDL accepts `0x42`, `0x45` and `0x47`, battery `0x43`, and recognized wireless status inputs. `0x45` uses the no-quaternion shape; `0x47` uses a different pad/IMU timestamp representation. There is no reason to select `0x47` as the only Bluetooth stream.
 
-SDL sends periodic feature-ID-1 lizard-disable updates at approximately three-second intervals and an IMU mode setting when sensors are enabled. Its advertised `4032`-us sensor update interval is a consumer constant, not a BLE measurement. Ordinary rumble sends output report `0x80` and resends while active approximately every 40 ms; optional short haptic effect reports `0x81` through `0x85` have explicit length checks. SDL's rumble support or return from a write is not proof that a Bluetooth actuator responded. Physical feature exchange, battery cadence, LED support, output pacing and internal PCM modes are unknown.
+**Revision delta that affects D9 acceptance:** Comparing the exact D9 `e0232c5` driver with later `531acc0` source, both decode the same `0x42/0x45/0x47` and `0x43` reports, but only the newer revision explicitly dispatches separate left/right trigger-click SDL button events. D9's rumble path calls `SDL_hid_write` directly; the newer path calls `SDL_HIDAPI_SendRumble`. Only the newer `SendJoystickEffect` accepts the short `0x81`-`0x85` haptic output reports; D9 handles fixed-size feature reports there. Do not infer that a missing trigger click or haptic effect in D9 SDL is a Bluetooth codec failure without checking this consumer-version difference. See claim `steam-ble-sdl-private-vs-upstream-delta`.
+
+SDL sends periodic feature-ID-1 lizard-disable updates at approximately three-second intervals and an IMU mode setting when sensors are enabled. Its advertised `4032`-us sensor update interval is a consumer constant, not a BLE measurement. Ordinary rumble sends output report `0x80` and resends while active approximately every 40 ms; optional short haptic effect reports `0x81` through `0x85` have explicit length checks **only in later upstream**. SDL's rumble support or return from a write is not proof that a Bluetooth actuator responded. Physical feature exchange, battery cadence, LED support, output pacing and internal PCM modes are unknown.
 
 ## BlueZ HOGP: report map, GET/SET and identity
 
@@ -97,7 +99,7 @@ The existing wired `SteamController2026Options` has `identity`, `steam_client_co
 | BLE input format and cadence | Source-only parser | Full physical per-control fixtures and relative timings |
 | Battery/status/IMU | Source-only parser | Physical reports, rates and consumer readings |
 | Feature / lizard lifecycle | Source-only host commands | Paired GET/SET responses plus native/raw handoff |
-| SDL input and haptics | Source-only | SDL HIDAPI BLE open, decoding and optional outputs |
+| SDL input and haptics | Source-only | SDL HIDAPI BLE open and decoding on e0232c5; repeat trigger-click and short-output cases on newer SDL |
 | Steam listing/details/Begin Test | No BLE evidence | Owner Steam UI capture and sanitized request/reply ledger |
 | Scratch BLE UHID | Not run | Bind/SDL/cleanup, false-positive/failure cases and no leaks |
 | True Bluetooth radio / pairing emulation | Deferred | Separate #164 transport gate; not accepted by UHID |
