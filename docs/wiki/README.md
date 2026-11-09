@@ -5,9 +5,10 @@ not a replacement for the original evidence, a new source of protocol truth, or
 an implementation roadmap. All source, claim, experiment, fixture, controller
 and report records remain in their existing directories, unchanged.
 
+**Browse now:** [controller evidence navigator](INDEX.md).
 **Authoritative evidence:** [records](../../records/) and [fixtures](../../fixtures/).
 **Existing research narrative:** [docs](../).
-**Generated controller and evidence indexes:** [open the generated wiki](generated/index.md)
+**Generated controller and evidence indexes:** [open the complete generated wiki](generated/index.md)
 after running the command below.
 
 ## Build the complete wiki
