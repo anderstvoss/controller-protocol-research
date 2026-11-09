@@ -82,6 +82,12 @@ class WikiGenerationTests(unittest.TestCase):
             {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in original},
         )
 
+    def test_existing_artifacts_are_linked_in_place(self):
+        artifacts = self.pages["evidence-artifacts.md"]
+        for path in (ROOT / "evidence").rglob("*"):
+            if path.is_file():
+                self.assertIn("/" + path.relative_to(ROOT).as_posix(), artifacts)
+
     def test_research_document_index_does_not_duplicate_notes(self):
         documents = self.pages["research-documents.md"]
         for path in (ROOT / "docs").glob("*.md"):
