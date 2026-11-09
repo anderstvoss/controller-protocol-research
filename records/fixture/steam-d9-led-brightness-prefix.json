@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-led-brightness-prefix",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-led-brightness-prefix.hex",
+  "sha256": "53774ed39521bee12a8a1a4f373e6750cd86e63f4c5c07d639f557c8a80f6d17",
+  "sources": [],
+  "experiments": [
+    "steam-d9-wired-led-slider"
+  ],
+  "parent": null,
+  "transform": "Meaningful six-byte prefix of a physical 64-byte SET report: report ID 1, command 87, inner length 3, key 45, little-endian value 24. Trailing transport buffer excluded. Timing/values/status projection in evidence/steam-d9-led-brightness.json.",
+  "claims": [
+    "steam-d9-wired-led-brightness"
+  ]
+}

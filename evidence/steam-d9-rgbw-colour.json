@@ -1,0 +1,1793 @@
+{
+  "schema_version": 1,
+  "clock": "microseconds relative to each helper origin; no absolute clocks, addresses or host paths retained",
+  "stimulus": "One RGBW byte 25, others 0, five seconds; zero colour between trials and at exit",
+  "cases": {
+    "trials": {
+      "capture_sha256": "c94618a7412355338456706b5090db6ded2d12a2051f4b0ab9c7a7f96886e984",
+      "events": [
+        {
+          "t_us": 100,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 686,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 11791524,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11792258,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11792873,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 16793607,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16794210,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16794688,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 35188904,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            25,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 35189559,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 35190098,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 40190699,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 40191342,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 40191862,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 54766097,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            25,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 54766605,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 54767099,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 59767799,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 59768344,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 59768965,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 77516646,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            25
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 77517541,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 77518165,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 82518877,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 82519562,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 82520162,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 88254013,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 88255005,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 88255704,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 238356013,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 238356692,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        }
+      ],
+      "owner_events": [
+        {
+          "t_us": 24521660,
+          "kind": "owner_observation",
+          "channel": 1,
+          "detail": "unchanged",
+          "restore_matches": true
+        },
+        {
+          "t_us": 44749564,
+          "kind": "owner_observation",
+          "channel": 2,
+          "detail": "unchanged",
+          "restore_matches": true
+        },
+        {
+          "t_us": 64094472,
+          "kind": "owner_observation",
+          "channel": 3,
+          "detail": "unchnged",
+          "restore_matches": true
+        },
+        {
+          "t_us": 88253867,
+          "kind": "owner_observation",
+          "channel": 4,
+          "detail": "unchanged",
+          "restore_matches": true
+        },
+        {
+          "t_us": 88256179,
+          "kind": "final_restore",
+          "matches": true
+        },
+        {
+          "t_us": 88256201,
+          "kind": "closed"
+        }
+      ],
+      "pending_control_count": 0
+    },
+    "override-trials": {
+      "capture_sha256": "a5b95d257daa6a4cf8753f8c48a20bd192c92d635c54f639932fc10610a17d89",
+      "events": [
+        {
+          "t_us": 103,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 586,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 1045,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 1511,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 1920,
+          "operation": "SET",
+          "command": "87",
+          "inner_length": 3,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 102716,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 103237,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 11417030,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11417794,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11418552,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 16419317,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16419980,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16420476,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 39728510,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            25,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 39729310,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 39729914,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 44730560,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 44731097,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 44731581,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 63434966,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            25,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 63435831,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 63436422,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 68437320,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 68437937,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 68438791,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 84444633,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            25
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 84445462,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 84446215,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 89446924,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 89447631,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 89448300,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 96192506,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 96193247,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 96193853,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 96194409,
+          "operation": "SET",
+          "command": "87",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 96295394,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 96296147,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        }
+      ],
+      "owner_events": [
+        {
+          "t_us": 1838,
+          "kind": "override_readback",
+          "value": 0
+        },
+        {
+          "t_us": 103610,
+          "kind": "override_readback",
+          "value": 1
+        },
+        {
+          "t_us": 29756396,
+          "kind": "owner_observation",
+          "channel": 1,
+          "detail": "observed red, off noew",
+          "restore_matches": true
+        },
+        {
+          "t_us": 54302778,
+          "kind": "owner_observation",
+          "channel": 2,
+          "detail": "ovserved green, off now",
+          "restore_matches": true
+        },
+        {
+          "t_us": 75318804,
+          "kind": "owner_observation",
+          "channel": 3,
+          "detail": "observed blue, off now",
+          "restore_matches": true
+        },
+        {
+          "t_us": 96192409,
+          "kind": "owner_observation",
+          "channel": 4,
+          "detail": "oobserved white, off now",
+          "restore_matches": true
+        },
+        {
+          "t_us": 96194326,
+          "kind": "final_restore",
+          "matches": true
+        },
+        {
+          "t_us": 96296687,
+          "kind": "override_readback",
+          "value": 0
+        },
+        {
+          "t_us": 96296707,
+          "kind": "override_final_restore",
+          "matches": true
+        },
+        {
+          "t_us": 96296766,
+          "kind": "closed"
+        }
+      ],
+      "pending_control_count": 0
+    },
+    "mixing-trials": {
+      "capture_sha256": "b8d2afab15d950dc18cee1670031e3aa55af867b31d5349e1b6b2e44f1f7d1d8",
+      "events": [
+        {
+          "t_us": 134,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 638,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 1182,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 1780,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 2384,
+          "operation": "SET",
+          "command": "87",
+          "inner_length": 3,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 103116,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 103667,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            1,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 11032680,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            25,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11033409,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 11034075,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 16034775,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16035635,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 16036382,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 44317864,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            25,
+            0,
+            10
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 44318522,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 44319251,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 49320027,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 49320662,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 49321379,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 78286667,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            25,
+            25,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 78287393,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 78288185,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 83289158,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 83290119,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 83290690,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 109136552,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            25,
+            25,
+            10
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 109137311,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 109138010,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 114138676,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 114139509,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 114140199,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 130816435,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            0,
+            25,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 130817242,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 130817954,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 135818692,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 135819255,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 135819765,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 156696701,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            25,
+            0,
+            25,
+            10
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 156697241,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 156697733,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 161698310,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 161699151,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 161699770,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 173625213,
+          "operation": "SET",
+          "command": "c5",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 173626011,
+          "operation": "SET",
+          "command": "e9",
+          "inner_length": 0,
+          "values": [],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 173626633,
+          "operation": "GET",
+          "command": "e9",
+          "inner_length": 4,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        },
+        {
+          "t_us": 173627173,
+          "operation": "SET",
+          "command": "87",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 173727779,
+          "operation": "SET",
+          "command": "89",
+          "inner_length": 1,
+          "values": [
+            37
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 64,
+          "status": 0
+        },
+        {
+          "t_us": 173728290,
+          "operation": "GET",
+          "command": "89",
+          "inner_length": 3,
+          "values": [
+            37,
+            0,
+            0
+          ],
+          "requested_bytes": 64,
+          "completed_bytes": 63,
+          "status": 0
+        }
+      ],
+      "owner_events": [
+        {
+          "t_us": 2297,
+          "kind": "override_readback",
+          "value": 0
+        },
+        {
+          "t_us": 104051,
+          "kind": "override_readback",
+          "value": 1
+        },
+        {
+          "t_us": 30647812,
+          "kind": "owner_observation",
+          "label": "YELLOW, RGB only",
+          "values": [
+            25,
+            25,
+            0,
+            0
+          ],
+          "detail": "yelow seen, but orange tinted",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 67995006,
+          "kind": "owner_observation",
+          "label": "YELLOW plus white",
+          "values": [
+            25,
+            25,
+            0,
+            10
+          ],
+          "detail": "orangeorange tinted yellow, more light now so closer to tan",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 96891255,
+          "kind": "owner_observation",
+          "label": "CYAN, RGB only",
+          "values": [
+            0,
+            25,
+            25,
+            0
+          ],
+          "detail": "definatly cdefinatly closer to cyan than blue, but still decidely blue tinted",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 121665418,
+          "kind": "owner_observation",
+          "label": "CYAN plus white",
+          "values": [
+            0,
+            25,
+            25,
+            10
+          ],
+          "detail": "more like a light sky blue color",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 147068410,
+          "kind": "owner_observation",
+          "label": "MAGENTA, RGB only",
+          "values": [
+            25,
+            0,
+            25,
+            0
+          ],
+          "detail": "this this looked more like a light pink/purple than a typical magenta",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 173625108,
+          "kind": "owner_observation",
+          "label": "MAGENTA plus white",
+          "values": [
+            25,
+            0,
+            25,
+            10
+          ],
+          "detail": "lighter shade, less of a dfifferne than before",
+          "restore_readback_matches": true
+        },
+        {
+          "t_us": 173627081,
+          "kind": "final_restore",
+          "matches": true
+        },
+        {
+          "t_us": 173728695,
+          "kind": "override_readback",
+          "value": 0
+        },
+        {
+          "t_us": 173728700,
+          "kind": "override_final_restore",
+          "matches": true
+        },
+        {
+          "t_us": 173728733,
+          "kind": "closed"
+        }
+      ],
+      "pending_control_count": 0
+    }
+  },
+  "owner_final_confirmation": "Red, green, blue, white observed in enabled repeat; normal green returned afterward.",
+  "limitations": [
+    "Raw captures and unrelated payloads withheld.",
+    "Readback zeros do not prove absence of colour effect or accurate restoration of a previously unknown colour state. Original override 0 was read and restored; zero colour packets explicitly sent and owner confirmed normal status returned.",
+    "No Bluetooth or receiver control tested; owner blue/green connection-colour observation is separate.",
+    "No calibrated brightness/colour transfer, full-range response or restart/default-reset persistence.",
+    "LED package count and allocation remain unclear by owner decision after reviewing close-up photographs and a teardown lead. Logical RGBW control does not establish physical package or die construction; no identification adopted."
+  ]
+}

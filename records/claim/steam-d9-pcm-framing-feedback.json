@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-pcm-framing-feedback",
+  "statement": "Across three supervised direct-wired PCM captures, output 0x86 sends four wire bytes: stop group 2/5, configure group 2/5 mode 0. The Pixel client receives input 0x44 configuration status 0x20 for internal IDs 1/0 and status 0x10 for pad IDs 4/3; successful USB writes do not establish configuration acceptance. Its output 0x88 is 64 wire bytes, byte 1 length 30, with 30 meaningful bytes in each 31-byte slot; both unused slot bytes were zero throughout these captures. The iczero client instead sends output 0x87 selector 0/4: 1290 full 64-byte writes and two short 12-byte final writes, completing successfully. Input 0x44 is six bytes, IDs 0/1/3/4, status values 0x01/02/04/08/10/20 observed, trailing 3 bytes zero. Source labels suggest overrun/stopped/low/high/rejection/acceptance; no one-ACK-per-write or native FIFO-capacity/watermark rule is established. All observed output submissions completed status 0 with no pending writes; explicit final group 2/5 stops completed.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; D9 bare metal",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attribute not observed in this reduction",
+    "transport": "usb",
+    "scope": "2026-11-05 Pacific, bounded generated-waveform playback with pinned normal upstream clients and explicit stops; no wireless, firmware update, USB audio/MIDI interface or universal buffer behavior claim."
+  },
+  "sources": [
+    "steam-audio-player-e06e48d",
+    "steam-audio-tritonlib-d470e0d",
+    "steam-audio-iczero-client-83c46d7",
+    "sc2-src-haptics",
+    "sc2-src-dissector"
+  ],
+  "experiments": [
+    "steam-d9-pcm-playback"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

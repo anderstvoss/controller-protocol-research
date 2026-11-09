@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-linux-hid-core",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-core.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "217a2ee1d59d93fd7c5772b9193d4d3c0e3b7d5d24c9bcd985cb59c172751577",
+  "lineage": "linux-mainline",
+  "locator": "2043-2118 HID field processing, 2173-2180 callback and continuation; GPL host implementation, no excerpt"
+}

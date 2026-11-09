@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-midi-channels",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-midi-singer-d809a28"
+  ],
+  "fixtures": [
+    "steam-d9-midi-lfo-reference"
+  ],
+  "procedure": "2026-11-05 Pacific D9 direct-wired 28de:1302, bcdDevice0404 marker, firmware attribute not observed. Steam/Dolphin/SDL closed. Owner-operated 90-second full-snaplen usbmon, followed by an eight-second preparation and generated two-note SMF per MIDI channel0,1,2,3. Unmodified pinned Singer d809a28, gain modifiers-20, separate200ms note57/69 with silence and no overlap/loop/directvelocity. Each process exits normally and sends all-channel note-offs. Pair USB writes/completions privately after capture closes; publish only reviewed output0x83 fields/zero padding, relative times and feedback counts. No raw capture/serial/addresses/URBs/paths/accounts/absolute clocks. No agent root, feature injection, update, bootloader or wireless action.",
+  "semantic_outcome": "Four labelled channel windows each produced12 successful64-byte writes,48 total, with no observed0x44 or pending writes. Grip pairs were somewhat audible; pad pairs mainly felt. This is input-to-HID mapping and qualitative physical feedback, not a USB MIDI interface or calibrated actuator model."
+}

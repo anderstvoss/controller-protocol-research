@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-rgbw-mix-prefix",
+  "kind": "physical",
+  "format": "hid_report_hex",
+  "path": "fixtures/steam-d9-rgbw-mix-prefix.hex",
+  "sha256": "c9fddc4a30cac71eef2272086b9f86c86640e60a5b1fdca768bbe1f6ecb1ae3a",
+  "sources": [],
+  "experiments": [
+    "steam-d9-wired-rgbw-mixing"
+  ],
+  "parent": null,
+  "transform": "Meaningful prefix of owner-supervised physical C5 stimulus, R25 G25 B0 W0; transport padding omitted. All six intended stimuli and observed hues are recorded separately; this is not a calibrated optical fixture.",
+  "claims": [
+    "steam-d9-wired-rgbw-mixing-observation"
+  ]
+}

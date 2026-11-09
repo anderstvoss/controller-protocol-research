@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-modes-followup-linux-hid-header",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/cee9395acd8043be0644b25c34bfa86623f2b935/include/linux/hid.h",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "6bd34b0fc374a7bf15ad66f5a579c9a576d811d2841f1b1d77a818161121214a",
+  "lineage": "linux-mainline",
+  "locator": "351-359 HID_CONNECT_DEFAULT vs HIDINPUT/HIDRAW bits; GPL host implementation, no excerpt"
+}

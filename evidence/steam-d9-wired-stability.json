@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "host_scope": {
+    "architecture": "x86-64",
+    "kernel": "7.3.0-1-mainline",
+    "steam": "Stable 1792618285",
+    "transport": "direct wired or USB-bus UHID; no wireless testing"
+  },
+  "sanitization": "All clocks relative to each session origin. No raw logs, capture bytes, serial strings, device addresses, node paths, accounts or populated named records published. Source paths in named read requests are protocol constants, not host filesystem paths.",
+  "measurement_limits": [
+    "Owner intent/report markers include switching and typing delays.",
+    "Raw descriptor observations sampled every 50 ms; udev node inventory every 10 ms. FD gone/seen times are sampled bounds, not exact close syscall timestamps.",
+    "Parent UHID lifecycle events do not directly report closing the layered Steam raw descriptor.",
+    "Latency measures provider event dequeue to reply submission; prior queue residence and Steam scheduling were not measured.",
+    "Both baseline discovery entries referred to the same layered hidraw; a reappearing evdev node was not proven to be the UI entry.",
+    "First candidate had a long idle interval before UI; fresh second candidate reproduced the stable result.",
+    "Physical A1 excluded from clean pair: initial UI attempt preceded attachment and System Settings retained a raw handle after Steam exited."
+  ],
+  "sessions": {
+    "physical-a2": {
+      "role": "physical control",
+      "owner_entry": "stable",
+      "begin_test": "opened",
+      "details_window_counts": {
+        "node_add": 0,
+        "node_remove": 0,
+        "raw_fd_seen": 0,
+        "raw_fd_gone": 0
+      },
+      "observed_raw_consumer_roles": [
+        "steam"
+      ],
+      "firmware_build_attribute": "not re-read in UI-only session",
+      "device_version": "0404"
+    },
+    "physical-a3": {
+      "role": "physical control",
+      "owner_entry": "stable",
+      "begin_test": "opened",
+      "details_window_counts": {
+        "node_add": 0,
+        "node_remove": 0,
+        "raw_fd_seen": 0,
+        "raw_fd_gone": 0
+      },
+      "observed_raw_consumer_roles": [
+        "steam"
+      ],
+      "firmware_build_attribute": "not re-read in UI-only session",
+      "device_version": "0404"
+    },
+    "virtual-b1": {
+      "role": "baseline virtual consumer run",
+      "owner": "replacement on opening controllers before details; then stable; Begin Test opened",
+      "stable_identity_counts": {
+        "ae": {
+          "count": 4,
+          "changed": 0
+        },
+        "83": {
+          "count": 4,
+          "changed": 0
+        }
+      },
+      "dequeue_to_reply_submission_us": {
+        "count": 622,
+        "min": 25,
+        "median": 58.0,
+        "max": 1420
+      },
+      "raw_reopen_observed": true,
+      "native_children_return_in_gap": 4,
+      "discovery_node_role_before_after": "same layered hidraw",
+      "parent_uhid_during_gap": "no CLOSE observed",
+      "firmware": "synthetic compatibility profile based on virtualgamepad baf9d4e",
+      "cleanup": "owned device removed; zero reported write failures"
+    },
+    "virtual-b2": {
+      "role": "baseline virtual consumer run",
+      "owner": "replaced under1s after opening Controller list, disconnected/connected notifications; details stable; Begin Test opened",
+      "stable_identity_counts": {
+        "ae": {
+          "count": 4,
+          "changed": 0
+        },
+        "83": {
+          "count": 4,
+          "changed": 0
+        }
+      },
+      "dequeue_to_reply_submission_us": {
+        "n": 709,
+        "median": 63,
+        "max": 965
+      },
+      "raw_reopen_observed": true,
+      "native_children_return_in_gap": 4,
+      "discovery_node_role_before_after": "same layered hidraw",
+      "parent_uhid_during_gap": "no CLOSE observed",
+      "firmware": "synthetic compatibility profile based on virtualgamepad baf9d4e",
+      "cleanup": "owned device removed; zero reported write failures"
+    },
+    "virtual-b3-missing-read": {
+      "role": "private synthetic absent-read counterfactual",
+      "owner": "list stable; details unclear/menu flash but appeared to enter; BeginTest opened",
+      "controller_info_failures": 0,
+      "unsupported_ed_requests": 0,
+      "raw_reopen_observed": false,
+      "firmware": "same synthetic compatibility profile; only exact named-record read acceptance changed",
+      "cleanup": "owned device removed; zero reported write failures"
+    },
+    "virtual-b4-missing-read": {
+      "role": "private synthetic absent-read counterfactual",
+      "owner": "list stable, details stable, BeginTest opened; no symptoms",
+      "controller_info_failures": 0,
+      "unsupported_ed_requests": 0,
+      "raw_reopen_observed": false,
+      "firmware": "same synthetic compatibility profile; only exact named-record read acceptance changed",
+      "cleanup": "owned device removed; zero reported write failures"
+    }
+  },
+  "relative_timeline_us": {
+    "virtual-b1": {
+      "steam_initial_raw_seen": 23879000,
+      "controller_info_failure": 102243000,
+      "native_children_return": 102273000,
+      "steam_raw_seen_again": 102786000,
+      "native_children_removed": 102804000
+    },
+    "virtual-b2": {
+      "steam_raw_gone_sample": 103885000,
+      "native_children_return": 103900000,
+      "steam_raw_seen_again": 104412000,
+      "native_children_removed": 104426000
+    }
+  },
+  "prior_physical_named_read_projection": [
+    {
+      "kind": "SET",
+      "key": "user/wireless_transport",
+      "declared_length": 24,
+      "status": 0
+    },
+    {
+      "kind": "GET",
+      "key": "user/wireless_transport",
+      "declared_length": 1,
+      "status": 0,
+      "wire_bytes": 63,
+      "meaningful_payload_all_zero": true,
+      "reserved_tail_all_zero": false
+    },
+    {
+      "kind": "SET",
+      "key": "esb/bond",
+      "declared_length": 9,
+      "status": 0
+    },
+    {
+      "kind": "GET",
+      "key": "esb/bond",
+      "declared_length": 24,
+      "status": 0,
+      "wire_bytes": 63,
+      "meaningful_payload_all_zero": false,
+      "reserved_tail_all_zero": true
+    },
+    {
+      "kind": "SET",
+      "key": "esb/bond_2",
+      "declared_length": 11,
+      "status": 0
+    },
+    {
+      "kind": "GET",
+      "key": "esb/bond_2",
+      "declared_length": 0,
+      "status": 0,
+      "wire_bytes": 63,
+      "meaningful_payload_all_zero": true,
+      "reserved_tail_all_zero": false
+    }
+  ],
+  "synthetic_policy": {
+    "accepted_record_paths": [
+      "esb/bond",
+      "esb/bond_2"
+    ],
+    "response": "63 total bytes: 01 ed 00 followed by 60 zero bytes",
+    "meaning": "absent record on wired-only virtual instance; no primary physical material replayed",
+    "unimplemented": [
+      "named setting stage EE",
+      "named setting commit EF",
+      "arbitrary named paths",
+      "receiver or Bluetooth functionality"
+    ]
+  },
+  "ui_parity": {
+    "rear_buttons": {
+      "L4": "top left, owner same as physical",
+      "L5": "bottom left, owner same as physical",
+      "R4": "top right, owner same as physical",
+      "R5": "bottom right, owner same as physical"
+    },
+    "grip_touch": "Left then right grab/release changed matching fan and reverse-side line activity in virtual UI, consistent with owner physical observations. Physical left timing qualified by owner switching reverse view using L4; not an independent analog-axis calibration.",
+    "advanced_grip_release_output": "Virtual consumer emitted report 81, payload length 7: selector 3 after left release and selector 4 after right release, on/off 300 microseconds, count 1. Additional grab-phase pulses observed. This is reverse-output evidence, not a physical felt-click observation."
+  },
+  "demo_close": {
+    "source_base": "baf9d4e with trigger-validation-only local changes",
+    "procedure": "Create one Steam USB-bus UHID instance, normal window close, inspect original process identity and owned HID ancestry.",
+    "owner": "window closed without error",
+    "process_exited": true,
+    "owned_hid_remaining": 0,
+    "conclusion": "Prior idle-process symptom not reproduced in this bounded run; no general proof of all close paths."
+  }
+}

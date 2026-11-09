@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-lizard-control-mapping",
+  "statement": "Owner-guided wired controls produced complete mouse report 0x40 (6 wire bytes) and keyboard report 0x41 (9 wire bytes). Right-pad movement maps to relative X and inverted Y; right-pad click and the native right-trigger button bit map to mouse Button 1, and the native left-trigger button bit maps to Button 2. Left-pad movement maps to horizontal Consumer usage 0x0238 and inverted vertical wheel fields. A maps to keyboard usage 0x28, B and Options/Menu to 0x29, View to 0x2b, and D-pad Up/Down/Left/Right to 0x52/0x51/0x50/0x4f. Each prompted keyboard press has a release. Stick travel/touch, pad touch alone, left-pad click, X/Y, shoulders, stick clicks, QAM, rear buttons, Steam and grip touch produced no desktop reports in their labelled windows; native input confirmed actions. Full-trigger held-button reports repeated approximately every 4 ms, so pure wire-change-only emission is not established. Absence is bounded to these windows.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Physical direct-wired 1302; hid-steam bound",
+    "firmware": "Not independently re-read in each action session; no firmware update performed",
+    "transport": "usb",
+    "scope": "Bounded owner-guided windows and normal SDL open/close only; no wireless, watchdog or calibrated transfer function."
+  },
+  "sources": [],
+  "experiments": [
+    "steam-d9-lizard-mapping"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

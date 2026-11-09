@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-named-setting-review",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-stability-sc26re-feature-header",
+    "steam-stability-sc26re-named-settings",
+    "steam-modes-sc26re-feature"
+  ],
+  "fixtures": [
+    "steam-d9-named-read-prefix"
+  ],
+  "procedure": "Reanalysis of the existing steam-d9-steam-feature-capture session, not a new physical injection. Direct wired 1302, bcdDevice 0404, observed firmware build attribute 0x6ACFF323, Stable Steam 1792618285. Pair SET and GET privately by control transfer sequence. Publish only exact named request paths, lengths, completion status and the previously reviewed zero scalar. Withhold the entire populated primary record, all opaque reserved tails and all identifying information. Sanitized projection is in evidence/steam-d9-wired-stability.json.",
+  "semantic_outcome": "ED reads address user/wireless_transport, esb/bond and esb/bond_2, yielding declared lengths 1, 24 and 0 respectively, at wire length 63 and status 0. Only the first one-byte zero value is replayable physical content here. Empty second-record framing motivates a synthetic absent state for both records on a wired-only virtual device; it does not authorize replay of physical pairing material or implementation of wireless operations."
+}

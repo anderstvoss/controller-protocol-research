@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-midi-lfo-framing",
+  "statement": "A supervised wired SteamHapticsSinger pilot sent twelve successful 64-byte output 0x83 writes. Each contains a nine-byte LFO body followed by 54 zero bytes. Note-on selector 4 used gain -20, frequency fields 226 then 450 and duration field 32767; caller note-off uses gain -128, frequency zero and duration field 32768. Final and process-exit cleanup repeated note-off on selectors 4,3,1,0. The owner mostly felt the first signal, heard the second more clearly and confirmed its pitch was higher. No location was reported and no calibrated frequency, duration-bit semantics or actuator mapping is inferred. No input 0x44 occurred in the capture; all observed host writes completed with status zero and 64 bytes, with no pending observed writes. A subsequent four-channel repeat completed 48 further identically padded writes without observed input 0x44.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Owner-authorized retail direct-wired 28de:1302; D9 bare metal",
+    "firmware": "bcdDevice 0404 device-version marker; firmware attribute not observed in this reduction",
+    "transport": "usb",
+    "scope": "2026-11-05 Pacific, supervised generated two-note MIDI pilot through pinned upstream host player; no USB MIDI interface or PCM streaming claim."
+  },
+  "sources": [
+    "steam-midi-singer-d809a28"
+  ],
+  "experiments": [
+    "steam-d9-midi-pilot",
+    "steam-d9-midi-channels"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

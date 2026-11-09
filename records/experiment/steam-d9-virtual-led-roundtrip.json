@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-led-roundtrip",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "steam-d9-uhid-feature-error-collapse"
+  ],
+  "fixtures": [],
+  "procedure": "Ordinary-user D9 Linux 7.3 runs with physical Valve devices, Steam, SDL, Dolphin and System Settings absent. Two sequential fresh private candidate probes verified exact process/instance HID_PHYS and virtual UHID ancestry before raw open. The automated client set brightness 75 and override 1, sent four basis and six mixed C5 values, checked retained raw fields and exact repeated E9, 89 and named-read replies, tested malformed C5 and invalid override errors, explicitly restored outputs, closed the client, double-closed the probe and verified owned HID/raw removal. Relative observations and binary digests are in evidence/steam-d9-virtual-led-roundtrip.json. No physical device could be selected.",
+  "semantic_outcome": "Both final cycles completed 77 feature requests and 77 submitted replies, with no unmatched requests, zero write failures and complete owned cleanup. Raw intent remained distinct from the observed zero E9 replies. Invalid requests preserved retained fields: internal -22 acknowledgements appeared in private instrumentation while the raw client received errno 5, matching kernel UHID error handling. This is virtual consumer evidence, not physical colour calibration or proof of every future kernel or client behavior."
+}

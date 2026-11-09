@@ -2,6 +2,8 @@
 
 **Scope:** direct wired Valve `28de:1302` (Triton/IBEX); source-only interpretation of pinned host and replacement-firmware code, cross-checked against **existing**, separately authorized D9 physical findings. **No hardware, D9 host, Steam runtime or virtualgamepad implementation was operated in this lane.** Version anchors: Linux v7.3-rc1 `cee9395`; SDL3 `6defbc0`; sc26re `518fa64`; real D9 Steam Stable `1792618285`, captured on 2026-11-04. Do not merge this source-only model into the implementation as physical truth.
 
+**Follow-up evidence:** [HIDINPUT lizard coexistence, Puck restoration and Steam activation gates](steam-controller-modes-followup.md) refines O1/O2/O4/O5/O7 without claiming a wired watchdog measurement.
+
 This report answers O1–O7. *Source evidenced* describes a concrete pinned implementation, **not** proof that retail 1302 firmware or proprietary Steam follows it. *Physically observed* is used **only** when explicitly referencing already-published corpus #82/#101/D9 evidence. *Inferred* requires the D9 observations below. *Unknown* has no source-established value. GPL source is paraphrased and linked by file:line; no code excerpt is redistributed.
 
 ## Existing evidence and precedence

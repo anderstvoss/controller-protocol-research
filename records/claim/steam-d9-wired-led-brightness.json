@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-led-brightness",
+  "statement": "Steam LED Brightness UI changes on the wired 2026 controller correspond to successful command 87 setting key 45 writes containing raw integer values matching displayed percentages during traversal. Owner observed dimming near 24% and brightening toward 75%. Repeated/nearby writes occur after direct slider writes; the final observed write is 98 despite a 100 write during restoration. Expose the last accepted raw key 45 intent without claiming a calibrated physical brightness, exact final UI synchronization, persistence, RGB capability or wireless behavior.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Direct wired retail 1302; bcdDevice 0404 checked before capture",
+    "firmware": "Build attribute not re-read for LED session; no firmware action performed",
+    "transport": "usb",
+    "scope": "One owner-controlled Steam brightness session; raw key 45 values and qualitative visible effect only. No RGB or wireless validation."
+  },
+  "sources": [
+    "steam-detect-sc26re-settings"
+  ],
+  "experiments": [
+    "steam-d9-wired-led-slider"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

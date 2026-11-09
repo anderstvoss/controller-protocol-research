@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-stability-sc26re-named-settings",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/mwdmwd/sc26re/518fa645067f1dd6012f910a4575e487eccc9a5c/app/src/valve_settings.c",
+  "revision": "518fa645067f1dd6012f910a4575e487eccc9a5c",
+  "sha256": "90895d1d1d11cbbcfe768ac92c25ccf6335e02b4a363fb15ba1b30c5a5f09a53",
+  "lineage": "mwdmwd/sc26re",
+  "locator": "24-29 named transport and two bond paths; 387-466 named read dispatch and absent-value handling; replacement firmware only, no implementation copied"
+}

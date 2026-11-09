@@ -1,0 +1,2125 @@
+{
+  "schema_version": 1,
+  "scope": "Owner-operated direct-wired controller, consumers closed except the labelled normal SDL hold. USB addressing, absolute clocks, paths and unreviewed payloads omitted.",
+  "stages": [
+    {
+      "label": "pads-01",
+      "capture_sha256": "c424ff2c4a1f486d860776073c27fef97a3d250f85ec89288ec9d365d58b55c6",
+      "windows": [
+        {
+          "label": "right-pad-touch:go",
+          "counts": {
+            "42": 1992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-horizontal:go",
+          "counts": {
+            "42": 1990,
+            "40": 643
+          },
+          "mouse_buttons": {
+            "0": 643
+          },
+          "mouse_relative_sums": [
+            -2165,
+            -33,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -19,
+              15
+            ],
+            [
+              -5,
+              3
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical:go",
+          "counts": {
+            "42": 1990,
+            "40": 540
+          },
+          "mouse_buttons": {
+            "0": 540
+          },
+          "mouse_relative_sums": [
+            157,
+            811,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -2,
+              4
+            ],
+            [
+              -20,
+              23
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-click:go",
+          "counts": {
+            "42": 1990,
+            "40": 234
+          },
+          "mouse_buttons": {
+            "1": 225,
+            "0": 9
+          },
+          "mouse_relative_sums": [
+            24,
+            35,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              2
+            ],
+            [
+              -2,
+              4
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-touch:go",
+          "counts": {
+            "42": 1988
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal:go",
+          "counts": {
+            "42": 1993,
+            "40": 567
+          },
+          "mouse_buttons": {
+            "0": 567
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            -312
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -4,
+              3
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical:go",
+          "counts": {
+            "42": 1994,
+            "40": 574
+          },
+          "mouse_buttons": {
+            "0": 574
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            -55,
+            -34
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-click:go",
+          "counts": {
+            "42": 1992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "sticks-02",
+      "capture_sha256": "9073822c50588ff5083d8873b915bc072f3a20bd424cbef7ea6f9241447b3407",
+      "windows": [
+        {
+          "label": "left-stick-left:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-stick-right:go",
+          "counts": {
+            "42": 1993
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-stick-up:go",
+          "counts": {
+            "42": 1988
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-stick-down:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-left:go",
+          "counts": {
+            "42": 1989
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-right:go",
+          "counts": {
+            "42": 1992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-up:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-down:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-stick-touch:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-touch:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "buttons-03",
+      "capture_sha256": "8a4c6299dbf045b6a35731eb1ad43b629aae8062af7911fb0cb25d868158232c",
+      "windows": [
+        {
+          "label": "a:go",
+          "counts": {
+            "42": 1992,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000280000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "b:go",
+          "counts": {
+            "42": 1992,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000290000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "x:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "y:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "d-pad-up:go",
+          "counts": {
+            "42": 1993,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000520000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "d-pad-down:go",
+          "counts": {
+            "42": 1991,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000510000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "d-pad-left:go",
+          "counts": {
+            "42": 1992,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000500000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "d-pad-right:go",
+          "counts": {
+            "42": 1997,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "4100004f0000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "left-shoulder:go",
+          "counts": {
+            "42": 1989
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-shoulder:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-stick-click:go",
+          "counts": {
+            "42": 1989
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-stick-click:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "buttons-04",
+      "capture_sha256": "3e1c441b497676a3dbaf7878349caa62475fb8298c92576cef45d160e6f38560",
+      "windows": [
+        {
+          "label": "view:go",
+          "counts": {
+            "42": 1993,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "4100002b0000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "options-/-menu:go",
+          "counts": {
+            "42": 1991,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000290000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "qam:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "l4:go",
+          "counts": {
+            "42": 1992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "l5:go",
+          "counts": {
+            "42": 1994
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "r4:go",
+          "counts": {
+            "42": 1994
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "r5:go",
+          "counts": {
+            "42": 1992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "steam:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "analog-05",
+      "capture_sha256": "b12e10004fea47fa41c5ff6752578776073c0a49803cfccf238cc5457479f5cd",
+      "windows": [
+        {
+          "label": "left-trigger-half:go",
+          "counts": {
+            "42": 1990
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-trigger-full:go",
+          "counts": {
+            "42": 1991,
+            "40": 258
+          },
+          "mouse_buttons": {
+            "2": 255,
+            "0": 3
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-trigger-half:go",
+          "counts": {
+            "42": 1987
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-trigger-full:go",
+          "counts": {
+            "42": 2010,
+            "40": 285
+          },
+          "mouse_buttons": {
+            "1": 282,
+            "0": 3
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-grip-touch:go",
+          "counts": {
+            "42": 2010
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-grip-touch:go",
+          "counts": {
+            "42": 2010
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "sdl-transition-06",
+      "capture_sha256": "217e955ddaa2ce4f497d5d9c011e95199eae6c02d0c069682af1473aca21a568",
+      "windows": [
+        {
+          "label": "before-right-pad:go",
+          "counts": {
+            "42": 1995,
+            "40": 773
+          },
+          "mouse_buttons": {
+            "0": 773
+          },
+          "mouse_relative_sums": [
+            622,
+            -98,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -14,
+              16
+            ],
+            [
+              -4,
+              3
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "before-a:go",
+          "counts": {
+            "42": 1992,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000280000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "during-right-pad:go",
+          "counts": {
+            "42": 1991
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "during-a:go",
+          "counts": {
+            "42": 1996,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000280000000000": 3,
+            "410000000000000000": 3
+          }
+        },
+        {
+          "label": "after-right-pad:go",
+          "counts": {
+            "42": 1992,
+            "40": 718
+          },
+          "mouse_buttons": {
+            "0": 718
+          },
+          "mouse_relative_sums": [
+            309,
+            71,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -19,
+              14
+            ],
+            [
+              -4,
+              3
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "after-a:go",
+          "counts": {
+            "42": 1991,
+            "41": 6
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {
+            "410000280000000000": 3,
+            "410000000000000000": 3
+          }
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    },
+    {
+      "label": "calibration-07",
+      "capture_sha256": "e56e165e2ac729cf964036ff94952f20e844c2c5e84337a29ca86cd7f612c951",
+      "windows": [
+        {
+          "label": "right-pad-horizontal-center:go",
+          "counts": {
+            "42": 993,
+            "40": 180
+          },
+          "mouse_buttons": {
+            "0": 180
+          },
+          "mouse_relative_sums": [
+            -162,
+            -6,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -4,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-horizontal-out:go",
+          "counts": {
+            "42": 1490,
+            "40": 12
+          },
+          "mouse_buttons": {
+            "0": 12
+          },
+          "mouse_relative_sums": [
+            -4,
+            2,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-horizontal-hold:go",
+          "counts": {
+            "42": 994,
+            "40": 22
+          },
+          "mouse_buttons": {
+            "0": 22
+          },
+          "mouse_relative_sums": [
+            -1,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-horizontal-return:go",
+          "counts": {
+            "42": 1491,
+            "40": 285
+          },
+          "mouse_buttons": {
+            "0": 285
+          },
+          "mouse_relative_sums": [
+            140,
+            3,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              2
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-horizontal-center-again:go",
+          "counts": {
+            "42": 994,
+            "40": 12
+          },
+          "mouse_buttons": {
+            "0": 12
+          },
+          "mouse_relative_sums": [
+            -2,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical-center:go",
+          "counts": {
+            "42": 993,
+            "40": 38
+          },
+          "mouse_buttons": {
+            "0": 38
+          },
+          "mouse_relative_sums": [
+            -29,
+            -4,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -3,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical-out:go",
+          "counts": {
+            "42": 1516,
+            "40": 210
+          },
+          "mouse_buttons": {
+            "0": 210
+          },
+          "mouse_relative_sums": [
+            -8,
+            -108,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              1
+            ],
+            [
+              -3,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical-hold:go",
+          "counts": {
+            "42": 993,
+            "40": 30
+          },
+          "mouse_buttons": {
+            "0": 30
+          },
+          "mouse_relative_sums": [
+            7,
+            2,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical-return:go",
+          "counts": {
+            "42": 1516,
+            "40": 296
+          },
+          "mouse_buttons": {
+            "0": 296
+          },
+          "mouse_relative_sums": [
+            -19,
+            125,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-pad-vertical-center-again:go",
+          "counts": {
+            "42": 999,
+            "40": 18
+          },
+          "mouse_buttons": {
+            "0": 18
+          },
+          "mouse_relative_sums": [
+            -2,
+            -3,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal-center:go",
+          "counts": {
+            "42": 992
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal-out:go",
+          "counts": {
+            "42": 1515,
+            "40": 30
+          },
+          "mouse_buttons": {
+            "0": 30
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            16
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal-hold:go",
+          "counts": {
+            "42": 993
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal-return:go",
+          "counts": {
+            "42": 1516,
+            "40": 41
+          },
+          "mouse_buttons": {
+            "0": 41
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            -3,
+            -18
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-horizontal-center-again:go",
+          "counts": {
+            "42": 993
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical-center:go",
+          "counts": {
+            "42": 994
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical-out:go",
+          "counts": {
+            "42": 1490,
+            "40": 38
+          },
+          "mouse_buttons": {
+            "0": 38
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            -19,
+            1
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical-hold:go",
+          "counts": {
+            "42": 1018
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical-return:go",
+          "counts": {
+            "42": 1489,
+            "40": 32
+          },
+          "mouse_buttons": {
+            "0": 32
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            15,
+            1
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-pad-vertical-center-again:go",
+          "counts": {
+            "42": 1017
+          },
+          "mouse_buttons": {},
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-trigger-ramp-pull:go",
+          "counts": {
+            "42": 2481,
+            "40": 184
+          },
+          "mouse_buttons": {
+            "2": 184
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-trigger-ramp-hold:go",
+          "counts": {
+            "40": 757,
+            "42": 756
+          },
+          "mouse_buttons": {
+            "2": 757
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "left-trigger-ramp-release:go",
+          "counts": {
+            "40": 628,
+            "42": 2481
+          },
+          "mouse_buttons": {
+            "2": 627,
+            "0": 1
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-trigger-ramp-pull:go",
+          "counts": {
+            "42": 2481,
+            "40": 302
+          },
+          "mouse_buttons": {
+            "1": 302
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-trigger-ramp-hold:go",
+          "counts": {
+            "42": 758,
+            "40": 757
+          },
+          "mouse_buttons": {
+            "1": 757
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        },
+        {
+          "label": "right-trigger-ramp-release:go",
+          "counts": {
+            "42": 2483,
+            "40": 388
+          },
+          "mouse_buttons": {
+            "1": 387,
+            "0": 1
+          },
+          "mouse_relative_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mouse_relative_ranges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "keyboard_payloads": {}
+        }
+      ],
+      "capture_drop_count": "not supplied"
+    }
+  ],
+  "fixture_unique_complete_reports": 363,
+  "owner_caveats": [
+    "The first pad session omitted the requested reconnect. It observes existing state. A separate reconnect-only startup session fills attachment traffic, not firmware power-on defaults.",
+    "The first right-pad horizontal center window in calibration-07 contains early movement; exclude it as stationary evidence. Slow movements were uneven; no constant-speed assumption."
+  ],
+  "startup": {
+    "capture_sha256": "c322c7968359dca192ee1ed130769df8280bf2d6db3aab0a8982c9adf09f19bd",
+    "duration_after_origin_ms": 46236.626,
+    "input_id_length_counts": {
+      "42/54": 11468,
+      "43/15": 13
+    },
+    "feature_write_metadata": [
+      {
+        "t_rel_ms": 60.466,
+        "command": "0xae",
+        "inner_length": 22,
+        "status": 0,
+        "completed_bytes": 64
+      },
+      {
+        "t_rel_ms": 61.507,
+        "command": "0x83",
+        "inner_length": 0,
+        "status": 0,
+        "completed_bytes": 64
+      },
+      {
+        "t_rel_ms": 62.546,
+        "command": "0x85",
+        "inner_length": 0,
+        "status": 0,
+        "completed_bytes": 64
+      },
+      {
+        "t_rel_ms": 63.087,
+        "command": "0x8e",
+        "inner_length": 0,
+        "status": 0,
+        "completed_bytes": 64
+      }
+    ],
+    "capture_drop_count": "not supplied",
+    "scope": "USB reconnect and kernel attachment, not proof of power-on reset or firmware defaults."
+  },
+  "sdl_feature_writes": [
+    {
+      "t_rel_ms": 53251.995,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 56251.69,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 59252.632,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 62257.21,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 65258.17,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 68260.052,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 71260.07,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 74262.301,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 77262.881,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 80264.815,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 83269.764,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 86274.74,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 89278.833,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 92281.318,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 95283.41,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 98285.544,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 101285.358,
+      "command": "0x87",
+      "inner_length": 3,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0,
+      "settings": [
+        {
+          "key": 9,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "t_rel_ms": 103940.953,
+      "command": "0x85",
+      "inner_length": 0,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0
+    },
+    {
+      "t_rel_ms": 103941.434,
+      "command": "0x8e",
+      "inner_length": 0,
+      "requested_bytes": 64,
+      "completed_bytes": 64,
+      "status": 0
+    }
+  ]
+}

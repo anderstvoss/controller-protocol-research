@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-entry-stability",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-stability-sc26re-feature-header",
+    "steam-stability-sc26re-named-settings",
+    "steam-modes-sc26re-feature"
+  ],
+  "fixtures": [],
+  "procedure": "Prepared bare-metal x86-64 D9, Linux 7.3.0-1-mainline, Stable Steam 1792618285. Two clean physical controls and two baseline virtual instances, each fresh Steam and same Controller list/details/Begin Test path. Observe private relative-time udev events, sampled raw descriptors, controller log stage markers and owner UI markers; virtual instrumentation adds exact parent UHID lifecycle, feature bytes and dequeue-to-reply latency. Two private counterfactual instances change only acceptance of exact ED reads for the two named records to a synthetic absent response. Evidence and limitations in evidence/steam-d9-wired-stability.json. Passed denotes completed comparison, not baseline stability.",
+  "semantic_outcome": "Physical controls were stable. Baseline virtual entries were replaced on opening the Controller list; Steam released/reopened the same layered hidraw node while native input children returned in the gap. Serial/attribute replies remained identical, and measured post-dequeue reply submission stayed below 1.5 ms. Exact synthetic absent named reads removed the rejected ED requests, failed controller-info marker and raw reopen in both counterfactual runs; owner reported stable lists in both, details stable in one and visually unclear in one, with Begin Test opening in both. Parent UHID remained open during layered-handle gaps. This supports a bounded consumer workaround, not proof that evdev itself was the replacement UI entry."
+}

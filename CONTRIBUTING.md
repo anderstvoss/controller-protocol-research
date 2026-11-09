@@ -29,6 +29,16 @@ Record notable changes in `CHANGELOG.md` under `Unreleased`. To change the
 validator's dependencies, edit `requirements-dev.in` and regenerate the hash
 lock with `uv pip compile requirements-dev.in --generate-hashes --python-version 3.12 --output-file requirements-dev.txt`.
 
+## Claim prose review
+
+Read each final JSON `statement` as prose before publication, including records
+emitted by a one-off exporter. Preserve spaces between words and numbers or hex
+literals (for example, "output 0x86", "byte 1 length 30", "selector 0/4: 1290").
+Use explicit spaces in authored string literals; neither JSON serialization nor
+Markdown reflow supplies missing word boundaries. Review `applicability` prose
+as well. Numeric field values, packet bytes and evidence qualifications must
+remain unchanged when correcting wording.
+
 ## Capture safety
 
 This repository is intended to be public. Before adding a physical or
@@ -43,6 +53,10 @@ sanitized fixture:
    proof that a fixture is safe; review the bytes yourself.
 4. Do not commit upstream source code, vendor documents or firmware. Cite them
    in `records/source/` by URL, revision and hash instead.
+
+Vendor-firmware static analysis is not accepted in this public corpus. Keep it
+in the owner-designated private notes repository after verifying its visibility.
+Even private notes must contain neither firmware bytes nor disassembly listings.
 
 ## Licensing
 

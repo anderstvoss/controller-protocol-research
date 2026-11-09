@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "capture_sha256": "640b36f3995055bc329053f550d4a3d9a3328512e0cf638bcf607ddf8a3c3a09",
+  "selection": "Physical USB identity verified immediately before capture; controller detached before reduction. Unique 64-byte numbered HID feature SET 87 key 45 signature selected in passive capture; no attach descriptor in this selection.",
+  "clock": "microseconds relative to local guide origin; no absolute clock published",
+  "setting_key": 45,
+  "command": "87",
+  "numbered_wire_length": 64,
+  "observations": [
+    {
+      "t_us": 8110480,
+      "kind": "owner_marker",
+      "label": "low_intent",
+      "detail": "about 25%"
+    },
+    {
+      "t_us": 41651202,
+      "kind": "owner_marker",
+      "label": "low_observation",
+      "detail": "saw it decrease to 24% (first value hit w slider) then no viasable change as i incresed to 25%)"
+    },
+    {
+      "t_us": 48081363,
+      "kind": "owner_marker",
+      "label": "high_intent",
+      "detail": "about 75%"
+    },
+    {
+      "t_us": 71305371,
+      "kind": "owner_marker",
+      "label": "high_observation",
+      "detail": "oi swept up to near 82, then back to 75. it got brighter"
+    },
+    {
+      "t_us": 74111942,
+      "kind": "owner_marker",
+      "label": "restore_intent",
+      "detail": "100%"
+    },
+    {
+      "t_us": 90601786,
+      "kind": "owner_marker",
+      "label": "restore_observation",
+      "detail": "some differenc but hard to tell since alredy bright"
+    }
+  ],
+  "writes": [
+    {
+      "t_us": 8375880,
+      "value": 99,
+      "status": 0
+    },
+    {
+      "t_us": 9195095,
+      "value": 100,
+      "status": 0
+    },
+    {
+      "t_us": 9261201,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 10555437,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 10622256,
+      "value": 25,
+      "status": 0
+    },
+    {
+      "t_us": 12026450,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 44787409,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 47697899,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 48929934,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 50165020,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 50264713,
+      "value": 24,
+      "status": 0
+    },
+    {
+      "t_us": 51971873,
+      "value": 25,
+      "status": 0
+    },
+    {
+      "t_us": 52037406,
+      "value": 26,
+      "status": 0
+    },
+    {
+      "t_us": 52039081,
+      "value": 26,
+      "status": 0
+    },
+    {
+      "t_us": 52107345,
+      "value": 27,
+      "status": 0
+    },
+    {
+      "t_us": 52107943,
+      "value": 27,
+      "status": 0
+    },
+    {
+      "t_us": 52174724,
+      "value": 28,
+      "status": 0
+    },
+    {
+      "t_us": 52175208,
+      "value": 28,
+      "status": 0
+    },
+    {
+      "t_us": 52241553,
+      "value": 31,
+      "status": 0
+    },
+    {
+      "t_us": 52242081,
+      "value": 31,
+      "status": 0
+    },
+    {
+      "t_us": 52306518,
+      "value": 33,
+      "status": 0
+    },
+    {
+      "t_us": 52307053,
+      "value": 33,
+      "status": 0
+    },
+    {
+      "t_us": 52372128,
+      "value": 35,
+      "status": 0
+    },
+    {
+      "t_us": 52372715,
+      "value": 35,
+      "status": 0
+    },
+    {
+      "t_us": 52437023,
+      "value": 40,
+      "status": 0
+    },
+    {
+      "t_us": 52437555,
+      "value": 40,
+      "status": 0
+    },
+    {
+      "t_us": 52503196,
+      "value": 43,
+      "status": 0
+    },
+    {
+      "t_us": 52503769,
+      "value": 43,
+      "status": 0
+    },
+    {
+      "t_us": 52567591,
+      "value": 51,
+      "status": 0
+    },
+    {
+      "t_us": 52568092,
+      "value": 51,
+      "status": 0
+    },
+    {
+      "t_us": 52632671,
+      "value": 54,
+      "status": 0
+    },
+    {
+      "t_us": 52633230,
+      "value": 54,
+      "status": 0
+    },
+    {
+      "t_us": 52698389,
+      "value": 60,
+      "status": 0
+    },
+    {
+      "t_us": 52698834,
+      "value": 60,
+      "status": 0
+    },
+    {
+      "t_us": 52765843,
+      "value": 62,
+      "status": 0
+    },
+    {
+      "t_us": 52766347,
+      "value": 62,
+      "status": 0
+    },
+    {
+      "t_us": 52831594,
+      "value": 67,
+      "status": 0
+    },
+    {
+      "t_us": 52832108,
+      "value": 67,
+      "status": 0
+    },
+    {
+      "t_us": 52897885,
+      "value": 69,
+      "status": 0
+    },
+    {
+      "t_us": 52898441,
+      "value": 69,
+      "status": 0
+    },
+    {
+      "t_us": 52962895,
+      "value": 70,
+      "status": 0
+    },
+    {
+      "t_us": 52963466,
+      "value": 70,
+      "status": 0
+    },
+    {
+      "t_us": 53029155,
+      "value": 72,
+      "status": 0
+    },
+    {
+      "t_us": 53029708,
+      "value": 72,
+      "status": 0
+    },
+    {
+      "t_us": 53094880,
+      "value": 73,
+      "status": 0
+    },
+    {
+      "t_us": 53095387,
+      "value": 73,
+      "status": 0
+    },
+    {
+      "t_us": 53161824,
+      "value": 78,
+      "status": 0
+    },
+    {
+      "t_us": 53162363,
+      "value": 78,
+      "status": 0
+    },
+    {
+      "t_us": 53227302,
+      "value": 79,
+      "status": 0
+    },
+    {
+      "t_us": 53227824,
+      "value": 79,
+      "status": 0
+    },
+    {
+      "t_us": 53293597,
+      "value": 80,
+      "status": 0
+    },
+    {
+      "t_us": 53294134,
+      "value": 80,
+      "status": 0
+    },
+    {
+      "t_us": 53359563,
+      "value": 81,
+      "status": 0
+    },
+    {
+      "t_us": 53360167,
+      "value": 81,
+      "status": 0
+    },
+    {
+      "t_us": 53426123,
+      "value": 82,
+      "status": 0
+    },
+    {
+      "t_us": 53426624,
+      "value": 82,
+      "status": 0
+    },
+    {
+      "t_us": 53491187,
+      "value": 81,
+      "status": 0
+    },
+    {
+      "t_us": 53491696,
+      "value": 81,
+      "status": 0
+    },
+    {
+      "t_us": 53557253,
+      "value": 80,
+      "status": 0
+    },
+    {
+      "t_us": 53557878,
+      "value": 80,
+      "status": 0
+    },
+    {
+      "t_us": 53623716,
+      "value": 79,
+      "status": 0
+    },
+    {
+      "t_us": 53624211,
+      "value": 79,
+      "status": 0
+    },
+    {
+      "t_us": 53688861,
+      "value": 78,
+      "status": 0
+    },
+    {
+      "t_us": 53689418,
+      "value": 78,
+      "status": 0
+    },
+    {
+      "t_us": 53755149,
+      "value": 77,
+      "status": 0
+    },
+    {
+      "t_us": 53755679,
+      "value": 77,
+      "status": 0
+    },
+    {
+      "t_us": 53820277,
+      "value": 76,
+      "status": 0
+    },
+    {
+      "t_us": 53820886,
+      "value": 76,
+      "status": 0
+    },
+    {
+      "t_us": 53885691,
+      "value": 75,
+      "status": 0
+    },
+    {
+      "t_us": 56031997,
+      "value": 76,
+      "status": 0
+    },
+    {
+      "t_us": 74657169,
+      "value": 75,
+      "status": 0
+    },
+    {
+      "t_us": 74722819,
+      "value": 76,
+      "status": 0
+    },
+    {
+      "t_us": 74767487,
+      "value": 76,
+      "status": 0
+    },
+    {
+      "t_us": 74832282,
+      "value": 86,
+      "status": 0
+    },
+    {
+      "t_us": 74832788,
+      "value": 86,
+      "status": 0
+    },
+    {
+      "t_us": 74898719,
+      "value": 89,
+      "status": 0
+    },
+    {
+      "t_us": 74899274,
+      "value": 86,
+      "status": 0
+    },
+    {
+      "t_us": 74902055,
+      "value": 89,
+      "status": 0
+    },
+    {
+      "t_us": 74969838,
+      "value": 92,
+      "status": 0
+    },
+    {
+      "t_us": 74970537,
+      "value": 92,
+      "status": 0
+    },
+    {
+      "t_us": 75038864,
+      "value": 93,
+      "status": 0
+    },
+    {
+      "t_us": 75039418,
+      "value": 93,
+      "status": 0
+    },
+    {
+      "t_us": 75105624,
+      "value": 94,
+      "status": 0
+    },
+    {
+      "t_us": 75106484,
+      "value": 94,
+      "status": 0
+    },
+    {
+      "t_us": 75172756,
+      "value": 95,
+      "status": 0
+    },
+    {
+      "t_us": 75173307,
+      "value": 95,
+      "status": 0
+    },
+    {
+      "t_us": 75239195,
+      "value": 98,
+      "status": 0
+    },
+    {
+      "t_us": 75239729,
+      "value": 98,
+      "status": 0
+    },
+    {
+      "t_us": 75306620,
+      "value": 100,
+      "status": 0
+    },
+    {
+      "t_us": 75561667,
+      "value": 98,
+      "status": 0
+    }
+  ],
+  "pending_control_count": 0,
+  "limitations": [
+    "Only setting 45 values are published; unrelated feature payloads omitted.",
+    "Owner slider traversal includes nearby intermediate values and repeated writes.",
+    "Successful SET completion is not readback.",
+    "No default-reset or restart persistence trial performed.",
+    "Reported Bluetooth blue versus wired green is a separate unsupervised owner observation, not this wired capture evidence.",
+    "No C5/E9 RGB payload layout was established or injected."
+  ]
+}

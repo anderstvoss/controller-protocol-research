@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-wired-rgbw-mixing-observation",
+  "statement": "With setting 37 override enabled, pairwise RGB mixtures at raw value 25 produced owner-described orange-yellow, blue-biased cyan and light pink/purple. Adding white at raw value 10 produced lighter or less saturated descriptions. The expected labels were hypotheses, not pass criteria or sRGB coordinates. Equal command values do not establish equal optical output. Four logical channels are demonstrated; package count, die allocation, spectra and a calibrated colour transfer remain unknown.",
+  "status": "physically_observed",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Physical direct-wired 1302; device-version marker 0404 checked before LED work",
+    "firmware": "Live build attribute not re-read in these colour sessions",
+    "transport": "usb",
+    "scope": "Qualitative six-window mixing observations only; human viewing and uncalibrated current/optics. No wireless or calibrated colour measurement."
+  },
+  "sources": [
+    "steam-d9-rgbw-pwm-board"
+  ],
+  "experiments": [
+    "steam-d9-wired-rgbw-mixing"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
