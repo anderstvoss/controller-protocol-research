@@ -1,0 +1,1070 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-sdl-gyro-instrumentation",
+  "permission": "Owner applied temporary access to the verified virtual raw node.",
+  "config": {
+    "profile": "Original with MotionPlus",
+    "attachment_fixed_during_child": true,
+    "fresh_sdl_process": true,
+    "hid_wiimote_bound_before_and_after_child": true,
+    "motionplus_evdev_holder": "opened before SDL initialization",
+    "synthetic_eeprom_and_extension_calibration": true,
+    "drive_raw_pitch_roll_yaw": [
+      [
+        9000,
+        7000,
+        8500
+      ],
+      [
+        7000,
+        9000,
+        7800
+      ]
+    ],
+    "slow_flags": [
+      true,
+      true,
+      true
+    ],
+    "drive_period_ms": 250,
+    "sdl_hints": "Enable HIDAPI, Wii, and background events. Exclude the other virtual Wii product ID."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "7.3.0-1-mainline",
+    "architecture": "x86_64",
+    "git_sha": "74ff69b12283722bb3d40eb84935fdf926ea2259",
+    "sdl_version": "3.4.20",
+    "sdl_revision": "f00dc919ca35b9756316e86c4777392de442f9b2",
+    "sdl_upstream_wii_source_sha256": "7313950267ecc398132db6c61426f5e37bc168be494b189bf3d5ac9b71af2df2",
+    "sdl_patched_wii_source_sha256": "ba79607c11a5bc7198ffdef8bd373f9947d40eef697d1575933d997fa6409ecf",
+    "sdl_logging_patch_sha256": "dcb8e7e27155d9eb14a4bee734870e3de4cead0cfc4e14393927f4f9dc7804e7",
+    "sdl_library_sha256": "f268100b72777b1438576d89a1ac4d4876a138393e46bf97fc385355a9814684",
+    "sdl_probe_source_sha256": "9a38c32430337e98c6285eea51a7ca6216e405257a970712a5792184883fabbe",
+    "sdl_probe_executable_sha256": "0ad8907f8faa77a7310c28904c416ac3f72008e9d1f4760f268491e5a124b4ea",
+    "provider_source_sha256": "c4f8a5ce0f48cecdd37ed6aa3d29e55008037d9b35c4f268e3e05b2f97fb91a2",
+    "provider_executable_sha256": "b244f26f06492204a13289892c157cff8f74e33e58c33f04ae0aa51243f1b6ac",
+    "trace_source_sha256": "9930bc50c66a552cf04d075921d3c307811ddbaef50c455844756034ea57aea5",
+    "trace_library_sha256": "b89aac4361f205c41c184f8855a879f3a30b0867ad2c1c1b1dd7c22c7441e927"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        }
+      },
+      "observations": {
+        "summary": {
+          "version": 3004020,
+          "hidapi_open": true,
+          "gamepad_open": true,
+          "gyro_capable": false,
+          "gyro_enabled": false,
+          "gyro_events": 0,
+          "gyro_nonzero_events": 0,
+          "gyro_changing_events": 0,
+          "accel_events": 0,
+          "polls": 5037,
+          "disconnected_polls": 3491,
+          "removals": 1,
+          "window_ms": 26004,
+          "kernel_gyro_events": [
+            11,
+            11,
+            11
+          ],
+          "kernel_gyro_min": [
+            -3528,
+            -10728,
+            -10728
+          ],
+          "kernel_gyro_max": [
+            2772,
+            7272,
+            7272
+          ]
+        },
+        "cached_state_transitions": [
+          {
+            "ms": 3014,
+            "point": "init-enter",
+            "present": 0,
+            "mode": 0
+          }
+        ],
+        "decode_decisions": {
+          "skip-mode-none": 415,
+          "skip-mode-none-gyro-marked": 4
+        },
+        "sdl_transactions_and_states": [
+          {
+            "ms": 3014,
+            "point": "init-enter",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3014,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3015,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 0,
+            "length": 2,
+            "first_data_bytes": "0405"
+          },
+          {
+            "ms": 3015,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400f0",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 85
+          },
+          {
+            "ms": 3016,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3016,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fb",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 0
+          },
+          {
+            "ms": 3016,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3016,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3019,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3019,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3021,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3021,
+            "point": "linux-activation-bypass",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              4,
+              0
+            ]
+          },
+          {
+            "ms": 3021,
+            "point": "init-exit",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3021,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a620"
+          },
+          {
+            "ms": 3195,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a420"
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              19,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              26,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              19,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              26,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "open-before-reset",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3195,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400f0",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 85
+          },
+          {
+            "ms": 3196,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3196,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fb",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 0
+          },
+          {
+            "ms": 3196,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3196,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3200,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3201,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3201,
+            "point": "open-after-reset",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3201,
+            "point": "state-query-enter",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3201,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3212,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3212,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3212,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3212,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a600fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3212,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a620"
+          },
+          {
+            "ms": 3212,
+            "point": "open-after-state",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3243,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3253,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3253,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3263,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3284,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a420"
+          },
+          {
+            "ms": 3305,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3305,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 11215,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": false
+          },
+          {
+            "ms": 11220,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 0,
+            "length": 2,
+            "first_data_bytes": "0405"
+          },
+          {
+            "ms": 11220,
+            "point": "periodic-identify",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              1,
+              1029
+            ]
+          },
+          {
+            "ms": 11220,
+            "point": "disconnect",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              1
+            ]
+          }
+        ],
+        "provider_packets": {
+          "gyro_packets": 302,
+          "downstream_packets": 0,
+          "invalid_or_mismatched": 0,
+          "vectors": [
+            {
+              "raw_yaw_roll_pitch": [
+                7800,
+                9000,
+                7000
+              ],
+              "count": 177
+            },
+            {
+              "raw_yaw_roll_pitch": [
+                8500,
+                7000,
+                9000
+              ],
+              "count": 125
+            }
+          ],
+          "slow_flags": [
+            {
+              "yaw_roll_pitch": [
+                true,
+                true,
+                true
+              ],
+              "count": 302
+            }
+          ],
+          "acked_map_modes": [
+            {
+              "mode": 4,
+              "count": 3
+            }
+          ],
+          "mode5_alternation_errors": 0
+        },
+        "sdl_hidraw_expected_gyro_reports_in_drive": [
+          {
+            "vector": [
+              7800,
+              9000,
+              7000
+            ],
+            "reports": 4
+          }
+        ],
+        "unattributed_or_ambiguous_provider_requests": [
+          {
+            "relative_ns": 1958998,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3276153,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 4571141,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 6971115,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 8246382,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 9533304,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 13090432,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 15823032,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3014454500,
+            "address_hex": "a400fe",
+            "actor": "ambiguous",
+            "matching_raw_writes": 2,
+            "request": "read",
+            "length": 2
+          },
+          {
+            "relative_ns": 3020403096,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3021546008,
+            "address_hex": "a400fe",
+            "actor": "ambiguous",
+            "matching_raw_writes": 2,
+            "request": "read",
+            "length": 2
+          },
+          {
+            "relative_ns": 3023809118,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 3026093090,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3027234375,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3028349424,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 3032003632,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3199457043,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3202969687,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 3204219512,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3205359331,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3206518097,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 3210044960,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29230417619,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29231600321,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 29236495929,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 29239020535,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29240291404,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "SDL 3.4.20, Original with MotionPlus: 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 3491 of 5037 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. After the open reset and an interleaved readback, SDL advertised no gyro. SDL received four valid reports for the driven gyro vector and skipped all four at the cached-mode gate. The periodic check later saw active mode 0x04 without updating the cache and removed the joystick. The kernel holder saw changing gyro."
+  }
+}

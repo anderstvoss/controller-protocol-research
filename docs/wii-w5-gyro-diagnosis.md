@@ -144,3 +144,9 @@ remain byte-identical. Pinned IOhidapi169-200 reads/writes direct Wii reports;
 SDLGamepad125-142/354 enables/reads SDL sensors. WiimoteController1352-1378 and
 1462-1468 handles MotionPlus directly, requiring calibration before angular
 velocity conversion. Source capability is separate from this blocked live check.
+
+## Instrumented follow-up
+
+The [SDL Wii MotionPlus instrumentation](wii-sdl-gyro-instrumentation.md)
+directly measures the private SDL state and decode gate on a separate host
+tuple. The W5 observations above retain their original scope.

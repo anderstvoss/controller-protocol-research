@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-motionplus-sdl-3-2-10-result",
+  "statement": "SDL 3.2.10, Original with MotionPlus: 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 5044 of 5051 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. Open reset again, then the A600FE read accepted a 0x00fa response, which the extension parser rejected. SDL advertised no gyro and removed the joystick before receiving a valid gyro-marked report during drive. The kernel holder saw changing gyro.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original with MotionPlus; virtualgamepad 74ff69b, SDL 3.2.10, Linux 7.3.0-1-mainline",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Consumer evidence from one synthetic virtual-device arm with the Linux kernel driver bound. No claim about physical units or other acquisition arrangements."
+  },
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-motionplus-sdl-3-2-10-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

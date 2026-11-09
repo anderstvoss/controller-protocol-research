@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-motionplus-nunchuk-sdl-3-4-20-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-sdl-gyro-instrumented-motionplus-nunchuk-sdl-3-4-20-host.json",
+  "sha256": "c6535182e9bdb9f30d468665a21132119040c90268ba684aa41be1545064d387",
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-sdl-gyro-instrumented-sdl-3-4-20-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-motionplus-nunchuk-sdl-3-4-20-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced exact-owned protocol and SDL events to semantic values and relative times. Omitted raw reports, identities, paths, and wall clocks. Private SDL instrumentation SHA256 84d8754557ed0a8cc11a884e58c34963394325a67db7a24e10df9fa8aa769375, probe result SHA256 7581134a5d45d77bb09be1f50c143c05ac563f5b5adf434552cc2939d874c705, and own-device trace SHA256 e3ea0a1b8a685d7b7aed78a71ef10de289b675b6d248949fb572a917794f2d9a.",
+  "claims": []
+}

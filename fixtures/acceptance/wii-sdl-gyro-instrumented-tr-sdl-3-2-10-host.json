@@ -1,0 +1,982 @@
+{
+  "schema_version": 1,
+  "kind": "virtual_host_run",
+  "controller": "virtualgamepad.wii-remote",
+  "realization": "linux.uhid.bluetooth",
+  "tier": "local-virtual-host-sdl-gyro-instrumentation",
+  "permission": "Owner applied temporary access to the verified virtual raw node.",
+  "config": {
+    "profile": "Remote Plus (TR)",
+    "attachment_fixed_during_child": true,
+    "fresh_sdl_process": true,
+    "hid_wiimote_bound_before_and_after_child": true,
+    "motionplus_evdev_holder": "opened before SDL initialization",
+    "synthetic_eeprom_and_extension_calibration": true,
+    "drive_raw_pitch_roll_yaw": [
+      [
+        9000,
+        7000,
+        8500
+      ],
+      [
+        7000,
+        9000,
+        7800
+      ]
+    ],
+    "slow_flags": [
+      true,
+      true,
+      true
+    ],
+    "drive_period_ms": 250,
+    "sdl_hints": "Enable HIDAPI, Wii, and background events. Exclude the other virtual Wii product ID."
+  },
+  "environment": {
+    "synthetic": false,
+    "backend": "linux",
+    "kernel": "7.3.0-1-mainline",
+    "architecture": "x86_64",
+    "git_sha": "74ff69b12283722bb3d40eb84935fdf926ea2259",
+    "sdl_version": "3.2.10",
+    "sdl_revision": "877399b2b2cf21e67554ed9046410f268ce1d1b2",
+    "sdl_upstream_wii_source_sha256": "6e4693d2b165ec1fa8cbdeec988d3825890192e24db45f9bc2059f2f4c63f959",
+    "sdl_patched_wii_source_sha256": "48acfeb705eb67bbe2b61aad39e371e0afe1a3cb9ebe4f976b3d4c25132601a5",
+    "sdl_logging_patch_sha256": "8625f243259a1f737212ebecc6ef6d70edc725699bc6eeb5d833b75b6b2ccd15",
+    "sdl_library_sha256": "226184c5c38ee6b11ffa44cbab702aa6b08ed27221f0e68c63b1cb18ca52bc82",
+    "sdl_probe_source_sha256": "9a38c32430337e98c6285eea51a7ca6216e405257a970712a5792184883fabbe",
+    "sdl_probe_executable_sha256": "cba10e0519916532344074f34d94f4226031b25641daef3d67c8b23396ff9d03",
+    "provider_source_sha256": "23c62f13787e3c7cf5b37a0745c7b20fcfda1c2c399633a04c2d651d14e483c8",
+    "provider_executable_sha256": "86cd5431161524be621a895c02761ca40d100275de2e87025f6918001cd97095",
+    "trace_source_sha256": "9930bc50c66a552cf04d075921d3c307811ddbaef50c455844756034ea57aea5",
+    "trace_library_sha256": "b89aac4361f205c41c184f8855a879f3a30b0867ad2c1c1b1dd7c22c7441e927"
+  },
+  "resources": {
+    "owned_hid_gone": true,
+    "owned_hidraw_gone": true,
+    "idempotent_close": true
+  },
+  "samples": [
+    {
+      "cycle": 0,
+      "index": 0,
+      "temperature": "warm",
+      "stages": {
+        "api_call": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "api_returned": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "node_present": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "consumer_open": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "first_neutral": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "sdl_ready": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "close_call": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "close_returned": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        },
+        "node_gone": {
+          "value_ns": null,
+          "reason": "This functional arm has no creation-stage timing oracle."
+        }
+      },
+      "observations": {
+        "summary": {
+          "version": 3002010,
+          "hidapi_open": true,
+          "gamepad_open": true,
+          "gyro_capable": false,
+          "gyro_enabled": false,
+          "gyro_events": 0,
+          "gyro_nonzero_events": 0,
+          "gyro_changing_events": 0,
+          "accel_events": 0,
+          "polls": 5048,
+          "disconnected_polls": 5041,
+          "removals": 1,
+          "window_ms": 26002,
+          "kernel_gyro_events": [
+            28,
+            28,
+            28
+          ],
+          "kernel_gyro_min": [
+            -3528,
+            -10728,
+            -10728
+          ],
+          "kernel_gyro_max": [
+            2772,
+            7272,
+            7272
+          ]
+        },
+        "cached_state_transitions": [
+          {
+            "ms": 3035,
+            "point": "init-enter",
+            "present": 0,
+            "mode": 0
+          }
+        ],
+        "decode_decisions": {
+          "skip-mode-none": 5
+        },
+        "sdl_transactions_and_states": [
+          {
+            "ms": 3035,
+            "point": "init-enter",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3035,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3036,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 0,
+            "length": 2,
+            "first_data_bytes": "0405"
+          },
+          {
+            "ms": 3036,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400f0",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 85
+          },
+          {
+            "ms": 3038,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3038,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fb",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 0
+          },
+          {
+            "ms": 3038,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3038,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3039,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3041,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3041,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3042,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3044,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3045,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3045,
+            "point": "linux-activation-bypass",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              4,
+              0
+            ]
+          },
+          {
+            "ms": 3045,
+            "point": "init-exit",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              128,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a420"
+          },
+          {
+            "ms": 3391,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a420"
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              19,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              26,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              19,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              26,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "open-before-reset",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3391,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400f0",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 85
+          },
+          {
+            "ms": 3392,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3392,
+            "point": "write-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fb",
+            "length": 1,
+            "sync": true,
+            "first_data_byte": 0
+          },
+          {
+            "ms": 3392,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3392,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              16,
+              0
+            ]
+          },
+          {
+            "ms": 3395,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3397,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3397,
+            "point": "open-after-reset",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3397,
+            "point": "state-query-enter",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              0
+            ]
+          },
+          {
+            "ms": 3397,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a400fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3407,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              7
+            ]
+          },
+          {
+            "ms": 3407,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3407,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fe",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3407,
+            "point": "read-register",
+            "present": 0,
+            "mode": 0,
+            "address": "a600fe",
+            "length": 2,
+            "sync": true
+          },
+          {
+            "ms": 3407,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 0,
+            "length": 6,
+            "first_data_bytes": "0000a420"
+          },
+          {
+            "ms": 3407,
+            "point": "open-after-state",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              128,
+              0
+            ]
+          },
+          {
+            "ms": 3439,
+            "point": "readback",
+            "present": 0,
+            "mode": 0,
+            "offset": "00fa",
+            "error": 7,
+            "length": 16
+          },
+          {
+            "ms": 3449,
+            "point": "ack",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              22,
+              0
+            ]
+          },
+          {
+            "ms": 3449,
+            "point": "status",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              18,
+              0
+            ]
+          },
+          {
+            "ms": 3449,
+            "point": "disconnect",
+            "present": 0,
+            "mode": 0,
+            "detail": [
+              0,
+              1
+            ]
+          }
+        ],
+        "provider_packets": {
+          "gyro_packets": 500,
+          "downstream_packets": 0,
+          "invalid_or_mismatched": 0,
+          "vectors": [
+            {
+              "raw_yaw_roll_pitch": [
+                7800,
+                9000,
+                7000
+              ],
+              "count": 250
+            },
+            {
+              "raw_yaw_roll_pitch": [
+                8500,
+                7000,
+                9000
+              ],
+              "count": 250
+            }
+          ],
+          "slow_flags": [
+            {
+              "yaw_roll_pitch": [
+                true,
+                true,
+                true
+              ],
+              "count": 500
+            }
+          ],
+          "acked_map_modes": [
+            {
+              "mode": 4,
+              "count": 3
+            }
+          ],
+          "mode5_alternation_errors": 0
+        },
+        "sdl_hidraw_expected_gyro_reports_in_drive": [],
+        "unattributed_or_ambiguous_provider_requests": [
+          {
+            "relative_ns": 2293298,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3607863,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 4757110,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 7326645,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 8632367,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 9763782,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 13478711,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 15875638,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3036016957,
+            "address_hex": "a400fe",
+            "actor": "ambiguous",
+            "matching_raw_writes": 2,
+            "request": "read",
+            "length": 2
+          },
+          {
+            "relative_ns": 3038551243,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3043622574,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 3044772288,
+            "address_hex": "a400fe",
+            "actor": "ambiguous",
+            "matching_raw_writes": 2,
+            "request": "read",
+            "length": 2
+          },
+          {
+            "relative_ns": 3045902142,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3047062892,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3048203535,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 3051672007,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3395621348,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3399116142,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 3401440832,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3402583253,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 3403719967,
+            "address_hex": "a600fe",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 4
+          },
+          {
+            "relative_ns": 3407053876,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29425152013,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29426324930,
+            "address_hex": "a400f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 29430907378,
+            "address_hex": "a600f0",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "write",
+            "length": 1,
+            "first_data_byte": 85
+          },
+          {
+            "relative_ns": 29433170395,
+            "address_hex": "a600fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          },
+          {
+            "relative_ns": 29434329762,
+            "address_hex": "a400fa",
+            "actor": "kernel_or_untraced",
+            "matching_raw_writes": 0,
+            "request": "read",
+            "length": 6
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "summaries": {
+    "disposition": "blocked",
+    "semantic_outcome": "SDL 3.2.10, Remote Plus (TR): 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 5041 of 5048 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. Open's A600FE read accepted an interleaved 0x00fa response, which the extension parser rejected. SDL advertised no gyro and removed the joystick on the extension-status path before receiving a valid gyro-marked report during drive. The kernel holder saw changing gyro."
+  }
+}
