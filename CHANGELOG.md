@@ -7,6 +7,9 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add a read-only, source-linked evidence wiki generator and optional MkDocs
+  documentation under `docs/wiki/`; source records and fixtures stay unchanged.
+
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 
 - Record the Wii MotionPlus cached-mode gate and open-time response races in local logging-only SDL 3.2.10 and 3.4.20 builds across Original and TR virtual host arms.
