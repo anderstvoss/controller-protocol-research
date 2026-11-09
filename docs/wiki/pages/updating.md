@@ -6,7 +6,7 @@ The wiki is **not generated** from the corpus. It is maintained editorially, and
 2. Read relevant source and experiment records, original research ledgers and any external sources actually needed. Keep source-supported interpretations distinct from observations and editor inference.
 3. Update each affected **controller chapter**, associated protocol/consumer subpages, comparison notes and [research gaps](gaps.md). Do not paste a wall of claim JSON into the wiki.
 4. Link each substantive technical claim directly to existing record(s) in the reviewed corpus; preserve firmware, transport, status, counterexamples and source lineage.
-5. Run [link checks](../README.md) and the repository's original `tools/publication_guard.py`, `tools/validate.py` and tests. A passed guard is only a backstop; manually inspect privacy-sensitive prose.
+5. Run the read-only `tools/check_wiki_links.py` checker and the repository's original `tools/publication_guard.py`, `tools/validate.py` and tests. A passed guard is only a backstop; manually inspect privacy-sensitive prose.
 6. Update the reviewed SHA **after** the editorial changes have been evaluated; include a brief changelog and scope in the wiki PR. Readers must be able to tell that later corpus changes have not yet been incorporated.
 
 ## What not to do
