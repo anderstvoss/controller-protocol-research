@@ -11,6 +11,7 @@
 | [Linux hid-steam](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/hid/hid-steam.c) | v7.3, `c03c1a1` | Kernel consumer source, GPL (not reproduced) |
 | [SDL Triton used on D9](https://github.com/libsdl-org/SDL/blob/e0232c5b9d972ad394d597ce858185cd15a0f1a7/src/joystick/hidapi/SDL_hidapi_steam_triton.c) | `e0232c5`; existing source `steam-closeout-sdl-triton-e0232c5` | Consumer source only |
 | [SDL later Triton](https://github.com/libsdl-org/SDL/blob/531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a/src/joystick/hidapi/SDL_hidapi_steam_triton.c), [structs](https://github.com/libsdl-org/SDL/blob/531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a/src/joystick/hidapi/steam/controller_structs.h), [IDs](https://github.com/libsdl-org/SDL/blob/531acc0a76cf910b7616b2c5b3a4ba0a/src/joystick/controller_list.h) | `531acc0` | SDL lineage; not independent of prior SDL |
+| [BlueZ GATT client](https://github.com/bluez/bluez/blob/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/gatt-client.c) and [ATT](https://github.com/bluez/bluez/blob/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/att.c) | `aa4f5ce` | Packet size/MTU and long-write path, same BlueZ lineage |
 | [BlueZ profile](https://github.com/bluez/bluez/blob/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/profiles/input/hog.c), [shared HoG](https://github.com/bluez/bluez/blob/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/hog.c), [UHID](https://github.com/bluez/bluez/blob/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/uhid.c) | `aa4f5ce` | One BlueZ lineage |
 | [Valve steam-devices rules](https://github.com/ValveSoftware/steam-devices/blob/22ec85e5ff5ea2e15c56d71a41bcbef46356cd60/60-steam-input.rules) | `22ec85e` | Public rules only; not Steam client internals |
 | [OpenPuck receiver](https://github.com/safijari/openpuck/blob/29f4d1e8b85c0a7c19e0c8b977a1a56a2c42ea6d/OpenPuck/puck_hid.cpp) | `29f4d1e` | Proprietary-radio relay hint, not HOGP evidence |
@@ -39,6 +40,21 @@ BlueZ `profiles/input/hog.c:62-85,188-206` acquires the name and PnP version, re
 
 `src/shared/hog.c:686-801` translates UHID feature SET/GET requests to the appropriate GATT Report characteristic write/read; for numbered SET reports it drops the numbered prefix before writing, while the numbered GET reply is rewrapped at the UHID boundary. The kernel's HID feature API does not itself establish an RF connection. A scratch UHID daemon must service the host's requests synchronously enough to avoid timeouts and use correct numbered-report conventions.
 
+### ATT MTU and feature-report framing: a physical acceptance risk
+
+The BlueZ source reveals a constraint obscured by local UHID tests. HOGP SET_REPORT uses `bt_gatt_client_write_value` (`shared/hog.c:686-732`); this is an ordinary ATT Write Request (`gatt-client.c:3270-3313`), **not** the separate prepare/execute long-write path (`gatt-client.c:3537-3619`). The ATT encoder refuses a PDU larger than the negotiated MTU (`att.c:336-350`). GET_REPORT uses a read-value path that can continue with blob reads for long results (`gatt-client.c:3065-3110`). Incoming HOGP notifications and feature GET replies have report IDs reattached at the UHID boundary; SET drops the numbered prefix.
+
+Conditional length budget if the full numbered reports are carried as a single characteristic value:
+
+| HID report | Value after removing HID report ID | Minimum ATT MTU (value + 3) |
+|---|---:|---:|
+| Controller feature ID 1, 64-byte HID report | 63 bytes | 66 bytes |
+| `0x42` input, 54-byte HID report | 53 bytes | 56 bytes |
+| `0x45` input, 46-byte HID report | 45 bytes | 48 bytes |
+| `0x43` battery, 15-byte HID report | 14 bytes | 17 bytes |
+
+These are **conditional source-path arithmetic**, not a statement that the retail device actually emits all bytes over radio, negotiates a particular MTU, or uses the same characteristic mapping for every report. The owner-private monitor must record the negotiated ATT MTU, HID Report Reference IDs/types, Report Map declarations, feature write lengths and ATT status, and whether the HOGP link fragments/shortens payloads. A successful scratch UHID host test bypasses this radio-layer limit and does not settle it.
+
 BlueZ obtains host/peer socket identifiers and exposes them as `phys` and `uniq` in `UHID_CREATE2` (`shared/hog.c:803-853`, `shared/uhid.c:391-435`). No real address, fictitious address-shaped literal or Bluetooth bond belongs in this corpus. The planned emulator should follow the existing Wii Remote identity precedent: a typed, caller-set six-octet **locally administered unicast** Bluetooth-style identity with a fresh per-instance synthetic default. Serialize that runtime identity into the Bluetooth-style host `uniq` without storing real or example address values in the repository. The feature-report unit serial remains a different identity channel. Whether Steam/SDL requires a particular `uniq` representation is a scratch-test question.
 
 ## Public Steam client evidence and its limits
@@ -61,8 +77,8 @@ The existing wired `SteamController2026Options` has `identity`, `steam_client_co
 
 **Coordination gate:** the Puck session and this BLE session share one Steam Controller. Owner must explicitly release it from the other session before pairing, and stop this session before Puck testing resumes. Agents perform no controller pairing, physical sends, root/module operations, unbind/rebind or BlueZ configuration changes.
 
-1. **Owner pairing:** record selected right/left Bluetooth slot, confirmation of BLE vs BR/EDR from owner-private discovery, and non-identifying visible connection state. Keep complete Bluetooth monitor logs privately.
-2. **Descriptor/enumeration:** on paired `1303` list kernel bus, VID/PID, version, HID driver, input/hidraw child count and the HOGP descriptor. Publish the full descriptor only after manual review or else its length/hash. Redact `phys`, `uniq`, peer/host identity, local paths, wall-clock timestamps and link material.
+1. **Owner pairing:** record selected right/left Bluetooth slot, confirmation of BLE vs BR/EDR from owner-private discovery, ATT MTU negotiation and non-identifying visible connection state. Keep complete Bluetooth monitor logs privately.
+2. **Descriptor/enumeration:** on paired `1303` list kernel bus, VID/PID, version, HID driver, input/hidraw child count, HOGP Report Map, Report References and report-characteristic types. Publish the full descriptor only after manual review or else its length/hash. Redact `phys`, `uniq`, peer/host identity, local paths, wall-clock timestamps and link material.
 3. **Isolated baseline:** Steam/SDL/Dolphin closed, record idle and active native evdev observation. A separate layered hidraw read can remove those native nodes under `hid-steam`; never conclude that this alone is a kernel decode failure.
 4. **One control at a time:** neutral, every digital input, both triggers, all sticks, pad touch/click/position/pressure, capacitive controls, independently labelled IMU movements; compare with wired #105 offsets and semantics. Record relative event cadence, dropped captures and disagreements.
 5. **Kernel/SDL feature lifecycle:** passive full private monitor observation around kernel attach and normal SDL open/enable/disable/close. Retain each request and complete reply pair and error; do not manually replay them to hardware. Record setting writes, input mode changes, IMU rate negotiation and battery/status.

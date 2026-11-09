@@ -13,9 +13,11 @@
     "steam-ble-bluez-uhid",
     "steam-ble-valve-linux-rules",
     "steam-closeout-sdl-triton-e0232c5",
-    "openpuck"
+    "openpuck",
+    "steam-ble-bluez-gatt-client",
+    "steam-ble-bluez-att-framing"
   ],
   "fixtures": [],
-  "procedure": "Review pinned Linux v7.3 hid-steam, SDL Triton exact D9 consumer revision and later upstream, BlueZ HOGP/UHID, Valve public device-access rules and pinned OpenPuck; record code paths, frame sizes, lineage and unmeasured device behavior. No host/hardware tests or firmware analysis.",
-  "semantic_outcome": "Identified Linux bus-5 ID match, accepted IBEX input shapes, feature request path, host raw-client arbitration, SDL recognized reports, BlueZ GATT-to-UHID handling and identity presentation. All observations are source-only and do not prove physical BLE behavior or virtual host acceptance."
+  "procedure": "Review pinned Linux v7.3 hid-steam, SDL Triton exact D9 consumer revision and later upstream, BlueZ HOGP/UHID, Valve public device-access rules and pinned OpenPuck; record code paths, frame sizes, lineage and unmeasured device behavior. No host/hardware tests or firmware analysis. Inspect BlueZ GATT request encoding, ATT MTU budget and long-read versus ordinary-write handling.",
+  "semantic_outcome": "Identified Linux bus-5 ID match, accepted IBEX input shapes, feature request path, host raw-client arbitration, SDL recognized reports, BlueZ GATT-to-UHID handling and identity presentation. All observations are source-only and do not prove physical BLE behavior or virtual host acceptance. For full 63-byte on-GATT feature values, ordinary HOGP writes need sufficient negotiated ATT MTU; no actual BLE MTU is established."
 }

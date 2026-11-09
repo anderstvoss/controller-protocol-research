@@ -7,7 +7,7 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
+- Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 

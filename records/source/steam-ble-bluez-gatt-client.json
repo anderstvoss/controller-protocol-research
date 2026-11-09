@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-gatt-client",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/bluez/bluez/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/gatt-client.c",
+  "revision": "aa4f5ce97c875961a7c3ca88baa30c544edb58cd",
+  "sha256": "8ec83f93a5edadd2629d86d6670413fb045199e123e78a8fb1cba1d4b101db88",
+  "lineage": "bluez",
+  "locator": "Lines 2887-2950 read and 3065-3110 handle read-blob; 3270-3313 ordinary Write Request; 3537-3619 separate long write routine; source-only transport budget."
+}
