@@ -14,11 +14,11 @@ class SwitchProL0Ledger(unittest.TestCase):
     def test_new_claims_have_explicit_roles_and_no_physical_promotion(self):
         claims = [json.loads(p.read_text()) for p in
                   (ROOT / "records/claim").glob("swpro-l0-*.json")]
-        self.assertEqual(len(claims), 41)
-        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 21)
+        self.assertEqual(len(claims), 42)
+        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 22)
         self.assertEqual(sum(c["evidence_role"] == "device" for c in claims), 20)
         self.assertEqual(sum(c["status"] == "unknown" for c in claims), 8)
-        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 32)
+        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 33)
         self.assertTrue(all(c["applicability"]["controller"] == "switch-pro"
                             and c["sources"] and c["experiments"] == []
                             for c in claims))
@@ -39,10 +39,15 @@ class SwitchProL0Ledger(unittest.TestCase):
                           if claim["id"] == "swpro-l0-consumer-steam-neutral-causation-unknown")
         self.assertEqual(historical["evidence_role"], "consumer")
         self.assertIn("vg-alpha1-exp0016", historical["sources"])
+        usb_status = next(claim for claim in claims
+                          if claim["id"] == "swpro-l0-consumer-sdl-usb-status-address-order")
+        self.assertEqual(usb_status["sources"], ["audio-sdl-switch-pro"])
+        self.assertEqual(usb_status["evidence_role"], "consumer")
+        self.assertEqual(usb_status["status"], "source_supported")
 
     def test_status_before_after_c(self):
         # Compare to merged main after B, holding all source/experiment
-        # records fixed while omitting only this C package's 41 claims.
+        # records fixed while omitting the L0 claims.
         loader = status_module.load
         def without_c(root, category):
             records = loader(root, category)

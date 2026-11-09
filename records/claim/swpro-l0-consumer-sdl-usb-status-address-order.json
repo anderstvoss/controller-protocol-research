@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-consumer-sdl-usb-status-address-order",
+  "statement": "Pinned SDL reads six address bytes at offsets 4 through 9 of the full USB 0x81 status reply for command 0x01 and reverses them into its stored address. On the Bluetooth device-info subcommand 0x02 path it copies the six address bytes into the same storage in reply order.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_switch.c: the status packet fields at lines 232–240 and BReadDeviceInfo at lines 629–654 establish SDL's interpretation. No physical hardware or firmware capture was tested."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
