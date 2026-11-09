@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-tr-sdl-3-2-10-host",
+  "kind": "virtual_host_run",
+  "format": "acceptance_run_json",
+  "path": "fixtures/acceptance/wii-sdl-gyro-instrumented-tr-sdl-3-2-10-host.json",
+  "sha256": "f04c7a8f22f0e579748044de82507f6164452ff81793efd5a81534fcfbf7ebf2",
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-w4-sdl-3-2-10-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-tr-sdl-3-2-10-host-run"
+  ],
+  "parent": null,
+  "transform": "Reduced exact-owned protocol and SDL events to semantic values and relative times. Omitted raw reports, identities, paths, and wall clocks. Private SDL instrumentation SHA256 72743ddee1be9adfcdcf79594a0eefef7a6b8015bc22d84c8ca5a7d290a15193, probe result SHA256 d6089f3ffd1b57e72a635bea9c7d30f80732035e3558dfb40d90d3de20d4c7bd, and own-device trace SHA256 8ee3a341221e42b15d0c201bc63960bcfae5125a6e80277b968d7c3a650f3532.",
+  "claims": []
+}

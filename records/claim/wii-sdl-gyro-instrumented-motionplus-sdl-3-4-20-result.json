@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-motionplus-sdl-3-4-20-result",
+  "statement": "SDL 3.4.20, Original with MotionPlus: 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 3491 of 5037 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. After the open reset and an interleaved readback, SDL advertised no gyro. SDL received four valid reports for the driven gyro vector and skipped all four at the cached-mode gate. The periodic check later saw active mode 0x04 without updating the cache and removed the joystick. The kernel holder saw changing gyro.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original with MotionPlus; virtualgamepad 74ff69b, SDL 3.4.20, Linux 7.3.0-1-mainline",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Consumer evidence from one synthetic virtual-device arm with the Linux kernel driver bound. No claim about physical units or other acquisition arrangements."
+  },
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-sdl-gyro-instrumented-sdl-3-4-20-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-motionplus-sdl-3-4-20-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

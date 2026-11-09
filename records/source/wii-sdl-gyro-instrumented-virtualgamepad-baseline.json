@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/74ff69b12283722bb3d40eb84935fdf926ea2259/crates/gr-curated-controllers/src/wii_remote/codec.rs",
+  "revision": "74ff69b12283722bb3d40eb84935fdf926ea2259",
+  "sha256": "e8d5020cbd631cfdcd361fb48c6e4e105460af0e55637ecd0e98677d522b04f5",
+  "lineage": "virtualgamepad",
+  "locator": "Unchanged virtualgamepad baseline for the instrumented SDL comparison on Linux UHID Bluetooth. Synthetic virtual devices only."
+}

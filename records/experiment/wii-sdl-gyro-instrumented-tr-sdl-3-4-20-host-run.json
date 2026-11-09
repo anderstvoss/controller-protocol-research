@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-tr-sdl-3-4-20-host-run",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-sdl-gyro-instrumented-sdl-3-4-20-wii"
+  ],
+  "fixtures": [
+    "wii-sdl-gyro-instrumented-tr-sdl-3-4-20-host"
+  ],
+  "procedure": "Create a synthetic Original or TR on UHID Bluetooth and verify exact-owned hid-wiimote binding. Keep the MotionPlus evdev node open before SDL starts and until it exits. Use a fresh SDL process per arm, the Wii HIDAPI hint, and the expected owned raw path. Drive two distinct synthetic gyroscope vectors throughout a 26-second post-open window. Read the cached SDL fields and record protocol and dispatch decisions in a local logging-only SDL build. Capture provider and exact-owned hidraw traffic independently.",
+  "semantic_outcome": "SDL 3.4.20, Remote Plus (TR): 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 5035 of 5042 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. Open's A400FE request encountered an interleaved 0x00fa response and A600FE encountered a response with register error 7. SDL advertised no gyro and removed the joystick on the extension-status path before receiving a valid gyro-marked report during drive. The kernel holder saw changing gyro."
+}

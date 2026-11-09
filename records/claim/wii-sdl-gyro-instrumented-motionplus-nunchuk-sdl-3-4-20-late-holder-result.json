@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-motionplus-nunchuk-sdl-3-4-20-late-holder-result",
+  "statement": "SDL 3.4.20, Original with MotionPlus and Nunchuk (late holder): 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 2602 of 2902 disconnected polls. Final cached presence 0, mode 0x00. Opening the kernel MotionPlus evdev node 1500 ms into the drive window did not recover SDL. SDL still advertised no gyro after the open-time query and removed the joystick after the holder opened. The kernel holder saw changing gyro.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original with MotionPlus and Nunchuk (late holder); virtualgamepad 74ff69b, SDL 3.4.20, Linux 7.3.0-1-mainline",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Consumer evidence from one synthetic virtual-device arm with the Linux kernel driver bound. No claim about physical units or other acquisition arrangements."
+  },
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-sdl-gyro-instrumented-sdl-3-4-20-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-motionplus-nunchuk-sdl-3-4-20-late-holder-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

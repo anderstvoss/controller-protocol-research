@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-sdl-gyro-instrumented-tr-sdl-3-4-20-result",
+  "statement": "SDL 3.4.20, Remote Plus (TR): 0 gyro events and 0 nonzero gyro events, 1 joystick removals, and 5035 of 5042 disconnected polls. Final cached presence 0, mode 0x00. Initialization read active mode 0x04 and issued the reset. Linux activation was bypassed. Open's A400FE request encountered an interleaved 0x00fa response and A600FE encountered a response with register error 7. SDL advertised no gyro and removed the joystick on the extension-status path before receiving a valid gyro-marked report during drive. The kernel holder saw changing gyro.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Remote Plus (TR); virtualgamepad 74ff69b, SDL 3.4.20, Linux 7.3.0-1-mainline",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Consumer evidence from one synthetic virtual-device arm with the Linux kernel driver bound. No claim about physical units or other acquisition arrangements."
+  },
+  "sources": [
+    "wii-sdl-gyro-instrumented-virtualgamepad-baseline",
+    "wii-sdl-gyro-instrumented-sdl-3-4-20-wii"
+  ],
+  "experiments": [
+    "wii-sdl-gyro-instrumented-tr-sdl-3-4-20-host-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
