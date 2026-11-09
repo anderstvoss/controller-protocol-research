@@ -111,3 +111,10 @@ fake backend runs and cannot use virtual-host fixtures to justify physical
 promotion. Missing stages retain reasons; durations have no acceptance budget.
 Path/wall-clock redactions and the original local artifact hash are documented
 in each fixture. No real device identity or capture data is included.
+
+## Evidence wiki
+
+[Source-linked evidence wiki](docs/wiki/README.md) documents the read-only
+controller/claim/source/experiment/fixture indexes and generation workflow.
+The canonical JSON records remain authoritative; the optional Markdown/MkDocs
+presentation preserves claim status, scope, lineage and contradictions.
