@@ -47,12 +47,14 @@ class SwitchProL0Ledger(unittest.TestCase):
 
     def test_status_before_after_c(self):
         # Compare to merged main after B, holding all source/experiment
-        # records fixed while omitting the L0 claims.
+        # records fixed while omitting the L0 claims and later gap-pass
+        # (swpro-cgap-*) claims, which would otherwise count as prior evidence.
         loader = status_module.load
         def without_c(root, category):
             records = loader(root, category)
             if category == "claim":
-                return [r for r in records if not r["id"].startswith("swpro-l0-")]
+                return [r for r in records
+                        if not r["id"].startswith(("swpro-l0-", "swpro-cgap-"))]
             return records
         with patch.object(status_module, "load", side_effect=without_c):
             prior = next(r for r in status_module.status(ROOT) if r["id"] == "switch-pro")
