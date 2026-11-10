@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-kernel-evdev",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "fixtures": [],
+  "procedure": "D9 EndeavourOS x86-64, kernel 7.3.0-1-mainline, 2026-11-04. Executable source: virtualgamepad C6 merge ad80ae6, unmodified controller packages, with the input-lab udev policy from virtualgamepad 17936b7 installed by the owner (rule/helper bytes verified, udevadm verify passed). Each case created one Steam Controller 2026 with VIRTUALGAMEPAD_INPUT_LAB=1, associated nodes by the complete per-creation physical label, read Linux input events and EVIOCGABS for every axis, changed one control at a time while servicing reverse events, neutralised, closed twice and verified that all owned event and hidraw nodes disappeared. Steam and Dolphin absent for the isolated reruns (a first attempt with Dolphin holding the layered hidraw node removed the kernel gamepad/sensor nodes and is recorded as inconclusive). Runs: UHID initial-mode, UHID after a 650 ms Menu press/release, reduced uinput isolated rerun and an owner-run reduced uinput repeat. Raw records stay private; their SHA-256 digests are a932f450ca867a490696c30b2dbb2d6e45b165c824dca98dfc91b3c1c626f374, eeb78787a9598e2d1d80bc105e47bcfe49f73b9ab473d9bfd498bb1cf3311392, 9db537b643a4378ba90939714bab34c8a9b72a1685929ab9795e1011645b870b and e0fdfdb79545477131036e2f92364674c2442ae7ccd110fe74d27948ce2507b0. Full sanitized write-up: virtualgamepad docs/C6_D9_ACCEPTANCE.md, section 'Post-C6 kernel evdev follow-up (2026-11-04)', merged in virtualgamepad #304 (502680f). No descriptor, API or protocol change; no firmware or bootloader commands; no physical device involved.",
+  "semantic_outcome": "Both isolated cases completed 154 one-control samples with no operation errors, no provider write failures and complete owned-node removal, including repeated close. UHID: kernel gamepad and sensor nodes stay silent until the hid-steam mode switch, then decode every native control except the documented contact, pressure and touch metadata, and every queried ABS tuple matches the C6 golden registration claims. Reduced uinput decodes its representable controls; its ABS fuzz and resolution are zero, a provider limitation. Virtual kernel-consumer evidence only: no physical calibration, output delivery, serial fidelity or Steam client acceptance."
+}
