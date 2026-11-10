@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-pipewire-alsa-udev-properties",
+  "statement": "PipeWire's ALSA udev enumerator emits an Audio/Device with api.alsa.path and api.alsa.card when a PCM-capable sound card is present. It populates device.bus-path from udev ID_PATH (falling back to syspath) and separately records device.bus-id from ID_ID, device.bus, sysfs path, vendor/product IDs, serial and optional form factor. These are enumerated sound-card properties, not a built-in join to an independent UHID joystick or a transducer impedance measurement.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "PipeWire SPA ALSA enumerator lines 562-710, host consumer metadata; no source says an independently created PipeWire sidecar is automatically associated with a controller."
+  },
+  "sources": [
+    "audio-consumer-pipewire-alsa-udev"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
