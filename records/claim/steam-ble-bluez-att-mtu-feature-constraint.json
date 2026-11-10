@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-att-mtu-feature-constraint",
+  "statement": "Pinned BlueZ HOGP SET_REPORT routes to bt_gatt_client_write_value rather than the separate long-write operation. The ATT encoder rejects messages larger than negotiated ATT MTU. A nominal 64-byte numbered HID feature write sent as 63 GATT value bytes after removal of report ID 1 requires at least 66 bytes of ATT MTU (63 bytes plus 3-byte ATT Write Request overhead); this is a conditional host-path transport constraint, not measured retail BLE packet size or negotiated MTU. A 46-byte numbered input report would similarly require at least 48 bytes of MTU if carried as a single 45-byte GATT notification. HOGP can re-add the report ID on input and GET replies; ordinary GATT reads can issue blob reads when long. BlueZ shared hog.c lines 203-228, 686-801; gatt-client.c lines 3065-3110, 3270-3313 and 3537-3619; att.c lines 336-350.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "BlueZ aa4f5ce host implementation; physical firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host-side BLE MTU and GATT framing; conditional packet-size arithmetic only. No evidence of physical negotiated MTU, report characteristic data lengths, or radio throughput."
+  },
+  "sources": [
+    "steam-ble-bluez-hog-shared",
+    "steam-ble-bluez-gatt-client",
+    "steam-ble-bluez-att-framing",
+    "steam-ble-bluez-uhid"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

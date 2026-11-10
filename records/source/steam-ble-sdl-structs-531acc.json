@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-sdl-structs-531acc",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a/src/joystick/hidapi/steam/controller_structs.h",
+  "revision": "531acc0a76cf910b7616b2c5f63de2c5b3a4ba0a",
+  "sha256": "6217267bfa7e2b446edd6c45ac78e7603ac937960e7585831423d94d2a10c3b8",
+  "lineage": "libsdl",
+  "locator": "Triton report IDs 550-560; no-quaternion structure 631-650; 16-bit timestamp variant 652-676; battery 687-697; haptic sizes 157-232."
+}

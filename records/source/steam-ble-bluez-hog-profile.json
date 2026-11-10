@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-hog-profile",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/bluez/bluez/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/profiles/input/hog.c",
+  "revision": "aa4f5ce97c875961a7c3ca88baa30c544edb58cd",
+  "sha256": "6c7d993f5c3f57e9efdee18cdaeba6249c4587f8058fbaaac4faf03ecefe8bfe",
+  "lineage": "bluez",
+  "locator": "Lines 62-85 use discovered name/PnP values; 188-206 require bonding/security and attach HID GATT after IDs are set; consumer source only."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-uhid",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/bluez/bluez/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/uhid.c",
+  "revision": "aa4f5ce97c875961a7c3ca88baa30c544edb58cd",
+  "sha256": "6aeea7df3268a7881e332cd228159ad82ea9d83037be7d82a0daa04a60cdc685",
+  "lineage": "bluez",
+  "locator": "Lines 391-445 create UHID bus 5 with name, host phys, peer uniq, VID/PID/version; 497-546 report reply semantics. No real identifiers reproduced."
+}

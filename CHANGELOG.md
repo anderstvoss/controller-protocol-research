@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
+
+- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
+
 - Record the source-only Switch Pro NFC/MCU report-path scope gap, distinguishing a potential wireless-native feature from Nintendo-documented wired NFC restrictions; no hardware test or implementation change.
 
 - Record the Linux hid-nintendo Switch Pro HOME-button light (subcommand 0x38) as a consumer gap, with a ranked Switch Pro gap brief.

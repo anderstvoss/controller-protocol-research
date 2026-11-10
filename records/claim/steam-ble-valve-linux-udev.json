@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-valve-linux-udev",
+  "statement": "Valve's public steam-devices rules grant a Valve hidraw access path to Bluetooth bus-number 5 HID nodes and an evdev access rule for the Valve vendor. Rules grant access but do not implement Steam client discovery, identification, controller-test UI, or actual Bluetooth pairing. steam-devices 60-steam-input.rules lines 7-14.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Public Steam Linux integration is limited to the observed rules, not proprietary Steam client internals."
+  },
+  "sources": [
+    "steam-ble-valve-linux-rules"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

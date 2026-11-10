@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-hog-shared",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/bluez/bluez/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/hog.c",
+  "revision": "aa4f5ce97c875961a7c3ca88baa30c544edb58cd",
+  "sha256": "25c55f1661bd09e64a44d7a3966a34e1ff624979b95db733ea3dd73c5f11ad39",
+  "lineage": "bluez",
+  "locator": "Lines 686-801 feature GET/SET to Report characteristic and numbered-byte handling; 803-897 obtain peer/host Bluetooth socket identity and create UHID from Report Map."
+}
