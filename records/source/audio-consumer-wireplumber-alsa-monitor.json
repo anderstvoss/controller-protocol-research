@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-wireplumber-alsa-monitor",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/PipeWire/wireplumber/a03763219961a3916659bfe09bfd80622209eccb/src/scripts/monitors/alsa.lua",
+  "revision": "a03763219961a3916659bfe09bfd80622209eccb",
+  "sha256": "732e9093a22abe85bf8c4d4386920f29c5f9bf49c18212295ce1aecf24d39cbf",
+  "lineage": "wireplumber",
+  "locator": "390-490: media.class and node.name/ALSA fields for source/sink; 616-661: device name/bus path/description; 751-763: api.alsa.enum.udev monitor."
+}

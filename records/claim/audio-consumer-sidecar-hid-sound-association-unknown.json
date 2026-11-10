@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-sidecar-hid-sound-association-unknown",
+  "statement": "These inspected host components expose ALSA USB identity and PipeWire node/card properties, and Sony SDL HIDAPI drivers process joystick traffic. They provide no demonstrated automatic association between a UHID-only virtual controller and independently created PipeWire sound nodes lacking shared USB ancestry. The feasibility of auto-discovery by a specific SDL/Steam/Proton consumer remains unknown; explicit application-level pairing and actual consumer probes are required before a shape-A automatic-routing claim.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Synthesis of bounded file inspections only. No assertion that matching via custom policy, user routing or external applications is impossible."
+  },
+  "sources": [
+    "audio-consumer-pipewire-alsa-udev",
+    "audio-consumer-wireplumber-alsa-monitor",
+    "audio-consumer-systemd-alsa-symlinks",
+    "audio-sdl-ps5",
+    "audio-consumer-alsa-ucm-usb-match"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

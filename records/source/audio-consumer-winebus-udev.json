@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-winebus-udev",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/wine-mirror/wine/2af4506cc3d94e07f39975ba2a8c5bd668edfc26/dlls/winebus.sys/bus_udev.c",
+  "revision": "2af4506cc3d94e07f39975ba2a8c5bd668edfc26",
+  "sha256": "0fc3b2b692749dab27fa71ae9a7af996dd6dcabbe8edf0deb46405ac2edd9710",
+  "lineage": "wine",
+  "locator": "1158-1210: HID USB parent path and identity; 1385-1420: input/HID device add; 1600-1680: hidraw and input monitor paths, not an audio association implementation."
+}

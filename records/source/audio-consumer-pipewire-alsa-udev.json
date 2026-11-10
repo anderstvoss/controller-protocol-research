@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-pipewire-alsa-udev",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/PipeWire/pipewire/814436ecf16e6b050a2ae9cd6469545bfcb885a4/spa/plugins/alsa/alsa-udev.c",
+  "revision": "814436ecf16e6b050a2ae9cd6469545bfcb885a4",
+  "sha256": "ae524339c9a3fa834d7fc101724f007eee8c0434e67c31b8f57f5d357ba1b43e",
+  "lineage": "pipewire",
+  "locator": "562-621: udev card emits ALSA device; 638-710: ID_PATH, sysfs path, ID_ID, bus, vendor/product and serial properties as host metadata."
+}

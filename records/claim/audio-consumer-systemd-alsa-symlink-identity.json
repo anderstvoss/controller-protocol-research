@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-systemd-alsa-symlink-identity",
+  "statement": "systemd's pinned persistent ALSA udev rule applies to sound controlC nodes. It imports USB identity when needed, creates snd/by-id names from ID_BUS, ID_SERIAL and optional ID_USB_INTERFACE_NUM, and creates snd/by-path names from the path_id-derived ID_PATH or ID_PATH_WITH_USB_REVISION. This provides ALSA sound-card addressing and USB topology identity, but the rule does not pair an audio device with a separate HID or UHID controller.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "systemd rules.d/60-persistent-alsa.rules lines 3-15; file-level negative limited to this rule."
+  },
+  "sources": [
+    "audio-consumer-systemd-alsa-symlinks"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
