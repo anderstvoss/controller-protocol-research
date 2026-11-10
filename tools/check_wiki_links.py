@@ -1,7 +1,8 @@
-"""Read-only validation for manually authored controller wiki citations and links.
+"""Read-only validation for the manually authored controller wiki.
 
-This checker intentionally does NOT generate, reformat or update any wiki pages.
-It checks link existence only; evidence interpretation requires human review.
+Check relative Markdown page links and commit-pinned links into the corpus.
+GitHub 'blob' links must resolve to files; 'tree' links must resolve to
+directories. Never generate or alter wiki content or evidence records.
 """
 import re
 import sys
@@ -9,7 +10,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PREFIX = "/anderstvoss/controller-protocol-research/blob/"
+CORPUS_PREFIX = "/anderstvoss/controller-protocol-research/"
+CORPUS_LINK = re.compile(r"^/(?:anderstvoss/controller-protocol-research)/(blob|tree)/([^/]+)/(.+)$")
 LINK = re.compile(r"\[[^\]]+\]\(([^)\s]+)\)")
 
 
@@ -31,17 +33,23 @@ def check(root=ROOT):
                 continue
             url = urlsplit(target)
             if url.scheme in ("http", "https"):
-                if url.netloc == "github.com" and url.path.startswith(PREFIX):
-                    suffix = url.path[len(PREFIX):].split("/", 1)
-                    if len(suffix) != 2:
+                if url.netloc == "github.com" and url.path.startswith(
+                    (CORPUS_PREFIX + "blob/", CORPUS_PREFIX + "tree/")
+                ):
+                    citation = CORPUS_LINK.fullmatch(url.path)
+                    if not citation:
                         issues.append(relative + ": malformed corpus citation " + target)
                         continue
-                    revision, pathpart = suffix
+                    kind, revision, pathpart = citation.groups()
                     if not re.fullmatch(r"[0-9a-f]{40}", revision):
                         issues.append(relative + ": corpus citation must use full SHA " + target)
                     record = (root / unquote(pathpart)).resolve()
-                    if not record.is_relative_to(root) or not record.is_file():
-                        issues.append(relative + ": cited corpus path missing " + target)
+                    if not record.is_relative_to(root):
+                        issues.append(relative + ": corpus citation escapes repository " + target)
+                    elif kind == "blob" and not record.is_file():
+                        issues.append(relative + ": cited corpus file missing " + target)
+                    elif kind == "tree" and not record.is_dir():
+                        issues.append(relative + ": cited corpus directory missing " + target)
                 continue
             if url.scheme:
                 continue
