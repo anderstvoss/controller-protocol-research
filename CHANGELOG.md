@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
+- Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
+
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 
 - Record the Wii MotionPlus cached-mode gate and open-time response races in local logging-only SDL 3.2.10 and 3.4.20 builds across Original and TR virtual host arms.

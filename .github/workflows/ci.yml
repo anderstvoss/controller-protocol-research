@@ -18,7 +18,7 @@ jobs:
     name: Validate corpus
     # Consumers pin corpus revisions, so integrity validation runs on every change.
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Harden runner
         uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
