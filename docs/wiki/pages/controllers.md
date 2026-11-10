@@ -36,4 +36,4 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 
 - [Linux joystick identity / SDL / evdev](controllers/linux-joystick-identity/index.md) — a host-interface registry entry, not a physical controller.
 
-The [controller registry](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.
+The [controller registry](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.
