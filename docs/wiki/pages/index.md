@@ -2,7 +2,7 @@
 
 **Reviewed corpus revision:** [`ab74f66274589a7229633f0fe8654490c3d19a12`](https://github.com/anderstvoss/controller-protocol-research/commit/ab74f66274589a7229633f0fe8654490c3d19a12) (2026-11-09).
 
-This is a **curated engineering interpretation**, not a live rendering of every JSON record. The [evidence corpus](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) remains authoritative; this wiki explains the protocols, host behavior, implementation constraints and unresolved questions. Pages are updated **on request**, after reviewing additions and changes in the corpus.
+This is a **curated engineering interpretation**, not a live rendering of every JSON record. The [evidence corpus](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) remains authoritative; this wiki explains the protocols, host behavior, implementation constraints and unresolved questions. Pages are updated **on request**, after reviewing additions and changes in the corpus.
 
 ## Start here
 
