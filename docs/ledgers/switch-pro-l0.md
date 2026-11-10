@@ -88,3 +88,7 @@ All physical operations require owner-approved reference hardware, permission an
 Continue in `gr-controllers` for typed native state and codecs and OS providers for realization/I/O only; do not put Nintendo protocol semantics in a shared provider or infer physical timing from SDL's host policy. Use C claims and merged B record IDs in later citation maps, distinguishing community source descriptions, emulated-device behavior and real-host observations. Switch Pro *USB* and *Bluetooth* require distinct realization acceptance; no dual-mode physical pass is implied. Packages D–F should maintain the same device/consumer split.
 
 **Cloud agent (realized-controller research parity)**
+
+## Controller gaps follow-up: NFC/MCU path (source-only candidate)
+
+`swpro-cgap-nfc-mcu-family-context` records that pinned controller-family notes describe NFC/IR MCU output `0x11`, input `0x31` and related subcommands `0x20`–`0x22`. This is **not** proof of the Switch Pro-specific wireless NFC transaction; no hardware test was run. Nintendo's public product guidance documents the Pro NFC touchpoint and the wired-communication restriction, cited as **supplementary, unpinned** context in `docs/switch-pro-nfc-gaps.md`. The existing `swpro-l0-*` inventory, player-light count and realized acceptance cells are unchanged. Switch Pro #156 and Bluetooth #164 remain the tracking surfaces; #276 covers physical ACKs.
