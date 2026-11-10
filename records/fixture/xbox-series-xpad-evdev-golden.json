@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-evdev-golden",
+  "kind": "synthetic",
+  "format": "evdev_trace_json",
+  "path": "fixtures/xbox-series-xpad-evdev-golden.json",
+  "sha256": "2f15fcbc10f1281ad46e6d3c9ce9935f676598bd9106e38ed5450a2b632af345",
+  "sources": [
+    "xbox-series-linux-xpad",
+    "xbox-series-gpc-evdev-artifact",
+    "wii-c5-linux-input-codes",
+    "wii-c5-linux-input-ff",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "parent": null,
+  "transform": null,
+  "claims": [
+    "xbox-series-xpad-evdev-shape"
+  ]
+}
