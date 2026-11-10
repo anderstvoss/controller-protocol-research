@@ -88,3 +88,7 @@ All physical operations require owner-approved reference hardware, permission an
 Continue in `gr-controllers` for typed native state and codecs and OS providers for realization/I/O only; do not put Nintendo protocol semantics in a shared provider or infer physical timing from SDL's host policy. Use C claims and merged B record IDs in later citation maps, distinguishing community source descriptions, emulated-device behavior and real-host observations. Switch Pro *USB* and *Bluetooth* require distinct realization acceptance; no dual-mode physical pass is implied. Packages D–F should maintain the same device/consumer split.
 
 **Cloud agent (realized-controller research parity)**
+
+## Controller gaps pass (2026-11-10): HOME-button light
+
+One new Linux consumer claim, `swpro-cgap-home-led-consumer`, records that hid-nintendo controls the HOME-button light with subcommand 0x38 and a separate LED class device (brightness 0 to 15), independent of the four player indicators, and skips registering it if the first 0x38 send fails. Source-only; no physical test. Ranked gap and virtualgamepad comparison: `docs/switch-pro-gaps.md`. The `swpro-l0-*` inventory above is unchanged.
