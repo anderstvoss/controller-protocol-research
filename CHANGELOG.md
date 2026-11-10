@@ -7,8 +7,9 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
+- Record the Linux hid-nintendo Switch Pro HOME-button light (subcommand 0x38) as a consumer gap, with a ranked Switch Pro gap brief.
 
+- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
 
 - Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
 
