@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-winebus-udev-hid-identity",
+  "statement": "The inspected Wine winebus udev backend enumerates HID/hidraw and Linux input device nodes and derives a USB controller identity/path from its USB parent where one exists. Those paths set up Windows-visible input device identities; they do not contain an audio endpoint lookup or a controller-to-audio-device association. This is a bounded file-level statement, not a conclusion about Wine MMDevAPI, PulseAudio, ALSA, Proton or other components.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Wine winebus udev source ~1158-1210, ~1385-1420, ~1600-1680 and earlier main.c; no MMDevAPI internals inspected."
+  },
+  "sources": [
+    "audio-consumer-winebus-udev",
+    "parity-g-wine-winebus"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

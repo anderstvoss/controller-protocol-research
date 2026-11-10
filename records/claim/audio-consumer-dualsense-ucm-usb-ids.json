@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-dualsense-ucm-usb-ids",
+  "statement": "ALSA UCM's pinned USB-Audio matcher extracts the USB vendor/product identifier from CardComponents and selects Sony/DualSense-PS5 for USB 054c:0ce6 (DualSense) and USB 054c:0df2 (DualSense Edge), then includes the selected profile. This describes USB sound-card UCM selection; it is not HID sibling discovery and is distinct from the separately recorded four-output/two-input UCM channel-role claim.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "ALSA ucm2/USB-Audio/USB-Audio.conf lines 7-45, 149-151, 295-318. The USB ID matcher is a consumer configuration rule, not physical-speaker matching."
+  },
+  "sources": [
+    "audio-consumer-alsa-ucm-usb-match",
+    "audio-alsa-dualsense-usecase"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

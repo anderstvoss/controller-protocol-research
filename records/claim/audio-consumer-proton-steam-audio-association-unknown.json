@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-proton-steam-audio-association-unknown",
+  "statement": "Proton's pinned controller documentation describes Wine/SDL/HID controller input routing, while the inspected Wine winebus source models input-device identity. These sources do not establish whether Proton or the proprietary Steam client automatically correlates a Sony HID controller with an ALSA/PipeWire audio endpoint. Steam's closed-source client association behavior is unknown; verifying it requires an open-source implementation or scoped live consumer observations rather than inferring it from HID recognition.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Open-source scope: Proton docs/CONTROLLERS.md and Wine winebus HID enumeration, SDL PS5 HIDAPI driver; no Steam client source or live probe."
+  },
+  "sources": [
+    "steam-modes-proton-controller-routing",
+    "audio-consumer-winebus-udev",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
