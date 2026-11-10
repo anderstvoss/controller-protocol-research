@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-systemd-alsa-symlinks",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/systemd/systemd/877926de7d4650028efc836d8e7d3b8fa76e6a0e/rules.d/60-persistent-alsa.rules",
+  "revision": "877926de7d4650028efc836d8e7d3b8fa76e6a0e",
+  "sha256": "09b1687035afc5c5a5f839d637b72ed9ae901000915b8b5e93586ecfc35e0d00",
+  "lineage": "systemd-udev",
+  "locator": "1-15: sound controlC nodes, USB identity and path_id imports, snd/by-id and snd/by-path persistent symlinks."
+}

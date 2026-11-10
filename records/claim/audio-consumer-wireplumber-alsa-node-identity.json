@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-wireplumber-alsa-node-identity",
+  "statement": "WirePlumber's pinned ALSA monitor loads PipeWire's api.alsa.enum.udev SPA device and creates ALSA card and source/sink nodes. Its device naming can derive from device.name, device.bus-id or device.bus-path; audio nodes are labeled Audio/Source or Audio/Sink, with names based on the ALSA card name and profile. The ALSA configuration supports rules matching device and node properties and updating UCM settings. The inspected monitor does not define an automatic join between a separately created UHID controller and unrelated PipeWire sidecar nodes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "WirePlumber ALSA monitor ~390-490, 616-661, 751-763; config ~11-54. Scope: inspected default monitor, not all user/system policy scripts."
+  },
+  "sources": [
+    "audio-consumer-wireplumber-alsa-monitor",
+    "audio-consumer-wireplumber-alsa-config"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

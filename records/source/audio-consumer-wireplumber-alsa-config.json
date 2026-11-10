@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-wireplumber-alsa-config",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/PipeWire/wireplumber/a03763219961a3916659bfe09bfd80622209eccb/src/config/wireplumber.conf.d.examples/alsa.conf",
+  "revision": "a03763219961a3916659bfe09bfd80622209eccb",
+  "sha256": "823b54bf35beb56010a314bcfe10b3a73d4dc6a3fb5db697ff7f82e0fa9043e0",
+  "lineage": "wireplumber",
+  "locator": "11-54: monitor.alsa properties and rules, examples updating ALSA profile/UCM; source only, not installed user configuration."
+}

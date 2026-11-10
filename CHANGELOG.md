@@ -9,6 +9,9 @@ affected schema's `schema_version`.
 
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
+- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
+
+
 - Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
 
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
