@@ -35,7 +35,7 @@ See [source validator](https://github.com/anderstvoss/controller-protocol-resear
 
 ## Source and experiment provenance
 
-Open a claim's `sources` and `experiments` fields. The [source record](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/source) pins URL, revision, SHA-256, lineage and locator; sources derived from the same code are *not* independent confirmation. The [experiment](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/experiment) describes procedure and semantic outcome; [fixture metadata](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/fixture) contains hashes and transformations. Sensitive raw captures intentionally are **not** republished.
+Open a claim's `sources` and `experiments` fields. The [source record](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/source) pins URL, revision, SHA-256, lineage and locator; sources derived from the same code are *not* independent confirmation. The [experiment](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/experiment) describes procedure and semantic outcome; [fixture metadata](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/fixture) contains hashes and transformations. Sensitive raw captures intentionally are **not** republished.
 
 ## Citation and editorial policy
 
