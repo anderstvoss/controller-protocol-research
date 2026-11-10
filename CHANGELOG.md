@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document the separate Switch Pro HOME-button LED Linux consumer path, its registration-failure behavior and the remaining source-only realization gap.
+
 - Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
 
 - Record the byte order SDL uses to decode the Switch Pro USB status address.

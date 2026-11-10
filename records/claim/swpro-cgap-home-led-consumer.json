@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-cgap-home-led-consumer",
+  "statement": "Pinned Linux hid-nintendo has separate commands for Switch Pro player indicators and HOME-button illumination. For right-capable controller types including Switch Pro, the kernel registers a distinct HOME LED class device with a 0 to 15 brightness domain and sends subcommand 0x38 with five payload bytes. If that initial 0x38 send fails, the kernel logs a warning and skips HOME LED registration without failing the probe. This establishes Linux consumer behavior, not measured retail brightness, fade, acknowledgement or LED hardware response.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Linux kernel source revision 4056b3c; retail model and revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c lines 72-75, 659-678, 1030-1046, 2277-2293, 2356-2385, including 2373-2380 registration failure behavior; independent HOME-light LED class and its source command, not a physical-device test"
+  },
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
