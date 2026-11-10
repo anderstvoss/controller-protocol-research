@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-sdl-dualshock4-hid-no-alsa-link",
+  "statement": "At the pinned SDL revision, SDL_hidapi_ps4.c manages controller HID input and output effect fields, including audio-labeled output levels, but does not enumerate an ALSA card or PipeWire node or bind a joystick to an SDL audio-device identifier. This absence is limited to the inspected PS4 HIDAPI driver; it does not exclude association by other SDL subsystems or applications.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL PS4 HIDAPI driver only (audio-labeled output fields ~109-123; output formatting ~656-677 and ~924-973); complete file searched for SDL_Audio references."
+  },
+  "sources": [
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

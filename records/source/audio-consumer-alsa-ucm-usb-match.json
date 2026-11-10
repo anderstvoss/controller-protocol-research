@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-alsa-ucm-usb-match",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/alsa-project/alsa-ucm-conf/d260eedd1900dbf3b477047e048d5382a5f50e24/ucm2/USB-Audio/USB-Audio.conf",
+  "revision": "d260eedd1900dbf3b477047e048d5382a5f50e24",
+  "sha256": "6ebd10d7ff36891e9a75a06c510231904b1bc12c0b95e9eca7bb7f4cefda7b50",
+  "lineage": "alsa-ucm-conf",
+  "locator": "7-45 USB ID from CardComponents; 149-151 Sony 054c:0ce6/0df2 profile match; 295-318 optional per-device include and profile selection."
+}
