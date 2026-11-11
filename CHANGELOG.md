@@ -9,6 +9,10 @@ affected schema's `schema_version`.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
+- Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
+  input/reconnect fixtures, bounded xone headset duplex, and separate Linux
+  UHID/xpadneo consumer observations. Add descriptor structural review
+  without promoting universal firmware or motor-actuation claims.
 
 - Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
 

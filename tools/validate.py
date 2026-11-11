@@ -75,7 +75,7 @@ def validate(root):
                 raise ValueError('fixture escapes corpus: ' + id)
             if hashlib.sha256(path.read_bytes()).hexdigest() != rec['sha256']:
                 raise ValueError('fixture hash mismatch: ' + id)
-            if rec['format'] == 'hid_report_hex':
+            if rec['format'] in ('hid_report_hex', 'hid_descriptor_hex'):
                 bytes.fromhex(path.read_text().strip())
             elif rec['format'] == 'acceptance_run_json':
                 if rec['kind'] != 'virtual_host_run':
