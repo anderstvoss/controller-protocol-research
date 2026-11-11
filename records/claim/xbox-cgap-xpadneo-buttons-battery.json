@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "xbox-cgap-xpadneo-buttons-battery",
-  "statement": "The pinned xpadneo source maps the Xbox logo usage to BTN_MODE, but maps the Share usage through an internal BTN_SHARE alias for keyboard KEY_F12. It routes Share events to a separate keyboard input device and clears that code on the gamepad, while learning the battery report ID from the descriptor and exposing Linux power-supply properties. Its README confirms the F12 shortcut; this is not the stock xpad gamepad KEY_RECORD shape.",
+  "statement": "The pinned xpadneo source maps the Xbox logo usage to BTN_MODE, but maps the Share usage through an internal BTN_SHARE alias for keyboard KEY_F12. By default it routes Share events to a separate keyboard input device and clears that code on the gamepad; optional mouse mode can intercept Share as a mouse task button, while learning the battery report ID from the descriptor and exposing Linux power-supply properties. Its README confirms the F12 shortcut; this is not the stock xpad gamepad KEY_RECORD shape.",
   "status": "source_supported",
   "applicability": {
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
     "transport": "bluetooth",
-    "scope": "xpadneo.h:26-28; mappings.c:45-49,130-155; events.c:240-249,343-352; keyboard.c:11-36; power.c:12-167; README.md:150-155."
+    "scope": "xpadneo.h:26-28; mappings.c:45-49,130-155; events.c:240-249,343-352; keyboard.c:11-36; power.c:12-167; README.md:150-155.; mouse.c:172-227 for optional mouse mode."
   },
   "sources": [
     "xbox-cgap-xpadneo-mappings",
@@ -16,7 +16,8 @@
     "xbox-cgap-xpadneo-power",
     "xbox-cgap-xpadneo-docs",
     "xbox-cgap-xpadneo-header",
-    "xbox-cgap-xpadneo-keyboard"
+    "xbox-cgap-xpadneo-keyboard",
+    "xbox-cgap-xpadneo-mouse"
   ],
   "experiments": [],
   "conflicts_with": [],
