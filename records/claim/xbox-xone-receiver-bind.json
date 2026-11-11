@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-receiver-bind",
+  "statement": "Pinned xone binds a defined set of Xbox Wireless Adapter USB product IDs, requires separately supplied Microsoft adapter firmware, and initializes receiver-side transport before processing attached controllers. The driver handles pairing and receiver events itself rather than exposing an Xbox controller as a native USB gamepad on the adapter interface.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "transport/dongle.c:20-46, 1076-1182, 1290-1350, 1547-1587; README.md:25-35, 126-142. Firmware prerequisite only: vendor-firmware content was not acquired or inspected."
+  },
+  "sources": [
+    "xbox-xone-receiver",
+    "xbox-xone-readme"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

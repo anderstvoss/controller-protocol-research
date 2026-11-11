@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-gip-header",
+  "kind": "independent_implementation",
+  "url": "https://github.com/dlundqvist/xone/blob/f2aa9fe01103d7600553b505b298ff0bd47ff280/bus/protocol.h",
+  "revision": "f2aa9fe01103d7600553b505b298ff0bd47ff280",
+  "sha256": "877d3d1a8871543ada173a342ca169eb4994691eb38aba786ebea819b73cb119",
+  "lineage": "xone-dlundqvist",
+  "locator": "bus/protocol.h:9-20, 35-96, 102-143; GIP formats, audio interval and adapter interfaces; GPL-2.0-or-later."
+}
