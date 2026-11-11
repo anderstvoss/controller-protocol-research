@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-kernel-hid-generic",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-generic.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "3d565bbcbfae65163be432a517576b4f63f5c40e9e5829688f46681fd8aa6456",
+  "lineage": "linux-kernel",
+  "locator": "82-90 generic HID fallback match; this does not prove binding order or successful report decoding."
+}

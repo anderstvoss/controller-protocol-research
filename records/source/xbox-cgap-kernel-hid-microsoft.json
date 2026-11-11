@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-kernel-hid-microsoft",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-microsoft.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "0e25a58879663dc431c393b72021dd4a50b20077ab62c8d6c2fe5c9a6a375668",
+  "lineage": "linux-kernel",
+  "locator": "275-350 two-main-motor FF; 391-444 Bluetooth model 1914 HID match and separate older Xbox variants. GPL-2.0-or-later SPDX."
+}

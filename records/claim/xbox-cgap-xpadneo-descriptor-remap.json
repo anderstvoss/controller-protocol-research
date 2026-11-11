@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-descriptor-remap",
+  "statement": "The pinned xpadneo driver repairs selected malformed or variant Bluetooth HID descriptors, including Linux-mode axis usages and an over-wide button declaration, and rewrites compatible input events for Guide, View and Share. Therefore identical raw report bytes need not yield identical evdev behavior under hid-microsoft, hid-generic and xpadneo.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "device.c:143-262; events.c:60-137; mappings.c:32-66. Fixups are conditional, not a universal Series layout."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-device",
+    "xbox-cgap-xpadneo-events",
+    "xbox-cgap-xpadneo-mappings"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

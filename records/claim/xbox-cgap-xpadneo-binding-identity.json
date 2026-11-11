@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-binding-identity",
+  "statement": "Pinned xpadneo matches Bluetooth Series vendor 0x045e/product 0x0b13, but its probe normalizes the HID-visible identity to vendor 0x045e/product 0x028e and version 0x1130 before HID parsing. That post-driver identity can differ from the source controller identity and influence downstream application detection; no particular SDL runtime outcome was measured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "core.c:48-71, 169-241; treat identity translation as xpadneo behavior rather than a Series Bluetooth hardware identity."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

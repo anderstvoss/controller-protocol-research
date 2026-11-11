@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-docs",
+  "kind": "research_lead",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/README.md",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "68247d9724e952d12bca39f3356a9be0dea6ecb408378cb25ca987d87213c6b8",
+  "lineage": "xpadneo",
+  "locator": "88-105 BLE shared-descriptor caveats; 124-156 Bluetooth audio/Share and Series model statements. Documentation carries GPL-3.0-or-later unless otherwise marked; claims use paraphrase only."
+}
