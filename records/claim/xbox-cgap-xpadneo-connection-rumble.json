@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-connection-rumble",
+  "statement": "The pinned xpadneo defaults to enabling a connection-notification rumble sequence that separately addresses the main motors and, if permitted, both trigger motors before normal FF streaming is marked ready. The driver exposes EV_FF FF_RUMBLE with effect upload, erase and playback callbacks, rejects unsupported effect uploads, and turns streaming off while draining workers on removal. This is driver-generated initialization traffic and must not be misclassified as an application's independently commanded impulse rumble.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "rumble.c:31-36, 229-353, 357-482; xpadneo.h:55-105. Behavior depends on ff_connect_notify and quirk flags."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-rumble",
+    "xbox-cgap-xpadneo-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

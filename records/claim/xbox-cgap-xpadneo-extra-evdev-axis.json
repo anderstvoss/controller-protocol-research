@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-extra-evdev-axis",
+  "statement": "For a gamepad application collection, xpadneo configures signed sticks from -32768 to 32767 with fuzz 32 and default flat 3072, two 0..1023 triggers with fuzz 4, and an extra ABS_PROFILE axis ranging 0..3. It can change stick deadzone handling by module option. These post-driver Linux evdev capabilities are not equivalent to the 26-capability stock xpad benchmark in corpus PR 116.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "events.c:297-375; CONFIGURATION.md:8-12. Reported capabilities may depend on active application collection and settings."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-events",
+    "xbox-cgap-xpadneo-config"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

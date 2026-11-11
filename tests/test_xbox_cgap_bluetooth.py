@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class XboxBluetoothConsumerGap(unittest.TestCase):
     def test_claims_remain_consumer_only_without_experiments(self):
         paths = sorted((ROOT / "records/claim").glob("xbox-cgap-*.json"))
-        self.assertEqual(len(paths), 13)
+        self.assertEqual(len(paths), 24)
         for path in paths:
             claim = json.loads(path.read_text())
             with self.subTest(record=claim["id"]):
@@ -22,6 +22,14 @@ class XboxBluetoothConsumerGap(unittest.TestCase):
                 self.assertTrue(claim["sources"])
                 for source_id in claim["sources"]:
                     self.assertTrue((ROOT / "records/source" / f"{source_id}.json").exists())
+
+    def test_share_mapping_is_explicit_keyboard_f12(self):
+        path = ROOT / "records/claim/xbox-cgap-xpadneo-share-f12.json"
+        claim = json.loads(path.read_text())
+        self.assertIn("KEY_F12", claim["statement"])
+        self.assertIn("keyboard node", claim["statement"])
+        self.assertIn("xbox-cgap-xpadneo-header", claim["sources"])
+        self.assertEqual(claim["evidence_role"], "consumer")
 
     def test_scope_has_no_physical_promotion(self):
         paths = (ROOT / "records/claim").glob("xbox-cgap-*.json")

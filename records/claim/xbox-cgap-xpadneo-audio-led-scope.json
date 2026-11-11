@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-audio-led-scope",
+  "statement": "The reviewed xpadneo implementation provides Linux input, force feedback, optional mouse/keyboard/consumer devices and battery power-supply handling, but does not register a headset PCM sound device or an independent LED-class output. Its own documentation says controller audio is unavailable over Bluetooth. This limits xpadneo as a consumer benchmark and does not independently prove a hardware-wide audio or lighting impossibility.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "core.c:243-319; power.c:12-167; docs/README.md:124-126; xpadneo.h:100-220. Negative conclusion limited to reviewed driver code."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-core",
+    "xbox-cgap-xpadneo-power",
+    "xbox-cgap-xpadneo-docs",
+    "xbox-cgap-xpadneo-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

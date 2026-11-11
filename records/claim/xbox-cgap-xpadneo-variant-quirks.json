@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-variant-quirks",
+  "statement": "xpadneo uses model matching plus optional per-device quirks and heuristics influenced by the original HID identity, descriptor length and Bluetooth metadata; those flags can disable trigger rumble or pulse parameters and alter motor masking. Therefore a working Series reference profile is not necessarily representative of every third-party controller sharing an Xbox-style identifier.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "quirks.c:14-29,45-69,70-200; xpadneo.h:30-53; rumble.c:83-136. No Bluetooth addresses or quirk identities reproduced."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-quirks",
+    "xbox-cgap-xpadneo-header",
+    "xbox-cgap-xpadneo-rumble"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

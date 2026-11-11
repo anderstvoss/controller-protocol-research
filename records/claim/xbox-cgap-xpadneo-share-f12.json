@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-share-f12",
+  "statement": "In the pinned xpadneo kernel code, BTN_SHARE is an internal alias for KEY_F12. Its input mapping assigns the Share usage to that alias, removes the Share/F12 capability from the gamepad node, and forwards actual Share key events to a separate keyboard node. Therefore a Series controller under xpadneo need not expose the stock xpad gamepad Share event KEY_RECORD; the pinned code and its README agree on keyboard F12.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "xpadneo.h:26-28; mappings.c:45-49; events.c:237-247, 343-351; keyboard.c:11-36; docs/README.md:150-155."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-header",
+    "xbox-cgap-xpadneo-mappings",
+    "xbox-cgap-xpadneo-events",
+    "xbox-cgap-xpadneo-keyboard",
+    "xbox-cgap-xpadneo-docs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
