@@ -14,7 +14,7 @@ by the hidraw ACL. This map declares a 17-byte numbered input report `0x01`
 and a nine-byte numbered force-feedback output report `0x03` including their
 IDs. It declares neither a battery nor a separate Guide report. Guide is
 represented within the primary input report in the qualified Linux mapping.
-[xpadneo descriptor](https://github.com/atar-axis/xpadneo/blob/master/docs/descriptors/xbxs.md)
+[xpadneo descriptor](https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/descriptors/xbxs.md)
 
 A scratch UHID device reproduced the descriptor and Bluetooth bus identity
 with a synthetic physical path. The kernel bound it to `microsoft`.
