@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-rumble-main-only",
+  "statement": "Pinned xone defines four GIP actuator slots and enables all four in the outgoing command mask, but its Linux FF_RUMBLE callback assigns only left and right main-motor amplitudes. It does not write independently controlled impulse-trigger magnitudes from Linux FF. The normal output uses GIP command 0x09, and a 10 ms coalescing delay is applied after ordinary FF updates. Pinned SDL separately exposes a conditional trigger-rumble path in its own wired GIP HIDAPI consumer.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "driver/gamepad.c:73-115, 151-215; bus/protocol.c:583-593; comparison with pinned SDL_hidapi_xboxone.c:564-640. Source-supported host capability, not measured physical impulse actuation."
+  },
+  "sources": [
+    "xbox-xone-gamepad",
+    "xbox-xone-gip-protocol",
+    "xbox-series-sdl-xboxone",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

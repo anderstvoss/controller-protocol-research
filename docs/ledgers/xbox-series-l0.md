@@ -42,3 +42,32 @@ Hat 0 uses positive X for right and positive Y for down. The stick Y
 values are the post-driver axes, where xpad reverses the incoming
 vertical direction. See the pinned xpad source at lines 1051–1059 and
 1095–1158 for the mappings. This table describes evdev controls only.
+
+## xone GIP consumer (source-only, draft research)
+
+The separate [xone consumer brief](../xbox-series-xone-consumer.md) records
+`dlundqvist/xone` at `f2aa9fe01103d7600553b505b298ff0bd47ff280`.
+Its `xbox-xone-*` source records hash each referenced upstream file. Its
+`xbox-xone-*` claim records are **consumer** evidence only and add no
+experiments or physical validation. They do not replace the existing xpad,
+SDL, USB-device-gap or Bluetooth-device-gap records.
+
+- **Startup / identity:** `xbox-xone-wired-bind`,
+  `xbox-xone-startup-identify`, `xbox-xone-ack-sequence`,
+  `xbox-xone-host-rejection` describe USB binding, GIP metadata and host
+  parser limits. Physical descriptors, timing and keep-alive remain unknown.
+- **Input / evdev:** `xbox-xone-input-share-guide` and
+  `xbox-xone-evdev-compare` compare xone's Guide/Share handling and
+  post-driver surface against the existing 26-capability xpad baseline.
+- **Impulse triggers:** `xbox-xone-rumble-main-only` shows four GIP motor
+  fields but only main-motor Linux FF mapping. Pinned SDL has a distinct
+  conditional trigger-rumble GIP path, not proof of physical actuation.
+- **Other surfaces:** `xbox-xone-led-battery-power` and
+  `xbox-xone-gip-headset` describe LED, battery, power and conditional GIP
+  headset-to-ALSA playback/capture. xpad's GIP-audio exclusion remains valid.
+- **Receiver:** `xbox-xone-receiver-bind` and
+  `xbox-xone-receiver-clients` describe the Xbox Wireless Adapter and
+  per-associated-client GIP adapters (transport `receiver`, not Bluetooth).
+  A separately supplied firmware prerequisite is recorded without analysis.
+- **Gaps:** `xbox-xone-physical-unknown` retains physical-device unknowns.
+  The proposed tests in the brief are explicitly **not run**.

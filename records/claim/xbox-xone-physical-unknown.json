@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-physical-unknown",
+  "statement": "Source inspection does not establish exact Xbox Series device-side USB descriptors, initialization response timing, maximum ACK latency, keep-alive behavior, headset attachment transitions, four-motor physical actuation, or wireless receiver packet behavior on hardware. These remain test proposals rather than device evidence.",
+  "status": "unknown",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series; physical firmware revision not available",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Unmeasured physical-device boundaries related to xbox-series-usb-device-gaps; all xone-specific evidence remains consumer-only. This record does not supersede the existing device-side gap claim."
+  },
+  "sources": [
+    "xbox-xone-gip-protocol",
+    "xbox-xone-gamepad",
+    "xbox-xone-wired",
+    "xbox-xone-receiver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

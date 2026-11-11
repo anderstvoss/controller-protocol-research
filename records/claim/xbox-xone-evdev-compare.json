@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-evdev-compare",
+  "statement": "For an advertised Share interface and standard gamepad without additional paddles, pinned xone configures twelve gamepad keys, eight absolute axes and memoryless Linux rumble, matching the control types of the existing 26-capability xpad Series baseline. It uses BUS_VIRTUAL and a generic Xbox device name rather than xpad wired USB ancestry and its USB-derived identity. Elite models can additionally advertise four grip buttons; xone and xpad are not interchangeable evidence of a physical GIP report.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "driver/gamepad.c:224-305 and 385-482; driver/common.c:190-222; compare pinned xpad source and claims xbox-series-xpad-evdev-shape and xbox-series-xpad-axis-domains. The same kernel memoryless FF implementation can supply additional FF capability bits."
+  },
+  "sources": [
+    "xbox-xone-gamepad",
+    "xbox-xone-common",
+    "xbox-series-linux-xpad",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

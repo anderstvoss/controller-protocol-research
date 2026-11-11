@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-license",
+  "kind": "research_lead",
+  "url": "https://github.com/dlundqvist/xone/blob/f2aa9fe01103d7600553b505b298ff0bd47ff280/LICENSE",
+  "revision": "f2aa9fe01103d7600553b505b298ff0bd47ff280",
+  "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+  "lineage": "xone-dlundqvist",
+  "locator": "LICENSE:1-6 and complete file; repository licence text is GNU GPL version 2; inspected C files additionally declare SPDX GPL-2.0-or-later."
+}
