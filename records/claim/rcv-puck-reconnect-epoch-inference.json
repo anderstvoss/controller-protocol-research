@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-reconnect-epoch-inference",
+  "statement": "Because the kernel unregisters input devices at disconnect and allocates new input devices at later attachment, a complete disconnect-reconnect observed by this consumer implies a new evdev device lifetime rather than a neutral-frame-only transition. The exact event-node numbering, stable symlinks and persistence of receiver association require host validation; this supports an explicit slot epoch in the ADR-0022 model.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

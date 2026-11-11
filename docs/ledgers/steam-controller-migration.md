@@ -26,3 +26,7 @@ source-only scopes remain intact, but consumer evidence no longer elevates
 the device category. OpenPuck layouts retain device-role source evidence of
 a compatibility implementation, not evidence of the physical controller. Per-transport Puck assertions follow owner comment
 6189359458 on virtualgamepad#176, preserving both USB and source-only evidence.
+
+## Puck receiver consumer lifecycle — source-only lane (2026-11-11)
+
+Pinned Linux `hid-steam` and SDL Triton show per-HID-interface presence, native input/sensor/battery teardown, SDL joystick churn and per-interface output/lizard routing. SDL wireless-status IDs are 0x46 and 0x79 at the selected pin, not 0x7b. Source reuse: `steam-ibex-linux-driver`, `steam-ibex-linux-ids`, `steam-triton-sdl-driver`, `steam-c6-sdl-structs`; no new source hashes or device captures. Claims: `rcv-puck-kernel-per-interface`, `rcv-puck-kernel-presence`, `rcv-puck-sdl-presence`, `rcv-puck-kernel-attach`, `rcv-puck-kernel-detach`, `rcv-puck-sdl-joystick-lifecycle`, `rcv-puck-identity-battery`, `rcv-puck-output-routing`, `rcv-puck-lizard-arbitration`, `rcv-puck-teardown`, `rcv-puck-reconnect-epoch-inference`, `rcv-puck-physical-slot-unknown`. See [consumer brief](../receivers-puck-consumer-lifecycle.md). Slot epochs are inferred, not measured; physical slot presence and bonding remain open under `sc2-gap-puck-slots`. Owner-only host and physical tests are **not run**.

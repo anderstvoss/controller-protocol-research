@@ -1,17 +1,82 @@
 # Steam Controller 2026 Puck — receiver consumer lifecycle
 
-**Scope:** source-only Linux hid-steam and SDL Triton consumer research. Work in progress; no hardware test.
+**Scope:** pinned Linux `hid-steam` and SDL Triton source review for `steam-controller-2026-puck` (`28de:1304`), virtualgamepad [#165](https://github.com/anderstvoss/virtualgamepad/issues/165) and [#159](https://github.com/anderstvoss/virtualgamepad/issues/159). **Source-only, no hardware test.** This does not certify physical Puck behavior or implement a realization.
 
 ## Decision table
 
-| Consumer | Finding | Playable vs faithful | Evidence ceiling | ADR-0022: covered, needs change, or untested | Claim / issue |
+| Finding / consumer | What virtualgamepad needs | Playable vs faithful | Evidence ceiling | ADR-0022: covered, needs change, or untested | Claim / issue |
 | --- | --- | --- | --- | --- | --- |
-| Work in progress | Work in progress | Work in progress | Source-only | Untested | #165, #159 |
+| Four selected Puck HID slots | One receiver owns 0–4 protocol slots; player index is separate | Faithful USB aggregate requires a composite presentation | Source consumer topology | **Covered** in model; production provider untested | `rcv-puck-kernel-per-interface`; #165, #168 |
+| Kernel initial presence | Query status and accept report 0x79 state changes per interface | Playable evdev can implement a single selected slot | No retail response validation | **Covered** conceptually | `rcv-puck-kernel-presence`; #159 |
+| SDL presence | Dispatch 0x46 or 0x79; data may imply connect; **not 0x7b** | Native SDL Puck requires accepted interface number | Version-specific source; not live SDL | **Covered** contract; USB presentation untested | `rcv-puck-sdl-presence`; #168 |
+| Kernel attach | Conditional gamepad, sensor and battery registration | Per-slot evdev node plausible | Host bind not run | **Covered** contract; production wiring untested | `rcv-puck-kernel-attach` |
+| Kernel detach and reconnect | Remove and recreate native devices | Do not emulate disconnect with neutral frames alone | Source implies new input object | **Needs change/verification** for slot epochs in a production implementation | `rcv-puck-kernel-detach`, `rcv-puck-reconnect-epoch-inference` |
+| SDL attach/detach | One context's joystick connects or disconnects | Faithful SDL requires slot interface handles | Source-only | **Covered** contract; simultaneous churn untested | `rcv-puck-sdl-joystick-lifecycle` |
+| Slot identity and power | Keep slot identity, battery and serial-derived native state scoped locally | Avoid assuming player LEDs or stable bond IDs | No retail persistence evidence | **Untested** bond/identity persistence | `rcv-puck-identity-battery` |
+| Output and desktop | Route feature, rumble and lizard through selected HID handle | UHID-only cannot claim whole Puck USB identity | Effects and companions unmeasured | **Covered** routing; **untested** absence/companions | `rcv-puck-output-routing`, `rcv-puck-lizard-arbitration` |
+| Teardown/failure | Remove one slot without deleting siblings; receiver-wide close drains all | Whole-receiver failure fidelity needs tests | Per-interface paths only | **Untested** shared failure propagation | `rcv-puck-teardown`, `rcv-puck-physical-slot-unknown` |
 
-## Consumer source evidence
+## Source pins and evidence separation
 
-Work in progress.
+All cited implementation source files are already pinned and SHA-256 hashed in `records/source/`, **reused without duplicating or editing records**:
+
+| Source ID | File and revision | Licence / limitation |
+| --- | --- | --- |
+| `steam-ibex-linux-driver` | [Linux `drivers/hid/hid-steam.c`](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c), `cee9395acd8043be0644b25c34bfa86623f2b935` (v7.3-rc1) | GPL-2.0; consumer driver, not physical receiver capture |
+| `steam-ibex-linux-ids` | Linux `drivers/hid/hid-ids.h` at its existing corpus pin | GPL-2.0; definitions only |
+| `steam-triton-sdl-driver` | [SDL `SDL_hidapi_steam_triton.c`](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c), `6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1` | zlib; consumer HIDAPI implementation |
+| `steam-c6-sdl-structs` | [SDL `steam/controller_structs.h`](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h), same SDL commit | zlib; report enums/structures |
+
+Related existing evidence: `steam-puck-interface-selection`, `sc2-migration-kernel-interface-shape`, `sc2-migration-kernel-lizard-policy`, `sc2-gap-puck-slots`, `sc2-gap-puck-usb-descriptors`, `sc2-july-puck-input-7b`, `sc2-migration-openpuck-slots`, and `ds4-l0-consumer-revision-and-dongle-routing`. The OpenPuck records describe an emulator; they are **not** retail Puck measurements. The reported July Puck 0x7b traffic must **not** be reclassified as an SDL connect/disconnect event: the pinned SDL header maps wireless status to 0x46 and 0x79.
+
+## Eight consumer questions
+
+### 1. Identity and receiver-versus-wired selection
+
+Kernel matches 2026 Puck under a USB receiver-specific ID and IBEX plus WIRELESS flags ([lines 2751–2769](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2751-L2769)). Source documentation identifies interfaces 0–1 as non-HID communications, 2–5 as four controller slots, and 6 as a reduced pogo interface ([lines 1593–1626](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1593-L1626)). Its instance state is allocated separately at each eligible HID probe ([lines 1735–1776](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1735-L1776)); this is not a four-slot `steam_device` or one SDL player index. SDL admits Puck receiver interfaces numbered 2–5 and does **not** immediately mark them connected, unlike a wired Triton ([lines 429–471](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L429-L471)). The existing `steam-puck-interface-selection` already establishes the Linux UHID interface-number limitation; this review does not duplicate it.
+
+### 2. Slot presence and connection signals
+
+At probe the kernel queries the receiver connection state and registers only if connected ([lines 720–743](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L720-L743), [lines 1798–1820](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1798-L1820)). For IBEX it interprets a size-2 input report 0x79 as disconnect or connect, each updating a per-interface connected flag and scheduling work ([lines 2530–2619](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L2530-L2619), [lines 1876–1886](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1876-L1886)). Valid input 0x42/0x45 or battery 0x43 while the corresponding native object is absent can also request connection. Work observes current state, so multiple rapid changes may coalesce: one report need not mean one full host teardown/recreation.
+
+SDL's enum declares status IDs **0x46 and 0x79**, not 0x7b ([lines 550–567](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/steam/controller_structs.h#L550-L567)). Each accepted status record toggles its HIDAPI device context; input state 0x42/0x45/0x47 can implicitly attach a missing joystick ([lines 375–409](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L375-L409), [lines 508–567](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L508-L567)). No claim is made about physical Puck report order or timing.
+
+### 3. When host input devices exist
+
+The kernel registers a gamepad, motion-sensor input device and best-effort battery power supply only for a connected, kernel-owned interface ([lines 1372–1436](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1372-L1436)). At disconnect it unregisters those objects ([lines 1439–1459](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1439-L1459)), and a later registration allocates fresh input devices ([lines 1099–1129](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1099-L1129), [lines 1227–1326](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1227-L1326)). Thus an evdev node can disappear and reappear, but its specific `eventN` number or any udev alias is not proven to remain stable. SDL calls `HIDAPI_JoystickConnected` only for a connection transition and `HIDAPI_JoystickDisconnected` for removal ([lines 375–393](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L375-L393)). The receiver HID interface can exist without an SDL joystick.
+
+### 4. Per-slot identity, battery, LEDs, player assignment
+
+Each kernel `steam_device` stores a feature-requested serial-derived identity, battery values, and sensor and gamepad device metadata ([lines 401–431](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L401-L431), [lines 978–1096](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L978-L1096), [lines 1372–1418](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1372-L1418)). Do not publish actual serials or infer a stable bond ID from these structures. SDL tracks a connected joystick's battery through report 0x43 and does not supply a fixed player index ([lines 350–393](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L350-L393), [lines 474–480](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L474-L480)). Its RGB LED API is unsupported ([lines 631–640](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L631-L640)). A receiver protocol slot is **not** a player LED index or GamepadManager assignment. Device-side LED/player semantics, receiver bond survival and reconnection association remain unresolved.
+
+### 5. Per-slot host output
+
+Kernel IBEX rumble and haptic pulse use the `steam_device`'s own HID transport, and feature requests go through that device ([lines 750–875](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L750-L875), [lines 1633–1704](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1633-L1704)). SDL's feature/rumble/IMU calls use `device->dev`, with periodic lizard/rumble work only when the context is connected and has a joystick ([lines 485–505](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L485-L505), [lines 595–676](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L595-L676)). This gives slot isolation by **USB HID interface**, not an explicitly encoded slot selector in those per-interface writers. Neither consumer establishes how the physical receiver handles an output submitted to an absent slot, delayed delivery, or acknowledgements. ADR-0022's no-uncertain-replay rule remains necessary and is not relaxed by these sources.
+
+### 6. Slot-local failure and whole-receiver teardown
+
+The kernel per-interface removal path closes its transport, destroys its raw client, drains queued work, unregisters native devices and stops HID operation ([lines 1853–1874](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1853-L1874)). SDL disconnects that context's joystick when a HID read fails ([lines 508–519](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L508-L519)). Neither implementation provides an atomic multi-slot parent failure transaction in the inspected code. USB unplug ordinarily removes all child interfaces, but sibling teardown sequencing, simultaneous failures and stale writes are **not source-validated Puck behavior**; test #165 separately for slot-local loss and receiver-wide loss.
+
+### 7. Desktop/keyboard/pointer companions
+
+Kernel raw-client open/close toggles native registration while preserving the underlying HID ownership ([lines 1650–1704](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1650-L1704), [lines 1461–1485](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1461-L1485)); IBEX desktop/lizard settings are explicitly managed ([lines 880–907](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L880-L907)). SDL repeatedly requests lizard disable for an active joystick and exposes IMU settings separately ([lines 494–505](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L494-L505), [lines 653–681](https://github.com/libsdl-org/SDL/blob/6defbc0129b5ba90bab3f6c67bbc1e9329e24ff1/src/joystick/hidapi/SDL_hidapi_steam_triton.c#L653-L681)). The kernel passes non-controller HID interfaces to normal HID handling where applicable ([lines 1735–1760](https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-steam.c#L1735-L1760)). Neither path proves that the retail Puck itself creates keyboard/pointer nodes per slot, or how they persist during disconnect. Optional companion creation remains an **explicit, untested** ADR-0022 feature, not an automatic product claim.
+
+### 8. Virtual receiver presentation and ADR-0022
+
+- **Reduced playable/kernel-evdev path:** individually chosen UHID HID interfaces may exercise selected Linux input semantics when driver eligibility is satisfied; they do **not** constitute a faithful shared USB receiver. uinput supplies evdev events, not raw receiver USB/HID feature lifecycles.
+- **SDL native Puck:** expects real receiver interface numbers 2–5. The existing `steam-puck-interface-selection` source evidence explains why one `BUS_USB` UHID interface defaults to interface number -1 and fails SDL's filter. This is a discovery constraint even if report encoding is correct.
+- **Faithful receiver acceptance:** a measured USB composite via `dummy_hcd` or a suitable USB/IP endpoint is a more appropriate candidate for host-level interface and enumeration fidelity; neither consumer source proves such a virtual implementation works. Real descriptors, endpoints and slot routing require the owner-operated physical evidence under #168/#159.
+- **ADR-0022 check:** the receiver owns lifetime, independently typed protocol slots, optional explicitly configured companions, slot-local cleanup and receiver-wide terminal close. **Needs implementation review** for slot-recreation epochs, queued transition coalescing, stale feature/output requests and receiver-wide failure ownership. No generic player-index routing or implicit fallback.
 
 ## Proposed tests (not run)
 
-Work in progress.
+1. Synthetic 0-to-4-slot attach matrix: receiver present, no controller nodes initially; attach/detach different slots, verify sibling-preserving input and battery lifecycle.
+2. Rapid report 0x79 connection churn: inspect kernel worker coalescing and ensure final native state is consistent; distinguish coalesced transitions from delivered epochs.
+3. SDL pinned-version status dispatch: 0x46 and 0x79 connect/disconnect; negative 0x7b status-assumption test; input-led implicit reconnect; no joystick at Puck interface initialization.
+4. Real USB composite interface selection: probe 2–5 and verify non-HID 0–1/pogo 6 handling; contrast a one-node UHID and uinput reduced realization.
+5. Retained-slot association: reconnect with new evdev object without wrongly reusing stale outputs or treating a slot as player index; verify battery and identity scoping without publishing identifiers.
+6. Output to an absent slot and during reconnect: assert no unsafe replay, successful/error reply ownership, cancellation and per-slot fairness.
+7. Per-slot HID read or write failure and receiver unplug: sibling survival versus deterministic full cleanup, including optional keyboard/pointer companions.
+8. Owner-only physical reference captures for real descriptors, slot churn, pairing/bond, rumble, lizard/desktop and unplug; record privately and sanitize before any separate device-evidence PR.
+
+**All tests above are proposals, not run.** No physical Puck or live Linux/SDL host was available to this source-only lane. Source consumer behavior is not a retail device assertion.
