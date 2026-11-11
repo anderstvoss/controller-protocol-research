@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-hogp-output",
+  "statement": "For its BLE HID-over-GATT mode, xpadneo sends rumble using a HID output SET_REPORT request on the acknowledged route, while its non-HOGP route sends a HID output report and inserts a delay. This difference can affect whether the consumer actually delivers feedback to an emulated Bluetooth-bus UHID endpoint; delivery has not been exercised here.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "device.c:14-36, core.c:175-194; report success, host request lifecycle and callback behavior need a virtual-host experiment."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-device",
+    "xbox-cgap-xpadneo-core"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

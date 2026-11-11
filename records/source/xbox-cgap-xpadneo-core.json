@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-core",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/core.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "d14d2ae9b17ccd974ed3cb63e5456829e1c0cf8d439c64947278df8446eeb867",
+  "lineage": "xpadneo",
+  "locator": "34-71 Bluetooth HID aliases; 169-194 firmware/HOGP selection; 204-241 normalized identity; GPL-2.0-only SPDX."
+}

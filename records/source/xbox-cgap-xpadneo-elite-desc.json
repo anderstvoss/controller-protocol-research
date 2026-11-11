@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-elite-desc",
+  "kind": "research_lead",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/descriptors/xbe2_ble.md",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "778d0cb90fd618f739d6a3fbb75afaa28329f9d06e762a4ea81e75b287336456",
+  "lineage": "xpadneo",
+  "locator": "3-12 Xbox Elite Series 2 BLE 5.23 464-byte comparator; 33-45 HID-BPF descriptor rewrite, not Series model 1914. Documentation GPL-3.0-or-later."
+}

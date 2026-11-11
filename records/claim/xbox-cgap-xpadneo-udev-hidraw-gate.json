@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-udev-hidraw-gate",
+  "statement": "The pinned xpadneo installation includes a udev rule that can rebind matching Bluetooth HID controllers from a previous driver to xpadneo and a separate udev rule setting xpadneo-associated hidraw node permissions to 0000 while removing uaccess tags. Ordinary desktop SDL HIDAPI hidraw access can consequently be restricted even when evdev gamepad input works; rules installation and effective permissions were not observed.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "60-xpadneo.rules:1-12; 70-xpadneo-disable-hidraw.rules:1-7. Rules are packaged policy, not a universal OS configuration."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-udev-bind",
+    "xbox-cgap-xpadneo-udev-hidraw"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

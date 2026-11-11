@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-impulse-derived",
+  "statement": "xpadneo constructs Bluetooth rumble report ID 0x03 with main and trigger motor fields. Through ordinary Linux FF_RUMBLE, it computes both trigger amplitudes from the larger of the two main rumble magnitudes weighted by current trigger pressure, unless disabled by policy or quirks. Thus it can command trigger-motor fields, but does not provide four independent application-controlled evdev FF magnitudes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "rumble.c:18-41, 56-135, 150-219; trigger motor actuation on reference hardware not observed."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-rumble",
+    "xbox-cgap-xpadneo-events"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

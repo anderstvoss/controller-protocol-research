@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-descriptor-example",
+  "statement": "xpadneo's pinned Xbox Series descriptor documentation presents a 283-byte Bluetooth HID example containing a gamepad input report ID 0x01 and a four-actuator output definition under report ID 0x03. This is one upstream-described descriptor variant, not an authoritative descriptor for every Series firmware or a newly validated physical capture.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "xpadneo docs/descriptors/xbxs.md:3-165; no descriptor bytes or source excerpts were copied. The original example's exact device firmware is not established by the cited header."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

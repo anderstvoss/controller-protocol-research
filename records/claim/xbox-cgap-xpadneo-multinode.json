@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-multinode",
+  "statement": "The pinned xpadneo probe sets HID_QUIRK_INPUT_PER_APP and may construct separate gamepad, keyboard, consumer-control and mouse Linux input devices. It creates synthetic fallback nodes when the descriptor did not supply the application, copying the post-normalization HID bus and product identity. A single HID-level controller may therefore produce several evdev nodes rather than the single xpad-like gamepad evdev object.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "core.c:169-170,243-278; synthetic.c:11-82; keyboard.c:11-47; consumer.c:11-35; mouse.c:229-279. Exact node count conditional on descriptor/mouse option."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-core",
+    "xbox-cgap-xpadneo-synthetic",
+    "xbox-cgap-xpadneo-keyboard",
+    "xbox-cgap-xpadneo-consumer",
+    "xbox-cgap-xpadneo-mouse"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

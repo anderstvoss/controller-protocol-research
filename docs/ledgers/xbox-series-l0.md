@@ -43,6 +43,20 @@ values are the post-driver axes, where xpad reverses the incoming
 vertical direction. See the pinned xpad source at lines 1051–1059 and
 1095–1158 for the mappings. This table describes evdev controls only.
 
+## Bluetooth-bus UHID consumer gap (source-only)
+
+[Bluetooth consumer gap brief](../xbox-series-bluetooth-consumer.md) records 13 `xbox-cgap-*` consumer claims and pins Linux `hid-microsoft` / `hid-generic` and xpadneo sources. It reuses `xbox-series-sdl-xboxone` and existing BlueZ HOGP/UHID sources rather than creating competing versions of PR #116 or PR #123.
+
+- **Kernel binding:** `xbox-cgap-linux-binding`, `xbox-cgap-hogp-uhid`; standard Bluetooth model 1914 matches kernel `hid-microsoft`, but no tested virtual bind.
+- **Descriptors/firmware:** `xbox-cgap-descriptor-example`, `xbox-cgap-descriptor-variants`; 283-byte Series example; older 1708 and Elite 1797 references are *comparators*, not alternate Series truth.
+- **xpadneo:** `xbox-cgap-xpadneo-binding-identity`, `xbox-cgap-xpadneo-descriptor-remap`, `xbox-cgap-xpadneo-buttons-battery`, `xbox-cgap-xpadneo-impulse-derived`, `xbox-cgap-xpadneo-hogp-output` describe optional driver selection, rewritten identity, conditional mappings, derived trigger rumble and acknowledged BLE output.
+- **SDL:** `xbox-cgap-sdl-descriptor-gate`, `xbox-cgap-sdl-firmware-buttons`, `xbox-cgap-sdl-guide-battery-policy` expand the parser-versus-fallback and firmware distinctions without duplicating existing Bluetooth report claims.
+- **Decision boundary:** `xbox-cgap-virtual-uhid-feasibility` is `inferred`, not a host acceptance. Original `xbox-series-bluetooth-device-gaps` remains unknown. Physical and virtual tests are **not run**.
+
+### xpadneo-specific follow-up (consumer-only)
+
+The [xpadneo deep dive](../xbox-series-xpadneo-consumer.md) corrects `xbox-cgap-xpadneo-buttons-battery`: the xpadneo `BTN_SHARE` name is a macro for **keyboard KEY_F12**, not an evdev gamepad Share button. The driver also emits separate auxiliary evdev devices, a default Guide modifier, an extra `ABS_PROFILE` axis and a conditional connection-rumble sequence. Its packaged rules restrict hidraw access, affecting SDL HIDAPI acceptance. `xbox-cgap-xpadneo-*` source-only consumer claims record these behaviors with empty experiments. Physical Bluetooth Series behavior remains **unknown**.
+
 ## xone GIP consumer (source-only, draft research)
 
 The separate [xone consumer brief](../xbox-series-xone-consumer.md) records

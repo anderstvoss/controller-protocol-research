@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-mappings",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/mappings.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "79dd34074d0df835a4566bd2aa95cf106da6bf091eb148dfc46bfdbfb2c18f78",
+  "lineage": "xpadneo",
+  "locator": "32-66 Guide/Share HID usage mapping; 130-155 descriptor-discovered battery report; GPL-2.0-only SPDX."
+}
