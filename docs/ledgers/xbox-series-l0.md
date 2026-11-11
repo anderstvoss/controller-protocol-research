@@ -1,5 +1,10 @@
 # Xbox Series L0 evidence ledger
 
+The later [wired physical session](xbox-series-wired-physical.md) and
+[Bluetooth reference session](xbox-series-bt-reference.md) use separately
+scoped `xsphys-*` records. The historical source-only ledger below retains
+its original scope.
+
 Source-reviewed only. Sources/claims are pinned to full commits and exact file
 hashes. Every kernel/SDL claim is source_only consumer evidence; USB-GIP and
 Bluetooth device-side gaps are separate unknown claims. Xbox360 standard HID is

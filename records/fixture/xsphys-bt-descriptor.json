@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-bt-descriptor",
+  "kind": "physical",
+  "format": "hid_descriptor_hex",
+  "path": "fixtures/xsphys-bt-descriptor.hex",
+  "sha256": "499bbd5e4641b0ca90e0c315737dd887367960cc124bd131a789c5cc9d366552",
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc"
+  ],
+  "experiments": [
+    "xsphys-bt-descriptor-read"
+  ],
+  "parent": null,
+  "transform": "Read only report_descriptor bytes from the verified physical HID device. Convert to lowercase hex. tools/sanitize.py review-descriptor checked short-item structure and absence of string references or opaque long items; each byte was manually reviewed as descriptor structure. No event timestamps, paths, addresses or pairing data retained.",
+  "claims": [
+    "xsphys-bt-descriptor-match"
+  ]
+}
