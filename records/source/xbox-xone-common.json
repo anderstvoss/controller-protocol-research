@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-common",
+  "kind": "independent_implementation",
+  "url": "https://github.com/dlundqvist/xone/blob/f2aa9fe01103d7600553b505b298ff0bd47ff280/driver/common.c",
+  "revision": "f2aa9fe01103d7600553b505b298ff0bd47ff280",
+  "sha256": "1061f66f897a86aa03b4fb6b0e224719e7cab9214ed48cd623beaeac22f11e93",
+  "lineage": "xone-dlundqvist",
+  "locator": "driver/common.c:12-98, 105-188, 190-222; power_supply battery, LED class and Linux input identification; GPL-2.0-or-later."
+}

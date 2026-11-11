@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-headset",
+  "kind": "independent_implementation",
+  "url": "https://github.com/dlundqvist/xone/blob/f2aa9fe01103d7600553b505b298ff0bd47ff280/driver/headset.c",
+  "revision": "f2aa9fe01103d7600553b505b298ff0bd47ff280",
+  "sha256": "6a34339f661407285f963a0dc138a9217755c5162dfacc7528ebc7ce94951192",
+  "lineage": "xone-dlundqvist",
+  "locator": "driver/headset.c:12-120, 154-244, 254-319, 345-443, 473-594; conditional GIP headset client and ALSA full duplex; GPL-2.0-or-later."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-output-routing",
+  "statement": "The IBEX kernel haptic output path uses the HID handle owned by the slot's steam_device. SDL sends per-device rumble and lizard or IMU feature reports on the selected HIDAPI handle, with its periodic lizard/rumble work gated on an attached joystick. Neither code path establishes receiver-side acknowledgements, slot-address bytes, or a physical effect after a controller departs.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

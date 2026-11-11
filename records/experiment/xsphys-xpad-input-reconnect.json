@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-xpad-input-reconnect",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "fixtures": [
+    "xsphys-xpad-sweep",
+    "xsphys-xpad-reconnect"
+  ],
+  "procedure": "On Linux 7.3.0-1-mainline x86_64, identify the physical wired 045e:0b12 USB controller and its xpad event node. Read USB topology and compare xpad capabilities against the C9 evdev definition. Use evtest 1.36 to observe all buttons, four stick axes, both triggers, all eight D-pad directions and simultaneous inputs. Disconnect USB, observe removal, reconnect, compare the descriptor hash, reopen the replacement input node and press A, Guide and Share.",
+  "semantic_outcome": "Observed all 12 key presses and releases, all eight hat directions and center, full signed stick and 10-bit trigger ranges, and simultaneous key and axis changes with no dropped frames. The original input object disappeared; the replacement had the same USB descriptor hash and evdev identity. After active-seat ACL readiness the replacement reported A, Guide and Share presses and releases. Physical stick fuzz was 16; the C9 virtual surface specifies 0. Exact hardware revision and firmware were unconfirmed."
+}

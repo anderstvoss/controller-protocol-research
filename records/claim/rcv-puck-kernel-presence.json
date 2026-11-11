@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-kernel-presence",
+  "statement": "For a Puck slot interface, hid-steam first queries wireless connection status at probe and treats report 0x79 with a two-byte size check as connect or disconnect according to its event byte. Missing gamepad or battery registration can also cause a subsequent accepted IBEX input or battery report to schedule connection. The work queue observes the latest connected state.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

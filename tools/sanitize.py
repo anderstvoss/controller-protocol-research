@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 from validate import validate
 
@@ -38,11 +39,48 @@ def transform(root, parent_id, new_id, offset, replacement):
     validate(root)
 
 
+def review_descriptor(path):
+    """Review HID short items and reject string references or opaque data."""
+    data = bytes.fromhex(Path(path).read_text())
+    if not data or len(data) > 4096:
+        raise ValueError('descriptor must contain 1 through 4096 bytes')
+    offset = 0
+    collections = 0
+    while offset < len(data):
+        prefix = data[offset]
+        offset += 1
+        if prefix == 0xfe:
+            raise ValueError('opaque long HID items require separate manual sanitization')
+        size = (0, 1, 2, 4)[prefix & 3]
+        kind = (prefix >> 2) & 3
+        tag = prefix >> 4
+        if offset + size > len(data):
+            raise ValueError('truncated HID item')
+        if kind == 3 or (kind == 2 and tag in (7, 8, 9)):
+            raise ValueError('reserved HID item or string reference requires separate review')
+        if kind == 0 and tag == 10:
+            collections += 1
+        if kind == 0 and tag == 12:
+            collections -= 1
+            if collections < 0:
+                raise ValueError('unbalanced HID collection')
+        offset += size
+    if collections:
+        raise ValueError('unbalanced HID collection')
+    return hashlib.sha256(data).hexdigest()
+
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description=__doc__)
-    for name in ['root', 'parent', 'id']:
-        parser.add_argument(name)
-    parser.add_argument('offset', type=int)
-    parser.add_argument('replacement_hex')
-    args = parser.parse_args()
-    transform(args.root, args.parent, args.id, args.offset, bytes.fromhex(args.replacement_hex))
+    if len(sys.argv) > 1 and sys.argv[1] == 'review-descriptor':
+        parser = argparse.ArgumentParser(description=review_descriptor.__doc__)
+        parser.add_argument('path')
+        args = parser.parse_args(sys.argv[2:])
+        print('Reviewed descriptor SHA-256:', review_descriptor(args.path))
+    else:
+        parser = argparse.ArgumentParser(description=__doc__)
+        for name in ['root', 'parent', 'id']:
+            parser.add_argument(name)
+        parser.add_argument('offset', type=int)
+        parser.add_argument('replacement_hex')
+        args = parser.parse_args()
+        transform(args.root, args.parent, args.id, args.offset, bytes.fromhex(args.replacement_hex))

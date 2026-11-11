@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-debug-publication",
+  "statement": "xpadneo's debug subsystem logs descriptor length, a CRC-16 and firmware-version metadata and may print complete unpatched HID descriptors when explicit debug is enabled or a local-administered Bluetooth identity is detected. These logs can include identifying metadata; none of their captured content should be committed to the public corpus without private capture review and sanitization.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "debug.c:20-41,130-186; no debug logs, descriptor bytes or identifying values were collected. Source describes host debug behavior."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-debug"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

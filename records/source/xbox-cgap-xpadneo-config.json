@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-config",
+  "kind": "research_lead",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/CONFIGURATION.md",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "be057acd98e3b10689e1ac54a5f356a0b30aeef9a716debc156527aec75f9671",
+  "lineage": "xpadneo",
+  "locator": "8-51 supported module knobs for rumble policy, Guide-shift, deadzones, mouse and descriptor debug. Documentation GPL-3.0-or-later."
+}

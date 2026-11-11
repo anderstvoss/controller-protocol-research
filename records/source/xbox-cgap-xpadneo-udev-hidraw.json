@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-udev-hidraw",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/etc-udev-rules.d/70-xpadneo-disable-hidraw.rules",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "b2ef1dfb97d16aab9bbbd9b8d82014240db2170e013d274397b920524e0a2a1a",
+  "lineage": "xpadneo",
+  "locator": "1-7 packaged hidraw access restriction 0000 and uaccess-tag removal. No third-party source copied."
+}

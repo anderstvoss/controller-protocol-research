@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-header",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/xpadneo.h",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "92a47ed58d8516d6ac758e26512a3c35d6439af37911c22e0ca190de83d082ac",
+  "lineage": "xpadneo",
+  "locator": "19-105 Share=KEY_F12 and Guide=BTN_MODE aliases, 9-byte report 0x03 structure, motor masks; 106-205 state/subdevices. GPL-2.0-only."
+}

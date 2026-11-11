@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-wired-bind",
+  "statement": "Pinned xone binds a vendor-specific wired USB interface numbered 0, with subclass 0x47 and protocol 0xd0, when a supported vendor matches. It requires interrupt data endpoints. Its optional interface 1 carries GIP audio through an alternate setting with isochronous IN and OUT endpoints; this is not a USB Audio Class presentation.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "transport/wired.c:12-29, 389-465, 480-500, 545-570. Host-side binding requirements only; actual Series USB descriptors are not captured."
+  },
+  "sources": [
+    "xbox-xone-wired"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

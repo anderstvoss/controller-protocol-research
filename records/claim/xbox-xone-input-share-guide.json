@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-input-share-guide",
+  "statement": "Pinned xone decodes the standard gamepad GIP input payload into face buttons, menu/view, bumpers, stick clicks, two analog triggers, two signed sticks and a D-pad hat. Share is advertised only when a matching interface identifier appears; its source byte is counted from the end of the report with a conditional extension adjustment. The Guide button arrives through a separate internal virtual-key command and is exposed as BTN_MODE.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "driver/gamepad.c:33-106, 260-299, 335-415, 469-482; bus/protocol.c:1320-1344. Applies to GIP client decoding behind wired or receiver transports. No physical Series report is measured."
+  },
+  "sources": [
+    "xbox-xone-gamepad",
+    "xbox-xone-gip-protocol"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

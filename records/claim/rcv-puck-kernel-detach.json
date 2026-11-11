@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-kernel-detach",
+  "statement": "On a slot disconnect or native-to-raw-client ownership transition, hid-steam unregisters that interface's battery supply, motion input device and gamepad input device, and cancels its pending rumble and mode work. Reconnecting after removal calls fresh allocation and registration rather than preserving the old input device object.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

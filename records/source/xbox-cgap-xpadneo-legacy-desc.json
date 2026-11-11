@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-legacy-desc",
+  "kind": "research_lead",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/descriptors/xb1s_linux.md",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "3e0676080d77ef38954add89cdc21733cf4c50bfbaebeeab1eaf7f8c45e56d2a",
+  "lineage": "xpadneo",
+  "locator": "3-43 Xbox One S comparator truncated 306-byte and complete 334-byte Linux-mode descriptions; not a Series revision. Documentation GPL-3.0-or-later."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-xpad-input",
+  "evidence_role": "consumer",
+  "statement": "One wired Xbox Series reference 045e:0b12 delivered the C9 xpad-style input controls through Linux xpad, including distinct Guide and Share, and resumed input after USB reconnect.",
+  "status": "physically_validated",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "One reference matching USB 045e:0b12; exact model unconfirmed",
+    "firmware": "Unconfirmed; USB bcdDevice 5.17 and evdev version 0x0517 were observed",
+    "transport": "usb",
+    "scope": "Linux 7.3.0-1-mainline x86_64, post-driver evdev controls and one USB reconnect. C9 comparison covers identity and advertised control capabilities. Raw GIP, Bluetooth and physical outputs are outside this claim."
+  },
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [
+    "xsphys-xpad-input-reconnect"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

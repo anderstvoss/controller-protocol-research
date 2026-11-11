@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-xone-headset",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "xbox-xone-headset",
+    "xbox-xone-wired",
+    "xbox-xone-common"
+  ],
+  "fixtures": [],
+  "procedure": "Identify the controller GIP headset PCM, play quiet left and right markers while draining 24 kHz mono capture concurrently, and retain signal statistics only. Compare with the wired xpad no-endpoint observation. The installed module version was xone 0.5.8; its exact source revision was unknown. LED node publication was observed separately, without brightness writes.",
+  "semantic_outcome": "The operator heard left then right. The repeat delivered 120000 microphone frames in five seconds without a reported xrun, and microphone RMS rose during the response interval. Native playback was 48 kHz stereo and capture 24 kHz mono, both S16_LE."
+}

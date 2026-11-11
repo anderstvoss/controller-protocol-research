@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-synthetic",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/synthetic.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "4442dd4516eb9f6678fb0ff6aafa9e04b6b408a6ba51a2e815f38abb8892d5e5",
+  "lineage": "xpadneo",
+  "locator": "11-45 synthetic input-node identity, bus and name; 47-82 register/remove lifecycle. GPL-2.0-only."
+}

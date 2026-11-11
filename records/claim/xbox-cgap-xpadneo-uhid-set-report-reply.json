@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-uhid-set-report-reply",
+  "statement": "In the xpadneo HOGP output branch, a host-side HID SET_REPORT request is used for rumble; Linux UHID documentation requires a corresponding SET_REPORT_REPLY for synchronous host requests. An emulated Bluetooth-bus UHID device needs to implement that reply and error path if this branch is exercised. Neither host-side completion nor physical hardware response was tested in this research.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "device.c:14-36; core.c:173-194; existing source uhid (UHID_SET_REPORT and UHID_SET_REPORT_REPLY). This is host API behavior, not radio pairing."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-device",
+    "xbox-cgap-xpadneo-core",
+    "uhid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
