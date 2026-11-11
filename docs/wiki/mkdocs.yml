@@ -16,6 +16,7 @@ nav:
   - Controller library: controllers.md
   - Evidence methodology: methodology.md
   - Transport and consumers: transports-and-consumers.md
+  - HID and audio association: audio-association.md
   - Protocol lifecycle: report-lifecycle.md
   - Research priorities: gaps.md
   - Research notes: research-notes.md
@@ -26,6 +27,7 @@ nav:
       - "Steam Controller (2026)":
           - "Overview": controllers/steam-controller-2026/index.md
           - "USB protocol": controllers/steam-controller-2026/protocol.md
+          - "Bluetooth and UHID": controllers/steam-controller-2026/bluetooth-and-uhid.md
           - "Controls and sensors": controllers/steam-controller-2026/controls.md
           - "Modes and consumers": controllers/steam-controller-2026/modes-and-consumers.md
           - "Haptics and audio": controllers/steam-controller-2026/haptics-and-audio.md
@@ -63,6 +65,7 @@ nav:
           - "Overview": controllers/switch-pro/index.md
           - "Protocol": controllers/switch-pro/protocol.md
           - "Calibration and consumers": controllers/switch-pro/calibration-and-consumers.md
+          - "HOME LED and NFC": controllers/switch-pro/home-light-and-nfc.md
           - "Validation": controllers/switch-pro/validation.md
       - "Joy-Con family":
           - "Overview": controllers/switch-joycon-family/index.md
@@ -91,6 +94,8 @@ nav:
       - "Xbox Series":
           - "Overview": controllers/xbox-series/index.md
           - "Protocol and consumers": controllers/xbox-series/protocol-and-consumers.md
+          - "Wired GIP and receiver": controllers/xbox-series/wired-gip-and-receiver.md
+          - "Bluetooth and xpadneo": controllers/xbox-series/bluetooth-and-xpadneo.md
       - "8BitDo Pro 2":
           - "Overview": controllers/8bitdo-pro-2/index.md
       - "Linux joystick identity":

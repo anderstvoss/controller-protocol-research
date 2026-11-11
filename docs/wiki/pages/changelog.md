@@ -1,5 +1,18 @@
 # Wiki editorial changelog
 
+## 2026-11-10 — corpus catch-up and editorial review
+
+**Latest reviewed corpus:** [`ce6b8d3b70fd0957135eb921ef6098988f355cb1`](https://github.com/anderstvoss/controller-protocol-research/commit/ce6b8d3b70fd0957135eb921ef6098988f355cb1) (8 commits after the initial November 9 baseline).
+
+- Merged the eight follow-up corpus commits into the wiki review branch without changing evidence records.
+- Added authored chapters for direct Steam Controller BLE/HOGP and conditional ATT MTU; Xbox Series xone wired/receiver and Bluetooth/xpadneo; Switch Pro independent HOME LED and NFC applicability; and HID-to-ALSA/PipeWire audio association.
+- Updated chapter indices, protocol cautions, consumer comparisons, research priorities, original-ledger links and MkDocs navigation.
+- Retained immutable November 9 claim citations for older paragraphs whose source claims did not change; newer research cites the later full-SHA corpus tree.
+- Correctly distinguished xpadneo keyboard F12 Share from stock xpad Record; preserved four Switch Pro player indicators with a separate HOME LED.
+- No external radio, Steam UI, hardware-output or synthesized UHID acceptance was performed.
+
+**Editorial limit:** the wiki summarizes reviewed corpus evidence, rather than replacing its records or attesting implementation/hardware fidelity. Some chapters explicitly retain their older individual evidence-snapshot labels because those sections did not acquire new research.
+
 ## 2026-11-09 — initial manual consolidation
 
 **Reviewed corpus:** ab74f66274589a7229633f0fe8654490c3d19a12.

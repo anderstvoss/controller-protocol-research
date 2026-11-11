@@ -17,3 +17,7 @@
 Unresolved USB period remains **conflicted/unknown** ([`swpro-l0-device-usb-cadence-conflict`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-device-usb-cadence-conflict.json)); mere OpenPuck report pacing does not settle it. Steam/Eden reported neutral-axis behavior is a **consumer case** without fully pinned causal backend evidence ([`swpro-l0-consumer-steam-neutral-causation-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-consumer-steam-neutral-causation-unknown.json)).
 
 **Original gate table:** [C-P1 through C-P8](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/ledgers/switch-pro-l0.md).
+
+## Follow-up gates: HOME and wireless NFC
+
+Measure the HOME LED via `0x38` separately from four player LEDs, including host ACK and real brightness response. Do **not** classify it as player LED five. Validate NFC/MCU only against **Pro-specific wireless** behavior; the controller-family `0x11/0x31` codes and Joy-Con NFC work do not establish wired Pro operation. See [new output distinctions](home-light-and-nfc.md) and [`swpro-cgap-home-led-consumer`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/swpro-cgap-home-led-consumer.json).

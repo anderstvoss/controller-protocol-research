@@ -22,3 +22,7 @@
 A **compatible** implementation can prioritize an observed host parser path; a **faithful** implementation must be grounded in the corresponding physical report and command behavior. Record this policy explicitly per feature. Do not substitute OpenPuck's receiver behavior for a direct `1302` reference.
 
 See [compatibility-versus-fidelity disputes](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-c6-decision-table.md) and [source/physical capture plan](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-physical-capture-plan.md). The next acceptance decision should be made from exact host captures, not just an SDL gamepad appearing.
+
+## Bluetooth-specific research gates (source-only)
+
+The [new BLE chapter](bluetooth-and-uhid.md) adds BlueZ HOGP report routing, a *conditional* ATT feature-write MTU ≥66 requirement, kernel identity `28de:1303` and version-specific SDL trigger/haptic handling. No physical BLE report descriptor, pairing, capture or Steam UI result was obtained. These remain independent owner tests; do not reuse wired/Puck acceptance. [`steam-ble-bluez-att-mtu-feature-constraint`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-bluez-att-mtu-feature-constraint.json).

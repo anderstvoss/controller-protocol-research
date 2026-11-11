@@ -27,3 +27,7 @@ The proper virtual audio device requires realistic USB Audio Class topology, str
 ## Verification
 
 Test LEDs and adaptive triggers at bounded intensity with explicit stop/reset; use guarded audio amplitudes and validate channel routing independently. Avoid claiming that output USB transfer completion equals physical effect acceptance.
+
+## November 10 host association survey
+
+The newer [controller/audio association chapter](../../audio-association.md) separates SDL's Sony **HID** effect support from **USB sound-card** discovery. ALSA UCM selects the Sony DualSense profile for audio IDs `054c:0ce6` and `054c:0df2`; PipeWire/WirePlumber and ALSA persistent rules use their own udev-derived audio identity. No source establishes automatic Steam/Proton association when UHID controller and sound nodes are unrelated by USB topology. This unknown cannot be closed by merely matching a VID/PID string. [`audio-consumer-dualsense-ucm-usb-ids`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/audio-consumer-dualsense-ucm-usb-ids.json), [`audio-consumer-sidecar-hid-sound-association-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/audio-consumer-sidecar-hid-sound-association-unknown.json).
