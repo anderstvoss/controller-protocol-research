@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-kernel-mode-gate",
+  "statement": "On D9 Linux 7.3 with the default hid-steam lizard setting, a freshly created virtual wired UHID Steam Controller 2026 exposed gamepad and sensor evdev nodes whose capabilities and EVIOCGABS attributes were readable but which emitted no events. A 650 ms Menu press/release on that instance enabled gamepad mode, after which events flowed; no module parameter or system policy changed. This is consistent with the pinned hid-steam Menu long-hold mode switch and its input and sensor gates (steam-c6-kernel-menu-hold-450ms). Separately, a client holding the layered hidraw node removed the kernel gamepad and sensor nodes. Kernel evdev tests therefore need the mode switch and no layered hidraw holder as explicit prerequisites.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Virtual wired 28de:1302 at virtualgamepad C6 ad80ae6 (linux.uhid.usb and reduced linux.uinput); no retail revision claim",
+    "firmware": "Synthetic compatibility state; no live firmware claim",
+    "transport": "usb",
+    "scope": "Virtual kernel-consumer lifecycle observation on one host and kernel. Physical controller mode defaults are not measured here."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-virtual-kernel-evdev"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

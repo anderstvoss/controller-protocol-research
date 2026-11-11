@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
+
 - Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
 
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
@@ -19,6 +21,7 @@ affected schema's `schema_version`.
 - Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.
 
 - Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
+
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.

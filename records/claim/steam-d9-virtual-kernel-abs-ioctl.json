@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-kernel-abs-ioctl",
+  "statement": "EVIOCGABS on every axis of virtual wired UHID returned (min, max, fuzz, flat, resolution): sticks ABS 0/1/3/4 (-32767, 32767, 0, 0, 6553); pads ABS 16-19 (-32767, 32767, 256, 0, 1638); triggers ABS 20/21 (0, 32767, 0, 0, 5461); sensor accel ABS 0-2 (-32768, 32768, 128, 0, 16384); sensor gyro ABS 3-5 (-32768, 32768, 0, 0, 16). The sensor property mask is 0x40 (INPUT_PROP_ACCELEROMETER) and the gamepad has none. These match every attribute in steam-c6-kernel-ibex-gamepad-evdev and steam-c6-kernel-ibex-sensor-evdev. Reduced uinput matches all ten gamepad minima, maxima and flat values but reports fuzz 0 and resolution 0 on every axis, a documented provider limitation rather than a golden disagreement for UHID.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Virtual wired 28de:1302 at virtualgamepad C6 ad80ae6 (linux.uhid.usb and reduced linux.uinput); no retail revision claim",
+    "firmware": "Synthetic compatibility state; no live firmware claim",
+    "transport": "usb",
+    "scope": "Virtual kernel ioctl observation on D9 Linux 7.3. Registration attributes only; incoming value clamping is not part of the golden record."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-virtual-kernel-evdev"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
