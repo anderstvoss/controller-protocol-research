@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-kernel-attach",
+  "statement": "The wireless IBEX probe only registers native controller devices when the connection status says connected. A queued transition calls registration when connected and without an open raw client. Registration creates a new input gamepad, motion-sensor input device and a best-effort battery power supply for the associated HID interface.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

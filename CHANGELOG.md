@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
+- Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
+
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
   input/reconnect fixtures, bounded xone headset duplex, and separate Linux
   UHID/xpadneo consumer observations. Add descriptor structural review
