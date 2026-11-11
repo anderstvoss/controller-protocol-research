@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-sdl-descriptor-gate",
+  "statement": "Pinned SDL Xbox One HIDAPI driver first tries to parse a Linux-supplied HID report descriptor and retains it only when expected axes and a 12- or 15-button field exist. When retained, SDL decodes by descriptor usages; only when no accepted descriptor is available and the device is Bluetooth does it take the older hard-coded Bluetooth report-ID dispatcher. SDL selection also depends on Xbox-type identification and HIDAPI configuration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "SDL_hidapi_xboxone.c:355-475, 714-980, 1942-2012; this adds the parser-versus-fallback distinction rather than duplicating existing report-role claims."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

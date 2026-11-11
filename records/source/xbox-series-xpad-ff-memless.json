@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-ff-memless",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/input/ff-memless.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "17839e9ff5bc2a47fb5040bacb8511f5791d46eec8d9fd77711f755d81371035",
+  "lineage": "linux-kernel",
+  "locator": "ff-memless.c:25-26 (capacity), 269-308 (combining magnitudes), 533-553 (gain and periodic capabilities). Consumer implementation evidence only."
+}

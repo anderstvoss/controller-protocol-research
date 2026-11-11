@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-sdl-firmware-buttons",
+  "statement": "The pinned SDL Bluetooth fallback decoder distinguishes a 16-byte older Xbox One S state report from longer states, and documents varying Guide, Back, paddle and Share positions for older controller firmware and Xbox Series firmware 5.5.2641. Its Series example uses a 17-byte state report, with the Share bit in its final byte; this fallback does not establish an invariant native descriptor for all current Series firmware.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "SDL source documents Series 5.5.2641; other firmware variants are comparator examples",
+    "transport": "bluetooth",
+    "scope": "SDL_hidapi_xboxone.c:1257-1311 and 1377-1450; firmware examples in source are host decoder expectations, not real-device revalidation."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-sdl-private-vs-upstream-delta",
+  "statement": "A source-level comparison of SDL Triton at D9's e0232c5 and later 531acc finds that input report 0x42/0x45/0x47 and battery dispatch remain present in both, but later SDL adds explicit left/right digital trigger-click SDL button dispatch. The D9 revision does not dispatch these two buttons separately. Ordinary rumble in the D9 revision uses SDL_hid_write directly; later SDL uses SDL_HIDAPI_SendRumble. The later revision also accepts short haptic effect outputs 0x81 through 0x85 in SendJoystickEffect, whereas the D9 revision's effect method only sends fixed-size feature reports. These are source differences, not claims of physical BLE output or software runtime acceptance. Triton driver D9 e0232c5 lines 150-235, 598-650 and later 531acc lines 150-240, 593-665.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "SDL e0232c5 (exact D9 earlier runtime) compared with SDL 531acc0; retail controller firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer revision delta relevant to BLE and wired SDL testing; no physical observation, not a Steam client difference."
+  },
+  "sources": [
+    "steam-closeout-sdl-triton-e0232c5",
+    "steam-ble-sdl-triton-531acc"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-feature-routing",
+  "statement": "BlueZ shared HOG routes kernel UHID_SET_REPORT to a GATT HID Report characteristic write and UHID_GET_REPORT to a Report characteristic read. For numbered reports, its outgoing SET path removes the report ID byte and its incoming GET reply reconstructs the numbered HID report boundary. Unsupported report IDs return errors. BlueZ shared hog.c lines 686-801; uhid.c lines 497-546.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. Report characteristic table, MTU fragmentation, persistence and timing of actual retail BLE exchanges not measured."
+  },
+  "sources": [
+    "steam-ble-bluez-hog-shared",
+    "steam-ble-bluez-uhid"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

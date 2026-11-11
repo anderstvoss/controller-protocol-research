@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-series-desc",
+  "kind": "research_lead",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/docs/descriptors/xbxs.md",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "a429d1acd9e23b47f37b9308ee52899900cb0bd198547aa9e4a5f42bfb731aa3",
+  "lineage": "xpadneo",
+  "locator": "3-6 283-byte Series BLE example; 29-165 report 0x01 input and 0x03 output descriptions. Contains upstream sample descriptor/capture; referenced only, not redistributed. Documentation GPL-3.0-or-later."
+}

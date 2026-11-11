@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-ble-version-gate",
+  "statement": "xpadneo's probe marks the link as HOGP only when the HID bus is Bluetooth and the supplied HID version is at least 0x0500, with an explicit warning for a known anomalous version. A Bluetooth-bus UHID device carrying a different version can therefore select a different output route even if VID/PID and report descriptor match. This is a driver heuristic, not proof of a device's true firmware version.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "core.c:173-194; device.c:14-36; xpadneo.h:119-149."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-core",
+    "xbox-cgap-xpadneo-device",
+    "xbox-cgap-xpadneo-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

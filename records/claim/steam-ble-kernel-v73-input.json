@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-kernel-v73-input",
+  "statement": "Linux v7.3 IBEX raw_event recognizes 0x42 input only at 54 bytes including report ID, 0x45 at 46 bytes including ID, 0x43 battery at 15 bytes, and 0x79 wireless event at 2 bytes. Both 0x42 and 0x45 are handled under the IBEX branch without an additional Bluetooth-only report gate. Both input formats share control offsets and the shorter 0x45 omits quaternion. The kernel has no 0x47 IBEX raw_event case. Lines 2441-2619.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "host sources Linux v7.3, SDL e0232c5 and 531acc, BlueZ aa4f5ce; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer source evidence, not physical Bluetooth or virtual-host observation. 0x45 being named BLE by SDL does not prove it is the sole or actual retail BLE report."
+  },
+  "sources": [
+    "steam-ble-linux-v73",
+    "steam-ble-sdl-structs-531acc"
+  ],
+  "experiments": [
+    "steam-ble-source-inspection-v73"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

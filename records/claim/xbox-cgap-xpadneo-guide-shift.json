@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-guide-shift",
+  "statement": "The pinned xpadneo default event handler treats the Xbox Guide/Mode button as a modifier: on press it caches the event; on a release without an intervening profile command it synthesizes a gamepad press/release, while Guide plus face buttons changes emulated profile and Guide plus View can toggle mouse mode. Disabling shift mode restores ordinary immediate processing; these post-driver semantics are not a native HID Guide report cadence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
+    "firmware": "not physically measured; source version is pinned",
+    "transport": "bluetooth",
+    "scope": "events.c:218-286; xpadneo.h:26-28; CONFIGURATION.md:41-46. Behavior depends on default disable_shift_mode=false."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-events",
+    "xbox-cgap-xpadneo-header",
+    "xbox-cgap-xpadneo-config"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

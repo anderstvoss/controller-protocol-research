@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-hogp-uhid",
+  "statement": "Pinned BlueZ's BLE HID-over-GATT profile uses its UHID device path to expose a Bluetooth-bus HID interface to the kernel after service discovery and bonding; this is a host-consumer route and does not demonstrate actual Bluetooth pairing or real-radio transmission from a virtualgamepad UHID instance.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Existing pinned BlueZ sources are reused; UHID bus 5 is the Linux Bluetooth HID bus. The assertion is about BlueZ and UHID behavior, not a tested Xbox Series device."
+  },
+  "sources": [
+    "steam-ble-bluez-hog-profile",
+    "steam-ble-bluez-uhid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

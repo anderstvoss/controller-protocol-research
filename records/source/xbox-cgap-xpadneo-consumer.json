@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-consumer",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/consumer.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "f138541cd9a539d5249bd05949fb80ea43f955a6e8803adb05687632d80c4486",
+  "lineage": "xpadneo",
+  "locator": "11-35 optional/synthetic consumer-control subdevice and registration. GPL-2.0-only."
+}

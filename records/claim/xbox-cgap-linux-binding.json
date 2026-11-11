@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-linux-binding",
+  "statement": "At the pinned Linux kernel revision, the Microsoft HID driver explicitly matches Xbox Series model 1914 over Bluetooth as vendor 0x045e, product 0x0b13 and supplies conventional two-main-motor memoryless force feedback; generic HID remains a fallback for otherwise unmatched identities. A physical device's actual binding order and descriptor parsing success are not observed.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "hid-microsoft.c:275-350, 427-435; hid-ids.h:1056-1060; hid-generic.c:82-90. Driver selection requires bus identity, registered modules and successful probe."
+  },
+  "sources": [
+    "xbox-cgap-kernel-hid-microsoft",
+    "xbox-cgap-kernel-hid-ids",
+    "xbox-cgap-kernel-hid-generic"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

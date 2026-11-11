@@ -7,10 +7,26 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Create a manually authored, corpus-cited controller protocol wiki covering
-  all registered controllers/families, with protocol, consumer and lab subpages,
-  a separate evidence-snapshot refresh procedure and optional MkDocs rendering.
-  Existing evidence data and research ledgers remain unchanged.
+- Add a manually authored evidence-cited controller technical wiki (PR #115),
+  with manually maintained chapter pages and an optional MkDocs build.
+  Existing corpus records and research ledgers are unchanged by the wiki.
+
+- Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
+
+- Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.
+
+- Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
+- Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
+
+- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
+
+- Record the source-only Switch Pro NFC/MCU report-path scope gap, distinguishing a potential wireless-native feature from Nintendo-documented wired NFC restrictions; no hardware test or implementation change.
+
+- Record the Linux hid-nintendo Switch Pro HOME-button light (subcommand 0x38) as a consumer gap, with a ranked Switch Pro gap brief.
+
+- Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
+
+- Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
 
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 

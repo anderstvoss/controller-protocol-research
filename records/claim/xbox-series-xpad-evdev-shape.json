@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-xpad-evdev-shape",
+  "statement": "Stock xpad for the standard Xbox Series pad advertises twelve keys including independent Guide and Share, four signed stick axes with fuzz 16 and flat 128, two 10-bit analog triggers and two hat axes. With kernel xpad force feedback enabled, the memoryless FF layer advertises rumble, gain, and periodic effects (sine, triangle and square) reduced to two-motor magnitudes. The linked evdev artifact corroborates these 26 controls and provides one input ID version sample (1303 decimal).",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Series xpad mapping for VID 045e and PID 0b12",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c:134, 420-469, 1051-1059, 1095-1158, 1630-1634, 1902-1925, 1955-1957, 1974-2025, 2096 and the pinned memoryless FF source. The version is the post-driver input ID observed in one public sample. It does not identify the firmware. The golden fixture is synthetic with no traffic or measurements."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "xbox-series-gpc-evdev-artifact",
+    "wii-c5-linux-input-codes",
+    "wii-c5-linux-input-ff",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

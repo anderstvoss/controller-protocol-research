@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-descriptor-variants",
+  "statement": "xpadneo's source documentation distinguishes the 283-byte Series BLE example from Xbox One S Linux-mode 306-byte truncated and 334-byte complete descriptors, and from a 464-byte Elite Series 2 BLE 5.23 descriptor. Those are different model/firmware comparators and do not prove a 1914 Series descriptor transition between specific firmware builds.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Cross-model scope: xpadneo xbxs.md:3-6; xb1s_linux.md:28-43; xbe2_ble.md:3-12; README.md:88-97."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc",
+    "xbox-cgap-xpadneo-legacy-desc",
+    "xbox-cgap-xpadneo-elite-desc",
+    "xbox-cgap-xpadneo-docs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

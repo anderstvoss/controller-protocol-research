@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-sdl-guide-battery-policy",
+  "statement": "Within SDL's fallback Bluetooth path, receiving the separate Guide report marks Guide as separately reported and suppresses the inline Guide bit in later state reports. Its battery decoder maps a two-bit level to approximate 10, 40, 70 or 100 percent and interprets mode flags to classify battery versus charging. These are consumer interpretations; neither establishes battery report frequency nor physical fuel-gauge calibration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "SDL_hidapi_xboxone.c:669-695, 1297-1301, 1453-1464 and 1964-1996; existing corpus records already cover the bare 0x01/0x02/0x04 role list."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

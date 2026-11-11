@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-virtual-uhid-feasibility",
+  "statement": "Because BlueZ creates Bluetooth-bus HID devices through UHID and the kernel drivers match Bluetooth HID IDs, a virtualgamepad Bluetooth-bus UHID realization appears technically plausible as a host-local representation. It has not been shown to satisfy xpadneo, hid-microsoft or SDL with the correct descriptor, output requests, battery semantics and cleanup; Bluetooth pairing and radio support remain independent work.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Inference for virtualgamepad docs/XBOX_SERIES.md and #160/#164. No physical device, host test or pairing performed; no realization status promotion."
+  },
+  "sources": [
+    "steam-ble-bluez-uhid",
+    "xbox-cgap-kernel-hid-microsoft",
+    "xbox-cgap-xpadneo-core",
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

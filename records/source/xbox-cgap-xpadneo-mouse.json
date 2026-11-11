@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-mouse",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/mouse.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "2c3ad4d84d8634f8df693238ec8a566163684d1705e4dffcd3337f8d02260aaa",
+  "lineage": "xpadneo",
+  "locator": "17-90 mouse modifier and 10 ms timer; 105-228 input remapping; 230-279 mouse synthetic node and cleanup. GPL-2.0-only."
+}

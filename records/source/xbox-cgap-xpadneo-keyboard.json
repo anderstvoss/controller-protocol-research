@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-keyboard",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/keyboard.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "367822c935e3e55090b61797ab95ef1279ab4b11fad76bb1c8992d35ce630548",
+  "lineage": "xpadneo",
+  "locator": "11-47 keyboard node and BTN_SHARE alias capability for KEY_F12. GPL-2.0-only."
+}

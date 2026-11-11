@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-ble-bluez-att-framing",
+  "kind": "independent_implementation",
+  "url": "https://raw.githubusercontent.com/bluez/bluez/aa4f5ce97c875961a7c3ca88baa30c544edb58cd/src/shared/att.c",
+  "revision": "aa4f5ce97c875961a7c3ca88baa30c544edb58cd",
+  "sha256": "0349a7467de0e114fb3609e71757e52d5c224e3ab3466574c204fce976d86ca1",
+  "lineage": "bluez",
+  "locator": "Lines 336-350 reject encoded ATT PDU exceeding negotiated MTU; 1435-1440 expose negotiated MTU. Consumer-side limit, no measurement of attached controller."
+}

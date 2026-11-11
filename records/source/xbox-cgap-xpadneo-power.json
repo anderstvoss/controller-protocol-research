@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-cgap-xpadneo-power",
+  "kind": "independent_implementation",
+  "url": "https://github.com/atar-axis/xpadneo/blob/56b538d951300bf804f6631738603c5eb14c04f0/hid-xpadneo/src/xpadneo/power.c",
+  "revision": "56b538d951300bf804f6631738603c5eb14c04f0",
+  "sha256": "ba798687cb96bce25075aca4355dcd1f6ed7f7764134dac9f1dbd91f5652341c",
+  "lineage": "xpadneo",
+  "locator": "12-104 battery interpretation and power-supply properties; 128-167 registration/update; GPL-2.0-only SPDX."
+}

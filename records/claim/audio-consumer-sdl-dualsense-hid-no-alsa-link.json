@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "audio-consumer-sdl-dualsense-hid-no-alsa-link",
+  "statement": "At the pinned SDL revision, SDL_hidapi_ps5.c opens a HIDAPI joystick and handles native controller reports and effects. Its 'audio haptics' control bit refers to the controller's HID effect handling. This inspected driver has no SDL_Audio device enumeration, ALSA card lookup, PipeWire node lookup or HID-to-sound-card binding. This is a scoped absence in the inspected file, not a proof that every SDL backend or external Steam Input layer lacks association.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL PS5 HIDAPI driver only (joystick open ~921, effects ~683-745); no SDL_Audio references in this complete pinned file. No global SDL negative claim."
+  },
+  "sources": [
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

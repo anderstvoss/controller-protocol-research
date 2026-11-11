@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-led-battery-power",
+  "statement": "Pinned xone publishes a Linux LED class device for Guide-button status brightness and mode, using GIP LED command 0x0a; it publishes battery status and coarse capacity through the Linux power-supply subsystem. It issues GIP power control commands and maps disconnected status to client removal. These are host surfaces and do not prove the Series device battery report cadence, brightness scale or power-state timing.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "driver/common.c:12-188; bus/protocol.c:33-45, 475-487, 595-610, 1184-1210; driver/gamepad.c:483-533. No real-device LED or battery tests."
+  },
+  "sources": [
+    "xbox-xone-common",
+    "xbox-xone-gip-protocol",
+    "xbox-xone-gamepad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
