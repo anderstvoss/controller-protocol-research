@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "joycon-cgap-left-kernel-buttons",
+  "statement": "Pinned Linux hid-nintendo exposes left-half D-pad directions as BTN_DPAD keys rather than a hat axis, maps Minus to BTN_SELECT, Capture to BTN_Z, L to BTN_TL, ZL to BTN_TL2 and left-stick click to BTN_THUMBL; it maps SL to BTN_TR and SR to BTN_TR2 only outside the USB Charging Grip.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-left",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; source-only; no host or hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux per-half evdev mapping at pinned revision. Grip exclusion is a consumer policy, not measured rail-state bytes."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
