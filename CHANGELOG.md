@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
+
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
   input/reconnect fixtures, bounded xone headset duplex, and separate Linux
   UHID/xpadneo consumer observations. Add descriptor structural review

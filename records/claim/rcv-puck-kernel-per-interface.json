@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-kernel-per-interface",
+  "statement": "The pinned hid-steam driver matches the 2026 Puck receiver under the wireless IBEX quirk and constructs a separate steam_device for each accepted HID interface. The source describes four controller-slot interfaces and a separate reduced pogo interface; the connection and output state belong to the individual HID device, not to an application player index.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-ibex-linux-ids"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

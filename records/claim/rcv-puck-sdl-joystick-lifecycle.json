@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-sdl-joystick-lifecycle",
+  "statement": "SDL Triton initializes a Puck receiver interface without marking it as a connected joystick. On a connect state change it adds a joystick through the HIDAPI device context, while disconnect removes that context's joystick. The driver reads and sends output through its own selected HID device, not a shared player-number mapping.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
