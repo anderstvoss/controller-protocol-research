@@ -35,8 +35,8 @@ At pinned SDL3, unparented Joy-Con (L) defaults to sideways mini-gamepad mode un
 
 ### Reused pinned evidence
 
-- `joycon-linux-hid-nintendo`: [Linux `hid-nintendo.c`, pinned 4056b3c](https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-nintendo.c), kernel GPL-2.0-only (SPDX in file); see line locators above. Restated, no excerpts.
-- `joycon-linux-hid-ids`: [Linux HID IDs, same pin](https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-ids.h), Linux GPL-2.0-only.
+- `joycon-linux-hid-nintendo`: [Linux `hid-nintendo.c`, pinned 4056b3c](https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-nintendo.c), kernel GPL-2.0+ (SPDX in file); see line locators above. Restated, no excerpts.
+- `joycon-linux-hid-ids`: [Linux HID IDs, same pin](https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/drivers/hid/hid-ids.h), Linux GPL-2.0-or-later.
 - `joycon-sdl-switch`: [SDL3 Switch HIDAPI, pinned 535d80b](https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapi_switch.c), Zlib licence.
 - `joycon-sdl-hidapijoystick`: [SDL3 combination logic, same pin](https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/src/joystick/hidapi/SDL_hidapijoystick.c), Zlib licence.
 - `swpro-dekunukem-bluetooth-hid-notes`: [community input report notes, pinned b354f21](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering/blob/b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756/bluetooth_hid_notes.md); use existing research-lead provenance. Not an independently measured left-half capture in this lane.

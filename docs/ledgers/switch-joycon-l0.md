@@ -40,3 +40,7 @@ These projects emulate a Nintendo personality *toward a console or host*, rather
 **Status:** Source-derived only; physical fidelity and runtime acceptance are not established.
 
 **Cloud agent (Joy-Con research)**
+
+## Controller gaps 2: left-half source narrowing (2026-11-11)
+
+Six new `joycon-cgap-left-*` claims attach specifically to `switch-joycon-left`: two source-described device/protocol claims (`identity`, `wire-fields`) and four kernel/SDL consumer claims (`kernel-buttons`, `kernel-stick`, `kernel-imu`, `sdl3-modes`). The ranked disposition and exact source lines are in [`docs/switch-joycon-left-gaps-2.md`](../switch-joycon-left-gaps-2.md). This is a narrowing of `joycon-a-full-report-per-side`, `joycon-a-right-imu-signs`, `joycon-hid-nintendo-bus-binding` and `joycon-sdl-hidapi-pair-combination`, not a replacement. The left kernel IMU requires no extra Y/Z sign flip, unlike right; SDL standalone sideways presentation rotates axes without altering raw HID fields. The unused right-stick bytes and physical descriptor remain unknown. All host and physical probes are proposed, **not run**.
