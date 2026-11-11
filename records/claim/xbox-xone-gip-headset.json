@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-gip-headset",
+  "statement": "Pinned xone treats an advertised GIP headset class with audio formats as a separate client and registers an ALSA PCM device with one playback and one capture substream. It negotiates GIP audio formats, sends playback samples on command 0x60, receives capture samples through the same command family and schedules output in nominal 8 ms blocks. Wired transport activates an optional isochronous audio interface; headphone and microphone presence on a particular Series controller or accessory remains unmeasured.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "driver/headset.c:34-120, 212-244, 295-319, 345-443, 475-595; bus/protocol.c:504-581, 628-685, 803-844, 1346-1528; transport/wired.c:261-385, 434-465. Compare existing audio-xbox-series-xpad-disables-gip-audio."
+  },
+  "sources": [
+    "xbox-xone-headset",
+    "xbox-xone-gip-protocol",
+    "xbox-xone-gip-header",
+    "xbox-xone-wired",
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

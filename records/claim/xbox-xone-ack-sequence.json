@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-ack-sequence",
+  "statement": "Pinned xone assigns nonzero outbound GIP data sequence numbers, sends an acknowledgment with the received sequence when the request flag is set, and handles fragmented messages with bounded buffers, acknowledgments and completion fragments. Its outbound audio traffic uses a separate sequence counter. These code paths do not establish a mandatory device-originated packet cadence or a physical keep-alive interval.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "bus/protocol.c:224-321, 357-467, 628-685, 1080-1150, 1595-1714; bus/protocol.h:9-17. No physical captures and no measured ACK timing."
+  },
+  "sources": [
+    "xbox-xone-gip-protocol",
+    "xbox-xone-gip-header"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

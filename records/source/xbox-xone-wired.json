@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-wired",
+  "kind": "independent_implementation",
+  "url": "https://github.com/dlundqvist/xone/blob/f2aa9fe01103d7600553b505b298ff0bd47ff280/transport/wired.c",
+  "revision": "f2aa9fe01103d7600553b505b298ff0bd47ff280",
+  "sha256": "87a4ebb0b68440a39687579b42acf29cebc24bec5a29638053494e85e536b02c",
+  "lineage": "xone-dlundqvist",
+  "locator": "transport/wired.c:12-32, 55-117, 206-260, 261-385, 389-500, 545-570; USB interface matching, URBs and optional GIP isochronous audio; GPL-2.0-or-later."
+}

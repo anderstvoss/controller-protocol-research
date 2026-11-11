@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-startup-identify",
+  "statement": "Pinned xone accepts a GIP announce, records advertised identity and firmware version, then requests identification. It parses offsets to command metadata, firmware versions, audio formats, capabilities, class names, interface identifiers and any HID descriptor before queuing a logical client. Its GIP bus matches class names and the gamepad driver sends a power-on command during probe.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "bus/protocol.c:1152-1182, 1251-1301; bus/bus.c:55-99, 211-240; driver/gamepad.c:483-533. The same protocol code is used downstream of the receiver; transport-local claim covers wired startup only."
+  },
+  "sources": [
+    "xbox-xone-gip-protocol",
+    "xbox-xone-bus",
+    "xbox-xone-gamepad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

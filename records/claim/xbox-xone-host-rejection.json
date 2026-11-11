@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-host-rejection",
+  "statement": "Pinned xone returns errors for too-short GIP payloads, invalid chunk offsets, conflicting fragments, invalid identification sections and failed registration or initialization calls. It removes a GIP client when a status packet marks it disconnected. The inspected gamepad path has no demonstrated fixed announce or identify timeout, and the receiver pairing timeout is a separate transport feature.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "bus/protocol.c:322-355, 927-946, 1111-1150, 1184-1210, 1251-1301, 1600-1714; bus/bus.c:79-109; driver/gamepad.c:483-533; dongle pairing is separately scoped."
+  },
+  "sources": [
+    "xbox-xone-gip-protocol",
+    "xbox-xone-bus",
+    "xbox-xone-gamepad",
+    "xbox-xone-receiver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

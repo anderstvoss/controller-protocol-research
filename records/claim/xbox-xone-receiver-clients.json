@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xbox-xone-receiver-clients",
+  "statement": "Pinned xone allocates a separate GIP adapter for each associated wireless client behind a common receiver, then dispatches incoming client data to the shared GIP protocol parser. Data and audio use separate receiver queue identifiers, and each client may be removed independently. The source declares sixteen potential wireless-client entries; this is a software allocation bound, not a validated simultaneous-controller capacity.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "transport/dongle.c:31-44, 130-251, 482-632, 692-714, 837-945. Does not claim an emulated receiver implementation, physical reliability, or Bluetooth support."
+  },
+  "sources": [
+    "xbox-xone-receiver",
+    "xbox-xone-gip-protocol",
+    "xbox-xone-bus"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
