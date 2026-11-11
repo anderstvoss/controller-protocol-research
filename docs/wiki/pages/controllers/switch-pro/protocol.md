@@ -18,7 +18,7 @@ Community and kernel source describe `0x80` USB command framing, with status `01
 | `0x30` | Controller → host | Full input state and three IMU sample sets |
 | `0x3F` | Controller → host | Simplified button/hat report |
 | `0x81` | Controller → host | USB command acknowledgement |
-| `0x31` | Controller → host | MCU-capable extended input in consumers that enable it |
+| `0x31` | Controller → host | **Controller-family** MCU-capable extended input described in source notes; Switch Pro-specific NFC operation remains unverified |
 
 Report role citations: [`swpro-l0-linux-report-id-routing`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-linux-report-id-routing.json), [`swpro-l0-device-subcmd-ack-byte`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-device-subcmd-ack-byte.json), [`swpro-l0-device-report30-full`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-device-report30-full.json).
 
@@ -33,3 +33,7 @@ Source-described `0x30` includes timestamp/timer, battery/connection, three butt
 Subcommand `0x02` returns firmware/type and identity fields. The source-described type for Pro is `0x03`. Never publish real MAC values; generated per-instance identity for an emulator is not measured physical firmware: [`swpro-l0-device-info02-fields`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/swpro-l0-device-info02-fields.json).
 
 **Source reference:** [individual source locators](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/switch-pro-citation-map.md).
+
+## MCU report caution (follow-up research)
+
+The family-level `0x11` output and `0x31` input, together with MCU subcommands `0x20`–`0x22`, are **not a measured Switch Pro-specific command/reply sequence**. Do not copy Joy-Con Right NFC assumptions into the Pro. See [HOME light / NFC scope](home-light-and-nfc.md) and [`swpro-cgap-nfc-mcu-family-context`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/swpro-cgap-nfc-mcu-family-context.json).

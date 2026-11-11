@@ -9,6 +9,7 @@ The D9 research establishes a useful physical **wired `28de:1302`** reference, e
 ## Chapter map
 
 - [USB identity and report protocol](protocol.md)
+- [Bluetooth 1303, HOGP and UHID research](bluetooth-and-uhid.md) — new source-only consumer evidence, no paired BLE hardware.
 - [Buttons, axes, pads and motion](controls.md)
 - [Lizard, kernel, SDL and Steam ownership](modes-and-consumers.md)
 - [Rumble, MIDI, PCM haptics and audio](haptics-and-audio.md)
@@ -31,3 +32,7 @@ Host-side kernel and SDL paths are still distinct. A raw client may suppress ker
 - An assertion that virtual UHID, virtual USB and Steam Input select identical host paths.
 
 **Primary corpus narrative:** [full gaps matrix](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-controller-2026-research-gaps.md), [S3 physical descriptor](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-s3-physical-descriptor.md), [D9 input reference](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-d9-native-input-reference-2026-11-04.md).
+
+## November 10 source-research update
+
+The subsequent [Bluetooth/HOGP chapter](bluetooth-and-uhid.md) separates the Linux/SDL/BlueZ *consumer* contract for direct `28de:1303` from the physical wired reference. Its ATT MTU constraint, trigger-click SDL revision differences and feature-request routing do **not** establish actual BLE pairing, a retail descriptor or Steam Input acceptance. See [`steam-ble-kernel-v73-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-kernel-v73-binding.json) and [`steam-ble-bluez-att-mtu-feature-constraint`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-bluez-att-mtu-feature-constraint.json).

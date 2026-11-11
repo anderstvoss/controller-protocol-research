@@ -26,3 +26,9 @@ The inspected xpad path does not expose a complete GIP headset/audio stack. It i
 ## Required validation
 
 Compare a real USB controller and real Bluetooth session (same hardware/firmware where possible), exact bus/interfaces, SDL backend, battery, Share and triggers, native output frames and actuator response, reconnect and long-run neutral cleanup. A virtual event clone can be called transparent at the **application-event level** only after separate native-transport tests.
+
+## New driver-specific consumer contracts (2026-11-10)
+
+The original table contrasts *transport families*. It does **not** define a single universal Linux consumer behavior. The new [xone GIP survey](wired-gip-and-receiver.md) covers announce/identify/ACK, headset PCM, LEDs and the adapter's per-client GIP lifetime. The [Bluetooth/xpadneo survey](bluetooth-and-xpadneo.md) covers a Bluetooth-bus HID with a potentially different set of evdev children, **F12 keyboard Share**, Guide shift policy and a synchronous HOGP `SET_REPORT` completion. In xpadneo, trigger fields can be filled from two-motor FF policy; this is not independent trigger-FF support. [`xbox-cgap-xpadneo-hogp-output`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-cgap-xpadneo-hogp-output.json), [`xbox-xone-rumble-main-only`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-xone-rumble-main-only.json).
+
+**No physical USB GIP or Bluetooth HID promotion** follows from these additional driver-source investigations.
