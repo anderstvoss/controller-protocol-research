@@ -7,6 +7,11 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
+  input/reconnect fixtures, bounded xone headset duplex, and separate Linux
+  UHID/xpadneo consumer observations. Add descriptor structural review
+  without promoting universal firmware or motor-actuation claims.
+
 - Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
 
 - Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.

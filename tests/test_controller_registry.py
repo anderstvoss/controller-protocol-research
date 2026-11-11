@@ -48,10 +48,15 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
         # SDL or kernel source analysis alone is not device-protocol evidence.
-        for controller in ['dualsense-edge', 'switch2-pro', 'xbox-series']:
+        for controller in ['dualsense-edge', 'switch2-pro']:
             with self.subTest(controller=controller):
                 self.assertEqual(rows[controller]['category'], 'Evidence in progress')
                 self.assertEqual(rows[controller]['consumer_category'], 'Source evidence')
+        xbox = rows['xbox-series']
+        self.assertEqual(xbox['category'], 'Physical evidence')
+        self.assertEqual(xbox['transports']['bluetooth'], 'Physical evidence')
+        self.assertEqual(xbox['consumer_category'], 'Physical evidence')
+        self.assertEqual(xbox['consumer_transports']['usb'], 'Physical evidence')
         # Independent source-backed device evidence was added for Switch Pro in C
         # and Xbox 360 in F. Neither claims a physical retail-capture baseline.
         self.assertEqual(rows['switch-pro']['category'], 'Source evidence')

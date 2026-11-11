@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-bt-descriptor-match",
+  "statement": "The measured 283-byte Bluetooth HID descriptor of one physical Xbox Series reference matches the example described by xbox-cgap-descriptor-example byte for byte.",
+  "status": "physically_validated",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "One physical USB 045e:0b12 and Bluetooth 045e:0b13 reference; model label unconfirmed",
+    "firmware": "Not verified; Bluetooth evdev identity version 0x0523 is separate from installed firmware",
+    "transport": "bluetooth",
+    "scope": "The descriptor bytes of this reference only. Raw reports, firmware identity, cadence, battery, and independent physical motor actuation remain unmeasured."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc"
+  ],
+  "experiments": [
+    "xsphys-bt-descriptor-read"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
