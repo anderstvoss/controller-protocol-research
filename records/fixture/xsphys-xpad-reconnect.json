@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-xpad-reconnect",
+  "kind": "physical",
+  "format": "evdev_trace_json",
+  "path": "fixtures/xsphys-xpad-reconnect.json",
+  "sha256": "71711dc3d1385fd89c68a113dec7deb073d0dfc608ab3fa1d394da4db3ed9248",
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "experiments": [
+    "xsphys-xpad-input-reconnect"
+  ],
+  "parent": null,
+  "transform": "Allowlist public evdev identity and control fields, then transcribe numeric EV_KEY and EV_ABS values within original SYN_REPORT boundaries. Strip wall-clock timestamps, node names and all host-specific metadata. Raw evtest captures retained privately.",
+  "claims": [
+    "xsphys-xpad-input"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-xpad-main-rumble",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "xbox-series-linux-xpad"
+  ],
+  "fixtures": [],
+  "procedure": "On the identified wired 045e:0b12 xpad device, upload and play an evdev FF_RUMBLE effect with strong magnitude 32768 and weak zero for 450 ms. Stop and erase it. Repeat with strong zero and weak magnitude 32768. Have the operator report which pulses were perceptible.",
+  "semantic_outcome": "Linux accepted both uploads, plays, stops and erasures. The operator felt both pulses. Separate main-motor command values and physical response were observed; motor isolation, independent trigger motors and raw GIP bytes were not measured."
+}

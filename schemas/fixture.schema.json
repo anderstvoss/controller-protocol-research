@@ -20,6 +20,7 @@
     "format": {
       "enum": [
         "hid_report_hex",
+        "hid_descriptor_hex",
         "evdev_trace_json",
         "acceptance_run_json"
       ]
