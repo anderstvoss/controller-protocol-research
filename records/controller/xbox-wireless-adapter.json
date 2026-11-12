@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox-wireless-adapter",
+  "name": "Microsoft Xbox Wireless Adapter",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#165",
+  "notes": "USB wireless receiver; xone transport lifecycle is consumer-only evidence, not a validated device realization."
+}
