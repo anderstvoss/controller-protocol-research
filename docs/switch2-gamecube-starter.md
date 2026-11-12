@@ -1,18 +1,52 @@
 # Switch 2 GameCube controller — post-Alpha 2 starter brief
 
-| Decision area | Evidence / recommendation |
+| Decision area | Evidence and recommended disposition |
 | --- | --- |
-| Identity | Work in progress |
-| Kernel driver and evdev shape | Work in progress |
-| SDL path | Work in progress |
-| Recommended first realization | Work in progress |
-| Playable versus faithful | Work in progress |
-| Unknowns | Work in progress |
+| **Identity** | A separate `switch2-gamecube` family, not the WUP-028 four-port adapter and not a Switch 2 Pro alias. SDL and Linux explicitly match Nintendo USB identity `057e:2073` (consumer-source evidence; no retail descriptor measurement). |
+| **Kernel driver and evdev shape** | Linux's `hid-nintendo-switch2-usb` transport plus `hid-nintendo` GameCube decoder. The claimed input shape is four signed stick axes, independent `ABS_Z`/`ABS_RZ` analog triggers over 0–4095, two D-pad hat axes and distinct digital trigger clicks; `FF_RUMBLE` and optionally player LEDs are consumer-side interfaces, not validated device behavior. |
+| **SDL path** | The native Switch 2 GameCube path is **direct libusb**, via interface 1 and dynamically discovered bulk IN/OUT endpoints. An evdev/uinput device may be *playable* through generic joystick mapping, but is not SDL's native libusb GameCube device. SDL recognition of the proposed synthetic node has **not** been tested. |
+| **Recommended first realization** | **`linux.uinput`**, controller-owned GameCube evdev shape, with explicit identity and loss-of-fidelity disclosures. Test generic gamepad consumers first; do not claim native SDL Switch 2 support. |
+| **Playable versus faithful** | **Playable candidate:** sticks, hats, buttons, separate analog triggers/clicks, conventional force-feedback where supported through evdev. **Faithful candidate:** a **new USB-level provider/personality** serving a vendor-specific interface with bulk endpoints, command/reply initialization, report 0x0a, calibration-dependent conversions, and GameCube simple rumble; USB/IP/VHCI or a suitable dummy_hcd gadget may provide the USB transport *after development and validation*. Neither currently constitutes an accepted GameCube implementation. |
+| **Unknowns and gates** | Retail descriptors and endpoints, USB timing/retries, physical control parity, calibration outcomes, player indicator response, rumble actuation, consumer acceptance, permissions, lifecycle and identity collision behavior; Bluetooth transport **not established** by the scoped USB evidence. All physical and virtual-host tests below are **not run**. |
 
-## Evidence and realization details
+## Decision basis and current provider boundaries
 
-Work in progress.
+This is a source-only synthesis of the **ten existing** `switch2-gc-*` claims, not a promotion of physical/device evidence. The GameCube controller tracked by **virtualgamepad #360** is not the WUP-028 adapter tracked by **#296**. The existing `records/controller/switch2-gamecube.json` still links #296; this starter brief reports the discrepancy without changing that registry record. Controller-family semantics remain independent even where Switch 2 command framing is shared.
+
+The virtualgamepad realization registry at [`gr-realization-api` (pinned)](https://github.com/anderstvoss/virtualgamepad/blob/8cd1000a308eac682eca43d766b0f1a1f71a6f1e/crates/gr-realization-api/src/lib.rs#L36-L62) declares `linux.uinput`, `linux.uhid.usb`, `linux.dummy_hcd.usb-hid` and `linux.usbip.usb-audio`. Its [architecture contract (pinned)](https://github.com/anderstvoss/virtualgamepad/blob/8cd1000a308eac682eca43d766b0f1a1f71a6f1e/docs/CORE_ARCHITECTURE.md#L7-L21) makes the following distinctions:
+
+| Host mechanism | GameCube exposure | Support judgement |
+| --- | --- | --- |
+| `linux.uinput` | Advertises an evdev joystick with the mapped Linux GameCube capabilities. No USB interface or device-side command protocol. | **Preferred first implementation candidate** for playable functions; GameCube package not yet implemented/accepted. Requires consumer tests and separate unsupported-feature disclosures. |
+| `linux.uhid.usb` | UHID can present a HID node with USB bus metadata, not USB configuration/interface descriptors or bulk endpoints. | **Not a substitute** for the native bulk-connected SDL/kernel path. A HID-only prototype would be a separate compatibility experiment, not a faithful USB presentation. |
+| `linux.dummy_hcd.usb-hid` | The current `f_hid` path is deliberately unavailable and is HID-specific. A correct vendor-class/bulk gadget function would be additional provider work. | **Unavailable now**; possible transport research direction only, no promise of working GameCube USB-level support. |
+| `linux.usbip.usb-audio` | Existing opt-in, WIP USB/IP/VHCI supports compiled HID/UAC functions, not the GameCube bulk configuration/transactions by default. | **Potential foundation** for a *new* USB/IP vendor-bulk personality; current provider cannot be labeled GameCube-faithful. |
+
+The native Linux transport finds bulk endpoints dynamically and uses header-framed bulk transactions (`switch2-gc-dynamic-bulk-endpoints`, `switch2-gc-command-handshake`). SDL requires libusb for the specific native identity (`switch2-gc-direct-libusb-identity`); merely copying the VID/PID into an evdev or UHID node cannot supply the missing USB interface and endpoints.
+
+The input semantics are controller-owned, not an axis-only approximation: `switch2-gc-report0a-linux` identifies a dedicated report 0x0a, with a separate unified report 0x05; `switch2-gc-distinct-controls` distinguishes the C button, both analog triggers and full-travel digital click controls. `switch2-gc-linux-evdev-presentation` supplies the *consumer* target shape, while `switch2-gc-trigger-zero-calibration` and `switch2-gc-identity-calibration-consumer` record host reads and normalization, **not** disclosed private values or verified physical response. Map these as native independent controls before any evdev projection. Do not collapse analog travel into digital triggers.
+
+`switch2-gc-rumble-binary` identifies the GameCube-specific command 0x03 as simple on/off modulation in Linux and SDL; do not reuse Switch 2 Pro HD-rumble behavior for this family. Evdev force-feedback support is only a playable host-side convention until its command-to-actuator fidelity is measured. `switch2-gc-retail-physical-unknown` remains the governing physical-evidence gap.
+
+## Existing evidence provenance — pinned code, not redistributed
+
+| Source record | Exact upstream revision / inspected lines | Licence and lineage |
+| --- | --- | --- |
+| `sdl-switch2` | [SDL Switch 2 HIDAPI consumer](https://github.com/libsdl-org/SDL/blob/fe2bca9748afa754ebbca4c543c5b28bbce30cf4/src/joystick/hidapi/SDL_hidapi_switch2.c#L310-L500), [input and simple-rumble branches](https://github.com/libsdl-org/SDL/blob/fe2bca9748afa754ebbca4c543c5b28bbce30cf4/src/joystick/hidapi/SDL_hidapi_switch2.c#L684-L760) (also 1040–1073) | zlib; SDL consumer lineage |
+| `switch2-gc-sdl-libusb` | [SDL libusb-required matching](https://github.com/libsdl-org/SDL/blob/d6fbbbe14dddfa09d6168267a0fcd39dea5a398a/src/hidapi/SDL_hidapi.c#L774-L824) | zlib; **same SDL lineage**, not independent of preceding SDL source |
+| `switch2-gc-linux-usb` | [Linux USB transport](https://github.com/torvalds/linux/blob/9417132df63e5cd7230433af05198538e759f3ae/drivers/hid/hid-nintendo-switch2-usb.c#L155-L205), [bulk discovery and match](https://github.com/torvalds/linux/blob/9417132df63e5cd7230433af05198538e759f3ae/drivers/hid/hid-nintendo-switch2-usb.c#L340-L489) | GPL-2.0-or-later; Linux kernel lineage |
+| `switch2-gc-linux-hid` | [Linux evdev mapping](https://github.com/torvalds/linux/blob/77c7155e2707ba5b1d56f3dc1acead48cf17f98d/drivers/hid/hid-nintendo.c#L3610-L3669), [GameCube report parsing](https://github.com/torvalds/linux/blob/77c7155e2707ba5b1d56f3dc1acead48cf17f98d/drivers/hid/hid-nintendo.c#L3933-L4037), [rumble selection](https://github.com/torvalds/linux/blob/77c7155e2707ba5b1d56f3dc1acead48cf17f98d/drivers/hid/hid-nintendo.c#L3431-L3486) | GPL-2.0-or-later; **same Linux kernel lineage** as USB transport |
+
+The existing JSON source records already pin and SHA-256-hash those exact files. No new source record or claim ID is warranted by this synthesis alone. This desk review did not verify a separate Bluetooth transport or a newer upstream behavior that contradicts these pinned claims. Absence of evidence is **not** proof that the hardware lacks Bluetooth.
+
+No open Switch 2 Pro / Switch 2 Joy-Con research PR matching those subjects was present in the inspected research repository's open PR list; cross-family work should be compared before implementation, not presumed merged.
 
 ## Proposed tests, not run
 
-Work in progress.
+1. **Source-only implementation contract:** build the GameCube native state with independent analog travel/digital click controls and explicitly typed simple rumble; compare its uinput evdev keys, axes, ranges, hats and `FF_RUMBLE` to `switch2-gc-linux-evdev-presentation`. Assert unsupported native functions never silently map to unrelated axes.
+2. **Playable virtual-host acceptance:** on a permitted Linux host, create/remove the exact uinput target; enumerate advertised input events and force-feedback upload/playback, and independently exercise SDL's generic evdev joystick path. Record whether SDL classifies it as generic, maps controls correctly or rejects it. No native SDL GameCube/libusb result may be inferred.
+3. **USB-level feasibility experiment:** with an explicitly new profile/provider, enumerate a vendor-specific configuration with bulk IN/OUT under the expected interface, then verify descriptor matching, endpoint discovery, transfer queues, startup transactions and removal. Test both native Linux consumer and SDL/libusb; do **not** declare the existing dummy_hcd USB-HID or audio USB/IP profile equivalent.
+4. **Owner-operated retail comparison:** apply sessions S0–S5 from the existing `docs/switch2-gamecube-physical-capture-plan.md` (passive descriptor, initialization, individual controls, trigger travel/click, bounded rumble and indicators). Preserve private captures, publish only reviewed non-identifying derived results; do not publish calibration or identity contents.
+5. **Failure and promotion gates:** test unavailable permissions, repeated and concurrent creation, stop/restart, detach, missing replies, timeouts, bounded retries, cleanup, identity per instance and consumer-visible lifecycle. Link each supported function to a host/consumer-versioned acceptance record. Keep unsupported and physical cells **WIP** until their distinct evidence criteria pass.
+
+**All tests above are proposals, not results.** No physical controller, USB host, virtual provider or SDL probe was run in this research session.
