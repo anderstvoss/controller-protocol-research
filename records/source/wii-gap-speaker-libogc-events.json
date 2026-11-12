@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-events",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e/wiiuse/events.c",
+  "revision": "ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e",
+  "sha256": "bf3120034d53830bf4b9d6c9ef787b0c28c4ebc510503f6ad9d7a8493755b209",
+  "lineage": "devkitPro/libogc",
+  "locator": "79-115 report 0x22 matching ACK/dequeue and error handling; 118-159 status speaker-enable state; 175-185 status-request dequeue. libogc wiiuse GPL-3.0 with linking exception."
+}

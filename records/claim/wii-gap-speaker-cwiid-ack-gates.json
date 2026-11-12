@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cwiid-ack-gates",
+  "statement": "CWiid sends speaker control and data reports over the Bluetooth HID control socket, reads a success/failure HID transaction handshake after each report write, and performs register configuration with synchronous memory-write response handling. The speaker setup script stops on failed report handshake or failed register write; the beep loop stops on failed send. It does not await a distinct input report 0x22 for each speaker-data block in its cwiid_send_rpt function; memory-write completion instead consumes its own response pipe. A virtual Bluetooth-facing implementation therefore needs appropriate control-transaction responses in addition to any native status and write replies.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-cwiid-command",
+    "wii-gap-speaker-cwiid-util",
+    "wii-gap-speaker-cwiid-constants"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

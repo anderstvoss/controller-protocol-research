@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-commands",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e/wiiuse/wiiuse.c",
+  "revision": "ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e",
+  "sha256": "f0d31f3f55dcd5c9c4398c98037d7b081bc0341f6fd94b2688cf2770610d41e0",
+  "lineage": "devkitPro/libogc",
+  "locator": "17-52 single pending command queue; 295-360 memory write, stream report 0x18 20-byte length framing and 0x02 ACK-request bit on simple controls. libogc wiiuse GPL-3.0 with linking exception."
+}

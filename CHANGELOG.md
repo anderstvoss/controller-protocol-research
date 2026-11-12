@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add nine source-only Wii Remote speaker-consumer claims: pinned libogc WPAD and CWiid report/register, ADPCM, pacing and ACK/status paths, with non-originator boundaries and physical unknowns; no host or hardware tests.
+
 - Add source-only Xbox 360 Wireless Receiver xpad v7.3-rc1 and SDL Linux lifecycle research: slot presence, evdev recreation, per-interface feedback and USB-level realization requirements; no host or hardware run.
 - Pin an externally reported physical DualShock 4 v2 USB feature 0x12 read and its source code; advance only the scoped device-layout claim while retaining other DS4 gaps as unknown or conflicted (source-only review; no agent hardware test).
 

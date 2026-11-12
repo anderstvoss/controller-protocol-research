@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-physical-decoder-behavior-unknown",
+  "statement": "No physical Wii Remote speaker acceptance or overrun experiment was run in this source-only session. Decoder readiness after speaker initialization, 8-bit PCM playback acceptance, real ADPCM clock and register-divisor application, volume saturation, actual link pacing, FIFO backpressure, success/error ACK policy for report 0x18, and mute/enable preservation of decoder state remain unknown. Libogc's 6,666,667 ns sender and CWiid's 10,204,081 ns sender differ from each other and cannot establish a hardware timing requirement. Physical investigation should build on audio-wii-speaker-physical-acceptance-unknown, not promote any software emulation or undocumented WiiBrew Speaker section to device proof.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-libogc-wpad",
+    "wii-gap-speaker-libogc-setup",
+    "wii-gap-speaker-cwiid-command",
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-speaker-output-handler"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
