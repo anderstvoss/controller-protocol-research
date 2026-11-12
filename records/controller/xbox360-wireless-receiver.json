@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox360-wireless-receiver",
+  "name": "Xbox 360 Wireless Receiver",
+  "kind": "controller",
+  "parent": "xbox360",
+  "tracking": "anderstvoss/virtualgamepad#165",
+  "notes": "Receiver-specific consumer source evidence; Xbox 360 standard HID and native XUSB receiver presentations are not interchangeable; physical receiver unmeasured."
+}

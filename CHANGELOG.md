@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Document seven source-only early integrated Wii Remote Plus 0306 revision claims distinguishing Linux gen10 MotionPlus polling, xwiimote gen15 terminology and native consumer inactive-ID paths; no host or hardware validation.
 
+- Add source-only Xbox 360 Wireless Receiver xpad v7.3-rc1 and SDL Linux lifecycle research: slot presence, evdev recreation, per-interface feedback and USB-level realization requirements; no host or hardware run.
+
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.

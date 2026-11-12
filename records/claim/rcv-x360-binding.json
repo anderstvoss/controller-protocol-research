@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-binding",
+  "statement": "Linux xpad maps Microsoft IDs 045e:0719, 045e:0291 and 045e:02a9 to wireless XTYPE_XBOX360W, distinct from wired XTYPE_XBOX360. It binds supported vendor-specific USB interfaces with subclass 93 and protocol 129 (wired uses protocol 1), and creates one xpad context per bound USB interface with separate interrupt IN and OUT endpoints.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 123-131, 469-481, 2044-2160; USB consumer expectations, not a retail descriptor capture"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
