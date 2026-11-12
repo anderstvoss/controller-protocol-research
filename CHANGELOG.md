@@ -16,6 +16,7 @@ affected schema's `schema_version`.
 - Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
 - Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
 - Document pinned Linux v7.3 DualSense Edge Fn/paddle evdev codes, USB/Bluetooth report paths, shared outputs, SDL comparison and a source-only post-Alpha 2 realization plan; preserve device and host unknowns.
+- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 

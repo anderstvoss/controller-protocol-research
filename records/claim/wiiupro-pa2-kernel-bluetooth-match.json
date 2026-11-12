@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-kernel-bluetooth-match",
+  "statement": "Linux v6.12 hid-wiimote matches Bluetooth-bus Nintendo 0x057e products 0x0306 and 0x0330; it does not declare a separate Wii U Pro product ID in this match table.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Bluetooth HID identity accepted by kernel table; actual retail Wii U Pro product ID is not measured."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wiiupro-pa2-linux-hid-ids-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
