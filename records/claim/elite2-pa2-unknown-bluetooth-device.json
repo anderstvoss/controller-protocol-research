@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "elite2-pa2-unknown-bluetooth-device",
+  "statement": "The live Elite Series 2 Bluetooth HID descriptor, report timing, paddle/profile behavior and binding to hid-microsoft versus xpadneo remain unmeasured here. No Bluetooth-bus UHID instance has been shown to satisfy HID parsing, output and feature replies or SDL/xpadneo acceptance, and UHID alone cannot establish over-the-air discoverability or pairing.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox-elite-series-2",
+    "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Device and host-acceptance gaps for Elite models 0x0b05 and 0x0b22, including selected firmware revisions. Keep radio transport separate from host-local UHID."
+  },
+  "sources": [
+    "xbox-cgap-kernel-hid-microsoft",
+    "xbox-cgap-xpadneo-core",
+    "xbox-cgap-xpadneo-elite-desc",
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

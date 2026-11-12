@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-pro-identity",
+  "statement": "At Linux v7.4-rc2 the Nintendo vendor ID is 0x057e and Switch 2 Pro product ID is 0x2069. The HID driver matches that Pro model on USB, and the dedicated USB configuration driver matches the same model's vendor-class interface; this source identity is not a captured retail descriptor.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel USB matching and source identity"
+  },
+  "sources": [
+    "switch2-pa2-linux-ids-v74rc2",
+    "switch2-pa2-linux-hid-v74rc2",
+    "switch2-pa2-linux-usb-v74rc2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

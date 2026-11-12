@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "elite2-pa2-bluetooth-hid-bind",
+  "statement": "At the pinned Linux revision, HID Microsoft defines Xbox model 1797 Bluetooth products 0x0b05 and 0x0b22 and matches both with HID_BLUETOOTH_DEVICE and its FF quirk. This is a Bluetooth HID route, not USB xpad or wireless-receiver GIP. Actual binding still depends on bus identity, driver availability, descriptors and any out-of-tree overrides.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-2",
+    "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "hid-ids.h:1056-1060 and hid-microsoft.c:275-350, 427-435; optional generic HID fallback described in prior Series consumer research."
+  },
+  "sources": [
+    "xbox-cgap-kernel-hid-ids",
+    "xbox-cgap-kernel-hid-microsoft",
+    "xbox-cgap-kernel-hid-generic"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

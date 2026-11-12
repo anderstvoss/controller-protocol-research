@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "rcv-xwa-per-client-surfaces",
+  "statement": "The inspected xone receiver and GIP gamepad code creates per-client Linux gamepad input, battery and LED classes, with receiver-level pairing and shared LED controls; a separately identified headset class can provide ALSA playback and capture. The inspected receiver, gamepad and headset paths do not register keyboard or pointer companion devices. This negative result is restricted to those paths.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-wireless-adapter",
+    "revision": "Out-of-tree xone f2aa9fe01103d7600553b505b298ff0bd47ff280; Linux v7.3 or pinned SDL where cited",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "transport/dongle.c:253-299, 384-479; driver/gamepad.c:265-311, 479-529; driver/common.c:12-188; driver/headset.c:295-319, 345-443. Does not exclude unrelated desktop software."
+  },
+  "sources": [
+    "xbox-xone-receiver",
+    "xbox-xone-gamepad",
+    "xbox-xone-common",
+    "xbox-xone-headset"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
