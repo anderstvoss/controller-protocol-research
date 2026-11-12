@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xboxone-pa2-ble-descriptor-ambiguity",
+  "statement": "Pinned xpadneo documentation says BLE-era non-Elite-Series-2 Xbox controller descriptors can advertise a Share usage despite some older Xbox One S hardware lacking that physical button. It also documents model 1708 Linux-mode descriptor examples of 306 and 334 bytes. These are upstream consumer comparators, not a verified firmware-to-descriptor matrix for every Xbox One revision.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-one",
+    "revision": "Xbox One S model 1708 Bluetooth, with explicit Series/Elite comparison and firmware uncertainty",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "xpadneo docs/README.md:88-97; docs/descriptors/xb1s_linux.md:3-43; distinct xpadneo consumer lineage, not independent physical proof."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-docs",
+    "xbox-cgap-xpadneo-legacy-desc"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

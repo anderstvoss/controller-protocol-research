@@ -20,6 +20,7 @@ affected schema's `schema_version`.
 - Add post-Alpha 2 Switch 2 GameCube source-only starter decision brief and L0 ledger: recommend a playable uinput mapping before experimental USB-level bulk realization, cross-reference ten existing claims without promoting hardware evidence.
 - Add Xbox Elite Series 2 post-Alpha 2 source-only starter research: pinned xpad/SDL/xpadneo paddle and profile consumer evidence, explicit USB/Bluetooth gaps, Elite registry and a uinput-first proposal; no host or hardware validation.
 
+- Register Xbox One as a post-Alpha 2 standalone-family candidate, with pinned Linux xpad, hid-microsoft and SDL consumer findings on USB revision IDs, Share-free evdev, Bluetooth model 1708 variants and firmware-specific SDL decoding; source-only, no host or hardware tests.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
