@@ -74,6 +74,8 @@ affected schema's `schema_version`.
 
 - Record supervised D9 MIDI-to-haptics and PCM playback through pinned upstream players, exact padded/short framing, configuration feedback, generated waveform correspondence and qualitative audibility limits.
 
+- Add Xbox Elite Series 2 post-Alpha 2 source-only starter research: pinned xpad/SDL/xpadneo paddle and profile consumer evidence, explicit USB/Bluetooth gaps, Elite registry and a uinput-first proposal; no host or hardware validation.
+
 - Clarify wired Steam Controller raw-HID versus physical HIDINPUT mouse/keyboard coexistence, separate Puck-path restoration latency from a stock watchdog measurement, and distinguish Steam discovery, managed activation and virtual output in the D9 matrix/checklist.
 
 - Record labelled D9 wired native inputs, configuration-dependent pad/stick lockout, SDL-enabled motion, Steam Ping and separate brief rumble channels; retain selected non-identifying payloads and operator caveats.
