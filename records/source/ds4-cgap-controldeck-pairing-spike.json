@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds4-cgap-controldeck-pairing-spike",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/ViniZap4/ControlDeck/blob/46151468605ba4d9e5c6378079bb56cd3c934333/spikes/DS4PairSpike/Sources/DS4PairSpike/DS4PairSpike.swift",
+  "revision": "46151468605ba4d9e5c6378079bb56cd3c934333",
+  "sha256": "0049a4cfd349c1833efb1995c4be1dd016652c4fbfd75bc90e143af90abe5bac",
+  "lineage": "ViniZap4-ControlDeck",
+  "locator": "spikes/DS4PairSpike/Sources/DS4PairSpike/DS4PairSpike.swift lines 55-105: USB HID selection, read-only feature report 0x12 retrieval, length check and identity field parsing. Licence: MIT (repository LICENSE)."
+}
