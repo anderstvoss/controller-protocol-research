@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "elite2-pa2-sdl-hidapi-usb-paddles",
+  "statement": "At pinned SDL revision, its Xbox One HIDAPI driver identifies Elite controllers as paddle-capable, provides four extra joystick buttons, and interprets USB GIP Elite Series 2 paddle state using 34-, 46- and 47-byte main-report variants or the 17-byte unmapped-state report path. It suppresses separate paddle presses when an onboard custom mapping would duplicate normal controls; these source paths do not prove host acceptance.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-2",
+    "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "SDL_hidapi_xboxone.c:155-162, 461-468, 511-520, 980-1055, 1122-1207, 1827-1844, 1959-1998; firmware-specific software cases only."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
