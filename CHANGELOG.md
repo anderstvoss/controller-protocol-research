@@ -18,6 +18,8 @@ affected schema's `schema_version`.
 
 - Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
 
+- Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
+
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
   input/reconnect fixtures, bounded xone headset duplex, and separate Linux
   UHID/xpadneo consumer observations. Add descriptor structural review

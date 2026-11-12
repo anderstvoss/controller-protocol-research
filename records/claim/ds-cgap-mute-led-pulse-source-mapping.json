@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-cgap-mute-led-pulse-source-mapping",
+  "statement": "The DualSense mute_button_led output field value 2 is a source-supported pulse/breathing encoding: nowrep/dualsensectl writes 2 for its pulse command while setting valid_flag1 bit 0, and XInput_HID enumerates Breathing as mode 2 after Off 0 and On 1. This corroborates SDL's earlier pulse comment, but no controller LED was observed and physical timing, revisions and acceptance remain unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "pinned source implementations nowrep d3ae2fa, XInput_HID 11cf2ea, yesbotics 24203b8; retail firmware and hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "DualSense output common byte 8, valid_flag1 bit 0; nowrep main.c 661-680 and XInput_HID dualsense.cpp 23-33 and 130-145. This is a source-level report-value convention, not physical actuation evidence."
+  },
+  "sources": [
+    "ds-cgap-nowrep-dualsensectl-main",
+    "ds-cgap-xinput-hid-dualsense",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [
+    "ds-l0-led-mute-led-pulse-mode"
+  ],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
