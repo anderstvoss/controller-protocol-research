@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-native-transport-unknown",
+  "statement": "No controlled physical capture here establishes whether either Joy-Con 2 half exposes a native USB connection through a particular grip, charger or rail configuration, what its exact composite descriptors and endpoint numbers are, or the structure and authentication requirements of its Bluetooth transport.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch2-joycon-family",
+    "revision": "Linux 77c7155e2707ba5b1d56f3dc1acead48cf17f98d; SDL fe2bca9748afa754ebbca4c543c5b28bbce30cf4 where applicable",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Retail connection, USB descriptor and Bluetooth discovery unknown"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

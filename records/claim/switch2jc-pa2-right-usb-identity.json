@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-right-usb-identity",
+  "statement": "The pinned Linux and SDL USB identity tables assign Nintendo vendor 0x057e and right Joy-Con 2 product 0x2066. Linux matches it as a USB HID interface; this is a source-supported consumer match, not a captured retail descriptor.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-joycon-right",
+    "revision": "Linux 77c7155e2707ba5b1d56f3dc1acead48cf17f98d; SDL fe2bca9748afa754ebbca4c543c5b28bbce30cf4 where applicable",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Right-half USB consumer identity"
+  },
+  "sources": [
+    "switch2jc-pa2-linux-hid-ids",
+    "switch2jc-pa2-sdl-usb-ids",
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

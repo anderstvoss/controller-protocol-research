@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-linux-hid-v74rc2",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/v7.4-rc2/drivers/hid/hid-nintendo.c",
+  "revision": "v7.4-rc2",
+  "sha256": "050ad2130dbd0794a83f9c4f2ffb20aa2e93c33ecde3278e3337d67f3cfe6a0e",
+  "lineage": "Linux kernel, v7.4-rc2; same upstream lineage as other Linux source records",
+  "locator": "drivers/hid/hid-nintendo.c: 2893-3052 Switch 2 constants and reports; 3246-3285 Pro button maps; 3410-3515 rumble; 3585-3668 evdev; 3933-4042 reports; 4090-4172 startup; 4336-4348 USB-only probe; 4442-4479 HID match. Licence GPL-2.0-or-later (SPDX GPL-2.0+)."
+}

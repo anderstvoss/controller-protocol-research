@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-sdl-usb-libusb",
+  "statement": "At pinned SDL source revisions, the Switch 2 Pro is among Nintendo models for which SDL selects libusb, and its Switch 2 HIDAPI driver requires direct libusb access to interface 1 bulk IN and OUT endpoints found at runtime. It claims that interface for USB configuration while it reads subsequent input through the HIDAPI device; USB permission and driver-detachment behavior are host-dependent and unmeasured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL USB discovery and configuration transport"
+  },
+  "sources": [
+    "sdl-switch2",
+    "switch2-gc-sdl-libusb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

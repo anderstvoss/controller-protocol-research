@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-sdl-usb-ids",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/fe2bca9748afa754ebbca4c543c5b28bbce30cf4/src/joystick/usb_ids.h",
+  "revision": "fe2bca9748afa754ebbca4c543c5b28bbce30cf4",
+  "sha256": "8dd434744880867820b75d82e2a5b96760e1163f52e93a062d2485a22f9e5f33",
+  "lineage": "SDL",
+  "locator": "src/joystick/usb_ids.h lines 49-52 and 126-134: Nintendo vendor and distinct Joy-Con 2 left, right and pair identities. Licence: zlib."
+}

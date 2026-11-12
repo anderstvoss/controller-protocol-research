@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-actual-host-observation-unknown",
+  "statement": "No actual host trace has shown the pinned Linux Switch 2 Pro input node, BTN_GRIPR/BTN_GRIPL/BTN_C events, SDL native Share/C/paddle visibility, access grants, HID/USB driver contention or output/IMU behavior for the selected firmware and model. The existing switch2-linux-exposure-unknown therefore remains open for physical host observation despite now documented source-declared evdev capabilities.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Measured Linux evdev/SDL outputs"
+  },
+  "sources": [
+    "switch2-pa2-linux-hid-v74rc2",
+    "switch2-pa2-linux-usb-v74rc2",
+    "sdl-switch2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

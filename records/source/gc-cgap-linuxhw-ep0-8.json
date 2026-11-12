@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-linuxhw-ep0-8",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/linuxhw/LsUSB/3b1ee387e93df2a09ebc82df7a3cd0b2298a5265/Desktop/ASRock/X570/X570%20Phantom%20Gaming%204/0A29FA221F3A/ARCH-ROLLING/5.18.14-ARCH1-1/X86_64/960FEFAEE7",
+  "revision": "3b1ee387e93df2a09ebc82df7a3cd0b2298a5265",
+  "sha256": "b25d37c59ea082b48c11263553e2fd36c1fb9ec4488bf81903b02be0e4f4d22b",
+  "lineage": "linuxhw/LsUSB public host enumeration archive (8-byte EP0 example)",
+  "locator": "Desktop/ASRock/X570/X570 Phantom Gaming 4/0A29FA221F3A/ARCH-ROLLING/5.18.14-ARCH1-1/X86_64/960FEFAEE7, lines 100-168: published USB descriptor, configuration, interface, HID descriptor length and endpoints for device 0x057e:0x0337; licence CC-BY-4.0. Other devices and identifiers in the original full source file are not reproduced."
+}

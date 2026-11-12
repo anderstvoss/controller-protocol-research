@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xboxone-pa2-xpad-wired-gip-boundary",
+  "statement": "Pinned xpad's real USB Xbox One path requires the Xbox GIP data interface, has model-conditional initialization (including an Xbox One S step), and decodes separate Guide events and GIP input packets. Reproducing its post-driver evdev shape through uinput does not implement USB GIP, genuine interface enumeration, startup exchanges or headset traffic.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-one",
+    "revision": "stock Microsoft Xbox One USB driver path, explicitly not a virtual GIP emulation claim",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c:642-659, 725-733, 1052-1160, 2056-2132; last sentence is a boundary of the derived uinput surface, not a physical measurement."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "xbox-xone-wired"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
