@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-four-slot-consumer",
+  "statement": "The pinned USB Host Shield XBOXRECV implementation services four receiver input pipes and sends status, LED and rumble to a controller-indexed output pipe. Together with xpad's interface-local context this supports a four-slot host consumer model, but does not prove any specific retail USB configuration or maximum connected count.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "XBOXRECV.cpp 283-316, 537-568; xpad.c 2044-2160; independent host consumers"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad",
+    "x360-l0-usbhost-receiver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

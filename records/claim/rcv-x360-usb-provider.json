@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-usb-provider",
+  "statement": "Because xpad requires a real vendor-specific USB interface and interrupt endpoints, an xpad-faithful virtual wireless receiver requires modeled USB presentation via a custom gadget connected through dummy_hcd or an equivalent emulated USB device over USB/IP. Plain uinput may emulate evdev, and UHID may emulate generic HID, but neither binds xpad's receiver interface. No USB gadget has been built or run.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 469-481, 2044-2160; derived provider requirement for ADR-0022"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

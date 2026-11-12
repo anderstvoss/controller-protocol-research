@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-presence",
+  "statement": "At bind, xpad starts wireless receiver input without a controller input node and requests connection information. It interprets wireless input byte 0 bit 3 as a status change and byte 1 bit 7 as controller presence, scheduling per-interface work; bit 6 denotes headset presence. Ordinary pad reports use a separate valid-input condition.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 987-1024, 1451-1476, 1847-1875, 2186-2209; expected parser bytes, not captures"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

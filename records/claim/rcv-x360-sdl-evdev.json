@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-sdl-evdev",
+  "statement": "Pinned SDL Xbox 360 HIDAPI excludes Microsoft wireless receiver IDs and wireless interface protocol 129. On Linux, SDL's evdev backend discovers joystick-capable input nodes, assigns a new SDL joystick instance ID at each addition and removes it when its devnode disappears. An xpad wireless slot therefore follows Linux evdev add/remove semantics rather than being opened as a wired SDL HIDAPI Xbox 360 device.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "SDL_hidapi_xbox360.c 86-105; SDL_sysjoystick.c 277-341, 383-413, 434-567; no live SDL execution"
+  },
+  "sources": [
+    "x360-l0-sdl-hidapi-360-3418",
+    "sdl-linux-joystick-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

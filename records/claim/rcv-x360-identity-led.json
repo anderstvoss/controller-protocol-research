@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-identity-led",
+  "statement": "On wireless input-device creation xpad replaces the receiver's USB product ID in the Linux input identity with 0x02a1. The driver allocates a global xpad LED class index, uses it to choose a player-light pattern and frees it at detach; it is not a persisted paired-controller identifier or an application player-slot ID.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 1700-1768, 1924-1959; host-assigned identity and LED class"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

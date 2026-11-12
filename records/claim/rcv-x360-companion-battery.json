@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-companion-battery",
+  "statement": "The inspected xpad wireless path observes a headset status bit but does not instantiate keyboard, pointer, headset audio or battery power-supply companions. A separate pinned USB Host Shield host implementation queries battery status; this does not establish a Linux xpad battery surface or the physical device's complete capabilities.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 987-1024, 1924-2036; XBOXRECV.cpp 537-556; negative limited to inspected consumers"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad",
+    "x360-l0-usbhost-receiver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

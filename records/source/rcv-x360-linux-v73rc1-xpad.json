@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-linux-v73rc1-xpad",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/input/joystick/xpad.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "92d10718912544a5360eb7e3c12b12bc151b0070621f478bcf0b787dbd8bf200",
+  "lineage": "linux-kernel",
+  "locator": "drivers/input/joystick/xpad.c, tag v7.3-rc1: lines 123-131 receiver IDs; 469-481 USB interface binding; 961-1024 presence; 1293-1391 output URBs; 1451-1476 inquiry; 1530-1622 wireless FF; 1661-1768 LEDs; 1847-1875 startup; 1924-2036 input lifecycle; 2044-2247 probe/disconnect. Licence: GPL-2.0-or-later. Consumer source only."
+}
