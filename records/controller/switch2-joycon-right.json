@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "switch2-joycon-right",
+  "name": "Nintendo Switch 2 Joy-Con 2 (R)",
+  "kind": "controller",
+  "parent": "switch2-joycon-family",
+  "tracking": "anderstvoss/virtualgamepad#362",
+  "notes": "Right Joy-Con 2 with C/GameChat input; pinned USB consumer path only, with independent identity. Mouse protocol and Bluetooth behavior unmeasured."
+}
