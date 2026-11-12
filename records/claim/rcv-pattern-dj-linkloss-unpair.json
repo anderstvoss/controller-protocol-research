@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer",
+  "id": "rcv-pattern-dj-linkloss-unpair",
+  "statement": "For the reviewed Logitech DJ consumer, a paired report 0x41 schedules child HID creation, an unpaired report 0x40 schedules destruction, and connection-status report 0x42 on link loss forwards a neutral input report instead of deleting that child. Re-pairing after unpairing creates a new HID object, while ordinary link loss preserves its existing child node.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "linux-joystick-identity",
+    "revision": "Linux cee9395acd8043be0644b25c34bfa86623f2b935",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Logitech DJ link-loss, unpair and re-pair distinctions; no physical pairing run"
+  },
+  "sources": [
+    "rcv-pattern-linux-logitech-dj-v73rc1"
+  ]
+}
