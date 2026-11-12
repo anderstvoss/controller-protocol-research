@@ -7,6 +7,10 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add a manually authored evidence-cited controller technical wiki (PR #115),
+  with manually maintained chapter pages and an optional MkDocs build.
+  Existing corpus records and research ledgers are unchanged by the wiki.
+
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.

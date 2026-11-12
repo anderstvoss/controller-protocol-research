@@ -1,0 +1,106 @@
+site_name: Controller Protocol Research — Evidence Wiki
+site_description: Manually curated protocol knowledge from a provenance-controlled corpus
+docs_dir: pages
+site_dir: site
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+nav:
+  - Home: index.md
+  - Controller library: controllers.md
+  - Evidence methodology: methodology.md
+  - Transport and consumers: transports-and-consumers.md
+  - HID and audio association: audio-association.md
+  - Protocol lifecycle: report-lifecycle.md
+  - Research priorities: gaps.md
+  - Research notes: research-notes.md
+  - External references: external-references.md
+  - Manual update workflow: updating.md
+  - Editorial changelog: changelog.md
+  - Controllers:
+      - "Steam Controller (2026)":
+          - "Overview": controllers/steam-controller-2026/index.md
+          - "USB protocol": controllers/steam-controller-2026/protocol.md
+          - "Bluetooth and UHID": controllers/steam-controller-2026/bluetooth-and-uhid.md
+          - "Virtual kernel evdev": controllers/steam-controller-2026/virtual-kernel-evdev.md
+          - "Controls and sensors": controllers/steam-controller-2026/controls.md
+          - "Modes and consumers": controllers/steam-controller-2026/modes-and-consumers.md
+          - "Haptics and audio": controllers/steam-controller-2026/haptics-and-audio.md
+          - "Validation": controllers/steam-controller-2026/validation.md
+      - "Steam Controller Puck":
+          - "Overview": controllers/steam-controller-2026-puck/index.md
+          - "Composite USB and slots": controllers/steam-controller-2026-puck/interfaces-and-slots.md
+          - "Receiver slot lifecycle": controllers/steam-controller-2026-puck/receiver-lifecycle.md
+          - "Implementation": controllers/steam-controller-2026-puck/implementation.md
+          - "Validation": controllers/steam-controller-2026-puck/validation.md
+      - "OpenPuck":
+          - "Overview": controllers/openpuck-firmware/index.md
+          - "Comparison": controllers/openpuck-firmware/comparison.md
+      - "DualSense":
+          - "Overview": controllers/dualsense/index.md
+          - "Reports and features": controllers/dualsense/reports-and-features.md
+          - "Controls and sensors": controllers/dualsense/controls-and-sensors.md
+          - "Outputs and audio": controllers/dualsense/outputs-and-audio.md
+          - "Consumers and validation": controllers/dualsense/consumers-and-validation.md
+      - "DualSense Edge":
+          - "Overview": controllers/dualsense-edge/index.md
+      - "DualSense family":
+          - "Overview": controllers/sony-dualsense-family/index.md
+      - "DualShock 4":
+          - "Overview": controllers/dualshock4/index.md
+          - "Reports and features": controllers/dualshock4/reports-and-features.md
+          - "Consumers and validation": controllers/dualshock4/consumers-and-validation.md
+      - "Wii Remote":
+          - "Overview": controllers/wii-remote/index.md
+          - "Protocol and memory": controllers/wii-remote/protocol-and-memory.md
+          - "Extensions and MotionPlus": controllers/wii-remote/extensions-and-motionplus.md
+          - "IR, rumble and speaker": controllers/wii-remote/io-and-audio.md
+          - "Consumers": controllers/wii-remote/consumers.md
+          - "Validation": controllers/wii-remote/validation.md
+      - "Switch Pro":
+          - "Overview": controllers/switch-pro/index.md
+          - "Protocol": controllers/switch-pro/protocol.md
+          - "Calibration and consumers": controllers/switch-pro/calibration-and-consumers.md
+          - "HOME LED and NFC": controllers/switch-pro/home-light-and-nfc.md
+          - "Validation": controllers/switch-pro/validation.md
+      - "Joy-Con family":
+          - "Overview": controllers/switch-joycon-family/index.md
+          - "Native protocol and MCU": controllers/switch-joycon-family/protocol-and-mcu.md
+          - "Pairing and consumers": controllers/switch-joycon-family/pairing-and-consumers.md
+      - "Joy-Con Left":
+          - "Overview": controllers/switch-joycon-left/index.md
+          - "Wire and consumers": controllers/switch-joycon-left/source-and-consumers.md
+      - "Joy-Con Right":
+          - "Overview": controllers/switch-joycon-right/index.md
+      - "Switch 2 Pro":
+          - "Overview": controllers/switch2-pro/index.md
+          - "Source and validation": controllers/switch2-pro/source-and-validation.md
+      - "Switch 2 GameCube":
+          - "Overview": controllers/switch2-gamecube/index.md
+          - "USB and controls": controllers/switch2-gamecube/usb-and-controls.md
+      - "GameCube WUP-028 adapter":
+          - "Overview": controllers/gamecube-usb-adapter/index.md
+          - "USB protocol": controllers/gamecube-usb-adapter/usb-protocol.md
+          - "Consumer virtualization": controllers/gamecube-usb-adapter/consumers-and-virtualization.md
+          - "Validation": controllers/gamecube-usb-adapter/validation.md
+      - "Xbox 360":
+          - "Overview": controllers/xbox360/index.md
+          - "Native XUSB": controllers/xbox360/xusb-protocol.md
+          - "Consumers": controllers/xbox360/consumers-and-compatibility.md
+          - "Validation": controllers/xbox360/validation.md
+      - "Xbox Series":
+          - "Overview": controllers/xbox-series/index.md
+          - "Protocol and consumers": controllers/xbox-series/protocol-and-consumers.md
+          - "Wired GIP and receiver": controllers/xbox-series/wired-gip-and-receiver.md
+          - "Bluetooth and xpadneo": controllers/xbox-series/bluetooth-and-xpadneo.md
+          - "Physical and virtual observations": controllers/xbox-series/physical-observations.md
+      - "8BitDo Pro 2":
+          - "Overview": controllers/8bitdo-pro-2/index.md
+      - "Linux joystick identity":
+          - "Overview": controllers/linux-joystick-identity/index.md

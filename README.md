@@ -111,3 +111,11 @@ fake backend runs and cannot use virtual-host fixtures to justify physical
 promotion. Missing stages retain reasons; durations have no acceptance budget.
 Path/wall-clock redactions and the original local artifact hash are documented
 in each fixture. No real device identity or capture data is included.
+
+## Evidence wiki
+
+[Read the manually curated technical wiki](docs/wiki/pages/index.md)
+for controller protocols, report maps, consumer behavior and lab validation.
+The [wiki guide](docs/wiki/README.md) explains its **on-request editorial
+refresh** policy. Existing JSON evidence, fixtures and research notes remain
+authoritative and unchanged.
