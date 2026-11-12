@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-nintendont-padread",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/FIX94/Nintendont/c683db301c941a64e6fe5cef6ac079bd1a726074/loader/source/ppc/PADReadGC/source/PADReadGC.c",
+  "revision": "c683db301c941a64e6fe5cef6ac079bd1a726074",
+  "sha256": "65efc33a685b669422a79a3e0bef276f5032d8bfa545051cc9057ec410ee4e67",
+  "lineage": "FIX94/Nintendont USB GameCube adapter consumer",
+  "locator": "loader/source/ppc/PADReadGC/source/PADReadGC.c, lines 410-422: status gating and motor power; Nintendont loader source documents GPL-2.0 licensing (no root licence file); no code excerpted."
+}

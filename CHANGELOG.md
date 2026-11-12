@@ -12,6 +12,8 @@ affected schema's `schema_version`.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
+- Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
+
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
 
 - Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
