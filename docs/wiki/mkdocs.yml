@@ -28,6 +28,7 @@ nav:
           - "Overview": controllers/steam-controller-2026/index.md
           - "USB protocol": controllers/steam-controller-2026/protocol.md
           - "Bluetooth and UHID": controllers/steam-controller-2026/bluetooth-and-uhid.md
+          - "Virtual kernel evdev": controllers/steam-controller-2026/virtual-kernel-evdev.md
           - "Controls and sensors": controllers/steam-controller-2026/controls.md
           - "Modes and consumers": controllers/steam-controller-2026/modes-and-consumers.md
           - "Haptics and audio": controllers/steam-controller-2026/haptics-and-audio.md
@@ -35,6 +36,7 @@ nav:
       - "Steam Controller Puck":
           - "Overview": controllers/steam-controller-2026-puck/index.md
           - "Composite USB and slots": controllers/steam-controller-2026-puck/interfaces-and-slots.md
+          - "Receiver slot lifecycle": controllers/steam-controller-2026-puck/receiver-lifecycle.md
           - "Implementation": controllers/steam-controller-2026-puck/implementation.md
           - "Validation": controllers/steam-controller-2026-puck/validation.md
       - "OpenPuck":
@@ -73,6 +75,7 @@ nav:
           - "Pairing and consumers": controllers/switch-joycon-family/pairing-and-consumers.md
       - "Joy-Con Left":
           - "Overview": controllers/switch-joycon-left/index.md
+          - "Wire and consumers": controllers/switch-joycon-left/source-and-consumers.md
       - "Joy-Con Right":
           - "Overview": controllers/switch-joycon-right/index.md
       - "Switch 2 Pro":
@@ -96,6 +99,7 @@ nav:
           - "Protocol and consumers": controllers/xbox-series/protocol-and-consumers.md
           - "Wired GIP and receiver": controllers/xbox-series/wired-gip-and-receiver.md
           - "Bluetooth and xpadneo": controllers/xbox-series/bluetooth-and-xpadneo.md
+          - "Physical and virtual observations": controllers/xbox-series/physical-observations.md
       - "8BitDo Pro 2":
           - "Overview": controllers/8bitdo-pro-2/index.md
       - "Linux joystick identity":

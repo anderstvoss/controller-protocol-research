@@ -2,7 +2,7 @@
 
 [← Xbox Series overview](index.md) · [Transport comparison](protocol-and-consumers.md) · [Bluetooth](bluetooth-and-xpadneo.md)
 
-> **2026-11-10 source-only addition.** The reviewed xone implementation describes a possible host; no retail Series USB packets, adapter pairing or headset activity were measured. Evidence: [xbox-series-xone-consumer.md](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/docs/xbox-series-xone-consumer.md).
+> **2026-11-10 source-only xone survey, supplemented 2026-11-11 by a separate physical reference.** The pinned xone source describes consumer behavior; the later wired xpad and xone-headset measurements are scoped independently. Retail GIP raw packets and receiver pairing were not captured. Evidence: [xbox-series-xone-consumer.md](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/docs/xbox-series-xone-consumer.md).
 
 ## Wired USB is not ordinary HID
 
@@ -19,4 +19,8 @@ The existing `xpad` evdev reference has **26 capabilities** in its recorded prof
 
 ## What is still required
 
-A real wired hardware reference must establish descriptor, startup/ACK replies, Share/Guide, four-motor output and headset behavior. A receiver needs independent pairing/lifecycle evidence. The source corpus explicitly retains these device-side unknowns: [xbox-series-usb-device-gaps](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-series-usb-device-gaps.json), [xbox-xone-physical-unknown](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-xone-physical-unknown.json).
+A wired reference now supplies physical **post-driver xpad input**, two accepted/felt main rumble pulses and bounded **xone headset playback/microphone** evidence. Still needed are native GIP report/ACK transcripts, individual trigger-motor actuation, controlled Guide LED writes, battery behavior and independent receiver pairing/lifecycle. A receiver needs independent pairing/lifecycle evidence. The source corpus explicitly retains these device-side unknowns: [xbox-series-usb-device-gaps](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-series-usb-device-gaps.json), [xbox-xone-physical-unknown](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/xbox-xone-physical-unknown.json).
+
+## Physical xpad versus xone (November 11)
+
+See [scoped physical and virtual observations](physical-observations.md) for the fixed `045e:0b12` unit on Linux 7.3. Under stock xpad, Guide/Share appeared as `BTN_MODE`/`KEY_RECORD`, with 799 input sweep frames and 22 reconnect frames, and a tactile response to two ordinary main-motor FF uploads. There was **no** exposed ALSA headset card. Under xone 0.5.8 after loading the appropriate modules and USB reconnecting, 48-kHz stereo playback and 24-kHz mono capture were physically exercised for a bounded session. The physical observation corroborates that xone *can* expose headset audio, but does not measure native packet/ACK correctness or sustained PCM robustness. [`xsphys-xpad-input`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/xsphys-xpad-input.json); [physical ledger](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/docs/ledgers/xbox-series-wired-physical.md).

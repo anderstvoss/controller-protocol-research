@@ -7,6 +7,7 @@
 ## Reader path
 
 - [USB composite interfaces, slots and identity](interfaces-and-slots.md)
+- [Per-slot kernel and SDL receiver lifecycle](receiver-lifecycle.md) — 2026-11-11 source-only host study.
 - [Simulated-Puck implementation considerations](implementation.md)
 - [Physical capture and validation](validation.md)
 - [Controller native protocol](../steam-controller-2026/protocol.md) — shared report family, with receiver-specific uncertainty.
@@ -27,3 +28,7 @@ Pinned Linux and SDL describe a **seven-interface receiver design** with control
 - Historical `1142` OpenPuck compatibility assertions were not silently dropped; see [`puck-historical-compat`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/puck-historical-compat.json) and [`puck-historical-physical`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/puck-historical-physical.json).
 
 **Deep research:** [full Puck research gaps](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-controller-2026-research-gaps.md); [migration ledger](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/ledgers/steam-controller-migration.md).
+
+## November 11 source-only lifecycle update
+
+Pinned Linux/SDL consumer code clarifies how four receiver-slot HID interfaces are **attached and removed independently**: Linux status `0x79`; SDL status IDs `0x46`/`0x79`, **not** `0x7b`; native evdev/sensor/battery lifetimes depend on slot connectivity and raw-HID ownership. Per-slot reconnect epochs are inferred, and retail pairing/bond persistence still lacks physical evidence. See [receiver lifecycle](receiver-lifecycle.md), [`rcv-puck-sdl-presence`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-sdl-presence.json), [`rcv-puck-physical-slot-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-physical-slot-unknown.json).

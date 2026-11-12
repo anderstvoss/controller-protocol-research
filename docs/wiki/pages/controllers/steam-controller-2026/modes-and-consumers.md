@@ -25,3 +25,7 @@ An application-visible Steam virtual controller is **not necessarily** the physi
 ## Mode and ownership experiment
 
 For each session record: Steam process state, gamepad fd ownership, SDL backend/driver and hints, kernel bound driver, native packet stream, desktop `0x40/0x41`, registered evdev/hidraw nodes, settings writes, re-registration latency and final cleanup. Separate the **stock wired** path from Puck loss/reconnect restoration experiments. The long source-backed discussion is in [mode analysis](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-controller-modes.md) and [follow-up contrasts](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/steam-controller-modes-followup.md).
+
+## November 11 virtual kernel mode-gate experiment
+
+The [bounded UHID kernel-evdev experiment](virtual-kernel-evdev.md) observed registered nodes with no events on first creation. A **650-ms Menu press/release** enabled the event stream, consistent with but not identical to the pinned source's nominal 450-ms hold threshold. Opening a layered hidraw client removed native gamepad/sensor registration. This corroborates a *virtual* consumer gate; it is not a new retail firmware watchdog measurement. [`steam-d9-virtual-kernel-mode-gate`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/steam-d9-virtual-kernel-mode-gate.json).

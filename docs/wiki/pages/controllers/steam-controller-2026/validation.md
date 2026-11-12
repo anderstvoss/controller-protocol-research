@@ -26,3 +26,7 @@ See [compatibility-versus-fidelity disputes](https://github.com/anderstvoss/cont
 ## Bluetooth-specific research gates (source-only)
 
 The [new BLE chapter](bluetooth-and-uhid.md) adds BlueZ HOGP report routing, a *conditional* ATT feature-write MTU ≥66 requirement, kernel identity `28de:1303` and version-specific SDL trigger/haptic handling. No physical BLE report descriptor, pairing, capture or Steam UI result was obtained. These remain independent owner tests; do not reuse wired/Puck acceptance. [`steam-ble-bluez-att-mtu-feature-constraint`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-bluez-att-mtu-feature-constraint.json).
+
+## Completed virtual-host check (November 11)
+
+The [D9 kernel-evdev reference](virtual-kernel-evdev.md) now documents one virtual wired UHID test after mode enable, isolated 22-button mapping, pads, axis attributes and sensor events; reduced uinput was also compared. The claims remain `consumer`/`source_supported`, and retail HID fidelity, consumer Steam activation, direct BLE and Puck receiver equivalence are still distinct open gates. [`steam-d9-virtual-kernel-evdev-decoding`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/steam-d9-virtual-kernel-evdev-decoding.json), [`steam-d9-virtual-kernel-abs-ioctl`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/steam-d9-virtual-kernel-abs-ioctl.json).

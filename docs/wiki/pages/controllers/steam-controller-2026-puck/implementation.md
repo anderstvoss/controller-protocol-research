@@ -27,3 +27,7 @@ For each target, log which USB interface and driver it bound, raw/client ownersh
 ## Excluded shortcut
 
 Four uinput gamepads can be a useful application-output demo but do **not** emulate an external Puck as a real USB receiver. Likewise generic UHID may suffice for a direct-controller experiment but is not proof of 2–5 Puck interface enumeration.
+
+## Receiver implementation state transitions (source-only)
+
+The [receiver lifecycle study](receiver-lifecycle.md) adds an operational contract for a virtual Puck: a slot presence gate, conditional gamepad/sensor/battery registration, **fresh device lifetime on reconnect**, interface-local HID features/output, and independent removal of its joystick/nodes. A slot epoch is a reasonable *inferred* model, not a measured Puck transport field. SDL distinguishes wireless status `0x46`/`0x79` and does not recognize the historical `0x7b` as a status at the pinned revision. Receiver-wide failure, pairing and output after absence remain untested. [`rcv-puck-sdl-presence`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-sdl-presence.json), [`rcv-puck-reconnect-epoch-inference`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-reconnect-epoch-inference.json), [`rcv-puck-physical-slot-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-physical-slot-unknown.json).

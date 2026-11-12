@@ -4,8 +4,8 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 
 ## Valve
 
-- [Steam Controller (2026)](controllers/steam-controller-2026/index.md) — direct HID, native inputs, lizard mode, feature/output traffic, consumer arbitration; [Bluetooth/HOGP consumer evidence](controllers/steam-controller-2026/bluetooth-and-uhid.md).
-- [Steam Controller Puck](controllers/steam-controller-2026-puck/index.md) — receiver identity, USB interface layout, wireless slots, OpenPuck comparison.
+- [Steam Controller (2026)](controllers/steam-controller-2026/index.md) — direct HID, native inputs, lizard mode, feature/output traffic, consumer arbitration; [Bluetooth/HOGP consumer evidence](controllers/steam-controller-2026/bluetooth-and-uhid.md) and [virtual kernel/evdev test](controllers/steam-controller-2026/virtual-kernel-evdev.md).
+- [Steam Controller Puck](controllers/steam-controller-2026-puck/index.md) — receiver identity, USB interface layout, wireless slots, OpenPuck comparison; [per-slot host lifecycle](controllers/steam-controller-2026-puck/receiver-lifecycle.md).
 - [OpenPuck compatibility firmware](controllers/openpuck-firmware/index.md) — emulated USB receiver and other device modes; **not** a physical reference.
 
 ## Nintendo
@@ -13,7 +13,7 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 - [Wii Remote / MotionPlus / extensions](controllers/wii-remote/index.md)
 - [Switch Pro Controller](controllers/switch-pro/index.md) — includes [HOME LED and NFC/MCU boundaries](controllers/switch-pro/home-light-and-nfc.md).
 - [Switch 1 Joy-Con family](controllers/switch-joycon-family/index.md)
-- [Joy-Con (L)](controllers/switch-joycon-left/index.md)
+- [Joy-Con (L)](controllers/switch-joycon-left/index.md) — [source-described fields and Linux/SDL mappings](controllers/switch-joycon-left/source-and-consumers.md)
 - [Joy-Con (R)](controllers/switch-joycon-right/index.md)
 - [Switch 2 Pro Controller](controllers/switch2-pro/index.md)
 - [Switch 2 GameCube USB Controller](controllers/switch2-gamecube/index.md)
@@ -29,7 +29,7 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 ## Microsoft and third-party
 
 - [Xbox 360 standard-HID realization](controllers/xbox360/index.md) — explicitly separate from native XUSB.
-- [Xbox Series Controller](controllers/xbox-series/index.md) — [wired GIP and receiver](controllers/xbox-series/wired-gip-and-receiver.md), [Bluetooth HID and xpadneo](controllers/xbox-series/bluetooth-and-xpadneo.md).
+- [Xbox Series Controller](controllers/xbox-series/index.md) — [wired GIP and receiver](controllers/xbox-series/wired-gip-and-receiver.md), [Bluetooth HID and xpadneo](controllers/xbox-series/bluetooth-and-xpadneo.md), and [scoped physical and virtual observations](controllers/xbox-series/physical-observations.md).
 - [8BitDo Pro 2](controllers/8bitdo-pro-2/index.md)
 
 ## Cross-platform

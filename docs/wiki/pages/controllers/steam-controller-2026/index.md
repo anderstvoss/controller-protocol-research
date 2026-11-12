@@ -10,6 +10,7 @@ The D9 research establishes a useful physical **wired `28de:1302`** reference, e
 
 - [USB identity and report protocol](protocol.md)
 - [Bluetooth 1303, HOGP and UHID research](bluetooth-and-uhid.md) — new source-only consumer evidence, no paired BLE hardware.
+- [Virtual Linux kernel-evdev mode and input run](virtual-kernel-evdev.md) — new bounded **virtual host-consumer** evidence.
 - [Buttons, axes, pads and motion](controls.md)
 - [Lizard, kernel, SDL and Steam ownership](modes-and-consumers.md)
 - [Rumble, MIDI, PCM haptics and audio](haptics-and-audio.md)
@@ -36,3 +37,7 @@ Host-side kernel and SDL paths are still distinct. A raw client may suppress ker
 ## November 10 source-research update
 
 The subsequent [Bluetooth/HOGP chapter](bluetooth-and-uhid.md) separates the Linux/SDL/BlueZ *consumer* contract for direct `28de:1303` from the physical wired reference. Its ATT MTU constraint, trigger-click SDL revision differences and feature-request routing do **not** establish actual BLE pairing, a retail descriptor or Steam Input acceptance. See [`steam-ble-kernel-v73-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-kernel-v73-binding.json) and [`steam-ble-bluez-att-mtu-feature-constraint`](https://github.com/anderstvoss/controller-protocol-research/blob/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/claim/steam-ble-bluez-att-mtu-feature-constraint.json).
+
+## November 11 virtual-host reference
+
+A newly recorded Linux 7.3 virtual wired UHID run exposed gamepad/sensor capabilities but initially emitted no events until a 650-ms Menu press/release changed kernel mode. It subsequently decoded 22 digital controls, pads, axes and a UHID-only sensor node. Raw-client ownership removed the kernel-native nodes; reduced uinput had no sensor node and different fuzz/resolution metadata. These are **virtual consumer** observations, not retail physical firmware or Steam Input validation. Read [virtual kernel evdev](virtual-kernel-evdev.md) and [`steam-d9-virtual-kernel-mode-gate`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/steam-d9-virtual-kernel-mode-gate.json).
