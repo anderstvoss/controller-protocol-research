@@ -27,6 +27,8 @@ affected schema's `schema_version`.
 
 - Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
 
+- Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
+
 - Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.
 
 - Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
