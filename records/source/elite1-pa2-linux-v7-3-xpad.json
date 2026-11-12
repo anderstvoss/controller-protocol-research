@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-linux-v7-3-xpad",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/v7.3/drivers/input/joystick/xpad.c",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "b47281151829fc382c4bcb5f466865f476a6f4ebfacd617ee49393f99c1e3950",
+  "lineage": "linux-kernel",
+  "locator": "drivers/input/joystick/xpad.c, v7.3: 1 licence GPL-2.0-or-later; 129, 132, 134 identity; 420-475 evdev button codes; 493-517 USB interface match; 1165-1209 mapped-paddle guard; 1627-1639 force feedback; 1905-1929 axis bounds; 1973-2033 capabilities; 2166-2195 packet-format selection. Consumer implementation only."
+}
