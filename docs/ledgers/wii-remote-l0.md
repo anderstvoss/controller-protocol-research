@@ -271,3 +271,8 @@ decoded gyro/stick with exact imported calibration. These close the W9h
 retained-mode sampling gap for those controls only. No kernel rerun, model/API
 change or inherited Original pass. See `docs/wii-w9i-fresh-plus.md`; generic
 binding release use remains gated on #258.
+
+
+## Speaker consumer source-only inventory
+
+Current inventory: **248 Wii claims** (239 on the prior source main snapshot), including nine new `wii-gap-speaker-*` claims and ten new, SHA-256-hashed pinned source files. The new positive non-Dolphin senders are libogc WPAD/wiiuse and CWiid's fixed beep. Their initialization order, ADPCM divisors, pacing and response gates differ; neither supports a retail speaker-fidelity assertion. Cemu and WiimoteLib expose no speaker sender in the reviewed files, and independently pinned upstream wiiuse must not be conflated with the libogc fork. See [speaker consumer brief](../wii-speaker-consumers.md) for the per-consumer decision table, source and licence locators, ACK/status nuances, and **not-run** experiments. Existing `audio-wii-*` and WiiBrew claims remain unchanged; no physical, radio, decoder, or sample-rate measurements are promoted.

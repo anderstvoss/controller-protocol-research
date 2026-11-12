@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-startup-status",
+  "statement": "Pinned devkitPro/libogc Wii WPAD calls the wiiuse speaker setter on connect and on WPAD_ControlSpeaker. On enable after handshake it sends mute report 0x19, enable report 0x14, writes speaker addresses A20009=01 then A20001=08, writes seven bytes starting at A20001 with format 0x00 ADPCM, little-endian rate divisor 0x07d0 and volume 0x40, writes A20008=01, unmutes with 0x19 and requests status 0x15. Disable mutes, writes A20001=01 and A20009=00, sends enable 0x14 off and requests status. Speaker state is read from status report 0x20, not inferred solely from command dispatch.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-libogc-setup",
+    "wii-gap-speaker-libogc-wpad",
+    "wii-gap-speaker-libogc-events",
+    "wii-gap-speaker-libogc-constants"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cwiid-util",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/util.c",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "c98e2966b354b90bbbe7e474af52c65cec43c25c40bb7f53b6959955ad308ac8",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "59-100 success handshake verification and sequential speaker setup script execution. GPL-2.0-or-later file header."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cwiid-beep-sequence",
+  "statement": "Pinned CWiid's cwiid_beep uses 0x14 enable then 0x19 mute, writes A20009=01, A20001=08, writes the seven-byte A20001 configuration with ADPCM format 0x00, little-endian divisor 0x0c00 and volume 0x40, writes A20008=01 and unmutes. It sends 100 report 0x18 blocks with a length control byte encoding 20 bytes, nominally spacing sends by 10,204,081 ns using a timed condition wait, then mutes and disables. It has a fixed encoded beep payload, not a general 8-bit PCM or adaptive-rate streaming interface.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-cwiid-command",
+    "wii-gap-speaker-cwiid-constants"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
