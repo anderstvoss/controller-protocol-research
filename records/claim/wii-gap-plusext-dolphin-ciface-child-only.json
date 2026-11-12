@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-dolphin-ciface-child-only",
+  "statement": "ControllerInterface sets up one MP mapping 04/05/07. When active MP reports a downstream child but cached ID is unknown, it may read A400F6/4 then later A40040/16 calibration for a recognized ordinary child. Its reviewed task path does not recursively probe downstream MP identity or instantiate a second gyro. A physically stacked MP may present unknown child data or stall setup; outcomes are unmeasured.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin pinned ControllerInterface HIDAPI input path",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin WiimoteController.cpp 449-659, 709-743, 1352-1403; MP emulator 394-465. #52 E1/E2/E3 not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-ciface-3eb30c",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

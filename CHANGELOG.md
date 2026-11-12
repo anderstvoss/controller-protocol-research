@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add twelve source-only Wii Plus/external and nested MotionPlus consumer predictions; #52 physical experiments not run, no two-gyro acceptance.
+
 - Add nine source-only Wii Remote speaker-consumer claims: pinned libogc WPAD and CWiid report/register, ADPCM, pacing and ACK/status paths, with non-originator boundaries and physical unknowns; no host or hardware tests.
 
 - Add source-only Xbox 360 Wireless Receiver xpad v7.3-rc1 and SDL Linux lifecycle research: slot presence, evdev recreation, per-interface feedback and USB-level realization requirements; no host or hardware run.

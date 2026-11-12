@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-active-frame-child-bit",
+  "statement": "The active MP downstream-connected bit signals an attached child behind the active unit, not the count of MP units or active gyros. Its frame discriminator separates gyro samples from a child frame; mode 04 is gyro-only and modes 05/07 multiplex Nunchuk/Classic-family child layouts with repacked fields. A true child bit alone cannot identify a second MP or prove independent sampling.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Active MotionPlus frame with one mediator",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Existing WiiBrew oldid 120079; Dolphin MotionPlus.h 77-115, MotionPlus.cpp 394-465, 600-709; #52 not run."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-dolphin-motionplus-layout-e1d35f",
+    "wii-gap-dolphin-attach-mp-emu-3eb30c"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
