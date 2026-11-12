@@ -76,4 +76,3 @@ Potential faithful test vehicles are a custom USB gadget modeled through Linux d
 | R2-8 | Compare the same SDL/evdev consumer with a generic reduced uinput controller versus a modeled USB dummy_hcd/USB/IP receiver; record xpad binding separately from mere playable controls |
 
 No physical receiver data is committed. If a gap requires examining vendor firmware, it **needs private analysis** and remains outside this public research.
-
