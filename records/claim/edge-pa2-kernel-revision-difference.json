@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "edge-pa2-kernel-revision-difference",
+  "statement": "An earlier pinned Linux hid-playstation source parser did not translate DualSense Edge auxiliary bits into independent evdev keys; the v7.3 tagged parser registers and emits four BTN_TRIGGER_HAPPY events for Edge. Linux exposure must be stated with its exact revision rather than generalized to all distributions.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense-edge",
+    "revision": "Linux v7.3; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Source revision comparison; actual distribution backports and observed driver binding unknown"
+  },
+  "sources": [
+    "edge-pa2-linux-v73-hid-playstation",
+    "kernel"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
