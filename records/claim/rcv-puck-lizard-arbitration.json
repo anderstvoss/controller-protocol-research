@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-lizard-arbitration",
+  "statement": "In the kernel, opening the companion raw-HID client schedules a transition that removes native input registration; IBEX lizard mode is controlled through that interface's settings. SDL periodically requests lizard disable for a connected open joystick and can request IMU settings. These are per-consumer policies, not proof of a kernel-created Puck keyboard or pointer device.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

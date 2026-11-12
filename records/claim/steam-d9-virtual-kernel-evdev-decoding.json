@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-d9-virtual-kernel-evdev-decoding",
+  "statement": "After the mode switch, all 22 native digital controls on virtual wired UHID and on reduced uinput produced press=1 and release=0 on the kernel gamepad node with codes A 304, B 305, X 307, Y 308, QAM 294, right-stick click 318, Menu 315, R4 549, R5 551, right shoulder 311, D-pad down/right/left/up 545/547/546/544, View 314, left-stick click 317, Steam 316, L4 548, L5 550, left shoulder 310, right/left trigger click 313/312. Left/right pad clicks gave keys 289/290 with or without touch. Sticks map to ABS 0/1 and 3/4 with X unchanged and Y inverted; a raw -32768 stick emitted -32767. Triggers map to ABS 21 (left) and 20 (right). Touched pads map to ABS 16/17 (left) and 18/19 (right) in native polarity; untouched pad positions emit nothing and there is no independent contact, pressure, stick-touch or grip-touch event. On UHID only, motion arrived on the sensor node: accel X/Y/Z to ABS X/-Z/Y and gyro X/Y/Z to ABS RX/-RZ/RY, each sample with MSC_TIMESTAMP; reduced uinput has no sensor node. At ad80ae6 a raw -10000 trigger passed through UHID below the advertised minimum while reduced uinput clamped it to 0; later virtualgamepad rejects negative triggers before encoding.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "revision": "Virtual wired 28de:1302 at virtualgamepad C6 ad80ae6 (linux.uhid.usb and reduced linux.uinput); no retail revision claim",
+    "firmware": "Synthetic compatibility state; no live firmware claim",
+    "transport": "usb",
+    "scope": "Virtual kernel-consumer decoding on D9 Linux 7.3 for 154 one-control samples per isolated case. Not physical calibration, output delivery or Steam client acceptance."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-d9-virtual-kernel-evdev"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-identity-battery",
+  "statement": "The kernel maintains controller serial-derived input identity and a battery power supply within each steam_device registration; its sensor node uses the same registered controller identity. The SDL context handles battery reports for its currently attached joystick and returns no fixed player index. Neither source here proves a persistent Puck pairing-slot identity across detach.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-bt-uhid-sdl",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "fixtures": [],
+  "procedure": "Create a local bus-5 UHID device using the captured 045e:0b13 report map. Open the associated event node through SDL 3.4.18 with HIDAPI disabled. Sweep controls, request main rumble, close the session and check owned nodes are removed.",
+  "semantic_outcome": "SDL saw all 16 mapped buttons, six axes and final neutral. The controller retained main magnitudes 25 and 50 and zero trigger magnitudes. The owned nodes were removed. The physical reference could coexist with the local virtual device."
+}

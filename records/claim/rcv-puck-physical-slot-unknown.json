@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-physical-slot-unknown",
+  "statement": "The source implementations do not validate retail 2026 Puck receiver attachment ordering, pairing, bond persistence, slot-local output while absent, player indicators, USB descriptors, multi-slot simultaneous failures or real receiver unplug behavior. Keep the existing sc2-gap-puck-slots and sc2-gap-puck-usb-descriptors gaps open for owner-operated measurements.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-ibex-linux-driver",
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

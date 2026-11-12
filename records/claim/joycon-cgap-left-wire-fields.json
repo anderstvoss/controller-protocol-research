@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "joycon-cgap-left-wire-fields",
+  "statement": "In source-described full input report 0x30, the left Joy-Con uses shared button byte 4 bits 0, 3 and 5 for Minus, left-stick click and Capture; left button byte 5 bits 0 through 7 represent Down, Up, Right, Left, SR, SL, L and ZL. Its packed 12-bit left stick occupies bytes 6 through 8, while physical values for the inactive right stick remain unmeasured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-joycon-left",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL3 535d80badefc83c5c527ec5748f2a20d6a9310fe; source-only; no host or hardware",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Standard Joy-Con input report layout expected by two pinned consumers, not physical observation; preserves the existing family unknown about inactive-stick data."
+  },
+  "sources": [
+    "joycon-linux-hid-nintendo",
+    "joycon-sdl-switch",
+    "swpro-dekunukem-bluetooth-hid-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "rcv-puck-sdl-presence",
+  "statement": "The pinned SDL Triton header defines wireless-status report IDs 0x46 and 0x79, with distinct connect and disconnect states. The Triton update loop dispatches those two reports to each HIDAPI interface context, and an input state report can also cause joystick attachment. It does not dispatch report 0x7b as a wireless-status report in the inspected revision.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "steam-controller-2026-puck",
+    "revision": "pinned Linux v7.3-rc1 and SDL 6defbc0 consumer source; retail hardware unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Steam Controller 2026 Puck receiver consumer behavior; no physical or virtual host test"
+  },
+  "sources": [
+    "steam-triton-sdl-driver",
+    "steam-c6-sdl-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

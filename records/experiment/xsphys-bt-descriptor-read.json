@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "xsphys-bt-descriptor-read",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc"
+  ],
+  "fixtures": [
+    "xsphys-bt-descriptor"
+  ],
+  "procedure": "Pair the reference through BlueZ, verify bus 5 and HID identity 045e:0b13, read its sysfs report_descriptor, and compare all bytes with the upstream-described example. Review every HID short item, run tools/sanitize.py review-descriptor, and retain only descriptor bytes.",
+  "semantic_outcome": "One reference produced a 283-byte descriptor identical to xbox-cgap-descriptor-example. The descriptor contains gamepad input 0x01 and four-actuator output 0x03, with no strings or opaque long items. Model label and installed firmware remain unconfirmed."
+}
