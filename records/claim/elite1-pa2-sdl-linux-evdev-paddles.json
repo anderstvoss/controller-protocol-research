@@ -8,7 +8,7 @@
     "revision": "SDL release-3.2.0 Linux evdev",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "SDL release-3.2.0 SDL_sysjoystick.c:2655-2675 requires BTN_TRIGGER_HAPPY5 (0x2c4) through BTN_TRIGGER_HAPPY8 (0x2c7); it has no BTN_GRIP key handling. Linux v7.3 xpad.c:470-475, 2001-2005 advertises BTN_GRIPL (0x224), BTN_GRIPR (0x225), BTN_GRIPL2 (0x226), BTN_GRIPR2 (0x227), not matching the SDL condition. SDL mapping database entries or user overrides can affect runtime mappings but are not tested here."
+    "scope": "SDL release-3.2.0 SDL_sysjoystick.c:2655-2675 requires BTN_TRIGGER_HAPPY5 (0x2c4) through BTN_TRIGGER_HAPPY8 (0x2c7); it has no BTN_GRIP key handling. Linux v7.3 xpad.c:470-475, 2001-2005 advertises BTN_GRIPL (0x224), BTN_GRIPR (0x225), BTN_GRIPL2 (0x226), BTN_GRIPR2 (0x227), not matching the SDL condition. This gap concerns automatic paddle slot mapping, not ordinary gamepad button/axis recognition. Explicit SDL mapping database entries or user overrides may expose the grip buttons, but none was tested here."
   },
   "sources": [
     "sdl-linux-joystick-baseline",
