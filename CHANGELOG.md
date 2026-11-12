@@ -9,14 +9,6 @@ affected schema's `schema_version`.
 
 - Add source-only Xbox 360 Wireless Receiver xpad v7.3-rc1 and SDL Linux lifecycle research: slot presence, evdev recreation, per-interface feedback and USB-level realization requirements; no host or hardware run.
 - Pin an externally reported physical DualShock 4 v2 USB feature 0x12 read and its source code; advance only the scoped device-layout claim while retaining other DS4 gaps as unknown or conflicted (source-only review; no agent hardware test).
-- Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
-- Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
-- Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
-- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
-- Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
-- Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
-- Document pinned Linux v7.3 DualSense Edge Fn/paddle evdev codes, USB/Bluetooth report paths, shared outputs, SDL comparison and a source-only post-Alpha 2 realization plan; preserve device and host unknowns.
-- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
@@ -50,6 +42,8 @@ affected schema's `schema_version`.
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 
 - Record the Wii MotionPlus cached-mode gate and open-time response races in local logging-only SDL 3.2.10 and 3.4.20 builds across Original and TR virtual host arms.
+
+- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
 
 - Register the Switch 2 GameCube USB controller with source-only SDL/Linux protocol records and a not-run physical capture plan.
 
