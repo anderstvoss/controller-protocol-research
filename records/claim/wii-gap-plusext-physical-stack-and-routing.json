@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-physical-stack-and-routing",
+  "statement": "Pinned software and WiiBrew single-MP documentation do not establish mechanical safety or power/address arbitration for two MP modules, whether Plus bypasses or accepts external MP, which sensor answers a register request, or whether a second gyro stream is physically possible. All are deferred #52 E1/E2/E3 questions with no physical hardware observations.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Physical Plus with extra MP and two nested external MPs",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. #52 physical arms not run; ordinary WiiBrew single-MP pass-through is not a dual-MP result."
+  },
+  "sources": [
+    "wii-gap-wiibrew-motionplus-oldid120079",
+    "wii-gap-plustrace-linux-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
