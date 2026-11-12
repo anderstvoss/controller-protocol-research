@@ -14,6 +14,7 @@ affected schema's `schema_version`.
 - Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
 - Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
 - Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
+- Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
