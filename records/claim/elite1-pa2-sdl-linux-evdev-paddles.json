@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "id": "elite1-pa2-sdl-linux-evdev-paddles",
-  "statement": "SDL 3.2.0's Linux evdev backend contains a Microsoft-vendor-only automatic mapping for the four Elite paddle key capabilities, associating BTN_TRIGGER_HAPPY5 through BTN_TRIGGER_HAPPY8 with right and left paddle slots when all four keys are advertised. This conditional mapping path does not alone prove which mapping the SDL Gamepad API selects at runtime.",
+  "statement": "SDL 3.2.0's Linux evdev backend conditionally maps the four Xbox Elite paddle slots when a Microsoft-vendor device advertises all of BTN_TRIGGER_HAPPY5 through BTN_TRIGGER_HAPPY8. Linux v7.3 xpad instead advertises the original Elite paddles as BTN_GRIPR, BTN_GRIPR2, BTN_GRIPL, and BTN_GRIPL2, which are different key codes. Therefore that SDL 3.2.0 automatic evdev paddle-mapping condition does not match the pinned xpad Elite event surface; no runtime mapping acceptance was measured.",
   "status": "source_supported",
   "applicability": {
     "controller": "xbox-elite-series-1",
     "revision": "SDL release-3.2.0 Linux evdev",
     "firmware": "not measured",
     "transport": "source_only",
-    "scope": "SDL_sysjoystick.c:2655-2675. The evdev BTN_GRIP names correspond to the trigger-happy key positions; an SDL mapping-database entry or user override can change mapping selection. Vendor identity affects the condition."
+    "scope": "SDL release-3.2.0 SDL_sysjoystick.c:2655-2675 requires BTN_TRIGGER_HAPPY5 (0x2c4) through BTN_TRIGGER_HAPPY8 (0x2c7); it has no BTN_GRIP key handling. Linux v7.3 xpad.c:470-475, 2001-2005 advertises BTN_GRIPL (0x224), BTN_GRIPR (0x225), BTN_GRIPL2 (0x226), BTN_GRIPR2 (0x227), not matching the SDL condition. SDL mapping database entries or user overrides can affect runtime mappings but are not tested here."
   },
   "sources": [
     "sdl-linux-joystick-baseline",
