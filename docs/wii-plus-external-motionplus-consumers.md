@@ -1,29 +1,47 @@
-# Wii Remote Plus with external MotionPlus and nested MotionPlus: consumer predictions
+# Wii Remote Plus with external MotionPlus and nested MotionPlus — consumer predictions
 
-Status: **work in progress**. Source-only consumer research; no hardware tests.
+**Status:** source-only research for #52. All new predictions are **inferred** or **unknown**, not physical results. No host, hardware or virtual-controller tests were run. Source-code absence of recursive MotionPlus handling is not proof that hardware can or cannot chain two units.
 
-## Scope boundaries
+## Scope and baseline
 
-- Wii Remote Plus with one external MotionPlus (research issue #52 E1).
-- Original Wii Remote with two chained external MotionPlus units (research issue #52 E2/E3).
-- Product/extension catalogue belongs to #53 and is out of scope.
+- **#52 E1:** Wii Remote Plus P1 with one external MP-A or MP-B, contrasted with standalone Plus C3 and with an *ordinary* extension directly attached to the Plus. A TR Gen 2 kernel path is not automatically the early non-TR Plus path.
+- **#52 E2/E3:** Original Remote R1 with external MP-A → MP-B and the reversed order, only if the separate deferred lab judges the connection safe. C1/C2 are single-adapter controls.
+- **#53:** Product/extension catalogue is explicitly **out of scope**. No physical accessory inventory is asserted or hardware plan revised.
+
+Existing hashed source records are reused rather than duplicated. Pins: Linux **v6.12** (GPL-2.0-only), SDL **877399b2b2cf21e67554ed9046410f268ce1d1b2** (zlib), Dolphin **3eb30c7620b4475b2e0404228ba0d2b238a132f1** and **e1d35f666cc35f6ead55d32ea2679df44d04da72** (GPL-2.0-or-later), Cemu **29f2f1fae4631e2317977debd9eacd55cc28dd7d** (MPL-2.0), wiiuse **e769bd73860a4f941bd110ebae5a790f968b71e3** (GPL-3.0), xwiimote **4df713d9037d814cc0c64197f69e5c78d55caaf1** (project license). WiiBrew oldid 120079 is reused from existing research-lead source record. No upstream code excerpts.
 
 ## Consumer decision table
 
-| Consumer and pinned revision | Plus + external MotionPlus | Nested external MotionPlus | Evidence and limits |
+| Consumer/path | E1: Plus with external MP or ordinary child | E2/E3: original Remote with nested MP | Claim IDs |
 | --- | --- | --- | --- |
-| Linux hid-wiimote | Work in progress | Work in progress | Work in progress |
-| SDL | Work in progress | Work in progress | Work in progress |
-| Dolphin real remote passthrough | Work in progress | Work in progress | Work in progress |
-| Dolphin emulator | Work in progress | Work in progress | Work in progress |
-| Cemu | Work in progress | Work in progress | Work in progress |
-| wiiuse | Work in progress | Work in progress | Work in progress |
-| xwiimote | Work in progress | Work in progress | Work in progress |
+| **Linux hid-wiimote Gen 2** | **Inferred:** builtin flag suppresses idle MP polling, **not** the worker's single A600FA/6 MP and A400FA/6 ordinary-child probes. Nunchuk/Classic can select 05/07; extra MP physical visibility/gyro precedence is **unknown**. | **Inferred:** normal child ID table has no second MP type. If downstream response is unrecognized, treat as unknown/absent child and default 04, not second gyro. | wii-gap-plusext-kernel-gen2-single-probe; wii-gap-plusext-kernel-nested-unknown-child |
+| **SDL Wii HIDAPI on Linux** | **Inferred:** one mapped MP mode/gyro decoder and Linux no-op A600FE activation, depending on kernel; cached inactive mode may not recover from polling alone. | **Inferred:** no recursive MP probe; only whichever one mapped MP packet stream is supplied, or no gyro. | wii-gap-plusext-sdl-one-mapped-sensor |
+| **Dolphin ControllerInterface HIDAPI** | **Inferred:** one MP mapping 04/05/07; active MP child bit conditionally triggers F6/4 downstream ID and later 40/16 child calibration. | **Inferred:** F6 is an ordinary-child identity path, not a second MP discovery. Missing/unknown child can block setup. | wii-gap-plusext-dolphin-ciface-child-only |
+| **Dolphin Real Wii Remote passthrough** | **Unknown:** forwards actual guest commands/reports, not ControllerInterface's tasks. | **Unknown:** game and physical responses determine outcome; no universal host second-MP probe. | wii-gap-plusext-dolphin-real-game-dependent |
+| **Dolphin MotionPlus emulator** | **Inferred:** one synthetic MP and downstream extension port, with copied child ID/calibration. | **Inferred:** no demonstrated two-MP graph or two-gyro arbiter; emulator is not retail evidence. | wii-gap-plusext-dolphin-emulator-one-mediator |
+| **Cemu HIDAPI** | **Inferred:** one MP state and separate normal extension identity; builtin ID case differs from external ID case. | **Inferred:** no recursive scan, child F6 mirror or second gyro path; pinned angular export has separate limitations. | wii-gap-plusext-cemu-one-mp-state |
+| **wiiuse native L2CAP** | **Inferred:** accepts builtin/external MP ID, activates one MP and decodes one interleaved gyro/child stream. | **Inferred:** no downstream second-MP recognition; native Bluetooth is not UHID. | wii-gap-plusext-wiiuse-one-mp-state |
+| **xwiimote/xwiishow** | **Inferred:** opens hid-wiimote evdev child nodes, no raw MP probing. | **Inferred:** inherits the kernel's one MP node; cannot identify a nested second MP independently. | wii-gap-plusext-xwiimote-kernel-derived |
 
-## Downstream-bit and mode interpretation
+## Pinned evidence and interpretation
 
-Work in progress.
+- Kernel [one MP and normal-extension ID classifiers](https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-core.c#L431-L557), [Gen 2 detection and polling](https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-core.c#L867-L933), [worker and single mapping](https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-core.c#L1100-L1192), [BUILTIN_MP flag](https://github.com/torvalds/linux/blob/v6.12/drivers/hid/hid-wiimote-modules.c#L2630-L2666). Existing source IDs: wii-gap-plustrace-linux-core-v612; wii-gap-plus-kernel-modules-v612.
+- SDL [MP detection/mode](https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/hidapi/SDL_hidapi_wii.c#L385-L481) and [gyro decoder](https://github.com/libsdl-org/SDL/blob/877399b2b2cf21e67554ed9046410f268ce1d1b2/src/joystick/hidapi/SDL_hidapi_wii.c#L1206-L1244). Existing source: wii-w4-sdl-3-2-10-wii.
+- Dolphin [ControllerInterface tasks](https://github.com/dolphin-emu/dolphin/blob/3eb30c7620b4475b2e0404228ba0d2b238a132f1/Source/Core/InputCommon/ControllerInterface/Wiimote/WiimoteController.cpp#L449-L659), [Real Wii Remote report forwarding](https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteReal/WiimoteReal.cpp#L169-L267), [emulator downstream bridge](https://github.com/dolphin-emu/dolphin/blob/3eb30c7620b4475b2e0404228ba0d2b238a132f1/Source/Core/Core/HW/WiimoteEmu/MotionPlus.cpp#L394-L465) and [MP frame layout](https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h#L77-L115). Existing sources: wii-gap-dolphin-attach-ciface-3eb30c, wii-gap-dolphin-real-core-e1d35f, wii-gap-dolphin-attach-mp-emu-3eb30c and wii-gap-dolphin-motionplus-layout-e1d35f.
+- Cemu [status, child discovery and MP activation](https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteControllerProvider.cpp#L239-L432) and [MP enable](https://github.com/cemu-project/Cemu/blob/29f2f1fae4631e2317977debd9eacd55cc28dd7d/src/input/api/Wiimote/WiimoteControllerProvider.cpp#L925-L950). Existing source: wii-gap-consumer-cemu-provider.
+- wiiuse [inactive probe](https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c#L45-L104) and [mapped handshake/activation](https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/motion_plus.c#L106-L235). Existing source: wii-gap-dolphin-attach-wiiuse-motionplus-e769.
+- xwiimote [kernel interface discovery](https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/lib/core.c#L187-L380), [one MP evdev input](https://github.com/xwiimote/xwiimote/blob/4df713d9037d814cc0c64197f69e5c78d55caaf1/lib/core.c#L1040-L1094). Existing source: wii-gap-consumer-xwiimote-core.
 
-## Unverified predictions and #52 test arms
+### Active frame downstream bit and passthrough modes
 
-Work in progress.
+The existing WiiBrew source record **wii-gap-wiibrew-motionplus-oldid120079** and pinned Dolphin [data format](https://github.com/dolphin-emu/dolphin/blob/e1d35f666cc35f6ead55d32ea2679df44d04da72/Source/Core/Core/HW/WiimoteEmu/MotionPlus.h#L77-L115) distinguish downstream-extension-connected from the gyro/accessory-frame discriminator. The former signals one child behind the **active** MP, **not** that two gyros exist. **04** is standalone gyro; **05** interleaves gyro/Nunchuk-format child data; **07** interleaves gyro/Classic-family child data. Child bits are repacked and lose precision. An attached second MP is not thereby classified as a Nunchuk/Classic, and an asserted child bit cannot attribute gyro source. Claim: **wii-gap-plusext-active-frame-child-bit**.
+
+### Existing #52 predictions to test — **not run**
+
+| #52 arm | Source-predicted software behavior | Unknown outcome to measure separately |
+| --- | --- | --- |
+| **E1 P1 → MP-A, then MP-B** | Gen 2 has one A600 plus ordinary A400 ID read; SDL, Dolphin ControllerInterface, Cemu and wiiuse use one MP state. xwiimote follows kernel. | Compared with C3 Plus-alone: which gyro, ID, status edge, downstream bit, active mode and any bypass of external MP. |
+| **E2 R1 → MP-A → MP-B** | A normal extension parser will not promote an unknown nested MP child ID into a second MP; child bit alone does not establish it. | Compare with C1/C2 single-MP positive controls after #52 safety go/no-go. Identify actual readable fields and attribution without guessing. |
+| **E3 R1 → MP-B → MP-A** | Same source code limitations as E2; order reversal does not create software dual-gyro support. | Actual order-dependent physical routing and recoverability **unknown**. |
+
+**Unresolved:** wii-gap-plusext-physical-stack-and-routing (physical fit, bus arbitration, chosen gyro, integrated bypass and second data path) and wii-gap-plusext-early-plus-revision-unknown (early non-TR Plus cannot inherit Gen 2 polling policy) are **unknown**. No unrecorded WiiBrew content was inferred. Existing wii-c5-*, wii-w*-*, wii-p1-*, wii-gap-* and audio-wii-* records were not modified. No lab or new extension-catalogue work occurred.

@@ -271,3 +271,7 @@ decoded gyro/stick with exact imported calibration. These close the W9h
 retained-mode sampling gap for those controls only. No kernel rerun, model/API
 change or inherited Original pass. See `docs/wii-w9i-fresh-plus.md`; generic
 binding release use remains gated on #258.
+
+## Plus with external MotionPlus and nested-MP consumer predictions
+
+Current inventory: **251 Wii claims** (239 before this source-only review). Twelve new wii-gap-plusext-* consumer claims cover #52 E1 (Plus with external MP), #52 E2/E3 (original Remote with nested MPs) and preserve #53's catalogue out of scope. Linux Gen 2 suppresses periodic MP polling but still has a single A600 MotionPlus and single A400 ordinary-child worker probe. SDL, Dolphin ControllerInterface and emulator, Cemu, wiiuse and xwiimote do not establish a second independently decoded MP; Dolphin Real Wii Remote behavior depends on the guest. The active frame child bit does not count gyros. Physical routing, stack safety, sensor attribution and early Plus behavior remain unknown. All #52 experiments **not run**. See [consumer predictions](../wii-plus-external-motionplus-consumers.md).

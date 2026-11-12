@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-dolphin-real-game-dependent",
+  "statement": "The pinned real-remote path forwards device reports and guest-issued control reports rather than using the independent ControllerInterface initialization ladder. Behavior for a Plus with external MP or two nested MPs depends on game probes and unknown physical responses. Host report forwarding does not establish a second-MP discovery or double gyro acceptance.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin Real Wii Remote passthrough to Wii game",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin WiimoteReal 169-267, 295-332, 417-478. #52 E1/E2/E3 not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-real-core-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
