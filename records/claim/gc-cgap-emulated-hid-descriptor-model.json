@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-emulated-hid-descriptor-model",
+  "statement": "The pinned HIDMaestro adapter persona implements a 214-byte HID report descriptor alongside a one-configuration, one-interface USB/IP model with interrupt IN 0x81 (37 bytes) and OUT 0x02 (5 bytes), both at interval 8. This records an open-source emulation expectation, not a new retail descriptor observation. The two archived enumeration dumps expose a descriptor length of 214 bytes but do not print its contents.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "public reports for 0x057e:0x0337; hardware revision unverified",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HIDMaestro emulator descriptor model versus published host enumeration; exact retail HID bytes remain unverified"
+  },
+  "sources": [
+    "gc-cgap-hidmaestro-profile",
+    "gc-cgap-linuxhw-ep0-8",
+    "gc-cgap-linuxhw-ep0-64"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

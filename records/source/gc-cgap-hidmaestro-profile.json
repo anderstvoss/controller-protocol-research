@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-hidmaestro-profile",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/hifihedgehog/HIDMaestro/b8779ae87569d26f879fd8ba1ef29be2112140f2/profiles/nintendo/gamecube-adapter.json",
+  "revision": "b8779ae87569d26f879fd8ba1ef29be2112140f2",
+  "sha256": "824c314d7421ba838ece12957e0cf7ed2400de7bc2b418e460d602cf7f74c8c6",
+  "lineage": "hifihedgehog/HIDMaestro simulated USB/IP adapter persona, derivative of public reports",
+  "locator": "profiles/nintendo/gamecube-adapter.json, lines 13-16 report model, 24-35 status model, 72-95 USB configuration/endpoints; licence MIT. Emulation source, not a new physical capture; identifying fields intentionally not transcribed."
+}
