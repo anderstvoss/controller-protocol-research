@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer",
+  "id": "rcv-pattern-ds4-output-boundary",
+  "statement": "The pinned hid-playstation DualShock 4 output worker writes rumble and lightbar updates through the existing dongle HID device handle, with no multi-slot selector and no dongle-presence conditional in that worker. The consumer source does not establish whether output issued while no controller is attached is delivered, dropped, or applied after reconnect.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Single-slot DS4 adapter output routing and absent-pad delivery unknown"
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ]
+}

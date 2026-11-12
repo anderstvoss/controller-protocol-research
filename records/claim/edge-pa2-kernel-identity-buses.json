@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "edge-pa2-kernel-identity-buses",
+  "statement": "Linux v7.3 hid-playstation includes Edge in both USB HID and Bluetooth HID match entries. The Edge product selector enables is_edge within the shared DualSense parser and registers additional input capabilities only for the Edge product.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense-edge",
+    "revision": "Linux v7.3; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux v7.3 driver binding table and Edge selection; host binding not observed"
+  },
+  "sources": [
+    "edge-pa2-linux-v73-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
