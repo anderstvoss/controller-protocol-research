@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "ds-cgap-player-led-instant-source-mapping",
+  "statement": "Bit 5 (0x20) in the DualSense player_leds output field is source-supported as the instant-versus-fade selection: nowrep/dualsensectl ORs the instant option into bit 5 and XInput_HID explicitly describes the low bit value as fade-in and the high value as an immediate change. SDL previously used this bit. Physical transition timing and behavior across hardware revisions remain unmeasured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "pinned source implementations nowrep d3ae2fa, XInput_HID 11cf2ea, yesbotics 24203b8; retail firmware and hardware revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "DualSense output common byte 43, bit 5; nowrep main.c 610-639, XInput_HID dualsense.cpp 177-198; SDL previously used and commented on bit 5. Source-only interpretation, not verified LED behavior."
+  },
+  "sources": [
+    "ds-cgap-nowrep-dualsensectl-main",
+    "ds-cgap-xinput-hid-dualsense",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [
+    "ds-l0-led-player-led-instant-bit"
+  ],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
