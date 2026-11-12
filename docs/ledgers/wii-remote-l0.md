@@ -271,3 +271,8 @@ decoded gyro/stick with exact imported calibration. These close the W9h
 retained-mode sampling gap for those controls only. No kernel rerun, model/API
 change or inherited Original pass. See `docs/wii-w9i-fresh-plus.md`; generic
 binding release use remains gated on #258.
+
+
+## Early integrated Plus 0306 source-only consumer review
+
+Current inventory: **246 Wii claims** (239 on the current main plus seven new `wii-gap-earlyplus-*` claims). The early integrated Plus advertises original 0306 identity yet Linux v6.12 classifies it gen10 and polls MotionPlus; xwiimote's possible gen15 label is documentation rather than a kernel v6.12 classifier. wiiuse and Cemu distinguish inactive built-in versus external MP identities, while SDL, Dolphin and Linux can follow conditional shared MP paths. Real early-unit identities, timing, calibration and host acceptance remain unknown. No physical or host tests were run. See `docs/wii-early-plus.md`; historical inventories remain historical.

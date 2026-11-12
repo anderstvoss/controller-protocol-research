@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-revision-preset-not-physical-parity",
+  "statement": "A separately named early integrated Plus creation-time revision within the existing Wii Remote family is a source-compatible proposal: retain Nintendo RVL-CNT-01 and 057e:0306, model non-detachable integrated MotionPlus, and reuse the shared native gyro/extension engine subject to the Gen 1 kernel polling path and per-consumer identity differences. Do not label it physically faithful or merge its acceptance with original 0306 plus detachable MotionPlus or TR 0330. The physical inactive and active bytes, startup timing, calibration, downstream behavior and host acceptance remain unknown pending a sanitized early-unit comparison.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Proposed early integrated 0306 compat personality, not a physical-reference specification",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: device. Inference from kernel name policy and polling; xwiimote gen15 documentation; wiiuse/Cemu inactive-identity disagreement; Dolphin and SDL source paths. No experiments run. Preserve wii-early-plus-revision-gap as unknown."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-xwiimote-header-4df",
+    "wii-gap-plustrace-wiiuse-mp-e769",
+    "wii-gap-plustrace-cemu-provider-29f",
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

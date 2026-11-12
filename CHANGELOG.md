@@ -105,6 +105,8 @@ affected schema's `schema_version`.
 
 - Pin the wired Steam Controller 2026 gamepad and sensor evdev capability shapes from Linux v7.3-rc1; these are consumer source claims, not observed virtual-device events.
 
+- Document seven source-only early integrated Wii Remote Plus 0306 revision claims distinguishing Linux gen10 MotionPlus polling, xwiimote gen15 terminology and native consumer inactive-ID paths; no host or hardware validation.
+
 - Add Switch 1 Joy-Con registry IDs (family, left, right) and a source-only survey of how hid-nintendo, joycond and SDL3 present single halves and pairs; four consumer claims, no device-protocol or host evidence.
 
 - Register the GameCube USB adapter (WUP-028) and add a source-only survey: pinned SDL, Dolphin and Linux sources, corroborated report/init/rumble claims, single-lineage power and brake claims, and the finding that both native consumers need a USB-level device rather than hidraw. No physical or host evidence claimed.
