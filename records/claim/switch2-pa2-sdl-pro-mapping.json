@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-sdl-pro-mapping",
+  "statement": "The pinned SDL Switch 2 Pro decoder handles a 64-byte HID input state and emits independent Share, C, right-paddle and left-paddle joystick button slots, a D-pad hat, four calibrated stick axes and digital left/right triggers exposed through joystick axes. It declares dedicated Pro button count and gyro/accelerometer sensors. This is a source-defined SDL joystick shape, not a verified standardized Gamepad mapping or a physical capture.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL Pro input and controls"
+  },
+  "sources": [
+    "sdl-switch2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
