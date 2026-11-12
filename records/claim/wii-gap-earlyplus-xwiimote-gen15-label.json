@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-xwiimote-gen15-label",
+  "statement": "Pinned xwiimote public documentation describes possible first-generation built-in MotionPlus units as gen15 or similar, but this is a descriptive potential devtype rather than a gen15 detector in the pinned Linux v6.12 classifier. libxwiimote requires the wiimote HID parent, discovers kernel-created input interfaces and opens the MotionPlus evdev child; it does not independently read integrated MotionPlus identification registers or reclassify a gen10 device by sensor presence.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Early non-TR integrated Plus; descriptive gen15 label versus actual kernel v6.12 devtype",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. xwiimote.h 93-115; xwiimote core 335-393,611-672; Linux core 799-865. The code inspected has no kernel gen15 devtype. No runs."
+  },
+  "sources": [
+    "wii-gap-plus-xwiimote-header-4df",
+    "wii-gap-plustrace-xwiimote-core-4df",
+    "wii-gap-plus-kernel-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
