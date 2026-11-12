@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "xboxone-pa2-physical-reference-gaps",
+  "statement": "No Xbox One physical hardware, firmware-matched USB/Bluetooth descriptor, raw report, true host driver binding, SDL acceptance, rumble response or lifecycle observation was supplied or measured in this research session. The model-by-model Bluetooth and BLE firmware transition, descriptor changes and consumer mapping parity therefore remain unverified.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox-one",
+    "revision": "all Xbox One first-party model and firmware variants under future owner reference review",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "No experiments performed; source citations describe candidate consumers only and cannot close device-side gaps."
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
