@@ -9,20 +9,6 @@ affected schema's `schema_version`.
 
 - Add source-only Xbox 360 Wireless Receiver xpad v7.3-rc1 and SDL Linux lifecycle research: slot presence, evdev recreation, per-interface feedback and USB-level realization requirements; no host or hardware run.
 - Pin an externally reported physical DualShock 4 v2 USB feature 0x12 read and its source code; advance only the scoped device-layout claim while retaining other DS4 gaps as unknown or conflicted (source-only review; no agent hardware test).
-- Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
-- Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
-- Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
-- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
-- Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
-- Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
-- Document pinned Linux v7.3 DualSense Edge Fn/paddle evdev codes, USB/Bluetooth report paths, shared outputs, SDL comparison and a source-only post-Alpha 2 realization plan; preserve device and host unknowns.
-- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
-- Add post-Alpha 2 Switch 2 GameCube source-only starter decision brief and L0 ledger: recommend a playable uinput mapping before experimental USB-level bulk realization, cross-reference ten existing claims without promoting hardware evidence.
-- Add Xbox Elite Series 2 post-Alpha 2 source-only starter research: pinned xpad/SDL/xpadneo paddle and profile consumer evidence, explicit USB/Bluetooth gaps, Elite registry and a uinput-first proposal; no host or hardware validation.
-
-- Register Xbox One as a post-Alpha 2 standalone-family candidate, with pinned Linux xpad, hid-microsoft and SDL consumer findings on USB revision IDs, Share-free evdev, Bluetooth model 1708 variants and firmware-specific SDL decoding; source-only, no host or hardware tests.
-- Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
-
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
@@ -78,6 +64,8 @@ affected schema's `schema_version`.
 - Record D9 wired Steam Controller 2026 kernel/Steam feature exchanges, model attribute values and accepted setting writes; add opt-in model-field reduction while preserving serial/identifier withholding. Review follow-up corrects the three ED lengths, records only the safe one-byte value and serial character classes, and withholds all opaque tails.
 
 - Survey GameCube adapter consumers, per-port uinput compatibility decisions and source-only libusb/udev grants for #258.
+
+- Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
 
 - Source-pin out-of-tree and user-space GameCube USB adapter bridges, Android USB manager and emulator backends; record source-only evdev and USB gaps.
 

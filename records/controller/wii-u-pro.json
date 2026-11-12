@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "id": "wii-u-pro",
-  "name": "Nintendo Wii U Pro Controller",
-  "kind": "controller",
-  "parent": null,
-  "tracking": "anderstvoss/virtualgamepad#361",
-  "notes": "Separate curated family, with reusable Wii protocol primitives; Pro-native dual-stick topology rather than Wii Remote extension-port attachment."
-}
