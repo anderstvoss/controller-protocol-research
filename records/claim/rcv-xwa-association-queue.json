@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-xwa-association-queue",
+  "statement": "Pinned xone maps wireless association requests and disassociation or client-lost events into receiver-owned ordered workqueue operations, guarded by receiver readiness and wireless-client entry bounds. An association for an already active client is ignored. The USB receiver lifetime and the per-client GIP adapter lifecycle are distinct.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-wireless-adapter",
+    "revision": "Out-of-tree xone f2aa9fe01103d7600553b505b298ff0bd47ff280; Linux v7.3 or pinned SDL where cited",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "transport/dongle.c:517-559, 632-689, 722-756, 820-944. Receiver event behavior from source; no physical radio frames or host timing measured."
+  },
+  "sources": [
+    "xbox-xone-receiver"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
