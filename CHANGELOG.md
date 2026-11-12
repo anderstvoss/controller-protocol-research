@@ -7,6 +7,9 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
+
+
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
