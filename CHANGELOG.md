@@ -12,6 +12,7 @@ affected schema's `schema_version`.
 - Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
 - Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
 - Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
+- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
