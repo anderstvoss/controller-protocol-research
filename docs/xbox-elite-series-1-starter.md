@@ -1,23 +1,49 @@
 # Xbox Elite Series 1 — post-Alpha 2 starter research
 
-> Work in progress. Source-only research; no hardware or host tests.
-
-## Decision table
-
-| Question | Initial finding | Evidence and limits |
+| Decision area | Source-backed finding or decision | Evidence / qualification |
 | --- | --- | --- |
-| Identity | Work in progress | |
-| Kernel driver and evdev shape (pinned Linux tag) | Work in progress | |
-| SDL driver and mapping (pinned revision) | Work in progress | |
-| Differences from Xbox Series and Elite Series 2 | Work in progress | |
-| Recommended first realization | Work in progress | |
-| Playable versus faithful | Work in progress | |
-| Unknowns | Work in progress | |
+| Identity | Original Microsoft Xbox One Elite, wired USB 0x045e:0x02e3. Not Elite Series 2 USB 0x045e:0x0b00 or standard Xbox Series 0x045e:0x0b12. | `elite1-pa2-linux-v7-3-xpad`, xpad.c:127-134, 2166-2195; `elite1-pa2-xpad-usb-identity`. Receiver-side USB identity is a different question. |
+| Kernel driver and evdev shape at pinned tag | Linux **v7.3** `xpad`, Xbox One mapping: **15 keys** including four `BTN_GRIP*` paddles; **8 absolute axes** (two 16-bit stick pairs, two 10-bit triggers and a hat pair). Optional main-motor FF. | `elite1-pa2-xpad-event-surface`, `elite1-pa2-xpad-paddle-guard`. Capability != independent events under custom mapping. |
+| SDL driver and mapping | SDL 3.2.0 has a basic wired USB mapping for 0x045e:0x02e3; the Linux evdev auto-mapper conditionally recognizes four paddles. A separately pinned newer SDL Xbox One HIDAPI implementation decodes original-Elite 29-byte state packets and suppresses paddles during detected remapping. | `elite1-pa2-sdl-base-db-entry`, `elite1-pa2-sdl-linux-evdev-paddles`, `elite1-pa2-sdl-gip-paddle-parser`. Runtime backend / mapping precedence untested. |
+| Differences from Xbox Series and Elite Series 2 | Unlike the Series controller, no Share key is declared by this xpad identity. Unlike Elite 2, the original Elite uses one fixed extended packet type with its own paddle bit order; Elite 2 has firmware-dependent packet variants and Bluetooth HID support. | Pinned xpad and SDL code; existing `xbox-series-xpad-identity-share` and `xbox-cgap-descriptor-variants` are comparators, not Elite 1 records. |
+| First realization | **`linux.uinput`**, reproducing the stock `xpad` evdev surface and explicit four-paddle capabilities, respecting caller-specified identity at creation. | `elite1-pa2-uinput-first`; no USB-GIP or Xbox Wireless simulation claim. |
+| Playable versus faithful | *Playable*: ordinary buttons/axes, and separately observable paddles where the consumer mapping permits. *Faithful*: original device USB GIP, wireless pairing/receiver, original firmware profiles, remapping semantics and native outputs **not established** by uinput. | Physical fidelity and active application acceptance remain untested. |
+| Transport | Original Elite Series 1 is expected to support wired USB or Xbox Wireless via receiver, **not Bluetooth**; Elite 2 adds Bluetooth. | `elite1-pa2-transport-no-bluetooth-inference` is deliberately **inferred**, not physical proof. A pinned original-model manufacturer specification is still needed for definitive negative confirmation. |
+| Unknowns | Firmware/profile configuration, actual paddle events in all modes, SDL default/override precedence, runtime identity, wireless receiver details, FF/audio, creation/removal and lifecycle. | `elite1-pa2-unmeasured-reference-gaps`; no host or hardware tests. |
 
-## Detailed findings
+## Source scope and method
 
-Work in progress.
+- Pinned **Linux v7.3** `drivers/input/joystick/xpad.c`, under GPL-2.0-or-later. Tag `v7.3` resolves to commit `c03c1a14507dfaf8b856c2608f9ac216021fc222`; the exact file SHA-256 is `b47281151829fc382c4bcb5f466865f476a6f4ebfacd617ee49393f99c1e3950`. This matches the already recorded xpad file under `xbox-series-linux-xpad`, but the additional source record names the exact release tag.
+- Pinned **SDL release-3.2.0** `SDL_sysjoystick.c` (`sdl-linux-joystick-baseline`) and `SDL_gamepad_db.h` (`x360-l0-sdl-gamepad-db`); the newer pinned `SDL_hidapi_xboxone.c` (`xbox-series-sdl-xboxone`) is **not** the same SDL revision. SDL source licence: zlib. These existing source records are reused without edits.
+- Existing Xbox Series evidence `xbox-series-xpad-evdev-shape`, `xbox-series-xpad-axis-domains`, `xbox-series-xpad-identity-share`, `xbox-cgap-descriptor-variants` and `xbox-xone-receiver-bind` remains independent and unmodified. No Elite Series 2 research PR was open when checked; this brief does not replace that lane.
+- The original Elite has no established Bluetooth HID path in the reviewed code. Microsoft's 2019 Series 2 announcement adds Bluetooth as a new connection option, and contemporary controller compatibility guides describe the original Elite as non-Bluetooth. These **unpinned external descriptive sources are not used to promote a corpus claim**; a pinned primary source would be required for definitive device evidence.
+
+## USB identity, Linux event surface and paddles
+
+The kernel `xpad` USB table associates the original Elite identity with the Xbox One protocol branch and `MAP_PADDLES`. Its probe logic selects `PKT_XBE1` for that product independently of firmware, whereas the Elite 2 selection checks the device revision (xpad.c:2166-2195). Xbox One interface matching uses vendor-specific USB subclass 71 / protocol 208 (xpad.c:493-517), but **a uinput node is not a USB device** and must not advertise that it implements this protocol.
+
+The evdev layout is eight shared face/menu/stick buttons, two bumpers, Guide, and four paddle keys: `BTN_GRIPR`, `BTN_GRIPR2`, `BTN_GRIPL`, `BTN_GRIPL2` (xpad.c:420-475, 1973-2025). Four stick axes are `ABS_X`, `ABS_Y`, `ABS_RX`, `ABS_RY` in -32768..32767 with fuzz 16 / flat 128; triggers are `ABS_Z` and `ABS_RZ` in 0..1023; D-pad is `ABS_HAT0X` and `ABS_HAT0Y` in -1..1 (xpad.c:1905-1929). Main `FF_RUMBLE` is offered only with the appropriate build option (xpad.c:1627-1639); do not claim independent impulse motors.
+
+For the original Elite packet branch, `xpad` compares current and factory mappings and blanks independent paddle reports when they differ (xpad.c:1165-1180). Its four keys are still advertised to evdev (xpad.c:2001-2005). This differs from claiming that all custom paddle assignments are separately observable. Profiles/remaps are device state, not independent caller-supplied paddle events guaranteed to reach every physical host.
+
+## SDL consumer paths and limitations
+
+SDL's built-in 3.2.0 USB entry for 0x045e:0x02e3 is an ordinary Xbox One mapping, with no explicit paddle tokens (SDL_gamepad_db.h:469-472). Its Linux backend nevertheless has conditional Microsoft-vendor mapping for the `BTN_TRIGGER_HAPPY5` through `BTN_TRIGGER_HAPPY8` paddle keys (SDL_sysjoystick.c:2655-2675), which alias the respective evdev grip codes. **Whether a particular runtime picks this automatic mapping rather than a built-in/user mapping is not established.** Identity overrides can change the vendor gate.
+
+At the separately pinned newer SDL Xbox One HIDAPI revision, the original Elite uses a 29-byte state report; SDL tests the difference between raw and mapped button bytes and suppresses four standalone paddles if custom remapping is detected (SDL_hidapi_xboxone.c:1122-1205). The driver can allocate four extra buttons (lines 511-520). This is a consumer decoder, not a direct reference capture and not assurance that HIDAPI can own a device already bound to Linux `xpad`.
+
+Elite 2 has a distinct USB identity, multiple firmware-specific packet shapes and a Bluetooth branch. Xbox Series has a Share event absent from the first Elite xpad mapping. Neither another family’s Bluetooth descriptor nor an Elite 2 profile count is transferred into the original Elite by assumption.
+
+## Recommended implementation boundary
+
+Implement a separate typed Elite Series 1 controller package with `RealizationId::LINUX_UINPUT` and the stock evdev key/axis surface above. The controller selects a realization explicitly, supports caller-specified identity on creation, and reports unsupported wired GIP / wireless pairing / native audio / unavailable outputs rather than silently falling back. Treat *advertised paddle capability* separately from *independent runtime paddle events*. If introducing native paddle inputs, define their intended semantics explicitly and report non-faithful differences from physical remapping behavior. Do not fake GIP; leave any receiver transport to separate feasibility work.
+
+This is a **source-only design recommendation**, not implementation acceptance or product test evidence. It stays post-Alpha 2. The virtualgamepad realization registry uses `linux.uinput` as a valid target, but that generic provider availability does not establish support for this specific family.
 
 ## Proposed tests, not run
 
-Work in progress.
+1. Owner-controlled physical original Elite: record non-identifying Linux `xpad` v7.3 node metadata, exact key/axis/FF capabilities and per-control events; compare stock versus each custom profile, including independent paddle mappings, with firmware noted privately.
+2. On an instrumented Linux host, compare SDL 3.2.0 evdev and a separately pinned current SDL HIDAPI backend. Record actual backend, default/override mapping and observed paddle slots with and without a custom profile. Do not infer mapping from a database row alone.
+3. For a future virtual `linux.uinput` device, verify the eight axes, fifteen keys, axis bounds, paddle key codes, standard SDL acceptance, output limitations, caller-selected identities, and failure behavior. Run repeated create/remove and concurrent-instance checks with measured latency and no leaked device nodes.
+4. Only if the owner approves separate receiver research, validate supported Xbox Wireless adapter association and reconnection with real reference hardware. Do not introduce Bluetooth UHID for Elite Series 1 without contradictory primary evidence.
+5. Document which native features remain N/A versus incomplete, and do not promote playable evdev behavior to physical or wire-level fidelity.
