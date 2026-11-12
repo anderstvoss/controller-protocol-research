@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Register Xbox One as a post-Alpha 2 standalone-family candidate, with pinned Linux xpad, hid-microsoft and SDL consumer findings on USB revision IDs, Share-free evdev, Bluetooth model 1708 variants and firmware-specific SDL decoding; source-only, no host or hardware tests.
+
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
