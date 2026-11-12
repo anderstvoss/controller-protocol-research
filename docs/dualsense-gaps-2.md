@@ -20,6 +20,8 @@ All three are fidelity gaps rather than core gameplay input blockers. Their new 
 | `ds-cgap-xinput-hid-dualsense` | `11cf2eac369134e74af8ebef4f502c7b7b2160fc`, `dualsense.cpp` 23–43, 90–94, 162–198 | MIT compatibility mapping: brightness 0/1/2 (bright/mid/dim), mute breathing mode 2, player bit 5 fade/instant. The source itself attributes its interface map to a 2024 community wiki snapshot; independent maintenance is **not** independent primary measurement |
 | `ds-cgap-yesbotics-brightness-notes` | `24203b8ebe0bf6bd8d123bc02174b9735f811f6a`, `README_PROTOCOL.md` 310–327 | MIT protocol notes: brightness 1/2/3 (full/medium/low), claims mute plus player LED scope and a mute-flag constraint. Documentary counterevidence, not a hardware capture |
 
+Supporting disagreement alternative: `ds-cgap-led-brightness-1-3-documentation` preserves the yesbotics 1–3 documented interpretation separately from the superseding conflicted brightness device claim. It reports an author's consumer-side protocol summary, not physical evidence.
+
 Reused sources: `audio-sdl-ps5` (SDL comment and player bit use) and `audio-linux-hid-playstation` (kernel output field). New pinned files are hashed in their source records. These independent *code repositories* may share community protocol ancestry, so count them as new consumers, not independent retail tests. No third-party code is copied into this brief.
 
 ## Decision table: implications for virtualgamepad

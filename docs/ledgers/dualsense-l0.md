@@ -126,4 +126,6 @@ The source-only continuation in `docs/dualsense-gaps-2.md` adds three pinned ind
 | `ds-l0-led-mute-led-pulse-mode` | `ds-cgap-mute-led-pulse-source-mapping` | `inferred` → `source_supported` | New separately maintained source consumers use mute mode 2; physical pulse and timing unknown |
 | `ds-l0-led-player-led-instant-bit` | `ds-cgap-player-led-instant-source-mapping` | `inferred` → `source_supported` | New separately maintained source consumers encode bit 5 as instant; physical transition and hardware-revision scope unknown |
 
+Alternative claim `ds-cgap-led-brightness-1-3-documentation` explicitly captures the incompatible 1–3 consumer-documentation interpretation and is linked by `conflicts_with`; it does not supersede an older device claim.
+
 Pinned source records: `ds-cgap-nowrep-dualsensectl-main` (GPL-2.0), `ds-cgap-xinput-hid-dualsense` (MIT, mapping derivative of a community wiki), and `ds-cgap-yesbotics-brightness-notes` (MIT). Previous SDL and Linux source records are reused. Source compatibility encoders and authored notes cannot establish measured controller actuation, LED brightness, pulse period or fade timing. Physical trials L5–L7 in `docs/dualsense-led-inventory.md` remain **not run**. This research does not promote any virtualgamepad #154 acceptance cells.
