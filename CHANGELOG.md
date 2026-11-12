@@ -99,6 +99,8 @@ affected schema's `schema_version`.
 
 - Research Joy-Con L/R Bluetooth-bus kernel and SDL3 open paths, USB Charging Grip probe, and steam-devices/joycond permissions for #258; nine source-only consumer claims, no host tests.
 
+- Register Switch 2 Joy-Con 2 left/right family, source-only Linux and SDL USB consumer evidence, the per-half uinput-first decision and explicit Bluetooth/mouse/physical gaps for post-Alpha 2 #362; no host or hardware testing.
+
 - Add Switch 1 Joy-Con source-only L/R device ledger (A1–A7), nine A1–A7 claims and an independently pinned joycontrol/nxbt emulator comparison (three G claims); no hardware or host tests.
 
 - Pin the wired Steam Controller 2026 gamepad and sensor evdev capability shapes from Linux v7.3-rc1; these are consumer source claims, not observed virtual-device events.
