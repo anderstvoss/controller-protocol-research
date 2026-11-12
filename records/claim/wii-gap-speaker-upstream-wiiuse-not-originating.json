@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-upstream-wiiuse-not-originating",
+  "statement": "The separately pinned wiiuse/wiiuse upstream public header exposes a speaker-state flag but no speaker control or data API, and its inspected src/wiiuse.c control functions do not originate reports 0x14, 0x18 or 0x19. This source-bounded absence must not be projected onto the devkitPro/libogc wiiuse fork, whose separately pinned speaker.c and WPAD producer do emit all three speaker reports.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-wiiuse-public",
+    "wii-gap-speaker-wiiuse-main",
+    "wii-gap-speaker-libogc-setup",
+    "wii-gap-speaker-libogc-wpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

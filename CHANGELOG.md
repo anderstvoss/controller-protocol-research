@@ -27,6 +27,7 @@ affected schema's `schema_version`.
 
 - Register Xbox Elite Series 1 and its source-only post-Alpha 2 starter: pinned Linux v7.3 xpad USB/paddle behavior, SDL consumer mappings, evdev-first realization decision and explicit untested transport/physical limits.
 - Register Switch 2 Joy-Con 2 left/right family, source-only Linux and SDL USB consumer evidence, the per-half uinput-first decision and explicit Bluetooth/mouse/physical gaps for post-Alpha 2 #362; no host or hardware testing.
+- Add nine source-only Wii Remote speaker-consumer claims: pinned libogc WPAD and CWiid report/register, ADPCM, pacing and ACK/status paths, with non-originator boundaries and physical unknowns; no host or hardware tests.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 

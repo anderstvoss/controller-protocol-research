@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-setup",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e/wiiuse/speaker.c",
+  "revision": "ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e",
+  "sha256": "39cfca9a7b57e3ea43cb4eeb7d43c7c03e65a6728c8cdfd9a0f70bf26ac08d9c",
+  "lineage": "devkitPro/libogc",
+  "locator": "65-136 speaker enable/mute and ordered A2 configuration; 19-63 Yamaha ADPCM encoder and 29-30 default volume/divisor. libogc wiiuse GPL-3.0 with special independent-module linking exception."
+}

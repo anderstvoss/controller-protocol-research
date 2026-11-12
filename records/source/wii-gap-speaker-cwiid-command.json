@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cwiid-command",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/command.c",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "795c4a5941cc223cd2899d0a0eb3d6d5f0c67ca9dca32623962ddf38ff456a0f",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "53-80 synchronous control-channel report and handshake; 207-281 memory writes and response wait; 285-347 speaker startup, 100 data blocks and pacing. GPL-2.0-or-later file header."
+}
