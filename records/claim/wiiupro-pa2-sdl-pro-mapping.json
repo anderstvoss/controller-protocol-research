@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-sdl-pro-mapping",
+  "statement": "Pinned SDL exposes 15 buttons and six gamepad axes for Wii U Pro: four calibrated analog stick axes plus two digital ZL/ZR trigger axes; its Pro button decoder uses active-low button bits and its own stick normalization/deadzone model.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL gamepad state mapping, not a guarantee of every launcher or SDL version."
+  },
+  "sources": [
+    "wiiupro-pa2-sdl-wii-877399b2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
