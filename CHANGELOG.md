@@ -21,6 +21,8 @@ affected schema's `schema_version`.
 - Add Xbox Elite Series 2 post-Alpha 2 source-only starter research: pinned xpad/SDL/xpadneo paddle and profile consumer evidence, explicit USB/Bluetooth gaps, Elite registry and a uinput-first proposal; no host or hardware validation.
 
 - Register Xbox One as a post-Alpha 2 standalone-family candidate, with pinned Linux xpad, hid-microsoft and SDL consumer findings on USB revision IDs, Share-free evdev, Bluetooth model 1708 variants and firmware-specific SDL decoding; source-only, no host or hardware tests.
+- Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
+
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 

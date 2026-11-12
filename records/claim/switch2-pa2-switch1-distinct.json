@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-switch1-distinct",
+  "statement": "Original Switch Pro uses a different USB identity and host report/subcommand family from this Switch 2 Pro USB configuration-plus-HID path. Reusing the original Switch Pro UHID descriptor or its report 0x30 stream is not demonstrated to satisfy the pinned Switch 2 Pro Linux or SDL paths; treating the controllers as interchangeable would be an unsupported compatibility inference.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Non-substitutability with original Switch Pro"
+  },
+  "sources": [
+    "switch2-pa2-linux-ids-v74rc2",
+    "switch2-pa2-linux-hid-v74rc2",
+    "switch2-pa2-linux-usb-v74rc2",
+    "audio-sdl-switch-pro",
+    "sdl-switch2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

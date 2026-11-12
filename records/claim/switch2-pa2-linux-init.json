@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-linux-init",
+  "statement": "At Linux v7.4-rc2 the USB configuration path carries an eight-byte command header over bulk OUT and receives replies on bulk IN. The HID Nintendo controller startup sequences serial/firmware information and factory/user stick calibration reads, feature mask and enable commands, rumble activation and Pro report 0x09 selection, using the configuration attachment before enabling its evdev path. Retail command acceptance and version-specific side effects are unmeasured.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux startup and firmware/calibration negotiation"
+  },
+  "sources": [
+    "switch2-pa2-linux-hid-v74rc2",
+    "switch2-pa2-linux-usb-v74rc2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
