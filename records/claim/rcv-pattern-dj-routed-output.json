@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer",
+  "id": "rcv-pattern-dj-routed-output",
+  "statement": "The Logitech DJ child HID raw-request path rewrites supported HID++ messages with the child's device index and forwards them through the shared receiver HID++ interface; LED requests are also routed by receiver type. For an already removed child there is no surviving child HID request endpoint, while in-flight output delivery under loss is not verified.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "linux-joystick-identity",
+    "revision": "Linux cee9395acd8043be0644b25c34bfa86623f2b935",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Logitech DJ consumer per-child output dispatch and absent-child API boundary"
+  },
+  "sources": [
+    "rcv-pattern-linux-logitech-dj-v73rc1"
+  ]
+}

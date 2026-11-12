@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "rcv-xwa-virtual-boundary",
+  "statement": "Because xone binds Xbox Wireless Adapter USB devices and implements per-client GIP queues at the receiver transport, independent uinput evdev nodes are reduced post-driver compatibility rather than adapter fidelity; UHID alone cannot provide the USB device identity. A compatible USB-level gadget or USB/IP transport is a theoretical host-binding path only, not a validated implementation or authorization to synthesize GIP.",
+  "status": "inferred",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox-wireless-adapter",
+    "revision": "Out-of-tree xone f2aa9fe01103d7600553b505b298ff0bd47ff280; Linux v7.3 or pinned SDL where cited",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "Architecture inference from xone transport/dongle.c:130-251, 1547-1583 and Linux xpad.c:105-210. Neither dummy_hcd nor USB/IP nor host-equivalent GIP tested."
+  },
+  "sources": [
+    "xbox-xone-receiver",
+    "xbox-xone-bus",
+    "rcv-xwa-linux-xpad-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

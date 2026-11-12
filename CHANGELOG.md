@@ -12,9 +12,13 @@ affected schema's `schema_version`.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
+- Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
+
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
 
 - Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
+
+- Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
 
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
   input/reconnect fixtures, bounded xone headset duplex, and separate Linux
@@ -23,17 +27,25 @@ affected schema's `schema_version`.
 
 - Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
 
+- Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
+
 - Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.
 
 - Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
+
+- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
 
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
 
+- Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
+
 - Record the source-only Switch Pro NFC/MCU report-path scope gap, distinguishing a potential wireless-native feature from Nintendo-documented wired NFC restrictions; no hardware test or implementation change.
 
 - Record the Linux hid-nintendo Switch Pro HOME-button light (subcommand 0x38) as a consumer gap, with a ranked Switch Pro gap brief.
+
+- Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
 

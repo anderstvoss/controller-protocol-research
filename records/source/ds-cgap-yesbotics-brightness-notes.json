@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-cgap-yesbotics-brightness-notes",
+  "kind": "research_lead",
+  "url": "https://github.com/yesbotics/dualsense-controller-python/blob/24203b8ebe0bf6bd8d123bc02174b9735f811f6a/README_PROTOCOL.md",
+  "revision": "24203b8ebe0bf6bd8d123bc02174b9735f811f6a",
+  "sha256": "01c7e8375357ecac23bf9eac000363ec3670eb613a71a4e65f2ba6e8fea7106f",
+  "lineage": "yesbotics/dualsense-controller-python authored protocol notes, not a controller capture or independently validated encoding; brightness values differ from other consumer sources",
+  "locator": "README_PROTOCOL.md lines 310-327 (LED brightness listed as 0x01 full, 0x02 medium, 0x03 low; claimed mic/player scope and flag interaction); licence: MIT (LICENSE)"
+}
