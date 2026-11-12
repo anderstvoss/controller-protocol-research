@@ -12,9 +12,13 @@ affected schema's `schema_version`.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
+- Add published GameCube USB adapter descriptor and bInterval evidence, explicitly preserve conflicting EP0 sizes and HID-model limits, and distinguish WaveBird status consumer policies; source-only, no physical or host tests.
+
 - Record the D9 virtual Steam Controller 2026 kernel evdev run from virtualgamepad #304 (mode-switch gate, per-control decoding and ABS ioctl attributes for UHID and reduced uinput) as a virtual-host experiment with consumer claims.
 
 - Document source-only Puck receiver slot presence, attach/detach, SDL status 0x46/0x79, kernel native node recreation, per-slot output/lizard, and teardown against ADR-0022; physical and host validation remain unrun.
+
+- Add pinned DualSense LED consumer mappings: mute pulse and player instant semantics become source-supported while conflicting brightness 0–2 versus 1–3 remains unresolved; no hardware or host tests.
 
 - Record a reviewed physical Xbox Series Bluetooth descriptor, wired xpad
   input/reconnect fixtures, bounded xone headset duplex, and separate Linux
@@ -23,29 +27,43 @@ affected schema's `schema_version`.
 
 - Extend Xbox Series Bluetooth consumer research with an xpadneo deep dive and correct the Share mapping to keyboard KEY_F12; document multi-node evdev topology, Guide modifier, udev hidraw restrictions, FF initialization, UHID request/replies and firmware/quirk limits.
 
+- Close source-only Xbox 360 xpad LED creation and SDL 3.2.0 Linux HIDAPI-versus-evdev default routing questions with three conditional consumer claims and four pinned, hashed SDL source files; no host or hardware acceptance claimed.
+
 - Record Xbox Series Bluetooth-bus UHID consumer gaps against pinned Linux hid-microsoft, xpadneo and existing SDL/BlueZ: descriptor/firmware applicability, driver binding, post-driver identity, Guide/Share/battery and independent-versus-derived trigger rumble; no device or virtual acceptance claimed.
 
 - Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
+
+- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
 
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
 
+- Expand source-only Xbox Wireless Adapter xone client lifecycle research (association, fresh evdev instances, slot reuse, output, teardown, SDL and Linux v7.3 boundaries) against ADR-0022; no host or hardware runs.
+
 - Record the source-only Switch Pro NFC/MCU report-path scope gap, distinguishing a potential wireless-native feature from Nintendo-documented wired NFC restrictions; no hardware test or implementation change.
 
 - Record the Linux hid-nintendo Switch Pro HOME-button light (subcommand 0x38) as a consumer gap, with a ranked Switch Pro gap brief.
+
+- Compare Puck, Xbox 360, Xbox Wireless Adapter, Sony DS4 dongle and Logitech DJ receiver lifecycles against ADR-0022; record DS4 retained-node and DJ link-loss/unpair and shared-interface failure distinctions (source-only, no host or hardware test).
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
 
 - Record the stock Xbox Series xpad evdev shape with a synthetic capability fixture and pinned memoryless force-feedback evidence.
 
+- Document pinned Linux v7.3 DualSense Edge Fn/paddle evdev codes, USB/Bluetooth report paths, shared outputs, SDL comparison and a source-only post-Alpha 2 realization plan; preserve device and host unknowns.
+
 - Record the byte order SDL uses to decode the Switch Pro USB status address.
 
 - Record the Wii MotionPlus cached-mode gate and open-time response races in local logging-only SDL 3.2.10 and 3.4.20 builds across Original and TR virtual host arms.
 
+- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
+
 - Register the Switch 2 GameCube USB controller with source-only SDL/Linux protocol records and a not-run physical capture plan.
 
 - Record owner-guided wired lizard desktop mappings, reconnect setup, normal SDL transitions and bounded pad scaling.
+
+- Add post-Alpha 2 Switch 2 GameCube source-only starter decision brief and L0 ledger: recommend a playable uinput mapping before experimental USB-level bulk realization, cross-reference ten existing claims without promoting hardware evidence.
 
 - Correct D9 #106 claim prose spacing; audit #105 without changing its statements, preserving all numeric tokens and
   evidence meaning. Missing boundaries were present in manually authored claim
@@ -56,18 +74,26 @@ affected schema's `schema_version`.
 
 - Record supervised D9 MIDI-to-haptics and PCM playback through pinned upstream players, exact padded/short framing, configuration feedback, generated waveform correspondence and qualitative audibility limits.
 
+- Add Xbox Elite Series 2 post-Alpha 2 source-only starter research: pinned xpad/SDL/xpadneo paddle and profile consumer evidence, explicit USB/Bluetooth gaps, Elite registry and a uinput-first proposal; no host or hardware validation.
+
 - Clarify wired Steam Controller raw-HID versus physical HIDINPUT mouse/keyboard coexistence, separate Puck-path restoration latency from a stock watchdog measurement, and distinguish Steam discovery, managed activation and virtual output in the D9 matrix/checklist.
 
 - Record labelled D9 wired native inputs, configuration-dependent pad/stick lockout, SDL-enabled motion, Steam Ping and separate brief rumble channels; retain selected non-identifying payloads and operator caveats.
 - Research Steam Controller 2026 lizard firmware, kernel native/raw handoff, SDL HIDAPI arbitration and Steam virtual-device routing; add evidence-labeled visibility matrix and owner-only D9 observation checklist (source-only; no retail watchdog claim).
 
+- Register Xbox One as a post-Alpha 2 standalone-family candidate, with pinned Linux xpad, hid-microsoft and SDL consumer findings on USB revision IDs, Share-free evdev, Bluetooth model 1708 variants and firmware-specific SDL decoding; source-only, no host or hardware tests.
+
 - Record D9 wired Steam Controller 2026 kernel/Steam feature exchanges, model attribute values and accepted setting writes; add opt-in model-field reduction while preserving serial/identifier withholding. Review follow-up corrects the three ED lengths, records only the safe one-byte value and serial character classes, and withholds all opaque tails.
 
 - Survey GameCube adapter consumers, per-port uinput compatibility decisions and source-only libusb/udev grants for #258.
 
+- Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
+
 - Source-pin out-of-tree and user-space GameCube USB adapter bridges, Android USB manager and emulator backends; record source-only evdev and USB gaps.
 
 - Document Joy-Con (R) source-only NFC/IR MCU state, NFC polling/read/write flow and IR register/image fragment policy; five scoped claims, no tag contents or host tests.
+
+- Register Xbox Elite Series 1 and its source-only post-Alpha 2 starter: pinned Linux v7.3 xpad USB/paddle behavior, SDL consumer mappings, evdev-first realization decision and explicit untested transport/physical limits.
 
 - Add Joy-Con single/pair consumer survey, SDL2 2.30.12 open and pair differences, kernel v5.16 history and compat/faithful identity decisions; five source-only claims, no host measurements.
 

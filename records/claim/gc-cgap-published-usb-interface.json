@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-published-usb-interface",
+  "statement": "Two separately archived public host enumeration dumps identifying 0x057e:0x0337 as WUP-028 report USB 2.00 and device revision 1.00, one configuration (value 1, descriptor total 41 bytes), one interface 0 at alternate setting 0 with HID class 3, subclass 0, protocol 0, a 214-byte advertised HID report descriptor, configuration attributes 0xe0 and maximum power 500 mA. These are source-supported device statements from third-party dumps, not measurements by this project or proof that every adapter variant matches.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "public reports for 0x057e:0x0337; hardware revision unverified",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Published device, configuration, HID and interface descriptor fields; WUP-028 authenticity not independently verified"
+  },
+  "sources": [
+    "gc-cgap-linuxhw-ep0-8",
+    "gc-cgap-linuxhw-ep0-64"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

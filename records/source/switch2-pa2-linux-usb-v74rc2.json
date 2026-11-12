@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-linux-usb-v74rc2",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/v7.4-rc2/drivers/hid/hid-nintendo-switch2-usb.c",
+  "revision": "v7.4-rc2",
+  "sha256": "5e0185734071cb274fc4d3cb8876309ebd9a52cd0fc38111387b6309e4bc0b00",
+  "lineage": "Linux kernel, v7.4-rc2; same upstream lineage as other Linux source records",
+  "locator": "drivers/hid/hid-nintendo-switch2-usb.c: 1-20 configuration-interface role; 155-205 USB command framing; 340-445 bulk endpoint discovery and controller attachment; 471-489 USB vendor-class Pro match. Licence GPL-2.0-or-later (SPDX GPL-2.0+)."
+}

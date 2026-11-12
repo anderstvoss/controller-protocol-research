@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-unmeasured-reference-gaps",
+  "statement": "Original Elite physical USB descriptors and startup, receiver pairing, firmware-specific paddle/profile behavior, SDL backend selection and active mapping precedence, impulse-motor behavior, headset/audio association, end-to-end creation/removal timing and multi-controller behavior have no new physical or virtual-host evidence in this source-only starter research.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "original Xbox Elite Series 1; firmware not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Physical-device and host-run unknowns; proposed tests are not executed. Do not infer profile count or native control independence solely from a software parser."
+  },
+  "sources": [
+    "elite1-pa2-linux-v7-3-xpad",
+    "xbox-series-sdl-xboxone",
+    "sdl-linux-joystick-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
