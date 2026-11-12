@@ -24,6 +24,7 @@ affected schema's `schema_version`.
 - Add post-Alpha 2 Switch 2 Pro kernel-tag and pinned SDL source-only consumer research, an evdev-first realization decision, and unresolved USB composite, Bluetooth and physical-host validation gates.
 
 - Register Xbox Elite Series 1 and its source-only post-Alpha 2 starter: pinned Linux v7.3 xpad USB/paddle behavior, SDL consumer mappings, evdev-first realization decision and explicit untested transport/physical limits.
+- Register Switch 2 Joy-Con 2 left/right family, source-only Linux and SDL USB consumer evidence, the per-half uinput-first decision and explicit Bluetooth/mouse/physical gaps for post-Alpha 2 #362; no host or hardware testing.
 
 - Add six source-only Joy-Con (L) protocol and consumer claims for left-half identity, button bits, kernel evdev stick/IMU normalization and SDL3 sideways/vertical presentation; no hardware or host tests.
 
