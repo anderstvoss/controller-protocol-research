@@ -57,6 +57,8 @@ affected schema's `schema_version`.
 
 - Record the Wii MotionPlus cached-mode gate and open-time response races in local logging-only SDL 3.2.10 and 3.4.20 builds across Original and TR virtual host arms.
 
+- Add a source-only Wii U Pro starter registry, pinned Linux/SDL/Cemu consumer claims, separate L0 ledger and proposed (not-run) Bluetooth-bus UHID qualification; no host or physical acceptance.
+
 - Register the Switch 2 GameCube USB controller with source-only SDL/Linux protocol records and a not-run physical capture plan.
 
 - Record owner-guided wired lizard desktop mappings, reconnect setup, normal SDL transitions and bounded pad scaling.
