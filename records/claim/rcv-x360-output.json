@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-output",
+  "statement": "The Linux wireless xpad FF_RUMBLE path constructs a 12-byte wireless command, distinct from the wired Xbox 360 8-byte rumble, and LED uses the wireless output format. Each USB interface context has its own interrupt OUT URB and queue, giving slot-directed routing through the interface rather than through a global player index. Absent slots have no registered evdev/LED callbacks.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 1293-1391, 1530-1585, 1661-1718, 1924-1932, 2044-2160; physical output effects not verified"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

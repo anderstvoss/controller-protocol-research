@@ -72,3 +72,15 @@ Every newly pinned source record stores its immutable commit URL, SHA-256 and lo
 All gates are **proposed**, not `virtual_host_run` experiments in this PR. No controller is on hand (#148). The original Free60 archive is accessible but lacks its historically quoted wired protocol tables, so **no Free60 page is marked `source pending: fetch blocked`** for F; the alternative pinned protocol references are used with their limits. Existing unresolved **PS4 Developer Wiki DS4-USB and DS4-BT** source-pending pages belong to E and remain on the part-1 closeout list.
 
 **Cloud agent (realized-controller research parity)**
+
+## Receiver R2 — Xbox 360 Wireless Receiver consumer lifecycle (source-only; 2026-11-11)
+
+The dedicated [receiver lifecycle review](../receivers-xbox360-wireless.md) extends, but does not replace, the Xbox 360 L0 distinctions above. Its newly pinned Linux v7.3-rc1 xpad source is rcv-x360-linux-v73rc1-xpad; SDL and USB Host Shield sources reuse earlier records.
+
+- USB identity/interface versus wired XUSB and four-pipe independent-host evidence: rcv-x360-binding, rcv-x360-four-slot-consumer.
+- Presence status, deferred per-interface registration and renewed evdev lifecycle: rcv-x360-presence, rcv-x360-evdev-epoch.
+- Host-visible product ID and LED index, per-interface FF/LED and unsafe output epoch assumptions: rcv-x360-identity-led, rcv-x360-output, rcv-x360-output-epoch-gap.
+- Sibling interface source-level cleanup, SDL HIDAPI exclusion and evdev discovery: rcv-x360-teardown, rcv-x360-sdl-evdev.
+- No xpad keyboard/pointer/audio/battery companion claimed; USB-level provider inference and unresolved physical acceptance: rcv-x360-companion-battery, rcv-x360-usb-provider, rcv-x360-physical-unknown.
+
+This is **consumer source-only research**. All owner-only gates R2-1 through R2-8 are **NOT RUN**. It is not physical Xbox 360 or receiver protocol acceptance.

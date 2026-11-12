@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "rcv-x360-evdev-epoch",
+  "statement": "xpad's wireless presence worker creates/registers a new input and LED device when a pad attaches, and on detach clears its RCU input pointer, synchronizes readers, then unregisters the devices. A later attach allocates another input device instead of reviving a persistent evdev node; the exact event node number is host-dependent.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "xbox360-wireless-receiver",
+    "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
+    "firmware": "not measured",
+    "transport": "receiver",
+    "scope": "xpad.c 961-983, 1924-2036; Linux object lifecycle"
+  },
+  "sources": [
+    "rcv-x360-linux-v73rc1-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
