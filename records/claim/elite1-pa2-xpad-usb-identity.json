@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-xpad-usb-identity",
+  "statement": "Linux xpad at v7.3 identifies Microsoft USB vendor 0x045e product 0x02e3 as the original Xbox One Elite, selects its Xbox One type and paddle mapping, and selects the original Elite extended-packet parser. The Elite Series 2 has a different product ID and firmware-sensitive packet modes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "USB identity 0x045e:0x02e3; Linux v7.3",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Source-only USB driver behavior; xpad.c:129, 2166-2195. USB interface matching also depends on xpad's class/subclass/protocol rules. Not a captured physical descriptor."
+  },
+  "sources": [
+    "elite1-pa2-linux-v7-3-xpad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-uinput-first",
+  "statement": "For post-Alpha 2, the first defensible Elite Series 1 realization is linux.uinput reproducing its pinned xpad EV_KEY and EV_ABS surface, including four advertised paddle keys and mapping limits, with caller-selected identity at creation. This provides an evdev compatibility controller but does not impersonate the wired USB GIP endpoint, implement receiver pairing, or guarantee independent paddles under physical remapping.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "proposed virtualgamepad realization; not implemented or tested here",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Design recommendation for #359; separate playable evdev compatibility from faithful USB GIP and Xbox Wireless transport. Do not silently claim firmware or output fidelity."
+  },
+  "sources": [
+    "elite1-pa2-linux-v7-3-xpad",
+    "sdl-linux-joystick-baseline",
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

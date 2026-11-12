@@ -93,6 +93,8 @@ affected schema's `schema_version`.
 
 - Document Joy-Con (R) source-only NFC/IR MCU state, NFC polling/read/write flow and IR register/image fragment policy; five scoped claims, no tag contents or host tests.
 
+- Register Xbox Elite Series 1 and its source-only post-Alpha 2 starter: pinned Linux v7.3 xpad USB/paddle behavior, SDL consumer mappings, evdev-first realization decision and explicit untested transport/physical limits.
+
 - Add Joy-Con single/pair consumer survey, SDL2 2.30.12 open and pair differences, kernel v5.16 history and compat/faithful identity decisions; five source-only claims, no host measurements.
 
 - Research Joy-Con L/R Bluetooth-bus kernel and SDL3 open paths, USB Charging Grip probe, and steam-devices/joycond permissions for #258; nine source-only consumer claims, no host tests.
