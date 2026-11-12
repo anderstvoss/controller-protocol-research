@@ -33,6 +33,8 @@ affected schema's `schema_version`.
 
 - Record pinned out-of-tree xone as Xbox Series wired GIP and Xbox Wireless Adapter consumer evidence: source-scoped startup, ACK/chunking, evdev comparison, main-only Linux FF, conditional headset ALSA, and receiver client lifecycle; retain device-side unknowns and not-run physical tests.
 
+- Add pinned Linux Switch Pro USB report-cadence context and a Switch 2 Pro-emulator colour-SPI consumer observation with overlap regression, preserving original Linux/SDL unknowns and physical validation limits.
+
 - Pin Linux v7.3, SDL Triton, BlueZ HOGP/UHID/GATT/ATT transport framing and Valve public Linux rules for Steam Controller 2026 BLE; record source-only consumer claims, bounded codec/identity implications and an owner-only physical/scratch validation plan.
 
 - Record pinned SDL, PipeWire/WirePlumber, udev, ALSA UCM and Wine/Proton consumer-audio association boundaries, preserving Steam and UHID-sidecar auto-discovery as unknown.
