@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "xpad.c:459-475, 1905-1925, 1973-2025; advertised xpad evdev shape only, independent of actual paddle events."
+    "transport": "source_only",
+    "scope": "xpad.c:459-475, 1905-1925, 1973-2025; advertised xpad evdev shape only, independent of actual paddle events. Source scope is the USB transport."
   },
   "sources": [
     "xbox-series-linux-xpad"

@@ -7,7 +7,7 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "xpad.c:127-134, 494-520, 604-620, 2170-2195; software binding table and parser, not a captured USB descriptor."
   },
   "sources": [

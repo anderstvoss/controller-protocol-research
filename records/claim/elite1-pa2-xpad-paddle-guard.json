@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-1",
     "revision": "Linux v7.3 original Elite packet type",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "xpad.c:1165-1180, 2001-2005, 2166-2172. No claim of physical raw-packet accuracy or of a particular profile exposing paddles."
+    "transport": "source_only",
+    "scope": "xpad.c:1165-1180, 2001-2005, 2166-2172. No claim of physical raw-packet accuracy or of a particular profile exposing paddles. Source scope is the USB transport."
   },
   "sources": [
     "elite1-pa2-linux-v7-3-xpad"
