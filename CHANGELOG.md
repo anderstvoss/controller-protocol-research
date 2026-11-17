@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Correct transport applicability for 58 older claims: 23 unmeasured gaps and 35 source-derived claims; preserve the original transport in scope and defer 17 research-lead or conflicted claims (#147).
+
 - Correct the transport applicability of 35 source-derived or unmeasured claims from the 2026-11-11 research round; preserve source transport in scope and leave older claims unchanged (#147).
 
 - Add the Logitech DJ / Unifying receiver pattern registry entry and re-file the four #135 consumer claims without changing evidence strength, provenance or physical-measurement limits.

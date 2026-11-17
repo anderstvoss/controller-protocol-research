@@ -7,8 +7,8 @@
     "controller": "dualsense",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "Consumer source semantics and kernel routing intent only; SDL field-name agreement does not independently establish route interpretation."
+    "transport": "source_only",
+    "scope": "Consumer source semantics and kernel routing intent only; SDL field-name agreement does not independently establish route interpretation; source scope is the USB transport."
   },
   "sources": [
     "audio-linux-hid-playstation",

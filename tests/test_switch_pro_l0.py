@@ -23,8 +23,9 @@ class SwitchProL0Ledger(unittest.TestCase):
                             and c["sources"] and c["experiments"] == []
                             for c in claims))
         self.assertEqual(sum(c["status"] == "conflicted" for c in claims), 1)
-        self.assertEqual(sum(c["applicability"]["transport"] == "usb" for c in claims), 4)
-        self.assertEqual(sum(c["applicability"]["transport"] == "bluetooth" for c in claims), 1)
+        self.assertEqual(sum(c["applicability"]["transport"] == "usb" for c in claims), 0)
+        self.assertEqual(sum(c["applicability"]["transport"] == "bluetooth" for c in claims), 0)
+        self.assertEqual(sum(c["applicability"]["transport"] == "not_measured" for c in claims), 5)
         self.assertTrue(all(c["applicability"]["transport"] == "source_only"
                             for c in claims if not c["id"].startswith("swpro-l0-physical-")))
         for c in claims:

@@ -7,8 +7,8 @@
     "controller": "dualsense",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "Consumer routing configuration only; direct hardware channels are not evidence of audible outputs."
+    "transport": "source_only",
+    "scope": "Consumer routing configuration only; direct hardware channels are not evidence of audible outputs; source scope is the USB transport."
   },
   "sources": [
     "audio-alsa-dualsense-hifi",

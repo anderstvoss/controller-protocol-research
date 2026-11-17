@@ -12,7 +12,7 @@ class XboxSeriesLedger(unittest.TestCase):
         self.assertTrue(all(c['applicability']['transport'] == 'source_only' for c in consumers))
         self.assertTrue(all(c.get('evidence_role') == 'consumer' for c in consumers))
         gaps = [c for c in claims if c['status'] == 'unknown']
-        self.assertEqual({c['applicability']['transport'] for c in gaps}, {'usb', 'bluetooth'})
+        self.assertEqual({c['applicability']['transport'] for c in gaps}, {'not_measured'})
         self.assertTrue(all(not c['experiments'] for c in claims))
 
     def test_xpad_shape_preserves_consumer_capabilities_without_capture(self):

@@ -7,8 +7,8 @@
     "controller": "openpuck-firmware",
     "revision": "pinned implementation only; authentic hardware revision not measured",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "Compatibility implementation only: puck_hid.cpp:670-677. This is current pinned OpenPuck, not the unrecovered historical1142 revision or a physical capture."
+    "transport": "source_only",
+    "scope": "Compatibility implementation only: puck_hid.cpp:670-677. This is current pinned OpenPuck, not the unrecovered historical1142 revision or a physical capture; source scope is the USB transport."
   },
   "sources": [
     "openpuck"

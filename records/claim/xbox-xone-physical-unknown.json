@@ -8,8 +8,8 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series; physical firmware revision not available",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "Unmeasured physical-device boundaries related to xbox-series-usb-device-gaps; all xone-specific evidence remains consumer-only. This record does not supersede the existing device-side gap claim."
+    "transport": "not_measured",
+    "scope": "Unmeasured physical-device boundaries related to xbox-series-usb-device-gaps; all xone-specific evidence remains consumer-only. This record does not supersede the existing device-side gap claim. Gap concerns the USB transport."
   },
   "sources": [
     "xbox-xone-gip-protocol",

@@ -7,7 +7,7 @@
     "controller": "dualsense",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "not_measured",
     "scope": "Searched pinned Linux hid-playstation output structures/send paths and Bluetooth audio comments, and pinned SDL PS5 HID effects send path and audio-haptics control. No external in-band waveform layout verified."
   },
   "sources": [

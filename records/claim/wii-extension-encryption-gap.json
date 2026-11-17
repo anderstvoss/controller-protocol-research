@@ -7,8 +7,8 @@
     "controller": "wii-remote",
     "revision": "Original Remote and integrated Plus kept distinct where named",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "Device-side gap, separately scoped from source-only initialization claims."
+    "transport": "not_measured",
+    "scope": "Device-side gap, separately scoped from source-only initialization claims; gap concerns the Bluetooth transport."
   },
   "sources": [
     "wii-linux-core",

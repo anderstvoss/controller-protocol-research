@@ -7,8 +7,8 @@
     "controller": "wii-remote",
     "revision": "Original Remote and integrated Plus kept distinct where named",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "Device memory-map hypothesis, not a source-supported device fact. Separate EEPROM from volatile extension,IR,speaker and MotionPlus registers."
+    "transport": "not_measured",
+    "scope": "Device memory-map hypothesis, not a source-supported device fact. Separate EEPROM from volatile extension,IR,speaker and MotionPlus registers; gap concerns the Bluetooth transport."
   },
   "sources": [
     "wii-dolphin-emu",

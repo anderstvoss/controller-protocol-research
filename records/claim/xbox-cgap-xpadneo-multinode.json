@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
-    "scope": "core.c:169-170,243-278; synthetic.c:11-82; keyboard.c:11-47; consumer.c:11-35; mouse.c:229-279. Exact node count conditional on descriptor/mouse option."
+    "transport": "source_only",
+    "scope": "core.c:169-170,243-278; synthetic.c:11-82; keyboard.c:11-47; consumer.c:11-35; mouse.c:229-279. Exact node count conditional on descriptor/mouse option; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-core",

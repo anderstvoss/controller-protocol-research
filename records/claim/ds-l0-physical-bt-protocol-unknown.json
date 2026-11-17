@@ -7,7 +7,7 @@
     "controller": "dualsense",
     "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "not_measured",
     "scope": "Linux, SDL and HHD BT paths are software source evidence. No hardware Bluetooth capture or radio experiment."
   },
   "sources": [

@@ -7,7 +7,7 @@
     "controller": "dualshock4",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "not_measured",
     "scope": "Searched pinned Linux hid-playstation DS4 output structures/send path and SDL_hidapi_ps4 BT effect path; no device capture or independent audio transport implementation."
   },
   "sources": [
