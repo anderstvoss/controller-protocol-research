@@ -7,10 +7,10 @@
 | usb id matrix | `xboxone-pa2-usb-id-matrix` | `source_supported` / `consumer` | `xbox-series-linux-xpad` | source_only; no host or device acceptance |
 | xpad evdev no share | `xboxone-pa2-xpad-evdev-no-share` | `source_supported` / `consumer` | `xbox-series-linux-xpad`, `xbox-series-xpad-ff-memless` | source_only; no host or device acceptance |
 | xpad wired gip boundary | `xboxone-pa2-xpad-wired-gip-boundary` | `source_supported` / `consumer` | `xbox-series-linux-xpad`, `xbox-xone-wired` | source_only; no host or device acceptance |
-| linux bt model1708 | `xboxone-pa2-linux-bt-model1708` | `source_supported` / `consumer` | `xbox-cgap-kernel-hid-ids`, `xbox-cgap-kernel-hid-microsoft` | bluetooth; no host or device acceptance |
-| sdl legacy bt reports | `xboxone-pa2-sdl-legacy-bt-reports` | `source_supported` / `consumer` | `xbox-series-sdl-xboxone` | bluetooth; no host or device acceptance |
+| linux bt model1708 | `xboxone-pa2-linux-bt-model1708` | `source_supported` / `consumer` | `xbox-cgap-kernel-hid-ids`, `xbox-cgap-kernel-hid-microsoft` | source_only (Bluetooth source scope); no host or device acceptance |
+| sdl legacy bt reports | `xboxone-pa2-sdl-legacy-bt-reports` | `source_supported` / `consumer` | `xbox-series-sdl-xboxone` | source_only (Bluetooth source scope); no host or device acceptance |
 | sdl share exceptions | `xboxone-pa2-sdl-share-exceptions` | `source_supported` / `consumer` | `xboxone-pa2-sdl-joystick`, `xbox-series-sdl-xboxone` | source_only; no host or device acceptance |
-| ble descriptor ambiguity | `xboxone-pa2-ble-descriptor-ambiguity` | `source_supported` / `consumer` | `xbox-cgap-xpadneo-docs`, `xbox-cgap-xpadneo-legacy-desc` | bluetooth; no host or device acceptance |
+| ble descriptor ambiguity | `xboxone-pa2-ble-descriptor-ambiguity` | `source_supported` / `consumer` | `xbox-cgap-xpadneo-docs`, `xbox-cgap-xpadneo-legacy-desc` | source_only (Bluetooth source scope); no host or device acceptance |
 | own family decision | `xboxone-pa2-own-family-decision` | `inferred` / `consumer` | `xbox-series-linux-xpad`, `xboxone-pa2-sdl-joystick`, `xbox-series-sdl-xboxone`, `xbox-cgap-kernel-hid-microsoft` | source_only; no host or device acceptance |
 | first uinput | `xboxone-pa2-first-uinput` | `inferred` / `consumer` | `xbox-series-linux-xpad`, `xbox-series-sdl-xboxone`, `xbox-cgap-kernel-hid-microsoft` | source_only; no host or device acceptance |
 | physical reference gaps | `xboxone-pa2-physical-reference-gaps` | `unknown` / `device` | None | not_measured; no host or device acceptance |

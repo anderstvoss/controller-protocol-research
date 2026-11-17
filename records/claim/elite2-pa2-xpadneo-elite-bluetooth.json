@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "xpadneo core.c:34-71, events.c:145-195 and 284-371, device.c:240-260, xpadneo.h:19-105; GPL-2.0-only source paraphrased; no device tested."
+    "transport": "source_only",
+    "scope": "xpadneo core.c:34-71, events.c:145-195 and 284-371, device.c:240-260, xpadneo.h:19-105; GPL-2.0-only source paraphrased; no device tested. Source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-core",

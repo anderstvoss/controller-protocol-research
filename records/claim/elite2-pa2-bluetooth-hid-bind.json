@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "hid-ids.h:1056-1060 and hid-microsoft.c:275-350, 427-435; optional generic HID fallback described in prior Series consumer research."
+    "transport": "source_only",
+    "scope": "hid-ids.h:1056-1060 and hid-microsoft.c:275-350, 427-435; optional generic HID fallback described in prior Series consumer research. Source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-kernel-hid-ids",

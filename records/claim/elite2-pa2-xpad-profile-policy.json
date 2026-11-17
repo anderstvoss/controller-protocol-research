@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "xpad.c:50-52, 132, 1066-1083, 1161-1208, 1927-1929, 2001-2005. Profile interpretation is host consumer policy, not a complete hardware profile model."
+    "transport": "source_only",
+    "scope": "xpad.c:50-52, 132, 1066-1083, 1161-1208, 1927-1929, 2001-2005. Profile interpretation is host consumer policy, not a complete hardware profile model. Source scope is the USB transport."
   },
   "sources": [
     "xbox-series-linux-xpad"

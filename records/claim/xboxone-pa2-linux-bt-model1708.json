@@ -7,8 +7,8 @@
     "controller": "xbox-one",
     "revision": "Xbox One S model 1708 Bluetooth consumers, excluding original wired-only baseline and Xbox Series",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "hid-ids.h:1052-1060; hid-microsoft.c:281-347,427-435. The HID bus is different from xpad's wired USB driver."
+    "transport": "source_only",
+    "scope": "hid-ids.h:1052-1060; hid-microsoft.c:281-347,427-435. The HID bus is different from xpad's wired USB driver. Source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-kernel-hid-ids",

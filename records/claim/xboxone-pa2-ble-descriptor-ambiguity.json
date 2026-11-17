@@ -7,8 +7,8 @@
     "controller": "xbox-one",
     "revision": "Xbox One S model 1708 Bluetooth, with explicit Series/Elite comparison and firmware uncertainty",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "xpadneo docs/README.md:88-97; docs/descriptors/xb1s_linux.md:3-43; distinct xpadneo consumer lineage, not independent physical proof."
+    "transport": "source_only",
+    "scope": "xpadneo docs/README.md:88-97; docs/descriptors/xb1s_linux.md:3-43; distinct xpadneo consumer lineage, not independent physical proof. Source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-docs",

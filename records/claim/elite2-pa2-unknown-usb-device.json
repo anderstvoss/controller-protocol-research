@@ -7,7 +7,7 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "not_measured",
     "scope": "Device-side gap: physical comparison at pinned firmware variants and USB GIP feasibility would be needed. Any vendor firmware analysis needs private analysis and is excluded."
   },
   "sources": [

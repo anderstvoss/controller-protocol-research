@@ -16,18 +16,18 @@ Each record carries immutable file URL, exact-file SHA-256 and lineage. GPL kern
 
 | Claim ID | Status | Role | Transport | Limit |
 | --- | --- | --- | --- | --- |
-| `elite2-pa2-usb-xpad-identity` | `source_supported` | `consumer` | `usb` | xpad |
-| `elite2-pa2-xpad-paddle-evdev` | `source_supported` | `consumer` | `usb` | xpad |
-| `elite2-pa2-xpad-firmware-paddle-paths` | `source_supported` | `consumer` | `usb` | xpad |
-| `elite2-pa2-xpad-profile-policy` | `source_supported` | `consumer` | `usb` | xpad |
-| `elite2-pa2-bluetooth-hid-bind` | `source_supported` | `consumer` | `bluetooth` | hid-ids |
-| `elite2-pa2-xpadneo-elite-bluetooth` | `source_supported` | `consumer` | `bluetooth` | xpadneo core |
-| `elite2-pa2-sdl-hidapi-usb-paddles` | `source_supported` | `consumer` | `usb` | SDL_hidapi_xboxone |
-| `elite2-pa2-sdl-hidapi-bt-paddles` | `source_supported` | `consumer` | `bluetooth` | SDL_hidapi_xboxone |
+| `elite2-pa2-usb-xpad-identity` | `source_supported` | `consumer` | `source_only` | xpad |
+| `elite2-pa2-xpad-paddle-evdev` | `source_supported` | `consumer` | `source_only` | xpad |
+| `elite2-pa2-xpad-firmware-paddle-paths` | `source_supported` | `consumer` | `source_only` | xpad |
+| `elite2-pa2-xpad-profile-policy` | `source_supported` | `consumer` | `source_only` | xpad |
+| `elite2-pa2-bluetooth-hid-bind` | `source_supported` | `consumer` | `source_only` | hid-ids |
+| `elite2-pa2-xpadneo-elite-bluetooth` | `source_supported` | `consumer` | `source_only` | xpadneo core |
+| `elite2-pa2-sdl-hidapi-usb-paddles` | `source_supported` | `consumer` | `source_only` | SDL_hidapi_xboxone |
+| `elite2-pa2-sdl-hidapi-bt-paddles` | `source_supported` | `consumer` | `source_only` | SDL_hidapi_xboxone |
 | `elite2-pa2-sdl-mappings` | `source_supported` | `consumer` | `source_only` | SDL_gamepad |
 | `elite2-pa2-uinput-first` | `inferred` | `consumer` | `source_only` | Implementation proposal based on xpad and SDL mapping only; no host, hardware or consumer tests |
-| `elite2-pa2-unknown-usb-device` | `unknown` | `device` | `usb` | Device-side gap: physical comparison at pinned firmware variants and USB GIP feasibility would be needed |
-| `elite2-pa2-unknown-bluetooth-device` | `unknown` | `device` | `bluetooth` | Device and host-acceptance gaps for Elite models 0x0b05 and 0x0b22, including selected firmware revisions |
+| `elite2-pa2-unknown-usb-device` | `unknown` | `device` | `not_measured` | Device-side gap: physical comparison at pinned firmware variants and USB GIP feasibility would be needed |
+| `elite2-pa2-unknown-bluetooth-device` | `unknown` | `device` | `not_measured` | Device and host-acceptance gaps for Elite models 0x0b05 and 0x0b22, including selected firmware revisions |
 | `elite2-pa2-unknown-profile-outputs` | `unknown` | `device` | `not_measured` | Cross-transport and consumer-dependent limitations |
 
 Existing `xbox-series-*`, `xbox-cgap-*` and `xbox-xone-*` claims remain authoritative for generic Series and shared consumer transport mechanisms. This ledger does not move Series claims to Elite by implication. The model 1797 source aliases are comparators; descriptors from other model families are not Elite evidence.

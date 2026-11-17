@@ -7,7 +7,7 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "source_only",
     "scope": "SDL_hidapi_xboxone.c:408-458, 947-966, 1278-1286, 1313-1375, 1959-1998. Bluetooth HID and wired GIP are distinct branches."
   },
   "sources": [

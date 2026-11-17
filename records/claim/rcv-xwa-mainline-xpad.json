@@ -8,8 +8,8 @@
     "controller": "xbox-wireless-adapter",
     "revision": "Out-of-tree xone f2aa9fe01103d7600553b505b298ff0bd47ff280; Linux v7.3 or pinned SDL where cited",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "Linux v7.3 drivers/input/joystick/xpad.c:105-210, 520-575; xone transport/dongle.c:1547-1583; pinned tag and source only."
+    "transport": "source_only",
+    "scope": "Linux v7.3 drivers/input/joystick/xpad.c:105-210, 520-575; xone transport/dongle.c:1547-1583; pinned tag and source only. Source scope is the USB transport."
   },
   "sources": [
     "rcv-xwa-linux-xpad-v73",

@@ -7,7 +7,7 @@
     "controller": "xbox-elite-series-1",
     "revision": "USB identity 0x045e:0x02e3; Linux v7.3",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "Source-only USB driver behavior; xpad.c:129, 2166-2195. USB interface matching also depends on xpad's class/subclass/protocol rules. Not a captured physical descriptor."
   },
   "sources": [

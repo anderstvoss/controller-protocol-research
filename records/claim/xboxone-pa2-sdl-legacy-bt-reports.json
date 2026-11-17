@@ -7,8 +7,8 @@
     "controller": "xbox-one",
     "revision": "Xbox One S Bluetooth firmware-specific consumer paths, not an invariant native packet claim",
     "firmware": "3.1.1221, 4.8.1923 and 5.x examples from SDL source; not independently measured",
-    "transport": "bluetooth",
-    "scope": "SDL_hidapi_xboxone.c:408-459,1257-1311,1377-1459,1955-1998; the 17-byte format and report IDs are conditional decoder expectations."
+    "transport": "source_only",
+    "scope": "SDL_hidapi_xboxone.c:408-459,1257-1311,1377-1459,1955-1998; the 17-byte format and report IDs are conditional decoder expectations. Source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-series-sdl-xboxone"

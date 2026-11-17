@@ -7,7 +7,7 @@
     "controller": "wii-u-pro",
     "revision": "Wii U Pro; retail revision not measured",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "source_only",
     "scope": "Bluetooth HID identity accepted by kernel table; actual retail Wii U Pro product ID is not measured."
   },
   "sources": [

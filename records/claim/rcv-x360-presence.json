@@ -8,8 +8,8 @@
     "controller": "xbox360-wireless-receiver",
     "revision": "Linux v7.3-rc1 (cee9395acd8043be0644b25c34bfa86623f2b935), SDL pinned 535d80b and 829a65d; device firmware not measured",
     "firmware": "not measured",
-    "transport": "receiver",
-    "scope": "xpad.c 987-1024, 1451-1476, 1847-1875, 2186-2209; expected parser bytes, not captures"
+    "transport": "source_only",
+    "scope": "xpad.c 987-1024, 1451-1476, 1847-1875, 2186-2209; expected parser bytes, not captures; source scope is the USB wireless receiver transport."
   },
   "sources": [
     "rcv-x360-linux-v73rc1-xpad"

@@ -7,8 +7,8 @@
     "controller": "xbox-elite-series-2",
     "revision": "Xbox Elite Series 2 model 1797, software-side revision at pinned sources",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "Device and host-acceptance gaps for Elite models 0x0b05 and 0x0b22, including selected firmware revisions. Keep radio transport separate from host-local UHID."
+    "transport": "not_measured",
+    "scope": "Device and host-acceptance gaps for Elite models 0x0b05 and 0x0b22, including selected firmware revisions. Keep radio transport separate from host-local UHID. Bluetooth device behavior and host acceptance remain unmeasured."
   },
   "sources": [
     "xbox-cgap-kernel-hid-microsoft",
