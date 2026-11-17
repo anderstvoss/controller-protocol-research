@@ -7,8 +7,8 @@
     "controller": "dualsense",
     "revision": "unknown",
     "firmware": "unknown",
-    "transport": "usb",
-    "scope": "Linux v6.12 host contract"
+    "transport": "source_only",
+    "scope": "Linux v6.12 host contract; source scope is the USB transport."
   },
   "sources": [
     "kernel"

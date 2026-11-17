@@ -8,7 +8,7 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
     "firmware": "not measured",
-    "transport": "receiver",
+    "transport": "source_only",
     "scope": "transport/dongle.c:31-44, 130-251, 482-632, 692-714, 837-945. Does not claim an emulated receiver implementation, physical reliability, or Bluetooth support."
   },
   "sources": [

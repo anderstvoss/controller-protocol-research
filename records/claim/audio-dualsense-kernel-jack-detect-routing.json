@@ -7,7 +7,7 @@
     "controller": "dualsense",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "Kernel consumer behavior: hid-playstation.c 124-126 status bits, 975-991 jack device, 1361-1409 route selection, 1529-1552 USB-only parse. The 0x3d..0x64 speaker range is a driver comment, not a measured device limit."
   },
   "sources": [

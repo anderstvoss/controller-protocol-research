@@ -8,8 +8,8 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "bus/protocol.c:224-321, 357-467, 628-685, 1080-1150, 1595-1714; bus/protocol.h:9-17. No physical captures and no measured ACK timing."
+    "transport": "source_only",
+    "scope": "bus/protocol.c:224-321, 357-467, 628-685, 1080-1150, 1595-1714; bus/protocol.h:9-17. No physical captures and no measured ACK timing; source scope is the USB transport."
   },
   "sources": [
     "xbox-xone-gip-protocol",

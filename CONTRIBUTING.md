@@ -41,11 +41,16 @@ remain unchanged when correcting wording.
 
 ## Applicability
 
-A claim with no experiments uses `source_only` (source-derived evidence) or
-`not_measured` (an unknown or unmeasured gap), never `usb`, `bluetooth` or
-`receiver`. Describe the transport handled by the source or covered by the gap
-in `applicability.scope` instead. This distinguishes source applicability from
-measured transport evidence.
+A claim with no experiments normally uses `source_only` (source-derived evidence)
+or `not_measured` (an unknown or unmeasured gap), not `usb`, `bluetooth` or
+`receiver`. An `unknown` device-evidence gap may name the transport the missing
+evidence concerns (`usb`, `bluetooth` or `receiver`), so the status table shows
+that transport as Evidence in progress; `not_measured` remains appropriate for
+gaps without a specific transport. Device-side implementation sources (such as
+OpenPuck for the Puck) may also carry the transport they implement.
+For other claims with no experiments, describe the transport handled by the
+source or covered by the gap in `applicability.scope` instead. This distinguishes
+source applicability from measured transport evidence.
 
 ## Capture safety
 

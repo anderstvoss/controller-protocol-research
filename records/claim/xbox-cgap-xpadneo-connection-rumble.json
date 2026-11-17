@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
-    "scope": "rumble.c:31-36, 229-353, 357-482; xpadneo.h:55-105. Behavior depends on ff_connect_notify and quirk flags."
+    "transport": "source_only",
+    "scope": "rumble.c:31-36, 229-353, 357-482; xpadneo.h:55-105. Behavior depends on ff_connect_notify and quirk flags; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-rumble",
