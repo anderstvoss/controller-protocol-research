@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Correct the transport applicability of 35 source-derived or unmeasured claims from the 2026-11-11 research round; preserve source transport in scope and leave older claims unchanged (#147).
 
+- Add the Logitech DJ / Unifying receiver pattern registry entry and re-file the four #135 consumer claims without changing evidence strength, provenance or physical-measurement limits.
+
 - Add twelve source-only Wii Plus/external and nested MotionPlus consumer predictions; #52 physical experiments not run, no two-gyro acceptance.
 
 - Add nine source-only Wii Remote speaker-consumer claims: pinned libogc WPAD and CWiid report/register, ADPCM, pacing and ACK/status paths, with non-originator boundaries and physical unknowns; no host or hardware tests.
