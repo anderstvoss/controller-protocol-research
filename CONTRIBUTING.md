@@ -39,6 +39,14 @@ Markdown reflow supplies missing word boundaries. Review `applicability` prose
 as well. Numeric field values, packet bytes and evidence qualifications must
 remain unchanged when correcting wording.
 
+## Applicability
+
+A claim with no experiments uses `source_only` (source-derived evidence) or
+`not_measured` (an unknown or unmeasured gap), never `usb`, `bluetooth` or
+`receiver`. Describe the transport handled by the source or covered by the gap
+in `applicability.scope` instead. This distinguishes source applicability from
+measured transport evidence.
+
 ## Capture safety
 
 This repository is intended to be public. Before adding a physical or
