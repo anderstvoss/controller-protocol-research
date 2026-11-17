@@ -7,8 +7,8 @@
     "controller": "steam-controller-2026-puck",
     "revision": "not measured",
     "firmware": "not measured",
-    "transport": "source_only",
-    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation; source scope is the USB transport."
+    "transport": "usb",
+    "scope": "Source-only hypothesis; source definitions are not physical or live consumer confirmation."
   },
   "sources": [
     "openpuck"

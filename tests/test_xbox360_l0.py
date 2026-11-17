@@ -25,7 +25,7 @@ class Xbox360L0Ledger(unittest.TestCase):
                             and not x["experiments"] and x["status"] != "physically_validated" for x in c))
         self.assertTrue(all(x["applicability"]["transport"] == "source_only"
                             for x in c if not x["id"].startswith("x360-l0-device-physical-")))
-        self.assertTrue(all(x["applicability"]["transport"] == "not_measured"
+        self.assertTrue(all(x["applicability"]["transport"] == "usb"
                             for x in c if x["id"].startswith("x360-l0-device-physical-")))
 
     def test_device_sources_and_exp0016_usage_list(self):

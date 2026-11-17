@@ -7,8 +7,8 @@
     "controller": "dualsense",
     "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
     "firmware": "not measured",
-    "transport": "not_measured",
-    "scope": "EXP-0015 notes 64 distinct increasing timestamps without calibrated motion or precise units, no physical comparison experiment; gap concerns the USB transport."
+    "transport": "usb",
+    "scope": "EXP-0015 notes 64 distinct increasing timestamps without calibrated motion or precise units, no physical comparison experiment."
   },
   "sources": [
     "audio-linux-hid-playstation",

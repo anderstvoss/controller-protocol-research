@@ -7,8 +7,8 @@
     "controller": "wii-remote",
     "revision": "Early integrated MotionPlus, non-TR; exact reference not measured",
     "firmware": "not measured",
-    "transport": "not_measured",
-    "scope": "Reference-revision gap: classifier names/IDs are consumer policy, not proof of a unique hardware revision; gap concerns the Bluetooth transport."
+    "transport": "bluetooth",
+    "scope": "Reference-revision gap: classifier names/IDs are consumer policy, not proof of a unique hardware revision."
   },
   "sources": [
     "wii-linux-core",

@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "xpadneo.h:26-28; mappings.c:45-49,130-155; events.c:240-249,343-352; keyboard.c:11-36; power.c:12-167; README.md:150-155.; mouse.c:172-227 for optional mouse mode."
+    "transport": "source_only",
+    "scope": "xpadneo.h:26-28; mappings.c:45-49,130-155; events.c:240-249,343-352; keyboard.c:11-36; power.c:12-167; README.md:150-155.; mouse.c:172-227 for optional mouse mode; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-mappings",

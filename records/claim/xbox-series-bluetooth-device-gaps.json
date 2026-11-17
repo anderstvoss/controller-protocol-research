@@ -7,7 +7,7 @@
     "controller": "xbox-series",
     "revision": "standard Series identity where named; Elite and other revisions excluded",
     "firmware": "not measured",
-    "transport": "not_measured",
+    "transport": "bluetooth",
     "scope": "Bluetooth device-side unknowns remain separate from USB GIP and the observed post-driver evdev artifact."
   },
   "sources": [

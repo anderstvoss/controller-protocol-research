@@ -46,8 +46,7 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['dualsense']['category'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['category'], 'Source evidence')
         self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
-        self.assertEqual(rows['wii-remote']['transports']['not_measured'], 'Evidence in progress')
-        self.assertNotIn('bluetooth', rows['wii-remote']['transports'])
+        self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
         # SDL or kernel source analysis alone is not device-protocol evidence.
         for controller in ['dualsense-edge', 'switch2-pro']:
             with self.subTest(controller=controller):
@@ -65,8 +64,8 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['xbox360']['category'], 'Source evidence')
         self.assertEqual(rows['xbox360']['consumer_category'], 'Source evidence')
         puck = rows['steam-controller-2026-puck']['transports']
-        self.assertEqual(puck['usb'], 'Evidence in progress')
-        self.assertEqual(puck['source_only'], 'Source evidence')
+        self.assertEqual(puck['usb'], 'Source evidence')
+        self.assertNotIn('source_only', puck)
         self.assertEqual(rows['steam-controller-2026-puck']['consumer_transports']['source_only'],
                          'Source evidence')
 

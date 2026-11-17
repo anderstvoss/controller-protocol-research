@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "xpadneo docs/descriptors/xbxs.md:3-165; no descriptor bytes or source excerpts were copied. The original example's exact device firmware is not established by the cited header."
+    "transport": "source_only",
+    "scope": "xpadneo docs/descriptors/xbxs.md:3-165; no descriptor bytes or source excerpts were copied. The original example's exact device firmware is not established by the cited header; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-series-desc"

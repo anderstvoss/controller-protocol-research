@@ -7,8 +7,8 @@
     "controller": "xbox360",
     "revision": "pinned community Free60 ab1fe19, protoR2 4c0d062, x360w a8ac630; Linux 4056b3c; SDL 535d80b and 829a65d; retail revision unknown",
     "firmware": "not measured",
-    "transport": "not_measured",
-    "scope": "Public receiver research lead and third-party hardware report cannot substitute for planned local lab; gap concerns the USB transport."
+    "transport": "usb",
+    "scope": "Public receiver research lead and third-party hardware report cannot substitute for planned local lab."
   },
   "sources": [
     "x360-l0-community-protor2",

@@ -31,7 +31,7 @@ Every newly pinned source record stores its immutable commit URL, SHA-256 and lo
 | Wired output | 8-byte `00 08 00 <strong> <weak> 00 00 00` rumble; 3-byte `01 03 <LED-mode>` | `x360-l0-device-xusb-output-ff-led`. Source evidence from independent USB Host Shield writer (`XBOXUSB.cpp` 323–359) corroborated by `xpad.c` 1569–1579, 1682–1689 and SDL 97–107, 199–209. Output request shape ≠ motor/LED performance. |
 | Vendor interface | Wired `045e:028e` uses XUSB/vendor-specific USB interface, not automatically parsed generic HID; VID/PID alone is insufficient without interface realization | `x360-l0-device-xusb-nonhid-interface`. Community description plus USB xpad host binding; retail descriptor capture not available. |
 | Wireless receiver | `045e:0719` USB dongle, per-controller slots and presence/status, report prefix, distinct rumble/LED, proprietary 2.4 GHz rather than Bluetooth | `x360-l0-device-wireless-receiver0719-lead`. Independent protoR2 and wireless x360w plus USB Host Shield receiver, **future lead**, not equivalent to wired XUSB. |
-| Physical gaps | Genuine wired descriptor/bus and genuine 0719 pairing/capture/FF/LED, actuation timing and range remain unmeasured | `x360-l0-device-physical-wired-usb-unknown`, `x360-l0-device-physical-receiver-unknown` (both `not_measured`; USB transport gaps). |
+| Physical gaps | Genuine wired descriptor/bus and genuine 0719 pairing/capture/FF/LED, actuation timing and range remain unmeasured | `x360-l0-device-physical-wired-usb-unknown`, `x360-l0-device-physical-receiver-unknown` (usb measurement scopes). |
 
 ## Consumer-side L0 decisions
 

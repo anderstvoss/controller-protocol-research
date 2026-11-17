@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series identity where named; Elite and other revisions excluded",
     "firmware": "not measured",
-    "transport": "not_measured",
-    "scope": "Device-side unknowns are separate from the source-only consumer records. No new physical experiment; gap concerns the USB transport."
+    "transport": "usb",
+    "scope": "Device-side unknowns are separate from the source-only consumer records. No new physical experiment."
   },
   "sources": [
     "xbox-series-linux-xpad",

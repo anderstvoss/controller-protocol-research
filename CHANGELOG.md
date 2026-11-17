@@ -7,7 +7,7 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
-- Correct transport applicability for 58 older claims: 23 unmeasured gaps and 35 source-derived claims; preserve the original transport in scope and defer 17 research-lead or conflicted claims (#147).
+- Correct transport applicability for 37 older source-derived consumer claims; document that gap claims and device-implementation sources may name their transport; leave 9 run-backed or conflicted claims for owner review (#147).
 
 - Correct the transport applicability of 35 source-derived or unmeasured claims from the 2026-11-11 research round; preserve source transport in scope and leave older claims unchanged (#147).
 
