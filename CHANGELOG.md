@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add the Logitech DJ / Unifying receiver pattern registry entry and re-file the four #135 consumer claims without changing evidence strength, provenance or physical-measurement limits.
+
 - Add twelve source-only Wii Plus/external and nested MotionPlus consumer predictions; #52 physical experiments not run, no two-gyro acceptance.
 
 - Add nine source-only Wii Remote speaker-consumer claims: pinned libogc WPAD and CWiid report/register, ADPCM, pacing and ACK/status paths, with non-originator boundaries and physical unknowns; no host or hardware tests.
