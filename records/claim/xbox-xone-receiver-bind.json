@@ -8,8 +8,8 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
     "firmware": "not measured",
-    "transport": "source_only",
-    "scope": "transport/dongle.c:20-46, 1076-1182, 1290-1350, 1547-1587; README.md:25-35, 126-142. Firmware prerequisite only: vendor-firmware content was not acquired or inspected. Source scope is the receiver transport."
+    "transport": "receiver",
+    "scope": "transport/dongle.c:20-46, 1076-1182, 1290-1350, 1547-1587; README.md:25-35, 126-142. Firmware prerequisite only: vendor-firmware content was not acquired or inspected."
   },
   "sources": [
     "xbox-xone-receiver",
