@@ -7,8 +7,8 @@
     "controller": "dualsense",
     "revision": "source revisions: Linux 4056b3c, SDL 535d80b, HHD adbd50f, virtualgamepad archive a5310c6; physical firmware/revision not measured",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "HID output fields and application APIs are not physical performance validation."
+    "transport": "not_measured",
+    "scope": "HID output fields and application APIs are not physical performance validation. Gap concerns the USB transport."
   },
   "sources": [
     "audio-linux-hid-playstation",
