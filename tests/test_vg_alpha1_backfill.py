@@ -42,6 +42,13 @@ class VirtualgamepadHistoricalBackfill(unittest.TestCase):
                 (ROOT / "records/experiment").glob("*.json")
                 if p.name.startswith(("ds-vg-", "ds4-vg-", "swpro-vg-",
                                       "x360-vg-", "vg-alpha1-"))}
+        physical = exps.pop("ds-vg-exp0015-physical-usb-hid-run")
+        self.assertEqual(physical["kind"], "controlled_physical")
+        self.assertEqual(physical["status"], "passed")
+        self.assertEqual(physical["fixtures"], [])
+        self.assertEqual(physical["sources"], ["vg-alpha1-exp0015"])
+        claim = next(c for c in b_claims() if c["id"] == "ds-vg-exp0015-physical-usb-hid")
+        self.assertEqual(claim["experiments"], [physical["id"]])
         self.assertEqual(len(exps), 18)
         self.assertEqual(Counter(x["status"] for x in exps.values()),
                          {"passed": 16, "failed": 1, "blocked": 1})

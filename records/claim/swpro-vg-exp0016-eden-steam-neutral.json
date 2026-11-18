@@ -7,7 +7,7 @@
     "controller": "switch-pro",
     "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "User-reported consumer disagreement with missing exact builds/mapping provenance. No physical reference and no confirmed blame on Steam or virtualgamepad."
   },
   "sources": [

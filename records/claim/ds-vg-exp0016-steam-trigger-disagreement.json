@@ -7,7 +7,7 @@
     "controller": "dualsense",
     "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "User-reported manual test, exact Steam/Eden versions and mappings absent. Uncorroborated and not proof of wire-axis error or physical DualSense behavior."
   },
   "sources": [

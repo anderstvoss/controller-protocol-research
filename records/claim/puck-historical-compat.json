@@ -7,15 +7,15 @@
     "controller": "openpuck-firmware",
     "revision": "unknown",
     "firmware": "unknown",
-    "transport": "usb",
-    "scope": "Unrecovered historical handoff only:1142 cannot be attributed to current pinned OpenPuck, which selects1304. Retain the historical conflict until originating artifacts are recovered."
+    "transport": "source_only",
+    "scope": "Unrecovered historical handoff only: compatibility PID 1142 attribution remains unresolved, not retired. The current pinned OpenPuck implementation selects PID 1304; the originating revision for PID 1142 has not been established. This is a compatibility-source attribution discrepancy, not a conflict with the independently scoped official physical receiver identity."
   },
   "sources": [
     "handoff"
   ],
   "experiments": [],
   "conflicts_with": [
-    "puck-historical-physical"
+    "puck-current"
   ],
   "supersedes": [],
   "rejection_scope": null
