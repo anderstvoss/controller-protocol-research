@@ -7,7 +7,7 @@
     "controller": "dualshock4",
     "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "User-reported virtual-controller observation only. Exact Steam/Eden versions, backend maps and paths unavailable; neither a verified Steam defect nor physical DS4 evidence."
   },
   "sources": [

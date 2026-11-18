@@ -13,7 +13,9 @@
   "sources": [
     "vg-alpha1-exp0015"
   ],
-  "experiments": [],
+  "experiments": [
+    "ds-vg-exp0015-physical-usb-hid-run"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,

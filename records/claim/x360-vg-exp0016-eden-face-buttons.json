@@ -7,7 +7,7 @@
     "controller": "xbox360",
     "revision": "virtualgamepad alpha-1 historical observation, pinned document c60c1640",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "User-reported, unversioned Eden observation. Standard-HID mapping, not XInput or physical controller; do not treat reported mismap as reproduced post-correction."
   },
   "sources": [

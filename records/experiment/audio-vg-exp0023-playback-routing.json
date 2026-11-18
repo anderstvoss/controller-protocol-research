@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "audio-vg-exp0023-playback-routing",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "audio-vg-exp0023"
+  ],
+  "fixtures": [],
+  "procedure": "Historical physical USB DualSense playback routing, 2026-09-23 to 2026-09-24, Linux VM 6.12.107, VID 054c, PID 0ce6, bcdDevice 1.00; complete firmware not established. Pinned maintainer narrative: https://github.com/anderstvoss/virtualgamepad/blob/55f36d92c5b6e06edae6ef06a0defdc6b54a178b/docs/history/alpha-1/experiments/EXP-0023-controller-audio.md . Four separate 250 ms 110 Hz ALSA bursts at amplitude 300/32767 transferred one channel at a time; a one-second stereo capture transferred 192000 bytes. With a 3.5 mm headset attached, the operator confirmed left then right audio; the two grip channels were repeated alone as 750 ms 110 Hz bursts at 1600/32767 with three seconds of silence. A separate reattached PipeWire test used four 750 ms tones at 48 kHz S16_LE with one-second gaps (headset 440 Hz at 1000/32767, grips 110 Hz at 1600/32767). On Sept 24 a fresh ALSA sequence repeated all four routes. Ordinary right-channel playback with headset removed on Sept 23 gave no heard speaker output, and the Sept 24 unselected-route test was inconclusive. A bounded audio-only HID speaker selection then used the right source, volume 0x64 and preamp 0x02 and a quiet one-second tone, restoring stereo headphone routing afterward. No trigger commands; previous speaker gain/preamp could not be read back.",
+  "semantic_outcome": "Passed for limited historical human-confirmed sequential playback: channels 1/2 left/right headphones and 3/4 left/right grips; the explicit audio-only speaker route was subsequently heard, not evidence of automatic jack switching. This does not establish quantitative isolation, crosstalk, timing, gain, comparative fidelity or controller matching. Headset microphone captures transferred (144000 stereo frames per three-second window) but speech response or intelligibility was not established; gain was restored after the separate gain checks, and no PCM retained. Not a new run or raw capture revalidation."
+}

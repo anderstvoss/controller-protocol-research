@@ -13,7 +13,9 @@
   "sources": [
     "audio-vg-exp0023"
   ],
-  "experiments": [],
+  "experiments": [
+    "audio-vg-exp0023-usb-topology"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null
