@@ -6,6 +6,33 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 
+# Exact claim ID, status and evidence role; these exceptions apply only to USB.
+TRANSPORT_WITHOUT_EXPERIMENT_EXCEPTIONS = {
+    ('puck-current', 'source_supported', 'device'),  # OpenPuck mode identity (#150).
+    ('sc2-gap-puck-slots', 'inferred', 'device'),  # OpenPuck slot model, not physical validation (#150).
+    ('sc2-migration-openpuck-identities', 'source_supported', 'device'),  # OpenPuck identities (#150).
+    ('sc2-migration-openpuck-report-declarations', 'source_supported', 'device'),  # OpenPuck report declarations (#150).
+    ('sc2-migration-openpuck-slots', 'source_supported', 'device'),  # OpenPuck slot implementation (#150).
+    ('xbox-xone-physical-unknown', 'unknown', 'consumer'),  # Preserved physical-device gap in consumer evidence (#150).
+}
+
+
+def validate_claim_transport(claim):
+    transport = claim['applicability']['transport']
+    if transport not in ('usb', 'bluetooth', 'receiver') or claim['experiments']:
+        return
+    role = claim.get('evidence_role', 'device')
+    status = claim['status']
+    if status == 'unknown' and role == 'device':
+        return
+    if transport == 'usb' and (claim['id'], status, role) in TRANSPORT_WITHOUT_EXPERIMENT_EXCEPTIONS:
+        return
+    raise ValueError(
+        f"claim {claim['id']} has measured transport {transport} without an experiment; "
+        "link a supporting experiment or use source_only/not_measured and describe the transport in applicability.scope"
+    )
+
+
 def validate(root):
     root = Path(root).resolve()
     records = {}
@@ -46,6 +73,7 @@ def validate(root):
             if role not in ('device', 'consumer'):
                 raise ValueError('invalid claim evidence_role: ' + id)
             reference(rec['applicability']['controller'], 'controller')
+            validate_claim_transport(rec)
         if category == 'report':
             reference(rec['claim'], 'claim')
         if category == 'claim':

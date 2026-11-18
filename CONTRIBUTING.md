@@ -51,6 +51,8 @@ OpenPuck for the Puck) may also carry the transport they implement.
 For other claims with no experiments, describe the transport handled by the
 source or covered by the gap in `applicability.scope` instead. This distinguishes
 source applicability from measured transport evidence.
+The validator enforces this rule, accepting unknown device gaps and only the
+explicitly allowlisted device-side implementation and consumer-gap exceptions.
 
 ## Capture safety
 

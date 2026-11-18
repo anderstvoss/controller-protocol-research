@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Enforce an experiment reference for measured transport tags except unknown device gaps and the six explicitly approved exceptions; relabel the documentary Puck cadence claim to `source_only` (#147).
+
 - Apply the owner decision to the final ten #147 claims: link three historical DualSense physical-summary experiments and two existing Puck receiver experiments, keep the compatibility PID 1142 attribution unresolved, and relabel six documentary consumer or compatibility claims without claiming new physical validation. No validator rule added.
 
 - Correct transport applicability for 36 older source-derived consumer claims; document that gap claims and device-implementation sources may name their transport; leave 10 claims for owner review (#147).
