@@ -63,9 +63,14 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['switch-pro']['consumer_category'], 'Source evidence')
         self.assertEqual(rows['xbox360']['category'], 'Source evidence')
         self.assertEqual(rows['xbox360']['consumer_category'], 'Source evidence')
+        # Documentary cadence is source-only; USB slot topology is still a gap.
+        self.assertEqual(rows['steam-controller-2026-puck']['category'], 'Source evidence')
         puck = rows['steam-controller-2026-puck']['transports']
-        self.assertEqual(puck['usb'], 'Source evidence')
-        self.assertNotIn('source_only', puck)
+        self.assertEqual(puck['usb'], 'Evidence in progress')
+        self.assertEqual(puck['source_only'], 'Source evidence')
+        self.assertEqual(puck['receiver'], 'Source evidence')
+        # The named OpenPuck implementation exceptions retain their own USB scope.
+        self.assertEqual(rows['openpuck-firmware']['transports']['usb'], 'Source evidence')
         self.assertEqual(rows['steam-controller-2026-puck']['consumer_transports']['source_only'],
                          'Source evidence')
 
