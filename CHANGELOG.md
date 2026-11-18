@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Add source-only Xbox Series Bluetooth rumble mask, magnitude and timing semantics and DS4 USB/Bluetooth rumble flag and field offsets; no physical run (virtualgamepad #365).
+
 - Enforce an experiment reference for measured transport tags except unknown device gaps and the six explicitly approved exceptions; relabel the documentary Puck cadence claim to `source_only` (#147).
 
 - Apply the owner decision to the final ten #147 claims: link three historical DualSense physical-summary experiments and two existing Puck receiver experiments, keep the compatibility PID 1142 attribution unresolved, and relabel six documentary consumer or compatibility claims without claiming new physical validation. No validator rule added.
