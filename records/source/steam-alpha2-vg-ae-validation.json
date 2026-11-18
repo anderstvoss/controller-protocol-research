@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "steam-alpha2-vg-ae-validation",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/324d250bb01a5ddbfc1dd189513d4c9160429ee1/crates/gr-curated-controllers/src/steam_controller_2026/codec.rs",
+  "revision": "324d250bb01a5ddbfc1dd189513d4c9160429ee1",
+  "sha256": "0e89cd61046aed34958598a3f5db744a59ffc3ca7fd844eaef20cff4b9c96edc",
+  "lineage": "Public virtualgamepad implementation at the exact Alpha 2 evidence candidate; source inspection and a private metadata-only logging wrapper, not controller firmware. No upstream source copy or identity bytes included.",
+  "locator": "Protocol feature SET validation accepts selector 1 with declared lengths 21 or 22 and rejects other 0xae forms as Invalid; SteamHidProtocol request wrapper used for metadata-only observation."
+}

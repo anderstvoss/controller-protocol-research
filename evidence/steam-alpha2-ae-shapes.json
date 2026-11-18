@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "selector-length-only comparison",
+  "candidate": "324d250bb01a5ddbfc1dd189513d4c9160429ee1",
+  "architecture": "x86_64",
+  "kernel": "7.3.0-1-mainline",
+  "steam_build": "1794424036",
+  "installed_native_sdl": "3.4.18",
+  "steam_internal_sdl": "not established",
+  "virtual_binding": "hid-steam",
+  "physical_binding": "hid-steam",
+  "virtual_request_totals": [
+    {
+      "selector": 1,
+      "declared_length": 1,
+      "payload_length": 63,
+      "wire_length": 64,
+      "decision": "rejected-invalid",
+      "count": 3
+    },
+    {
+      "selector": 1,
+      "declared_length": 21,
+      "payload_length": 63,
+      "wire_length": 64,
+      "decision": "accepted",
+      "count": 1
+    },
+    {
+      "selector": 1,
+      "declared_length": 22,
+      "payload_length": 63,
+      "wire_length": 64,
+      "decision": "accepted",
+      "count": 1
+    }
+  ],
+  "physical_request_response_shapes": [
+    {
+      "selector": 1,
+      "request_declared_length": 1,
+      "request_wire_length": 64,
+      "values": "not logged",
+      "set_return_length": 64,
+      "set_status": "accepted",
+      "get_status": "success",
+      "response_wire_length": 63,
+      "response_command_matches_ae": true,
+      "response_declared_length": 20,
+      "response_selector": 1
+    },
+    {
+      "selector": 1,
+      "request_declared_length": 21,
+      "request_wire_length": 64,
+      "values": "not logged",
+      "set_return_length": 64,
+      "set_status": "accepted",
+      "get_status": "success",
+      "response_wire_length": 63,
+      "response_command_matches_ae": true,
+      "response_declared_length": 20,
+      "response_selector": 1
+    },
+    {
+      "selector": 1,
+      "request_declared_length": 22,
+      "request_wire_length": 64,
+      "values": "not logged",
+      "set_return_length": 64,
+      "set_status": "accepted",
+      "get_status": "success",
+      "response_wire_length": 63,
+      "response_command_matches_ae": true,
+      "response_declared_length": 20,
+      "response_selector": 1
+    }
+  ],
+  "instrumentation": {
+    "baseline": "324d250bb01a5ddbfc1dd189513d4c9160429ee1",
+    "instrumented_file": "crates/gr-curated-controllers/src/steam_controller_2026/codec.rs",
+    "instrumented_sha256": "41f339ec95b2989ca2d5019317259131bd2ec5bbd733ca3dd2da3b6af3a9c67a",
+    "harness_sha256": "7b5daafff50d6b5896be06e413d30f9a4d6aab699c9cf80a7bdfdab066ed926b",
+    "registry_dependencies_match_baseline": true,
+    "log_fields": [
+      "selector",
+      "declared_length",
+      "payload_length",
+      "wire_length",
+      "decision"
+    ],
+    "value_bytes": "never logged",
+    "serials": "never logged",
+    "matrix_reuse": "bounded A/stick movement and retained haptic presence/nonzero flags only; no value bytes or identities"
+  },
+  "privacy": "No serials, identity values, raw buffers, strings, host paths, hostnames, addresses or wall-clock timestamps were collected in this artifact. Instrumentation records selectors, lengths and decisions only; actual bytes are excluded.",
+  "cleanup": "Virtual parent/layered HID nodes removed; physical query handle closed and physical device disconnected; Steam closed during physical queries."
+}
