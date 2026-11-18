@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-trigger-demo-source",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/535d80badefc83c5c527ec5748f2a20d6a9310fe/test/testcontroller.c",
+  "revision": "535d80badefc83c5c527ec5748f2a20d6a9310fe",
+  "sha256": "bd1116ba83f1cf7466d02e208db3cfb059e8c21c284db175b4933652ff7d735f",
+  "lineage": "libsdl",
+  "locator": "235-255: test application sends three trigger blocks and sets independent validity bits; demonstration only, no physical measurements."
+}
