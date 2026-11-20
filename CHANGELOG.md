@@ -9,8 +9,8 @@ affected schema's `schema_version`.
 
 - Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
 
-
 - Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
+- Pin the Wii speaker compatibility-model ADPCM arithmetic, PCM widening, decode gates and state lifetime; preserve physical reset, activation and ACK unknowns (source only, no host or physical run).
 
 - Enforce an experiment reference for measured transport tags except unknown device gaps and the six explicitly approved exceptions; relabel the documentary Puck cadence claim to `source_only` (#147).
 
