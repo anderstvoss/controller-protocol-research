@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "compatibility_implementation",
+  "revision": "6e41a4dbad6146d1c4bcffcf3188611f8b86948d",
+  "lineage": "missioncontrol",
+  "id": "swpro-missioncontrol-rumble-cpp",
+  "url": "https://github.com/ndeadly/MissionControl/blob/6e41a4dbad6146d1c4bcffcf3188611f8b86948d/mc_mitm/source/controllers/switch_rumble_decoder.cpp",
+  "sha256": "963fe574550cb9bda2b225533c84f06a0345e7d73ec1b2e240764a5158644553",
+  "locator": "Lines 22–151: logarithmic scales, amplitude/frequency indices and relative operations; 154–193: initial state and dispatch; 194–314: ordered sample application and conversion."
+}
