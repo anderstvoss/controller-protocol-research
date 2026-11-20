@@ -8,7 +8,8 @@ class XboxSeriesLedger(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('xbox-series-*.json')]
         consumers = [c for c in claims if c['status'] == 'source_supported']
-        self.assertEqual(len(consumers), 9)
+        self.assertEqual(len(consumers), 10)
+        self.assertIn('xbox-series-rumble-native-fields', {c['id'] for c in consumers})
         self.assertTrue(all(c['applicability']['transport'] == 'source_only' for c in consumers))
         self.assertTrue(all(c.get('evidence_role') == 'consumer' for c in consumers))
         gaps = [c for c in claims if c['status'] == 'unknown']
