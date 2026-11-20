@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-rumble-relative-commands",
+  "statement": "MissionControl applies each relative five-bit command to the preceding state independently per band, in signed log2 units of 1/32. Command 0 resets both exponents to amplitude −256 and frequency 0 in these integer units; 1–11 set amplitude to −16 times (command minus 1) and retain frequency. Commands 12–16 set frequency to 6 times (command minus 14) and retain amplitude. Commands 17–31 form five groups of three, with respective amplitude changes +4, +1, 0, −1, −4; within each group frequency changes +1, 0, −1. Relative sums saturate at amplitude [−256,0] and frequency [−64,64]. Direct assignment and reset do not require earlier values for the assigned fields. Each next sample uses the state after the previous sample, and missing previous state cannot be inferred from a relative command.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "MissionControl v0.12.0 (6e41a4dbad6146d1c4bcffcf3188611f8b86948d)",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Consumer semantics for one/two/three relative and mixed samples; no physical decoding or actuator validation. The compatibility implementation chooses default state on construction; do not assume it for an arbitrary isolated captured word."
+  },
+  "sources": [
+    "swpro-missioncontrol-rumble-hpp",
+    "swpro-missioncontrol-rumble-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
