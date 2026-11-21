@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-p5a-followup-dualsense-usbip-timing",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [],
+  "procedure": "Baseline virtualgamepad 6b6da124a1c28abcfb1a4595ede0da2e204351cd. Used the broker-backed linux.usbip.usb-audio realization and 50 cycles each at N1 and N3 with SDL and no budgets. The host input node joined the broker-verified attachment by canonical sysfs ancestry. The runner held the original USB directory object through close to separate node removal from a replacement reused on the same port. Timing used SDL evdev.",
+  "semantic_outcome": "N1 on vg revision 522de9054302eff82b9faea4c39d51e8fef8d10c: 50 slots, 50 created, 50 appeared, 0 opened via evdev, 50 SDL-ready, 50 removed. N3 on vg revision 522de9054302eff82b9faea4c39d51e8fef8d10c: 150 slots, 150 created, 150 appeared, 0 opened via evdev, 150 SDL-ready, 150 removed. The final host attach list was empty. See the related claim index in docs/p5a-followup-evidence.md."
+}
