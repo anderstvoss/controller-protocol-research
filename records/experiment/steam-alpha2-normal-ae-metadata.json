@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "steam-alpha2-normal-ae-metadata",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "steam-alpha2-vg-ae-validation",
+    "steam-ibex-linux-driver"
+  ],
+  "fixtures": [],
+  "procedure": "Create one normal-profile wired virtual controller from virtualgamepad 324d250bb01a5ddbfc1dd189513d4c9160429ee1 on x86-64 Linux 7.3.0-1-mainline with physical Valve hardware disconnected and Steam build 1794424036 open. Installed native SDL is 3.4.18; Steam internal SDL/backend not established. A private source snapshot adds logging only after the codec decision: 0xae selector, declared length, payload/wire lengths and accept/reject decision; all value bytes and identities are excluded. Observe listing, dedicated Begin Test and Details. Run a bounded A/stick sample and Steam Ping, then neutralize and close twice. Source/build hashes and metadata-only totals are in evidence/steam-alpha2-ae-shapes.json.",
+  "semantic_outcome": "Normal Steam use produced three rejected-Invalid selector-1 SETs with declared length 1, while selector-1 declared lengths 21 and 22 were accepted once each. All requests had 63 payload bytes and 64 numbered wire bytes; no unknown selector or actual buffer truncation was observed. Owner confirmed Steam Controller listing, native tester A/stick movement and neutral, and Details. Ping changed retained haptic metadata. Both parent and layered HID nodes disappeared after close. Passed means the evidence procedure completed, not acceptance of the rejected requests."
+}

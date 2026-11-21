@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "steam-alpha2-ae-virtual-length-rejection",
+  "statement": "In a normal-profile virtualgamepad 324d250bb01a5ddbfc1dd189513d4c9160429ee1 Steam 1794424036 run, all three rejected 0xae SETs used implemented selector 1 with declared length 1; their actual payloads were 63 bytes and numbered wire buffers 64 bytes. Selector-1 declared lengths 21 and 22 were each accepted once. The codec permits only those two declared lengths for selector 1, so these observed rejections are caused by overly strict declared-length validation rather than an unknown selector or a truncated request buffer. The fresh physical selector-1 comparison accepted declared length 1 with the same response shape as 21 and 22. This supports admitting the observed short form while preserving selector checks, actual-size validation, unsupported report handling and the existing serial reply shape. No change to other selectors or identity semantics is supported by this run.",
+  "status": "source_supported",
+  "evidence_role": "consumer",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "transport": "usb",
+    "revision": "Virtualgamepad 324d250bb01a5ddbfc1dd189513d4c9160429ee1 normal-profile wired UHID",
+    "firmware": "Synthetic compatibility profile; no live firmware-version claim",
+    "scope": "Metadata-only normal-use consumer trace plus exact source validation and physical selector-1 shape comparison. Does not identify unlogged selectors from earlier runs, prove universal physical behavior or qualify a product fix."
+  },
+  "sources": [
+    "steam-alpha2-vg-ae-validation",
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-alpha2-normal-ae-metadata",
+    "steam-alpha2-physical-ae-shapes"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
