@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-rumble-native-fields",
+  "statement": "Pinned Linux and SDL consumers place the common DS4 output flags and motor values at the same relative offsets in USB 0x05 and Bluetooth 0x11. In ID-excluded payloads the two validity bytes are at offsets 0/1 (USB) or 2/3 (Bluetooth); weak/right and strong/left unsigned 8-bit values are at 3/4 (USB) or 5/6 (Bluetooth). Bit 0 of the first validity byte enables motor updates; when clear, the motor bytes alone do not request a stop. Bluetooth has a two-byte prefix and a CRC32 over HID output prefix 0xA2, report ID and preceding payload, stored little-endian in the final four bytes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c and SDL 535d80b consumer implementations; retail revision unknown",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "hid-playstation.c:507-539,2332-2343,2365-2386; SDL_hidapi_ps4.c:924-973. Source-only field layout, enable and CRC convention; no physical run or physical intensity claim."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
