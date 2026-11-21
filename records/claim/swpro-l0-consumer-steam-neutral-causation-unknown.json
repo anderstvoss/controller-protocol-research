@@ -15,7 +15,9 @@
     "audio-linux-hid-nintendo",
     "vg-alpha1-exp0016"
   ],
-  "experiments": [],
+  "experiments": [
+    "vg-alpha1-p5a-switch-pro-linux-uhid-usb-bound-ed8065b4be2c"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha1-p5a-dualsense-linux-uhid-usb-bound-ed8065b4be2c",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [],
+  "procedure": "Three stock virtual-host sessions with the P4 holder and SDL 3.4.20, plus one focused SDL button and stick sweep. The isolated Steam retest used build 1794536281. Controller virtualgamepad.dualsense; realization linux.uhid.usb; condition bound. Public Alpha 1 holder and existing SDL3 exact-node probe with HIDAPI enabled/disabled. vg SHA ed8065b4be2c266dd64e9cedba16e87889392a14; research submodule SHA a67781e2412eceea9440d20dbb350ad5d3352c25; kernel 7.3.0-1-mainline; SDL pkg-config 3.4.20. Inputs are sanitized matrix JSON; raw captures and host identifiers are not imported.",
+  "semantic_outcome": "Session 1: playstation, hidapi requested with diagnostic failed; evdev requested with diagnostic failed. Session 2: playstation, hidapi requested with diagnostic failed; evdev requested with diagnostic failed. Session 3: playstation, hidapi requested with diagnostic failed; evdev requested with diagnostic failed. The P4 diagnostic verdict includes sensor requirements. Its backend classifier does not cover SDL 3.4.20. The exact-path follow-up sweep delivered four face-button press/release transitions and both endpoints on each of the four stick axes over hidapi request via hidraw. The privileged comparison stopped on the first attempted per-device sysfs write. No physical fidelity or timing qualification is inferred. Steam result. Absent from the isolated Steam list. In the earlier owner-observed attempt a tester and separate gyro screen were visible, with timing controllers present. UHID gyro availability remains inconclusive across the two attempts."
+}

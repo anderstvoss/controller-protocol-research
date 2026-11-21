@@ -13,7 +13,9 @@
   "sources": [
     "xbox-series-sdl-xboxone"
   ],
-  "experiments": [],
+  "experiments": [
+    "vg-p5a-xbox-series-bluetooth-open-neutral-ed8065b4be2c"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,

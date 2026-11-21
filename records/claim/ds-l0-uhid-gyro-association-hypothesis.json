@@ -17,7 +17,8 @@
     "dualsense-uhid-gyro-hhd-device-source"
   ],
   "experiments": [
-    "ds-vg-dummy-hcd-steam-host-run"
+    "ds-vg-dummy-hcd-steam-host-run",
+    "vg-alpha1-p5a-dualsense-linux-uhid-usb-bound-ed8065b4be2c"
   ],
   "conflicts_with": [],
   "supersedes": [],

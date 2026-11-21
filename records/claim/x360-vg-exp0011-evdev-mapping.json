@@ -14,7 +14,8 @@
     "vg-alpha1-exp0011"
   ],
   "experiments": [
-    "x360-vg-exp0011-evdev-sdl-host-run"
+    "x360-vg-exp0011-evdev-sdl-host-run",
+    "vg-alpha1-p5a-xbox360-linux-uinput-bound-ed8065b4be2c"
   ],
   "conflicts_with": [],
   "supersedes": [],
