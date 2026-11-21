@@ -14,8 +14,7 @@
     "vg-alpha1-dummy-hcd-poc"
   ],
   "experiments": [
-    "ds-vg-dummy-hcd-steam-host-run",
-    "vg-alpha1-p5a-dualsense-linux-uhid-usb-bound-ed8065b4be2c"
+    "ds-vg-dummy-hcd-steam-host-run"
   ],
   "conflicts_with": [],
   "supersedes": [],

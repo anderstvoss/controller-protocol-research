@@ -15,9 +15,7 @@
     "audio-linux-hid-playstation",
     "ds4-linux-hid-sony-v61"
   ],
-  "experiments": [
-    "vg-alpha1-p5a-dualshock4-linux-uinput-bound-ed8065b4be2c"
-  ],
+  "experiments": [],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,

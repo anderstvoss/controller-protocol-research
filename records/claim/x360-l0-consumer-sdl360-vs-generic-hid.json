@@ -17,9 +17,7 @@
     "x360-l0-linux-hid-input",
     "xbox-series-linux-xpad"
   ],
-  "experiments": [
-    "vg-alpha1-p5a-xbox360-linux-uhid-usb-bound-ed8065b4be2c"
-  ],
+  "experiments": [],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,
