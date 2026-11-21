@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-linux-usb-mixer-maps",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/sound/usb/mixer_maps.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "87005cf76b0e6654c0bc935f3753ed672ce55b124f9cdf4d1211e6755630006b",
+  "lineage": "linux-kernel",
+  "locator": "Whole pinned mixer-map file inspected for DualSense, DualShock 4 and Xbox 360 model-specific entries; none present. It is a consumer lookup table, not a USB descriptor capture."
+}

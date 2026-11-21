@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-uac1-options",
+  "statement": "The v7.3 f_uac1 configfs function provides playback/capture channel masks, lists of sample rates, sample sizes, and optional mute/volume feature units. Descriptor channel count is derived from enabled mask bits. Unlike f_uac2, the pinned UAC1 configfs ABI lists no terminal-type overrides. Its streaming endpoints are isochronous; the options do not guarantee a controller-exact UAC1 descriptor graph.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux UAC1 gadget-function options and descriptor construction, not a reference DualSense device measurement."
+  },
+  "sources": [
+    "usb-gadget-linux-uac1-v73",
+    "usb-gadget-linux-uac1-abi-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

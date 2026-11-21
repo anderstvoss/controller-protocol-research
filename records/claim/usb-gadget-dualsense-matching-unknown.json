@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-dualsense-matching-unknown",
+  "statement": "Whether a gadget-f_hid-plus-UAC1 configuration could match the DualSense physical UAC1 topology, control request sequence, terminal graph, channel routing and host consumer recognition is unverified. Kernel option availability alone is insufficient to promote matching, independent of the dummy_hcd isochronous blocker.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Real-UDC alternative only; no reference descriptor comparison or physical/host run."
+  },
+  "sources": [
+    "usb-gadget-linux-uac1-v73",
+    "usb-gadget-linux-uac2-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

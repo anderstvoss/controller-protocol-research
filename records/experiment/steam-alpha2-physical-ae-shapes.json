@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "steam-alpha2-physical-ae-shapes",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "fixtures": [],
+  "procedure": "With explicit owner agreement, connect one real direct-wired 28de:1302 Steam Controller, close Steam to avoid competing feature queries, and select the unique hidraw path under that physical USB device. Using only known read-query forms, issue selector-1 0xae SET/GET pairs with declared lengths 1, 21 and 22 in 64-byte numbered feature buffers, in that order. Record syscall status, returned length, response command match, declared response length and selector only. Do not log, hash, inspect string content or persist identity/value bytes; clear transient buffers after extracting metadata. Close the handle and disconnect the physical device. No firmware, pairing, configuration or haptic commands.",
+  "semantic_outcome": "All three SETs returned 64 and all GETs returned 63 wire bytes, command 0xae, declared response length 20 and selector 1. This confirms short selector-1 form acceptance and response shape on this unit, not identity semantics, value equivalence, universal firmware behavior or other selectors."
+}

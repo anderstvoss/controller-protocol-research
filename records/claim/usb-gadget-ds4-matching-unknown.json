@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-ds4-matching-unknown",
+  "statement": "A functional stereo/mono gadget audio profile does not establish the DualShock 4 USB audio class, interface topology, speaker routing or actual headset-microphone exposure. No matching host-device outcome is established for a composite gadget.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "DualShock 4 physical audio topology not measured by this research; no host test."
+  },
+  "sources": [
+    "usb-gadget-linux-uac1-v73",
+    "usb-gadget-linux-uac2-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

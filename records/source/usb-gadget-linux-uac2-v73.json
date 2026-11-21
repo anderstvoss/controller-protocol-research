@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-uac2-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac2.c",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "2156f0af17b5da24fabe2a9769643105dd012f71f3ed23f1d0d95f485c282b5a",
+  "lineage": "linux-mainline",
+  "locator": "388-491: isochronous endpoints; 967-1012: terminal types and option validation; 1101-1132: mask-derived channel count and feature units."
+}
