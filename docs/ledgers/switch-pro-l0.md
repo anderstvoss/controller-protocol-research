@@ -111,6 +111,7 @@ The [ranked p9c brief](../p9c-switch-pro-bt-uhid.md) adds seven scoped `swpro-bt
 | --- | --- | --- | --- |
 | Bluetooth initialization and no USB 0x80 | `swpro-bt-consumer-open-gate` | Linux/SDL consumer | Source-only, no host run |
 | Simple mode 0x3F to full 0x30 | `swpro-bt-simple-report-mode` | Community research lead | Default behavior not physically verified |
+| Simple-mode stick neutral code 0x8000 | `swpro-bt-simple-axis-neutral` | SDL consumer source | Consumer-defined axis neutral only; no retail trace |
 | Rumble/subcommand 0x01/0x10 with 0x21 reply | `swpro-bt-subcommand-report-framing` | Consumer plus research lead | No measured NACK or retry timing |
 | Full input prefix and IMU | `swpro-bt-full-mode-input-layout` | Consumer plus research lead | No measured timing/calibration |
 | Device info/SPI/LED/IMU/vibration opens | `swpro-bt-consumer-reply-coverage` | Linux/SDL consumer | No other command parity implied |
