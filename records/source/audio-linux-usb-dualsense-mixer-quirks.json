@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "audio-linux-usb-dualsense-mixer-quirks",
+  "kind": "kernel_source",
+  "url": "https://github.com/torvalds/linux/blob/4056b3c9d3c92ea45955641dbafeb9b960e146ef/sound/usb/mixer_quirks.c",
+  "revision": "4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+  "sha256": "3ed32d743abd2ced5e11ebc0bf361660a9e67e9cdd0925d64c82fd62f71ff2a6",
+  "lineage": "linux-kernel",
+  "locator": "537-545 UAC1 and jack terminal IDs; 575-603 USB-device ancestry match; 702-775 read-only jack controls; 4452-4455 Sony DualSense dispatch."
+}

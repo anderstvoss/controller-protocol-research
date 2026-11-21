@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "id": "audio-dualsense-usb-linux-jack-identity",
+  "statement": "In pinned Linux sound/usb/mixer_quirks.c, the DualSense USB audio quirk identifies a UAC1 device and creates read-only Headphone Jack and Headset Mic Jack controls using terminal IDs 3 and 4. The sound-side input handler accepts hid-playstation jack events only from an input device sharing the same physical USB-device ancestry as the sound card. These controls are consumer-synthesized jack state, not evidence of physical PCM terminal type codes, volume/mute feature-unit semantics or automatic association of separate UHID and PipeWire nodes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Pinned Linux USB audio mixer implementation; no host execution, descriptor capture or physical output validation."
+  },
+  "sources": [
+    "audio-linux-usb-dualsense-mixer-quirks",
+    "audio-linux-hid-playstation"
+  ],
+  "evidence_role": "consumer"
+}
