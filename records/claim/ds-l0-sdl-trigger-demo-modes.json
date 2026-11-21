@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ds-l0-sdl-trigger-demo-modes",
+  "statement": "The pinned SDL testcontroller demonstration sets independent right/left trigger-update flags 0x04 and 0x08 and sends the same 11-byte mode block to both sides. Its three examples are reset 0x05 followed by ten zero bytes, mode 0x01 with parameter bytes 00 6e and then zeros, and mode 0x06 with parameter bytes 0f 3f 80 and then zeros. This demonstration does not specify general parameter ranges or physical units for modes 0x01 and 0x06; consumers must preserve those as unknown rather than infer a complete decode.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "SDL testcontroller.c 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL application demonstration lines 235-255; both sides and validity bits, not exhaustive device mode encoding; no hardware or physical run."
+  },
+  "sources": [
+    "ds-l0-sdl-trigger-demo-source"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
