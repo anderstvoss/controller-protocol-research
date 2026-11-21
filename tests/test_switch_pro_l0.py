@@ -14,11 +14,11 @@ class SwitchProL0Ledger(unittest.TestCase):
     def test_new_claims_have_explicit_roles_and_no_physical_promotion(self):
         claims = [json.loads(p.read_text()) for p in
                   (ROOT / "records/claim").glob("swpro-l0-*.json")]
-        self.assertEqual(len(claims), 42)
-        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 22)
-        self.assertEqual(sum(c["evidence_role"] == "device" for c in claims), 20)
+        self.assertEqual(len(claims), 46)
+        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 25)
+        self.assertEqual(sum(c["evidence_role"] == "device" for c in claims), 21)
         self.assertEqual(sum(c["status"] == "unknown" for c in claims), 8)
-        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 33)
+        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 37)
         self.assertTrue(all(c["applicability"]["controller"] == "switch-pro"
                             and c["sources"] and c["experiments"] == []
                             for c in claims))

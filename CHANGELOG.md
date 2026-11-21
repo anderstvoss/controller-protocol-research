@@ -9,6 +9,14 @@ affected schema's `schema_version`.
 
 - Record Alpha 2 normal-profile 0xae selector/length decisions and an owner-authorized physical selector-1 shape comparison: the virtual codec rejects the short form accepted by the physical unit; no identity values or raw buffers published.
 
+- Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
+
+- Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
+
+- Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
+- Pin the Wii speaker compatibility-model ADPCM arithmetic, PCM widening, decode gates and state lifetime; preserve physical reset, activation and ACK unknowns (source only, no host or physical run).
+- Add source-only Xbox Series Bluetooth rumble mask, magnitude and timing semantics and DS4 USB/Bluetooth rumble flag and field offsets; no physical run (virtualgamepad #365).
+
 - Enforce an experiment reference for measured transport tags except unknown device gaps and the six explicitly approved exceptions; relabel the documentary Puck cadence claim to `source_only` (#147).
 
 - Apply the owner decision to the final ten #147 claims: link three historical DualSense physical-summary experiments and two existing Puck receiver experiments, keep the compatibility PID 1142 attribution unresolved, and relabel six documentary consumer or compatibility claims without claiming new physical validation. No validator rule added.
