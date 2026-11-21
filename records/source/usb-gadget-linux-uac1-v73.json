@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-uac1-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac1.c",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "054bd9aa2d8f74fbd07d8261cbee011450e0654364ab4cd7076086b5d99e3a35",
+  "lineage": "linux-mainline",
+  "locator": "215-320: isochronous endpoints; 1179-1225: option validation; 1318-1348: channel and feature descriptors."
+}
