@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-hid-set-report-limits",
+  "statement": "In pinned f_hid, control-endpoint SET_REPORT is passed to the setup-report completion path when the OUT endpoint mode is disabled; SET_REPORT is rejected at setup when interrupt OUT mode is active. Userspace receives payload data through the character-device path, but the implementation does not expose an arbitrary per-report success or negative status to userspace before acknowledging a class request.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host kernel f_hid control path only. Does not prove a particular DualShock 4 host sequence or exact software response."
+  },
+  "sources": [
+    "usb-gadget-linux-hid-v611",
+    "usb-gadget-linux-hid-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

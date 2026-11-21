@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-uac1-abi-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/ABI/testing/configfs-usb-gadget-uac1",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "495f45fd8e238048e19a514f2748f9b3d08644469f6bd493c0c88061f7351d46",
+  "lineage": "linux-mainline",
+  "locator": "1-41: published UAC1 configfs attributes and kernel baseline."
+}

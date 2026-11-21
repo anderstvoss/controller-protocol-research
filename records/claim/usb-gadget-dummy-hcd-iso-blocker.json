@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-dummy-hcd-iso-blocker",
+  "statement": "The v7.3 dummy_hcd implementation explicitly has no isochronous endpoints and does not support isochronous URB execution, whereas both f_uac1 and f_uac2 use isochronous audio streaming endpoints. Therefore an unmodified dummy_hcd cannot provide functioning UAC playback/capture even when configfs can describe a composite gadget; bind failure or incomplete enumeration must be verified on a real host rather than guessed.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Kernel structural incompatibility for source-only dummy_hcd + f_uac1/f_uac2; no local kernel, host bind attempt or audio stream measurement."
+  },
+  "sources": [
+    "usb-gadget-linux-dummy-hcd-v73",
+    "usb-gadget-linux-uac1-v73",
+    "usb-gadget-linux-uac2-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

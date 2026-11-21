@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-configfs-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/usb/gadget_configfs.rst",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "0eb89503c5188c0e49f40e6e24c1ae54b1acf9f8a9cf2b1a6ba5c4980d08a01e",
+  "lineage": "linux-mainline",
+  "locator": "133-168: function creation and symlinking; 215-231: binding/unbinding a UDC."
+}
