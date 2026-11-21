@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Document four source-only DualSense Bluetooth-bus UHID consumer gaps (mode selection, seeded CRC, probe features and shifted input/output fields); physical descriptor and host acceptance stay unknown (#154/#365).
+
 - Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
 - Pin the Wii speaker compatibility-model ADPCM arithmetic, PCM widening, decode gates and state lifetime; preserve physical reset, activation and ACK unknowns (source only, no host or physical run).
 - Add source-only Xbox Series Bluetooth rumble mask, magnitude and timing semantics and DS4 USB/Bluetooth rumble flag and field offsets; no physical run (virtualgamepad #365).
