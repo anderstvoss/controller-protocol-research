@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-bt-consumer-input-envelope",
+  "statement": "Pinned Linux and SDL DS4 Bluetooth consumers recognize 10-byte minimal input 0x01 and 78-byte full input 0x11. Full 0x11 has two transport-prefix bytes ahead of 32-byte common input state, up to four nine-byte touch history entries, and a final little-endian CRC32 seeded with HID input header 0xA1; Linux rejects invalid input CRC, whereas SDL conditionally tolerates invalid CRC and recognizes other enhanced IDs in the 0x11-0x19 range.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef and SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-playstation.c 335-353,468-505,2389-2454; SDL_hidapi_ps4.c 1166-1243."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
