@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Document source-only DualSense UAC1 mixer/jack association and remaining terminal/rate gaps, and retain unknown physical USB audio details for DualShock 4 and Xbox 360; pin Linux USB-audio quirk/mixer tables, with no host or hardware run.
 
+- Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
+
 - Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
 
 - Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.

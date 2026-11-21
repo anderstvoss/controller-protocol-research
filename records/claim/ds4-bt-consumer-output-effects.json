@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-bt-consumer-output-effects",
+  "statement": "Pinned Linux and SDL consumers send Bluetooth DS4 output 0x11 as 78 bytes. Report byte 1 is hardware control, byte 2 audio control, byte 3 holds motor/LED/blink validity bits 0x01/0x02/0x04, bytes 6-7 carry right/left motor levels, bytes 8-10 RGB, bytes 11-12 blink on/off, and the last four bytes contain little-endian CRC32 seeded with HID output header 0xA2. Device acceptance or actuator behavior is not observed.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef and SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-playstation.c 375-392,507-539,2277-2386; SDL_hidapi_ps4.c 924-973."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

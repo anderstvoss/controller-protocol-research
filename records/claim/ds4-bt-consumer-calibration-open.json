@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-bt-consumer-calibration-open",
+  "statement": "Pinned Linux DS4 Bluetooth initialization asks for calibration feature 0x05 of length 41 with feature CRC validation and uses Bluetooth-specific calibration word ordering; it attempts firmware 0xA3 but tolerates failure. Pinned SDL official Sony Bluetooth calibration reads feature 0x02 before 0x05, with fallback uncalibrated scaling if unavailable. Neither source authenticates retail calibration payload contents.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef and SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-playstation.c 1938-2033,2117-2145,2784-2805; SDL_hidapi_ps4.c 462-647."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
