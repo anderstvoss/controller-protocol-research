@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "audio-dualshock4-usb-physical-descriptor-gap",
+  "statement": "The pinned Linux hid-playstation and SDL PS4 HID output implementations do not provide the physical DualShock 4 USB Audio Class descriptor set. For the reviewed sources, UAC revision, supported PCM sample rates, physical output and capture channel allocation, audio terminal types, feature-unit mute or volume controls, and isochronous endpoint packet limits remain unknown. This does not establish that a physical DS4 lacks USB audio.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Physical USB audio-descriptor gap from the inspected Linux HID and SDL PS4 consumer implementations; neither enumerates class-specific sound descriptors."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
