@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Pin Linux v6.11/v6.12/v7.3 source-only USB gadget HID and UAC composite evidence: GET_REPORT ioctl scope, configurable UAC1/UAC2 controls, configfs limits and dummy_hcd's missing isochronous transfers; preserve unverified per-family matching and not-run host checks.
 
+- Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
+
 - Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
 
 - Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
