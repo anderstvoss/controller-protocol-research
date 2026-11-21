@@ -105,7 +105,7 @@ Existing `swpro-l0-device-usb-cadence-conflict` remains conflicted and physical 
 
 ## p9c Bluetooth-bus UHID source-gap analysis (2026-11-20)
 
-The [ranked p9c brief](../p9c-switch-pro-bt-uhid.md) adds seven scoped `swpro-bt-` records without changing earlier claims. Pinned Linux and SDL source show that Bluetooth-bus consumers skip USB-only 0x80 startup, request 0x02 device info and SPI calibration, then negotiate IMU, mode and vibration. The 0x01/0x10 output roles and 0x21 ACK reply framing are consumer expectations corroborated by controller-family community notes; mode 0x3F and Bluetooth connection-layout details are only community research leads.
+The [ranked p9c brief](../p9c-switch-pro-bt-uhid.md) adds eight scoped `swpro-bt-` records without changing earlier claims. Pinned Linux and SDL source show that Bluetooth-bus consumers skip USB-only 0x80 startup, request 0x02 device info and SPI calibration, then negotiate IMU, mode and vibration. The 0x01/0x10 output roles and 0x21 ACK reply framing are consumer expectations corroborated by controller-family community notes; mode 0x3F and Bluetooth connection-layout details are only community research leads.
 
 | Gap | Claim | Evidence class | Boundary |
 | --- | --- | --- | --- |
