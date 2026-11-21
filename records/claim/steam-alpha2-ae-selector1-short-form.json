@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "steam-alpha2-ae-selector1-short-form",
+  "statement": "The owner-authorized direct-wired physical comparison accepted 0xae selector 1 with declared request lengths 1, 21 and 22 in 64-byte numbered buffers. Each SET returned 64; each GET returned 63 wire bytes with command 0xae, declared response length 20 and selector 1. All value and identity bytes were excluded from the evidence. This newly corroborates the short selector-1 prefix already reported by steam-d9-feature-response-framing; no identity semantics or equivalence of response values is inferred.",
+  "status": "source_supported",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "steam-controller-2026",
+    "transport": "usb",
+    "revision": "Single direct-wired retail 1302 reference; hardware revision not collected",
+    "firmware": "Not collected in this bounded query-only comparison",
+    "scope": "Selector-1 request acceptance and response framing on this physical unit only. No other selectors, serial values, actuator, receiver or Bluetooth claims. Metadata-only documentary evidence; no raw physical fixture or formal physical-status promotion is supplied."
+  },
+  "sources": [
+    "steam-ibex-linux-driver"
+  ],
+  "experiments": [
+    "steam-alpha2-physical-ae-shapes"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

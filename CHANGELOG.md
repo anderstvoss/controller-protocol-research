@@ -7,6 +7,8 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Record Alpha 2 normal-profile 0xae selector/length decisions and an owner-authorized physical selector-1 shape comparison: the virtual codec rejects the short form accepted by the physical unit; no identity values or raw buffers published.
+
 - Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
 
 - Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
