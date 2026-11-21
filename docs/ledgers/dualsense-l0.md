@@ -129,3 +129,16 @@ The source-only continuation in `docs/dualsense-gaps-2.md` adds three pinned ind
 Alternative claim `ds-cgap-led-brightness-1-3-documentation` explicitly captures the incompatible 1–3 consumer-documentation interpretation and is linked by `conflicts_with`; it does not supersede an older device claim.
 
 Pinned source records: `ds-cgap-nowrep-dualsensectl-main` (GPL-2.0), `ds-cgap-xinput-hid-dualsense` (MIT, mapping derivative of a community wiki), and `ds-cgap-yesbotics-brightness-notes` (MIT). Previous SDL and Linux source records are reused. Source compatibility encoders and authored notes cannot establish measured controller actuation, LED brightness, pulse period or fade timing. Physical trials L5–L7 in `docs/dualsense-led-inventory.md` remain **not run**. This research does not promote any virtualgamepad #154 acceptance cells.
+
+## P9a DualSense Bluetooth-bus UHID consumer gap pass (2026-11-20)
+
+This section documents **source-only** requirements for a local `linux.uhid.bluetooth` realization. It does not imply physical Bluetooth or BlueZ transport. Existing claims are unchanged. The ranked decision and pinned citations are in [p9a-dualsense-bt-uhid.md](../p9a-dualsense-bt-uhid.md).
+
+| New claim | Consumer requirement | Limit |
+| --- | --- | --- |
+| `ds-bt-consumer-input-modes` | SDL simple `0x01` versus enhanced `0x31`; Linux full input `0x31` | Source-only switch logic; no measured physical transition |
+| `ds-bt-consumer-crc-contract` | Seeded Bluetooth input/output/feature CRC32, 78-byte enhanced report length | No retail CRC edge-case or host-run observation |
+| `ds-bt-consumer-feature-probe` | Linux exact-length feature GET replies and CRC for `0x05`, `0x09`, `0x20` | Private payload contents excluded; no probe run |
+| `ds-bt-consumer-payload-offsets` | Shift common input body to byte 2, common output body to byte 3, preserve motion/touch/LED semantics | Retail descriptor and actuation fidelity unknown |
+
+The existing `ds-l0-physical-bt-protocol-unknown` still bounds descriptor authenticity, pairing/reconnect, high-rate sensors and physical output. Acceptance evidence and a local kernel/SDL host run remain pending in virtualgamepad #154 and #365.

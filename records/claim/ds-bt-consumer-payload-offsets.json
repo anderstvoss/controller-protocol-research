@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-bt-consumer-payload-offsets",
+  "statement": "Linux's 78-byte Bluetooth input 0x31 places the 63-byte USB common body at byte 2 rather than byte 1; common gyro, accelerometer, timestamp, touch contacts and status therefore shift one byte from USB input. Its Bluetooth output 0x31 places the 47-byte common effects block after three header bytes, preserving USB effect semantics with different offsets. SDL also parses full Bluetooth touch, IMU and battery fields. Neither source establishes retail descriptor bytes or actuator fidelity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux hid-playstation 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL_hidapi_ps5.c 535d80badefc83c5c527ec5748f2a20d6a9310fe; no reference-device or host run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 244-316, 1436-1518; SDL 89-140, 1355-1405, 1500-1530. Raw packet samples and physical timing remain unknown."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
