@@ -17,11 +17,11 @@ class DualSenseL0Ledger(unittest.TestCase):
 
     def test_role_status_and_scope(self):
         claims = self.claims()
-        self.assertEqual(len(claims), 51)
+        self.assertEqual(len(claims), 52)
         self.assertEqual(Counter(x["evidence_role"] for x in claims),
-                         {"consumer": 25, "device": 26})
+                         {"consumer": 26, "device": 26})
         self.assertEqual(Counter(x["status"] for x in claims),
-                         {"source_supported": 40, "unknown": 8, "inferred": 3})
+                         {"source_supported": 41, "unknown": 8, "inferred": 3})
         self.assertTrue(all(x["applicability"]["controller"] == "dualsense"
                             and x["sources"] and not x["conflicts_with"]
                             for x in claims))
@@ -90,7 +90,7 @@ class DualSenseL0Ledger(unittest.TestCase):
         self.assertEqual(updated["category"], "Source evidence")
         self.assertEqual(previous["consumer_category"], "Source evidence")
         self.assertEqual(updated["consumer_category"], "Source evidence")
-        self.assertEqual(sum(updated["claims"].values()) - sum(previous["claims"].values()), 51)
+        self.assertEqual(sum(updated["claims"].values()) - sum(previous["claims"].values()), 52)
         print("\n| Controller | Device before → after | Consumer before → after | Claims before → after |")
         print("| --- | --- | --- | --- |")
         print(f"| dualsense | {previous['category']} → {updated['category']} | "

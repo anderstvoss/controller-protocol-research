@@ -9,6 +9,8 @@ affected schema's `schema_version`.
 
 - Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
 
+- Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
+
 - Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
 - Pin the Wii speaker compatibility-model ADPCM arithmetic, PCM widening, decode gates and state lifetime; preserve physical reset, activation and ACK unknowns (source only, no host or physical run).
 - Add source-only Xbox Series Bluetooth rumble mask, magnitude and timing semantics and DS4 USB/Bluetooth rumble flag and field offsets; no physical run (virtualgamepad #365).
