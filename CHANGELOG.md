@@ -11,6 +11,8 @@ affected schema's `schema_version`.
 - Document source-only DualSense UAC1 mixer/jack association and remaining terminal/rate gaps, and retain unknown physical USB audio details for DualShock 4 and Xbox 360; pin Linux USB-audio quirk/mixer tables, with no host or hardware run.
 - Record Alpha 2 normal-profile 0xae selector/length decisions and an owner-authorized physical selector-1 shape comparison: the virtual codec rejects the short form accepted by the physical unit; no identity values or raw buffers published.
 
+- Document four source-only DualSense Bluetooth-bus UHID consumer gaps (mode selection, seeded CRC, probe features and shifted input/output fields); physical descriptor and host acceptance stay unknown (#154/#365).
+
 - Document eight Switch Pro Bluetooth-bus UHID source gaps for consumer initialization, report modes, reply coverage and unknown physical descriptor/NFC behavior; no host or hardware run.
 - Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
 
