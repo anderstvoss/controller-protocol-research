@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-retail-descriptor-unknown",
+  "statement": "The exact Bluetooth SDP record, HID descriptor bytes, radio pairing/reconnect/security behavior and physical timing for a retail Switch Pro are not established by the pinned Linux/SDL consumer implementations or community notes. A locally authored UHID descriptor is a model, not a measured physical descriptor.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Pinned Linux 4056b3c, SDL 535d80b and/or community b354f21 as cited; retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "Unknown physical transport/descriptor evidence; owner-approved retail-device capture is required. No vendor firmware analysis attempted."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-dekunukem-bluetooth-hid-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}
