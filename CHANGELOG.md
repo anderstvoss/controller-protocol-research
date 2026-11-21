@@ -8,6 +8,7 @@ affected schema's `schema_version`.
 ## Unreleased
 
 - Pin Linux v6.11/v6.12/v7.3 source-only USB gadget HID and UAC composite evidence: GET_REPORT ioctl scope, configurable UAC1/UAC2 controls, configfs limits and dummy_hcd's missing isochronous transfers; preserve unverified per-family matching and not-run host checks.
+- Document source-only DualSense UAC1 mixer/jack association and remaining terminal/rate gaps, and retain unknown physical USB audio details for DualShock 4 and Xbox 360; pin Linux USB-audio quirk/mixer tables, with no host or hardware run.
 - Record Alpha 2 normal-profile 0xae selector/length decisions and an owner-authorized physical selector-1 shape comparison: the virtual codec rejects the short form accepted by the physical unit; no identity values or raw buffers published.
 
 - Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
