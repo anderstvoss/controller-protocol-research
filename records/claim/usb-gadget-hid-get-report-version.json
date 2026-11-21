@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-hid-get-report-version",
+  "statement": "At the pinned Linux v6.11 tag, f_hid handles HID GET_REPORT with a zero-filled reply. At v6.12, the userspace GET_REPORT response ioctl is present, and it remains present at v7.3. This is a kernel-source comparison, not a demonstration of compatible controller feature-report behavior.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Host f_hid versions only; original report payloads, consumer binding and physical devices were not tested."
+  },
+  "sources": [
+    "usb-gadget-linux-hid-v611",
+    "usb-gadget-linux-hid-v612",
+    "usb-gadget-linux-hid-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

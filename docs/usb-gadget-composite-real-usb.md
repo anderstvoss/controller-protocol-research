@@ -1,0 +1,40 @@
+# USB gadget composite feasibility: HID and UAC (source-only)
+
+**Disposition:** Do not replace USB/IP with `dummy_hcd` for audio. Current mainline `dummy_hcd` has no isochronous transfers, while both UAC1 and UAC2 gadget functions require them. A physical/other isochronous-capable UDC would be a different host architecture. **No kernel, host, controller or audio tests were run.**
+
+## Scope and anchors
+
+Reviewed pinned upstream Linux sources only: [v6.11 `f_hid.c`](https://github.com/torvalds/linux/blob/98f7e32f20d28ec452afb208f9cffc08448a2652/drivers/usb/gadget/function/f_hid.c#L660-L695), [v6.12 `f_hid.c`](https://github.com/torvalds/linux/blob/adc218676eef25575469234709c2d87185ca223a/drivers/usb/gadget/function/f_hid.c#L605-L715), and [v7.3 `f_hid.c`](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_hid.c#L580-L709). Source URLs and whole-file SHA-256 values are in `records/source/usb-gadget-*.json`; findings in `records/claim/usb-gadget-*.json`. Observations are source-derived consumer/host predictions, **not hardware validation**.
+
+## Findings
+
+| Concern | Pinned source result | Consequence |
+| --- | --- | --- |
+| `GET_REPORT` kernel evolution | [v6.11 zero-filled response](https://github.com/torvalds/linux/blob/98f7e32f20d28ec452afb208f9cffc08448a2652/drivers/usb/gadget/function/f_hid.c#L660-L669); [v6.12 userspace ioctl](https://github.com/torvalds/linux/blob/adc218676eef25575469234709c2d87185ca223a/drivers/usb/gadget/function/f_hid.c#L605-L715); [v7.3 behavior](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_hid.c#L580-L631) | v6.12+ can provide selected positive reports, but not the full controller protocol contract. |
+| Missing HID request metadata | [v7.3 ioctl and report type](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/include/uapi/linux/usb/g_hid.h#L8-L38); [class-control request handler](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_hid.c#L857-L873) | Userspace sees the report ID alone, not the report type or requested length. The fixed response buffer is 64 bytes. |
+| Negative feature replies and `SET_REPORT` | [GET_REPORT timeout/fallback](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_hid.c#L596-L627); [SET_REPORT mode handling](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_hid.c#L890-L899) | A caller cannot return an explicit per-request unsupported/stall for unknown GET_REPORT IDs; setup SET_REPORT delivery differs by OUT-endpoint mode. |
+| UAC1 options | [configfs ABI](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/ABI/testing/configfs-usb-gadget-uac1#L1-L41); [descriptor setup](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac1.c#L1318-L1348) | Channel masks/counts, sample-rate lists, sample sizes, mute/volume feature units. No terminal-type configfs knobs in this pinned ABI. |
+| UAC2 options | [configfs ABI](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/ABI/testing/configfs-usb-gadget-uac2#L1-L50); [descriptor implementation](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac2.c#L967-L1012) | Same PCM-oriented knobs, plus playback/capture terminal-type controls and sync/bInterval settings. v7.3 derives channel counts from masks. |
+| Composite creation | [configfs function links](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/usb/gadget_configfs.rst#L133-L168); [UDC bind](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/usb/gadget_configfs.rst#L215-L231) | A gadget may contain `f_hid` plus a UAC function if an administrator provisions functions/configurations and a capable UDC. Configfs is not a host-side USB/IP replacement by itself. |
+| Hard blocker: dummy_hcd | [no isochronous endpoints](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/udc/dummy_hcd.c#L135-L151), [no ISO URBs](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/udc/dummy_hcd.c#L1980-L1992), [UAC1 ISO descriptors](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac1.c#L215-L320), [UAC2 ISO descriptors](https://github.com/torvalds/linux/blob/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/function/f_uac2.c#L388-L491) | No functional UAC1/UAC2 audio streaming via unmodified `dummy_hcd`. Descriptor presentation/bind behavior is not host-verified. |
+
+The late-2026 proposals to decouple UAC2 channel counts from channel masks and to fix `f_hid` GET_REPORT races are **not** treated as shipped changes in pinned v7.3. Their disposition and subsequent backports must be checked before any future kernel minimum is selected. The specific `f_hid` per-request negative-response API is absent in v7.3 irrespective of those proposals.
+
+## Family and classification implications
+
+- **DualSense:** a generic UAC2 function can represent a functional four-playback/two-capture PCM profile but not the documented physical UAC1 descriptor topology. `f_uac1` is a closer audio-class *candidate* on an ISO-capable UDC, not a proven match. `usb-gadget-dualsense-matching-unknown`.
+- **DualShock 4:** stereo playback and mono capture are representable generically; physical USB audio topology, endpoint routing and USB class matching remain unverified. `usb-gadget-ds4-matching-unknown`.
+- **Xbox 360 (standard HID):** generic UAC does not produce proprietary XInput or headset behavior. `usb-gadget-xbox360-matching-unknown`.
+- **Switch Pro, Wii Remote, Steam Controller 2026, Xbox Series:** current virtualgamepad compiled audio profiles do not declare matching UAC components for these. Wii speaker and Steam PCM are *in-band HID subsystems*, not independently enumerated USB Audio; UAC should not be fabricated for them.
+
+**Level terminology:** A working isochronous-capable gadget would appear as a host USB composite rather than independent UHID/PipeWire nodes, but it would not imply controller-matching descriptors or external physical transducer fidelity. Existing `linux.usbip.usb-audio` is the functional Real USB candidate; `linux.dummy_hcd.usb-hid` remains unavailable and is HID-only. No realization ID or public API change is proposed.
+
+## Proposed validation, **all not run**
+
+1. Inspect the kernel's actual configfs attributes, UDC list/capabilities, and modules on the selected host/version; record version/configuration, without copying host identifiers into public evidence.
+2. In an isolated privileged lab, attempt two-function configfs construction, binding, rollback and cleanup; record exactly whether `f_uac1`/`f_uac2` binding fails due to ISO endpoint assignment. Do not claim enumeration from a docs-only review.
+3. On an **ISO-capable real gadget UDC** (not `dummy_hcd`), conditionally inspect standard descriptors, `GET_REPORT`/SET_REPORT behavior, ALSA playback/capture, endpoint timing and disconnect/recreation, using synthetic PCM and no proprietary firmware.
+4. Compare the configured UAC1/UAC2 terminal/feature-unit graph, channel masks, rates and control replies to independently authorized physical reference evidence before proposing a matching tier. Keep per-family physical fidelity unknown until controlled measurement.
+5. If source changes ever allow ISO on `dummy_hcd`, independently test host enumeration, PCM duplex, multiple function binding, negative feature requests and long-run loss/latency; kernel-source availability alone is not acceptance.
+
+No test, build, host check or physical experiment was executed for this brief. No broker, IPC, runtime, API, license, release or CI configuration file is changed.
