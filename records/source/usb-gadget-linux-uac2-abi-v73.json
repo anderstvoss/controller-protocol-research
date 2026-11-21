@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-uac2-abi-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/Documentation/ABI/testing/configfs-usb-gadget-uac2",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "eb95c45374a7d14ef4e7ae7e0b0e945d679487a7cc985dfa7796a45c1d0242a1",
+  "lineage": "linux-mainline",
+  "locator": "1-50: published UAC2 configfs attributes and terminal-type controls."
+}

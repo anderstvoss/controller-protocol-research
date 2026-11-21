@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "id": "audio-dualsense-usb-terminal-rate-gaps",
+  "statement": "The existing maintainer-sourced DualSense UAC1 descriptor report establishes a documented 48 kHz S16LE four-output/two-input configuration, channel masks, two mute/volume feature-unit IDs, and isochronous endpoint packet maxima; it does not establish the numeric USB input/output wTerminalType descriptor codes, prove that 48 kHz is the exclusive supported rate, or validate feature-unit gain/mute behavior. Linux's terminal IDs 3 and 4 for jack-state controls must not be mistaken for numeric terminal types. Those remaining physical details are unknown from the reviewed pinned public sources.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Gap claim supplementing existing audio-dualsense-usb-uac1-topology; public maintainer report and Linux/ALSA consumer code only. No new corpus physical experiment."
+  },
+  "sources": [
+    "audio-vg-exp0023",
+    "audio-linux-usb-dualsense-mixer-quirks",
+    "audio-alsa-dualsense-hifi"
+  ],
+  "evidence_role": "device"
+}

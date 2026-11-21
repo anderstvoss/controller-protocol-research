@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-configfs-composite",
+  "statement": "Configfs permits multiple compiled USB gadget functions to be created and linked into one configuration, then binds the configuration to a chosen USB Device Controller. This describes how f_hid and f_uac1/f_uac2 could share a composite configuration in principle; successful binding and streaming depend on available UDC endpoints and host/driver behavior.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Mainline configfs lifecycle; administrator provisioning and cleanup would be required. No root setup performed."
+  },
+  "sources": [
+    "usb-gadget-linux-configfs-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
