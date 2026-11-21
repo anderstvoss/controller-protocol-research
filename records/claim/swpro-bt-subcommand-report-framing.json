@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-subcommand-report-framing",
+  "statement": "Linux and SDL send rumble and subcommands via output report 0x01, and rumble-only via output report 0x10. The community report layout describes an incrementing packet nibble and two rumble words before subcommand ID/arguments, with input 0x21 returning the command ID and ACK type. Linux waits for matching replies. These establish candidate framing and consumer expectations, not a physically captured Pro reply matrix.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Pinned Linux 4056b3c, SDL 535d80b and/or community b354f21 as cited; retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c 517-535, 930-1028; SDL_hidapi_switch.c 87-103, 532-603; community bluetooth_hid_notes.md 3-25, 132-156."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro",
+    "swpro-dekunukem-bluetooth-hid-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}
