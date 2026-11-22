@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-p10d-wii-consumers",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "wii-gap-wiibrew-wiimote-oldid123257",
+    "wii-linux-header"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad d9cc4445bcd0901f84d10635c6b82403f0e1d765. Created an Original Wii Remote with a synthetic typed identity and a caller-owned synthetic EEPROM image. Used one temporary ACL on the creation-owned raw node. Read four synthetic addressed-memory chunks.",
+  "semantic_outcome": "Stock wiimote binding, exact synthetic uniq equality, and 4 matching EEPROM reads were observed. The ACL restored and the device was removed. After ENOMEM and the operator-requested memory-compaction retry, SDL default listed one owned event joystick. Default HIDAPI did not list the owned raw node. The retail-descriptor change was open at this baseline and its P6 consumer reruns are pending."
+}
