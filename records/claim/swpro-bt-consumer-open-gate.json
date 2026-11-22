@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-consumer-open-gate",
+  "statement": "At the pinned Linux revision, only USB-bus devices enter the proprietary 0x80 startup handshake. Bluetooth-bus Switch Pro identification proceeds to subcommand device information, SPI calibration, IMU enable, report-mode selection, and vibration enable. Pinned SDL likewise uses Bluetooth 0x02 device information and skips USB-only handshake and ForceUSB setup.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Pinned Linux 4056b3c, SDL 535d80b and/or community b354f21 as cited; retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c 792-795, 2477-2637; SDL_hidapi_switch.c 629-685, 1457-1567. Source code predicts consumer order, not measured physical startup."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-consumer-reply-coverage",
+  "statement": "Pinned Linux initialization sends 0x02 device information, 0x10 SPI calibration reads, 0x40 IMU enable, 0x03 mode, and 0x48 vibration enable; player and HOME LEDs use 0x30 and 0x38. SDL requests 0x02, calibration SPI, 0x48, mode and conditionally 0x40 for sensors; it does not require USB-only 0x80 exchanges over Bluetooth. Correctly correlated 0x21 replies are a consumer-facing readiness gate. Other subcommands and exact retail NACK cases are not established.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Pinned Linux 4056b3c, SDL 535d80b and/or community b354f21 as cited; retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c 980-1028, 2277-2385, 2477-2637; SDL_hidapi_switch.c 629-685, 936-1090, 1511-1575, 1790-1805. Existing swpro-cgap-home-led-consumer is consistent."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

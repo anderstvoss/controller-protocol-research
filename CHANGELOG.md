@@ -13,6 +13,7 @@ affected schema's `schema_version`.
 
 - Document four source-only DualSense Bluetooth-bus UHID consumer gaps (mode selection, seeded CRC, probe features and shifted input/output fields); physical descriptor and host acceptance stay unknown (#154/#365).
 
+- Document eight Switch Pro Bluetooth-bus UHID source gaps for consumer initialization, report modes, reply coverage and unknown physical descriptor/NFC behavior; no host or hardware run.
 - Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
 
 - Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
