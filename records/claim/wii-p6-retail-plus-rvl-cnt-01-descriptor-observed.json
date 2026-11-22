@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-p6-retail-plus-rvl-cnt-01-descriptor-observed",
+  "statement": "One retail RVL-036 Wii Remote Plus advertising Nintendo RVL-CNT-01 returned the same 217-byte HID report descriptor in two SDP reads and the bound Linux hidraw read, with raw SHA-256 4d40cb52850ded69a8c1474fff35dfd3e102d4b10ad3579258ab37f4a36fb3ef.",
+  "status": "physically_observed",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Owner-reported case model RVL-036 (Wii Remote Plus), Bluetooth name Nintendo RVL-CNT-01",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "One retail RVL-036 with the RVL-CNT-01 Bluetooth identity. Other controller specimens and revisions, including RVL-CNT-01-TR, were not measured."
+  },
+  "sources": [],
+  "experiments": [
+    "wii-p6-retail-hid-descriptor-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [
+    "wii-gap-retail-hid-descriptor-capture-unknown"
+  ],
+  "rejection_scope": null
+}
