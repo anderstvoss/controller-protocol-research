@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-cleanup2-wii-retail",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "wii-linux-header",
+    "wii-gap-dolphin-real-hidapi-e1d35f"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad dda74f526bd40054a1552bce54e2e5e103c4941a. Created Original and Plus (RVL-CNT-01-TR) separately on linux.uhid.bluetooth using the retail descriptor and a synthetic identity and EEPROM. Correlated kernel probe errors, owned nodes and cleanup.",
+  "semantic_outcome": "Both typed identities matched. Both hid-wiimote probes reported ENOMEM and no usable event or hidraw nodes appeared. The execution context prevented compaction and ACL setup. EEPROM, SDL default/HIDAPI, and Dolphin observations were unavailable. Both owned HID objects were removed."
+}
