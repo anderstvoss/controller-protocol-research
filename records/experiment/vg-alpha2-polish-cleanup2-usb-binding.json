@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-cleanup2-usb-binding",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "vg-alpha1-exp0006",
+    "xbox-cgap-kernel-hid-generic"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad dda74f526bd40054a1552bce54e2e5e103c4941a. Ran three stock linux.uhid.usb sessions per family with exact-device attribution, serial SDL probes and cleanup. Checked privileged access and inspected the Linux HID driver matching rules.",
+  "semantic_outcome": "HID core and hid-generic matching predict the cleanup 1 ENODEV for devices that match a specialized driver with the stock setting. The current terminal has no_new_privs set. Sudo could not read or change the root-only module parameter, so the parameter-enabled arms and the Steam Switch Pro arm remained unavailable. No host setting was changed. DualSense bound in 3 of 3 stock sessions. DualShock 4 bound in 3 of 3 stock sessions. Switch Pro bound in 3 of 3 stock sessions. Xbox 360 bound in 3 of 3 stock sessions."
+}
