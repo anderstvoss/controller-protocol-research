@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "virtualgamepad-wii-p6-interim-descriptor",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/anderstvoss/virtualgamepad/blob/2e18a9c3faeaf0ee4835882f7b264ed7ad004ed4/crates/gr-curated-controllers/src/wii_remote/realizations.rs",
+  "revision": "2e18a9c3faeaf0ee4835882f7b264ed7ad004ed4",
+  "sha256": "69180881ce65ff98eebd43cf0120ce4c25ca823b6ab19db1ae784273483bf9a5",
+  "lineage": "virtualgamepad",
+  "locator": "DESCRIPTOR constant, post-W8 interim Game Pad collection and speaker-inclusive report table."
+}

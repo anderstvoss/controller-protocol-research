@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "wii-p6-retail-plus-rvl-cnt-01-descriptor-comparison",
+  "statement": "The captured retail HID descriptor matches the published 217-byte rnconrad candidate digest exactly. It and the current 217-byte virtualgamepad synthetic descriptor declare one Generic Desktop Game Pad Application collection and the same vendor-page 0xFF00 report IDs and payload lengths. Retail main items are Data/Array/Absolute (0x00) and the interim main items are Data/Variable/Absolute (0x02). Both declare speaker output IDs 0x14, 0x18 and 0x19 with 1, 21 and 1 payload bytes respectively, excluding the report ID, and no Feature reports. The older C5 synthetic descriptor has a vendor top-level collection and lacks those three speaker outputs.",
+  "status": "physically_validated",
+  "evidence_role": "device",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Owner-reported case model RVL-036 (Wii Remote Plus), Bluetooth name Nintendo RVL-CNT-01",
+    "firmware": "not measured",
+    "transport": "bluetooth",
+    "scope": "One retail RVL-036 with the RVL-CNT-01 Bluetooth identity. Other controller specimens and revisions, including RVL-CNT-01-TR, were not measured. The comparison concerns descriptor declarations. Live report behavior and speaker audio were outside the run."
+  },
+  "sources": [
+    "virtualgamepad-wii-p6-interim-descriptor",
+    "wii-gap-rnconrad-sdp"
+  ],
+  "experiments": [
+    "wii-p6-retail-hid-descriptor-run"
+  ],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "wii-p6-retail-hid-descriptor-run",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "virtualgamepad-wii-p6-interim-descriptor",
+    "wii-gap-rnconrad-sdp"
+  ],
+  "fixtures": [
+    "wii-p6-retail-plus-rvl-cnt-01-descriptor"
+  ],
+  "procedure": "Pair an owner-operated retail Wii Remote Plus (case model RVL-036, Bluetooth name Nintendo RVL-CNT-01) over the host's built-in Bluetooth with BlueZ 5.88 on x86_64 Linux 7.3.0-1-mainline. Read SDP HID service attribute 0x0206 (HIDDescriptorList), retaining only report type 0x22, on two pairings. On a separate pairing explicitly connect the Bluetooth HID profile, verify the Wii HID node is bound to wiimote, and read the bound hidraw report_descriptor sysfs attribute. Remove the BlueZ device after every pairing and verify its entry is gone. No temporary driver binding or host policy changes were required.",
+  "semantic_outcome": "The two SDP reads and the bound kernel HID read agreed byte for byte (217 bytes, raw SHA-256 4d40cb52850ded69a8c1474fff35dfd3e102d4b10ad3579258ab37f4a36fb3ef). The fixture holds the descriptor only. Firmware, live report payloads, speaker behavior, and cross-revision parity were outside this run."
+}
