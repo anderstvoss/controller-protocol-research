@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds4-bt-consumer-identity-uniq",
+  "statement": "Pinned Linux DS4 Bluetooth initialization uses HID uniq as its instance identity and does not request USB pairing feature 0x12 in that transport branch; the USB-specific identity feature request is transport gated. SDL may choose a connected USB instance over a Bluetooth instance with matching identity. No wireless handshake, device address or retail descriptor is proven.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef and SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-playstation.c 2148-2181,2784-2790; SDL_hidapi_ps4.c 295-336,442-454."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

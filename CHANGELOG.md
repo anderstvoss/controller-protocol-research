@@ -7,6 +7,23 @@ affected schema's `schema_version`.
 
 ## Unreleased
 
+- Capture and compare the retail Wii Remote Plus RVL-036 descriptor for the RVL-CNT-01 Bluetooth identity over SDP and bound hidraw.
+
+- Pin Linux v6.11/v6.12/v7.3 source-only USB gadget HID and UAC composite evidence: GET_REPORT ioctl scope, configurable UAC1/UAC2 controls, configfs limits and dummy_hcd's missing isochronous transfers; preserve unverified per-family matching and not-run host checks.
+- Document source-only DualSense UAC1 mixer/jack association and remaining terminal/rate gaps, and retain unknown physical USB audio details for DualShock 4 and Xbox 360; pin Linux USB-audio quirk/mixer tables, with no host or hardware run.
+- Record Alpha 2 normal-profile 0xae selector/length decisions and an owner-authorized physical selector-1 shape comparison: the virtual codec rejects the short form accepted by the physical unit; no identity values or raw buffers published.
+
+- Document four source-only DualSense Bluetooth-bus UHID consumer gaps (mode selection, seeded CRC, probe features and shifted input/output fields); physical descriptor and host acceptance stay unknown (#154/#365).
+
+- Document eight Switch Pro Bluetooth-bus UHID source gaps for consumer initialization, report modes, reply coverage and unknown physical descriptor/NFC behavior; no host or hardware run.
+- Pin DS4 Bluetooth-bus UHID consumer input, output, calibration and identity requirements from Linux/SDL; preserve unknown physical descriptor and device behavior (p9b, no host run).
+
+- Pin SDL DualSense trigger demo effects and independent update bits; 0x01/0x06 parameter semantics remain unknown, source-only and no physical run.
+
+- Add source-only Switch Pro HD rumble absolute and compressed sample layouts, compatibility-model units and state-dependent command semantics; no host or physical run.
+- Pin the Wii speaker compatibility-model ADPCM arithmetic, PCM widening, decode gates and state lifetime; preserve physical reset, activation and ACK unknowns (source only, no host or physical run).
+- Add source-only Xbox Series Bluetooth rumble mask, magnitude and timing semantics and DS4 USB/Bluetooth rumble flag and field offsets; no physical run (virtualgamepad #365).
+
 - Enforce an experiment reference for measured transport tags except unknown device gaps and the six explicitly approved exceptions; relabel the documentary Puck cadence claim to `source_only` (#147).
 
 - Apply the owner decision to the final ten #147 claims: link three historical DualSense physical-summary experiments and two existing Puck receiver experiments, keep the compatibility PID 1142 attribution unresolved, and relabel six documentary consumer or compatibility claims without claiming new physical validation. No validator rule added.

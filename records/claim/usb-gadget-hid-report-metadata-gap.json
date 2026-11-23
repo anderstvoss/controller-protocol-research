@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-hid-report-metadata-gap",
+  "statement": "The pinned Linux v7.3 f_hid userspace GET_REPORT API exposes only the requested report ID, not the report type and requested transfer length; its fixed response buffer is 64 bytes. Missing/late reports fall back to cached data or zero-filled data rather than a userspace-selected negative control reply. Consequently an upgrade from pre-v6.12 restores a positive response mechanism but does not satisfy the full metadata and explicit negative-response contract required by virtualgamepad.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "USB HID class-control path in mainline v7.3. No claim that every specific feature probe exceeds the buffer or fails; host and application compatibility not run."
+  },
+  "sources": [
+    "usb-gadget-linux-hid-v73",
+    "usb-gadget-linux-hid-uapi-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

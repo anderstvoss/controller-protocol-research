@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-rumble-absolute-layout",
+  "statement": "The community notes specify the independent high- and low-band fields of the conventional four-byte absolute motor word. Reading it as a little-endian integer, bits 2–8 are the high-frequency index (center 320 Hz at index 64), bits 9–15 the high-band amplitude index, bits 16–22 the low-frequency index (center 160 Hz at index 64), and bits 23–29 the low-band amplitude index. The documented neutral word is 00 01 40 40 (both amplitudes zero). Frequency steps are powers of two at 32 steps per octave.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "dekuNukem b354f21ae81f7b0d1d060b2b61e66ad0d9bc1756",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Community conventional packing and neutral, not compressed forms. Table frequency indices 1 through 127 are documented; amplitude table values are not force, displacement or acceleration measurements. Unsafe encoded extremes must not be interpreted as recommended drive values."
+  },
+  "sources": [
+    "swpro-dekunukem-rumble-data-table",
+    "swpro-dekunukem-bluetooth-hid-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

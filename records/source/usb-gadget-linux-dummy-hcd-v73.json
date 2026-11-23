@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-dummy-hcd-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/drivers/usb/gadget/udc/dummy_hcd.c",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "7dd400f2b1723e23ec38721ab76787b0250c597b4401adeeb3e0e9ee4b239e57",
+  "lineage": "linux-mainline",
+  "locator": "23, 142-143: no isochronous endpoints; 1980-1992: no isochronous URB transfers; 73-81: simulated speed and controller count."
+}

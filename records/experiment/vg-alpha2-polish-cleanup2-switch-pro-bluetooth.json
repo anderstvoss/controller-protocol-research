@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-cleanup2-switch-pro-bluetooth",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "audio-linux-hid-nintendo"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad dda74f526bd40054a1552bce54e2e5e103c4941a. Ran exactly eight single control stimuli through the default SDL HIDAPI path and an SDL HIDAPI-off evdev path, in separate sessions. Also ran the fixed xtask SDL evdev timing observer at N1 and N3, 50 cycles and no latency budgets.",
+  "semantic_outcome": "hidapi had 8/8 exact and neutral controls (Exact / Exact / Exact / Exact / Exact / Exact / Exact / Exact). evdev had 4/8 exact and neutral controls (east / south / Exact / Exact / Exact / Exact / rt / No change). N1 counted 50/50/50/50/50 of 50 created, appeared, direct-opened, SDL-opened, and removed slots. N3 counted 150/150/150/150/150 of 150 created, appeared, direct-opened, SDL-opened, and removed slots. Both mapping sessions verified removal."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-bt-consumer-input-modes",
+  "statement": "SDL recognizes simple Bluetooth report 0x01 and enhanced Bluetooth report 0x31; its enhanced-mode path sends effects to request the change. Linux hid-playstation accepts the full 78-byte Bluetooth input 0x31, not simple 0x01, and parses the common 63-byte input body after the two-byte Bluetooth prefix. This is a consumer compatibility requirement, not a measured retail transition.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux hid-playstation 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL_hidapi_ps5.c 535d80badefc83c5c527ec5748f2a20d6a9310fe; no reference-device or host run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 1448-1469; SDL 399-416, 778-843, 1431-1474, 1500-1530. Source behavior only; transition stimulus and first enhanced delivery not host-tested."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

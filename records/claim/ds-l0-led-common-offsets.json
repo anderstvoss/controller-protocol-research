@@ -15,7 +15,9 @@
     "audio-sdl-ps5",
     "ds-community-viiper-protocol"
   ],
-  "experiments": [],
+  "experiments": [
+    "vg-p5a-dualsense-usb-led-l1-l8"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null,

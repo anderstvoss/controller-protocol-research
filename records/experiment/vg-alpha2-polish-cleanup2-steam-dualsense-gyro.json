@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-cleanup2-steam-dualsense-gyro",
+  "kind": "virtual_host_run",
+  "status": "blocked",
+  "sources": [
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "audio-linux-hid-playstation"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad dda74f526bd40054a1552bce54e2e5e103c4941a. Created one USB-bus UHID DualSense. Matched Steam process file descriptors to owned HID ancestry, traced UHID requests and replies, and checked the Gyro Calibration window while applying sequence-tagged neutral, single-axis and sustained multi-axis input.",
+  "semantic_outcome": "Steam opened the attributed hidraw endpoint. File descriptor sampling found zero Steam opens on owned evdev endpoints. UHID received 7 GET_REPORT requests for features 0x05, 0x09 and 0x20. All received successful replies. The provider received 10 asynchronous output reports with ID 0x02 and zero SET_REPORT requests. The UHID trace identifies report types and replies. Attribution of the startup traffic and the presence of a dedicated motion-enable request remain undetermined. After the commit boundary, 233 single-axis and 599 sustained multi-axis reports carried the expected nonzero values. At return to neutral, 114 reports carried zero gyro. The isolated retry opened Steam Settings and stopped when the Controller page transition could not be confirmed. The earlier calibration display remaining neutral is unresolved. The wire trace shows the provider emitted the stimulated motion correctly while Steam held hidraw."
+}

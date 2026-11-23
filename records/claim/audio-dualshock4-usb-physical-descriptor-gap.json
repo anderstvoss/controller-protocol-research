@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "id": "audio-dualshock4-usb-physical-descriptor-gap",
+  "statement": "The pinned Linux HID and SDL PS4 consumers cover HID output, while inspected Linux USB-audio quirk and mixer-map tables provide no model-specific DualShock 4 audio profile. These public sources do not establish the physical DS4 UAC revision, supported PCM sample rates, channel counts and role layout, mute/volume feature-unit controls, input/output terminal types or isochronous endpoint packet capacities. Missing table entries do not prove that DS4 hardware has no USB audio.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "usb",
+    "scope": "Pinned consumer-source inspection and negative table lookup only; no physical USB audio descriptors inspected."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4",
+    "audio-linux-usb-quirks-table",
+    "audio-linux-usb-mixer-maps"
+  ],
+  "evidence_role": "device"
+}

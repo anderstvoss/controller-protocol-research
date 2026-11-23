@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-hid-uapi-v73",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/c03c1a14507dfaf8b856c2608f9ac216021fc222/include/uapi/linux/usb/g_hid.h",
+  "revision": "c03c1a14507dfaf8b856c2608f9ac216021fc222",
+  "sha256": "eb66c6a24a756180586e2e90d93c031b38495a791a9b43177fb8be0615a1b95d",
+  "lineage": "linux-mainline",
+  "locator": "8-38: fixed 64-byte response structure and report-ID-only ioctl."
+}

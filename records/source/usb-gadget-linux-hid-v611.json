@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-linux-hid-v611",
+  "kind": "kernel_source",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/98f7e32f20d28ec452afb208f9cffc08448a2652/drivers/usb/gadget/function/f_hid.c",
+  "revision": "98f7e32f20d28ec452afb208f9cffc08448a2652",
+  "sha256": "c5f2b2c8b05f46619e934a02132fa54e04b0fd3cfd01980c1cb77d73ecec197a",
+  "lineage": "linux-mainline",
+  "locator": "660-669: GET_REPORT returns zero-filled report; 687-695: SET_REPORT control path."
+}

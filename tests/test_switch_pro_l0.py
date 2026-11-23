@@ -14,11 +14,11 @@ class SwitchProL0Ledger(unittest.TestCase):
     def test_new_claims_have_explicit_roles_and_no_physical_promotion(self):
         claims = [json.loads(p.read_text()) for p in
                   (ROOT / "records/claim").glob("swpro-l0-*.json")]
-        self.assertEqual(len(claims), 42)
-        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 22)
-        self.assertEqual(sum(c["evidence_role"] == "device" for c in claims), 20)
+        self.assertEqual(len(claims), 46)
+        self.assertEqual(sum(c["evidence_role"] == "consumer" for c in claims), 25)
+        self.assertEqual(sum(c["evidence_role"] == "device" for c in claims), 21)
         self.assertEqual(sum(c["status"] == "unknown" for c in claims), 8)
-        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 33)
+        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 37)
         self.assertTrue(all(c["applicability"]["controller"] == "switch-pro"
                             and c["sources"] and c["experiments"] == []
                             for c in claims))
@@ -45,16 +45,39 @@ class SwitchProL0Ledger(unittest.TestCase):
         self.assertEqual(usb_status["evidence_role"], "consumer")
         self.assertEqual(usb_status["status"], "source_supported")
 
+
+    def test_bluetooth_p9c_claims_are_explicitly_source_scoped(self):
+        claims = [json.loads(p.read_text()) for p in
+                  (ROOT / "records/claim").glob("swpro-bt-*.json")]
+        self.assertEqual(len(claims), 8)
+        self.assertEqual(len({c["id"] for c in claims}), len(claims))
+        self.assertEqual(sum(c["status"] == "source_supported" for c in claims), 6)
+        self.assertEqual(sum(c["status"] == "unknown" for c in claims), 2)
+        self.assertTrue(all(c["applicability"]["controller"] == "switch-pro"
+                            and c["sources"] and c["experiments"] == []
+                            and c["status"] not in {"physically_observed", "physically_validated"}
+                            for c in claims))
+        self.assertTrue(all(
+            c["applicability"]["transport"] == "source_only"
+            for c in claims if c["status"] == "source_supported"
+        ))
+        self.assertTrue(all(
+            c["applicability"]["transport"] == "bluetooth"
+            and c["evidence_role"] == "device"
+            for c in claims if c["status"] == "unknown"
+        ))
+
     def test_status_before_after_c(self):
         # Compare to merged main after B, holding all source/experiment
-        # records fixed while omitting the L0 claims and later gap-pass
-        # (swpro-cgap-*) claims, which would otherwise count as prior evidence.
+        # records fixed while omitting the L0 claims and all later additions,
+        # including gap-pass (swpro-cgap-*) and P9c Bluetooth (swpro-bt-*).
+        # Historical "before C" is not an evolving current-state projection.
         loader = status_module.load
         def without_c(root, category):
             records = loader(root, category)
             if category == "claim":
                 return [r for r in records
-                        if not r["id"].startswith(("swpro-l0-", "swpro-cgap-"))]
+                        if not r["id"].startswith(("swpro-l0-", "swpro-cgap-", "swpro-bt-"))]
             return records
         with patch.object(status_module, "load", side_effect=without_c):
             prior = next(r for r in status_module.status(ROOT) if r["id"] == "switch-pro")

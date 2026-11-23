@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-p5a-xbox-series-bluetooth-open-neutral-ed8065b4be2c",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [],
+  "procedure": "P5a P3 verification on exact vg SHA ed8065b4be2c266dd64e9cedba16e87889392a14. Drove no state edits on a new virtual Xbox Series Bluetooth-bus UHID controller. Waited for its owned gamepad event node with xpadneo bound, disabled SDL HIDAPI and opened the exact node with SDL 3.4.20. Sampled all four stick axes at open and while pumping events for 3.2 seconds. Closed and checked owned-node removal. Related claims are indexed in docs/p5a-host-evidence.md.",
+  "semantic_outcome": "The SDL gamepad opened before any input edit and both sticks read zero at open and throughout the sample window. Axis samples alone do not distinguish the initial SDL default from a delivered neutral report. No Bluetooth radio was involved."
+}
