@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "xbox-series-rumble-native-fields",
+  "statement": "The pinned Series Bluetooth descriptor and xpadneo consumer define output 0x03 as a four-bit motor selection mask, four magnitude bytes with logical range 0–100, duration and delay in 10 ms ticks (0–255), and an unsigned loop-count byte. Consumer quirks can reorder mask bits; this records the ordinary mask, not every hardware variant or physical timing behavior.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-series",
+    "revision": "standard Series descriptor example at xpadneo 56b538d; retail firmware variant not established",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpadneo docs/descriptors/xbxs.md:123-165; xpadneo.h:55-105; rumble.c:56-137; SDL_hidapi_xboxone.c:564-574. Source-only logical layout and consumer behavior; no physical test."
+  },
+  "sources": [
+    "xbox-cgap-xpadneo-series-desc",
+    "xbox-cgap-xpadneo-header",
+    "xbox-cgap-xpadneo-rumble",
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

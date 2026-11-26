@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-p10d-calibration",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps4",
+    "audio-sdl-ps5",
+    "audio-sdl-switch-pro"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad d9cc4445bcd0901f84d10635c6b82403f0e1d765. Changed only caller-supplied synthetic calibration data and applied the same public input stimulus to the default and modified configurations. Read the owned evdev node and observed SDL on the owned raw or event node.",
+  "semantic_outcome": "DualSense USB and Bluetooth plus DualShock 4 USB: hid-playstation and SDL HIDAPI applied the predicted smaller synthetic scale change on all three rows. SDL HIDAPI retained its fallback value in a separate stress arm outside its valid range. Switch Pro USB and Bluetooth: hid-nintendo, SDL evdev and SDL HIDAPI each applied the predicted left-axis SPI shift. DualShock 4 Bluetooth rejected caller data before provider creation."
+}

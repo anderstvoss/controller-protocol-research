@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-cemu-builtin-inactive-branch",
+  "statement": "Pinned Cemu HIDAPI accepts Wii Remote PIDs 0306 and 0330 but its A600FA/6 response path treats the built-in inactive suffix A4200005 as an inactive informational branch, whereas the external A6200005 suffix triggers MotionPlus activation at A600F0 and A600FE. Consequently an early 0306 unit returning the built-in constant may be discovered without Cemu activating its gyro through this path. Exact retail early-unit bytes and decoded gyro remain unknown; substituting an external constant would be an explicit compatibility shim, not proven fidelity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Cemu pinned native Wii HIDAPI; conditional early 0306 built-in inactive reply, no hardware measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu provider 275-380,925-950; Wii messages 36-59; HIDAPI PID filter 5-47. No Cemu early-Plus consumer run."
+  },
+  "sources": [
+    "wii-gap-plustrace-cemu-provider-29f",
+    "wii-gap-consumer-cemu-messages",
+    "wii-gap-plus-cemu-pairing-29f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

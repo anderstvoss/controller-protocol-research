@@ -1,12 +1,12 @@
 # Controller protocol knowledge base
 
-**Latest reviewed corpus revision:** [`e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7`](https://github.com/anderstvoss/controller-protocol-research/commit/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7) (2026-11-11). The original November 9 and November 10 chapters retain their pinned claim citations; the four November 11 research PRs are incorporated in new subchapters. This reviewed revision adds one-controller physical Xbox evidence, source-only Puck and Joy-Con Left research, and a virtual Steam kernel-evdev experiment.
+**Latest reviewed corpus revision:** [`eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e`](https://github.com/anderstvoss/controller-protocol-research/commit/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e) (2026-11-25 review). The Alpha 2 preparation refresh incorporates registry/hygiene, receiver, Sony, Nintendo, Wii, Xbox, Steam, USB audio and virtual-host polish evidence. Earlier sections retain their historical pinned citations.
 
-This is a **curated engineering interpretation**, not a live rendering of every JSON record. The [evidence corpus](https://github.com/anderstvoss/controller-protocol-research/tree/ce6b8d3b70fd0957135eb921ef6098988f355cb1/records/controller) remains authoritative; this wiki explains the protocols, host behavior, implementation constraints and unresolved questions. Pages are updated **on request**, after reviewing additions and changes in the corpus.
+This is a **curated engineering interpretation**, not a live rendering of every JSON record. The [evidence corpus](https://github.com/anderstvoss/controller-protocol-research/tree/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/controller) remains authoritative; this wiki explains the protocols, host behavior, implementation constraints and unresolved questions. Pages are updated **on request**, after reviewing additions and changes in the corpus.
 
 ## Start here
 
-- [Controller library](controllers.md) — all 19 registered controller/family/interface entries.
+- [Controller library](controllers.md) — registered controller/family/interface entries.
 - [Latest research additions](changelog.md) — chapter updates, evidence scope and snapshot history.
 - [How to interpret evidence](methodology.md) — evidence roles, standards of proof, provenance and conflicts.
 - [Controller/audio association](audio-association.md) — separate HID and sound-card discovery, USB ancestry, unknown Steam/Proton association.
@@ -23,4 +23,4 @@ Each primary controller has a landing page. Subpages describe **protocol/wire st
 
 For example, source code expecting a packet is not proof a retail unit emits it. A successful virtual-host run is not a controlled physical comparison. A hardware observation may be constrained to one firmware, transport and test.
 
-> **Editorial coverage:** Twelve main-branch research/maintenance commits since the November 9 baseline, through `e8cca52c51f7`. The newest four are #125, #127, #122 and #126. Source-only, virtual-host and physical-device findings remain separately scoped.
+> **Editorial coverage:** See the [editorial changelog](changelog.md) for the PR groups reviewed. Source-only, virtual-host and physical-device findings remain separately scoped.

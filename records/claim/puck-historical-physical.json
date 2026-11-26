@@ -2,21 +2,23 @@
   "schema_version": 1,
   "id": "puck-historical-physical",
   "statement": "Historical handoff reports physical identity 28de:1304; original capture has not been recovered.",
-  "status": "conflicted",
+  "status": "source_supported",
   "applicability": {
     "controller": "steam-controller-2026-puck",
     "revision": "unknown",
     "firmware": "unknown",
-    "transport": "usb",
-    "scope": "unrecovered physical capture"
+    "transport": "receiver",
+    "scope": "Historical official Puck receiver, USB-facing Linux hidraw observations on 2026-07-31 and 2026-08-03; sanitized narrative only, original raw capture not recovered or revalidated. Not evidence about the historical compatibility implementation or radio-side behavior."
   },
   "sources": [
-    "handoff"
+    "handoff",
+    "sc2-src-capture-notes-2026"
   ],
-  "experiments": [],
-  "conflicts_with": [
-    "puck-historical-compat"
+  "experiments": [
+    "sc2-exp-puck-steam-stopped-20260731",
+    "sc2-exp-puck-steam-active-20260803"
   ],
+  "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null
 }

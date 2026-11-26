@@ -14,7 +14,8 @@
     "vg-alpha1-exp0014"
   ],
   "experiments": [
-    "swpro-vg-exp0014-evdev-individual-host-run"
+    "swpro-vg-exp0014-evdev-individual-host-run",
+    "vg-p5a-stock-switch-pro-linux-uinput-bound-ed8065b4be2c"
   ],
   "conflicts_with": [],
   "supersedes": [],

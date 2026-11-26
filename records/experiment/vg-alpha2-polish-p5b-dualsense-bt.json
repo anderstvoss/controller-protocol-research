@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-p5b-dualsense-bt",
+  "kind": "virtual_host_run",
+  "status": "failed",
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad d9cc4445bcd0901f84d10635c6b82403f0e1d765. Created two independent stock Bluetooth-bus UHID sessions. Exercised their owned SDL and evdev endpoints and typed output, then closed them individually. Ran the xtask timing observer at N1 and N3, 50 cycles per batch, with SDL and no budget.",
+  "semantic_outcome": "Two sessions bound to the expected stock driver, closed independently and left no owned nodes. Evdev saw 8 of eight exact single-control mappings and SDL evdev saw 1 of eight. Both observers saw input move; full mapped-consumer acceptance remains open. Separate rumble and LED actions each matched the typed output on the stimulated device. The peer remained neutral and survived the first close. N1 created, appeared, opened directly, opened in SDL, and disappeared in 50/50/9/0/50 of 50 slots. N3 created, appeared, opened directly, opened in SDL, and disappeared in 150/150/10/0/150 of 150 slots."
+}

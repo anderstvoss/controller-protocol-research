@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "hid-microsoft.c:275-350, 427-435; hid-ids.h:1056-1060; hid-generic.c:82-90. Driver selection requires bus identity, registered modules and successful probe."
+    "transport": "source_only",
+    "scope": "hid-microsoft.c:275-350, 427-435; hid-ids.h:1056-1060; hid-generic.c:82-90. Driver selection requires bus identity, registered modules and successful probe; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-kernel-hid-microsoft",

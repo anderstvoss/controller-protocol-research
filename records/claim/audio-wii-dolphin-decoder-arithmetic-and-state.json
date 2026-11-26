@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "audio-wii-dolphin-decoder-arithmetic-and-state",
+  "statement": "In Dolphin's Wii speaker compatibility model, each ADPCM nibble supplies a three-bit magnitude m and a sign. The signed predictor increment is the current step times (2m+1), divided by eight with truncation toward zero, then signed as indicated; predictor saturates to signed 16-bit range. For the adaptive step, the rational multiplier has denominator 256 and numerator 230 for magnitudes zero through three, 307 for four, 409 for five, 512 for six and 614 for seven; the nonnegative product is truncated and clamped to 127 through 24576. Signed PCM byte values are multiplied by 256. An emulated-controller reset clears registers and resets the predictor and step; register updates do not reset this state, and host enable/mute report handlers update the corresponding status/control independently. Muted writes never reach the decoder; the host speaker-enable status bit itself does not gate that path. Dolphin's separate application speaker setting can gate it, but that setting is not a wire field. Zero volume does not stop decoding, while zero divisor, empty data, unknown format or oversized data produce no samples. These are compatibility-model behaviors, not evidence of physical decoder resets, activation or mute handling.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Dolphin Speaker.cpp lines 22–105, 134–184; EmuSubroutines.cpp lines 362–399. Arithmetic restated as mathematical operations, no upstream code or arrays reproduced. The finalization register activation semantics remain unknown on hardware."
+  },
+  "sources": [
+    "audio-dolphin-wii-emulated-speaker",
+    "audio-dolphin-wii-speaker-output-handler",
+    "audio-dolphin-wii-speaker-registers"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

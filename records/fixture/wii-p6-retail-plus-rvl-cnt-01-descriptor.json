@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "wii-p6-retail-plus-rvl-cnt-01-descriptor",
+  "kind": "physical",
+  "format": "hid_descriptor_hex",
+  "path": "fixtures/wii-p6-retail-plus-rvl-cnt-01-descriptor.hex",
+  "sha256": "0a50350b86ef353e4d13769b14b34421435dad3d48bba7e9d759b3ebde98a6e5",
+  "sources": [],
+  "experiments": [
+    "wii-p6-retail-hid-descriptor-run"
+  ],
+  "parent": null,
+  "transform": "Byte-preserving lowercase hexadecimal rendering of the 217-byte report descriptor. Keep only SDP HIDDescriptorList report type 0x22 and the matching Linux hidraw report_descriptor bytes. Reviewed every HID item and checked for string references and opaque long items.",
+  "claims": [
+    "wii-p6-retail-plus-rvl-cnt-01-descriptor-observed",
+    "wii-p6-retail-plus-rvl-cnt-01-descriptor-comparison"
+  ]
+}

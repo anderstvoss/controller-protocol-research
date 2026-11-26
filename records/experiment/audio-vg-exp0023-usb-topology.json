@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "audio-vg-exp0023-usb-topology",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "audio-vg-exp0023"
+  ],
+  "fixtures": [],
+  "procedure": "Historical physical USB topology inspection on 2026-09-23, Linux VM kernel 6.12.107, DualSense VID 054c, PID 0ce6, bcdDevice 1.00, high speed, configuration 1; complete firmware revision not established. Pinned maintainer narrative: https://github.com/anderstvoss/virtualgamepad/blob/55f36d92c5b6e06edae6ef06a0defdc6b54a178b/docs/history/alpha-1/experiments/EXP-0023-controller-audio.md . Read cached USB descriptors, ALSA stream information and mixer controls; direct descriptor access was permission-limited. Read-only initial check did not exercise streams, mixer changes or HID effects. Playback/capture transfer tests in the same narrative are documented separately from this topology inspection.",
+  "semantic_outcome": "Passed for the limited documentary inspection: UAC1 1.00, audio-control interface 0, streaming interfaces 1 and 2 (alternate 1), HID interface 3. Four-channel playback and two-channel capture at 48 kHz S16_LE; channel masks 0x0033 and 0x0003. Playback endpoint 0x01 adaptive, maximum 392 bytes at high speed, interval 4; capture endpoint 0x82 asynchronous, maximum 196 bytes, interval 4; feature units 2 and 5 expose mute and volume. Mixer jack indicators were off at inspection; not evidence of absent headset or microphone. No raw descriptor or hash reproduced and no UAC2 matching, acoustic response, routing, timing or firmware claim. Not a new run or capture revalidation."
+}

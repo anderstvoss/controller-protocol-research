@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-kernel-pro-input",
+  "statement": "Linux v6.12 presents a Pro extension evdev node with 17 digital controls (ABXY, Plus, Minus, Home, D-pad, L/R/ZL/ZR and stick clicks), four stick axes ABS_X, ABS_Y, ABS_RX and ABS_RY, and FF_RUMBLE. Axis declarations use -1024 through 1024, fuzz 4 and flat 100.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Pinned Pro module key map, input setup, and force-feedback flag; expected shape, not a captured device."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

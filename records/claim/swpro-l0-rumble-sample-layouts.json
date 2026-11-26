@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-rumble-sample-layouts",
+  "statement": "MissionControl's public compatibility decoder distinguishes six motor-word layouts. Number bits from zero in a little-endian 32-bit word. The top two bits determine the main format: zero produces no samples; one selects one relative pair when bits 0–19 are zero, one absolute pair when bits 0–1 are zero otherwise, or three mixed samples otherwise; two selects two relative pairs when bits 0–9 are zero, or two mixed samples otherwise; three selects three relative pairs. For the pure relative layouts each pair occupies ten bits, earliest pair at bits 20–29, high-band command in its lower five bits and low-band command in its upper five bits. The conventional absolute pair has frequency/amplitude in bits 2–8/9–15 (high), 16–22/23–29 (low). Two mixed samples: bit 0 chooses the absolute band (1 high), bits 1–7 and 23–29 specify its frequency and amplitude, bits 18–22 specify the other band's first command, and the second high/low commands occupy bits 8–12/13–17. Three mixed samples: bit 0 chooses the band, bit 2 chooses frequency (1) or amplitude (0), bits 23–29 provide the first absolute index, bit 1 is documented as set, and the next two high/low command pairs occupy bits 13–17/18–22 and 3–7/8–12 respectively.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "MissionControl v0.12.0 (6e41a4dbad6146d1c4bcffcf3188611f8b86948d)",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Compatibility consumer layout only. Padding and ambiguous encodings are not established as valid device operations. The decoder's no-sample branch is not evidence of a physical stop. Each side has independent prior state."
+  },
+  "sources": [
+    "swpro-missioncontrol-rumble-hpp",
+    "swpro-missioncontrol-rumble-cpp"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

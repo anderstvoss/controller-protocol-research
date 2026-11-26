@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "switch2-joycon-left",
+  "name": "Nintendo Switch 2 Joy-Con 2 (L)",
+  "kind": "controller",
+  "parent": "switch2-joycon-family",
+  "tracking": "anderstvoss/virtualgamepad#362",
+  "notes": "Left Joy-Con 2; pinned USB consumer path only, with independent identity. Native Bluetooth behavior and physical fidelity unmeasured."
+}

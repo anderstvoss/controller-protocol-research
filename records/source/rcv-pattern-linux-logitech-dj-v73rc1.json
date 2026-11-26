@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "rcv-pattern-linux-logitech-dj-v73rc1",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/torvalds/linux/blob/cee9395acd8043be0644b25c34bfa86623f2b935/drivers/hid/hid-logitech-dj.c",
+  "revision": "cee9395acd8043be0644b25c34bfa86623f2b935",
+  "sha256": "28465ed819dac978ab05a504cbf0c11c6cc0ed162704b8a61700d72761544d63",
+  "lineage": "linux-kernel",
+  "locator": "drivers/hid/hid-logitech-dj.c, Linux v7.3-rc1. GPL-2.0-only SPDX. Receiver IDs and ranges 19-89, 141-146, 2095-2140; composite interface association 658-765; child allocation/removal 769-935; notification handling 965-1003, 1638-1705; output 1448-1508; receiver-interface teardown 2049-2093."
+}

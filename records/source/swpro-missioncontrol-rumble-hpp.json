@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "compatibility_implementation",
+  "revision": "6e41a4dbad6146d1c4bcffcf3188611f8b86948d",
+  "lineage": "missioncontrol",
+  "id": "swpro-missioncontrol-rumble-hpp",
+  "url": "https://github.com/ndeadly/MissionControl/blob/6e41a4dbad6146d1c4bcffcf3188611f8b86948d/mc_mitm/source/controllers/switch_rumble_decoder.hpp",
+  "sha256": "4dc2118d68b8f298192429e5c1af3b89a0a0fddc19079505ceca8652b5d4a7ca",
+  "locator": "Lines 18–98: packed sample layouts and sample count; 100–124: decoder state interface."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "ds4-cgap-feature12-v2-usb-read",
+  "statement": "A third-party ControlDeck project reports that a read-only USB HID feature report 0x12 request succeeded against a physical DualShock 4 v2, product 0x09CC, on macOS, yielding a 16-byte response. The reported layout places the controller identity in positions 1 through 6 and the stored peer identity in positions 10 through 15, each little-endian. This is a source-supported report of an external observation, not a measurement by this corpus. It does not establish behavior for v1, the wireless adapter, other firmware, or any pairing write.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "ControlDeck 46151468605ba4d9e5c6378079bb56cd3c934333, reported physical DS4 v2 USB product 0x09CC only",
+    "firmware": "unknown; no version established in the cited report",
+    "transport": "source_only",
+    "scope": "Externally reported read-only macOS IOHIDDeviceGetReport feature 0x12 result and positional structure; physical verification not performed by the corpus; no private identity or pairing data published."
+  },
+  "sources": [
+    "ds4-cgap-controldeck-pairing-scope",
+    "ds4-cgap-controldeck-pairing-spike"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [
+    "ds4-l0-device-feature12-pairing-unknown"
+  ],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

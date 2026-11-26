@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer",
+  "id": "rcv-pattern-ds4-node-persistence",
+  "statement": "At receiver probe, hid-playstation allocates and registers a DualShock 4 gamepad, motion sensor input, touchpad input, battery and lightbar surface even though dongle presence starts disconnected. Later wireless loss changes dongle state and gates input parsing, without calling input-device unregister for that transition. This source path therefore retains the same Linux input objects across ordinary wireless loss and reconnect, unlike a re-probed USB dongle.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualshock4",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Sony USB adapter lifetime versus attached-controller presence; source-level object lifetime, not measured evdev node number"
+  },
+  "sources": [
+    "audio-linux-hid-playstation"
+  ]
+}

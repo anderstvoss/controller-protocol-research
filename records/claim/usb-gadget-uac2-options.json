@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-uac2-options",
+  "statement": "The v7.3 f_uac2 configfs function supports playback/capture channel masks, sample-rate lists and sizes, mute/volume feature units, and playback/capture terminal-type configuration. Channel count is derived from channel-mask population in this pinned release, not separately configurable. Both data directions use isochronous endpoints. These are functional UAC2 configuration controls, not arbitrary composite descriptor or physical fidelity.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux UAC2 gadget-function options at pinned v7.3; later proposed channel-count patches are not presumed merged."
+  },
+  "sources": [
+    "usb-gadget-linux-uac2-v73",
+    "usb-gadget-linux-uac2-abi-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cross-consumer-compatibility",
+  "statement": "For consumers actually emitting audio, a virtual Wii Remote should parse enable 0x14, mute 0x19, 20-byte-bounded data 0x18 with its encoded length and rumble bit, and speaker memory writes through 0x16 at the A2 addresses. It should preserve field values and ordering rather than assuming one canonical startup; libogc and CWiid both select ADPCM with volume 0x40 but differ in order, divisor and packet scheduler. Libogc also needs status-report speaker state and likely successful queue-driving input ACKs, while CWiid requires HID control transaction handshakes and memory-write completion. This is an inferred compatibility design checklist, not a physical accuracy claim.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-libogc-setup",
+    "wii-gap-speaker-libogc-wpad",
+    "wii-gap-speaker-libogc-commands",
+    "wii-gap-speaker-libogc-events",
+    "wii-gap-speaker-cwiid-command",
+    "wii-gap-speaker-cwiid-util",
+    "audio-dolphin-wii-speaker-output-handler"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

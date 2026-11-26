@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-bt-consumer-crc-contract",
+  "statement": "Linux and SDL describe Bluetooth input 0x31 and output 0x31 as 78-byte reports with a trailing four-byte little-endian CRC32. Kernel seeds input 0xA1, output 0xA2 and Bluetooth feature responses 0xA3; the CRC covers the seed byte followed by the report excluding its final four bytes. Linux rejects invalid incoming input or feature CRCs. Output CRC generation is a consumer send behavior; no physical actuator acceptance is implied.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux hid-playstation 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL_hidapi_ps5.c 535d80badefc83c5c527ec5748f2a20d6a9310fe; no reference-device or host run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 76-95, 742-751, 799-833, 1251-1319, 1448-1469; SDL 1044-1068, 1431-1444. No observed hardware or kernel handling of malformed host writes."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

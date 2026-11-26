@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "x360-cgap-xpad-led-usb-binding",
+  "statement": "In Linux xpad at the pinned revision, only the USB xpad driver calls its LED registration during input-device initialization for Xbox 360 wired and wireless controller types, with the registration compiled out unless CONFIG_JOYSTICK_XPAD_LEDS is enabled. An ordinary uinput input device or standard-HID UHID device, even when it advertises 045e:028e or FF_RUMBLE, does not bind xpad's USB interface driver and therefore cannot acquire xpad's xpadN LED class device by that mechanism. This does not rule out independently implemented LED interfaces or establish the running kernel's configuration.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "Linux 4056b3c9d3c92ea45955641dbafeb9b960e146ef; virtual realization not run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "USB xpad binding 477-503 and 2320-2329; conditional LED-class registration 1641-1645 and 1730-1785; input initialization 1945-2052 and USB probe 2056-2063, 2217-2221. Only xpadN creation; no Steam or device actuation claim."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "x360-l0-linux-hid-input"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

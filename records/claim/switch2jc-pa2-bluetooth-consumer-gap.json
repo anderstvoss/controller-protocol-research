@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-bluetooth-consumer-gap",
+  "statement": "At the pinned revisions, the Linux Nintendo Switch 2 HID path rejects non-USB devices and has only USB match entries for Joy-Con 2; the SDL Switch 2 HIDAPI initializer explicitly rejects Bluetooth. Therefore Bluetooth-bus UHID is not an established recognition path for these consumers at these pins. Actual retail Bluetooth framing and pairing remain unknown.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-joycon-family",
+    "revision": "Linux 77c7155e2707ba5b1d56f3dc1acead48cf17f98d; SDL fe2bca9748afa754ebbca4c543c5b28bbce30cf4 where applicable",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux and SDL source-level Bluetooth support limit"
+  },
+  "sources": [
+    "switch2-gc-linux-hid",
+    "sdl-switch2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

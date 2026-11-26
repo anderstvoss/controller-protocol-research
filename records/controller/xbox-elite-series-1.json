@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox-elite-series-1",
+  "name": "Microsoft Xbox Elite Wireless Controller (Series 1)",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#359",
+  "notes": "Original Elite is distinct from Elite Series 2; wired Xbox One-family USB xpad is the first source-only consumer target. Xbox Wireless receiver and physical fidelity are not established."
+}

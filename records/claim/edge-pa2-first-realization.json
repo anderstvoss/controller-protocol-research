@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "edge-pa2-first-realization",
+  "statement": "A separate typed Edge variant sharing DualSense HID framing is the preferred implementation boundary; linux.uhid.bluetooth is the first proposed HID realization because the inspected Linux kernel matches Edge on the Bluetooth HID bus and consumes its native reports. This is a design inference only: a Bluetooth-bus UHID node is not radio pairing, and feature, descriptor, SDL backend and host acceptance remain unverified.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "dualsense-edge",
+    "revision": "Linux v7.3; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "virtualgamepad design recommendation; no implementation or host test"
+  },
+  "sources": [
+    "edge-pa2-linux-v73-hid-playstation",
+    "sdl-ps5-baseline",
+    "sdl-gamepad-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

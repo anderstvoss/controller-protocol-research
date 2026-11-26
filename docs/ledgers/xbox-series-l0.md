@@ -90,3 +90,18 @@ SDL, USB-device-gap or Bluetooth-device-gap records.
   A separately supplied firmware prerequisite is recorded without analysis.
 - **Gaps:** `xbox-xone-physical-unknown` retains physical-device unknowns.
   The proposed tests in the brief are explicitly **not run**.
+
+## Xbox Wireless Adapter receiver client lifecycle (source-only)
+
+The [receiver lifecycle brief](../receivers-xbox-wireless-adapter.md) adds source-only consumer or inferred `rcv-xwa-*` claims against new registry identity `xbox-wireless-adapter` (tracking virtualgamepad #165). It **extends** the existing `xbox-xone-receiver-bind`, `xbox-xone-receiver-clients` and related Xbox Series records without editing or superseding them.
+
+| Topic | New claims | Limit |
+| --- | --- | --- |
+| Association, loss and client allocation | `rcv-xwa-association-queue`, `rcv-xwa-slot-reuse` | First-free 16-entry software table, not measured maximum or durable identity |
+| Kernel input node lifecycle | `rcv-xwa-node-lifetime` | New GIP/input instance on attach, path numbering not tested |
+| Output and shared fault boundaries | `rcv-xwa-output-routing`, `rcv-xwa-failure-teardown` | No physical delivery, uncertain-retry, fairness or universal recovery evidence |
+| Per-client / desktop companions | `rcv-xwa-per-client-surfaces` | Scoped gamepad/optional headset; no keyboard/pointer registration in inspected paths |
+| Mainline and SDL consumers | `rcv-xwa-mainline-xpad`, `rcv-xwa-sdl-linux` | Stock xpad lacks adapter IDs; SDL observed only from pinned source |
+| Honest realization choice | `rcv-xwa-virtual-boundary` | Inference: post-driver evdev is reduced; USB-level native binding remains unimplemented |
+
+The Linux v7.3 xpad source is pinned at its annotated tag's peeled commit and reuses the exact-file hash of the previously pinned xpad file. The xone source files share lineage `xone-dlundqvist`, not independent corroboration. The pinned SDL references supply separate consumer evidence. No hardware, host, firmware, radio, USB gadget, evdev, SDL or simultaneous-capacity test was run. Puck's four protocol slots remain separate from xone's dynamic allocation and from GamepadManager player slots.

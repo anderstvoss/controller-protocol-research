@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "swpro-cgap-linux-usb-report-period-source",
+  "statement": "At pinned Linux hid-nintendo revision 79eb6679, the driver's source commentary describes Switch Pro standard-mode input reports at roughly 15 ms intervals over USB versus roughly 8 ms over Bluetooth. The driver's default IMU inter-report estimate is 15 ms and it adaptively averages received intervals; its author reports 11 ms or 15 ms in testing without identifying a fixed transport for each result. This is a source-backed transport-specific expectation, not a new retail USB capture or a universal physical cadence. Existing community 60/120 Hz descriptions and OpenPuck's 4 ms emulated schedule remain distinct evidence scopes.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Linux 79eb6679; comparison only to existing Linux 4056b3c and community/OpenPuck source records",
+    "firmware": "retail firmware not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c lines 154 and 1437-1497. Linux author's narrative is inherited from an earlier pinned Linux revision and is not independent corroboration. Narrows the USB-vs-Bluetooth interpretation of swpro-l0-device-usb-cadence-conflict; does not settle swpro-l0-device-physical-usb-period-unknown."
+  },
+  "sources": [
+    "swpro-cgap-linux-cadence-source",
+    "audio-linux-hid-nintendo",
+    "swpro-dekunukem-bluetooth-hid-notes",
+    "swpro-openpuck-mode"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

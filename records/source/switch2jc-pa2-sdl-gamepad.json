@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-sdl-gamepad",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/libsdl-org/SDL/fe2bca9748afa754ebbca4c543c5b28bbce30cf4/src/joystick/SDL_gamepad.c",
+  "revision": "fe2bca9748afa754ebbca4c543c5b28bbce30cf4",
+  "sha256": "8ce64e538dd0c6dab4fb9fd83f08cd6baeb912da329404f268192e0cb86275e4",
+  "lineage": "SDL",
+  "locator": "src/joystick/SDL_gamepad.c lines 1134-1157: default left/right Joy-Con 2 gamepad mappings, mini and vertical hint branches, and pair mapping. Licence: zlib."
+}

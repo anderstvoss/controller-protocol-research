@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-frames-pacing",
+  "statement": "Pinned libogc WPAD encodes signed PCM input as 4-bit Yamaha ADPCM, high nibble first, and streams report 0x18 with a five-bit length shifted into the control byte, at most 20 encoded bytes. Its periodic alarm is configured for 6,666,667 ns and sends 20-byte blocks; the speaker initialization selects ADPCM format 0x00 rather than emitting 8-bit PCM format 0x40. This is a source scheduler request, not a measured radio cadence or decoder sample rate; the callback sends fixed 20-byte blocks even when the remaining buffer is shorter.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-libogc-wpad",
+    "wii-gap-speaker-libogc-commands",
+    "wii-gap-speaker-libogc-setup"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

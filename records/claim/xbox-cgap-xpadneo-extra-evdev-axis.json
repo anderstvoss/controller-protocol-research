@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
-    "scope": "events.c:297-375; CONFIGURATION.md:8-12. Reported capabilities may depend on active application collection and settings."
+    "transport": "source_only",
+    "scope": "events.c:297-375; CONFIGURATION.md:8-12. Reported capabilities may depend on active application collection and settings; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-events",

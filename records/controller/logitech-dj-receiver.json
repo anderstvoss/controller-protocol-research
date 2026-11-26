@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "logitech-dj-receiver",
+  "name": "Logitech DJ / Unifying receiver (pattern evidence)",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#165",
+  "notes": "Host-side receiver aggregation pattern evidence only; not a gamepad profile or a physical capacity measurement. Physical receiver unmeasured."
+}

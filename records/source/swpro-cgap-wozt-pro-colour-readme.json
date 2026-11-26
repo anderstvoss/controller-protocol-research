@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-cgap-wozt-pro-colour-readme",
+  "kind": "research_lead",
+  "url": "https://github.com/wozt/pcble2gamepad/blob/97084dbdc6f83d16663b32a0721ec6b713e2bbe6/README.md",
+  "revision": "97084dbdc6f83d16663b32a0721ec6b713e2bbe6",
+  "sha256": "75427057a95abc4807373876e880861d0a0a675c8a56be21a0b9da94962de574",
+  "lineage": "wozt-pcble2gamepad",
+  "locator": "README.md lines 109-135: author's account of Switch 2 colour SPI requests, field offsets and displayed-color result against emulation; unverified by this agent. GPL-3.0 (repository LICENSE)."
+}

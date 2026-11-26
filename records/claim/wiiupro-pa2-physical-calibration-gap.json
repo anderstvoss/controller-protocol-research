@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-physical-calibration-gap",
+  "statement": "Retail Wii U Pro stick calibration storage, actual resting offsets, report cadence and battery or charging-bit universality remain unmeasured. The Linux auto-centering and SDL battery scales are consumer heuristics, not evidence of retail EEPROM contents or reference-unit behavior.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Hardware comparison and private analysis would be required; no vendor firmware analysis in this corpus."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-modules-v612",
+    "wiiupro-pa2-sdl-wii-877399b2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

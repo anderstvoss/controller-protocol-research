@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-per-half-host-units",
+  "statement": "Linux lists separate left and right Switch 2 USB HID matches and the SDL Switch 2 driver recognizes those products separately. SDL additionally provides a pair gamepad mapping, but this does not establish a native retail combined-pair USB device. Treat each half as a separate emulation unit until measured otherwise.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-joycon-family",
+    "revision": "Linux 77c7155e2707ba5b1d56f3dc1acead48cf17f98d; SDL fe2bca9748afa754ebbca4c543c5b28bbce30cf4 where applicable",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "USB device instances versus SDL consumer pair"
+  },
+  "sources": [
+    "switch2-gc-linux-hid",
+    "switch2jc-pa2-sdl-usb-ids",
+    "sdl-switch2",
+    "switch2jc-pa2-sdl-gamepad"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

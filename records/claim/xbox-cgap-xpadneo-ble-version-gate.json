@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
-    "scope": "core.c:173-194; device.c:14-36; xpadneo.h:119-149."
+    "transport": "source_only",
+    "scope": "core.c:173-194; device.c:14-36; xpadneo.h:119-149; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-core",

@@ -39,6 +39,21 @@ Markdown reflow supplies missing word boundaries. Review `applicability` prose
 as well. Numeric field values, packet bytes and evidence qualifications must
 remain unchanged when correcting wording.
 
+## Applicability
+
+A claim with no experiments normally uses `source_only` (source-derived evidence)
+or `not_measured` (an unknown or unmeasured gap), not `usb`, `bluetooth` or
+`receiver`. An `unknown` device-evidence gap may name the transport the missing
+evidence concerns (`usb`, `bluetooth` or `receiver`), so the status table shows
+that transport as Evidence in progress; `not_measured` remains appropriate for
+gaps without a specific transport. Device-side implementation sources (such as
+OpenPuck for the Puck) may also carry the transport they implement.
+For other claims with no experiments, describe the transport handled by the
+source or covered by the gap in `applicability.scope` instead. This distinguishes
+source applicability from measured transport evidence.
+The validator enforces this rule, accepting unknown device gaps and only the
+explicitly allowlisted device-side implementation and consumer-gap exceptions.
+
 ## Capture safety
 
 This repository is intended to be public. Before adding a physical or

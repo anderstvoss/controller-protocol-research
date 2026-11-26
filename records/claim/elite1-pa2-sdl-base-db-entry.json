@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-sdl-base-db-entry",
+  "statement": "SDL 3.2.0's built-in mapping database has an Xbox One Wired Controller entry for Microsoft USB 0x045e:0x02e3 covering ordinary gamepad buttons and axes, without explicit paddle slots. Nearby Elite-named wireless entries use different product IDs; they must not be treated as evidence for the original Elite's Bluetooth capability. Effective SDL paddle mapping precedence remains untested.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "SDL release-3.2.0 mapping database",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_gamepad_db.h:469-472, 839-840, 874-875. Default database entry is not a measured SDL runtime mapping."
+  },
+  "sources": [
+    "x360-l0-sdl-gamepad-db",
+    "sdl-linux-joystick-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

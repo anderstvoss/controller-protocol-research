@@ -15,6 +15,8 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 - [Switch 1 Joy-Con family](controllers/switch-joycon-family/index.md)
 - [Joy-Con (L)](controllers/switch-joycon-left/index.md) — [source-described fields and Linux/SDL mappings](controllers/switch-joycon-left/source-and-consumers.md)
 - [Joy-Con (R)](controllers/switch-joycon-right/index.md)
+- [Wii U Pro Controller](controllers/wii-u-pro/index.md)
+- [Switch 2 Joy-Con family](controllers/switch2-joycon-family/index.md) — [left](controllers/switch2-joycon-left/index.md), [right](controllers/switch2-joycon-right/index.md).
 - [Switch 2 Pro Controller](controllers/switch2-pro/index.md)
 - [Switch 2 GameCube USB Controller](controllers/switch2-gamecube/index.md)
 - [GameCube four-port USB adapter (WUP-028)](controllers/gamecube-usb-adapter/index.md)
@@ -29,11 +31,18 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 ## Microsoft and third-party
 
 - [Xbox 360 standard-HID realization](controllers/xbox360/index.md) — explicitly separate from native XUSB.
+- [Xbox 360 Wireless Receiver](controllers/xbox360-wireless-receiver/index.md) — native receiver consumer lifecycle.
+- [Xbox Wireless Adapter](controllers/xbox-wireless-adapter/index.md) — xone per-client GIP lifecycle.
+- [Xbox One](controllers/xbox-one/index.md)
+- [Xbox Elite Series 1](controllers/xbox-elite-series-1/index.md)
+- [Xbox Elite Series 2](controllers/xbox-elite-series-2/index.md)
 - [Xbox Series Controller](controllers/xbox-series/index.md) — [wired GIP and receiver](controllers/xbox-series/wired-gip-and-receiver.md), [Bluetooth HID and xpadneo](controllers/xbox-series/bluetooth-and-xpadneo.md), and [scoped physical and virtual observations](controllers/xbox-series/physical-observations.md).
 - [8BitDo Pro 2](controllers/8bitdo-pro-2/index.md)
+
+- [Logitech DJ / Unifying receiver](controllers/logitech-dj-receiver/index.md) — source-only heterogeneous receiver lifecycle pattern, not a gamepad profile.
 
 ## Cross-platform
 
 - [Linux joystick identity / SDL / evdev](controllers/linux-joystick-identity/index.md) — a host-interface registry entry, not a physical controller.
 
-The [controller registry](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.
+The [controller registry](https://github.com/anderstvoss/controller-protocol-research/tree/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.

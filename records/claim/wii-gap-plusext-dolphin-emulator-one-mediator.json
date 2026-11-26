@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-dolphin-emulator-one-mediator",
+  "statement": "Dolphin models a single MP mediator and an extension port with child-connected bit and copied child identity and calibration. Its emulator has not established two chained MP instances or a second gyro arbiter; synthetic timings and readback cannot be applied to physical Plus plus external MP or nested retail modules.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin emulated MotionPlus accessory model",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin MotionPlus.cpp 95-154, 190-389, 394-465, 600-709 and MotionPlus.h 77-115. #52 not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-mp-emu-3eb30c",
+    "wii-gap-dolphin-motionplus-layout-e1d35f"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

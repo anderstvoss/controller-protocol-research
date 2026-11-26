@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "edge-pa2-linux-v73-hid-playstation",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/v7.3/drivers/hid/hid-playstation.c",
+  "revision": "v7.3",
+  "sha256": "48a08dddf8d276a611195311a29cd4f113a949a1f5431ecc84b0396b106ec896",
+  "lineage": "linux-kernel (torvalds/linux), same upstream lineage as audio-linux-hid-playstation",
+  "locator": "drivers/hid/hid-playstation.c lines 81-119 (HID reports and Edge bits), 1251-1320 (USB/BT output framing and CRC), 1322-1428 (output), 1436-1508 (input, four extra keys), 1737-1834 (Edge selection and EV_KEY capability), 2937-2958 (USB/BT match); license: GPL-2.0-or-later"
+}

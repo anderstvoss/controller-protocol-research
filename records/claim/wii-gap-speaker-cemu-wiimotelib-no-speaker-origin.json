@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cemu-wiimotelib-no-speaker-origin",
+  "statement": "At the pinned inspected revisions, Cemu's native Wiimote messages header defines output report IDs 0x14, 0x18 and 0x19 and a speaker status flag, but WiimoteControllerProvider.cpp has no speaker send/configuration path. WiimoteLib's pinned Wiimote.cs defines no speaker output command or A2 speaker register and no speaker sample producer; its generic report 0x22 handler and status wait are unrelated to an audio stream. These files therefore supply no positive speaker-stream acceptance oracle; they remain input/status consumers, not confirmed audio originators.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-messages",
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-wiimotelib-windows"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

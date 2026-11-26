@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "xbox-one",
+  "name": "Microsoft Xbox One controller",
+  "kind": "controller",
+  "parent": null,
+  "tracking": "anderstvoss/virtualgamepad#355",
+  "notes": "Separate post-Alpha 2 curated family recommendation; standard original and Xbox One S USB revisions with optional model/firmware-specific Bluetooth. Do not equate Xbox Series Share or Bluetooth device reports with these variants."
+}

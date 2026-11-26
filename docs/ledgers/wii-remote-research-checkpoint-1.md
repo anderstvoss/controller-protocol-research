@@ -23,7 +23,10 @@ Nintendo Bluetooth names, VID/PIDs and TR channel-authentication sequence are so
 - **rnconrad:** `wii-gap-rnconrad-candidate-sdp-descriptor-structure`
 - **WiiBrew:** `wii-gap-wiibrew-data-report-powerup-default`, `wii-gap-wiibrew-continuous-versus-change-reports`
 - **C5/Dolphin-derived:** `wii-c5-report-layouts`, `wii-c5-synthetic-fixtures`
-- **Unknown:** `wii-gap-retail-hid-descriptor-capture-unknown`
+- **Historical gap:** `wii-gap-retail-hid-descriptor-capture-unknown` is superseded for
+  the measured RVL-036 Wii Remote Plus with the RVL-CNT-01 Bluetooth identity
+  by `wii-p6-retail-plus-rvl-cnt-01-descriptor-observed`. See the
+  [P6 descriptor comparison](../wii-p6-retail-hid-descriptor.md).
 - **Virtual-host experiment:** `wii-w1-sdl-host-run`
 
 Report IDs and payload lengths have multiple source counterparts. The C5 authored vendor-page descriptor is *synthetic*, while rnconrad's 217-byte SDP candidate is a Game Pad top-level descriptor with separate speaker output IDs; retail origin/licensing remain unproven. WiiBrew describes mode `0x30` at power-up, with accelerometer LSBs embedded in core-button bits **only for modes carrying accelerometer data**; interleaved `0x3e/0x3f` use button-byte space for Z-axis information. Neither source yields a measured cadence.

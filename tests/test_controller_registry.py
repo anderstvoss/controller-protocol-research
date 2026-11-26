@@ -44,9 +44,9 @@ class ControllerRegistry(unittest.TestCase):
     def test_categories_follow_strongest_claim(self):
         rows = {row['id']: row for row in status(self.root)}
         self.assertEqual(rows['dualsense']['category'], 'Source evidence')
-        self.assertEqual(rows['wii-remote']['category'], 'Source evidence')
+        self.assertEqual(rows['wii-remote']['category'], 'Physical evidence')
         self.assertEqual(rows['wii-remote']['transports']['source_only'], 'Source evidence')
-        self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Evidence in progress')
+        self.assertEqual(rows['wii-remote']['transports']['bluetooth'], 'Physical evidence')
         # SDL or kernel source analysis alone is not device-protocol evidence.
         for controller in ['dualsense-edge', 'switch2-pro']:
             with self.subTest(controller=controller):
@@ -63,9 +63,14 @@ class ControllerRegistry(unittest.TestCase):
         self.assertEqual(rows['switch-pro']['consumer_category'], 'Source evidence')
         self.assertEqual(rows['xbox360']['category'], 'Source evidence')
         self.assertEqual(rows['xbox360']['consumer_category'], 'Source evidence')
+        # Documentary cadence is source-only; USB slot topology is still a gap.
+        self.assertEqual(rows['steam-controller-2026-puck']['category'], 'Source evidence')
         puck = rows['steam-controller-2026-puck']['transports']
-        self.assertEqual(puck['usb'], 'Source evidence')
-        self.assertNotIn('source_only', puck)
+        self.assertEqual(puck['usb'], 'Evidence in progress')
+        self.assertEqual(puck['source_only'], 'Source evidence')
+        self.assertEqual(puck['receiver'], 'Source evidence')
+        # The named OpenPuck implementation exceptions retain their own USB scope.
+        self.assertEqual(rows['openpuck-firmware']['transports']['usb'], 'Source evidence')
         self.assertEqual(rows['steam-controller-2026-puck']['consumer_transports']['source_only'],
                          'Source evidence')
 
@@ -100,13 +105,16 @@ class ControllerRegistry(unittest.TestCase):
         # them too so this corpus still has no Wii Remote claims at all.
         for path in (self.root / 'records/claim').glob('audio-wii-*.json'):
             path.unlink()
-        # Remove fixture references with their claims in this isolated corpus.
-        for path in (self.root / 'records/fixture').glob('wii-c5-*.json'):
-            path.unlink()
-        # Timing experiments reference the fixtures removed above; keep this
-        # isolated no-claims corpus reference-valid without weakening its result.
-        for path in (self.root / 'records/experiment').glob('wii-c5-*-host-run.json'):
-            path.unlink()
+        # Remove fixtures that cite the deleted claims and experiments that
+        # cite those fixtures to keep this isolated no-claims corpus valid.
+        for record_type, pattern in (
+            ('fixture', 'wii-c5-*.json'),
+            ('fixture', 'wii-p6-*.json'),
+            ('experiment', 'wii-c5-*-host-run.json'),
+            ('experiment', 'wii-p6-*.json'),
+        ):
+            for path in (self.root / 'records' / record_type).glob(pattern):
+                path.unlink()
         rows = {row['id']: row for row in status(self.root)}
         self.assertEqual(rows['wii-remote']['category'], 'No evidence')
 

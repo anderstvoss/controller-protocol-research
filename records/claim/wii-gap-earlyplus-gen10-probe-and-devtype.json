@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-gen10-probe-and-devtype",
+  "statement": "Pinned Linux v6.12 classifies a Nintendo RVL-CNT-01, 057e:0306 Wii Remote as gen10 rather than gen20 or gen15, then schedules four-second MotionPlus hotplug polling because gen10 has no BUILTIN_MP flag. Its A600FA/6 probe recognizes a six-byte reply ending 0x05 regardless of the earlier built-in versus external identity bytes. On a responding early integrated Plus this can create the MotionPlus evdev child while devtype remains gen10; it does not prove a captured physical response.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Linux v6.12 Gen 1 name/ID classifier and MotionPlus hotplug; early 0306 retail response not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux v6.12 core 513-530,582-605,811-905,907-933,1100-1179; modules 2630-2665. No hardware or host run."
+  },
+  "sources": [
+    "wii-gap-plus-kernel-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

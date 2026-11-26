@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-wiiuse-inactive-versus-active-id",
+  "statement": "Pinned wiiuse reads A600FA/6 and accepts both inactive four-byte identifiers A4200005 (built-in) and A6200005 (external), plus recognized no-longer-active variants; it does not use those identifiers to select a distinct early 0306 packet decoder. After setup, the same 0x04 or 0x05 activation and mapped A400FA identities A4200405, A4200505 and A4200705 drive its MotionPlus and passthrough interpretation. These accepted source constants do not establish which full six-byte response an early retail unit returns.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Conditional early integrated 0306 versus original 0306 plus external MotionPlus; precise physical six-byte IDs not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. wiiuse motion_plus.c 45-104,106-166,170-198; wiiuse_internal.h 223-239. WiiBrew oldid 121955 distinguishes possible built-in identity locations. No L2CAP/hardware test."
+  },
+  "sources": [
+    "wii-gap-plustrace-wiiuse-mp-e769",
+    "wii-gap-plus-wiiuse-ids-e769",
+    "wii-gap-wiibrew-extensions-oldid121955"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

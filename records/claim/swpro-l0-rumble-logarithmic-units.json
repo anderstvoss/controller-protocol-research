@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "swpro-l0-rumble-logarithmic-units",
+  "statement": "MissionControl interprets the absolute frequency index i as a signed exponent (i − 64)/32, multiplied after base-two exponentiation by the band center (160 Hz low, 320 Hz high); all 128 indices are represented. The amplitude index a uses a base-two exponent of −8 for zero, (8a − 248)/32 for 1–15, (2a − 158)/32 for 16–31, and (a − 127)/32 for 32–127. Exponents below −7.9375 map to zero amplitude; otherwise exponentiate base two. This yields a dimensionless compatibility-decoder amplitude ratio with 1 at index 127, not the community table's numerical amplitude scale (for example, the community table places index 100 near 1).",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "MissionControl v0.12.0 (6e41a4dbad6146d1c4bcffcf3188611f8b86948d)",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Only the compatibility model's numerical units are established, not a calibrated or physically safe amplitude. The community table and compatibility consumer use different amplitude scales; do not silently equate them."
+  },
+  "sources": [
+    "swpro-missioncontrol-rumble-hpp",
+    "swpro-missioncontrol-rumble-cpp",
+    "swpro-dekunukem-rumble-data-table"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-uinput-first",
+  "statement": "For a playable Linux evdev-facing implementation, linux.uinput is the first candidate because it can expose the pinned kernel-declared buttons, sticks, hat and conventional FF shape without USB configuration exchange. This is an implementation recommendation, not a validated SDL Switch 2 native binding or a faithful retail representation. A faithful USB-consumer path would require a provider capable of a composite HID interface and vendor bulk configuration interface, such as an extended experimental dummy_hcd or USB/IP realization; UHID alone cannot create vendor-class bulk endpoints.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Recommended initial virtualgamepad realization"
+  },
+  "sources": [
+    "switch2-pa2-linux-hid-v74rc2",
+    "switch2-pa2-linux-usb-v74rc2",
+    "switch2-pa2-linux-kconfig-v74rc2",
+    "sdl-switch2",
+    "switch2-gc-sdl-libusb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

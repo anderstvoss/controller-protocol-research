@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-xwiimote-kernel-derived",
+  "statement": "xwiimote consumes the Linux driver's core, extension and MotionPlus evdev nodes, not raw Wii register responses. For Plus with external MP or nested MPs it inherits whichever one gyro node the kernel exposes; it cannot independently identify the downstream second MP or expose two distinct sensor sources through its reviewed API.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "xwiimote and xwiishow on hid-wiimote",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. xwiimote lib/core.c 187-380, 548-672, 1040-1094; Linux worker 1100-1192; #52 not run."
+  },
+  "sources": [
+    "wii-gap-consumer-xwiimote-core",
+    "wii-gap-plustrace-linux-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-separate-family-shared-code",
+  "statement": "Because Linux and SDL both use Wii-transport mechanics with a distinct embedded Pro gamepad topology rather than a hot-pluggable Remote accessory, a separate wii-u-pro curated family with reused Wii protocol transport/report helpers is the preferred design over a Wii Remote extension variant exposed to callers.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Architecture recommendation, not a physical equivalence claim or implementation decision."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-kernel-core-v612",
+    "wii-gap-dolphin-attach-kernel-modules-v612",
+    "wiiupro-pa2-sdl-wii-877399b2"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

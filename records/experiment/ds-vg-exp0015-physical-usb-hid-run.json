@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "ds-vg-exp0015-physical-usb-hid-run",
+  "kind": "controlled_physical",
+  "status": "passed",
+  "sources": [
+    "vg-alpha1-exp0015"
+  ],
+  "fixtures": [],
+  "procedure": "Historical maintainer read-only physical USB inspection; run date not stated, documented by 2026-09-09. See https://github.com/anderstvoss/virtualgamepad/blob/c60c16409e91e39ddba56a78475bdabe3780d1d0/docs/history/alpha-1/experiments/EXP-0015-reference-layouts.md . Linux VM kernel 6.12.107+deb13-arm64; DualSense VID 054c, PID 0ce6, device and firmware revisions not stated. Selected only the hidraw node with the matching physical USB ancestor and checked its identity against sysfs after opening without following symlinks. Inspected descriptor length and issued read-only HIDIOCGFEATURE requests for IDs 0x05, 0x09 and 0x20 at expected lengths; then bounded nonblocking passive input reads to 64 reports or three seconds under a 20-second outer timeout. Closed the selected descriptor; no created nodes or children remained.",
+  "semantic_outcome": "The narrative reports a 273-byte descriptor, matching numbered GET lengths of 41, 20 and 64 bytes respectively, and 64 passive reports of ID 0x01, each 64 bytes, with 64 distinct strictly increasing sensor timestamps. Passed only the documented read-only framing check. Broken triggers and stick drift exclude affected mechanical fidelity; no output or SET reports, force effects, rebinding or consumer-fidelity tests. Raw descriptor, sensitive feature contents and artifact hashes are not reproduced; the source hash covers the narrative only. No new run or physical validation."
+}

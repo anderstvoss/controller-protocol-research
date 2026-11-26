@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-dolphin-native-no-early-discriminator",
+  "statement": "Pinned Dolphin native Real Wii Remote discovery accepts Nintendo RVL-CNT name prefix and the Nintendo 0306 and 0330 PIDs. Its ControllerInterface MotionPlus setup is driven by extension status, inactive A600 access, mapped A400 identity, desired mode and calibration gates rather than an explicit early 0306 built-in model flag. Thus a 0306 early-Plus candidate can enter Dolphin's generic MotionPlus path, but source examination alone neither proves early built-in versus external packet equivalence nor a complete decoded gyro result.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Dolphin native Bluetooth/HIDAPI ControllerInterface; early 0306 is conditional source-path match",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Dolphin WiimoteReal.cpp 1009-1035; ControllerInterface WiimoteController.cpp 449-657. No early hardware, paired-radio or host test."
+  },
+  "sources": [
+    "wii-gap-plus-dolphin-real-3eb",
+    "wii-gap-plustrace-dolphin-ciface-3eb"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

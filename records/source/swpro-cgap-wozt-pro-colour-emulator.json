@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "swpro-cgap-wozt-pro-colour-emulator",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wozt/pcble2gamepad/blob/97084dbdc6f83d16663b32a0721ec6b713e2bbe6/poc/protocol.c",
+  "revision": "97084dbdc6f83d16663b32a0721ec6b713e2bbe6",
+  "sha256": "b93c8a8b2df9317858c119bbbb1f53e688a7adce83d619016090d0f65b245d97",
+  "lineage": "wozt-pcble2gamepad",
+  "locator": "poc/protocol.c lines 137-144, 205-232, 259-282: emulator factory-stick boundary, colour availability marker, Pro colour regions and SPI reply path. GPL-3.0 (repository LICENSE)."
+}

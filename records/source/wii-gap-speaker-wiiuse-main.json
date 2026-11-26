@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-wiiuse-main",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/wiiuse/wiiuse/blob/e769bd73860a4f941bd110ebae5a790f968b71e3/src/wiiuse.c",
+  "revision": "e769bd73860a4f941bd110ebae5a790f968b71e3",
+  "sha256": "081ecf8bf77474037f9556efe4aab7b3775c97169bce8a8a895bd4feaaab0fe9",
+  "lineage": "wiiuse/wiiuse",
+  "locator": "319-370 and 535-805 command and output-report helpers examined; no speaker producer in this file. GPL-3.0-or-later upstream wiiuse."
+}

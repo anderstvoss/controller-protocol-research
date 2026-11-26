@@ -20,3 +20,7 @@
 4. Preserve unknown slots, errors and timing as unknown; physical tests must control which claim gets promoted.
 
 **Primary external implementation source, pinned by the corpus:** [`openpuck`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/source/openpuck.json). **Research context:** [migration analysis](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/ledgers/steam-controller-migration.md).
+
+## Historical provenance correction
+
+The compatibility PID 1142 discrepancy remains unresolved and source-only; it is an attribution question about the originating implementation revision, not a contradiction of the separately scoped historical official Puck identity 1304. The latter is now source-supported with linked historical receiver experiments; original captures were not recovered. [`puck-historical-compat`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/claim/puck-historical-compat.json), [`puck-historical-physical`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/claim/puck-historical-physical.json).

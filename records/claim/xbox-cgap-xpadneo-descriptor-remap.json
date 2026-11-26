@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "device.c:143-262; events.c:60-137; mappings.c:32-66. Fixups are conditional, not a universal Series layout."
+    "transport": "source_only",
+    "scope": "device.c:143-262; events.c:60-137; mappings.c:32-66. Fixups are conditional, not a universal Series layout; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-device",

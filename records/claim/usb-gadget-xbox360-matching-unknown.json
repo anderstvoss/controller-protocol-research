@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "usb-gadget-xbox360-matching-unknown",
+  "statement": "A standard HID plus generic UAC gadget cannot be assumed to expose Xbox 360 proprietary XInput or its headset transport. Whether a particular consumer would see the UAC card or treat it as an Xbox controller is unverified.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "Linux mainline v6.11, v6.12 or v7.3 as pinned; family revision unmeasured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Standard-HID virtualgamepad Xbox 360, not proprietary XInput or a physical reference; no host test."
+  },
+  "sources": [
+    "usb-gadget-linux-uac1-v73",
+    "usb-gadget-linux-uac2-v73"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

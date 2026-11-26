@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-sdl-one-mapped-sensor",
+  "statement": "SDL models one active MotionPlus mode and gyro decoder, not a recursive second MP. On Linux it omits the A600FE activation write, depending on hid-wiimote; it can also retain a stale cached mode. Plus plus external MP or original nested MPs thus yield at most one software-recognized MP stream, or nonrecognition, conditional on upstream identity and frame replies. Ordinary Nunchuk/Classic use their own pass-through modes.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned SDL Wii HIDAPI, Linux original or Plus",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SDL Wii 385-481, 1206-1244, 1350-1435; #52 E1/E2/E3 not run."
+  },
+  "sources": [
+    "wii-w4-sdl-3-2-10-wii",
+    "wii-gap-plustrace-linux-core-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

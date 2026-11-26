@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-wiiuse-one-mp-state",
+  "statement": "wiiuse accepts builtin or external inactive MP IDs, then initializes one MP context. Its 04/05 mapping, mapped 04/05/07 handshake and alternating gyro/child parser have no second-MP recursion or separate second gyro. Thus external MP on Plus or nested MPs cannot be credited with independently decoded dual sensors; physical first-unit identity remains unknown. L2CAP acceptance is not a UHID host result.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Pinned wiiuse native Bluetooth L2CAP",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. wiiuse motion_plus.c 45-104, 106-160, 177-235, 238-370; #52 E1/E2/E3 not run."
+  },
+  "sources": [
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769",
+    "wii-gap-consumer-wiiuse-linux"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

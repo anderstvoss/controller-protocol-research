@@ -13,3 +13,15 @@ Run two **independent** test lanes:
 A third **wireless receiver** lane would need its own `045e:0719`, four-slot handling and distinct output capture; it is neither the wired model nor generic Bluetooth HID: [`x360-l0-device-physical-receiver-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/records/claim/x360-l0-device-physical-receiver-unknown.json).
 
 See [F-P1 to F-P8 gates](https://github.com/anderstvoss/controller-protocol-research/blob/ab74f66274589a7229633f0fe8654490c3d19a12/docs/ledgers/xbox360-l0.md).
+
+## P5a virtual host observations
+
+USB-bus UHID bound hid-generic; the exact-path evdev sweep recorded four face transitions and stick endpoints. Steam listed standard HID and showed sticks/triggers and three face transitions; East was inconclusive, and ping unavailable. The uinput comparator recorded face/stick/trigger controls and ping pulse/stop, though the repeat missed the first nonzero right-trigger step. Neither demonstrates native XUSB or retail fidelity. [`vg-p5a-stock-xbox360-linux-uhid-usb-bound-ed8065b4be2c`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-stock-xbox360-linux-uhid-usb-bound-ed8065b4be2c.json), [`vg-p5a-stock-xbox360-linux-uinput-bound-ed8065b4be2c`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-stock-xbox360-linux-uinput-bound-ed8065b4be2c.json).
+
+## P5a follow-up timing
+
+USB/IP N1/N3 runs verified all five lifecycle stages in all 50/150 slots; the final attach list was empty. This is a virtual-host outcome, not native XUSB or physical headset evidence. [`vg-p5a-followup-xbox360-usbip-timing`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-followup-xbox360-usbip-timing.json).
+
+## Alpha 2 polish virtual USB binding
+
+Xbox 360 was already on hid-generic in all three cleanup 1 sessions. Cleanup 2 recorded three of three stock binds and SDL evdev opens, with zero HIDAPI opens. This does not establish native XUSB acceptance. [`vg-alpha2-polish-p5a-usb-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-alpha2-polish-p5a-usb-binding.json), [`vg-alpha2-polish-cleanup2-usb-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-alpha2-polish-cleanup2-usb-binding.json).
