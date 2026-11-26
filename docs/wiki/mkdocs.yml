@@ -106,3 +106,7 @@ nav:
           - "Overview": controllers/linux-joystick-identity/index.md
       - "Logitech DJ / Unifying receiver":
           - "Overview": controllers/logitech-dj-receiver/index.md
+      - "Xbox 360 Wireless Receiver":
+          - "Overview": controllers/xbox360-wireless-receiver/index.md
+      - "Xbox Wireless Adapter":
+          - "Overview": controllers/xbox-wireless-adapter/index.md

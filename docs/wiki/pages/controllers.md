@@ -29,6 +29,8 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 ## Microsoft and third-party
 
 - [Xbox 360 standard-HID realization](controllers/xbox360/index.md) — explicitly separate from native XUSB.
+- [Xbox 360 Wireless Receiver](controllers/xbox360-wireless-receiver/index.md) — native receiver consumer lifecycle.
+- [Xbox Wireless Adapter](controllers/xbox-wireless-adapter/index.md) — xone per-client GIP lifecycle.
 - [Xbox Series Controller](controllers/xbox-series/index.md) — [wired GIP and receiver](controllers/xbox-series/wired-gip-and-receiver.md), [Bluetooth HID and xpadneo](controllers/xbox-series/bluetooth-and-xpadneo.md), and [scoped physical and virtual observations](controllers/xbox-series/physical-observations.md).
 - [8BitDo Pro 2](controllers/8bitdo-pro-2/index.md)
 
