@@ -26,3 +26,5 @@ See [original lab plan](https://github.com/anderstvoss/controller-protocol-resea
 ## Consumer review completed, hardware gates still open
 
 The November 11 [receiver lifecycle](receiver-lifecycle.md) source review provides more explicit kernel/SDL expectations for presence, per-slot attach/detach, output ownership and expected device-node lifetimes. **None of P1–P6 above was newly performed.** In particular, physical slot ordering, simultaneous receiver failure, bond persistence and real output effects remain unknown. [`rcv-puck-teardown`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-teardown.json), [`rcv-puck-physical-slot-unknown`](https://github.com/anderstvoss/controller-protocol-research/blob/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7/records/claim/rcv-puck-physical-slot-unknown.json).
+
+The `0x7b` cadence description is source-only, with no physical timing fixture. [`sc2-cadence`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/claim/sc2-cadence.json).
