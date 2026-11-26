@@ -32,8 +32,10 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 - [Xbox Series Controller](controllers/xbox-series/index.md) — [wired GIP and receiver](controllers/xbox-series/wired-gip-and-receiver.md), [Bluetooth HID and xpadneo](controllers/xbox-series/bluetooth-and-xpadneo.md), and [scoped physical and virtual observations](controllers/xbox-series/physical-observations.md).
 - [8BitDo Pro 2](controllers/8bitdo-pro-2/index.md)
 
+- [Logitech DJ / Unifying receiver](controllers/logitech-dj-receiver/index.md) — source-only heterogeneous receiver lifecycle pattern, not a gamepad profile.
+
 ## Cross-platform
 
 - [Linux joystick identity / SDL / evdev](controllers/linux-joystick-identity/index.md) — a host-interface registry entry, not a physical controller.
 
-The [controller registry](https://github.com/anderstvoss/controller-protocol-research/tree/ab74f66274589a7229633f0fe8654490c3d19a12/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.
+The [controller registry](https://github.com/anderstvoss/controller-protocol-research/tree/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/controller) supplies names, parent relationships and tracking issues; these pages are not substitutes for that registry.

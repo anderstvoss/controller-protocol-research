@@ -104,3 +104,5 @@ nav:
           - "Overview": controllers/8bitdo-pro-2/index.md
       - "Linux joystick identity":
           - "Overview": controllers/linux-joystick-identity/index.md
+      - "Logitech DJ / Unifying receiver":
+          - "Overview": controllers/logitech-dj-receiver/index.md
