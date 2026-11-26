@@ -1,5 +1,20 @@
 # Wiki editorial changelog
 
+## 2026-11-25 — Alpha 2 preparation corpus catch-up
+
+**Latest reviewed corpus:** [`eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e`](https://github.com/anderstvoss/controller-protocol-research/commit/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e); previous snapshot `e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7`.
+
+- Registry and hygiene: #148, #149, #150, #151, #152 — Logitech DJ chapter and source-only/provenance corrections.
+- Receivers: #128, #134, #135 — Xbox receivers and comparative lifecycle.
+- Sony: #129, #131, #136, #158, #159, #160, #164 — DS4 features, DualSense LEDs/triggers, Edge and Bluetooth source/host boundaries.
+- Nintendo: #133, #153, #161, #130, #138, #141, #143, #137 — Switch Pro, GameCube adapter, Switch 2 variants, Joy-Con 2 and Wii U Pro.
+- Wii: #144, #145, #146, #154, #166 — early/stacked MotionPlus, speaker consumers/decoder and one retail descriptor.
+- Xbox: #132, #139, #140, #142, #155 — Xbox 360 routing, Elite and One families, rumble field definitions.
+- Steam: #156, #165 — selector-1 request form and scoped USB/IP/discovery experiments.
+- Cross-cutting: #162, #163, #167, #168 — audio profiles, composite limits and host polish including failed/blocked experiments.
+
+The refresh is curated, not a row-by-row reproduction. No new experiment was performed; older evidence pins and vg-facing statements are retained. New citations use the reviewed corpus SHA.
+
 ## 2026-11-11 — four merged research PRs incorporated
 
 **Latest reviewed corpus:** [`e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7`](https://github.com/anderstvoss/controller-protocol-research/commit/e8cca52c51f76c95b72c3bf6d27a9c04d854e9e7); previous snapshot `ce6b8d3b70`.

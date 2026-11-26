@@ -21,3 +21,7 @@ USB-bus UHID bound hid-generic; the exact-path evdev sweep recorded four face tr
 ## P5a follow-up timing
 
 USB/IP N1/N3 runs verified all five lifecycle stages in all 50/150 slots; the final attach list was empty. This is a virtual-host outcome, not native XUSB or physical headset evidence. [`vg-p5a-followup-xbox360-usbip-timing`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-followup-xbox360-usbip-timing.json).
+
+## Alpha 2 polish virtual USB binding
+
+Xbox 360 was already on hid-generic in all three cleanup 1 sessions. Cleanup 2 recorded three of three stock binds and SDL evdev opens, with zero HIDAPI opens. This does not establish native XUSB acceptance. [`vg-alpha2-polish-p5a-usb-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-alpha2-polish-p5a-usb-binding.json), [`vg-alpha2-polish-cleanup2-usb-binding`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-alpha2-polish-cleanup2-usb-binding.json).
