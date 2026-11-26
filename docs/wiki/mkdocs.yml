@@ -110,3 +110,11 @@ nav:
           - "Overview": controllers/xbox360-wireless-receiver/index.md
       - "Xbox Wireless Adapter":
           - "Overview": controllers/xbox-wireless-adapter/index.md
+      - "Wii U Pro":
+          - "Overview": controllers/wii-u-pro/index.md
+      - "Switch 2 Joy-Con family":
+          - "Overview": controllers/switch2-joycon-family/index.md
+      - "Switch 2 Joy-Con Left":
+          - "Overview": controllers/switch2-joycon-left/index.md
+      - "Switch 2 Joy-Con Right":
+          - "Overview": controllers/switch2-joycon-right/index.md

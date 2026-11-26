@@ -15,6 +15,8 @@ The registry distinguishes controllers, families, compatibility emulators and ho
 - [Switch 1 Joy-Con family](controllers/switch-joycon-family/index.md)
 - [Joy-Con (L)](controllers/switch-joycon-left/index.md) — [source-described fields and Linux/SDL mappings](controllers/switch-joycon-left/source-and-consumers.md)
 - [Joy-Con (R)](controllers/switch-joycon-right/index.md)
+- [Wii U Pro Controller](controllers/wii-u-pro/index.md)
+- [Switch 2 Joy-Con family](controllers/switch2-joycon-family/index.md) — [left](controllers/switch2-joycon-left/index.md), [right](controllers/switch2-joycon-right/index.md).
 - [Switch 2 Pro Controller](controllers/switch2-pro/index.md)
 - [Switch 2 GameCube USB Controller](controllers/switch2-gamecube/index.md)
 - [GameCube four-port USB adapter (WUP-028)](controllers/gamecube-usb-adapter/index.md)
