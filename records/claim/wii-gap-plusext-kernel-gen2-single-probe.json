@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-kernel-gen2-single-probe",
+  "statement": "On the pinned Linux v6.12 Gen 2 path the builtin MP flag stops periodic idle polling, not the hotplug worker's A600FA/6 MotionPlus probe and A400FA/6 ordinary-child probe. With a Plus plus external MP those one-layer reads cannot attribute which physical gyro responds. A recognized Nunchuk/Classic behind integrated MP can select mode 05/07 if MP_USED is set; no second MP sensor path is present.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "TR Gen 2 Plus with one external MP or direct ordinary extension",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux core 431-557, 899-933, 1100-1192; modules 2630-2666; #52 E1 not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

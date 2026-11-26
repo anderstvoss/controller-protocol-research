@@ -8,13 +8,15 @@
     "revision": "device 054c:0ce6; bcdDevice 1.00",
     "firmware": "complete firmware not established",
     "transport": "usb",
-    "scope": "Cited maintainer lab narrative; physical corroboration cannot be promoted without an accepted structured experiment and artifact."
+    "scope": "Cited maintainer lab narrative; physical corroboration cannot be promoted without an accepted structured experiment and artifact. The later explicit audio-only speaker route was heard on 2026-09-24; it does not contradict the earlier unselected-route negative or inconclusive result. The linked historical summary is not a recovered raw capture."
   },
   "sources": [
     "audio-vg-exp0023",
     "audio-alsa-dualsense-hifi"
   ],
-  "experiments": [],
+  "experiments": [
+    "audio-vg-exp0023-playback-routing"
+  ],
   "conflicts_with": [],
   "supersedes": [],
   "rejection_scope": null

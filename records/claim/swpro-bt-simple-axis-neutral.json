@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-simple-axis-neutral",
+  "statement": "At pinned SDL Switch HIDAPI revision 535d80b, simple input report 0x3F parses two button bytes, one hat, and four little-endian 16-bit stick axes. The SDL simple-axis calibrator explicitly treats raw axis code 0x8000 as neutral before mapping extrema. A source-derived UHID simple-mode encoder must offset signed controller-native axes into this unsigned center representation; zero-filled stick fields are not neutral. This is a consumer parser requirement, not a measured retail neutral frame.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "SDL Switch HIDAPI 535d80b; no physical hardware or retail firmware measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_switch.c 137-152, 1107-1122, 2183-2257. Consumer-only simple report structure and neutral parser; no Bluetooth descriptor or physical calibration inferred."
+  },
+  "sources": [
+    "audio-sdl-switch-pro"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

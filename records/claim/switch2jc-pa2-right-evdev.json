@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "switch2jc-pa2-right-evdev",
+  "statement": "The pinned Linux Nintendo Switch 2 consumer creates one right-half input device with ABS_X and ABS_Y spanning -32768 to 32767, A/B/X/Y, R and ZR, plus, stick click, Home, C, SL/SR and grip-side input. It conditionally offers FF_RUMBLE. No mouse or motion evdev axis is registered in that initialization path.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch2-joycon-right",
+    "revision": "Linux 77c7155e2707ba5b1d56f3dc1acead48cf17f98d; SDL fe2bca9748afa754ebbca4c543c5b28bbce30cf4 where applicable",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux right USB consumer evdev buttons, axes and conditional output"
+  },
+  "sources": [
+    "switch2-gc-linux-hid"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-p5a-steam-controller-page",
+  "kind": "virtual_host_run",
+  "status": "failed",
+  "sources": [
+    "dualsense-uhid-gyro-sdl-ps5-3418",
+    "vg-alpha1-exp0009"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad d9cc4445bcd0901f84d10635c6b82403f0e1d765. Identified the Steam Settings and controller tester windows by application identity, captured them with English OCR, and created one USB-bus UHID session per stock-driver check.",
+  "semantic_outcome": "Steam listed the USB-bus Switch Pro under nintendo and showed neutral sticks and triggers in three tester frames. Its generic arm was blocked by ENODEV. Steam listed DualSense under playstation and opened Gyro Calibration. The public single-axis gyro input commit was acknowledged but none of six active frames differed from neutral. Both owned windows were closed and both devices were removed."
+}

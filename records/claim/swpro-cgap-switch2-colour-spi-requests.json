@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "swpro-cgap-switch2-colour-spi-requests",
+  "statement": "A pinned Pro-controller-emulator maintainer documents observing a Switch 2 console issue an initialization SPI request for 13 bytes starting at 0x6050, then another request for 25 bytes starting at 0x603D, and reports that the Switch 2 displayed four configurable controller colour fields after an overlap fix. This is reported Switch 2 console consumer behavior with a compatible emulator, not measured retail Switch Pro responses or evidence about Linux/SDL colour handling or all-0xFF fallback.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "wozt pcble2gamepad 97084db; Switch 2 console software revision unspecified",
+    "firmware": "Switch Pro retail firmware not measured",
+    "transport": "source_only",
+    "scope": "README.md lines 109-135: reported Switch 2 console interaction with an emulated original Switch Pro; no independently archived host trace, transport-generalization, or retail USB test. Adds a distinct console consumer to the Linux/SDL-only unknown in swpro-l0-consumer-colour-spi-no-evidence."
+  },
+  "sources": [
+    "swpro-cgap-wozt-pro-colour-readme"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

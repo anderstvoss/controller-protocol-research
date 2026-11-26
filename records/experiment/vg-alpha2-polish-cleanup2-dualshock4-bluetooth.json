@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-cleanup2-dualshock4-bluetooth",
+  "kind": "virtual_host_run",
+  "status": "failed",
+  "sources": [
+    "audio-linux-hid-playstation"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad dda74f526bd40054a1552bce54e2e5e103c4941a. Ran exactly eight single control stimuli through the default SDL HIDAPI path and an SDL HIDAPI-off evdev path, in separate sessions. Also ran the fixed xtask SDL evdev timing observer at N1 and N3, 50 cycles and no latency budgets.",
+  "semantic_outcome": "hidapi had 4/8 exact and neutral controls (Exact / Exact / Exact / Exact / left (no reset) / left, right (no reset) / left, right, lt (no reset) / left, right, rt (no reset)). evdev had 1/8 exact and neutral controls (west / south / north / east / Exact / lt (no reset) / right, lt (no reset) / lt (no reset)). N1 counted 50/50/50/50/50 of 50 created, appeared, direct-opened, SDL-opened, and removed slots. N3 counted 150/150/150/150/150 of 150 created, appeared, direct-opened, SDL-opened, and removed slots. Both mapping sessions verified removal. Fresh-session checks on both Sony pads isolated the four analog stimuli. Each moved only its intended SDL HIDAPI control to 32767. Both triggers returned to 0. Each stick started at 0 and settled at +128 after its first excursion. The residual stick values account for the extra changes in later controls in the sequential runs. This yields eight correctly attributed controls, six exact initial-baseline returns in isolated checks, and four exact placements with resets in the original sequential run for each Sony pad."
+}

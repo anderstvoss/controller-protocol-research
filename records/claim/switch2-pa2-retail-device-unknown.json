@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-retail-device-unknown",
+  "statement": "No controlled retail Switch 2 Pro physical capture establishes full USB composite descriptors, endpoint numbering, serial/firmware revisions, supported wireless transport, calibration content, command ACK matrix, output fidelity or hardware report cadence. These remain unknown regardless of source-level Linux and SDL support.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "switch2-pro",
+    "revision": "not measured",
+    "firmware": "not measured",
+    "transport": "not_measured",
+    "scope": "Retail USB descriptor, firmware and transport applicability"
+  },
+  "sources": [],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "device"
+}

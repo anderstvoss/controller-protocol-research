@@ -96,3 +96,26 @@ One new Linux consumer claim, `swpro-cgap-home-led-consumer`, records that hid-n
 ## Controller gaps follow-up: NFC/MCU path (source-only candidate)
 
 `swpro-cgap-nfc-mcu-family-context` records that pinned controller-family notes describe NFC/IR MCU output `0x11`, input `0x31` and related subcommands `0x20`–`0x22`. This is **not** proof of the Switch Pro-specific wireless NFC transaction; no hardware test was run. Nintendo's public product guidance documents the Pro NFC touchpoint and the wired-communication restriction, cited as **supplementary, unpinned** context in `docs/switch-pro-nfc-gaps.md`. The existing `swpro-l0-*` inventory, player-light count and realized acceptance cells are unchanged. Switch Pro #156 and Bluetooth #164 remain the tracking surfaces; #276 covers physical ACKs.
+
+## Controller gaps pass 2 (2026-11-11): USB cadence and colour SPI consumer split
+
+The source-only [second ranked gap brief](../switch-pro-gaps-2.md) adds `swpro-cgap-linux-usb-report-period-source` (Linux source commentary distinguishes standard-mode Pro USB ~15 ms from Bluetooth ~8 ms; its 11/15 ms author experience is not a new retail USB benchmark). It adds `swpro-cgap-switch2-colour-spi-requests` (pcble2gamepad's report of a Switch 2 requesting 0x6050 length 13 and 0x603D length 25 against a Pro emulator) and `swpro-cgap-pro-colour-spi-boundary` (that emulator's offset/length overlap guard and synthetic regression). The new Linux pin is the **same source lineage** as `audio-linux-hid-nintendo`; pcble2gamepad README, emulator and regression likewise share one lineage.
+
+Existing `swpro-l0-device-usb-cadence-conflict` remains conflicted and physical USB cadence remains unknown: an author-documented timing expectation does not validate a retail distribution. Existing `swpro-l0-consumer-colour-spi-no-evidence` remains unknown for the **specific Linux/SDL paths** inspected: a different console consumer does not contradict that scoped observation. Neither existing record is edited or superseded. virtualgamepad #156 / #161 and physical gates #279 / #280 remain open; all proposed tests are **not run**. No host or retail Switch Pro was used.
+
+## p9c Bluetooth-bus UHID source-gap analysis (2026-11-20)
+
+The [ranked p9c brief](../p9c-switch-pro-bt-uhid.md) adds eight scoped `swpro-bt-` records without changing earlier claims. Pinned Linux and SDL source show that Bluetooth-bus consumers skip USB-only 0x80 startup, request 0x02 device info and SPI calibration, then negotiate IMU, mode and vibration. The 0x01/0x10 output roles and 0x21 ACK reply framing are consumer expectations corroborated by controller-family community notes; mode 0x3F and Bluetooth connection-layout details are only community research leads.
+
+| Gap | Claim | Evidence class | Boundary |
+| --- | --- | --- | --- |
+| Bluetooth initialization and no USB 0x80 | `swpro-bt-consumer-open-gate` | Linux/SDL consumer | Source-only, no host run |
+| Simple mode 0x3F to full 0x30 | `swpro-bt-simple-report-mode` | Community research lead | Default behavior not physically verified |
+| Simple-mode stick neutral code 0x8000 | `swpro-bt-simple-axis-neutral` | SDL consumer source | Consumer-defined axis neutral only; no retail trace |
+| Rumble/subcommand 0x01/0x10 with 0x21 reply | `swpro-bt-subcommand-report-framing` | Consumer plus research lead | No measured NACK or retry timing |
+| Full input prefix and IMU | `swpro-bt-full-mode-input-layout` | Consumer plus research lead | No measured timing/calibration |
+| Device info/SPI/LED/IMU/vibration opens | `swpro-bt-consumer-reply-coverage` | Linux/SDL consumer | No other command parity implied |
+| Exact retail Bluetooth descriptor and pairing | `swpro-bt-retail-descriptor-unknown` | Unknown physical | Not supplied by a UHID bus value |
+| Switch Pro NFC/IR MCU exchange | `swpro-bt-pro-nfc-exchange-unknown` | Unknown physical | Explicitly restricted; family notes insufficient |
+
+The proposed Linux/SDL host run, physical packet comparison and MCU capture are **not run**. No radio, BlueZ, vendor firmware, private identities or EEPROM images were examined. This source-only checkpoint does not promote any virtualgamepad support cell.

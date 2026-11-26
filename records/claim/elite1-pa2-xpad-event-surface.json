@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-xpad-event-surface",
+  "statement": "For original Elite identity the pinned xpad source configures fifteen EV_KEY controls (eight shared buttons, three Xbox shoulder/Guide buttons and four paddles), eight EV_ABS axes (four signed stick axes, two 0-1023 triggers and two hat axes), with no Series Share KEY_RECORD or Elite 2 profile axis. FF_RUMBLE is conditional on the kernel force-feedback configuration; this is an advertised software surface, not a record of emitted physical events.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "Linux v7.3 xpad Xbox One Elite mapping",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c:420-475, 1905-1929, 1973-2033, 1627-1639; compare existing xbox-series-xpad-evdev-shape and xbox-series-xpad-axis-domains. No physical run."
+  },
+  "sources": [
+    "elite1-pa2-linux-v7-3-xpad",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

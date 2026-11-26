@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-kernel-nested-unknown-child",
+  "statement": "The Linux worker probes one inactive MotionPlus and one normal extension; its ordinary extension identity table has no second MotionPlus type. If downstream MP identity is exposed as an unrecognized ordinary child, the worker treats it as unknown or absent and selects standalone 04 rather than a second gyro. How two physical MPs arbitrate their responses remains unknown.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Remote with MP-A then MP-B or reversed",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux core 431-557, 1100-1192; #52 E2/E3 not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

@@ -8,7 +8,7 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
     "firmware": "not measured",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "transport/wired.c:12-29, 389-465, 480-500, 545-570. Host-side binding requirements only; actual Series USB descriptors are not captured."
   },
   "sources": [

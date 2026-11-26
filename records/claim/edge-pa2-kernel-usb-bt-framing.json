@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "edge-pa2-kernel-usb-bt-framing",
+  "statement": "Linux v7.3 uses USB input report 0x01 with 64 bytes and Bluetooth input report 0x31 with 78 bytes and a checked trailing CRC; both feed the same DualSense common parser, including Edge controls. For output, the driver uses USB report 0x02 with 63 bytes and Bluetooth report 0x31 with 78 bytes and a trailing CRC.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense-edge",
+    "revision": "Linux v7.3; SDL 535d80badefc83c5c527ec5748f2a20d6a9310fe",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux v7.3 USB versus Bluetooth HID report paths; actual device reports not captured"
+  },
+  "sources": [
+    "edge-pa2-linux-v73-hid-playstation"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

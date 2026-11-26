@@ -8,8 +8,8 @@
     "controller": "xbox-series",
     "revision": "Standard Xbox Series where applicable; xone GIP class path also supports other compatible models",
     "firmware": "not measured",
-    "transport": "usb",
-    "scope": "driver/headset.c:34-120, 212-244, 295-319, 345-443, 475-595; bus/protocol.c:504-581, 628-685, 803-844, 1346-1528; transport/wired.c:261-385, 434-465. Compare existing audio-xbox-series-xpad-disables-gip-audio."
+    "transport": "source_only",
+    "scope": "driver/headset.c:34-120, 212-244, 295-319, 345-443, 475-595; bus/protocol.c:504-581, 628-685, 803-844, 1346-1528; transport/wired.c:261-385, 434-465. Compare existing audio-xbox-series-xpad-disables-gip-audio; source scope is the USB transport."
   },
   "sources": [
     "xbox-xone-headset",

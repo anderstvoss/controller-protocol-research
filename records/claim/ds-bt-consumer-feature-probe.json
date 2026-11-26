@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ds-bt-consumer-feature-probe",
+  "statement": "Linux initialization obtains feature 0x09 (20 bytes), 0x20 (64 bytes) and 0x05 (41 bytes); Bluetooth responses must include valid report IDs, exact reported lengths and a trailing CRC32 using the feature seed or the kernel aborts its probe. SDL reads features 0x09 and 0x20 on enhanced Sony devices as optional, and handles a short calibration response without claiming valid hardware calibration. This establishes synthetic reply shape but not reference-device field contents.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "dualsense",
+    "revision": "Linux hid-playstation 4056b3c9d3c92ea45955641dbafeb9b960e146ef; SDL_hidapi_ps5.c 535d80badefc83c5c527ec5748f2a20d6a9310fe; no reference-device or host run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux 799-833, 1023-1048, 1150-1204, 1783-1820; SDL 399-445, 555-567. Private identity and calibration payloads are excluded."
+  },
+  "sources": [
+    "audio-linux-hid-playstation",
+    "audio-sdl-ps5"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

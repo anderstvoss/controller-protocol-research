@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-cwiid-constants",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/abstrakraft/cwiid/blob/fadf11e89b579bcc0336a0692ac15c93785f3f82/libcwiid/cwiid_internal.h",
+  "revision": "fadf11e89b579bcc0336a0692ac15c93785f3f82",
+  "sha256": "ac5b785f6b25aaa7d56a658df1c5c485a2dd19722bb2d73cc0b8f749101483aa",
+  "lineage": "abstrakraft/cwiid",
+  "locator": "61-75 speaker enable/data/mute and write ACK IDs. GPL-2.0-or-later CWiid project source."
+}

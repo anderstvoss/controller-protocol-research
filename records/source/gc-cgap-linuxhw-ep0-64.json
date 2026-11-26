@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-linuxhw-ep0-64",
+  "kind": "research_lead",
+  "url": "https://raw.githubusercontent.com/linuxhw/LsUSB/3b1ee387e93df2a09ebc82df7a3cd0b2298a5265/Desktop/Acer/Nitro/Nitro%20N50-600/17C0FC633B23/MANJARO/5.11.6-1-MANJARO/X86_64/B281B84F5B",
+  "revision": "3b1ee387e93df2a09ebc82df7a3cd0b2298a5265",
+  "sha256": "ccc5ee1cca7c824bca312d9a87818099301ec7e457300a2205872111832b61bc",
+  "lineage": "linuxhw/LsUSB public host enumeration archive (64-byte EP0 example)",
+  "locator": "Desktop/Acer/Nitro/Nitro N50-600/17C0FC633B23/MANJARO/5.11.6-1-MANJARO/X86_64/B281B84F5B, lines 3-68: published USB descriptor, configuration, interface, HID descriptor length and endpoints for device 0x057e:0x0337; licence CC-BY-4.0. Other devices and identifiers in the original full source file are not reproduced."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-wpad",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e/wiiuse/wpad.c",
+  "revision": "ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e",
+  "sha256": "847406c3976a32b3df70387d31f1ff3fb899cbee06d8c70980fa689d98bd37ab",
+  "lineage": "devkitPro/libogc",
+  "locator": "198-220 alarm sends 20-byte blocks; 1866-1949 speaker state and 6,666,667 ns alarm; 1953-1969 high-then-low nibble encoder. libogc wiiuse GPL-3.0 with linking exception."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "vg-alpha2-polish-p5a-usb-binding",
+  "kind": "virtual_host_run",
+  "status": "failed",
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "vg-alpha1-exp0006",
+    "vg-alpha1-exp0009"
+  ],
+  "fixtures": [],
+  "procedure": "Virtualgamepad d9cc4445bcd0901f84d10635c6b82403f0e1d765. Created three independent USB-bus UHID sessions per family. A privileged operator attempted a generic rebind only on each owned HID parent. The harness restored the previous driver on a bind failure.",
+  "semantic_outcome": "Stock USB-bus UHID sessions closed and removed their owned HID parent in 12 attempts. Generic bind returned ENODEV 9 times after stock unbind across DualSense, DualShock 4 and Switch Pro; no rollback failure was reported. Xbox 360 was already on hid-generic in all three sessions. The unprivileged bind-file open returned EACCES."
+}

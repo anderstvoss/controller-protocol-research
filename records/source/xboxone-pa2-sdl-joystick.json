@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "xboxone-pa2-sdl-joystick",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/libsdl-org/SDL/blob/d4557c1511c721485dc4960f7149730afc9a73a0/src/joystick/SDL_joystick.c",
+  "revision": "d4557c1511c721485dc4960f7149730afc9a73a0",
+  "sha256": "3a16148c0b01e2c80401734a7db3608cab6a4e31d55d0b6352d4b6a7b50673a2",
+  "lineage": "libsdl",
+  "locator": "SDL_joystick.c:127-148 older-controller exclusion list; 3281-3285 gamepad family classification; 3382-3406 Share default and Bluetooth-model detection. SDL zlib licence; complete pinned file SHA-256."
+}

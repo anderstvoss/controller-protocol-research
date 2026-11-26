@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "xboxone-pa2-xpad-evdev-no-share",
+  "statement": "For the standard Xbox One Microsoft USB IDs with zero mapping flags, pinned xpad configures eleven keys (face four, Menu/View, stick clicks, shoulder pair, Guide), four signed stick axes, two 10-bit triggers and two D-pad hat axes. It does not advertise KEY_RECORD on those entries; Share is a conditional mapping flag. The source's memoryless force-feedback path handles main rumble rather than independent trigger-motor control.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-one",
+    "revision": "standard Xbox One 0x02d1 / 0x02dd and One S 0x02ea xpad USB path, excluding special controllers",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "xpad.c:420-469, 1095-1158, 1905-1925, 1973-2033 and xpad force-feedback consumer. Other devices and conditional build options can differ."
+  },
+  "sources": [
+    "xbox-series-linux-xpad",
+    "xbox-series-xpad-ff-memless"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

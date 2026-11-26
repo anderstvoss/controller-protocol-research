@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-early-plus-revision-unknown",
+  "statement": "The Gen 2 Linux built-in MP flag is a software classifier, not proof of physical identity for every integrated Plus. Early non-TR Plus can share the original Remote name and identifier, so no Gen 2-specific prediction is universal across early and later hardware. Exact child ID, routing, gyro priority and calibration responses remain unknown by revision.",
+  "status": "unknown",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Early non-TR integrated Plus versus TR Gen 2",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Linux classifier 570-605, 811-905; builtin module 2630-2666; wiiuse builtin recognition 45-80; #52 E1 not run."
+  },
+  "sources": [
+    "wii-gap-plustrace-linux-core-v612",
+    "wii-gap-plus-kernel-modules-v612",
+    "wii-gap-dolphin-attach-wiiuse-motionplus-e769"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}

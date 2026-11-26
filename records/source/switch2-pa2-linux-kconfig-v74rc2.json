@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "switch2-pa2-linux-kconfig-v74rc2",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/v7.4-rc2/drivers/hid/Kconfig",
+  "revision": "v7.4-rc2",
+  "sha256": "4069e784ce102d318c0ebac8fa8d335c45ca012ebcb7d0e1e9d2416a7f03244a",
+  "lineage": "Linux kernel, v7.4-rc2; same upstream lineage as other Linux source records",
+  "locator": "drivers/hid/Kconfig: 857-894 USB-only Switch 2 support note, force-feedback feature option and dedicated wired transport dependency. Licence GPL-2.0-only."
+}

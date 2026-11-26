@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-constants",
+  "kind": "compatibility_implementation",
+  "url": "https://github.com/devkitPro/libogc/blob/ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e/wiiuse/wiiuse_internal.h",
+  "revision": "ef718e2d7df5e5b1750a9e1a67c17350bdd30d3e",
+  "sha256": "8576e4fd12ce97a8abf5a9d4c68316e11e932cceb93cb9d1e1a0b62956523fe8",
+  "lineage": "devkitPro/libogc",
+  "locator": "73-86 report 0x14/0x18/0x19 and input ACK/status constants; 124-127 speaker memory register addresses. libogc wiiuse GPL-3.0 with linking exception."
+}

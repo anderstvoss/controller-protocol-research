@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "vg-p5a-followup-dualsense-usb-uhid-discovery",
+  "kind": "virtual_host_run",
+  "status": "passed",
+  "sources": [],
+  "fixtures": [],
+  "procedure": "On virtualgamepad 6b6da124a1c28abcfb1a4595ede0da2e204351cd, created one synthetic USB-bus UHID device in isolation. Checked fresh Steam controller log messages and nearby Steam config model mentions and probed the creation-owned node with SDL. Closed the holder and checked owned-node removal. Retained only model and result summaries.",
+  "semantic_outcome": "The stock driver was playstation. The Steam controller log named this model and selected HIDAPI. The config search found 0 file(s) with model matches and does not establish new registration. A separate SDL probe opened the exact owned hidraw path with HIDAPI enabled. The isolated visible-list and motion outcome were unavailable on this attempt. This observation covers discovery and open. See the related claim index in docs/p5a-followup-evidence.md."
+}

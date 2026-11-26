@@ -7,7 +7,7 @@ class WiiLedger(unittest.TestCase):
     def test_consumer_records_and_revision_gaps_remain_separate(self):
         root = Path(__file__).resolve().parents[1]
         claims = [json.loads(p.read_text()) for p in (root / 'records/claim').glob('wii-*.json')]
-        self.assertEqual(len(claims), 239)
+        self.assertEqual(len(claims), 269)
         self.assertTrue(all(c['applicability']['transport'] == 'source_only'
                             for c in claims if c['status'] == 'source_supported'))
         w4_consumers = {'wii-w4-sdl-3-2-10-no-reattach',
@@ -37,10 +37,17 @@ class WiiLedger(unittest.TestCase):
                 expected = ['wii-w9e-per-device-bind-host-run']
             elif claim['id'].startswith(('wii-p1-', 'wii-sdl-gyro-instrumented-')):
                 expected = [claim['id'].removesuffix('-result') + '-host-run']
+            elif claim['id'] in {'wii-p6-retail-plus-rvl-cnt-01-descriptor-observed',
+                                 'wii-p6-retail-plus-rvl-cnt-01-descriptor-comparison'}:
+                expected = ['wii-p6-retail-hid-descriptor-run']
             elif claim['id'].startswith('wii-w7-'):
                 expected = ['wii-w7-' + claim['id'].split('-')[2] + '-host-run']
             self.assertEqual(claim['experiments'], expected, claim['id'])
         by_id = {c['id']: c for c in claims}
+        self.assertEqual(
+            by_id['wii-p6-retail-plus-rvl-cnt-01-descriptor-observed']['supersedes'],
+            ['wii-gap-retail-hid-descriptor-capture-unknown'],
+        )
         revisions = [by_id[id]['applicability']['revision'] for id in
                      ['wii-original-remote-consumer-revision', 'wii-tr-consumer-revision',
                       'wii-early-plus-revision-gap']]

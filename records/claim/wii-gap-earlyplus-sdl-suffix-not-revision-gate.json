@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-earlyplus-sdl-suffix-not-revision-gate",
+  "statement": "Pinned SDL Wii HIDAPI identifies a present or mapped MotionPlus by two-byte extension identity reads at A400FE and A600FE and a masked suffix predicate; this does not compare a complete built-in A4200005 against external A6200005 or identify an early 0306 hardware revision. On Linux its MotionPlus activation writer is intentionally suppressed in favor of kernel ownership. A 0306 identity alone therefore cannot establish native SDL gyro availability; sensor registration and kernel mapping remain conditional.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "SDL pinned Wii HIDAPI with early 0306 candidate; source only, no SDL early-unit run",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. SDL 3.2.10 hidapi Wii 385-427,457-491,677-820; PID support in pinned SDL IDs. No host test."
+  },
+  "sources": [
+    "wii-gap-plustrace-sdl-driver-877",
+    "wii-gap-plus-sdl-usb-ids-877"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

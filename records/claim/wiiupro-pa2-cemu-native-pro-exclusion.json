@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wiiupro-pa2-cemu-native-pro-exclusion",
+  "statement": "Pinned Cemu native Wiimote HIDAPI discovery filters Nintendo 0x057e products 0x0306 and 0x0330 and explicitly skips product strings equal to Nintendo RVL-CNT-01-UC; this is an exclusion from that native Wiimote entrypoint, not a conclusion about Cemu's generic gamepad input paths.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "wii-u-pro",
+    "revision": "Wii U Pro; retail revision not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Native HIDAPI enumerator only; other Cemu input APIs have not been evaluated."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-hidapi"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

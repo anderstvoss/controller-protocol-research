@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "swpro-bt-full-mode-input-layout",
+  "statement": "For the pinned Linux consumer, full input 0x30 and subcommand reply 0x21 carry the common timer, battery/connection field, button bytes and packed sticks; full input adds three six-axis IMU samples. Community Bluetooth notes describe the same field offsets and Bluetooth-oriented connection nibble. This does not prove retail timing, calibration, sensor accuracy or the exact Bluetooth descriptor.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "switch-pro",
+    "revision": "Pinned Linux 4056b3c, SDL 535d80b and/or community b354f21 as cited; retail firmware not measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Linux hid-nintendo.c 546-560, 2640-2685; community bluetooth_hid_notes.md 132-181. Source-only parser shape and research lead."
+  },
+  "sources": [
+    "audio-linux-hid-nintendo",
+    "swpro-dekunukem-bluetooth-hid-notes"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

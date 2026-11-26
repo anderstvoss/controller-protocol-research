@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "elite1-pa2-sdl-gip-paddle-parser",
+  "statement": "The pinned SDL Xbox One HIDAPI implementation recognizes Elite paddles and budgets four extra joystick buttons. Its original Elite 29-byte state-packet path uses original-specific paddle positions and compares mapped and raw button states; it suppresses separate paddle button delivery when remapping is detected. Elite Series 2 has separate firmware-dependent state formats and a different paddle layout.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox-elite-series-1",
+    "revision": "SDL Xbox One HIDAPI implementation d4557c1511c721485dc4960f7149730afc9a73a0",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "SDL_hidapi_xboxone.c:160-163, 461-468, 511-520, 1122-1205. Conditional on SDL HIDAPI owning that device; does not establish normal Linux xpad versus hidraw backend selection."
+  },
+  "sources": [
+    "xbox-series-sdl-xboxone"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

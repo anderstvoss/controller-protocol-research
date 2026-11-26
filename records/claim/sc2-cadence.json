@@ -7,7 +7,7 @@
     "controller": "steam-controller-2026-puck",
     "revision": "unknown",
     "firmware": "unknown",
-    "transport": "usb",
+    "transport": "source_only",
     "scope": "Research description of report0x7b only; no physical timing fixture, rate/distribution or authentic battery/connection cadence established."
   },
   "sources": [

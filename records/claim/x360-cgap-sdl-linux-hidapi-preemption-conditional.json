@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "x360-cgap-sdl-linux-hidapi-preemption-conditional",
+  "statement": "At pinned SDL 3.2.0, Linux defaults the HIDAPI joystick system to enabled, and the Xbox 360 driver inherits that default unless specific Xbox or Xbox 360 hints override it. Its controller table labels Microsoft 045e:028e as Xbox 360 independent of the supplied HID report descriptor; the Xbox 360 HIDAPI support test accepts that type unless a disqualifying interface or special case applies. If SDL's HIDAPI enumeration exposes and can open an ordinary 045e:028e UHID Game Pad, the enabled Xbox 360 HIDAPI decoder is eligible and has driver priority over Linux evdev. That decoder expects native XUSB packets, which a standard-HID personality does not supply. This is conditional source behavior, not proof an actual UHID instance was claimed or decoded.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "xbox360",
+    "revision": "SDL 3.2.0 source commit 535d80badefc83c5c527ec5748f2a20d6a9310fe; runtime build not inspected",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "HIDAPI default header 51-60; hints 1387-1402 and 1825-1859; controller_type.c 52-120 and controller_list.h 171; SDL_joystick.c 51-75, 680-700, 2780-2857; SDL_hidapijoystick.c 213-350, 929-932, 1237-1285; SDL_hidapi_xbox360.c 56-95 and 243-338. Requires accessible hidraw/SDL enumeration and successful driver initialization."
+  },
+  "sources": [
+    "x360-cgap-sdl-hidapi-default-320",
+    "x360-cgap-sdl-hint-defaults-320",
+    "x360-cgap-sdl-controller-type-320",
+    "x360-cgap-sdl-controller-list-320",
+    "x360-l0-sdl-hidapi-routing",
+    "x360-l0-sdl-hidapi-360-320",
+    "sdl-joystick-baseline",
+    "sdl-linux-joystick-baseline"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

@@ -7,7 +7,7 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
+    "transport": "source_only",
     "scope": "Existing pinned BlueZ sources are reused; UHID bus 5 is the Linux Bluetooth HID bus. The assertion is about BlueZ and UHID behavior, not a tested Xbox Series device."
   },
   "sources": [

@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
-    "scope": "60-xpadneo.rules:1-12; 70-xpadneo-disable-hidraw.rules:1-7. Rules are packaged policy, not a universal OS configuration."
+    "transport": "source_only",
+    "scope": "60-xpadneo.rules:1-12; 70-xpadneo-disable-hidraw.rules:1-7. Rules are packaged policy, not a universal OS configuration; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-udev-bind",

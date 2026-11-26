@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-speaker-libogc-stream-ack-queue-risk",
+  "statement": "Libogc places both register writes and 0x18 audio blocks into a single command queue, with the next command dispatched when a matching input 0x22 ACK completes the current one. Its speaker-data builder sets the 20-byte length field but not the bit 1 ACK-request flag; by contrast the simple enable and mute command builder sets bit 1. Therefore a virtual target that never acknowledges queued 0x18 data risks stalling subsequent audio/control in this particular consumer. This is a source-level deadlock risk, not proof that real hardware sends a successful ACK for every speaker-data block.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Original Wii Remote consumer protocol paths; no retail revision measured",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. No host or hardware execution; speaker source-only consumer analysis; tests and proposed experiments not run. See docs/wii-speaker-consumers.md for pinned locators and bounded inferences."
+  },
+  "sources": [
+    "wii-gap-speaker-libogc-commands",
+    "wii-gap-speaker-libogc-events",
+    "audio-dolphin-wii-report-structs"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

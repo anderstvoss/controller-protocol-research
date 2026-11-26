@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "SDL_hidapi_xboxone.c:355-475, 714-980, 1942-2012; this adds the parser-versus-fallback distinction rather than duplicating existing report-role claims."
+    "transport": "source_only",
+    "scope": "SDL_hidapi_xboxone.c:355-475, 714-980, 1942-2012; this adds the parser-versus-fallback distinction rather than duplicating existing report-role claims; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-series-sdl-xboxone"

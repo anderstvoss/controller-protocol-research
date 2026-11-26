@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "ds4-cgap-controldeck-pairing-scope",
+  "kind": "research_lead",
+  "url": "https://github.com/ViniZap4/ControlDeck/blob/46151468605ba4d9e5c6378079bb56cd3c934333/DS4_PAIRING_SCOPE.md",
+  "revision": "46151468605ba4d9e5c6378079bb56cd3c934333",
+  "sha256": "75c10c7d45fb023385d3d07a0c2a41924c548a43cdda30527d3213c5f4ef13af",
+  "lineage": "ViniZap4-ControlDeck",
+  "locator": "DS4_PAIRING_SCOPE.md lines 92-107: read-only USB feature report 0x12 successful on a physical v2 unit and field offsets; upstream includes private device identity values not reproduced here. Licence: MIT (repository LICENSE)."
+}

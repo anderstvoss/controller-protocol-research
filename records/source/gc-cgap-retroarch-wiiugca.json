@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-retroarch-wiiugca",
+  "kind": "compatibility_implementation",
+  "url": "https://raw.githubusercontent.com/libretro/RetroArch/c531bd56fee6ff709178166147d6a4617c4a00ee/input/connect/connect_wiiugca.c",
+  "revision": "c531bd56fee6ff709178166147d6a4617c4a00ee",
+  "sha256": "36f7e28fc28c235351ef0e5d770a83703b6f0b22c1b3b74502ad7f1a71737fea",
+  "lineage": "libretro/RetroArch WUP-028 HID adapter consumer",
+  "locator": "input/connect/connect_wiiugca.c, lines 28-33 status constants, 234-255 rumble gating, 273-301 status acceptance, 321-335 displayed port type; licence GPL-3.0; no code excerpted."
+}

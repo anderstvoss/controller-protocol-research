@@ -7,7 +7,7 @@
     "controller": "xbox-series",
     "revision": "standard Series model 1914, comparisons explicitly scoped to other models",
     "firmware": "not physically measured; source version is pinned",
-    "transport": "bluetooth",
+    "transport": "source_only",
     "scope": "quirks.c:14-29,45-69,70-200; xpadneo.h:30-53; rumble.c:83-136. No Bluetooth addresses or quirk identities reproduced."
   },
   "sources": [

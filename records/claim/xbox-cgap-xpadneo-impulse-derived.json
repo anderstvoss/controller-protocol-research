@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "rumble.c:18-41, 56-135, 150-219; trigger motor actuation on reference hardware not observed."
+    "transport": "source_only",
+    "scope": "rumble.c:18-41, 56-135, 150-219; trigger motor actuation on reference hardware not observed; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-rumble",

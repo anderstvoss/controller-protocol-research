@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "gc-cgap-wavebird-status-consumer-divergence",
+  "statement": "Nintendont treats an adapter port as active for wired status bit 0x10 or a WaveBird communicating pattern containing 0x22, rejecting 0x20 alone. RetroArch explicitly recognizes 0x22 as a WaveBird label but admits other per-port statuses above the power-only value 0x04, so its generic presence test would also accept 0x20. HIDMaestro models 0x22 as communicating and 0x20 as not communicating. These are differing consumer interpretations, not confirmation of the adapter's remaining physical status bits.",
+  "status": "source_supported",
+  "applicability": {
+    "controller": "gamecube-usb-adapter",
+    "revision": "public reports for 0x057e:0x0337; hardware revision unverified",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "Per-port status 0x22 versus 0x20 under Nintendont, RetroArch and an emulated persona"
+  },
+  "sources": [
+    "gc-cgap-nintendont-padread",
+    "gc-cgap-retroarch-wiiugca",
+    "gc-cgap-hidmaestro-profile"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null,
+  "evidence_role": "consumer"
+}

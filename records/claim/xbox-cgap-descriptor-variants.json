@@ -7,8 +7,8 @@
     "controller": "xbox-series",
     "revision": "standard Xbox Series controller, model 1914, with explicitly labelled older/Elite comparators",
     "firmware": "not measured",
-    "transport": "bluetooth",
-    "scope": "Cross-model scope: xpadneo xbxs.md:3-6; xb1s_linux.md:28-43; xbe2_ble.md:3-12; README.md:88-97."
+    "transport": "source_only",
+    "scope": "Cross-model scope: xpadneo xbxs.md:3-6; xb1s_linux.md:28-43; xbe2_ble.md:3-12; README.md:88-97; source scope is the Bluetooth transport."
   },
   "sources": [
     "xbox-cgap-xpadneo-series-desc",

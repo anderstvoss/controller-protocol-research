@@ -115,3 +115,30 @@ Twelve `ds-l0-led-*` claims cover the three LED functions, their offsets on USB 
 Curated typed controller state, normalization/codec and identity belong in `gr-controllers`. OS providers realize devices and perform I/O but must not own Sony semantics. Model USB/UHID, USB gadget and Bluetooth as different realization scopes. Do not conflate SDL nominal sensor rates with wire-cadence measurements, or use source acceptance to promote a support matrix. A controlled physical benchmark is required before any `physically_observed` claim.
 
 **Cloud agent (realized-controller research parity)**
+
+## Controller gaps 2 — LED encoding follow-up (2026-11-11)
+
+The source-only continuation in `docs/dualsense-gaps-2.md` adds three pinned independent consumer/protocol-note files and three new `ds-cgap-*` claims. Each new claim supersedes the relevant older LED claim without editing existing records:
+
+| Prior claim | New claim | Previous status → new status | Evidence ceiling |
+| --- | --- | --- | --- |
+| `ds-l0-led-led-brightness-levels` | `ds-cgap-led-brightness-encoding-disagreement` | `unknown` → `conflicted` | New sources document 0–2 versus 1–3 brightness encoding; no resolved retail range or physical LED scope |
+| `ds-l0-led-mute-led-pulse-mode` | `ds-cgap-mute-led-pulse-source-mapping` | `inferred` → `source_supported` | New separately maintained source consumers use mute mode 2; physical pulse and timing unknown |
+| `ds-l0-led-player-led-instant-bit` | `ds-cgap-player-led-instant-source-mapping` | `inferred` → `source_supported` | New separately maintained source consumers encode bit 5 as instant; physical transition and hardware-revision scope unknown |
+
+Alternative claim `ds-cgap-led-brightness-1-3-documentation` explicitly captures the incompatible 1–3 consumer-documentation interpretation and is linked by `conflicts_with`; it does not supersede an older device claim.
+
+Pinned source records: `ds-cgap-nowrep-dualsensectl-main` (GPL-2.0), `ds-cgap-xinput-hid-dualsense` (MIT, mapping derivative of a community wiki), and `ds-cgap-yesbotics-brightness-notes` (MIT). Previous SDL and Linux source records are reused. Source compatibility encoders and authored notes cannot establish measured controller actuation, LED brightness, pulse period or fade timing. Physical trials L5–L7 in `docs/dualsense-led-inventory.md` remain **not run**. This research does not promote any virtualgamepad #154 acceptance cells.
+
+## P9a DualSense Bluetooth-bus UHID consumer gap pass (2026-11-20)
+
+This section documents **source-only** requirements for a local `linux.uhid.bluetooth` realization. It does not imply physical Bluetooth or BlueZ transport. Existing claims are unchanged. The ranked decision and pinned citations are in [p9a-dualsense-bt-uhid.md](../p9a-dualsense-bt-uhid.md).
+
+| New claim | Consumer requirement | Limit |
+| --- | --- | --- |
+| `ds-bt-consumer-input-modes` | SDL simple `0x01` versus enhanced `0x31`; Linux full input `0x31` | Source-only switch logic; no measured physical transition |
+| `ds-bt-consumer-crc-contract` | Seeded Bluetooth input/output/feature CRC32, 78-byte enhanced report length | No retail CRC edge-case or host-run observation |
+| `ds-bt-consumer-feature-probe` | Linux exact-length feature GET replies and CRC for `0x05`, `0x09`, `0x20` | Private payload contents excluded; no probe run |
+| `ds-bt-consumer-payload-offsets` | Shift common input body to byte 2, common output body to byte 3, preserve motion/touch/LED semantics | Retail descriptor and actuation fidelity unknown |
+
+The existing `ds-l0-physical-bt-protocol-unknown` still bounds descriptor authenticity, pairing/reconnect, high-rate sensors and physical output. Acceptance evidence and a local kernel/SDL host run remain pending in virtualgamepad #154 and #365.

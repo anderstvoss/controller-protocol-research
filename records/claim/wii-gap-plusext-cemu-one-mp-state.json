@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wii-gap-plusext-cemu-one-mp-state",
+  "statement": "Cemu maintains one MP state, probes A600FA/6 and one ordinary A400FA/6 child, and has a single MP enable path. It has no recursive second MP probe or Dolphin F6 downstream mirror in the reviewed path. The builtin ID may be handled differently than an external ID; decoded application angular output is independently limited in pinned code. Neither E1 nor E2/E3 establishes two gyros.",
+  "status": "inferred",
+  "applicability": {
+    "controller": "wii-remote",
+    "revision": "Cemu native Wii HIDAPI provider pinned 29f2f1f",
+    "firmware": "not measured",
+    "transport": "source_only",
+    "scope": "evidence_role: consumer. Cemu provider 239-432, 484-550, 675-719, 925-950; #52 not run."
+  },
+  "sources": [
+    "wii-gap-consumer-cemu-provider",
+    "wii-gap-consumer-cemu-messages"
+  ],
+  "experiments": [],
+  "conflicts_with": [],
+  "supersedes": [],
+  "rejection_scope": null
+}
