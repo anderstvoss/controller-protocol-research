@@ -17,3 +17,7 @@ See [F-P1 to F-P8 gates](https://github.com/anderstvoss/controller-protocol-rese
 ## P5a virtual host observations
 
 USB-bus UHID bound hid-generic; the exact-path evdev sweep recorded four face transitions and stick endpoints. Steam listed standard HID and showed sticks/triggers and three face transitions; East was inconclusive, and ping unavailable. The uinput comparator recorded face/stick/trigger controls and ping pulse/stop, though the repeat missed the first nonzero right-trigger step. Neither demonstrates native XUSB or retail fidelity. [`vg-p5a-stock-xbox360-linux-uhid-usb-bound-ed8065b4be2c`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-stock-xbox360-linux-uhid-usb-bound-ed8065b4be2c.json), [`vg-p5a-stock-xbox360-linux-uinput-bound-ed8065b4be2c`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-stock-xbox360-linux-uinput-bound-ed8065b4be2c.json).
+
+## P5a follow-up timing
+
+USB/IP N1/N3 runs verified all five lifecycle stages in all 50/150 slots; the final attach list was empty. This is a virtual-host outcome, not native XUSB or physical headset evidence. [`vg-p5a-followup-xbox360-usbip-timing`](https://github.com/anderstvoss/controller-protocol-research/blob/eb7887bf1aacc1b0baf6f5e973cac2ee41090c4e/records/experiment/vg-p5a-followup-xbox360-usbip-timing.json).
