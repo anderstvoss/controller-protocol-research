@@ -118,3 +118,9 @@ nav:
           - "Overview": controllers/switch2-joycon-left/index.md
       - "Switch 2 Joy-Con Right":
           - "Overview": controllers/switch2-joycon-right/index.md
+      - "Xbox One":
+          - "Overview": controllers/xbox-one/index.md
+      - "Xbox Elite Series 1":
+          - "Overview": controllers/xbox-elite-series-1/index.md
+      - "Xbox Elite Series 2":
+          - "Overview": controllers/xbox-elite-series-2/index.md
